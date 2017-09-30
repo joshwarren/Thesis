@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  30 SEP 2017 09:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  30 SEP 2017 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -203,26 +203,41 @@ Type  H <return>  for immediate help.
 l.15 }
       
 ? 
-(./thesis.aux (./acknowledgements/dedication.aux)
+(/usr/share/texmf-dist/tex/latex/textgreek/textgreek.sty
+Package: textgreek 2011/10/09 v0.7 Greek symbols in text
+
+
+! Package textgreek Error: Cannot find the file lgrenc.def.
+
+See the textgreek package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 .... Maybe it comes with the babel package.}}
+                                                  
+? 
+Package textgreek Info: Loaded fontmap: {eur/*/*}{U/eur/*/*} {phv/*/*}{U/psy/*/
+*}. on input line 69.
+) (./thesis.aux (./acknowledgements/dedication.aux)
 (./acknowledgements/acknowledgements.aux) (./abstract/abstract.aux)
 (./introduction/introduction.aux) (./chapter2/chapter2.aux)
 (./conclusions/conclusions.aux) (./appendix/appendix1/appendix1.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -255,7 +270,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 32.
+Package hyperref Info: Link coloring OFF on input line 33.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -265,23 +280,23 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count106
 )
-LaTeX Info: Redefining \ref on input line 32.
-LaTeX Info: Redefining \pageref on input line 32.
-LaTeX Info: Redefining \nameref on input line 32.
+LaTeX Info: Redefining \ref on input line 33.
+LaTeX Info: Redefining \pageref on input line 33.
+LaTeX Info: Redefining \nameref on input line 33.
  (./thesis.out) (./thesis.out)
 \@outlinefile=\write3
 \openout3 = `thesis.out'.
 
- <oxlogo.pdf, id=24, 462.72874pt x 143.53625pt>
-File: oxlogo.pdf Graphic file (type pdf)
+ <oxlogo.png, id=27, 120.9318pt x 140.2038pt>
+File: oxlogo.png Graphic file (type png)
+ <use oxlogo.png>
+Package pdftex.def Info: oxlogo.png used on input line 45.
+(pdftex.def)             Requested size: 91.04881pt x 105.55905pt.
 
-<use oxlogo.pdf>
-Package pdftex.def Info: oxlogo.pdf used on input line 44.
-(pdftex.def)             Requested size: 91.04881pt x 28.24242pt.
- [1
+[1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./oxlogo.pdf>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./oxlogo.png>]
 \openout2 = `acknowledgements/dedication.aux'.
 
 
@@ -327,19 +342,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (./introduction/introduction.tex
 Chapter 1.
 
-Package natbib Warning: Citation `Cappellari2016' on page 1 undefined on input 
-line 13.
+! LaTeX Error: Encoding scheme `LGR' unknown.
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...the dark energy (represented by \textLambda
+                                                  ), cold dark matter ({\tex...
 
-Package natbib Warning: Citation `Heckman2014' on page 1 undefined on input lin
-e 19.
+? 
 
+! LaTeX Error: Encoding scheme `LGR' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...textLambda), cold dark matter ({\textLambda
+                                                  }CDM) coupled with inflati...
+
+? 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.20 
-      [1
+l.7 
+     [1
 
 
 
@@ -354,38 +383,45 @@ No file conclusions/conclusions.tex.
 \openout2 = `appendix/appendix1/appendix1.aux'.
 
 No file appendix/appendix1/appendix1.tex.
-No file thesis.bbl.
+(./thesis.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 72.
+ [3
 
-Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
-(./thesis.aux (./acknowledgements/dedication.aux)
+
+
+
+
+
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
+ (./thesis.aux (./acknowledgements/dedication.aux)
 (./acknowledgements/acknowledgements.aux) (./abstract/abstract.aux)
 (./introduction/introduction.aux) (./chapter2/chapter2.aux)
 (./conclusions/conclusions.aux) (./appendix/appendix1/appendix1.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 4A84ABA5D6174C461DDCAE313B4A561A;308.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
+(rerunfilecheck)             Checksum: 6C8A11AE67CF095BDC340EDBDBA7F12E;362.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 5858 strings out of 494945
- 84578 string characters out of 6181438
- 166548 words of memory out of 5000000
- 9049 multiletter control sequences out of 15000+600000
+ 5982 strings out of 494945
+ 86212 string characters out of 6181438
+ 170115 words of memory out of 5000000
+ 9162 multiletter control sequences out of 15000+600000
  10756 words of font info for 40 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,4n,30p,671b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,4n,30p,1850b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (5 pages, 146208 bytes).
+Output written on thesis.pdf (6 pages, 88709 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 95 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 54 words of extra memory for PDF output out of 10000 (max. 10000000)
 
