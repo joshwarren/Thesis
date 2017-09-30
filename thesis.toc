@@ -1,0 +1,5 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Early Type Galaxies}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Active Galactic Nuclei}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Radiative Mode}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Jet Mode}{2}{subsection.1.2.2}
