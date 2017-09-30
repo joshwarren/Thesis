@@ -1,0 +1,72 @@
+\documentclass[12pt]{ociamthesis}  % default square logo 
+%\documentclass[12pt,beltcrest]{ociamthesis} % use old belt crest logo
+%\documentclass[12pt,shieldcrest]{ociamthesis} % use older shield crest logo
+
+%load any additional packages
+\usepackage{amssymb}
+\usepackage{natbib} % references in text to look like MNRAS/ApJ/A&A
+\usepackage{hyperref} % references become hyperlinks to bibliography
+\hypersetup{
+	cikirkinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+%input macros (i.e. write your own macros file called mymacros.tex 
+%and uncomment the next line)
+%\include{mymacros}
+
+\title{An IFS study of\\[1ex]     %your thesis title,
+        Low-Powered Radio Galaxies}   %note \\[1ex] is a line break in the title
+
+\author{Joshua Warren}             %your name
+\college{Mansfield College}  %your college
+
+%\renewcommand{\submittedtext}{change the default text here if needed}
+\degree{Doctor of Philosophy}     %the degree
+\degreedate{Hilary 2018}         %the degree date
+
+%end the preamble and start the document
+\begin{document}
+
+%this baselineskip gives sufficient line spacing for an examiner to easily
+%markup the thesis with comments
+\baselineskip=18pt plus1pt
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+
+\maketitle                  % create a title page from the preamble info
+\include{acknowledgements/dedication}       % include a dedication.tex file
+\include{acknowledgements/acknowledgements} % include an acknowledgements.tex file
+\include{abstract/abstract}          % include the abstract
+
+\begin{romanpages}          % start roman page numbering
+\tableofcontents            % generate and include a table of contents
+\listoffigures              % generate and include a list of figures
+\end{romanpages}            % end roman page numbering
+
+%now include the files of latex for each of the chapters etc
+\include{introduction/introduction}
+\include{chapter2/chapter2}
+\include{conclusions/conclusions}
+
+%now enable appendix numbering format and include any appendices
+\appendix
+\include{appendix/appendix1/appendix1}
+% \include{appendix/appendix2/appendix2}
+
+%next line adds the Bibliography to the contents page
+\addcontentsline{toc}{chapter}{Bibliography}
+%uncomment next line to change bibliography name to references
+%\renewcommand{\bibname}{References}
+\bibliographystyle{mnras}   % MNRAS bib style
+\bibliography{refs}        %use a bibtex bibliography file refs.bib
+% \bibliographystyle{plain}  %use the plain bibliography style
+
+\end{document}
+
