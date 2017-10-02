@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  1 OCT 2017 15:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  2 OCT 2017 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -193,16 +193,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip45
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 15.
 
-! Package kvsetkeys Error: Undefined key `cikirkinks'.
-
-See the kvsetkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 }
-      
-? 
 (/usr/share/texmf-dist/tex/latex/textgreek/textgreek.sty
 Package: textgreek 2011/10/09 v0.7 Greek symbols in text
 
@@ -270,7 +262,16 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 33.
+
+(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+Package hyperref Info: Link coloring ON on input line 33.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -287,7 +288,7 @@ LaTeX Info: Redefining \nameref on input line 33.
 \@outlinefile=\write3
 \openout3 = `thesis.out'.
 
- <oxlogo.png, id=27, 120.9318pt x 140.2038pt>
+ <oxlogo.png, id=43, 120.9318pt x 140.2038pt>
 File: oxlogo.png Graphic file (type png)
  <use oxlogo.png>
 Package pdftex.def Info: oxlogo.png used on input line 45.
@@ -348,7 +349,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 ...the dark energy (represented by \textLambda
+l.5 ...the dark energy (represented by \textLambda
                                                   ), cold dark matter ({\tex...
 
 ? 
@@ -359,7 +360,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 ...textLambda), cold dark matter ({\textLambda
+l.5 ...textLambda), cold dark matter ({\textLambda
                                                   }CDM) coupled with inflati...
 
 ? 
@@ -367,12 +368,41 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.8 
+l.7 
      [1
 
 
 
-] [2]) [3]
+] <introduction/colorRedCorr_mass.jpeg, id=88, 308.352pt x 234.8775pt>
+File: introduction/colorRedCorr_mass.jpeg Graphic file (type jpg)
+
+<use introduction/colorRedCorr_mass.jpeg>
+Package pdftex.def Info: introduction/colorRedCorr_mass.jpeg used on input line
+ 13.
+(pdftex.def)             Requested size: 433.62pt x 330.30283pt.
+ [2] [3 <./introduction/colorRedCorr_mass.jpeg>]
+
+LaTeX Warning: Reference `fig:AGN' on page 4 undefined on input line 24.
+
+<introduction/unifiedAGN.jpeg, id=105, 178.86826pt x 238.491pt>
+File: introduction/unifiedAGN.jpeg Graphic file (type jpg)
+
+<use introduction/unifiedAGN.jpeg>
+Package pdftex.def Info: introduction/unifiedAGN.jpeg used on input line 29.
+(pdftex.def)             Requested size: 433.62pt x 578.2344pt.
+ [4] [5 <./introduction/unifiedAGN.jpeg>]
+
+! LaTeX Error: Encoding scheme `LGR' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ...sion, $\sigma_\ast$ relation (M-\textsigma
+                                                  ) from \citet{McConnell2013}:
+
+? 
+[6]) [7]
 \openout2 = `chapter2/chapter2.aux'.
 
 
@@ -385,7 +415,7 @@ No file conclusions/conclusions.tex.
 No file appendix/appendix1/appendix1.tex.
 (./thesis.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 72.
- [4
+ [8
 
 
 
@@ -403,25 +433,34 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 6C8A11AE67CF095BDC340EDBDBA7F12E;362.
+(rerunfilecheck)             Checksum: F7177FE8E9D34A8E15B9084E9670FF97;670.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 5983 strings out of 494945
- 86229 string characters out of 6181438
- 170115 words of memory out of 5000000
- 9162 multiletter control sequences out of 15000+600000
+ 6079 strings out of 494945
+ 87931 string characters out of 6181438
+ 173093 words of memory out of 5000000
+ 9234 multiletter control sequences out of 15000+600000
  10756 words of font info for 40 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,4n,30p,1869b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,6n,30p,1875b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (7 pages, 91429 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti12.pfb>
+Output written on thesis.pdf (11 pages, 695935 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 54 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

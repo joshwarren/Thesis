@@ -17,6 +17,16 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
+\bibitem[\protect\citeauthoryear{Antonucci}{Antonucci}{1993}]{Antonucci1993}
+Antonucci R.,  1993, \mn@doi [Annual Review of Astronomy and Astrophysics]
+  {10.1146/annurev.aa.31.090193.002353}, 31, 473
+
+\bibitem[\protect\citeauthoryear{Baldry, Glazebrook, Brinkmann, Ivezi{\'{c}},
+  Lupton, Nichol  \& Szalay}{Baldry et~al.}{2004}]{Baldry2004}
+Baldry I.~K.,  Glazebrook K.,  Brinkmann J.,  Ivezi{\'{c}} {\v{Z}}.,  Lupton
+  R.~H.,  Nichol R.~C.,   Szalay A.~S.,  2004, \mn@doi [The Astrophysical
+  Journal] {10.1086/380092}, 600, 681
+
 \bibitem[\protect\citeauthoryear{Cappellari}{Cappellari}{2016}]{Cappellari2016}
 Cappellari M.,  2016, \mn@doi [Annu. Rev. Astron. Astrophys.]
   {10.1146/annurev-astro-082214-122432}, 54, 1
@@ -25,6 +35,21 @@ Cappellari M.,  2016, \mn@doi [Annu. Rev. Astron. Astrophys.]
   Best}{2014}]{Heckman2014}
 Heckman T.~M.,  Best P.~N.,  2014, \mn@doi [Annual Review of Astronomy and
   Astrophysics] {10.1146/annurev-astro-081913-035722}, 52, 589
+
+\bibitem[\protect\citeauthoryear{McConnell \& Ma}{McConnell \&
+  Ma}{2013}]{McConnell2013}
+McConnell N.~J.,  Ma C.-P.,  2013, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637X/764/2/184}, 764, 184
+
+\bibitem[\protect\citeauthoryear{Nyland et~al.,}{Nyland
+  et~al.}{2016}]{Nyland2016}
+Nyland K.,  et~al., 2016, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1093/mnras/stw391}, 458, 2221
+
+\bibitem[\protect\citeauthoryear{Schawinski et~al.,}{Schawinski
+  et~al.}{2014}]{Schawinski2014}
+Schawinski K.,  et~al., 2014, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1093/mnras/stu327}, 440, 889
 
 \makeatother
 \end{thebibliography}
