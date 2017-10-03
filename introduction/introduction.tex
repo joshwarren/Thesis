@@ -31,10 +31,6 @@ AGNs are very varied, however much work has been done on a single unified model 
 	\label{fig:unifiedAGN}
 \end{figure}
 
-
-
-
-
 Despite the unification of the many observed morphologies of AGN, it is becoming increasingly clear that AGNs exist in two different modes, Radiative and Jet-mode, raising speculation about differing mechanisms and possibly fuel sources for each. More detail on both modes can be found in section \ref{sec:introAGN}. 
 
 Many galaxies also emit in the radio, although most are extremely faint. These galaxies are known as radio galaxies (RGs) and most radio emission is attributed to synchrotron emission (the broader term of free-free emission is sometimes used in the literature) from the jet within an AGN. However, \citet{Nyland2016} notes that at the very faint end, there may be some contamination of samples from galaxies consistent with circumnuclear star formation. There is broad consensus within the literature that the most powerful RGs are the product of gas rich (wet), major mergers of galaxies (a major merger is defined as a ratio in mass closer than 3:1 between progenitor galaxies). These AGN tend to be extremely luminous: indeed despite clearly containing a very powerful jet, they are mostly radiative mode AGN. These RGs form a very small minority of the RG population and hence are not representative. \citet{Heckman2014} presents evidence that most RGs are fueled through secular processes. Exploring the nature and origin of the fuel, as well as the mechanism of accretion and effect of the resulting AGN feedback forms the basis of this thesis. 
@@ -51,6 +47,14 @@ The rest of this chapter will cover the background required to study the RG popu
 	\label{sec:introAGN}
 	Much of this section, makes use of the review by \citet{Heckman2014} and the references therein, and we would point readers in the direction of this review if more detail is required. 
 
+	The three main questions that astronomers studying AGN focus on:
+	\begin{enumerate}
+		\item The origin of the ISM being accreted onto the black hole,
+		\item The process by which the ISM is accreted and,
+		\item Any process by which the AGN might effect to the host galaxy (feedback).
+	\end{enumerate}
+	The final point has been 
+
 	This section will first look at the different global parameters that can be measured for AGN. After this the two different modes (radiative and jet modes) will be explored.
 
 	\subsection{AGN parameters}
@@ -61,9 +65,12 @@ The rest of this chapter will cover the background required to study the RG popu
 
 		\subsubsection{Black Hole Mass}
 			Thanks to scale relations, measuring the black hole mass, $M_\mathrm{BH}$ is relatively simple. In this work we use the mass -- stellar velocity dispersion, $\sigma_\ast$ relation (M-\textsigma) from \citet{McConnell2013}:
-			\begin{equation}
-				\log\left(\frac{M_{BH}}{M_\odot}\right) = 8.32 + 5.64 \log\left(\frac{\sigma_\ast}{200 \mathrm{km \, s^{-1}}}\right)
-			\end{equation}
+			\begin{align}
+				\log\left(\frac{M_{BH}}{M_\odot}\right) = & \, (8.32 \pm 0.05) + (5.64 \pm 0.32) \log\left(\frac{\sigma_\ast}{200 \mathrm{km \, s^{-1}}}\right) \\
+				\intertext{where $\sigma_\ast$ is the luminosity weighted stellar velocity dispersion defined as:} 
+				\sigma_\ast^2 \equiv & \, \frac{\int_{R_\mathrm{inf}}^{R_e} \left[\sigma^2(r) + v^2(r)\right] I(r) \mathrm{d}r}{\int_{R_\mathrm{inf}}^{R_e} I(r) \mathrm{d}r}
+			\end{align}
+			where $I(r)$, $v(r)$ and $\sigma(r)$ are the surface brightness profile, the stellar velocity and stellar velocity dispersion at a radius $r$. $R_e$ is the effective radius: the radius which contains half of the total stellar light, while $R_\mathrm{inf}$ is the radius defining the sphere of influence of the black hole ($R_\mathrm{inf} \equiv \frac{GM_\mathrm{BH}}{\sigma^2}$). In other words, the direct gravitational effect of the black hole is removed from this measure of $\sigma_\ast$. % Does this not mean both M_BH and sigma_* are in the equation defining M_BH and sigma_*? 
 
 
 		\subsubsection{Eddington Ratio}
@@ -75,7 +82,15 @@ The rest of this chapter will cover the background required to study the RG popu
 
 	\subsection{Radiative Mode}
 		\label{subsec:introRadiative}
-		Radiative mode AGN are thought to show actively growing black holes as accreted matter falls directly into the event horizon. They are typically radiatively efficient with Eddington ratios of 1-100\%. This can also drive powerful interstellar winds, capable of terminating star formation and thus moving a galaxy from the blue cloud to the red sequence. 
+		Radiative mode AGN are thought to show actively growing black holes as accreted matter falls directly into the event horizon. In this case the energy expelled as radiation exceeds that expelled by any jet that may be present (most of the energy of a jet is kinetic): they are typically radiatively efficient with Eddington ratios of 1-100\%. This means that the accretion disk must be geometrically thin. It is thought radiative mode AGN can also drive powerful interstellar winds, capable of terminating star formation and thus moving a galaxy from the blue cloud to the red sequence. 
 
 	\subsection{Jet Mode}
 		\label{subsec:introJet}
+		In jet mode, the dominant form of emitted energy away from the black hole is the kinetic energy of the material that makes up the jet. Jet-mode AGN can be directly observed feeding-back to their host galaxies: they often terminate at shocks (hot spots), which make up the walls to cavities in the hot (X-ray) component of the host galaxy.
+
+		Jet mode AGN tend to be radiatively inefficient with Eddington ratios of $<$1\%. This implies that the inner most accretion disk must be geometrically thick, with an inflow time that is much less that the radiative cooling time scale. These are known as a advection-dominated accretion flow (ADAF). It is possible that there is a thin disk beyond this (further from the black hole) but it must be truncated by the thick disk. Such a system is capable of launching a jet. 
+
+		It is thought that the duty cycle of a jet is very short: it is turned on for very short periods of time, before turning off for an extended period. When the jet is turned off or only very weakly present, the galaxy may present as containing a low-ionization nuclear emission-line region (LINER). It is worth noting that while the most powerful LINERs are likely to be low-luminosity AGN, many are not: they belong to a new category known as LIERs (the emission-line region is not nuclear - i.e. LINER but without the 'N'). Such emission is mostly attributed to ionization from radiation from post-asymptotic giant branch (AGB) stars. 
+
+
+
