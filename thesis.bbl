@@ -17,9 +17,19 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
+\bibitem[\protect\citeauthoryear{Albrecht \& Steinhardt}{Albrecht \&
+  Steinhardt}{1982}]{Albrecht1982}
+Albrecht A.,  Steinhardt P.~J.,  1982, \mn@doi [Physical Review Letters]
+  {10.1103/PhysRevLett.48.1220}, 48, 1220
+
 \bibitem[\protect\citeauthoryear{Antonucci}{Antonucci}{1993}]{Antonucci1993}
 Antonucci R.,  1993, \mn@doi [Annual Review of Astronomy and Astrophysics]
   {10.1146/annurev.aa.31.090193.002353}, 31, 473
+
+\bibitem[\protect\citeauthoryear{Arnold et~al.,}{Arnold
+  et~al.}{2013}]{Arnold2013}
+Arnold J.~A.,  et~al., 2013, \mn@doi [The Astrophysical Journal, Volume 791,
+  Issue 2, article id. 80, 27 pp. (2014).] {10.1088/0004-637X/791/2/80}, 791
 
 \bibitem[\protect\citeauthoryear{Baldry, Glazebrook, Brinkmann, Ivezi{\'{c}},
   Lupton, Nichol  \& Szalay}{Baldry et~al.}{2004}]{Baldry2004}
@@ -27,14 +37,71 @@ Baldry I.~K.,  Glazebrook K.,  Brinkmann J.,  Ivezi{\'{c}} {\v{Z}}.,  Lupton
   R.~H.,  Nichol R.~C.,   Szalay A.~S.,  2004, \mn@doi [The Astrophysical
   Journal] {10.1086/380092}, 600, 681
 
+\bibitem[\protect\citeauthoryear{Belfiore et~al.,}{Belfiore
+  et~al.}{2016}]{Belfiore2016a}
+Belfiore F.,  et~al., 2016, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1093/mnras/stw1234}, 461, 3111
+
+\bibitem[\protect\citeauthoryear{Bower, Benson, Malbon, Helly, Frenk, Baugh,
+  Cole  \& Lacey}{Bower et~al.}{2005}]{Bower2005}
+Bower R.~G.,  Benson A.~J.,  Malbon R.,  Helly J.~C.,  Frenk C.~S.,  Baugh
+  C.~M.,  Cole S.,   Lacey C.~G.,  2005, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society, Volume 370, Issue 2, pp. 645-655.]
+  {10.1111/j.1365-2966.2006.10519.x}, 370, 645
+
+\bibitem[\protect\citeauthoryear{Brinchmann, Charlot, White, Tremonti,
+  Kauffmann, Heckman  \& Brinkmann}{Brinchmann et~al.}{2003}]{Brinchmann2003}
+Brinchmann J.,  Charlot S.,  White S. D.~M.,  Tremonti C.,  Kauffmann G.,
+  Heckman T.,   Brinkmann J.,  2003, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society, Volume 351, Issue 4, pp. 1151-1179.]
+  {10.1111/j.1365-2966.2004.07881.x}, 351, 1151
+
+\bibitem[\protect\citeauthoryear{Bryant et~al.,}{Bryant
+  et~al.}{2014}]{Bryant2014}
+Bryant J.~J.,  et~al., 2014, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society, Volume 447, Issue 3, p.2857-2879] {10.1093/mnras/stu2635}, 447, 2857
+
 \bibitem[\protect\citeauthoryear{Cappellari}{Cappellari}{2016}]{Cappellari2016}
 Cappellari M.,  2016, \mn@doi [Annu. Rev. Astron. Astrophys.]
   {10.1146/annurev-astro-082214-122432}, 54, 1
+
+\bibitem[\protect\citeauthoryear{Cappellari et~al.,}{Cappellari
+  et~al.}{2011}]{Cappellari2011}
+Cappellari M.,  et~al., 2011, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1111/j.1365-2966.2010.18174.x}, 413, 813
+
+\bibitem[\protect\citeauthoryear{{Di Matteo}, Springel  \& Hernquist}{{Di
+  Matteo} et~al.}{2005}]{DiMatteo2005}
+{Di Matteo} T.,  Springel V.,   Hernquist L.,  2005, \mn@doi [Nature]
+  {10.1038/nature03335}, 433, 604
+
+\bibitem[\protect\citeauthoryear{Emsellem et~al.,}{Emsellem
+  et~al.}{2011}]{Emsellem2011}
+Emsellem E.,  et~al., 2011, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1111/j.1365-2966.2011.18496.x}, 414, 888
+
+\bibitem[\protect\citeauthoryear{Faber \& Gallagher}{Faber \&
+  Gallagher}{1979}]{Faber1979}
+Faber S.~M.,  Gallagher J.~S.,  1979, \mn@doi [Annual Review of Astronomy and
+  Astrophysics] {10.1146/annurev.aa.17.090179.001031}, 17, 135
+
+\bibitem[\protect\citeauthoryear{Guth}{Guth}{1981}]{Guth1981}
+Guth A.~H.,  1981, \mn@doi [Physical Review D] {10.1103/PhysRevD.23.347}, 23,
+  347
 
 \bibitem[\protect\citeauthoryear{Heckman \& Best}{Heckman \&
   Best}{2014}]{Heckman2014}
 Heckman T.~M.,  Best P.~N.,  2014, \mn@doi [Annual Review of Astronomy and
   Astrophysics] {10.1146/annurev-astro-081913-035722}, 52, 589
+
+\bibitem[\protect\citeauthoryear{Kauffmann et~al.,}{Kauffmann
+  et~al.}{2003}]{Kauffmann2003}
+Kauffmann G.,  et~al., 2003, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1046/j.1365-8711.2003.06291.x}, 341, 33
+
+\bibitem[\protect\citeauthoryear{Linde}{Linde}{1982}]{Linde1982}
+Linde A.~D.,  1982, \mn@doi [Physics Letters B] {10.1016/0370-2693(82)91219-9},
+  108, 389
 
 \bibitem[\protect\citeauthoryear{McConnell \& Ma}{McConnell \&
   Ma}{2013}]{McConnell2013}
@@ -46,10 +113,35 @@ McConnell N.~J.,  Ma C.-P.,  2013, \mn@doi [The Astrophysical Journal]
 Nyland K.,  et~al., 2016, \mn@doi [Monthly Notices of the Royal Astronomical
   Society] {10.1093/mnras/stw391}, 458, 2221
 
-\bibitem[\protect\citeauthoryear{Schawinski et~al.,}{Schawinski
-  et~al.}{2014}]{Schawinski2014}
-Schawinski K.,  et~al., 2014, \mn@doi [Monthly Notices of the Royal
-  Astronomical Society] {10.1093/mnras/stu327}, 440, 889
+\bibitem[\protect\citeauthoryear{Salim et~al.,}{Salim et~al.}{2007}]{Salim2007}
+Salim S.,  et~al., 2007, \mn@doi [The Astrophysical Journal Supplement Series]
+  {10.1086/519218}, 173, 267
+
+\bibitem[\protect\citeauthoryear{Sanchez et~al.,}{Sanchez
+  et~al.}{2011}]{Sanchez2011}
+Sanchez S.~F.,  et~al., 2011, \mn@doi [Astronomy {\&} Astrophysics]
+  {10.1051/0004-6361/201117353}, 538, A8
+
+\bibitem[\protect\citeauthoryear{Sarzi et~al.,}{Sarzi et~al.}{2005}]{Sarzi2005}
+Sarzi M.,  et~al., 2005, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1111/j.1365-2966.2005.09839.x}, 366, 1151
+
+\bibitem[\protect\citeauthoryear{Sarzi et~al.,}{Sarzi et~al.}{2010}]{Sarzi2010}
+Sarzi M.,  et~al., 2010, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1111/j.1365-2966.2009.16039.x}, 402, 2187
+
+\bibitem[\protect\citeauthoryear{Singh et~al.,}{Singh et~al.}{2013}]{Singh2013}
+Singh R.,  et~al., 2013, \mn@doi [Astronomy {\&} Astrophysics, Volume 558,
+  id.A43, 8 pp.] {10.1051/0004-6361/201322062}, 558
+
+\bibitem[\protect\citeauthoryear{Springel, {Di Matteo}  \& Hernquist}{Springel
+  et~al.}{2005}]{Springel2005}
+Springel V.,  {Di Matteo} T.,   Hernquist L.,  2005, \mn@doi [The Astrophysical
+  Journal] {10.1086/428772}, 620, L79
+
+\bibitem[\protect\citeauthoryear{Veale et~al.,}{Veale et~al.}{2016}]{Veale2016}
+Veale M.,  et~al., 2016, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society, Volume 464, Issue 1, p.356-384] {10.1093/mnras/stw2330}, 464, 356
 
 \makeatother
 \end{thebibliography}
