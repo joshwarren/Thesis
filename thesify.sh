@@ -1,7 +1,7 @@
 #!/bin/bash
 
-pdflatex thesis.tex
+pdflatex -interaction=batchmode thesis.tex
 bibtex thesis
-pdflatex thesis.tex
-pdflatex thesis.tex
+pdflatex -interaction=batchmode thesis.tex 
+pdflatex -interaction=batchmode thesis.tex 
 cygstart thesis.pdf # opens thesis.pdf with cygwin
