@@ -1,4 +1,5 @@
 \chapter{Introduction}
+	\label{cha:intro}
 For millennia, Man has turned his gaze skyward in awe and wonder at the heavens and wondered at the processes that processes that drive structure on the colossal scale of galaxies and galaxy clusters. As physicists we conduct experiments to better out understanding of the processes and laws that control the universe; an old joke goes that as astronomers, our experiment has already been conducted for us, it's called The Big Bang: our job is to use it to test the theories and laws of physics. Indeed, astronomy is a unique opportunity to test our knowledge as scales and limits that are not attainable here on Earth.
 
 % Need to update textgreek package once version 20170724-1 is marked as stable.
@@ -46,7 +47,9 @@ Despite the unification of the many observed morphologies of AGN, it is becoming
 
 Although all galaxies emit at some level in all frequencies, only some emit in the radio at a detectable (with current instrumentation) levels and even then most are extremely faint. These galaxies are known as radio galaxies (RGs) and most radio emission is attributed to synchrotron emission (the broader term of free-free emission is sometimes used in the literature) from the jet within an AGN. However, \citet{Nyland2016} notes that in the fainter sources, the radio emission could be consistent with circumnuclear star formation. There is broad consensus within the literature that the most powerful RGs are the product of gas rich (wet), major mergers of galaxies (a major merger is defined as a ratio in mass closer than 3:1 between progenitor galaxies). These AGN tend to be extremely luminous: indeed despite clearly containing a very powerful jet, they are mostly radiative mode AGN. These RGs form a very small minority of the RG population and hence are not representative. \citet{Heckman2014} presents evidence that most RGs are fueled through secular processes. Exploring the nature and origin of the fuel, as well as the mechanism of accretion and effect of the resulting AGN feedback in RGs forms the basis of this thesis. 
 
-The rest of this chapter will cover the background required to study the RG population. Firstly, since RGs are mostly found in ETGs we will cover our current understanding of ETGs. This is mostly a summary of the recent Integral Field Spectroscopy (IFS) surveys including Atlas3D, MaNGa, MASSIVE, SAMI and Califa and can be considered a setting out of the control sample for our later investigations. After this we will give a more detailed summary of the current state of our understanding of AGN. This will include covering RGs. Finally we will set out our selection criteria and sample which we use to acheive our aim of understanding the feeding and feedback of RGs.
+The rest of this chapter will cover the background required to study the RG population. Firstly, since RGs are mostly found in ETGs we will cover our current understanding of ETGs. This is mostly a summary of the recent Integral Field Spectroscopy (IFS) surveys including Atlas3D, MaNGa, MASSIVE, SAMI and Califa and can be considered a setting out of the control sample for our later investigations. After this we will give a more detailed summary of the current state of our understanding of AGN. This will include covering RGs. Finally we will set out our selection criteria and sample which we use to achieve our aim of understanding the feeding and feedback of RGs.
+
+Chapters \ref{cha:VIMOS} and \ref{cha:MUSE} will give details of the VIMOS and MUSE instruments and corresponding data reductions methods that we use for this research, while chapters \ref{cha:stellar} and \ref{cha:gas} will cover the results, focusing on the stellar and the ionized gas components of the galaxy respectively. Finally we conclude in chapter \ref{cha:conclusion}
 
 \section{Early Type Galaxies}
 	\label{sec:ETG}
@@ -202,25 +205,50 @@ The rest of this chapter will cover the background required to study the RG popu
 			\begin{equation}
 				\frac{L_\text{Edd}}{L_\odot} = \frac{4 \pi G m_p c}{\sigma_T}	\frac{M_\text{BH}}{M_\odot} = 3.3 \times 10^4 \frac{M_\text{BH}}{M_\odot}
 			\end{equation}
-			where $m_p$ is is the mass of proton and $\sigma_T$ is the Thomson scattering cross-section for an electron on a proton (the ratio $\sigma_T/m_p$ is the opacity of a plasma). 
+			where $m_p$ is is the mass of proton and $\sigma_T$ is the Thomson scattering cross-section for an electron on a proton (the ratio $\sigma_T/m_p$ is the opacity of a plasma).
 
 	\subsection{Radiative Mode}
 		\label{subsec:Radiative}
-		Radiative mode AGN are thought to show actively growing black holes as accreted matter falls directly into the event horizon. In this case the energy expelled as radiation exceeds that expelled by any jet that may be present (most of the energy of a jet is kinetic): they are typically radiatively efficient with Eddington ratios of 1-100\%. This means that the accretion disk must be geometrically thin. It is thought radiative mode AGN can also drive powerful interstellar winds, capable of terminating star formation and thus moving a galaxy from the blue cloud to the red sequence. 
+		Radiative mode AGN are thought to show actively growing black holes as accreted matter falls directly into the event horizon. In this case the energy expelled as radiation exceeds that expelled by any jet that may be present (most of the energy of a jet is kinetic): they are typically radiatively efficient with Eddington ratios of 1-100\%. This leads to the conclusion that the accretion disk is geometrically thin. 
+
+		\subsubsection{Fueling}
+			\label{subsubsec:RadiativeFueling}
+
+
+
+
+
+
+		\subsubsection{Feedback}
+			\label{subsubsec:RadiativeFeedback}
+			It is thought radiative mode AGN can also drive powerful interstellar winds, capable of terminating star formation and thus moving a galaxy from the blue cloud to the red sequence. 
+
+		\subsubsection{Radiative Mode Radio Galaxies}
+			\label{subsubsec:RadiativeRadio}
+			As stated above the most powerful RGs are radiative-mode AGN. This is in spite of the fact that RGs are a marker for a jet (and the radio power is directly correlated to the jet strength): this means that at these energies, the processes that drive the radiation from the accretion disk must be more sensitive to the conditions that those that drive the jet. The broad consensus in the literature is that these galaxies require a major, wet merger to form. Our sample of RGs set out in section \ref{sub:Sample} does not contain any of these extreme galaxies.
 
 	\subsection{Jet Mode}
 		\label{subsec:Jet}
 		In jet mode, the dominant form of emitted energy away from the black hole is the kinetic energy of the material that makes up the jet. Jet-mode AGN can be directly observed feeding-back to their host galaxies: they often terminate at shocks (hot spots), which make up the walls to cavities in the hot (X-ray) component of the host galaxy.
 
-		Jet mode AGN tend to be radiatively inefficient with Eddington ratios of $<$1\%. This implies that the inner most accretion disk must be geometrically thick, with an inflow time that is much less that the radiative cooling time scale. These are known as a advection-dominated accretion flow (ADAF). It is possible that there is a thin disk beyond this (further from the black hole) but it must be truncated by the thick disk. Such a system is capable of launching a jet. 
+		Jet mode AGN tend to be radiatively inefficient with Eddington ratios of $<$1\%. This implies that the inner most accretion disk must be geometrically thick, with an inflow time that is much less that the radiative cooling time scale. These are known as a advection-dominated accretion flow (ADAF) \citep{Narayan1994}. Such system is capable of launching a jet. It is possible that there is a thin disk beyond thick disk (further from the black hole) but it must be truncated by the thick disk (e.g. \citet{Abramowicz2002}). Much of this is very difficult to resolve as it occurs at a scale of $< 100$ Schwarzschild radii and many of the models remain degenerate \citep{Quataert1999}. 
 
-		It is thought that the duty cycle of a jet is very short: it is turned on for very short periods of time, before turning off for an extended period. When the jet is turned off or only very weakly present, the galaxy may present as containing a low ionization nuclear emission-line region (LINER). It is worth noting that while the most powerful LINERs are likely to be low-luminosity AGN, many are not: they belong to a new category known as LIERs (the emission-line region is not nuclear - i.e. LINER but without the 'N') \citep{Sarzi2005, Sarzi2010, Singh2013, Belfiore2016a}. Such emission is mostly attributed to ionization from radiation from post-asymptotic giant branch (AGB) stars. 
+		\subsubsection{Fueling}
+			\label{subsubsec:JetFueling}
+			% Needs fleshing out much more. 
+			There is still much speculation on the fuel (and origin) for jet mode AGN, though the consensus is swinging back in favor of an internal origin. Many people advocate hot gas as being the ultimate original fuel \citep{Allen2006}: some such as \citet{Hardcastle2007a} suggest that this could be directly accreted through Bondi accretion \citep{Bondi1952}, a simple model where gas in accreted in a spherically symmetric manner directly from the hot phase onto the black hole; while some invoke a cooling mechanism to allow the x-ray gas to cool such that it condenses into molecular (cold) gas before accretion. Others point to a higher higher detection rate of dust and molecular (cold) gas in RGs compared to the general population \citep{Lim2000, Lim2003, DeRuiter2002, VerdoesKleijn2005} suggesting that cold gas from either internal reservoirs or accreted from outside that gas may be the fuel.
 
-		As stated above, most RGs result from synchrotron emission from the relativistic plasma within the jet, moving in the magnetic field of the galaxy. This means that all such RGs can be considered a detection of a jet (we ignore the very low radio luminosity galaxies that result from high levels of circumnuclear star-formation). RGs are always jet mode AGN, except at the highest radio luminosities where the bright radio jet is dominated (in terms of energy output) by the brighter still accretion disk. These are radiative mode AGN.
+		\subsubsection{Feedback}
+			\label{subsubsection:JetFeedback}
+			It is thought that the duty cycle of a jet is very short: it is turned on for very short periods of time, before turning off for an extended period. 
 
-		There is still much speculation on the fuel (and origin) for jet mode AGN, though the consensus is swinging back in favor of an internal origin. Many people advocate hot gas as being the ultimate original fuel: some suggest that this could be directly accreted through Bondi accretion, a simple model where gas in accreted in a spherically symmetric manner directly from the hot phase onto the black hole; while some invoke a cooling mechanism to allow the x-ray gas to cool such that it condenses into molecular (cold) gas before accretion. Others point to a higher higher detection rate of dust and molecular (cold) gas in RGs compared to the general population suggesting that cold gas from either internal reservoirs or accreted from outside that gas may be the fuel.
+			The obvious feedback mode is seen in the hot X-ray gas halo, where radio jet terminates. The kinetic impact from the jet create cavities or bubbles in the hot gas (first conceptualized by \cite{Gull1973}). In cluster environments, these are buoyant and can separate, rising through the intra-cluster medium \citep{Churazov2000, Churazov2001, McNamara2000}. 
 
+			When the jet is turned off or only very weakly present, the galaxy may present as containing a low ionization nuclear emission-line region (LINER). It is worth noting that while the most powerful LINERs are likely to be low-luminosity AGN, many are not: they belong to a new category known as LIERs (the emission-line region is not nuclear - i.e. LINER but without the 'N') \citep{Sarzi2005, Sarzi2010, Singh2013, Belfiore2016a}. Such emission is mostly attributed to ionization from radiation from post-asymptotic giant branch (AGB) stars. 
 
+		\subsubsection{Jet Mode Radio Galaxies}
+			\label{subsubsec:JetRadio}
+			As stated above, most RGs result from synchrotron emission from the relativistic plasma within the jet, moving in the magnetic field of the galaxy. This means that all such RGs can be considered a detection of a jet (we ignore the very low radio luminosity galaxies that result from high levels of circumnuclear star-formation). RGs are always jet mode AGN, except at the highest radio luminosities where the bright radio jet is dominated (in terms of energy output) by the brighter still accretion disk. These are radiative mode AGN (see section \ref{subsubsec:RadiativeRadio}).
 
 \section{The Southern Sample}
 	\label{sec:Sample}
@@ -248,12 +276,12 @@ The rest of this chapter will cover the background required to study the RG popu
 
 	\begin{table}
 		\centering
-		\caption{Key sample characteristics: Col.1: host galaxy name, Col.2: radio source name (from PKS catalogue), Col.3: Redshift, Col.4: 1.4GHz flux density, Col.5: K-band absolute magnitude.}
+		\caption{Key sample characteristics: Col.1: host galaxy name, Col.2: radio source name (from PKS catalogue), Col.3: Redshift, Col.4: 1.4GHz flux density, Col.5: K-band apparent magnitude.}
 		\label{tab:sample}
 		\begin{tabular}{l l l l l}
 			\hline
 			\hline
-			Host galaxy	& Radio source 	& z 		& $S_\text{1.4GHz}$	& $M_k$ \\
+			Host galaxy	& Radio source 	& z 		& $S_\text{1.4GHz}$	& $m_k$ \\
 						& PKS ID 		& 			& mJy 				& mag \\
 			\hline 
 			ESO 443-G024 & 1258-321 	& 0.01703	& 1465 				& -25.87 \\ 
@@ -276,27 +304,29 @@ The rest of this chapter will cover the background required to study the RG popu
 
 	\begin{table}
 		\centering
-		\caption{Derived characteristics of the Southern sample: Col.1: galaxy name, Col.2: Radio spectral index. The data spectral index is found from a straight line fitted to the logarithm of all data points below 10GHz taken from the Photometric Points tool on CDS Portal \citep{Wenger2000}.}
+		\caption{Derived characteristics of the Southern sample: Col.1: galaxy name, Col.2: K-band absolute magnitude, Col.3: 1.4GHz Radio Power, Col.4: Radio spectral index. The data spectral index is found from a straight line fitted to the logarithm of all data points below 10GHz taken from the Photometric Points tool on CDS Portal \citep{Wenger2000}.}
 		\label{tab:sampleDerived}
-		\begin{tabular}{l l l l l}
+		\begin{tabular}{l l l l}
 			\hline
 			\hline
-			Host galaxy	& $\nu $ 			\\
-						& Jy GHz$^{-1}$		\\
+			Host galaxy	& M$_k$ & $\log P_\text{1.4GHz}$ & $\nu $ 			\\
+						& mag 	& [W Hz$^{-1}$]			& Jy GHz$^{-1}$		\\
 			\hline 
-			ESO 443-G024 & $-0.56 \pm 0.08$	\\
-			IC 1459 	& $0.25 \pm 0.06$ 	\\
-			IC 1531 	& $-0.33 \pm 0.03$ 	\\
-			IC 4296		& $-1.52 \pm 0.27$ 	\\
-			NGC 612 	& $-1.05 \pm 0.24$ 	\\
-			NGC 1316 	& $-4.7 \pm 2.1$ 	\\
-			NGC 1399 	& $-0.65 \pm 0.66$ 	\\
-			NGC 3100 	& $-0.40 \pm 0.03$ 	\\
-			NGC 3557 	& $-0.72 \pm 0.13$ 	\\
-			NGC 7075 	& $-0.90 \pm 0.06$ 	\\
-			PKS 0718-34 & $-0.63 \pm 0.06$ 	\\
+			ESO 443-G024 & -25.86 & 24.0 				& $-0.56 \pm 0.08$	\\
+			IC 1459 	& -25.27 & 23.0 				& $0.25 \pm 0.06^\text{a}$ 	\\
+			IC 1531 	& -25.70 & 23.9 				& $-0.33 \pm 0.03$ 	\\
+			IC 4296		& -26.18 & 25.4 				& $-1.52 \pm 0.27$ 	\\
+			NGC 612 	& -26.01 & 25.0 				& $-1.05 \pm 0.24$ 	\\
+			NGC 1316 	& -26.44 & 22.4 				& $-4.7 \pm 2.1$ 	\\
+			NGC 1399 	& -25.25 & 22.5 				& $-0.65 \pm 0.66$ 	\\
+			NGC 3100 	& -24.85 & 23.0 				& $-0.40 \pm 0.03$ 	\\
+			NGC 3557 	& -26.08 & 23.3 				& $-0.72 \pm 0.13$ 	\\
+			NGC 7075 	& -24.98 & 23.9 				& $-0.90 \pm 0.06$ 	\\
+			PKS 0718-34 & -25.59 & 24.6 				& $-0.63 \pm 0.06$ 	\\
 			\hline
 			\hline
+			%\multicolum{4}{r}{\footnotesize $^\text{a}$ IC 1459 shows a turn over in its spectral energy distribution at $\sim 1 \text{GHz}$. This means the spectral index is very sensitive to the range over which is measured.} 
+
 		\end{tabular}
 	\end{table}
 	
