@@ -17,10 +17,21 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
+\bibitem[\protect\citeauthoryear{Abramowicz, Igumenshchev, Quataert  \&
+  Narayan}{Abramowicz et~al.}{2002}]{Abramowicz2002}
+Abramowicz M.~A.,  Igumenshchev I.~V.,  Quataert E.,   Narayan R.,  2002,
+  \mn@doi [The Astrophysical Journal] {10.1086/324717}, 565, 1101
+
 \bibitem[\protect\citeauthoryear{Albrecht \& Steinhardt}{Albrecht \&
   Steinhardt}{1982}]{Albrecht1982}
 Albrecht A.,  Steinhardt P.~J.,  1982, \mn@doi [Physical Review Letters]
   {10.1103/PhysRevLett.48.1220}, 48, 1220
+
+\bibitem[\protect\citeauthoryear{Allen, Dunn, Fabian, Taylor  \&
+  Reynolds}{Allen et~al.}{2006}]{Allen2006}
+Allen S.~W.,  Dunn R. J.~H.,  Fabian A.~C.,  Taylor G.~B.,   Reynolds C.~S.,
+  2006, \mn@doi [Monthly Notices of the Royal Astronomical Society]
+  {10.1111/j.1365-2966.2006.10778.x}, 372, 21
 
 \bibitem[\protect\citeauthoryear{Antonucci}{Antonucci}{1993}]{Antonucci1993}
 Antonucci R.,  1993, \mn@doi [Annual Review of Astronomy and Astrophysics]
@@ -64,6 +75,10 @@ Blumenthal G.~R.,  Faber S.~M.,  Primack J.~R.,   Rees M.~J.,  1984, \mn@doi
   et~al.}{1982}]{Bond1982}
 Bond J.~R.,  Szalay A.~S.,   Turner M.~S.,  1982, \mn@doi [Physical Review
   Letters] {10.1103/PhysRevLett.48.1636}, 48, 1636
+
+\bibitem[\protect\citeauthoryear{Bondi \& H.}{Bondi \& H.}{1952}]{Bondi1952}
+Bondi H.,  H. 1952, \mn@doi [Monthly Notices of the Royal Astronomical Society]
+  {10.1093/mnras/112.2.195}, 112, 195
 
 \bibitem[\protect\citeauthoryear{Bower, Benson, Malbon, Helly, Frenk, Baugh,
   Cole  \& Lacey}{Bower et~al.}{2006}]{Bower2006}
@@ -112,6 +127,17 @@ Cappellari M.,  et~al., 2011b, \mn@doi [Monthly Notices of the Royal
   et~al.}{2013}]{Cappellari2013a}
 Cappellari M.,  et~al., 2013, \mn@doi [Monthly Notices of the Royal
   Astronomical Society] {10.1093/mnras/stt644}, 432, 1862
+
+\bibitem[\protect\citeauthoryear{Churazov, Forman, Jones  \&
+  Bohringer}{Churazov et~al.}{2000}]{Churazov2000}
+Churazov E.,  Forman W.,  Jones C.,   Bohringer H.,  2000, Astronomy and
+  Astrophysics, v.356, p.788-794 (2000), 356, 788
+
+\bibitem[\protect\citeauthoryear{Churazov, Br{\"{u}}ggen, Kaiser,
+  B{\"{o}}hringer  \& Forman}{Churazov et~al.}{2001}]{Churazov2001}
+Churazov E.,  Br{\"{u}}ggen M.,  Kaiser C.~R.,  B{\"{o}}hringer H.,   Forman
+  W.,  2001, \mn@doi [The Astrophysical Journal, Volume 554, Issue 1, pp.
+  261-273.] {10.1086/321357}, 554, 261
 
 \bibitem[\protect\citeauthoryear{Ciotti, Ostriker  \& Proga}{Ciotti
   et~al.}{2010}]{Ciotti2010}
@@ -174,6 +200,11 @@ Feldmann R.,  Carollo C.~M.,   Mayer L.,  2011, \mn@doi [The Astrophysical
 Ferrarese L.,  Merritt D.,  2000, \mn@doi [The Astrophysical Journal]
   {10.1086/312838}, 539, L9
 
+\bibitem[\protect\citeauthoryear{GULL \& NORTHOVER}{GULL \&
+  NORTHOVER}{1973}]{Gull1973}
+GULL S.~F.,  NORTHOVER K. J.~E.,  1973, \mn@doi [Nature] {10.1038/244080a0},
+  244, 80
+
 \bibitem[\protect\citeauthoryear{Gebhardt et~al.,}{Gebhardt
   et~al.}{2000}]{Gebhardt2000}
 Gebhardt K.,  et~al., 2000, \mn@doi [The Astrophysical Journal]
@@ -197,6 +228,12 @@ Gudehus D.~H.,  H. D.,  1973, \mn@doi [The Astronomical Journal]
 \bibitem[\protect\citeauthoryear{Guth}{Guth}{1981}]{Guth1981}
 Guth A.~H.,  1981, \mn@doi [Physical Review D] {10.1103/PhysRevD.23.347}, 23,
   347
+
+\bibitem[\protect\citeauthoryear{Hardcastle, Evans  \& Croston}{Hardcastle
+  et~al.}{2007}]{Hardcastle2007a}
+Hardcastle M.~J.,  Evans D.~A.,   Croston J.~H.,  2007, \mn@doi [Monthly
+  Notices of the Royal Astronomical Society]
+  {10.1111/j.1365-2966.2007.11572.x}, 376, 1849
 
 \bibitem[\protect\citeauthoryear{Heckman \& Best}{Heckman \&
   Best}{2014}]{Heckman2014}
@@ -271,6 +308,16 @@ Krajnovic D.,  et~al., 2013, \mn@doi [Monthly Notices of the Royal Astronomical
 Lauer T.~R.,  et~al., 1995, \mn@doi [The Astronomical Journal]
   {10.1086/117719}, 110, 2622
 
+\bibitem[\protect\citeauthoryear{Leon, Lim, Combes  \& v Trung}{Leon
+  et~al.}{2003}]{Lim2003}
+Leon S.,  Lim J.,  Combes F.,   v Trung D.,  2003, Active Galactic Nuclei: from
+  Central Engine to Host Galaxy, 290, 529
+
+\bibitem[\protect\citeauthoryear{Lim, Leon  \& Combes}{Lim
+  et~al.}{2000}]{Lim2000}
+Lim J.,  Leon S.,   Combes F.,  2000, \mn@doi [The Astrophysical Journal]
+  {10.1086/317885}, 545, L93
+
 \bibitem[\protect\citeauthoryear{Linde}{Linde}{1982}]{Linde1982}
 Linde A.~D.,  1982, \mn@doi [Physics Letters B] {10.1016/0370-2693(82)91219-9},
   108, 389
@@ -287,6 +334,16 @@ Masters K.~L.,  et~al., 2010, \mn@doi [Monthly Notices of the Royal
   Ma}{2013}]{McConnell2013}
 McConnell N.~J.,  Ma C.-P.,  2013, \mn@doi [The Astrophysical Journal]
   {10.1088/0004-637X/764/2/184}, 764, 184
+
+\bibitem[\protect\citeauthoryear{McNamara et~al.,}{McNamara
+  et~al.}{2000}]{McNamara2000}
+McNamara B.~R.,  et~al., 2000, \mn@doi [The Astrophysical Journal, Volume 534,
+  Issue 2, pp. L135-L138.] {10.1086/312662}, 534, L135
+
+\bibitem[\protect\citeauthoryear{Narayan \& Yi}{Narayan \&
+  Yi}{1994}]{Narayan1994}
+Narayan R.,  Yi I.,  1994, \mn@doi [Astrophysical Journal] {10.1086/187381},
+  428, L13
 
 \bibitem[\protect\citeauthoryear{Nyland et~al.,}{Nyland
   et~al.}{2016}]{Nyland2016}
@@ -312,6 +369,11 @@ Pinkney J.,  et~al., 2003, \mn@doi [The Astrophysical Journal]
   Collaboration} et~al.}{2016}]{PlanckCollaboration2016}
 {Planck Collaboration} et~al., 2016, \mn@doi [Astronomy {\&} Astrophysics]
   {10.1051/0004-6361/201525830}, 594, A13
+
+\bibitem[\protect\citeauthoryear{Quataert \& Narayan}{Quataert \&
+  Narayan}{1999}]{Quataert1999}
+Quataert E.,  Narayan R.,  1999, \mn@doi [The Astrophysical Journal]
+  {10.1086/307439}, 520, 298
 
 \bibitem[\protect\citeauthoryear{Raimundo, Fabian, Bauer, Alexander, Brandt,
   Luo, Vasudevan  \& Xue}{Raimundo et~al.}{2010}]{Raimundo2010}
@@ -373,15 +435,30 @@ Statler T.~S.,  1987, \mn@doi [The Astrophysical Journal] {10.1086/165619},
 Veale M.,  et~al., 2016, \mn@doi [Monthly Notices of the Royal Astronomical
   Society, Volume 464, Issue 1, p.356-384] {10.1093/mnras/stw2330}, 464, 356
 
+\bibitem[\protect\citeauthoryear{{Verdoes Kleijn} \& de Zeeuw}{{Verdoes Kleijn}
+  \& de~Zeeuw}{2005}]{VerdoesKleijn2005}
+{Verdoes Kleijn} G.~A.,  de Zeeuw P.~T.,  2005, \mn@doi [Astronomy {\&}
+  Astrophysics] {10.1051/0004-6361:20042271}, 435, 43
+
 \bibitem[\protect\citeauthoryear{Weijmans et~al.,}{Weijmans
   et~al.}{2014}]{Weijmans2014}
 Weijmans A.-M.,  et~al., 2014, \mn@doi [Monthly Notices of the Royal
   Astronomical Society] {10.1093/mnras/stu1603}, 444, 3340
 
+\bibitem[\protect\citeauthoryear{Wenger et~al.,}{Wenger
+  et~al.}{2000}]{Wenger2000}
+Wenger M.,  et~al., 2000, \mn@doi [Astronomy and Astrophysics Supplement,
+  v.143, p.9-22] {10.1051/aas:2000332}, 143, 9
+
 \bibitem[\protect\citeauthoryear{Wilson \& Tsvetanov}{Wilson \&
   Tsvetanov}{1994}]{Wilson1994}
 Wilson A.~S.,  Tsvetanov Z.~I.,  1994, \mn@doi [The Astronomical Journal]
   {10.1086/116935}, 107, 1227
+
+\bibitem[\protect\citeauthoryear{de Ruiter, Parma, Capetti, Fanti  \&
+  Morganti}{de~Ruiter et~al.}{2002}]{DeRuiter2002}
+de Ruiter H.~R.,  Parma P.,  Capetti A.,  Fanti R.,   Morganti R.,  2002,
+  \mn@doi [Astronomy and Astrophysics] {10.1051/0004-6361:20021462}, 396, 857
 
 \bibitem[\protect\citeauthoryear{de Vaucouleurs \& Gerard}{de~Vaucouleurs \&
   Gerard}{1959}]{deVaucouleurs1959}
