@@ -17,10 +17,15 @@
 \usepackage{amsmath} % align enviroment 
 \usepackage{textcomp} % textdegree symbol is math enviroments
 
+\usepackage{array} % For wrapping text in cell in tables
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % For wrapping text in tables
+
+
 
 %input macros (i.e. write your own macros file called mymacros.tex 
 %and uncomment the next line)
 %\include{mymacros}
+
 
 \title{An IFS study of\\[1ex]     %your thesis title,
         Low-Powered Radio Galaxies}   %note \\[1ex] is a line break in the title
