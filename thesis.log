@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  9 OCT 2017 22:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  10 OCT 2017 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -321,6 +321,22 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+) (/usr/share/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+
+! LaTeX Error: Command \degree already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 \newcommand\degree{}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ) (/usr/share/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen118
@@ -337,26 +353,26 @@ LaTeX Warning: Label `fig:MassRe' multiply defined.
 x1/appendix1.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 47.
 (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    ... okay on input line 47.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
@@ -393,7 +409,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 41.
+Package hyperref Info: Link coloring ON on input line 47.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -401,17 +417,28 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count118
 )
-LaTeX Info: Redefining \ref on input line 41.
-LaTeX Info: Redefining \pageref on input line 41.
-LaTeX Info: Redefining \nameref on input line 41.
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \nameref on input line 47.
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write3
 \openout3 = `thesis.out'.
 
+\symgns@font=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 47.
+Package gensymb Info: Math companion symbols declared on input line 47.
+LaTeX Info: Redefining \degree on input line 47.
+LaTeX Info: Redefining \celsius on input line 47.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 47.
+LaTeX Info: Redefining \ohm on input line 47.
+Package gensymb Info: Using \textohm for \ohm on input line 47.
+Package gensymb Info: Using \textmu for \micro on input line 47.
 <oxlogo.png, id=76, 120.9318pt x 140.2038pt>
 File: oxlogo.png Graphic file (type png)
 <use oxlogo.png>
-Package pdftex.def Info: oxlogo.png used on input line 53.
+Package pdftex.def Info: oxlogo.png used on input line 59.
 (pdftex.def)             Requested size: 91.04881pt x 105.55905pt.
 [1
 
@@ -422,9 +449,8 @@ Package pdftex.def Info: oxlogo.png used on input line 53.
 No file acknowledgements/dedication.tex.
 \openout2 = `acknowledgements/acknowledgements.aux'.
 
-(./acknowledgements/acknowledgements.tex
-Chapter 1.
-) [2
+(./acknowledgements/acknowledgements.tex) [1
+
 
 
 
@@ -445,8 +471,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
-[1
-
+[2
 
 
 
@@ -455,13 +480,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
-[2
+[3
 
 ]
 \openout2 = `introduction/introduction.aux'.
 
 (./introduction/introduction.tex
-Chapter 2.
+Chapter 1.
 
 ! LaTeX Error: Encoding scheme `LGR' unknown.
 
@@ -499,149 +524,110 @@ l.8
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.12 
-      [2] <introduction/hubble.jpg, id=201, 616.704pt x 507.8172pt>
+] [2] <introduction/hubble.jpg, id=204, 616.704pt x 507.8172pt>
 File: introduction/hubble.jpg Graphic file (type jpg)
 <use introduction/hubble.jpg>
 Package pdftex.def Info: introduction/hubble.jpg used on input line 15.
 (pdftex.def)             Requested size: 433.62pt x 357.06583pt.
-<introduction/sfMass.png, id=202, 1156.32pt x 867.24pt>
+<introduction/sfMass.png, id=205, 1156.32pt x 867.24pt>
 File: introduction/sfMass.png Graphic file (type png)
 <use introduction/sfMass.png>
 Package pdftex.def Info: introduction/sfMass.png used on input line 25.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-[3 <./introduction/hubble.jpg>] [4 <./introduction/sfMass.png>] [5] <introducti
-on/unifiedAGN.jpeg, id=303, 178.86826pt x 238.491pt>
+[3 <./introduction/hubble.jpg>] [4 <./introduction/sfMass.png>] <introduction/a
+gnFeedback.png, id=238, 804.00375pt x 797.22844pt>
+File: introduction/agnFeedback.png Graphic file (type png)
+<use introduction/agnFeedback.png>
+Package pdftex.def Info: introduction/agnFeedback.png used on input line 34.
+(pdftex.def)             Requested size: 433.62pt x 429.9617pt.
+[5] [6 <./introduction/agnFeedback.png>] <introduction/unifiedAGN.jpeg, id=323,
+ 178.86826pt x 238.491pt>
 File: introduction/unifiedAGN.jpeg Graphic file (type jpg)
 <use introduction/unifiedAGN.jpeg>
-Package pdftex.def Info: introduction/unifiedAGN.jpeg used on input line 41.
+Package pdftex.def Info: introduction/unifiedAGN.jpeg used on input line 49.
 (pdftex.def)             Requested size: 433.62pt x 578.2344pt.
-[6] [7 <./introduction/unifiedAGN.jpeg>]
+! Undefined control sequence.
+l.56 ... that the most powerful RGs ($\log P_\test
+                                                  {1.4 GHz} \gtrsim 25.5$ [W...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Warning: Reference `cha:VIMOS' on page 8 undefined on input line 52.
+[7] [8 <./introduction/unifiedAGN.jpeg>]
 
-
-LaTeX Warning: Reference `cha:MUSE' on page 8 undefined on input line 52.
-
-
-LaTeX Warning: Reference `cha:stellar' on page 8 undefined on input line 52.
-
-
-LaTeX Warning: Reference `cha:gas' on page 8 undefined on input line 52.
-
-
-LaTeX Warning: Reference `cha:conclusion' on page 8 undefined on input line 52.
+LaTeX Warning: Reference `cha:VIMOS' on page 9 undefined on input line 60.
 
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.66 	\end{align}
+LaTeX Warning: Reference `cha:MUSE' on page 9 undefined on input line 60.
+
+
+LaTeX Warning: Reference `cha:stellar' on page 9 undefined on input line 60.
+
+
+LaTeX Warning: Reference `cha:gas' on page 9 undefined on input line 60.
+
+
+LaTeX Warning: Reference `cha:conclusion' on page 9 undefined on input line 60.
+
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   {
+l.74 	\end{align}
                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
 
-! Extra \right.
-<argument> ...\log I}{\mathrm {d} \log R} \right |
-                                                  _{R=R'} = - \frac {\gamma ...
-l.66 	\end{align}
+! Missing delimiter (. inserted).
+<to be read again> 
+                   {
+l.74 	\end{align}
                  
-I'm ignoring a \right that had no matching \left.
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
 
-! Missing { inserted.
-<inserted text> 
-                {
-l.66 	\end{align}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.66 	\end{align}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra \right.
-<argument> ...\log I}{\mathrm {d} \log R} \right |
-                                                  _{R=R'} = - \frac {\gamma ...
-l.66 	\end{align}
-                 
-I'm ignoring a \right that had no matching \left.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.66 	\end{align}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.66 	\end{align}
-                 
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Missing { inserted.
-<inserted text> 
-                {
-l.66 	\end{align}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-[8] <introduction/exampleCorePower.jpeg, id=347, 213.79875pt x 206.33086pt>
+[9] <introduction/exampleCorePower.jpeg, id=369, 213.79875pt x 206.33086pt>
 File: introduction/exampleCorePower.jpeg Graphic file (type jpg)
 <use introduction/exampleCorePower.jpeg>
 Package pdftex.def Info: introduction/exampleCorePower.jpeg used on input line 
-71.
+79.
 (pdftex.def)             Requested size: 433.62pt x 418.50401pt.
-<introduction/slowRotFraction.jpeg, id=371, 308.352pt x 178.0251pt>
+[10] [11 <./introduction/exampleCorePower.jpeg>] <introduction/slowRotFraction.
+jpeg, id=410, 308.352pt x 178.0251pt>
 File: introduction/slowRotFraction.jpeg Graphic file (type jpg)
 <use introduction/slowRotFraction.jpeg>
-Package pdftex.def Info: introduction/slowRotFraction.jpeg used on input line 9
-3.
+Package pdftex.def Info: introduction/slowRotFraction.jpeg used on input line 1
+01.
 (pdftex.def)             Requested size: 433.62pt x 250.35258pt.
-[9] [10 <./introduction/exampleCorePower.jpeg>] <introduction/Atlas3D_comb.png,
- id=405, 359.6693pt x 187.11768pt>
+<introduction/Atlas3D_comb.png, id=425, 359.6693pt x 187.11768pt>
 File: introduction/Atlas3D_comb.png Graphic file (type png)
 <use introduction/Atlas3D_comb.png>
-Package pdftex.def Info: introduction/Atlas3D_comb.png used on input line 105.
+Package pdftex.def Info: introduction/Atlas3D_comb.png used on input line 113.
 (pdftex.def)             Requested size: 433.62pt x 225.5965pt.
-[11 <./introduction/slowRotFraction.jpeg>] <introduction/misalignment.jpg, id=4
-29, 342.19846pt x 271.7352pt>
+[12 <./introduction/slowRotFraction.jpeg>] <introduction/misalignment.jpg, id=4
+50, 342.19846pt x 271.7352pt>
 File: introduction/misalignment.jpg Graphic file (type jpg)
 <use introduction/misalignment.jpg>
-Package pdftex.def Info: introduction/misalignment.jpg used on input line 116.
+Package pdftex.def Info: introduction/misalignment.jpg used on input line 124.
 (pdftex.def)             Requested size: 433.62pt x 344.34106pt.
-<introduction/mass_Re.jpg, id=453, 308.352pt x 162.1257pt>
+<introduction/mass_Re.jpg, id=474, 308.352pt x 162.1257pt>
 File: introduction/mass_Re.jpg Graphic file (type jpg)
 <use introduction/mass_Re.jpg>
-Package pdftex.def Info: introduction/mass_Re.jpg used on input line 125.
+Package pdftex.def Info: introduction/mass_Re.jpg used on input line 133.
 (pdftex.def)             Requested size: 433.62pt x 227.99365pt.
-[12 <./introduction/Atlas3D_comb.png>] [13 <./introduction/misalignment.jpg>]
+[13 <./introduction/Atlas3D_comb.png>] [14 <./introduction/misalignment.jpg>]
 ! Undefined control sequence.
-l.136 ...h an amplitude of at least 10\textdegrees
+l.144 ...h an amplitude of at least 10\textdegrees
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -649,7 +635,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[14 <./introduction/mass_Re.jpg>]
+[15 <./introduction/mass_Re.jpg>]
 
 ! LaTeX Error: Encoding scheme `LGR' unknown.
 
@@ -657,7 +643,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 ... \textbf{Double \textsigma (2\textsigma)}
+l.147 ... \textbf{Double \textsigma (2\textsigma)}
                                                    morphology if there are t...
 
 Your command was ignored.
@@ -671,7 +657,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 ... \textbf{Double \textsigma (2\textsigma)}
+l.147 ... \textbf{Double \textsigma (2\textsigma)}
                                                    morphology if there are t...
 
 Your command was ignored.
@@ -685,7 +671,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.155 			d 		& 11		& NRR/2\textsigma
+l.163 			d 		& 11		& NRR/2\textsigma
                                     , RR/2\textsigma \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -698,19 +684,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.155 ...		& 11		& NRR/2\textsigma, RR/2\textsigma
+l.163 ...		& 11		& NRR/2\textsigma, RR/2\textsigma
                                                    \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-<introduction/substructure.jpeg, id=504, 455.7828pt x 238.37054pt>
+<introduction/substructure.jpeg, id=526, 455.7828pt x 238.37054pt>
 File: introduction/substructure.jpeg Graphic file (type jpg)
 <use introduction/substructure.jpeg>
-Package pdftex.def Info: introduction/substructure.jpeg used on input line 165.
+Package pdftex.def Info: introduction/substructure.jpeg used on input line 173.
 
 (pdftex.def)             Requested size: 433.62pt x 226.77806pt.
-[15 <./introduction/substructure.jpeg>]
+[16]
 
 ! LaTeX Error: Encoding scheme `LGR' unknown.
 
@@ -718,30 +704,28 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.193 ...ion, $\sigma_\ast$ relation (M-\textsigma
+l.201 ...ion, $\sigma_\ast$ relation (M-\textsigma
                                                   ) from \citet{McConnell2013}:
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[16]
+[17 <./introduction/substructure.jpeg>]
 
-LaTeX Warning: Reference `sub:Sample' on page 17 undefined on input line 228.
+LaTeX Warning: Reference `sub:Sample' on page 18 undefined on input line 236.
 
-[17] [18] [19]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.267 			2
-          .7GHz flux density: 		& $S_\text{2.7GHz} \ge 0.25 \text{Jy} $ \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+[18] [19]
 
-) [20] [21]
+Package natbib Warning: Citation `Capetti2011' on page 20 undefined on input li
+ne 257.
+
+[20] [21]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 321--343
+ [][] 
+ []
+
+) [22] [23]
 \openout2 = `chapter2/chapter2.aux'.
 
 No file chapter2/chapter2.tex.
@@ -751,7 +735,10 @@ No file conclusions/conclusions.tex.
 \openout2 = `appendix/appendix1/appendix1.aux'.
 
 No file appendix/appendix1/appendix1.tex.
-(./thesis.bbl [22
+(./thesis.bbl
+Missing character: There is no Â in font cmr12!
+Missing character: There is no Â in font cmr12!
+[24
 
 
 
@@ -760,34 +747,37 @@ No file appendix/appendix1/appendix1.tex.
 
 
 
-] [23] [24] [25] [26])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 80.
-[27]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 80.
+] [25] [26] [27] [28] [29])
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
+[30]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
 (./thesis.aux (./acknowledgements/dedication.aux) (./acknowledgements/acknowled
 gements.aux) (./abstract/abstract.aux) (./introduction/introduction.aux) (./cha
 pter2/chapter2.aux) (./conclusions/conclusions.aux) (./appendix/appendix1/appen
 dix1.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 80.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 80.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 72A6ECC2813D7E8FA0FFC8DFABB1D053;1246.
+(rerunfilecheck)             Checksum: 27F41B390D14EE78936BF68611DE99F3;1247.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 80.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 87.
  ) 
 Here is how much of TeX's memory you used:
- 7607 strings out of 494945
- 110218 string characters out of 6181438
- 196212 words of memory out of 5000000
- 10589 multiletter control sequences out of 15000+600000
- 13394 words of font info for 51 fonts, out of 8000000 for 9000
+ 7735 strings out of 494945
+ 112204 string characters out of 6181438
+ 197540 words of memory out of 5000000
+ 10687 multiletter control sequences out of 15000+600000
+ 15084 words of font info for 56 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,12n,33p,2107b,595s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,15n,33p,2107b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -804,10 +794,10 @@ onts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
 fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-di
 st/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on thesis.pdf (31 pages, 3859572 bytes).
+Output written on thesis.pdf (34 pages, 3983051 bytes).
 PDF statistics:
- 853 PDF objects out of 1000 (max. 8388607)
- 757 compressed objects within 8 object streams
- 165 named destinations out of 1000 (max. 500000)
- 195 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 962 PDF objects out of 1000 (max. 8388607)
+ 856 compressed objects within 9 object streams
+ 185 named destinations out of 1000 (max. 500000)
+ 200 words of extra memory for PDF output out of 10000 (max. 10000000)
 

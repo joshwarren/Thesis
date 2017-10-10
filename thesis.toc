@@ -1,18 +1,18 @@
-\contentsline {chapter}{\numberline {1}Acknowlefements}{2}{chapter.1}
-\contentsline {chapter}{\numberline {2}Introduction}{1}{chapter.2}
-\contentsline {section}{\numberline {2.1}Early Type Galaxies}{8}{section.2.1}
-\contentsline {section}{\numberline {2.2}Active Galactic Nuclei}{16}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}AGN parameters}{16}{subsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.1.1}Bolometric Luminosity}{16}{subsubsection.2.2.1.1}
-\contentsline {subsubsection}{\numberline {2.2.1.2}Black Hole Mass}{16}{subsubsection.2.2.1.2}
-\contentsline {subsubsection}{\numberline {2.2.1.3}Eddington Ratio}{17}{subsubsection.2.2.1.3}
-\contentsline {subsection}{\numberline {2.2.2}Radiative Mode}{17}{subsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.2.1}Fueling}{17}{subsubsection.2.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2.2}Feedback}{17}{subsubsection.2.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.2.3}Radiative Mode Radio Galaxies}{18}{subsubsection.2.2.2.3}
-\contentsline {subsection}{\numberline {2.2.3}Jet Mode}{18}{subsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.3.1}Fueling}{18}{subsubsection.2.2.3.1}
-\contentsline {subsubsection}{\numberline {2.2.3.2}Feedback}{19}{subsubsection.2.2.3.2}
-\contentsline {subsubsection}{\numberline {2.2.3.3}Jet Mode Radio Galaxies}{19}{subsubsection.2.2.3.3}
-\contentsline {section}{\numberline {2.3}The Southern Sample}{19}{section.2.3}
-\contentsline {chapter}{Bibliography}{22}{table.2.4}
+\contentsline {chapter}{Acknowledgments}{i}{chapter*.1}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Early Type Galaxies}{9}{section.1.1}
+\contentsline {section}{\numberline {1.2}Active Galactic Nuclei}{16}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}AGN parameters}{17}{subsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.1.1}Bolometric Luminosity}{17}{subsubsection.1.2.1.1}
+\contentsline {subsubsection}{\numberline {1.2.1.2}Black Hole Mass}{17}{subsubsection.1.2.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1.3}Eddington Ratio}{18}{subsubsection.1.2.1.3}
+\contentsline {subsection}{\numberline {1.2.2}Radiative Mode}{18}{subsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.1}Fueling}{18}{subsubsection.1.2.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2.2}Feedback}{18}{subsubsection.1.2.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.3}Radiative Mode Radio Galaxies}{19}{subsubsection.1.2.2.3}
+\contentsline {subsection}{\numberline {1.2.3}Jet Mode}{19}{subsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.3.1}Fueling}{19}{subsubsection.1.2.3.1}
+\contentsline {subsubsection}{\numberline {1.2.3.2}Feedback}{20}{subsubsection.1.2.3.2}
+\contentsline {subsubsection}{\numberline {1.2.3.3}Jet Mode Radio Galaxies}{21}{subsubsection.1.2.3.3}
+\contentsline {section}{\numberline {1.3}The Southern Sample}{21}{section.1.3}
+\contentsline {chapter}{Bibliography}{24}{table.1.4}

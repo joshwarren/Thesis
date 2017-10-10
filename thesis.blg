@@ -11,47 +11,48 @@ A level-1 auxiliary file: appendix/appendix1/appendix1.aux
 The style file: mnras.bst
 Database file #1: refs.bib
 Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "Capetti2011"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 90 entries,
+You've used 105 entries,
             2881 wiz_defined-function locations,
-            1539 strings with 47258 characters,
-and the built_in function-call counts, 40270 in all, are:
-= -- 3517
-> -- 2739
-< -- 180
-+ -- 1199
-- -- 362
-* -- 4946
-:= -- 6212
+            1677 strings with 52310 characters,
+and the built_in function-call counts, 47881 in all, are:
+= -- 4125
+> -- 3365
+< -- 218
++ -- 1449
+- -- 476
+* -- 5865
+:= -- 7445
 add.period$ -- 0
-call.type$ -- 90
-change.case$ -- 180
-chr.to.int$ -- 88
-cite$ -- 90
-duplicate$ -- 1990
-empty$ -- 1989
-format.name$ -- 688
-if$ -- 7029
+call.type$ -- 105
+change.case$ -- 210
+chr.to.int$ -- 103
+cite$ -- 105
+duplicate$ -- 2332
+empty$ -- 2318
+format.name$ -- 854
+if$ -- 8350
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 91
-newline$ -- 284
-num.names$ -- 576
-pop$ -- 359
+missing$ -- 106
+newline$ -- 329
+num.names$ -- 692
+pop$ -- 418
 preamble$ -- 1
-purify$ -- 360
+purify$ -- 420
 quote$ -- 0
-skip$ -- 1208
+skip$ -- 1418
 stack$ -- 0
-substring$ -- 2487
-swap$ -- 870
-text.length$ -- 360
+substring$ -- 2911
+swap$ -- 1070
+text.length$ -- 420
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 807
+type$ -- 942
 warning$ -- 0
-while$ -- 653
+while$ -- 769
 width$ -- 0
-write$ -- 912
-(There was 1 warning)
+write$ -- 1062
+(There were 2 warnings)
