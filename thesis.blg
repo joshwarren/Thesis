@@ -6,7 +6,6 @@ A level-1 auxiliary file: acknowledgements/acknowledgements.aux
 A level-1 auxiliary file: abstract/abstract.aux
 A level-1 auxiliary file: introduction/introduction.aux
 A level-1 auxiliary file: chapter2/chapter2.aux
-A level-1 auxiliary file: chapter3/chapter3.aux
 A level-1 auxiliary file: chapter4/chapter4.aux
 A level-1 auxiliary file: chapter5/chapter5.aux
 A level-1 auxiliary file: conclusions/conclusions.aux
@@ -14,46 +13,48 @@ A level-1 auxiliary file: appendix/appendix1/appendix1.aux
 The style file: mnras.bst
 Database file #1: refs.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--I didn't find a database entry for ""
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 151 entries,
+You've used 154 entries,
             2881 wiz_defined-function locations,
-            2073 strings with 68709 characters,
-and the built_in function-call counts, 70101 in all, are:
-= -- 5975
-> -- 5060
-< -- 322
-+ -- 2160
-- -- 748
-* -- 8588
-:= -- 10970
+            2102 strings with 69913 characters,
+and the built_in function-call counts, 71510 in all, are:
+= -- 6101
+> -- 5152
+< -- 334
++ -- 2198
+- -- 760
+* -- 8749
+:= -- 11185
 add.period$ -- 0
-call.type$ -- 151
-change.case$ -- 302
-chr.to.int$ -- 149
-cite$ -- 151
-duplicate$ -- 3370
-empty$ -- 3330
-format.name$ -- 1292
-if$ -- 12206
+call.type$ -- 154
+change.case$ -- 308
+chr.to.int$ -- 152
+cite$ -- 154
+duplicate$ -- 3439
+empty$ -- 3396
+format.name$ -- 1322
+if$ -- 12458
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 152
-newline$ -- 467
-num.names$ -- 1022
-pop$ -- 600
+missing$ -- 155
+newline$ -- 476
+num.names$ -- 1046
+pop$ -- 607
 preamble$ -- 1
-purify$ -- 604
+purify$ -- 616
 quote$ -- 0
-skip$ -- 2046
+skip$ -- 2093
 stack$ -- 0
-substring$ -- 4215
-swap$ -- 1616
-text.length$ -- 604
+substring$ -- 4299
+swap$ -- 1658
+text.length$ -- 616
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1356
+type$ -- 1383
 warning$ -- 0
-while$ -- 1119
+while$ -- 1143
 width$ -- 0
-write$ -- 1522
+write$ -- 1552
+(There was 1 warning)

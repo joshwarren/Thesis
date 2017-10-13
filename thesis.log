@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  11 OCT 2017 20:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  13 OCT 2017 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -349,9 +349,12 @@ edgements.aux) (./abstract/abstract.aux) (./introduction/introduction.aux
 
 LaTeX Warning: Label `fig:MassRe' multiply defined.
 
-) (./chapter2/chapter2.aux) (./chapter3/chapter3.aux) (./chapter4/chapter4.aux)
-(./chapter5/chapter5.aux) (./conclusions/conclusions.aux) (./appendix/appendix1
-/appendix1.aux))
+) (./chapter2/chapter2.aux
+
+LaTeX Warning: Label `fig:MassRe' multiply defined.
+
+) (./chapter4/chapter4.aux) (./chapter5/chapter5.aux) (./conclusions/conclusion
+s.aux) (./appendix/appendix1/appendix1.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
@@ -436,7 +439,7 @@ erthousand on input line 47.
 LaTeX Info: Redefining \ohm on input line 47.
 Package gensymb Info: Using \textohm for \ohm on input line 47.
 Package gensymb Info: Using \textmu for \micro on input line 47.
-<oxlogo.png, id=72, 120.9318pt x 140.2038pt>
+<oxlogo.png, id=24, 120.9318pt x 140.2038pt>
 File: oxlogo.png Graphic file (type png)
 <use oxlogo.png>
 Package pdftex.def Info: oxlogo.png used on input line 59.
@@ -453,327 +456,59 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+) [2
+
+
+
+
+
+])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
-[2
-
-
-
-
-
-] (./thesis.lof)
+[3] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
-[3
+[4
 
 ]
-\openout2 = `introduction/introduction.aux'.
+\openout2 = `chapter2/chapter2.aux'.
 
-(./introduction/introduction.tex
-Chapter 1.
+(./chapter2/chapter2.tex
+Chapter 2.
 
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ...ate universe and represented by \textLambda
-                                                  ), cold dark matter ({\tex...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ...textLambda), cold dark matter ({\textLambda
-                                                  }CDM) \citep{Peebles1982, ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.8 
-     [1
-
-
-
-] [2] <introduction/hubble.jpg, id=208, 616.704pt x 507.8172pt>
-File: introduction/hubble.jpg Graphic file (type jpg)
-<use introduction/hubble.jpg>
-Package pdftex.def Info: introduction/hubble.jpg used on input line 15.
-(pdftex.def)             Requested size: 433.62pt x 357.06583pt.
-<introduction/sfMass.png, id=209, 1156.32pt x 867.24pt>
-File: introduction/sfMass.png Graphic file (type png)
-<use introduction/sfMass.png>
-Package pdftex.def Info: introduction/sfMass.png used on input line 25.
-(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-[3 <./introduction/hubble.jpg>] [4 <./introduction/sfMass.png>] <introduction/a
-gnFeedback.png, id=244, 804.00375pt x 797.22844pt>
-File: introduction/agnFeedback.png Graphic file (type png)
-<use introduction/agnFeedback.png>
-Package pdftex.def Info: introduction/agnFeedback.png used on input line 34.
-(pdftex.def)             Requested size: 433.62pt x 429.9617pt.
-[5] [6 <./introduction/agnFeedback.png>] <introduction/unifiedAGN.jpeg, id=330,
- 178.86826pt x 238.491pt>
-File: introduction/unifiedAGN.jpeg Graphic file (type jpg)
-<use introduction/unifiedAGN.jpeg>
-Package pdftex.def Info: introduction/unifiedAGN.jpeg used on input line 49.
-(pdftex.def)             Requested size: 433.62pt x 578.2344pt.
-! Undefined control sequence.
-l.56 ... that the most powerful RGs ($\log P_\test
-                                                  {1.4 GHz} \gtrsim 25.5$ [W...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[7] [8 <./introduction/unifiedAGN.jpeg>]
-! Missing delimiter (. inserted).
-<to be read again> 
-                   {
-l.74 	\end{align}
-                 
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   {
-l.74 	\end{align}
-                 
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-[9] <introduction/exampleCorePower.jpeg, id=380, 213.79875pt x 206.33086pt>
-File: introduction/exampleCorePower.jpeg Graphic file (type jpg)
-<use introduction/exampleCorePower.jpeg>
-Package pdftex.def Info: introduction/exampleCorePower.jpeg used on input line 
-79.
-(pdftex.def)             Requested size: 433.62pt x 418.50401pt.
-[10] [11 <./introduction/exampleCorePower.jpeg>] <introduction/slowRotFraction.
-jpeg, id=422, 308.352pt x 178.0251pt>
-File: introduction/slowRotFraction.jpeg Graphic file (type jpg)
-<use introduction/slowRotFraction.jpeg>
-Package pdftex.def Info: introduction/slowRotFraction.jpeg used on input line 1
-05.
-(pdftex.def)             Requested size: 433.62pt x 250.35258pt.
-[12 <./introduction/slowRotFraction.jpeg>] <introduction/Atlas3D_comb.png, id=4
-48, 359.6693pt x 187.11768pt>
-File: introduction/Atlas3D_comb.png Graphic file (type png)
-<use introduction/Atlas3D_comb.png>
-Package pdftex.def Info: introduction/Atlas3D_comb.png used on input line 116.
-(pdftex.def)             Requested size: 433.62pt x 225.5965pt.
-<introduction/misalignment.jpg, id=463, 342.19846pt x 271.7352pt>
-File: introduction/misalignment.jpg Graphic file (type jpg)
-<use introduction/misalignment.jpg>
-Package pdftex.def Info: introduction/misalignment.jpg used on input line 127.
-(pdftex.def)             Requested size: 433.62pt x 344.34106pt.
-[13 <./introduction/Atlas3D_comb.png>] [14 <./introduction/misalignment.jpg>] <
-introduction/mass_Re.jpg, id=508, 308.352pt x 162.1257pt>
-File: introduction/mass_Re.jpg Graphic file (type jpg)
-<use introduction/mass_Re.jpg>
-Package pdftex.def Info: introduction/mass_Re.jpg used on input line 136.
-(pdftex.def)             Requested size: 433.62pt x 227.99365pt.
-[15 <./introduction/mass_Re.jpg>]
-! Undefined control sequence.
-l.147 ...h an amplitude of at least 10\textdegrees
-                                                  .
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.150 ... \textbf{Double \textsigma (2\textsigma)}
-                                                   morphology if there are t...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.150 ... \textbf{Double \textsigma (2\textsigma)}
-                                                   morphology if there are t...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.166 			d 		& 11		& NRR/2\textsigma
-                                    , RR/2\textsigma \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.166 ...		& 11		& NRR/2\textsigma, RR/2\textsigma
-                                                   \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<introduction/substructure.jpeg, id=540, 455.7828pt x 238.37054pt>
-File: introduction/substructure.jpeg Graphic file (type jpg)
-<use introduction/substructure.jpeg>
-Package pdftex.def Info: introduction/substructure.jpeg used on input line 176.
-
-(pdftex.def)             Requested size: 433.62pt x 226.77806pt.
-[16] [17 <./introduction/substructure.jpeg>]
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.206 ...ion, $\sigma_\ast$ relation (M-\textsigma
-                                                  ) from \citet{McConnell2013}:
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[18] <introduction/age_anisotropy.jpg, id=605, 68.53606pt x 54.80475pt>
-File: introduction/age_anisotropy.jpg Graphic file (type jpg)
-<use introduction/age_anisotropy.jpg>
-Package pdftex.def Info: introduction/age_anisotropy.jpg used on input line 236
-.
-(pdftex.def)             Requested size: 433.62pt x 346.76685pt.
-[19] [20 <./introduction/age_anisotropy.jpg>]
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.250 ...ntaining of the M$_\text{BH}$--\textsigma
-                                                   relation. If we assume th...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.256 			\end{align}
-                    
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.256 			\end{align}
-                    
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.257 ...urements of the M$_\text{BH}$--\textsigma
-                                                   relation such as \citet{G...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[21]
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259 ... recent measurements of the M--\textsigma
-                                                   relations \citep{McConnel...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Undefined control sequence.
-l.265 ... common at higher redshifts, $1.5 \ltrsim
-                                                   z \ltrsim 3$, which is so...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.265 ... higher redshifts, $1.5 \ltrsim z \ltrsim
-                                                   3$, which is sometimes ca...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[22] [23] [24]
-Overfull \hbox (30.1206pt too wide) in paragraph at lines 326--346
- [][] 
+Underfull \hbox (badness 2735) in paragraph at lines 15--15
+[][][]\OT1/cmr/m/sc/10 IDL \OT1/cmr/m/n/10 and \OT1/cmr/m/sc/10 Python \OT1/cmr
+/m/n/10 rou-tines for \OT1/cmr/m/sc/10 voronoi[]2d[]binning \OT1/cmr/m/n/10 can
+ be found at http://www-
  []
 
-) [25] [26] (./thesis.bbl [32
+
+LaTeX Warning: Reference `sec:skysubtractions' on page 27 undefined on input li
+ne 15.
 
 
+LaTeX Warning: Reference `fig:egSNR' on page 27 undefined on input line 15.
+
+[27
+
+
+
+
+] <chapter2/egSNR.png, id=131, 906.0249pt x 830.8641pt>
+File: chapter2/egSNR.png Graphic file (type png)
+<use chapter2/egSNR.png>
+Package pdftex.def Info: chapter2/egSNR.png used on input line 20.
+(pdftex.def)             Requested size: 260.17464pt x 238.58632pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[][][]\OT1/cmr/m/sc/10 IDL \OT1/cmr/m/n/10 and \OT1/cmr/m/sc/10 Python \OT1/cmr
+/m/n/10 rou-tines for \OT1/cmr/m/sc/10 ppxf \OT1/cmr/m/n/10 can be found at htt
+p://www-
+ []
+
+[28 <./chapter2/egSNR.png>]) [29] (./thesis.bbl [32
 
 
 
@@ -789,28 +524,66 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
 (./thesis.aux (./acknowledgements/dedication.aux) (./acknowledgements/acknowled
 gements.aux) (./abstract/abstract.aux) (./introduction/introduction.aux) (./cha
-pter2/chapter2.aux) (./chapter3/chapter3.aux) (./chapter4/chapter4.aux) (./chap
-ter5/chapter5.aux) (./conclusions/conclusions.aux) (./appendix/appendix1/append
-ix1.aux))
+pter2/chapter2.aux) (./chapter4/chapter4.aux) (./chapter5/chapter5.aux) (./conc
+lusions/conclusions.aux) (./appendix/appendix1/appendix1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 69E7A1A3448A628A3D5495A4AE3DDBB6;1196.
+(rerunfilecheck)             Checksum: CFF361E0CEFDC2477E5A88848B6C0503;281.
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
  ) 
 Here is how much of TeX's memory you used:
- 7956 strings out of 494945
- 116176 string characters out of 6181438
- 207242 words of memory out of 5000000
- 10831 multiletter control sequences out of 15000+600000
- 15084 words of font info for 56 fonts, out of 8000000 for 9000
+ 7866 strings out of 494945
+ 114220 string characters out of 6181438
+ 202144 words of memory out of 5000000
+ 10786 multiletter control sequences out of 15000+600000
+ 14777 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,15n,33p,2107b,719s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{chapter.6} has been referenced but does not exist
+ 34i,8n,30p,1882b,715s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{table.1.3} has been referenced but does not exist
 , replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1.11} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1.10} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1.9} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1.8} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1.7} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1.6} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1.5} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1.4} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1.3} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1.2} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1.1} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.6} has been referenced but does not exist, 
+replaced by a fixed one
 
 pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
 replaced by a fixed one
@@ -818,32 +591,67 @@ replaced by a fixed one
 pdfTeX warning (dest): name{chapter.4} has been referenced but does not exist, 
 replaced by a fixed one
 
-pdfTeX warning (dest): name{chapter.3} has been referenced but does not exist, 
+pdfTeX warning (dest): name{section.1.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.2.3.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.2.3.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.2.3.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.2.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.2.2.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.2.2.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.2.2.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.2.1.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.2.1.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.2.1.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.2.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.1} has been referenced but does not exist, 
 replaced by a fixed one
 
-pdfTeX warning (dest): name{chapter.2} has been referenced but does not exist, 
-replaced by a fixed one
-
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist
-/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on thesis.pdf (39 pages, 4046467 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mti12.pfb>
+Output written on thesis.pdf (17 pages, 710753 bytes).
 PDF statistics:
- 1250 PDF objects out of 1440 (max. 8388607)
- 1115 compressed objects within 12 object streams
- 245 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 633 PDF objects out of 1000 (max. 8388607)
+ 594 compressed objects within 6 object streams
+ 218 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
