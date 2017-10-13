@@ -2,7 +2,7 @@
 	\label{cha:stellar}
 
 
-The rest of this chapter is structured as follows: firstly we present the kinematic maps for the stellar component of the galaxy (section \ref{sec:stellarKin}) with a brief description of each galaxy and a look at how they fit on the $\lambda_R$--ellipticity plane, then, in section \ref{sec:pop} we investigate the stellar populations using the absorption line strength. We conclude by looking at the odd-one-out of the sample NGC 612 in section \ref{sec:NGC612}
+The rest of this chapter is structured as follows: firstly we present the kinematic maps for the stellar component of the galaxy (section \ref{sec:stellarKin}) and a look at how they fit on the $\lambda_{R_e}$--ellipticity plane, then, in section \ref{sec:pop} we investigate the stellar populations using the absorption line strength. We conclude by looking at the odd-one-out of the sample NGC 612 in section \ref{sec:NGC612}
 
 \section{Kinematics}
 	\label{sec:stellarKin}
@@ -14,34 +14,44 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 		Figures \ref{fig:Vstellar_img} - \ref{fig:Mstellar_sigma_uncert} show the stellar LOSVD with associated uncertainties for all VIMOS and MUSE datacubes. 
 
-		The kinematics of the sample are classified according to the Regular-Rotator/Non Regular-Rotator (RR/NRR) regime given in \citet{Krajnovic2011}, Fast/Slow Rotator (FR/SR) regime given in \citet{Cappellari2016} (originally defined by \citet{Emsellem2011}, but later refined by \citet{Cappellari2016}). Beyond this attempts have been made to use the kinematic features as defined in \citet{Krajnovic2011}, however the quality of the data has meant that many have had to be classified by eye as the artifacts from the VIMOS quadrants confuse any ellipse fitting methods. In the following section (\ref{subsec:descriptions}) we will give a brief description of each galaxy with these classifications in mind. 
+		The kinematics of the sample are classified according to the Regular-Rotator/Non Regular-Rotator (RR/NRR) regime given in \citet{Krajnovic2011}, Fast/Slow Rotator (FR/SR) regime given in \citet{Cappellari2016} (originally defined by \citet{Emsellem2011}, but later refined by \citet{Cappellari2016}). This classification is shown on the $\lambda_{R_e}$--ellipticity plane in figure \ref{fig:lambdaR_ellip}. Beyond this attempts have been made to use the kinematic features as defined in \citet{Krajnovic2011}, however the quality of the data has meant that many have had to be classified by eye as the artifacts from the VIMOS quadrants confuse any ellipse fitting methods. For VIMOS maps, the classifications are done by eye. These classifications are given in table \ref{tab:classify}. 
 
-	\subsection{Galaxy descriptions}
-		\label{subsec:descriptions}
 
-		\textbf{ESO 443-G024} is consistent with a NR. It has a very dispersed H$_\mathrm{\beta}$ (similar to NGC 3557 (Fig. \ref{fig:Hbeta_eqW})).
+		\begin{table}
+			\centering
+			\caption{Kinematic classifications. Where we have MUSE datacubes, the value and classifications from this are given (since they rely on less extrapolation due to the larger field of view of MUSE), otherwise the values are from the VIMOS maps. Col. 1: Galaxy name, Col. 2: $\lambda_{R_e}$, Col. 3: ellipticity, Col. 4: Misalignment between kinematic position angle and photometric position angle, Col. 5: Fast or Slow rotator, Col. 6: Regular rotator or non-regular rotator, Col. 7: Kinematic features (abbreviations defined in section \ref{sec:ETG}), Col. 8: Kinematic group as defined in section \ref{sec:ETG}}
+			\label{tab:classify}
+			\begin{tabular}{l r r p{0.7cm} p{0.8cm} p{0.8cm} p{1cm} p{1cm}}
+				\hline
+				\hline
+				Galaxy		& $\lambda_{R_e} & $\epsilon$  & $\Gamma_\text{kin}$ (deg) & FR/ SR 	& RR/ NRR 	& Feat. & Group 	\\
+				\hline 
+				ESO 443-G024 & 0.031 & 0.32 & 55.3 & FR & NRR & KDC & c \\
+				IC 1459 	& 0.174 & 0.24 & 5.1 & FR & NRR & KDC & c \\
+				IC 1531 	& 0.100 & 0.11 & 115.5 & SR & NRR & LV & a \\
+				IC 4296		& 0.034 & 0.03 & \_\_\_\_ & SR & NRR & KDC & c \\
+				NGC 612 	& 0.519 & 0.58 & \_\_\_\_ & FR & RR & -- & e \\
+				NGC 1316 	& 0.100 & 0.39 & \_\_\_\_ & SR & NRR & -- & f \\
+				NGC 1399 	& 0.090 & 0.12 & \_\_\_\_ & SR & NRR & LV & a \\
+				NGC 3100 	& 0.418 & 0.31 & \_\_\_\_ & FR & RR & -- & e \\
+				NGC 3557 	& 0.320 & 0.22 & \_\_\_\_ & FR & RR & -- & e\\
+				NGC 7075 	& 0.048 & 0.09 & \_\_\_\_ & SR & NRR & -- & b \\
+				PKS 0718-34 & 0.152 & 0.18 & \_\_\_\_ & SR & NRR & KDC? & b\\
+				\hline
+				\hline
+			\end{tabular}
+		\end{table}
 
-		\textbf{IC 1459} is known to contain a KDC. This is clearly seen in both the VIMOS and MUSE velocity maps (Fig. \ref{fig:stellar_vel}, \ref{fig:MUSEstellar_vel}). It is also known to have ionized gas counter rotating to the decoupled core. This is again seen by comparing Fig. \ref{fig:stellar_vel} with \ref{fig:gas_vel} and \ref{fig:MUSEstellar_vel} with \ref{fig:MUSEgas_vel}. From the MUSE velocity maps it can be seen that the gas is not coupled to the outer parts of the galaxy either. The KDC appears to be embedded in a slow rotator, though the KDC contaminates the $\lambda_{Re}$ measurement such that it is classified as a Fast Rotator. This is consistent with Section \ref{subsec:KDCsize}.
 
-		\textbf{IC 1531} seems to contain a KT. This galaxy has a very limited detection of ionized gas concentrated in the center (with the exception of [NI] (Fig. \ref{fig:NI_eqW}), which is more dispersed).
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth]{chapter4/lambdaR_ellipticity.png}
+			\caption[$\lambda_{R_e}$ -- ellipticity plane]{The $\lambda_{R_e}$ -- ellipticity plane showing the definition for the fast/slow rotator classes (solid black line). Atlas3D galaxies are shown in black \citep{Emsellem2011} and MASSIVE survey galaxies are shown in grey \citep{Veale2017}. The theoretic limit of disk dominated galaxy is shown (solid magenta) with lines of constant intrinsic angular moment with varying inclination (dashed magenta). VIMOS and MUSE measurements are shown in red and blue respectively. Note: the MASSIVE survey does not classify substructure so the MASSIVE sample is simply shown with filled circles.}
+			\label{fig:lambdaR_ellip}
+		\end{figure}
 
-		\textbf{IC 4296} appears to have KT, though this may be a quadrant feature. There is potentially 2 peaks in all of the gas intensity maps, one at the center of the galaxy and one to the south-east which is not seen in the image (total flux/collapsed cube).
 
-		\textbf{NGC 0612} has a large dust lane to the east of the apparent center of the galaxy perpendicular to the axis of rotation. The dust lane is also seen as a lower velocity dispersion (Fig \ref{fig:stellar_sigma}). Dust lanes generally imply a disky galaxy: indeed this seems to be the case here as the dust lane is aligned with the plane of the disk. The kinematic maps show NF. The dust lane also contains large amounts of gas. 
-
-		\textbf{NGC1316} (Fornax A) was not observed with VIMOS, however the MUSE maps show it to have a clear rotation signature (Fig. \ref{fig:MUSEstellar_vel}), though disturbed kinematics (e.g. Fig. \ref{fig:MUSEstellar_sigma}). The ionized gas is very clumpy and has no rotation (Fig. \ref{fig:MUSEgas_vel}).
-
-		\textbf{NGC 1399}, the central galaxy of the Fornax Cluster \citep{Jordan2007}, is known to have kinematic twist (see MUSE map in \citet{Zieleniewski2017}) on the scale of our MUSE field of view (reduced to 30"). Very little ionized gas was detected. 
-
-		\textbf{NGC 3100} is has NF in the stellar kinematics, however there is significant amount of ionized gas, which seems to be split into two clouds. This is most obviously seen in Fig. \ref{fig:Hbeta_eqW}. The gas also seems to have a non-standard rotation, possibly linked to its spacial distribution. 
-
-		\textbf{NGC 3557} is known to be FR with very high velocities, especially considering it's size, with NF. In our maps, there some significant quadrant effects. NGC 3557 also has a very dispersed, non-centrally concentrated H$_\mathrm{\beta}$ distribution. 
-
-		\textbf{NGC 7075} appears to have NF, though with quite slow velocities. There is some H$_\mathrm{\beta}$ detected at the very center of the galaxy. 
-
-		\textbf{PKS 0718-34} is a KDC, though S/N issues mean that as in IC 1459, the galaxy cannot be seen beyond the core. It has very little gas detected, though the often faint $H_\mathrm{\delta}$ line is detected. [NI] is redshifted out of the VIMOS spectral range.
-
-		
+		There are no discernible differences between the Southern Sample and the Atlas3D sample in terms of the fast/slow rotator fraction when the differences in mass is taken into account. % Justify this. 
 
 
 
@@ -53,11 +63,31 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 \section{Stellar Population}
 	\label{sec:pop}
 
+	\subsection{Absorption line strengths}
 
+
+
+	\subsection{Most-likely stellar population model}
 
 
 	\subsection{Kinematically Decoupled Cores}
 		\label{sec:popKDC}
 
-	\section{The case of NGC 612}
-		\label{sec:NGC612}
+		\citet{Kuntschner2010} found that KDCs exsit in two forms: they are either small or contain an old stellar population. The three definate KDCs found in the Southern Sample fit into this pattern, all with old stellar populations and varing sizes. It is worth noting that in many cases we would not resolve any of the small KDCs: they would be 1 spaxel in size. Figure \ref{fig:KDC} shows the KDC size -- age relation including the Southern Sample. KDC size is the radius at which $k_1$ goes to zero at the boundary between inner and outer components. Age is the age of the most-likely model for the inner 1 arcsec. 
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=.8\textwidth]{chapter4/lambdaR_ellipticity.png}
+			\caption[KDC dichotomy]{The KDC size -- age relation showing KDCs are either old or small. Colors of symbols are: VIMOS in red, MUSE in blue and SAURON from \citet{Kuntschner2010} in gray (Atlas3D did not repeat these measurements after SAURON.}
+			\label{fig:KDC}
+		\end{figure}
+
+
+	\subsection{Mg -- \textsigma relation}
+
+		\subsubsec{Global relation}
+
+		\subsubsection{Spatially resuloved}
+
+\section{The case of NGC 612}
+	\label{sec:NGC612}
