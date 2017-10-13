@@ -20,10 +20,13 @@
 \contentsline {chapter}{\numberline {4}Stellar Component}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}Kinematics}{29}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Maps}{29}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Galaxy descriptions}{29}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Stellar Population}{38}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Kinematically Decoupled Cores}{38}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}The case of NGC 612}{38}{section.4.3}
+\contentsline {section}{\numberline {4.2}Stellar Population}{39}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Absorption line strengths}{39}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Most-likely stellar population model}{39}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Kinematically Decoupled Cores}{39}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Mg -- \textsigma relation}{39}{subsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.4.1}Spatially resuloved}{39}{subsubsection.4.2.4.1}
+\contentsline {section}{\numberline {4.3}The case of NGC 612}{39}{section.4.3}
 \contentsline {chapter}{\numberline {5}Ionised Gas Component}{30}{chapter.5}
 \contentsline {chapter}{\numberline {6}Discussion and Conclusion}{31}{chapter.6}
 \contentsline {chapter}{Bibliography}{32}{section.4.3}

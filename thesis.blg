@@ -14,46 +14,48 @@ A level-1 auxiliary file: appendix/appendix1/appendix1.aux
 The style file: mnras.bst
 Database file #1: refs.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--I didn't find a database entry for "Veale2016"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 153 entries,
+You've used 152 entries,
             2881 wiz_defined-function locations,
-            2087 strings with 68612 characters,
-and the built_in function-call counts, 70821 in all, are:
-= -- 6032
-> -- 5106
-< -- 326
-+ -- 2186
-- -- 750
-* -- 8677
-:= -- 11083
+            2081 strings with 68639 characters,
+and the built_in function-call counts, 70454 in all, are:
+= -- 6009
+> -- 5077
+< -- 322
++ -- 2169
+- -- 748
+* -- 8636
+:= -- 11018
 add.period$ -- 0
-call.type$ -- 153
-change.case$ -- 306
-chr.to.int$ -- 151
-cite$ -- 153
-duplicate$ -- 3411
-empty$ -- 3373
-format.name$ -- 1300
-if$ -- 12324
+call.type$ -- 152
+change.case$ -- 304
+chr.to.int$ -- 150
+cite$ -- 152
+duplicate$ -- 3391
+empty$ -- 3352
+format.name$ -- 1296
+if$ -- 12268
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 154
-newline$ -- 473
-num.names$ -- 1032
-pop$ -- 612
+missing$ -- 153
+newline$ -- 470
+num.names$ -- 1026
+pop$ -- 603
 preamble$ -- 1
-purify$ -- 612
+purify$ -- 608
 quote$ -- 0
-skip$ -- 2070
+skip$ -- 2059
 stack$ -- 0
-substring$ -- 4249
-swap$ -- 1626
-text.length$ -- 612
+substring$ -- 4237
+swap$ -- 1620
+text.length$ -- 608
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1374
+type$ -- 1365
 warning$ -- 0
-while$ -- 1131
+while$ -- 1125
 width$ -- 0
-write$ -- 1541
+write$ -- 1532
+(There was 1 warning)

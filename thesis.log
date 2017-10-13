@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  13 OCT 2017 17:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  13 OCT 2017 22:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -436,7 +436,7 @@ erthousand on input line 47.
 LaTeX Info: Redefining \ohm on input line 47.
 Package gensymb Info: Using \textohm for \ohm on input line 47.
 Package gensymb Info: Using \textmu for \micro on input line 47.
-<oxlogo.png, id=35, 120.9318pt x 140.2038pt>
+<oxlogo.png, id=47, 120.9318pt x 140.2038pt>
 File: oxlogo.png Graphic file (type png)
 <use oxlogo.png>
 Package pdftex.def Info: oxlogo.png used on input line 59.
@@ -459,7 +459,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-])
+]
+
+! LaTeX Error: Encoding scheme `LGR' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 ...\textsigma relation}{39}{subsection.4.2.4}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
@@ -1686,28 +1700,113 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 )
-
-LaTeX Warning: Reference `fig:Hbeta_eqW' on page 29 undefined on input line 22.
-
-
-
-LaTeX Warning: Reference `fig:MUSEstellar_vel' on page 29 undefined on input li
-ne 24.
-
-
-LaTeX Warning: Reference `fig:gas_vel' on page 29 undefined on input line 24.
-
-
-LaTeX Warning: Reference `fig:MUSEstellar_vel' on page 29 undefined on input li
-ne 24.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.27 				Galaxy		& $\lambda_{R_e} &
+                                    $\epsilon$  & $\Gamma_\text{kin}$ (deg) ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
-LaTeX Warning: Reference `fig:MUSEgas_vel' on page 29 undefined on input line 2
-4.
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|$\OT1/cmr/m/n/12 ^^@[]$
+ []
 
 
-LaTeX Warning: Reference `subsec:KDCsize' on page 29 undefined on input line 24
-.
+Overfull \hbox (6.84677pt too wide) in paragraph at lines 27--27
+\OT1/cmr/m/n/12 (deg)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\OT1/cmr/m/n/12 FR/
+ []
+
+
+Overfull \hbox (3.34024pt too wide) in paragraph at lines 27--27
+\OT1/cmr/m/n/12 NRR| 
+ []
+
+
+Overfull \hbox (4.26637pt too wide) in paragraph at lines 27--28
+[]|\OT1/cmr/m/n/12 Group| 
+ []
+
+
+Overfull \hbox (0.97183pt too wide) in paragraph at lines 29--29
+[]|\OT1/cmr/m/n/12 55.3| 
+ []
+
+
+Overfull \hbox (3.34024pt too wide) in paragraph at lines 29--29
+[]|\OT1/cmr/m/n/12 NRR| 
+ []
+
+
+Overfull \hbox (3.34024pt too wide) in paragraph at lines 30--30
+[]|\OT1/cmr/m/n/12 NRR| 
+ []
+
+
+Overfull \hbox (6.84677pt too wide) in paragraph at lines 31--31
+[]|\OT1/cmr/m/n/12 115.5| 
+ []
+
+
+Overfull \hbox (3.34024pt too wide) in paragraph at lines 31--31
+[]|\OT1/cmr/m/n/12 NRR| 
+ []
+
+
+Overfull \hbox (3.34024pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/12 NRR| 
+ []
+
+
+Overfull \hbox (3.34024pt too wide) in paragraph at lines 34--34
+[]|\OT1/cmr/m/n/12 NRR| 
+ []
+
+
+Overfull \hbox (3.34024pt too wide) in paragraph at lines 35--35
+[]|\OT1/cmr/m/n/12 NRR| 
+ []
+
+
+Overfull \hbox (3.34024pt too wide) in paragraph at lines 38--38
+[]|\OT1/cmr/m/n/12 NRR| 
+ []
+
+
+Overfull \hbox (3.34024pt too wide) in paragraph at lines 39--39
+[]|\OT1/cmr/m/n/12 NRR| 
+ []
+
+
+Overfull \hbox (3.68999pt too wide) in paragraph at lines 39--39
+[]|\OT1/cmr/m/n/12 KDC?| 
+ []
+
+
+LaTeX Warning: File `chapter4/lambdaR_ellipticity.png' not found on input line 
+48.
+
+
+! Package pdftex.def Error: File `chapter4/lambdaR_ellipticity.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 ...xtwidth]{chapter4/lambdaR_ellipticity.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 [29
 
@@ -1716,33 +1815,52 @@ LaTeX Warning: Reference `subsec:KDCsize' on page 29 undefined on input line 24
 
 
 
-] [30] [31] [32] [33] [34] [35] [36]
+] [30] [31] [32] [33] [34] [35] [36] [37] [38]
 
-LaTeX Warning: Reference `fig:NI_eqW' on page 37 undefined on input line 26.
-
-
-LaTeX Warning: Reference `fig:stellar_sigma' on page 37 undefined on input line
- 30.
+LaTeX Warning: File `chapter4/lambdaR_ellipticity.png' not found on input line 
+80.
 
 
-LaTeX Warning: Reference `fig:MUSEstellar_vel' on page 37 undefined on input li
-ne 32.
+! Package pdftex.def Error: File `chapter4/lambdaR_ellipticity.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 ...xtwidth]{chapter4/lambdaR_ellipticity.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: Reference `fig:MUSEstellar_sigma' on page 37 undefined on input 
-line 32.
+! LaTeX Error: Encoding scheme `LGR' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86 	\subsection{Mg -- \textsigma relation}
+                                            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
-LaTeX Warning: Reference `fig:MUSEgas_vel' on page 37 undefined on input line 3
-2.
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textsigma' on input line 86.
 
-[37]
+! Undefined control sequence.
+l.88 		\subsubsec
+                 {Global relation}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Warning: Reference `fig:Hbeta_eqW' on page 38 undefined on input line 36.
-
-
-) [38] (./thesis.bblpdfTeX warning (ext4): destination with the same identifier
- (name{page.32}) has been already used, duplicate ignored
+) [39] [40] (./thesis.bblpdfTeX warning (ext4): destination with the same ident
+ifier (name{page.32}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.87   Znajek}{1977}]{Blandford1977}
@@ -1780,13 +1898,26 @@ l.428
 ge.37}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.511 
-       [37]pdfTeX warning (ext4): destination with the same identifier (name{pa
-ge.38}) has been already used, duplicate ignored
+l.503 ...ell}{Lynden-Bell}{1969}]{Lynden-Bell1969}
+                                                   [37]pdfTeX warning (ext4): d
+estination with the same identifier (name{page.38}) has been already used, dupl
+icate ignored
 <to be read again> 
                    \relax 
-l.596 
-       [38] [39] [40])
+l.588 ...on}{Prandoni et~al.}{2007}]{Prandoni2007}
+                                                   [38]pdfTeX warning (ext4): d
+estination with the same identifier (name{page.39}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.672 ... et~al.,}{Sarzi et~al.}{2005}]{Sarzi2005}
+                                                   [39]pdfTeX warning (ext4): d
+estination with the same identifier (name{page.40}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.767 
+       [40])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
 [41]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
@@ -1798,23 +1929,20 @@ ix1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 557E3597936A298CCD4355DDCF4BEDE6;505.
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: 7F1A7D48C5C9771693EF0283F7E1393C;754.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
  ) 
 Here is how much of TeX's memory you used:
- 7933 strings out of 494945
- 115768 string characters out of 6181438
- 209123 words of memory out of 5000000
- 10790 multiletter control sequences out of 15000+600000
+ 7937 strings out of 494945
+ 115787 string characters out of 6181438
+ 221166 words of memory out of 5000000
+ 10788 multiletter control sequences out of 15000+600000
  11939 words of font info for 44 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,5n,30p,769b,719s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,14n,33p,850b,719s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{figure.1.11} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1910,14 +2038,16 @@ replaced by a fixed one
 
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (24 pages, 154615 bytes).
+/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmtt12.pfb>
+Output written on thesis.pdf (26 pages, 171975 bytes).
 PDF statistics:
- 702 PDF objects out of 1000 (max. 8388607)
- 647 compressed objects within 7 object streams
- 222 named destinations out of 1000 (max. 500000)
- 70 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 751 PDF objects out of 1000 (max. 8388607)
+ 684 compressed objects within 7 object streams
+ 227 named destinations out of 1000 (max. 500000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 
