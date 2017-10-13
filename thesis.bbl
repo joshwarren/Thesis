@@ -405,6 +405,11 @@ Jesseit R.,  Cappellari M.,  Naab T.,  Emsellem E.,   Burkert A.,  2009,
   \mn@doi [Monthly Notices of the Royal Astronomical Society]
   {10.1111/j.1365-2966.2009.14984.x}, 397, 1202
 
+\bibitem[\protect\citeauthoryear{Jordan et~al.,}{Jordan
+  et~al.}{2007}]{Jordan2007}
+Jordan A.,  et~al., 2007, \mn@doi [The Astrophysical Journal Supplement Series]
+  {10.1086/512778}, 169, 213
+
 \bibitem[\protect\citeauthoryear{Kauffmann \& Haehnelt}{Kauffmann \&
   Haehnelt}{2000}]{Kauffmann2000}
 Kauffmann G.,  Haehnelt M.,  2000, \mn@doi [Monthly Notices of the Royal
@@ -775,6 +780,9 @@ Wenger M.,  et~al., 2000, \mn@doi [Astronomy and Astrophysics Supplement,
   Tsvetanov}{1994}]{Wilson1994}
 Wilson A.~S.,  Tsvetanov Z.~I.,  1994, \mn@doi [The Astronomical Journal]
   {10.1086/116935}, 107, 1227
+
+\bibitem[\protect\citeauthoryear{Zieleniewski}{Zieleniewski}{2017}]{Zieleniewski2017}
+Zieleniewski S.,  2017, In Prep
 
 \bibitem[\protect\citeauthoryear{de Ruiter, Parma, Capetti, Fanti  \&
   Morganti}{de~Ruiter et~al.}{2002}]{DeRuiter2002}

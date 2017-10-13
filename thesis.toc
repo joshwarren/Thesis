@@ -18,6 +18,12 @@
 \contentsline {chapter}{\numberline {2}VIMOS data}{27}{chapter.2}
 \contentsline {chapter}{\numberline {3}MUSE data}{28}{chapter.3}
 \contentsline {chapter}{\numberline {4}Stellar Component}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Kinematics}{29}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Maps}{29}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Galaxy descriptions}{29}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Stellar Population}{38}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Kinematically Decoupled Cores}{38}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}The case of NGC 612}{38}{section.4.3}
 \contentsline {chapter}{\numberline {5}Ionised Gas Component}{30}{chapter.5}
 \contentsline {chapter}{\numberline {6}Discussion and Conclusion}{31}{chapter.6}
-\contentsline {chapter}{Bibliography}{32}{table.1.4}
+\contentsline {chapter}{Bibliography}{32}{section.4.3}
