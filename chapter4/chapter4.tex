@@ -10,9 +10,9 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 	\subsection{Maps}
 		\label{subsec:maps}
 
-		\input{chapter4/maps}
+		% \input{chapter4/maps}
 
-		Figures \ref{fig:Vstellar_img} - \ref{fig:Mstellar_sigma_uncert} show the stellar LOSVD with associated uncertainties for all VIMOS and MUSE datacubes. 
+		Figures \ref{fig:VIMOS_stellar} and \ref{fig:MUSE_stellar} show the stellar LOSVD with associated uncertainties for all VIMOS and MUSE datacubes. 
 
 		The kinematics of the sample are classified according to the Regular-Rotator/Non Regular-Rotator (RR/NRR) regime given in \citet{Krajnovic2011}, Fast/Slow Rotator (FR/SR) regime given in \citet{Cappellari2016} (originally defined by \citet{Emsellem2011}, but later refined by \citet{Cappellari2016}). This classification is shown on the $\lambda_{R_e}$--ellipticity plane in figure \ref{fig:lambdaR_ellip}. Beyond this attempts have been made to use the kinematic features as defined in \citet{Krajnovic2011}, however the quality of the data has meant that many have had to be classified by eye as the artifacts from the VIMOS quadrants confuse any ellipse fitting methods. For VIMOS maps, the classifications are done by eye. These classifications are given in table \ref{tab:classify}. 
 
@@ -24,7 +24,7 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 			\begin{tabular}{l r r p{0.7cm} p{0.8cm} p{0.8cm} p{1cm} p{1cm}}
 				\hline
 				\hline
-				Galaxy		& $\lambda_{R_e} & $\epsilon$  & $\Gamma_\text{kin}$ (deg) & FR/ SR 	& RR/ NRR 	& Feat. & Group 	\\
+				Galaxy		& $\lambda_{R_e}$ & $\epsilon$  & $\Gamma_\text{kin}$ (deg) & FR/ SR 	& RR/ NRR 	& Feat. & Group 	\\
 				\hline 
 				ESO 443-G024 & 0.031 & 0.32 & 55.3 & FR & NRR & KDC & c \\
 				IC 1459 	& 0.174 & 0.24 & 5.1 & FR & NRR & KDC & c \\
@@ -43,16 +43,24 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 		\end{table}
 
 
+		Using the combined samples of Atlas3D and MASSIVE, we find that there is no discernible difference between the radio selected Southern Sample and the optically selected ETGs of Atlas3D and MASSIVE, once the differences in mass distribution are taken into account. To do this we find the fraction of slow rotators in each mass bin (using $M_k$ as a proxy), shown in black in the lower panel of figure \ref{fig:SRmassFraction}. We using this and the distribution in mass of the Southern Sample (red in upper panel of \ref{fig:SRmassFraction}) to estimate that we should expect $(64 \pm 6)\%$ of the Southern Sample to be slow rotators. This is consistent with out finding of 56\% slow rotators.
+
 		\begin{figure}
 			\centering
-			\includegraphics[width=\textwidth]{chapter4/lambdaR_ellipticity.png}
-			\caption[$\lambda_{R_e}$ -- ellipticity plane]{The $\lambda_{R_e}$ -- ellipticity plane showing the definition for the fast/slow rotator classes (solid black line). Atlas3D galaxies are shown in black \citep{Emsellem2011} and MASSIVE survey galaxies are shown in grey \citep{Veale2017}. The theoretic limit of disk dominated galaxy is shown (solid magenta) with lines of constant intrinsic angular moment with varying inclination (dashed magenta). VIMOS and MUSE measurements are shown in red and blue respectively. Note: the MASSIVE survey does not classify substructure so the MASSIVE sample is simply shown with filled circles.}
+			\includegraphics[width=\textwidth]{chapter4/lambda_R_ellipticity.png}
+			\caption[$\lambda_{R_e}$ -- ellipticity plane]{The $\lambda_{R_e}$ -- ellipticity plane showing the definition for the fast/slow rotator classes (solid black line). Atlas3D galaxies are shown in black \citep{Emsellem2011} and MASSIVE survey galaxies are shown in gray \citep{Veale2017}. The theoretic limit of disk dominated galaxy is shown (solid magenta) with lines of constant intrinsic angular moment with varying inclination (dashed magenta). VIMOS and MUSE measurements are shown in red and blue respectively. Note: the MASSIVE survey does not classify substructure so the MASSIVE sample is simply shown with filled circles.}
 			\label{fig:lambdaR_ellip}
 		\end{figure}
 
 
-		There are no discernible differences between the Southern Sample and the Atlas3D sample in terms of the fast/slow rotator fraction when the differences in mass is taken into account. % Justify this. 
+		
 
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth]{chapter4/M_k_binned.png}
+			\caption[Mass matching global kinematics]{The mass distributions (upper panel) of the combined Atlas3D and MASSIVE surveys (black) and the Southern Sample (red), as well as the slow rotators fractions within each mass bin (lower panel). The labels display the [number of slow rotators]/[total number of galaxies] in that bin. Note that the black and red have different normalizations in the mass distribution plot: The combined Atlas3D and MASSIVE samples contains 300 galaxies, while the Southern Sample is just 11 radio galaxies.}
+			\label{fig:SRmassFraction}
+		\end{figure}
 
 
 
@@ -65,15 +73,18 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 	\subsection{Absorption line strengths}
 
+	% \input{chapter4/maps2}
+
 
 
 	\subsection{Most-likely stellar population model}
 
+	% \input{chapter4/maps3}
 
 	\subsection{Kinematically Decoupled Cores}
 		\label{sec:popKDC}
 
-		\citet{Kuntschner2010} found that KDCs exsit in two forms: they are either small or contain an old stellar population. The three definate KDCs found in the Southern Sample fit into this pattern, all with old stellar populations and varing sizes. It is worth noting that in many cases we would not resolve any of the small KDCs: they would be 1 spaxel in size. Figure \ref{fig:KDC} shows the KDC size -- age relation including the Southern Sample. KDC size is the radius at which $k_1$ goes to zero at the boundary between inner and outer components. Age is the age of the most-likely model for the inner 1 arcsec. 
+		\citet{Kuntschner2010} found that KDCs exist in two forms: they are either small or contain an old stellar population. The three definite KDCs found in the Southern Sample fit into this pattern, all with old stellar populations and varying sizes. It is worth noting that in many cases we would not resolve any of the small KDCs: they would be 1 spaxel in size. Figure \ref{fig:KDC} shows the KDC size -- age relation including the Southern Sample. KDC size is the radius at which $k_1$ goes to zero at the boundary between inner and outer components. Age is the age of the most-likely model for the inner 1 arcsec. 
 
 		\begin{figure}
 			\centering
@@ -85,9 +96,9 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 	\subsection{Mg -- \textsigma relation}
 
-		\subsubsec{Global relation}
+		\subsubsection{Global relation}
 
-		\subsubsection{Spatially resuloved}
+		\subsubsection{Spatially resolved}
 
 \section{The case of NGC 612}
 	\label{sec:NGC612}
