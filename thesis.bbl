@@ -221,6 +221,11 @@ Croton D.~J.,  et~al., 2006, \mn@doi [Monthly Notices of the Royal Astronomical
   {10.1038/nature03335}, 433, 604
 
 \bibitem[\protect\citeauthoryear{Emsellem et~al.,}{Emsellem
+  et~al.}{2004}]{Emsellem2004}
+Emsellem E.,  et~al., 2004, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1111/j.1365-2966.2004.07948.x}, 352, 721
+
+\bibitem[\protect\citeauthoryear{Emsellem et~al.,}{Emsellem
   et~al.}{2011}]{Emsellem2011}
 Emsellem E.,  et~al., 2011, \mn@doi [Monthly Notices of the Royal Astronomical
   Society] {10.1111/j.1365-2966.2011.18496.x}, 414, 888
@@ -616,6 +621,12 @@ Raimundo S.~I.,  Fabian A.~C.,  Bauer F.~E.,  Alexander D.~M.,  Brandt W.~N.,
   Luo B.,  Vasudevan R.~V.,   Xue Y.~Q.,  2010, \mn@doi [Monthly Notices of the
   Royal Astronomical Society] {10.1111/j.1365-2966.2010.17234.x}, 408, 1714
 
+\bibitem[\protect\citeauthoryear{Rampazzo, Annibali, Bressan, Longhetti, Padoan
+   \& Zeilinger}{Rampazzo et~al.}{2005}]{Rampazzo2005}
+Rampazzo R.,  Annibali F.,  Bressan A.,  Longhetti M.,  Padoan F.,   Zeilinger
+  W.~W.,  2005, \mn@doi [Astronomy and Astrophysics]
+  {10.1051/0004-6361:200400122}, 433, 497
+
 \bibitem[\protect\citeauthoryear{Read \& Trentham}{Read \&
   Trentham}{2005}]{Read2005}
 Read J.~I.,  Trentham N.,  2005, \mn@doi [Philosophical transactions. Series A,
@@ -750,6 +761,20 @@ Thomas D.,  Maraston C.,  Bender R.,   de Oliveira C.~M.,  2005, \mn@doi [The
 Thomas D.,  Maraston C.,  Schawinski K.,  Sarzi M.,   Silk J.,  2010, \mn@doi
   [Monthly Notices of the Royal Astronomical Society]
   {10.1111/j.1365-2966.2010.16427.x}, 404, 1775
+
+\bibitem[\protect\citeauthoryear{Trager, Worthey, Faber, Burstein  \&
+  Gonzalez}{Trager et~al.}{1998}]{Trager1998}
+Trager S.~C.,  Worthey G.,  Faber S.~M.,  Burstein D.,   Gonzalez J.~J.,  1998,
+  \mn@doi [The Astrophysical Journal Supplement Series] {10.1086/313099}, 116,
+  1
+
+\bibitem[\protect\citeauthoryear{Vazdekis, S{\'{a}}nchez-Bl{\'{a}}zquez,
+  Falc{\'{o}}n-Barroso, Cenarro, Beasley, Cardiel, Gorgas  \&
+  Peletier}{Vazdekis et~al.}{2010}]{Vazdekis2010}
+Vazdekis A.,  S{\'{a}}nchez-Bl{\'{a}}zquez P.,  Falc{\'{o}}n-Barroso J.,
+  Cenarro A.~J.,  Beasley M.~A.,  Cardiel N.,  Gorgas J.,   Peletier R.~F.,
+  2010, \mn@doi [Monthly Notices of the Royal Astronomical Society, Volume 404,
+  Issue 4, pp. 1639-1671.] {10.1111/j.1365-2966.2010.16407.x}, 404, 1639
 
 \bibitem[\protect\citeauthoryear{Veale et~al.,}{Veale et~al.}{2017}]{Veale2017}
 Veale M.,  et~al., 2017, \mn@doi [Monthly Notices of the Royal Astronomical

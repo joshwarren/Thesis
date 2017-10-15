@@ -26,17 +26,17 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 				\hline
 				Galaxy		& $\lambda_{R_e}$ & $\epsilon$  & $\Gamma_\text{kin}$ (deg) & FR/ SR 	& RR/ NRR 	& Feat. & Group 	\\
 				\hline 
-				ESO 443-G024 & 0.031 & 0.32 & 55.3 & FR & NRR & KDC & c \\
-				IC 1459 	& 0.174 & 0.24 & 5.1 & FR & NRR & KDC & c \\
-				IC 1531 	& 0.100 & 0.11 & 115.5 & SR & NRR & LV & a \\
-				IC 4296		& 0.034 & 0.03 & \_\_\_\_ & SR & NRR & KDC & c \\
-				NGC 612 	& 0.519 & 0.58 & \_\_\_\_ & FR & RR & -- & e \\
-				NGC 1316 	& 0.100 & 0.39 & \_\_\_\_ & SR & NRR & -- & f \\
-				NGC 1399 	& 0.090 & 0.12 & \_\_\_\_ & SR & NRR & LV & a \\
-				NGC 3100 	& 0.418 & 0.31 & \_\_\_\_ & FR & RR & -- & e \\
-				NGC 3557 	& 0.320 & 0.22 & \_\_\_\_ & FR & RR & -- & e\\
-				NGC 7075 	& 0.048 & 0.09 & \_\_\_\_ & SR & NRR & -- & b \\
-				PKS 0718-34 & 0.152 & 0.18 & \_\_\_\_ & SR & NRR & KDC? & b\\
+				ESO 443-G024 & 0.031 & 0.32 & 55.2 	& FR & NRR & KDC & c \\
+				IC 1459 	& 0.174 & 0.24 & 87.9	& FR & NRR & KDC & c \\
+				IC 1531 	& 0.100 & 0.11 & 64.4 	& SR & NRR & LV & a \\
+				IC 4296		& 0.034 & 0.03 & 83.2 	& SR & NRR & KDC & c \\
+				NGC 612 	& 0.519 & 0.58 & 7.3 	& FR & RR & -- & e \\
+				NGC 1316 	& 0.100 & 0.39 & 72.1 	& SR & NRR & -- & f \\
+				NGC 1399 	& 0.090 & 0.12 & 27.2 	& SR & NRR & LV & a \\
+				NGC 3100 	& 0.418 & 0.31 & 19.8 	& FR & RR & -- & e \\
+				NGC 3557 	& 0.320 & 0.22 & 7.6 	& FR & RR & -- & e\\
+				NGC 7075 	& 0.048 & 0.09 & 20.0 	& SR & NRR & -- & b \\
+				PKS 0718-34 & 0.152 & 0.18 & 57.7 	& SR & NRR & KDC? & b\\
 				\hline
 				\hline
 			\end{tabular}
@@ -72,12 +72,80 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 	\label{sec:pop}
 
 	\subsection{Absorption line strengths}
+		Figures \ref{fig:VIMOS_absorption} and \ref{fig:MUSE_absorption} show the resolved absorption line strengths for the Southern Sample. For the VIMOS cubes, we find G4300, Fe4383, Ca4455, Fe4531, H$_\beta$, Fe5015 and Mg$_b$. For the most distant galaxies, the continuum band for Mg$_b$ is redshifted beyond the range of the VIMOS spectrograph. In these cases, we have avoided unnecessary systematics, by not calculating Mg$_b$. For MUSE cubes, we find H$_\beta$, Fe5015, Mg$_b$, Fe5270, Fe5335, Fe5406, Fe5709, Fe5782, NaD, TiO1 and TiO2. Each index is defined in table \ref{tab:abIndex}. 
+
+		\begin{table}
+			\centering
+			\caption{The definitions used for each index. Reference abbreviations: Tr98: \citet{Trager1998}.}
+			\label{tab:abIndex}
+			\begin{tabular}{l c c c c}
+				\hline
+				\hline
+				Index 	& Blue cont. 		& Index band 		& Red cont. 	& Ref. \\
+				\hline 
+				G4300 	& 4266.375--4282.625 & 4281.375--4316.375 & 4318.875--4335.125 & Tr98 \\
+				Fe4383 	& 4359.125--4370.375 & 4369.125--4420.375 & 4442.875--4455.375 & Tr98 \\
+				Ca4455 	& 4445.875--4454.625 & 4452.125--4474.625 & 4477.125--4492.125 & Tr98 \\
+				Fe4531 	& 4504.250--4514.250 & 4514.250--4559.250 & 4560.500--4579.250 & Tr98 \\
+				H$_\beta$ & 4827.875--4847.875 & 4847.875--4876.625 & 4876.625--4891.625 & Tr98 \\
+				Fe5015 	& 4946.500--4977.750 & 4977.750--5054.000 & 5054.000--5065.250 & Tr98 \\
+				Mg$_b$ 	& 5142.625--5161.375 & 5160.125--5192.625 & 5191.375--5206.375 & Tr98 \\
+				Fe5270 	& 5233.150--5248.150 & 5245.650--5285.650 & 5285.650--5318.150 & Tr98 \\
+				Fe5335 	& 5304.625--5315.875 & 5312.125--5352.125 & 5353.375--5363.375 & Tr98 \\
+				Fe5406 	& 5376.250--5387.500 & 5387.500--5415.000 & 5415.000--5425.000 & Tr98 \\
+				Fe5709 	& 5672.875--5696.625 & 5696.625--5720.375 & 5722.875--5736.625 & Tr98 \\
+				Fe5782 	& 5765.375--5775.375 & 5776.625--5796.625 & 5797.875--5811.625 & Tr98 \\
+				NaD 	& 5860.625--5875.625 & 5876.875--5909.375 & 5922.125--5948.125 & Tr98 \\
+				TiO1 	& 5816.625--5849.125 & 5936.625--5994.125 & 6038.625--6103.625 & Tr98 \\
+				TiO2 	& 6066.625--6141.625 & 6189.625--6272.125 & 6372.625--6415.125 & Tr98 \\
+				\hline
+				\hline
+			\end{tabular}
+		\end{table}
 
 	% \input{chapter4/maps2}
 
+	Comparisons to the literature is made difficult by the inhomogeneous nature of corrections applied: such as accounting for H$_\beta$ emission or velocity dispersion. There is also a lack of non-LICK/IDS system measurements: we used the empirical functions provided by \citet{} to translate between LICK/IDS and LIS systems. Finally, we noticed that the [OIII] emission line is not corrected for in most of the literature, despite often being the strongest emission line for ETGs. This effects the reliability of the Fe5015 absorption index as the [OIII] doublet falls with on component in the index band and one in the blue continuum band, provided the gas does not have wildly different kinematics to the stars. Table \ref{tab:litAbsorption} sums up our comparisons to the literature. Here we note that in the case of comparisons to \citet{Rampazzo2005}, the offset was rather large until we corrected to the same dispersions that they had used. For the sake of assessing the quality of our pipeline we use the same corrections as \citet{Rampazzo2005}, but we suggest that their analysis may contain flaws from using inaccurate velocity dispersions and only correcting for the H$_\beta$ emission line. For the comparison to \citet{Vazdekis2010}, we analyzed the SAURON data set\footnote{SARUON data is available at: http://www.strw.leidenuniv.nl/sauron/} \citep{Emsellem2004} using the same pipeline we have developed for our sample. 
+
+	\begin{table}
+		\centering
+		\caption{Comparisons to the literature. Comparisons to \citet{Rampazzo2005} are sampled at 7 radial apertures for each galaxy: 1.5, 2.5 and 10.0 arcsec and R$_e$/10, R$_e$/8, R$_e$/4 and R$_e$/2.}
+		\label{tab:litAbsorption}
+		\begin{tabular}{l r r r}
+			\hline
+			\hline
+			Index 		& N$_{gals}	& Offset 	& Dispersion \\
+						& 			& $\AA$		& $\AA$ \\
+			\hline
+			\multicolumn{4}{c}{\citet{Vazdekis2010} (SAURON)} \\
+			\hline
+			H$_\beta$ 	& 46		& -0.02		& 0.25	\\
+			Fe5015		& 46		& 0.66		& 0.34	\\
+			Mg$_b$ 		& 46		& 0.06		& 0.33	\\
+			\hline
+			\multicolumn{4}{c}{\citet{Rampazzo2005} (VIMOS)} \\
+			\hline
+			G4300 		& 3 		& 			& \\
+			Fe4383 		& 3 		& 			& \\
+			Ca4455 		& 3 		& 			& \\
+			Fe4531 		& 3 		& 			& \\
+			H$_\beta$ 	& 3 		& 			& \\
+			Fe5015 		& 3 		& 			& \\
+			Mg$_b$ 		& 3 		& 			& \\
+			\hline
+			\multicolumn{4}{c}{\citet{Rampazzo2005} (MUSE)} \\
+			\hline
+
+			\hline
+		\end{tabular}
+	\end{table}
+
+	\subsection{Gradients in absorption line strengths}
+		\label{subsec:absorptionGrad}
 
 
 	\subsection{Most-likely stellar population model}
+		Figures \ref{fig:VIMOS_pop} and \ref{fig:MUSE_pop} show the mostly stellar populations for the Southern Sample, assuming that they can resonably represented by a single stellar population (SSP). In general they show old, metal poor SSPs: very typical for ETGs. The exception is NGC 612 which is discussed in more detail in section \ref{sec:NGC612}. Some ideas around the fueling of the AGN suggest that star formation would play a role in modulating the flow of gas into the central black hole \citep{}, and while it would be expected to be small in scale, spatially, we might resonably expect a young SSP to dominate in the very central (1-2) spaxels. We note that these maps show no evidence of this. 
 
 	% \input{chapter4/maps3}
 
@@ -95,6 +163,7 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 
 	\subsection{Mg -- \textsigma relation}
+		\label{subsec:Mgsigma}
 
 		\subsubsection{Global relation}
 
@@ -102,3 +171,4 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 \section{The case of NGC 612}
 	\label{sec:NGC612}
+	All of the galaxies show typical ETG behavior: old, metal poor stellar populations with dispersion dominated stellar kinematics; with the exception of NGC 612. This galaxy has very high rotational velocities for an ETG, with an extended CO disk and a young stellar population. All this suggests that NGC 612 must have a very different history to the rest of the Southern Sample. Indeed, the CO and ionized gas disks are more representative of LTGs, rather than ETGs. With this in mind, we tentatively suggest that NGC 612 may be a very edge-on spiral galaxy and not intrinsically an ETG at all. Having said that, it is worth noting that spiral galaxies with radio jets, particularly on the scale of NGC 612's jets are very rare with only a handful of known cases \citep{}. 
