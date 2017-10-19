@@ -18,45 +18,45 @@ Warning--I didn't find a database entry for "Veale2016"
 Warning--I didn't find a database entry for ""
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 158 entries,
+You've used 172 entries,
             2881 wiz_defined-function locations,
-            2132 strings with 70642 characters,
-and the built_in function-call counts, 73556 in all, are:
-= -- 6239
-> -- 5357
-< -- 332
-+ -- 2283
-- -- 802
-* -- 9028
-:= -- 11534
+            2226 strings with 72710 characters,
+and the built_in function-call counts, 80520 in all, are:
+= -- 6823
+> -- 5892
+< -- 366
++ -- 2498
+- -- 894
+* -- 9863
+:= -- 12651
 add.period$ -- 0
-call.type$ -- 158
-change.case$ -- 316
-chr.to.int$ -- 156
-cite$ -- 158
-duplicate$ -- 3527
-empty$ -- 3484
-format.name$ -- 1364
-if$ -- 12794
+call.type$ -- 172
+change.case$ -- 344
+chr.to.int$ -- 170
+cite$ -- 172
+duplicate$ -- 3847
+empty$ -- 3794
+format.name$ -- 1498
+if$ -- 14012
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 159
-newline$ -- 488
-num.names$ -- 1070
-pop$ -- 630
+missing$ -- 173
+newline$ -- 530
+num.names$ -- 1176
+pop$ -- 680
 preamble$ -- 1
-purify$ -- 632
+purify$ -- 688
 quote$ -- 0
-skip$ -- 2138
+skip$ -- 2336
 stack$ -- 0
-substring$ -- 4395
-swap$ -- 1694
-text.length$ -- 632
+substring$ -- 4815
+swap$ -- 1872
+text.length$ -- 688
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1419
+type$ -- 1545
 warning$ -- 0
-while$ -- 1171
+while$ -- 1285
 width$ -- 0
-write$ -- 1592
+write$ -- 1732
 (There were 2 warnings)

@@ -25,11 +25,11 @@
 \contentsline {subsection}{\numberline {4.2.1}Absorption line strengths}{31}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Gradients in absorption line strengths}{34}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Most-likely stellar population model}{34}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Kinematically Decoupled Cores}{34}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Mg -- \textsigma relation}{36}{subsection.4.2.5}
-\contentsline {subsubsection}{\numberline {4.2.5.1}Global relation}{36}{subsubsection.4.2.5.1}
-\contentsline {subsubsection}{\numberline {4.2.5.2}Spatially resolved}{36}{subsubsection.4.2.5.2}
-\contentsline {section}{\numberline {4.3}The case of NGC 612}{36}{section.4.3}
+\contentsline {subsection}{\numberline {4.2.4}Kinematically Decoupled Cores}{37}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Mg -- \textsigma relation}{38}{subsection.4.2.5}
+\contentsline {subsubsection}{\numberline {4.2.5.1}Global relation}{38}{subsubsection.4.2.5.1}
+\contentsline {subsubsection}{\numberline {4.2.5.2}Spatially resolved}{38}{subsubsection.4.2.5.2}
+\contentsline {section}{\numberline {4.3}The case of NGC 612}{38}{section.4.3}
 \contentsline {chapter}{\numberline {5}Ionised Gas Component}{30}{chapter.5}
 \contentsline {chapter}{\numberline {6}Discussion and Conclusion}{31}{chapter.6}
 \contentsline {chapter}{Bibliography}{32}{section.4.3}
