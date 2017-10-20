@@ -127,7 +127,7 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 	% Could use another paper to compare to: Orgando? 
 	\begin{table}
 		\centering
-		\caption{Comparisons to the literature. Comparisons to \citet{Rampazzo2005} are sampled at 7 radial apertures for each galaxy: 1.5, 2.5 and 10.0 arcsec and R$_e$/10, R$_e$/8, R$_e$/4 and R$_e$/2.}
+		\caption{Comparisons to the literature. Comparisons to \citet{Rampazzo2005} are sampled at 7 radial apertures for each galaxy: 1.5, 2.5 and 10.0 arcsec and R$_e$/10, R$_e$/8, R$_e$/4 and R$_e$/2. Offset is the mean difference between our measurements and that of the literature, while Dispersion is the standard deviation of the difference.}
 		\label{tab:litAbsorption}
 		\begin{tabular}{l r r r}
 			\hline
@@ -165,11 +165,29 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 			TiO1 (mag)	& 2 		& -0.004	& 0.003	\\
 			TiO2 (mag)	& 2 		& -0.011	& 0.007	\\
 			\hline
+			\multicolumn{4}{c}{\citet{Ogando2008} (VIMOS)} \\
+			\hline
+			H$_\beta$ 	& 6 		& 		& 	\\
+			Fe5015 		& 6 		& 		& 	\\
+			Mg$_b$ 		& 6 		& 		& 	\\
+			\hline
+			\multicolumn{4}{c}{\citet{Ogando2008} (MUSE)} \\
+			\hline
+			H$_\beta$ 	& 3 		& 		& 	\\ 
+			Fe5015 		& 3 		& 		& 	\\ 
+			Mg$_b$ 		& 3 		& 		& 	\\
+			Fe5270 		& 3 		& 		& 	\\
+			Fe5335 		& 3 		& 		& 	\\
+			Fe5406 		& 3 		& 		& 	\\
+			Fe5709 		& 3 		& 		& 	\\
+			NaD 		& 3 		& 		& 	\\
+			%[OIII]5007	& 3 		& 		& 	\\
+			\hline
 		\end{tabular}
 	\end{table}
 
-	\subsection{Gradients in absorption line strengths}
-		\label{subsec:absorptionGrad}
+	% \subsection{Gradients in absorption line strengths}
+	% 	\label{subsec:absorptionGrad}
 
 
 	\subsection{Most-likely stellar population model}
@@ -208,9 +226,41 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 		\citet{Thomas2010} shows that the TMJ model gives a good fit to globular cluster measurements of \citet{Puzia2002, Schiavon2005} and the galaxy measurements by the SAURON group in \citet{Kuntschner2010}. \citet{Conroy2010} suggests that the \citet{Girardi2000} tracks used for the high metallicity models does not fit globular clusters well, however \citet{Thomas2010} points out that it is mostly down to an anomaly in the Balmer lines which is not seen in the analysis of the SAURON data. They therefore suggest that it is an issue with the globular cluster observations themselves. 
 
-		Figures \ref{fig:VIMOS_pop} and \ref{fig:MUSE_pop} show the mostly stellar populations for the Southern Sample, assuming that they can reasonably represented by a single stellar population (SSP). In general they show old, metal rich and alpha enhanced SSPs: very typical for ETGs. The exception is NGC 612 which is discussed in more detail in section \ref{sec:NGC612}. Some ideas around the fueling of the AGN suggest that star formation would play a role in modulating the flow of gas into the central black hole \citep{}, and while it would be expected to be small in scale, spatially, we might reasonably expect a young SSP to dominate in the very central (1-2) spaxels. We note that these maps show no evidence of this. 
+		Figures \ref{fig:VIMOS_pop} and \ref{fig:MUSE_pop} show the mostly stellar populations for the Southern Sample, assuming that they can reasonably represented by a single stellar population (SSP). In general they show old, metal rich and alpha enhanced SSPs: very typical for ETGs. The exceptions are NGC 612 and NGC 1316. NGC 612 is discussed in more detail in section \ref{sec:NGC612}, while NGC 1316 simply shows a very young stellar population (our fit agrees with that of \citet{Kuntschner2000}, but is conflicting with the older (4.7 Gyr) and less metal rich ([Fe/H]$ = 0.07$) stellar population found by \citet{Koleva2011}). 
+
+		Some ideas around the fueling of the AGN suggest that star formation would play a role in modulating the flow of gas into the central black hole \citep{}, and while it would be expected to be small in scale, spatially, we might reasonably expect a young SSP to dominate in the very central (1-2) spaxels. We note that these maps show no evidence of this. 
 
 	% \input{chapter4/maps3}
+
+		\subsubsection{Radial Gradients in stellar Populations}
+			\label{subsubsec:popGrad}
+
+			\citet{Koleva2011} showed that while the can be a large spread in radial gradients of age and metallicity, the mean is fairly well confined. They assume a linear relationship between $\log \text{age}$ or [Fe/H] and $\log R/R_e$ and for elliptical galaxies they find gradients of $0.06\pm0.09$ and $-0.26\pm0.08$ for the age and metallicity gradients respectively. For S0s they find flatter corresponding gradients of $0.01\pm0.11$ and $-012\pm0.13$. The results from our southern sample are shown in table \ref{tab:popGrad}.
+
+			\begin{table}
+				\centering
+				\caption{}
+				\label{tab:popGrad}
+				\begin{tabular}{l r r r r}
+					\hline
+					\hline
+					Galaxy 	& $\Delta_\text{age}$ & $\Delta_\text{[Fe/H]}$ & $\log \mathrm{Age_E}$ & [Fe/H]$_\mathrm{E}$ \\
+					\hline
+					ESO 443-G024 &  &  &  &  \\
+					IC 1459 	&  &  &  &  \\
+					IC 1531 	&  &  &  &  \\
+					IC 4296		&  &  &  &  \\
+					NGC 612 	&  &  &  &  \\
+					NGC 1316 	&  &  &  &  \\
+					NGC 1399 	&  &  &  &  \\
+					NGC 3100 	&  &  &  &  \\
+					NGC 3557 	&  &  &  &  \\
+					NGC 7075 	&  &  &  &  \\
+					PKS 0718-34 &  &  &  &  \\
+				\end{tabular}
+			\end{table}
+
+
 
 	\subsection{Kinematically Decoupled Cores}
 		\label{sec:popKDC}
