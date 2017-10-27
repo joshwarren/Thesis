@@ -7,14 +7,16 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 	\item Dispersion dominated stellar kinematics (section \ref{subsec:maps})
 	\item The fast/slow rotator fraction (\ref{subsec:FSfrac})
 	\item Absorption line strengths (\ref{subsec:absorption})
-	\item Absorption line gradients (\ref{subsec:absorptionGrad})
 	\item Mg -- \textsigma relation (\ref{subsec:Mgsigma})
 	\item Old and metal rich stellar populations (\ref{subsec:ssp})
+	\item Stellar population radial gradients (\ref{subsec:popGrad})
 	\item KDC age -- size relation (\ref{subsec:popKDC})
 \end{itemize}
 
 \section{Kinematics}
 	\label{sec:stellarKin}
+
+	% Make something of misaligments somewhere
 
 	\subsection{Maps}
 		\label{subsec:maps}
@@ -30,7 +32,7 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 			\centering
 			\caption{Kinematic classifications. Where we have MUSE datacubes, the value and classifications from this are given (since they rely on less extrapolation due to the larger field of view of MUSE), otherwise the values are from the VIMOS maps. Col. 1: Galaxy name, Col. 2: $\lambda_{R_e}$, Col. 3: ellipticity, Col. 4: Misalignment between kinematic position angle and photometric position angle, Col. 5: Fast or Slow rotator, Col. 6: Regular rotator or non-regular rotator, Col. 7: Kinematic features (abbreviations defined in section \ref{sec:ETG}), Col. 8: Kinematic group as defined in section \ref{sec:ETG}}
 			\label{tab:classify}
-			\begin{tabular}{l r r p{0.7cm} p{0.8cm} p{0.8cm} p{1cm} p{1cm}}
+			\begin{tabular}{l r r p{0.7cm} l l l l}
 				\hline
 				\hline
 				Galaxy		& $\lambda_{R_e}$ & $\epsilon$  & $\Gamma_\text{kin}$ (deg) & FR/ SR 	& RR/ NRR 	& Feat. & Group 	\\
@@ -38,16 +40,17 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 				ESO 443-G024 & 0.031 & 0.32 & 55.2 	& FR & NRR & KDC & c \\
 				IC 1459 	& 0.174 & 0.24 & 87.9	& FR & NRR & KDC & c \\
 				IC 1531 	& 0.100 & 0.11 & 64.4 	& SR & NRR & LV & a \\
-				IC 4296		& 0.034 & 0.03 & 83.2 	& SR & NRR & KDC & c \\
+				IC 4296		& 0.034 & 0.03 & 83.2 	& SR & RR & -- & e \\
 				NGC 612 	& 0.519 & 0.58 & 7.3 	& FR & RR & -- & e \\
 				NGC 1316 	& 0.100 & 0.39 & 72.1 	& SR & NRR & -- & f \\
 				NGC 1399 	& 0.090 & 0.12 & 27.2 	& SR & NRR & LV & a \\
 				NGC 3100 	& 0.418 & 0.31 & 19.8 	& FR & RR & -- & e \\
 				NGC 3557 	& 0.320 & 0.22 & 7.6 	& FR & RR & -- & e\\
 				NGC 7075 	& 0.048 & 0.09 & 20.0 	& SR & NRR & -- & b \\
-				PKS 0718-34 & 0.152 & 0.18 & 57.7 	& SR & NRR & KDC? & b\\
+				PKS 0718-34 & 0.152 & 0.18 & 57.7 	& SR & NRR & KDC$^\text{a}$ & b\\
 				\hline
 				\hline
+				\multicolumn{7}{L{.9\textwidth}}{\footnotesize $^\text{a}$ This is a tentative classification. Higher S/N is required to a larger radii to confirm this.} \\ % need to adjust size for final table
 			\end{tabular}
 		\end{table}
 
@@ -56,7 +59,17 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 	\subsection{Fast/Slow Rotator fraction}
 		\label{subsec:FSfrac}
+		The radial $\lambda_{R_e}$ profiles are shown in figure \ref{fig:lambdaR_profile}. The huge jump in $\lambda_{R_e}$ in one of the MUSE profiles is due to a foreground star in the NGC 1316 field of view. 
+
 		Using the combined samples of Atlas3D and MASSIVE, we find that there is no discernible difference between the radio selected Southern Sample and the optically selected ETGs of Atlas3D and MASSIVE, once the differences in mass distribution are taken into account. To do this we find the fraction of slow rotators in each mass bin (using $M_k$ as a proxy), shown in black in the lower panel of figure \ref{fig:SRmassFraction}. We using this and the distribution in mass of the Southern Sample (red in upper panel of \ref{fig:SRmassFraction}) to estimate that we should expect $(64 \pm 6)\%$ of the Southern Sample to be slow rotators. This is consistent with out finding of 56\% slow rotators.
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth]{chapter4/lambda_R.png}
+			\caption[$\lambda_{R}$ radial profiles]{The radial $\lambda_{R}$ profiles. Profiles from VIMOS data are in red, while MUSE data is in red. Solid lines represent fast rotators, while dashed represents slow rotators.}
+			\label{fig:lambdaR_profile}
+		\end{figure}
+
 
 		\begin{figure}
 			\centering
@@ -76,6 +89,7 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 		\end{figure}
 
 
+		
 
 
 
@@ -90,28 +104,28 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 		\begin{table}
 			\centering
-			\caption{The definitions used for each index. Reference abbreviations: Tr98: \citet{Trager1998}.}
+			\caption{The definitions used for each index. Indices are from \citet{Trager1998}.}
 			\label{tab:abIndex}
-			\begin{tabular}{l c c c c}
+			\begin{tabular}{l c c c}
 				\hline
 				\hline
-				Index 	& Blue cont. 		& Index band 		& Red cont. 	& Ref. \\
+				Index 	& Blue cont. 		& Index band 		& Red cont. \\
 				\hline 
-				G4300 	& 4266.375--4282.625 & 4281.375--4316.375 & 4318.875--4335.125 & Tr98 \\
-				Fe4383 	& 4359.125--4370.375 & 4369.125--4420.375 & 4442.875--4455.375 & Tr98 \\
-				Ca4455 	& 4445.875--4454.625 & 4452.125--4474.625 & 4477.125--4492.125 & Tr98 \\
-				Fe4531 	& 4504.250--4514.250 & 4514.250--4559.250 & 4560.500--4579.250 & Tr98 \\
-				H$_\beta$ & 4827.875--4847.875 & 4847.875--4876.625 & 4876.625--4891.625 & Tr98 \\
-				Fe5015 	& 4946.500--4977.750 & 4977.750--5054.000 & 5054.000--5065.250 & Tr98 \\
-				Mg$_b$ 	& 5142.625--5161.375 & 5160.125--5192.625 & 5191.375--5206.375 & Tr98 \\
-				Fe5270 	& 5233.150--5248.150 & 5245.650--5285.650 & 5285.650--5318.150 & Tr98 \\
-				Fe5335 	& 5304.625--5315.875 & 5312.125--5352.125 & 5353.375--5363.375 & Tr98 \\
-				Fe5406 	& 5376.250--5387.500 & 5387.500--5415.000 & 5415.000--5425.000 & Tr98 \\
-				Fe5709 	& 5672.875--5696.625 & 5696.625--5720.375 & 5722.875--5736.625 & Tr98 \\
-				Fe5782 	& 5765.375--5775.375 & 5776.625--5796.625 & 5797.875--5811.625 & Tr98 \\
-				NaD 	& 5860.625--5875.625 & 5876.875--5909.375 & 5922.125--5948.125 & Tr98 \\
-				TiO1 	& 5816.625--5849.125 & 5936.625--5994.125 & 6038.625--6103.625 & Tr98 \\
-				TiO2 	& 6066.625--6141.625 & 6189.625--6272.125 & 6372.625--6415.125 & Tr98 \\
+				G4300 	& 4266.375--4282.625 & 4281.375--4316.375 & 4318.875--4335.125 \\
+				Fe4383 	& 4359.125--4370.375 & 4369.125--4420.375 & 4442.875--4455.375 \\
+				Ca4455 	& 4445.875--4454.625 & 4452.125--4474.625 & 4477.125--4492.125 \\
+				Fe4531 	& 4504.250--4514.250 & 4514.250--4559.250 & 4560.500--4579.250 \\
+				H$_\beta$ & 4827.875--4847.875 & 4847.875--4876.625 & 4876.625--4891.625 \\
+				Fe5015 	& 4946.500--4977.750 & 4977.750--5054.000 & 5054.000--5065.250 \\
+				Mg$_b$ 	& 5142.625--5161.375 & 5160.125--5192.625 & 5191.375--5206.375 \\
+				Fe5270 	& 5233.150--5248.150 & 5245.650--5285.650 & 5285.650--5318.150 \\
+				Fe5335 	& 5304.625--5315.875 & 5312.125--5352.125 & 5353.375--5363.375 \\
+				Fe5406 	& 5376.250--5387.500 & 5387.500--5415.000 & 5415.000--5425.000 \\
+				Fe5709 	& 5672.875--5696.625 & 5696.625--5720.375 & 5722.875--5736.625 \\
+				Fe5782 	& 5765.375--5775.375 & 5776.625--5796.625 & 5797.875--5811.625 \\
+				NaD 	& 5860.625--5875.625 & 5876.875--5909.375 & 5922.125--5948.125 \\
+				TiO1 	& 5816.625--5849.125 & 5936.625--5994.125 & 6038.625--6103.625 \\
+				TiO2 	& 6066.625--6141.625 & 6189.625--6272.125 & 6372.625--6415.125 \\
 				\hline
 				\hline
 			\end{tabular}
@@ -192,13 +206,6 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 	\subsection{Most-likely stellar population model}
 		\label{subsec:ssp}
-
-		% Need to go into more detail about the TMJ models
-		% What the pecularities of the SSPs they used.
-		% Which IMF is used?
-		% how do they get alpha-enhansments? 
-		% Mass/light ratio?
-
 		Using the method described in section \ref{} we found the most-likely simple stellar population (SSP) characteristics: age (t), metallicity (Z) and alpha enhancement (\textalpha); by comparing our measured absorption line indices to that of models. We first give an overview of the process of generating synthetic stellar populations before detailing the specifics of the models used below. 
 
 		Synthetic SSPs are created by starting using the following ingredients:
@@ -235,28 +242,29 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 		\subsubsection{Radial Gradients in stellar Populations}
 			\label{subsubsec:popGrad}
 
-			\citet{Koleva2011} showed that while the can be a large spread in radial gradients of age and metallicity, the mean is fairly well confined. They assume a linear relationship between $\log \text{age}$ or [Fe/H] and $\log R/R_e$ and for elliptical galaxies they find gradients of $0.06\pm0.09$ and $-0.26\pm0.08$ for the age and metallicity gradients respectively. For S0s they find flatter corresponding gradients of $0.01\pm0.11$ and $-012\pm0.13$. The results from our southern sample are shown in table \ref{tab:popGrad}.
+			\citet{Koleva2011} showed that while the can be a large spread in radial gradients of age and metallicity, the mean is fairly well confined. They assume a linear relationship between $\log \text{age}$ or [Fe/H] and $\log R/R_e$ and for elliptical galaxies they find average gradients of $0.06\pm0.09 \mathrm{log(Gyr) \, arcsec^{-1}$ and $-0.26\pm0.08 \mathrm{[Fe/H]_odot \, arcsec^{-1}$ for the age and metallicity gradients respectively. For S0s they find flatter corresponding gradients of $0.01\pm0.11$ and $-012\pm0.13$. The results from our southern sample are shown in table \ref{tab:popGrad}. We find an average gradients of $-0.004\pm0.003 \mathrm{log(Gyr) \, arcsec^{-1}$ and $-0.025\pm0.002 \mathrm{[Fe/H]_odot \, arcsec^{-1}$ for the age and metallicity gradients respectively, which given the small sample size shows remarkable consistancy with \citet{Koleva2011}.
 
 			\begin{table}
 				\centering
 				\caption{}
 				\label{tab:popGrad}
-				\begin{tabular}{l r r r r}
+				\begin{tabular}{l c c}
 					\hline
 					\hline
-					Galaxy 	& $\Delta_\text{age}$ & $\Delta_\text{[Fe/H]}$ & $\log \mathrm{Age_E}$ & [Fe/H]$_\mathrm{E}$ \\
+					Galaxy 	& $\Delta_\text{log age}$ & $\Delta_\text{[Fe/H]} \\ 
+						& log(Gyr) arcsec$^{-1}$ & [Fe/H]$_\odot$ arcsec$^{-1}$ \\
 					\hline
-					ESO 443-G024 &  &  &  &  \\
-					IC 1459 	&  &  &  &  \\
-					IC 1531 	&  &  &  &  \\
-					IC 4296		&  &  &  &  \\
-					NGC 612 	&  &  &  &  \\
-					NGC 1316 	&  &  &  &  \\
-					NGC 1399 	&  &  &  &  \\
-					NGC 3100 	&  &  &  &  \\
-					NGC 3557 	&  &  &  &  \\
-					NGC 7075 	&  &  &  &  \\
-					PKS 0718-34 &  &  &  &  \\
+					ESO 443-G024 & $-0.008 \pm 0.006$ & $-0.028 \pm 0.005$ \\
+					IC 1459 	& $-0.024 \pm 0.011$ & $-0.024 \pm 0.022$ \\
+					IC 1531 	& $-0.016 \pm 0.006$ & $0.004 \pm 0.009$ \\
+					IC 4296		& $0.001 \pm 0.001$ & $0.071 \pm 0.006$ \\
+					NGC 612 	& $0.021 \pm 0.024$ & $-0.101 \pm 0.012$ \\
+					NGC 1316 	& $0.007 \pm 0.004$ & $0.005 \pm 0.006$ \\
+					NGC 1399 	& $-0.035 \pm 0.008$ & $0.041 \pm 0.006$ \\
+					NGC 3100 	& $0.000 \pm 0.004$ & $-0.045 \pm 0.003$ \\
+					NGC 3557 	& $0.000 \pm 0.006$ & $-0.023 \pm 0.007$ \\
+					NGC 7075 	& $0.006 \pm 0.003$ & $-0.067 \pm 0.006$ \\
+					PKS 0718-34 & $0.008 \pm 0.007$ & $-0.115 \pm 0.007$ \\
 				\end{tabular}
 			\end{table}
 
@@ -265,12 +273,12 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 	\subsection{Kinematically Decoupled Cores}
 		\label{sec:popKDC}
 
-		\citet{Kuntschner2010} found that KDCs exist in two forms: they are either small or contain an old stellar population. The three definite KDCs found in the Southern Sample fit into this pattern, all with old stellar populations and varying sizes. It is worth noting that in many cases we would not resolve any of the small KDCs: they would be 1 spaxel in size. Figure \ref{fig:KDC} shows the KDC size -- age relation including the Southern Sample. KDC size is the radius at which $k_1$ goes to zero at the boundary between inner and outer components. Age is the age of the most-likely model for the inner 1 arcsec. 
+		\citet{Kuntschner2010} found that KDCs exist in two forms: they are either small or contain an old stellar population. The three definite KDCs found in the Southern Sample fit into this pattern, all with old stellar populations and varying sizes. It is worth noting that in many cases we would not resolve any of the small KDCs: they would be 1 spaxel in size. Figure \ref{fig:KDC} shows the KDC size -- age relation including the Southern Sample. KDC size is the radius at which $k_1$ goes to zero at the boundary between inner and outer components. Age is the age corresponding to the most-likely model for the inner 1 arcsec. We have included PKS 0718-34 in this plot which we stress is only tentatively classified as containing a KDC from the kinematics from VIMOS. Figure \ref{fig:KDC} shows that while it would be an extremely large KDC it would still fit with the findings of \citet{Kuntschner2010}.
 
 		\begin{figure}
 			\centering
-			\includegraphics[width=.8\textwidth]{chapter4/lambdaR_ellipticity.png}
-			\caption[KDC dichotomy]{The KDC size -- age relation showing KDCs are either old or small. Colors of symbols are: VIMOS in red, MUSE in blue and SAURON from \citet{Kuntschner2010} in gray (Atlas3D did not repeat these measurements after SAURON.}
+			\includegraphics[width=.8\textwidth]{chapter4/KDC_size_age.png}
+			\caption[KDC dichotomy]{The KDC size -- age relation showing KDCs are either old or small. Colors of symbols are: VIMOS in red, MUSE in blue and SAURON from \citet{Kuntschner2010} in black and gray for fast and slow rotators respectively (Atlas3D did not repeat these measurements after SAURON.}
 			\label{fig:KDC}
 		\end{figure}
 
@@ -278,7 +286,50 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 	\subsection{Mg -- \textsigma relation}
 		\label{subsec:Mgsigma}
 
+		It was \citet{Bender1993} who first noticed the unusually tight relationship betweem the global Mg absorption line strength and velocity dispersion for elliptical galaxies. They also noticed that residuals appeared to be intrisic as they had a near gaussian shape about the median values, but did not seem to be correlated to any other galaxy property. Since there is no known process that would correlate these values at late times in the evolution of galaxy, this seems to favour the notion that ETGs had a very short formation epoch at high redshift. 
+
+		\citet{Mehlert2003} showed the existance of the internal Mg--\textsigma relation, but also suggested that it had a different origin to that of the global relation. They found that alpha-enhancement correlates with velocity dispersion and drives about 30\% of the global Mg--\textsigma relation, with metallicity variations providing the remaining 70\%, while the alpha-enhancement usually has no radial gradient (while velocity dispersion is highly correlated to radius) suggesting that alpha-enhancement has no role in the internal Mg--\textsigma relation. 
+
 		\subsubsection{Global relation}
+			Using an aperture of 2 arcsec we find a global gradient of $2.7\pm1.9 \mathrm{\AA \, log(km s^{-1})^{-1}}$. This is consistent with the gradient found by \citet{Ziegler1997} for a sample of elliptical galaxies within Virgo and Coma using data from \citet{Dressler1987}, however there is an considerable offset of $\sim0.75\AA$. Figure \ref{fig:globalMg} shows our measurement (which are also given in table \ref{tab:globalMg}) with the bestfitting line (solid line). The result of \citet{Ziegler1997} (eq. 2 in that paper) is also shown as the dashed line. 
+			%%no uncertainties quoted in Dressler1987 so comparison is meaningless.
+			%NGC 1399 was observed by \citet{Dressler1987}, but measures Mg$_2$ instead of Mg$_b$. In order to compare we make use of the linear conversion (eq. 1 in \citet{Ziegler1997}):
+			% \begin{equation}
+			% 	\mathrm{Mg_b \, \AA^{-1}} = 15 \mathrm{Mg_2 \, mag^{-1}}
+			% \end{equation}
+			% Using this gives that \citet{Dressler1987} measured NGC 1399 to have a Mg$_b$ strength of 5.175 and a velocity dispersion of 299.9 km s$^{-1}$, however \citet{Dressler1987} does not quote uncertainties for their values so it is difficult to make comparisons. 
+
+			\begin{table}
+				\centering
+				\caption{}
+				\label{tab:globalMg}
+				\begin{tabular}{l c c}
+					\hline
+					\hline
+					Galaxy 	& Mg$_b$ & $\sigma_0$ \\
+							& \AA 	& km s$^{-1}$ \\
+					\hline
+					ESO 443-G024 & $4.43 \pm 0.08$ & $332.4 \pm 1.6$ \\
+					IC 1459 	& $4.67 \pm 0.03$ & $292.7 \pm 0.6$ \\
+					IC 1531 	& $3.74 \pm 0.06$ & $222.9 \pm 1.3$ \\
+					IC 4296		& $4.57 \pm 0.13$ & $361.7 \pm 2.1$ \\
+					NGC 612 	& --   			  & $228.5 \pm 1.9$ \\
+					NGC 1316 	& $3.45 \pm 0.08$ & $233.3 \pm 1.5$ \\
+					NGC 1399 	& $4.57 \pm 0.13$ & $319.1 \pm 2.1$ \\
+					NGC 3100 	& $4.36 \pm 0.05$ & $214.2 \pm 1.1$ \\
+					NGC 3557 	& $4.15 \pm 0.03$ & $280.4 \pm 0.9$ \\
+					NGC 7075 	& $4.45 \pm 0.07$ & $258.7 \pm 1.9$ \\
+					PKS 0718-34 & -- 		      & $258.7 \pm 1.9$ \\
+					\hline \\
+				\end{tabular}
+			\end{table}
+
+			\begin{figure}
+				\centering
+				\includegraphics[width=.8\textwidth]{chapter4/Mg_sigma.png}
+				\caption[Global Mg$_b$--\textsigma]{The Mg$_b$ -- velocity dispersion relation using a 2" aperture.}
+				\label{fig:globalMg}
+			\end{figure}
 
 		\subsubsection{Spatially resolved}
 

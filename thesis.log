@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  20 OCT 2017 19:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  25 OCT 2017 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -484,7 +484,21 @@ or  <return>  to continue without it.
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
-[3] (./thesis.lof)
+[3] (./thesis.lof
+
+! LaTeX Error: Encoding scheme `LGR' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...obal Mg$_b$--\textsigma }}{41}{figure.4.4}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
@@ -496,21 +510,21 @@ or  <return>  to continue without it.
 (./chapter4/chapter4.tex
 Chapter 4.
 
-LaTeX Warning: Reference `subsec:absorptionGrad' on page 29 undefined on input 
-line 10.
-
-
 ! LaTeX Error: Encoding scheme `LGR' unknown.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.11 	\item Mg -- \textsigma
+l.10 	\item Mg -- \textsigma
                              relation (\ref{subsec:Mgsigma})
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
+
+
+LaTeX Warning: Reference `subsec:popGrad' on page 29 undefined on input line 12
+.
 
 
 LaTeX Warning: Reference `subsec:popKDC' on page 29 undefined on input line 13.
@@ -542,28 +556,8 @@ Overfull \hbox (6.84677pt too wide) in paragraph at lines 36--36
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--36
-[]|\OT1/cmr/m/n/12 FR/
- []
-
-
-Overfull \hbox (3.34024pt too wide) in paragraph at lines 36--36
-\OT1/cmr/m/n/12 NRR| 
- []
-
-
-Overfull \hbox (4.26637pt too wide) in paragraph at lines 36--37
-[]|\OT1/cmr/m/n/12 Group| 
- []
-
-
 Overfull \hbox (0.97183pt too wide) in paragraph at lines 38--38
 []|\OT1/cmr/m/n/12 55.2| 
- []
-
-
-Overfull \hbox (3.34024pt too wide) in paragraph at lines 38--38
-[]|\OT1/cmr/m/n/12 NRR| 
  []
 
 
@@ -572,18 +566,8 @@ Overfull \hbox (0.97183pt too wide) in paragraph at lines 39--39
  []
 
 
-Overfull \hbox (3.34024pt too wide) in paragraph at lines 39--39
-[]|\OT1/cmr/m/n/12 NRR| 
- []
-
-
 Overfull \hbox (0.97183pt too wide) in paragraph at lines 40--40
 []|\OT1/cmr/m/n/12 64.4| 
- []
-
-
-Overfull \hbox (3.34024pt too wide) in paragraph at lines 40--40
-[]|\OT1/cmr/m/n/12 NRR| 
  []
 
 
@@ -592,28 +576,13 @@ Overfull \hbox (0.97183pt too wide) in paragraph at lines 41--41
  []
 
 
-Overfull \hbox (3.34024pt too wide) in paragraph at lines 41--41
-[]|\OT1/cmr/m/n/12 NRR| 
- []
-
-
 Overfull \hbox (0.97183pt too wide) in paragraph at lines 43--43
 []|\OT1/cmr/m/n/12 72.1| 
  []
 
 
-Overfull \hbox (3.34024pt too wide) in paragraph at lines 43--43
-[]|\OT1/cmr/m/n/12 NRR| 
- []
-
-
 Overfull \hbox (0.97183pt too wide) in paragraph at lines 44--44
 []|\OT1/cmr/m/n/12 27.2| 
- []
-
-
-Overfull \hbox (3.34024pt too wide) in paragraph at lines 44--44
-[]|\OT1/cmr/m/n/12 NRR| 
  []
 
 
@@ -627,63 +596,53 @@ Overfull \hbox (0.97183pt too wide) in paragraph at lines 47--47
  []
 
 
-Overfull \hbox (3.34024pt too wide) in paragraph at lines 47--47
-[]|\OT1/cmr/m/n/12 NRR| 
- []
-
-
 Overfull \hbox (0.97183pt too wide) in paragraph at lines 48--48
 []|\OT1/cmr/m/n/12 57.7| 
  []
 
 
-Overfull \hbox (3.34024pt too wide) in paragraph at lines 48--48
-[]|\OT1/cmr/m/n/12 NRR| 
+Overfull \hbox (13.35448pt too wide) in paragraph at lines 33--53
+ [][] 
  []
 
-
-Overfull \hbox (3.68999pt too wide) in paragraph at lines 48--48
-[]|\OT1/cmr/m/n/12 KDC?| 
- []
-
-[30] <chapter4/lambda_R_ellipticity.png, id=213, 1445.4pt x 867.24pt>
+[30] <chapter4/lambda_R_ellipticity.png, id=217, 1445.4pt x 867.24pt>
 File: chapter4/lambda_R_ellipticity.png Graphic file (type png)
 <use chapter4/lambda_R_ellipticity.png>
 Package pdftex.def Info: chapter4/lambda_R_ellipticity.png used on input line 6
-3.
+4.
 (pdftex.def)             Requested size: 433.62pt x 260.17401pt.
-<chapter4/M_k_binned.png, id=222, 1156.32pt x 867.24pt>
+<chapter4/M_k_binned.png, id=226, 1156.32pt x 867.24pt>
 File: chapter4/M_k_binned.png Graphic file (type png)
 <use chapter4/M_k_binned.png>
-Package pdftex.def Info: chapter4/M_k_binned.png used on input line 73.
+Package pdftex.def Info: chapter4/M_k_binned.png used on input line 74.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
 LaTeX Warning: Reference `fig:VIMOS_absorption' on page 31 undefined on input l
-ine 89.
+ine 90.
 
 
 LaTeX Warning: Reference `fig:MUSE_absorption' on page 31 undefined on input li
-ne 89.
+ne 90.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--122
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
 [][][]\OT1/cmr/m/n/10 The trans-for-ma-tion from LICK/IDS to the LIS sys-tem is
  avail-able at
  []
 
 [31 <./chapter4/lambda_R_ellipticity.png>] [32 <./chapter4/M_k_binned.png>]
 
-LaTeX Warning: Reference `' on page 33 undefined on input line 125.
+LaTeX Warning: Reference `' on page 33 undefined on input line 126.
 
 [33]
 
-LaTeX Warning: Command \r invalid in math mode on input line 136.
+LaTeX Warning: Command \r invalid in math mode on input line 137.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 136.
+LaTeX Warning: Command \r invalid in math mode on input line 137.
 
 
-LaTeX Warning: Reference `' on page 34 undefined on input line 202.
+LaTeX Warning: Reference `' on page 34 undefined on input line 196.
 
 
 ! LaTeX Error: Encoding scheme `LGR' unknown.
@@ -692,7 +651,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.202 ...ity (Z) and alpha enhancement (\textalpha
+l.196 ...ity (Z) and alpha enhancement (\textalpha
                                                   ); by comparing our measur...
 
 Your command was ignored.
@@ -707,7 +666,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.223 ...element enhancement parameter, \textalpha
+l.217 ...element enhancement parameter, \textalpha
                                                   /Fe. This is done followin...
 
 Your command was ignored.
@@ -721,7 +680,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.223 ...O, Na, Mg, Si, Ca and Ti (i.e. \textalpha
+l.217 ...O, Na, Mg, Si, Ca and Ti (i.e. \textalpha
                                                    and other light elements)...
 
 Your command was ignored.
@@ -731,7 +690,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.225 ...-1.35, -0.33, 0.0, 0.35, 0.67 and [\alpha
+l.219 ...-1.35, -0.33, 0.0, 0.35, 0.67 and [\alpha
                                                   /Fe] = -0.3, 0.0, 0.3, 0.5.
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -739,37 +698,66 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.226 
+l.220 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: Reference `fig:VIMOS_pop' on page 37 undefined on input line 229
+LaTeX Warning: Reference `fig:VIMOS_pop' on page 37 undefined on input line 223
 .
 
 
-LaTeX Warning: Reference `fig:MUSE_pop' on page 37 undefined on input line 229.
+LaTeX Warning: Reference `fig:MUSE_pop' on page 37 undefined on input line 223.
 
+
+Runaway argument?
+{log(Gyr) \, arcsec^{-1}$ and $-0.26\pm 0.08 \mathrm {[Fe/H]_odot \, \ETC.
+! Paragraph ended before \math@egroup was complete.
+<to be read again> 
+                   \par 
+l.233 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.233 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.233 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 [37]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.242 						&
+              log(Gyr) arcsec$^{-1}$ & [Fe/H]$_\odot$ arcsec$^{-1}$ \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-LaTeX Warning: File `chapter4/lambdaR_ellipticity.png' not found on input line 
-272.
-
-
-! Package pdftex.def Error: File `chapter4/lambdaR_ellipticity.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.272 ...twidth]{chapter4/lambdaR_ellipticity.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<chapter4/KDC_size_age.png, id=384, 1156.32pt x 867.24pt>
+File: chapter4/KDC_size_age.png Graphic file (type png)
+<use chapter4/KDC_size_age.png>
+Package pdftex.def Info: chapter4/KDC_size_age.png used on input line 267.
+(pdftex.def)             Requested size: 346.89731pt x 260.17401pt.
 
 ! LaTeX Error: Encoding scheme `LGR' unknown.
 
@@ -777,7 +765,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.278 	\subsection{Mg -- \textsigma relation}
+l.273 	\subsection{Mg -- \textsigma relation}
                                              
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -785,9 +773,21 @@ or  <return>  to continue without it.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 278.
+(hyperref)                removing `\textsigma' on input line 273.
 
-) [38] [39] [40] (./thesis.bbl
+
+LaTeX Warning: Command \r invalid in math mode on input line 279.
+
+
+LaTeX Warning: Command \r invalid in math mode on input line 279.
+
+[38] [39 <./chapter4/KDC_size_age.png>] <chapter4/Mg_sigma.png, id=409, 1156.32
+pt x 867.24pt>
+File: chapter4/Mg_sigma.png Graphic file (type png)
+<use chapter4/Mg_sigma.png>
+Package pdftex.def Info: chapter4/Mg_sigma.png used on input line 314.
+(pdftex.def)             Requested size: 346.89731pt x 260.17401pt.
+) [40] [41 <./chapter4/Mg_sigma.png>] (./thesis.bbl
 Missing character: There is no Â in font cmr12!
 Missing character: There is no Â in font cmr12!
 pdfTeX warning (ext4): destination with the same identifier (name{page.32}) has
@@ -810,38 +810,44 @@ l.175
 ge.34}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.262 
-       [34]pdfTeX warning (ext4): destination with the same identifier (name{pa
-ge.35}) has been already used, duplicate ignored
+l.261 ...oryear{Fabian}{Fabian}{2012}]{Fabian2012}
+                                                   [34]pdfTeX warning (ext4): d
+estination with the same identifier (name{page.35}) has been already used, dupl
+icate ignored
 <to be read again> 
                    \relax 
-l.351   et~al.}{2000}]{Govoni2000}
-                                   [35]pdfTeX warning (ext4): destination with 
-the same identifier (name{page.36}) has been already used, duplicate ignored
+l.350 
+       [35]pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.36}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.431 
+l.437 
        [36]pdfTeX warning (ext4): destination with the same identifier (name{pa
 ge.37}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.508 
+l.514 
        [37]pdfTeX warning (ext4): destination with the same identifier (name{pa
 ge.38}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.600 
+l.606 
        [38]pdfTeX warning (ext4): destination with the same identifier (name{pa
 ge.39}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.683 
+l.689 
        [39]pdfTeX warning (ext4): destination with the same identifier (name{pa
 ge.40}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.773 
-       [40] [41])
+l.779 
+       [40]pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.41}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.865 
+       [41])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
 [42]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
@@ -863,13 +869,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
  ) 
 Here is how much of TeX's memory you used:
- 8185 strings out of 494945
- 119310 string characters out of 6181438
- 216255 words of memory out of 5000000
- 11061 multiletter control sequences out of 15000+600000
- 14651 words of font info for 55 fonts, out of 8000000 for 9000
+ 8204 strings out of 494945
+ 119710 string characters out of 6181438
+ 216479 words of memory out of 5000000
+ 11076 multiletter control sequences out of 15000+600000
+ 14482 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,14n,33p,1629b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,15n,33p,1629b,761s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{figure.1.11} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -974,12 +980,11 @@ lic/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1200.pfb>
-Output written on thesis.pdf (27 pages, 1133850 bytes).
+/public/cm-super/sfrm1200.pfb>
+Output written on thesis.pdf (28 pages, 1713567 bytes).
 PDF statistics:
- 894 PDF objects out of 1000 (max. 8388607)
- 824 compressed objects within 9 object streams
- 250 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 916 PDF objects out of 1000 (max. 8388607)
+ 842 compressed objects within 9 object streams
+ 254 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

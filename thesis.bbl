@@ -223,6 +223,12 @@ Croton D.~J.,  et~al., 2006, \mn@doi [Monthly Notices of the Royal Astronomical
 {Di Matteo} T.,  Springel V.,   Hernquist L.,  2005, \mn@doi [Nature]
   {10.1038/nature03335}, 433, 604
 
+\bibitem[\protect\citeauthoryear{Dressler, Lynden-Bell, Burstein, Davies,
+  Faber, Terlevich  \& Wegner}{Dressler et~al.}{1987}]{Dressler1987}
+Dressler A.,  Lynden-Bell D.,  Burstein D.,  Davies R.~L.,  Faber S.~M.,
+  Terlevich R.,   Wegner G.,  1987, \mn@doi [The Astrophysical Journal]
+  {10.1086/164947}, 313, 42
+
 \bibitem[\protect\citeauthoryear{Emsellem et~al.,}{Emsellem
   et~al.}{2004}]{Emsellem2004}
 Emsellem E.,  et~al., 2004, \mn@doi [Monthly Notices of the Royal Astronomical
@@ -891,6 +897,11 @@ Wilson A.~S.,  Tsvetanov Z.~I.,  1994, \mn@doi [The Astronomical Journal]
   et~al.}{1994}]{Worthey1994}
 Worthey G.,  Faber S.~M.,  Gonzalez J.~J.,   Burstein D.,  1994, \mn@doi [The
   Astrophysical Journal Supplement Series] {10.1086/192087}, 94, 687
+
+\bibitem[\protect\citeauthoryear{Ziegler \& Bender}{Ziegler \&
+  Bender}{1997}]{Ziegler1997}
+Ziegler B.~L.,  Bender R.,  1997, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1093/mnras/291.3.527}, 291, 527
 
 \bibitem[\protect\citeauthoryear{de Ruiter, Parma, Capetti, Fanti  \&
   Morganti}{de~Ruiter et~al.}{2002}]{DeRuiter2002}
