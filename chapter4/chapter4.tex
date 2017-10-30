@@ -1,10 +1,9 @@
 \chapter{Stellar Component}
 	\label{cha:stellar}
-
-
-The rest of this chapter is structured as follows: firstly we present the kinematic maps for the stellar component of the galaxy (section \ref{sec:stellarKin}) and a look at how they fit on the $\lambda_{R_e}$--ellipticity plane, then, in section \ref{sec:pop} we investigate the stellar populations using the absorption line strength. We conclude by looking at the odd-one-out of the sample NGC 612 in section \ref{sec:NGC612}. We aim to demonstrate that our radio selected sample is no different in the V-band to normal, optically selected ETGs. We achieve this by showing that they are consistent with defining characteristics of ETGs that are accessible able to V-band IFS data. The list of characteristics we investigate in this chapter are (the relevant section is shown in parenthesis):
+% More preface here
+The SAURON/Atlas3D projects showed that we learn much about a galaxy from it's resolved stellar properties. This chapter aims to do just that for our sample of radio galaxies and is structured as follows: firstly we present the kinematic maps for the stellar component of the galaxy (section \ref{sec:stellarKin}) and a look at how they fit on the $\lambda_{R_e}$--ellipticity plane, then, in section \ref{sec:pop} we investigate the stellar populations using the absorption line strength. We conclude by looking at the odd-one-out of the sample NGC 612 in section \ref{sec:NGC612}. Through this chapter we aim to demonstrate that our radio selected sample is no different in the V-band to normal, optically selected ETGs. We achieve this by showing that they are consistent with defining characteristics of ETGs that are accessible able to V-band IFS data. The list of characteristics we investigate in this chapter are (the relevant section is shown in parenthesis):
 \begin{itemize}
-	\item Dispersion dominated stellar kinematics (section \ref{subsec:maps})
+	\item The intrinsic shape of regular and non-regular rotators (section \ref{subsec:maps})
 	\item The fast/slow rotator fraction (\ref{subsec:FSfrac})
 	\item Absorption line strengths (\ref{subsec:absorption})
 	\item Mg -- \textsigma relation (\ref{subsec:Mgsigma})
@@ -16,16 +15,47 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 \section{Kinematics}
 	\label{sec:stellarKin}
 
-	% Make something of misaligments somewhere
-
 	\subsection{Maps}
 		\label{subsec:maps}
+		Figures \ref{fig:VIMOS_stellar} and \ref{fig:MUSE_stellar} show the stellar LOSVD with associated uncertainties for all VIMOS and MUSE datacubes.
 
-		% \input{chapter4/maps}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.94\textheight]{chapter4/vimos/kin1.png}
+			\caption[VIMOS stellar kinematic maps]{VIMOS stellar kinematic maps: From left to right: flux (image), velocity and velocity dispersion. Top to bottom: ESO 443-G24, IC 1459 and IC 1531. Rows show parameter and uncertainty in the parameter on alternate rows. Flux contours are shown in black, CO from ALMA in cyan and radio from VLA in red. The radio band displayed depends on the data available in the archive and which images had a similar resolution and and scales}
+			\label{fig:VIMOS_stellar}
+		\end{figure*}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.94\textheight]{chapter4/vimos/kin2.png}
+			\contcaption{continued for IC 4296, NGC 612 and NGC 1399}
+		\end{figure*}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.94\textheight]{chapter4/vimos/kin3.png}
+			\contcaption{continued for NGC 3100, NGC 3557 and NGC 7075}
+		\end{figure*}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.31\textheight]{chapter4/vimos/kin4.png}
+			\contcaption{continued for PKS 718-34}
+		\end{figure*}
 
-		Figures \ref{fig:VIMOS_stellar} and \ref{fig:MUSE_stellar} show the stellar LOSVD with associated uncertainties for all VIMOS and MUSE datacubes. 
 
-		The kinematics of the sample are classified according to the Regular-Rotator/Non Regular-Rotator (RR/NRR) regime given in \citet{Krajnovic2011}, Fast/Slow Rotator (FR/SR) regime given in \citet{Cappellari2016} (originally defined by \citet{Emsellem2011}, but later refined by \citet{Cappellari2016}). This classification is shown on the $\lambda_{R_e}$--ellipticity plane in figure \ref{fig:lambdaR_ellip}. Beyond this attempts have been made to use the kinematic features as defined in \citet{Krajnovic2011}, however the quality of the data has meant that many have had to be classified by eye as the artifacts from the VIMOS quadrants confuse any ellipse fitting methods. For VIMOS maps, the classifications are done by eye. These classifications are given in table \ref{tab:classify}. 
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.94\textheight]{chapter4/muse/kin1.png}
+			\caption[MUSE stellar kinematic maps]{MUSE stellar kinematic maps: From top to bottom: IC 1459, IC 4296 and NGC 1316. Plots are as in \ref{fig:VIMOS_absorption}}
+			\label{fig:VIMOS_stellar}
+		\end{figure*}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.31\textheight]{chapter4/muse/kin2.png}
+			\contcaption{continued for NGC 1399}
+		\end{figure*}
+
+		
+		The kinematics of the sample are classified according to the Regular-Rotator/Non Regular-Rotator (RR/NRR) regime given in \citet{Krajnovic2011}, Fast/Slow Rotator (FR/SR) regime given in \citet{Cappellari2016} (originally defined by \citet{Emsellem2011}, but later refined by \citet{Cappellari2016}). This classification is shown on the $\lambda_{R_e}$--ellipticity plane in figure \ref{fig:lambdaR_ellip}. Beyond this attempts have been made to use the kinematic features as defined in \citet{Krajnovic2011} in a algorithmic way, however the quality of the data has meant that many have had to be classified by eye as the artifacts from the VIMOS quadrants confuse any ellipse fitting methods. These classifications are given in table \ref{tab:classify}. 
 
 
 		\begin{table}
@@ -38,23 +68,25 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 				Galaxy		& $\lambda_{R_e}$ & $\epsilon$  & $\Gamma_\text{kin}$ (deg) & FR/ SR 	& RR/ NRR 	& Feat. & Group 	\\
 				\hline 
 				ESO 443-G024 & 0.031 & 0.32 & 55.2 	& FR & NRR & KDC & c \\
-				IC 1459 	& 0.174 & 0.24 & 87.9	& FR & NRR & KDC & c \\
+				IC 1459 	& 0.174 & 0.24 & 87.9	& SR & NRR & KDC & c \\
 				IC 1531 	& 0.100 & 0.11 & 64.4 	& SR & NRR & LV & a \\
 				IC 4296		& 0.034 & 0.03 & 83.2 	& SR & RR & -- & e \\
 				NGC 612 	& 0.519 & 0.58 & 7.3 	& FR & RR & -- & e \\
-				NGC 1316 	& 0.100 & 0.39 & 72.1 	& SR & NRR & -- & f \\
+				NGC 1316 	& 0.100 & 0.39 & 72.1 	& FR & NRR & -- & f \\
 				NGC 1399 	& 0.090 & 0.12 & 27.2 	& SR & NRR & LV & a \\
 				NGC 3100 	& 0.418 & 0.31 & 19.8 	& FR & RR & -- & e \\
 				NGC 3557 	& 0.320 & 0.22 & 7.6 	& FR & RR & -- & e\\
 				NGC 7075 	& 0.048 & 0.09 & 20.0 	& SR & NRR & -- & b \\
-				PKS 0718-34 & 0.152 & 0.18 & 57.7 	& SR & NRR & KDC$^\text{a}$ & b\\
+				PKS 718-34  & 0.152 & 0.18 & 57.7 	& SR & NRR & KDC$^\text{a}$ & b\\
 				\hline
 				\hline
 				\multicolumn{7}{L{.9\textwidth}}{\footnotesize $^\text{a}$ This is a tentative classification. Higher S/N is required to a larger radii to confirm this.} \\ % need to adjust size for final table
 			\end{tabular}
 		\end{table}
 
-		% More on the misalignments between kine and phot PA. 
+		Column 4 in table \ref{tab:classify} shows the misalignment between the photometric position angle and the kinematic position angle ($\Gamma_\text{kin} = \left| \mathrm{PA_{phot}} - \mathrm{PA_{kin}} \right|$). \citet{Cappellari2007, Krajnovic2011, Fogarty2015} showed that regular rotating galaxies almost always have have aligned kinematic and photometric axes (with a scatter of just 4\degree). Regular rotators with a significant misalignment are either very round, interacting or strongly barred. Taking into account the lower quality of data our results are consistent with this: of the 4 regular rotating galaxies in the Southern sample, 2 are misaligned to less than 8\degree and the other 2 are round (one of which is extremely round). As noted in \citet{Cappellari2016} this result requires that regular rotators are axis-symmetric. 
+
+		Misalignments are routinely observed for non-regularly rotating galaxies, which our observations are also consistent with. This generally implies a more triaxial intrinsic shape, however large misalignments are extremely rarely observed in galaxies with $\epsilon > 0.4$ suggesting that non-regularly rotating galaxies are more spherical in shape. This is the reason for the $\epsilon < 0.4$ requirement in the definition for slow rotators. 
 
 
 	\subsection{Fast/Slow Rotator fraction}
@@ -131,12 +163,60 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 			\end{tabular}
 		\end{table}
 
-	% \input{chapter4/maps2}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.94\textheight]{chapter4/vimos/abs1.png}
+			\caption[VIMOS absorption line strength maps]{VIMOS stellar kinematic maps: From left to right: ESO 443-G24, ESO 443-G24 uncertainties, IC 1459 and IC 1459 uncertainties. From top to bottom: G4300, Fe4383, Ca4455, Fe4531, H$_\beta$, Fe5015, Mg$_b$. Plots are as in \ref{fig:VIMOS_absorption}}
+			\label{fig:VIMOS_absorption}
+		\end{figure*}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.94\textheight]{chapter4/vimos/abs2.png}
+			\contcaption{continued for IC 1531 and IC 4296.}
+		\end{figure*}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.94\textheight]{chapter4/vimos/abs3.png}
+			\contcaption{continued for NGC 612 and NGC 1399}
+		\end{figure*}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.94\textheight]{chapter4/vimos/abs4.png}
+			\contcaption{continued for NGC 3100 and NGC 3557}
+		\end{figure*}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.94\textheight]{chapter4/vimos/abs5.png}
+			\contcaption{continued for NGC 7075 and PKS 718-34}
+		\end{figure*}
+
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.94\textheight]{chapter4/muse/abs1.png}
+			\caption[MUSE absorption line strength maps]{MUSE stellar kinematic maps: From left to right: IC1459, IC1459 uncertainties, IC4296 and IC4296 uncertainties. From top to bottom: H$_\beta$, Fe5015, Mg$_b$, Fe5270, Fe5335, Fe5406, Fe5709. Plots are as in \ref{fig:VIMOS_stellar}}
+			\label{fig:MUSE_absorption}
+		\end{figure*}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.54\textheight]{chapter4/muse/abs1b.png}
+			\contcaption{continued: From top to bottom: Fe5782, NaD, TiO1, TiO2. Plots are as in \ref{fig:VIMOS_stellar}}
+		\end{figure*}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.94\textheight]{chapter4/muse/abs2.png}
+			\contcaption{continued for NGC1316 and NGC1399.}
+		\end{figure*}
+		\begin{figure*}
+			\centering
+			\includegraphics[height=0.54\textheight]{chapter4/muse/abs2b.png}
+			\contcaption{continued for NGC1316 and NGC1399.}
+		\end{figure*}
+
 
 	Comparisons to the literature is made difficult by the inhomogeneous nature of corrections applied: such as accounting for H$_\beta$ emission or velocity dispersion. We use Line Index System (LIS) by \citet{Vazdekis2010} instead of the popular LICK/IDS system \citep{Faber1985, Worthey1994} as LICK/IDS is based on non-flux calibrated spectra from the IDS and Cassegrain spectrograph on the Shane telescope (Lick Observatory) which has a relatively low and wavelength dependent resolution. In order to make calibrate measurements from other instruments it is necessary to perform empirical corrections to correct for the uncalibrated continuum. This requires observing standard stars with the same instrumental set up as the main observations in order to make comparisons to the measurements from the IDS spectrograph. Since this was not requested as part of the observing strategy with VIMOS we were not able to do this: a later proposal would not have worked since VIMOS was substantially upgraded in the intervening time period. Further more, we believe that this system has had its time and the community should be making a concerted effort to move away from it, due to the low resolution and poor data quality on which it is based. However, there is a lack of non-LICK/IDS system measurements: we used the empirical functions provided by \citet{Vazdekis2010} to translate between LICK/IDS and LIS systems\footnote{The transformation from LICK/IDS to the LIS system is available at http://www.iac.es/proyecto/miles/pages/line-index-system-lis/transformations.php.}. 
 
 
-	Finally, we noticed that only the H$_\beta$ emission line is corrected for in some of the literature, despite [OIII] often being the strongest emission line for ETGs. This effects the reliability of the Fe5015 and Mb$_b$ absorption indices as the [OIII] and [NI] doublets fall within them respectively. They vary as to whether they fall within the index band or the continuum bands and the effect depends on the relative difference in the kinematics for the stars (which result in the absorption features) and the ISM (which results in the emission lines). Other papers correct for only H$_\beta$ and [OIII]. In order to make accurate comparisons to the literature we mimic the corrections in the relevant paper for the comparison only, while removing all emission lines (given in table \ref{}) for our quoted measurements and maps. Table \ref{tab:litAbsorption} sums up our comparisons to the literature. Here we note that in the case of comparisons to \citet{Rampazzo2005}, G4300 has a very large offset. We suggest that this index is extremely sensitive to the velocity dispersion due to the steep nature of the pseudo-continuum: a difference of $30 \mathrm{km \, s^{-1}}$ can effect the corrected index value by $\sim 2$\AA. For the comparison to \citet{Vazdekis2010}, we analyzed the SAURON data set\footnote{SARUON data is available at: http://www.strw.leidenuniv.nl/sauron/} \citep{Emsellem2004} using the same pipeline we have developed for our sample. 
+	Finally, we noticed that only the H$_\beta$ emission line is corrected for in some of the literature, despite [OIII] often being the strongest emission line for ETGs. This effects the reliability of the Fe5015 and Mb$_b$ absorption indices as the [OIII] and [NI] doublets fall within them respectively. They vary as to whether they fall within the index band or the continuum bands and the effect depends on the relative difference in the kinematics for the stars (which result in the absorption features) and the ISM (which results in the emission lines). Other papers correct for only H$_\beta$ and [OIII]. In order to make accurate comparisons to the literature we mimic the corrections in the relevant paper for the comparison only including which emission lines they correct for and aperture corrections), while removing all emission lines (given in table \ref{}) for our quoted measurements and maps. Table \ref{tab:litAbsorption} sums up our comparisons to the literature. Here we note that in the case of comparisons to \citet{Rampazzo2005}, G4300 has a very large offset. We suggest that this index is extremely sensitive to the velocity dispersion due to the steep nature of the pseudo-continuum: a difference of $30 \mathrm{km \, s^{-1}}$ can effect the corrected index value by $\sim 2$\AA. For the comparison to \citet{Vazdekis2010}, we analyzed the SAURON data set\footnote{SARUON data is available at: http://www.strw.leidenuniv.nl/sauron/} \citep{Emsellem2004} using the same pipeline we have developed for our sample. 
 
 	% Could use another paper to compare to: Orgando? 
 	\begin{table}
@@ -181,20 +261,20 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 			\hline
 			\multicolumn{4}{c}{\citet{Ogando2008} (VIMOS)} \\
 			\hline
-			H$_\beta$ 	& 6 		& 		& 	\\
-			Fe5015 		& 6 		& 		& 	\\
-			Mg$_b$ 		& 6 		& 		& 	\\
+			H$_\beta$ 	& 6 		& 0.07		& 0.60	\\
+			Fe5015 		& 6 		& -0.09		& 0.15	\\
+			Mg$_b$ 		& 6 		& -0.70		& 0.08	\\
 			\hline
 			\multicolumn{4}{c}{\citet{Ogando2008} (MUSE)} \\
 			\hline
-			H$_\beta$ 	& 3 		& 		& 	\\ 
-			Fe5015 		& 3 		& 		& 	\\ 
-			Mg$_b$ 		& 3 		& 		& 	\\
-			Fe5270 		& 3 		& 		& 	\\
-			Fe5335 		& 3 		& 		& 	\\
-			Fe5406 		& 3 		& 		& 	\\
-			Fe5709 		& 3 		& 		& 	\\
-			NaD 		& 3 		& 		& 	\\
+			H$_\beta$ 	& 3 		& -0.04		& 0.23	\\ 
+			Fe5015 		& 3 		& -0.16		& 0.33	\\ 
+			Mg$_b$ 		& 3 		& -1.10		& 0.26	\\
+			Fe5270 		& 3 		& -0.66		& 0.16	\\
+			Fe5335 		& 3 		& -0.66		& 0.11	\\
+			Fe5406 		& 3 		& -0.51		& 0.06	\\
+			Fe5709 		& 3 		& -0.22		& 0.08	\\
+			NaD 		& 3 		& -1.57		& 0.16	\\
 			%[OIII]5007	& 3 		& 		& 	\\
 			\hline
 		\end{tabular}
@@ -225,7 +305,7 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 		We used the models from \citet{Thomas2010} (referred to hereafter as the TMJ models) because they have the novelty of being based on flux calibrated spectra and hence do not need observations to be calibrated to the LICK/IDS system. These models assume a \citet{Salpeter1955} IMF ($\Phi(M) \equiv \frac{\mathrm{d}N(M)}{\mathrm{d}M} \propto M^{-2.35}$) and are based on the evolutionary population synthesis code from \citet{Maraston1998}. This uses the stellar evolutionary tracks from \citet{Cassisi1997} for metallicities of [Z/H] < -0.33 and \citet{Girardi2000} for [Z/H] $\ge -0.33$, the MILES stellar spectral library from \citet{Sanchez-Blazquez2006a, Falcon-Barroso2011a}, fitting functions from \citet{Johansson2010} and index response functions from \citet{Korn2005}.
 
-		The \citet{Korn2005} response functions extend the work of \citet{Tripicco1995} who investigated the response functions of the original 21 Lick indices to the varying of individual element abundance fractions () for 5 Gyr old SSP at solar metallicities. The new functions now include varying metallicities, as well as calculated for all 25 Lick indices. It was checked whether age has a significant effect on the response functions by computing them for 1 Gyrs models and comparing them to 5 Gyrs models from \citet{Tripicco1995}. They found a 1\% difference for two indices (G4300 and Fe4383) and a significantly lower result for all other indices, showing that age does not effect the response functions.
+		The \citet{Korn2005} response functions extend the work of \citet{Tripicco1995} who investigated the response functions of the original 21 Lick indices to the varying of individual element abundance fractions for 5 Gyr old SSP at solar metallicities. The new functions now include varying metallicities, as well as individual element fractions are calculated for all 25 Lick indices. It was checked whether age has a significant effect on the response functions by computing them for 1 Gyrs models and comparing them to 5 Gyrs models from \citet{Tripicco1995}. They found a 1\% difference for two indices (G4300 and Fe4383) and a significantly lower result for all other indices, showing that age does not effect the response functions.
 
 		Finally, the individual element abundances are combined to give the alpha element enhancement parameter, \textalpha/Fe. This is done following \citet{Trager2000} who grouped the elements into three categories: enhanced, containing C, N, O, Na, Mg, Si, Ca and Ti (i.e. \textalpha and other light elements); depressed, containing Cr and Fe (i.e. iron peak elements); and all other elements are fixed. The fixed group are held with solar abundances, while the enhanced and depressed groups are scaled up and down respectively by the same factor. 
 
@@ -237,7 +317,40 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 		Some ideas around the fueling of the AGN suggest that star formation would play a role in modulating the flow of gas into the central black hole \citep{}, and while it would be expected to be small in scale, spatially, we might reasonably expect a young SSP to dominate in the very central (1-2) spaxels. We note that these maps show no evidence of this. 
 
-	% \input{chapter4/maps3}
+	\begin{figure*}
+		\centering
+		\includegraphics[height=0.94\textheight]{chapter4/vimos/pop1.png}
+		\caption[VIMOS stellar population maps]{VIMOS stellar population maps: From left to right: age, metallicity and alpha enhancement, Top to bottom ESO 443-G24, IC 1459 and IC 1531. Rows show parameter and uncertainty in the parameter on alternate rows. Plots are as in figure \ref{fig:VIMOS_stellar}}
+		\label{fig:VIMOS_pop}
+	\end{figure*}
+	\begin{figure*}
+		\centering
+		\includegraphics[height=0.94\textheight]{chapter4/vimos/pop2.png}
+		\contcaption{continued for IC 4296, NGC 612 and NGC 1399}
+	\end{figure*}
+	\begin{figure*}
+		\centering
+		\includegraphics[height=0.94\textheight]{chapter4/vimos/pop3.png}
+		\contcaption{continued for NGC 3100, NGC 3557 and NGC 7075}
+	\end{figure*}
+	\begin{figure*}
+		\centering
+		\includegraphics[height=0.31\textheight]{chapter4/vimos/pop4.png}
+		\contcaption{continued for PKS 718-34}
+	\end{figure*}
+
+	\begin{figure*}
+		\centering
+		\includegraphics[height=0.94\textheight]{chapter4/muse/pop1.png}
+		\caption[MUSE stellar population maps]{MUSE stellar population maps: From top to bottom IC 1459, IC 4296 and NGC 1316. Plots are as in figure \ref{fig:VIMOS_stellar}}
+		\label{fig:MUSE_pop}
+	\end{figure*}
+	\begin{figure*}
+		\centering
+		\includegraphics[height=0.31\textheight]{chapter4/muse/pop2.png}
+		\contcaption{continued for NGC 1399}
+	\end{figure*}
+
 
 		\subsubsection{Radial Gradients in stellar Populations}
 			\label{subsubsec:popGrad}
@@ -246,7 +359,7 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 			\begin{table}
 				\centering
-				\caption{}
+				\caption{The radial gradient of the most-likely SSP model for each of the Southern Sample assuming a linear gradient.}
 				\label{tab:popGrad}
 				\begin{tabular}{l c c}
 					\hline
@@ -264,7 +377,7 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 					NGC 3100 	& $0.000 \pm 0.004$ & $-0.045 \pm 0.003$ \\
 					NGC 3557 	& $0.000 \pm 0.006$ & $-0.023 \pm 0.007$ \\
 					NGC 7075 	& $0.006 \pm 0.003$ & $-0.067 \pm 0.006$ \\
-					PKS 0718-34 & $0.008 \pm 0.007$ & $-0.115 \pm 0.007$ \\
+					PKS 718-34  & $0.008 \pm 0.007$ & $-0.115 \pm 0.007$ \\
 				\end{tabular}
 			\end{table}
 
@@ -273,7 +386,7 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 	\subsection{Kinematically Decoupled Cores}
 		\label{sec:popKDC}
 
-		\citet{Kuntschner2010} found that KDCs exist in two forms: they are either small or contain an old stellar population. The three definite KDCs found in the Southern Sample fit into this pattern, all with old stellar populations and varying sizes. It is worth noting that in many cases we would not resolve any of the small KDCs: they would be 1 spaxel in size. Figure \ref{fig:KDC} shows the KDC size -- age relation including the Southern Sample. KDC size is the radius at which $k_1$ goes to zero at the boundary between inner and outer components. Age is the age corresponding to the most-likely model for the inner 1 arcsec. We have included PKS 0718-34 in this plot which we stress is only tentatively classified as containing a KDC from the kinematics from VIMOS. Figure \ref{fig:KDC} shows that while it would be an extremely large KDC it would still fit with the findings of \citet{Kuntschner2010}.
+		\citet{Kuntschner2010} found that KDCs exist in two forms: they are either small or contain an old stellar population. The three definite KDCs found in the Southern Sample fit into this pattern, all with old stellar populations and varying sizes. It is worth noting that in many cases we would not resolve any of the small KDCs: they would be 1 spaxel in size. Figure \ref{fig:KDC} shows the KDC size -- age relation including the Southern Sample. KDC size is the radius at which $k_1$ goes to zero at the boundary between inner and outer components. Age is the age corresponding to the most-likely model for the inner 1 arcsec. We have included PKS 718-34 in this plot which we stress is only tentatively classified as containing a KDC from the kinematics from VIMOS. Figure \ref{fig:KDC} shows that while it would be an extremely large KDC it would still fit with the findings of \citet{Kuntschner2010}.
 
 		\begin{figure}
 			\centering
@@ -301,12 +414,12 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 
 			\begin{table}
 				\centering
-				\caption{}
+				\caption{The Mg$_b$ index and velocity dispersion within 2 arcsec. NGC 612 and PKS 718-34 have a redshift which shifts the Mg$_b$ feature outside of the wavelength range of VIMOS.}
 				\label{tab:globalMg}
 				\begin{tabular}{l c c}
 					\hline
 					\hline
-					Galaxy 	& Mg$_b$ & $\sigma_0$ \\
+					Galaxy 	& Mg$_b$ & $\sigma$ \\
 							& \AA 	& km s$^{-1}$ \\
 					\hline
 					ESO 443-G024 & $4.43 \pm 0.08$ & $332.4 \pm 1.6$ \\
@@ -319,7 +432,7 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 					NGC 3100 	& $4.36 \pm 0.05$ & $214.2 \pm 1.1$ \\
 					NGC 3557 	& $4.15 \pm 0.03$ & $280.4 \pm 0.9$ \\
 					NGC 7075 	& $4.45 \pm 0.07$ & $258.7 \pm 1.9$ \\
-					PKS 0718-34 & -- 		      & $258.7 \pm 1.9$ \\
+					PKS 718-34  & -- 		      & $258.7 \pm 1.9$ \\
 					\hline \\
 				\end{tabular}
 			\end{table}
@@ -336,3 +449,4 @@ The rest of this chapter is structured as follows: firstly we present the kinema
 \section{The case of NGC 612}
 	\label{sec:NGC612}
 	All of the galaxies show typical ETG behavior: old, metal rich stellar populations with dispersion dominated stellar kinematics; with the exception of NGC 612. This galaxy has very high rotational velocities for an ETG, with an extended CO disk and a young stellar population. All this suggests that NGC 612 must have a very different history to the rest of the Southern Sample. Indeed, the CO and ionized gas disks are more representative of LTGs, rather than ETGs. With this in mind, we tentatively suggest that NGC 612 may be a very edge-on spiral galaxy and not intrinsically an ETG at all. Having said that, it is worth noting that spiral galaxies with radio jets, particularly on the scale of NGC 612's jets are very rare with only a handful of known cases \citep{}. 
+	%Certainly a strong case for reclassifying as LTG
