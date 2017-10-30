@@ -61,6 +61,11 @@ Baldry I.~K.,  Glazebrook K.,  Brinkmann J.,  Ivezi{\'{c}} {\v{Z}}.,  Lupton
 Belfiore F.,  et~al., 2016, \mn@doi [Monthly Notices of the Royal Astronomical
   Society] {10.1093/mnras/stw1234}, 461, 3111
 
+\bibitem[\protect\citeauthoryear{Bender, Burstein  \& Faber}{Bender
+  et~al.}{1993}]{Bender1993}
+Bender R.,  Burstein D.,   Faber S.~M.,  1993, \mn@doi [The Astrophysical
+  Journal] {10.1086/172815}, 411, 153
+
 \bibitem[\protect\citeauthoryear{Bendo \& Barnes}{Bendo \&
   Barnes}{2000}]{Bendo2000}
 Bendo G.~J.,  Barnes J.~E.,  2000, \mn@doi [Monthly Notices of the Royal
@@ -323,6 +328,11 @@ Filippenko A.~V.,  Ho L.~C.,   Sargent W. L.~W.,  1993, \mn@doi [The
   et~al.}{2010}]{Fischer2010}
 Fischer J.,  et~al., 2010, \mn@doi [Astronomy and Astrophysics]
   {10.1051/0004-6361/201014676}, 518, L41
+
+\bibitem[\protect\citeauthoryear{Fogarty et~al.,}{Fogarty
+  et~al.}{2015}]{Fogarty2015}
+Fogarty L. M.~R.,  et~al., 2015, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1093/mnras/stv2060}, 454, 2050
 
 \bibitem[\protect\citeauthoryear{Forman et~al.,}{Forman
   et~al.}{2007}]{Forman2007}
@@ -587,6 +597,11 @@ McConnell N.~J.,  Ma C.-P.,  2013, \mn@doi [The Astrophysical Journal]
   et~al.}{2000}]{McNamara2000}
 McNamara B.~R.,  et~al., 2000, \mn@doi [The Astrophysical Journal]
   {10.1086/312662}, 534, L135
+
+\bibitem[\protect\citeauthoryear{Mehlert, Thomas, Saglia, Bender  \&
+  Wegner}{Mehlert et~al.}{2003}]{Mehlert2003}
+Mehlert D.,  Thomas D.,  Saglia R.~P.,  Bender R.,   Wegner G.,  2003, \mn@doi
+  [Astronomy {\&} Astrophysics] {10.1051/0004-6361:20030886}, 407, 423
 
 \bibitem[\protect\citeauthoryear{Miley \& {De Breuck}}{Miley \& {De
   Breuck}}{2008}]{Miley2008}
