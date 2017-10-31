@@ -190,10 +190,10 @@ if __name__=='__main__':
 	plot(['eso443-g024', 'ic1459', 'ic1531'], 
 		['ESO 443-G24', 'IC 1459', 'IC 1531'], 'kin1')
 
-	plot(['ic4296', 'ngc0612', 'ngc1399'], 
-		['IC 4296', 'NGC 612', 'NGC 1399'], 'kin2')
+	plot(['ic4296', 'ngc1399', 'ngc3100'], 
+		['IC 4296', 'NGC 1399', 'NGC 3100'], 'kin2')
 
-	plot(['ngc3100', 'ngc3557', 'ngc7075'], 
-		['NGC 3100', 'NGC 3557', 'NGC 7075'], 'kin3')
+	plot(['ngc3557', 'ngc7075', 'pks0718-34'], 
+		['NGC 3557', 'NGC 7075', 'PKS 718-34'], 'kin3')
 
-	plot(['pks0718-34'], ['PKS 0718-34'], 'kin4')
+	plot(['ngc0612'], ['NGC 612'], 'kin4')
