@@ -50,6 +50,11 @@ Arnold J.~A.,  et~al., 2013, \mn@doi [The Astrophysical Journal]
 Athanassoula E.,  E. 2008, \mn@doi [Monthly Notices of the Royal Astronomical
   Society] {10.1111/j.1745-3933.2008.00541.x}, 390, L69
 
+\bibitem[\protect\citeauthoryear{Bagchi et~al.,}{Bagchi
+  et~al.}{2014}]{Bagchi2014}
+Bagchi J.,  et~al., 2014, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637X/788/2/174}, 788, 174
+
 \bibitem[\protect\citeauthoryear{Baldry, Glazebrook, Brinkmann, Ivezi{\'{c}},
   Lupton, Nichol  \& Szalay}{Baldry et~al.}{2004}]{Baldry2004}
 Baldry I.~K.,  Glazebrook K.,  Brinkmann J.,  Ivezi{\'{c}} {\v{Z}}.,  Lupton
@@ -424,6 +429,11 @@ Hirschmann M.,  Naab T.,  Somerville R.~S.,  Burkert A.,   Oser L.,  2012,
 Hopkins P.~F.,  Hernquist L.,  2006, \mn@doi [The Astrophysical Journal
   Supplement Series, Volume 166, Issue 1, pp. 1-36.] {10.1086/505753}, 166, 1
 
+\bibitem[\protect\citeauthoryear{Hota, Rey, Kang, Kim, Matsushita  \&
+  Chung}{Hota et~al.}{2011}]{Hota2011}
+Hota A.,  Rey S.-C.,  Kang Y.,  Kim S.,  Matsushita S.,   Chung J.,  2011,
+  pp~1--5
+
 \bibitem[\protect\citeauthoryear{Hubble}{Hubble}{1982}]{Hubble1982}
 Hubble E.,  1982, {The realm of the nebulae}.
 Yale University Press
@@ -535,6 +545,11 @@ Lauer T.~R.,  et~al., 1995, \mn@doi [The Astronomical Journal]
 Lauer T.~R.,  et~al., 2005, \mn@doi [The Astronomical Journal]
   {10.1086/429565}, 129, 2138
 
+\bibitem[\protect\citeauthoryear{Ledlow, Owen  \& Keel}{Ledlow
+  et~al.}{1998}]{Ledlow1998}
+Ledlow M.~J.,  Owen F.~N.,   Keel W.~C.,  1998, \mn@doi [The Astrophysical
+  Journal] {10.1086/305251}, 495, 227
+
 \bibitem[\protect\citeauthoryear{Lee, Woo, Lee, Hwang, Lee, Sohn  \& Lee}{Lee
   et~al.}{2012}]{Lee2012}
 Lee G.-H.,  Woo J.-H.,  Lee M.~G.,  Hwang H.~S.,  Lee J.~C.,  Sohn J.,   Lee
@@ -573,6 +588,10 @@ Maiolino R.,  et~al., 2012, \mn@doi [Monthly Notices of the Royal Astronomical
 Malin D.~F.,  Quinn P.~J.,   Graham J.~A.,  1983, \mn@doi [The Astrophysical
   Journal] {10.1086/184106}, 272, L5
 
+\bibitem[\protect\citeauthoryear{Mao et~al.,}{Mao et~al.}{2015}]{Mao2015}
+Mao M.~Y.,  et~al., 2015, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1093/mnras/stu2302}, 446, 4176
+
 \bibitem[\protect\citeauthoryear{Maraston \& Claudia}{Maraston \&
   Claudia}{1998}]{Maraston1998}
 Maraston C.,  Claudia 1998, \mn@doi [Monthly Notices of the Royal Astronomical
@@ -607,6 +626,12 @@ Mehlert D.,  Thomas D.,  Saglia R.~P.,  Bender R.,   Wegner G.,  2003, \mn@doi
   Breuck}}{2008}]{Miley2008}
 Miley G.,  {De Breuck} C.,  2008, \mn@doi [The Astronomy and Astrophysics
   Review] {10.1007/s00159-007-0008-z}, 15, 67
+
+\bibitem[\protect\citeauthoryear{Morganti, Holt, Tadhunter, {Ramos Almeida},
+  Dicken, Inskip, Oosterloo  \& Tzioumis}{Morganti et~al.}{2011}]{Morganti2011}
+Morganti R.,  Holt J.,  Tadhunter C.,  {Ramos Almeida} C.,  Dicken D.,  Inskip
+  K.,  Oosterloo T.,   Tzioumis T.,  2011, \mn@doi [Astronomy {\&}
+  Astrophysics] {10.1051/0004-6361/201117686}, 535, A97
 
 \bibitem[\protect\citeauthoryear{Narayan \& Yi}{Narayan \&
   Yi}{1994}]{Narayan1994}

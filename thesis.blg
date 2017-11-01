@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2016/Cygwin)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: acknowledgements/dedication.aux
 A level-1 auxiliary file: acknowledgements/acknowledgements.aux
@@ -12,51 +12,59 @@ A level-1 auxiliary file: chapter5/chapter5.aux
 A level-1 auxiliary file: conclusions/conclusions.aux
 A level-1 auxiliary file: appendix/appendix1/appendix1.aux
 The style file: mnras.bst
+Reallocated field_info (elt_size=4) to 10049 items from 5000.
 Database file #1: refs.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--I didn't find a database entry for "Veale2016"
 Warning--I didn't find a database entry for ""
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 180 entries,
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Hota2011
+while executing---line 1822 of file mnras.bst
+Warning--empty journal in Hota2011
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Hota2011
+while executing---line 1822 of file mnras.bst
+You've used 185 entries,
             2881 wiz_defined-function locations,
-            2290 strings with 79080 characters,
-and the built_in function-call counts, 84250 in all, are:
-= -- 7143
-> -- 6164
-< -- 378
-+ -- 2612
-- -- 936
-* -- 10331
-:= -- 13231
+            2330 strings with 80756 characters,
+and the built_in function-call counts, 86710 in all, are:
+= -- 7339
+> -- 6358
+< -- 385
++ -- 2692
+- -- 970
+* -- 10637
+:= -- 13618
 add.period$ -- 0
-call.type$ -- 180
-change.case$ -- 360
-chr.to.int$ -- 178
-cite$ -- 180
-duplicate$ -- 4025
-empty$ -- 3970
-format.name$ -- 1566
-if$ -- 14662
+call.type$ -- 185
+change.case$ -- 370
+chr.to.int$ -- 183
+cite$ -- 186
+duplicate$ -- 4141
+empty$ -- 4088
+format.name$ -- 1614
+if$ -- 15092
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 181
-newline$ -- 554
-num.names$ -- 1228
-pop$ -- 712
+missing$ -- 186
+newline$ -- 569
+num.names$ -- 1260
+pop$ -- 737
 preamble$ -- 1
-purify$ -- 720
+purify$ -- 740
 quote$ -- 0
-skip$ -- 2442
+skip$ -- 2512
 stack$ -- 0
-substring$ -- 5047
-swap$ -- 1954
-text.length$ -- 720
+substring$ -- 5189
+swap$ -- 2009
+text.length$ -- 741
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1617
-warning$ -- 0
-while$ -- 1343
+type$ -- 1662
+warning$ -- 1
+while$ -- 1381
 width$ -- 0
-write$ -- 1812
-(There were 2 warnings)
+write$ -- 1861
+(There were 2 error messages)

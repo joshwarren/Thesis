@@ -1,16 +1,16 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  30 OCT 2017 10:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.1)  1 NOV 2017 18:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
-LaTeX2e <2017/01/01> patch level 3
-Babel <3.9r> and hyphenation patterns for 3 language(s) loaded.
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 3 language(s) loaded.
 (./ociamthesis.cls
 Document Class: ociamthesis 2010/11/22 v2.2 OCIAM thesis class
-(/usr/share/texmf-dist/tex/latex/base/report.cls
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texmf-dist/tex/latex/base/size12.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -25,134 +25,135 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
-) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
-(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+) (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
-(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
-(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) (/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
-) (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks15
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/share/texmf-dist/tex/latex/natbib/natbib.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip43
 \bibsep=\skip44
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count89
-) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
-(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
 )
-Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
-Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
-Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
-Package: xcolor-patch 2016/05/16 xcolor patch
-Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
-Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
-Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-) (/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-) (/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
-) (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen105
 \Hy@linkcounter=\count90
 \Hy@pagecounter=\count91
-(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count92
-(/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4498.
-Package hyperref Info: Link nesting OFF on input line 4503.
-Package hyperref Info: Hyper index ON on input line 4506.
-Package hyperref Info: Plain pages OFF on input line 4513.
-Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4751.
+Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count93
-(/usr/share/texmf-dist/tex/latex/url/url.sty
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5104.
+LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen106
 \Fld@menulength=\count94
 \Field@Width=\dimen107
 \Fld@charsize=\dimen108
-Package hyperref Info: Hyper figures OFF on input line 6358.
-Package hyperref Info: Link nesting OFF on input line 6363.
-Package hyperref Info: Hyper index ON on input line 6366.
-Package hyperref Info: backreferencing OFF on input line 6373.
-Package hyperref Info: Link coloring OFF on input line 6378.
-Package hyperref Info: Link coloring with OCG OFF on input line 6383.
-Package hyperref Info: PDF/A mode OFF on input line 6388.
-LaTeX Info: Redefining \ref on input line 6428.
-LaTeX Info: Redefining \pageref on input line 6432.
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
 \Hy@abspage=\count95
 \c@Item=\count96
 \c@Hfootnote=\count97
@@ -160,65 +161,49 @@ LaTeX Info: Redefining \pageref on input line 6432.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count98
 \c@bookmark@seq@number=\count99
-(/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip45
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 15.
-(/usr/share/texmf-dist/tex/latex/textgreek/textgreek.sty
-Package: textgreek 2011/10/09 v0.7 Greek symbols in text
-
-! Package textgreek Error: Cannot find the file lgrenc.def.
-
-See the textgreek package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.39 .... Maybe it comes with the babel package.}}
-                                                  
-lgrenc.def is a file that contains the definitions for the Greek font encoding 
-LGR. Maybe it comes with the babel package.
-
-Package textgreek Info: Loaded fontmap: {eur/*/*}{U/eur/*/*} {phv/*/*}{U/psy/*/
-*}. on input line 69.
-) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/11/05 v2.16a AMS math features
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
 \@mathmargin=\skip46
 For additional information on amsmath, use the `?' option.
-(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
 \ex@=\dimen109
-)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen110
-) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count100
-LaTeX Info: Redefining \frac on input line 213.
+LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count101
 \leftroot@=\count102
-LaTeX Info: Redefining \overline on input line 375.
+LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count103
 \DOTSCASE@=\count104
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen111
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \macc@depth=\count105
 \c@MaxMatrixCols=\count106
 \dotsspace@=\muskip11
@@ -239,10 +224,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \multlinegap=\skip47
 \multlinetaggap=\skip48
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
-) (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2017/02/22 v2.0g Standard LaTeX package
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
 (textcomp)               4 = 5 + \texteuro
@@ -255,7 +240,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
-(/usr/share/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 334.
@@ -321,15 +306,18 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-) (/usr/share/texmf-dist/tex/latex/ccaption/ccaption.sty
+) (/home/joshwarren/texmf/tex/latex/ccaption/ccaption.sty
 Package: ccaption 2011/08/07 v3.2c Extended captioning and new floats
 \@contcwidth=\skip49
 \@contindw=\skip50
 \abovelegendskip=\skip51
 \belowlegendskip=\skip52
 \c@newflo@tctr=\count112
-) (/usr/share/texmf-dist/tex/latex/tools/array.sty
-Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+) (/home/joshwarren/texmf/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box28
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen118
 \extrarowheight=\dimen119
 \NC@list=\toks21
@@ -340,39 +328,36 @@ edgements.aux) (./abstract/abstract.aux) (./introduction/introduction.aux
 
 LaTeX Warning: Label `fig:MassRe' multiply defined.
 
-) (./chapter2/chapter2.aux) (./chapter3/chapter3.aux) (./chapter4/chapter4.aux
-
-LaTeX Warning: Label `fig:VIMOS_stellar' multiply defined.
-
-) (./chapter5/chapter5.aux) (./conclusions/conclusions.aux) (./appendix/appendi
-x1/appendix1.aux))
+) (./chapter2/chapter2.aux) (./chapter3/chapter3.aux) (./chapter4/chapter4.aux)
+(./chapter5/chapter5.aux) (./conclusions/conclusions.aux) (./appendix/appendix1
+/appendix1.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 47.
-(/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 48.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 47.
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    ... okay on input line 48.
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count113
 \scratchdimen=\dimen120
-\scratchbox=\box28
+\scratchbox=\box29
 \nofMPsegments=\count114
 \nofMParguments=\count115
 \everyMPshowfont=\toks22
@@ -381,40 +366,38 @@ LaTeX Font Info:    ... okay on input line 47.
 \MPnumerator=\count117
 \makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks23
-) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(grfext)             \AppendGraphicsExtensions on input line 452.
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box29
-(/usr/share/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
+\AtBeginShipoutBox=\box30
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 147.
+Package color Info: Driver file: pdftex.def on input line 143.
 )
-Package hyperref Info: Link coloring ON on input line 47.
-(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
-(/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+Package hyperref Info: Link coloring ON on input line 48.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count119
 )
-LaTeX Info: Redefining \ref on input line 47.
-LaTeX Info: Redefining \pageref on input line 47.
-LaTeX Info: Redefining \nameref on input line 47.
+LaTeX Info: Redefining \ref on input line 48.
+LaTeX Info: Redefining \pageref on input line 48.
+LaTeX Info: Redefining \nameref on input line 48.
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write3
 \openout3 = `thesis.out'.
@@ -422,7 +405,7 @@ LaTeX Info: Redefining \nameref on input line 47.
 <oxlogo.png, id=59, 120.9318pt x 140.2038pt>
 File: oxlogo.png Graphic file (type png)
 <use oxlogo.png>
-Package pdftex.def Info: oxlogo.png used on input line 59.
+Package pdftex.def Info: oxlogo.png used on input line 60.
 (pdftex.def)             Requested size: 91.04881pt x 105.55905pt.
 [1
 
@@ -430,11 +413,11 @@ Package pdftex.def Info: oxlogo.png used on input line 59.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./oxlogo.png>] (./thesis.t
 oc
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 3.
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2
 
@@ -442,39 +425,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-]
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 ...\textsigma relation}{57}{subsection.4.2.4}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
+])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
-[3] (./thesis.lof
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.26 ...bal Mg$_b$--\textsigma }}{61}{figure.4.11}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
+[3] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
@@ -485,32 +440,26 @@ or  <return>  to continue without it.
 
 (./chapter4/chapter4.tex
 Chapter 4.
+! Font TS1/cmr/m/n/12=tcrm1200 at 12.0pt not loadable: Metric (TFM) file not fo
+und.
+<to be read again> 
+                   relax 
+l.6 	\item T
+            he intrinsic shape of regular and non-regular rotators (section ...
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
 
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 	\item Mg -- \textsigma
-                            relation (\ref{subsec:Mgsigma})
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: Reference `subsec:popGrad' on page 29 undefined on input line 11
-.
-
-
-LaTeX Warning: Reference `subsec:popKDC' on page 29 undefined on input line 12.
-
-
-
-LaTeX Warning: Reference `fig:MUSE_stellar' on page 29 undefined on input line 
-20.
-
-<chapter4/vimos/kin1.png, id=197, 1839.5124pt x 3489.9183pt>
+Missing character: There is no ˆ in font nullfont!
+Missing character: There is no ˆ in font nullfont!
+Missing character: There is no ˆ in font nullfont!
+Missing character: There is no ˆ in font nullfont!
+Missing character: There is no ˆ in font nullfont!
+Missing character: There is no ˆ in font nullfont!
+Missing character: There is no ˆ in font nullfont!
+<chapter4/vimos/kin1.png, id=200, 1839.5124pt x 3489.9183pt>
 File: chapter4/vimos/kin1.png Graphic file (type png)
 <use chapter4/vimos/kin1.png>
 Package pdftex.def Info: chapter4/vimos/kin1.png used on input line 24.
@@ -525,89 +474,108 @@ LaTeX Warning: Float too large for page by 57.97578pt on input line 27.
 
 
 
-] <chapter4/vimos/kin2.png, id=203, 1839.5124pt x 3489.9183pt>
+] <chapter4/vimos/kin2.png, id=207, 2732.70938pt x 5183.86688pt>
 File: chapter4/vimos/kin2.png Graphic file (type png)
 <use chapter4/vimos/kin2.png>
 Package pdftex.def Info: chapter4/vimos/kin2.png used on input line 30.
-(pdftex.def)             Requested size: 322.25632pt x 611.40578pt.
-<chapter4/vimos/kin3.png, id=204, 1839.5124pt x 3489.9183pt>
+(pdftex.def)             Requested size: 322.28178pt x 611.40578pt.
+<chapter4/vimos/kin3.png, id=208, 1839.5124pt x 3489.9183pt>
 File: chapter4/vimos/kin3.png Graphic file (type png)
 <use chapter4/vimos/kin3.png>
 Package pdftex.def Info: chapter4/vimos/kin3.png used on input line 35.
 (pdftex.def)             Requested size: 322.25632pt x 611.40578pt.
-<chapter4/vimos/kin4.png, id=205, 1848.1848pt x 1200.1638pt>
+<chapter4/vimos/kin4.png, id=209, 1848.1848pt x 1200.1638pt>
 File: chapter4/vimos/kin4.png Graphic file (type png)
 <use chapter4/vimos/kin4.png>
 Package pdftex.def Info: chapter4/vimos/kin4.png used on input line 40.
 (pdftex.def)             Requested size: 310.49294pt x 201.6317pt.
-<chapter4/muse/kin1.png, id=206, 1848.1848pt x 3489.1956pt>
+<chapter4/muse/kin1.png, id=210, 1848.1848pt x 3489.1956pt>
 File: chapter4/muse/kin1.png Graphic file (type png)
 <use chapter4/muse/kin1.png>
 Package pdftex.def Info: chapter4/muse/kin1.png used on input line 47.
 (pdftex.def)             Requested size: 323.832pt x 611.40578pt.
-<chapter4/muse/kin2.png, id=209, 1856.6163pt x 1199.682pt>
+<chapter4/muse/kin2.png, id=213, 1856.6163pt x 1199.682pt>
 File: chapter4/muse/kin2.png Graphic file (type png)
 <use chapter4/muse/kin2.png>
 Package pdftex.def Info: chapter4/muse/kin2.png used on input line 53.
 (pdftex.def)             Requested size: 312.02274pt x 201.6317pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--68
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
 []|$\OT1/cmr/m/n/12 ^^@[]$
  []
 
 
-Overfull \hbox (6.84677pt too wide) in paragraph at lines 68--68
+Overfull \hbox (6.84677pt too wide) in paragraph at lines 69--69
 \OT1/cmr/m/n/12 (deg)| 
  []
 
 
-Overfull \hbox (0.97183pt too wide) in paragraph at lines 70--70
+Overfull \hbox (0.97183pt too wide) in paragraph at lines 71--71
 []|\OT1/cmr/m/n/12 55.2| 
  []
 
 
-Overfull \hbox (0.97183pt too wide) in paragraph at lines 71--71
+Overfull \hbox (0.97183pt too wide) in paragraph at lines 72--72
 []|\OT1/cmr/m/n/12 87.9| 
  []
 
 
-Overfull \hbox (0.97183pt too wide) in paragraph at lines 72--72
+Overfull \hbox (0.97183pt too wide) in paragraph at lines 73--73
 []|\OT1/cmr/m/n/12 64.4| 
  []
 
 
-Overfull \hbox (0.97183pt too wide) in paragraph at lines 73--73
+Overfull \hbox (0.97183pt too wide) in paragraph at lines 74--74
 []|\OT1/cmr/m/n/12 83.2| 
  []
 
 
-Overfull \hbox (0.97183pt too wide) in paragraph at lines 75--75
+Overfull \hbox (0.97183pt too wide) in paragraph at lines 76--76
 []|\OT1/cmr/m/n/12 72.1| 
  []
 
 
-Overfull \hbox (0.97183pt too wide) in paragraph at lines 76--76
+Overfull \hbox (0.97183pt too wide) in paragraph at lines 77--77
 []|\OT1/cmr/m/n/12 27.2| 
  []
 
 
-Overfull \hbox (0.97183pt too wide) in paragraph at lines 77--77
+Overfull \hbox (0.97183pt too wide) in paragraph at lines 78--78
 []|\OT1/cmr/m/n/12 19.8| 
  []
 
 
-Overfull \hbox (0.97183pt too wide) in paragraph at lines 79--79
+Overfull \hbox (0.97183pt too wide) in paragraph at lines 80--80
 []|\OT1/cmr/m/n/12 20.0| 
  []
 
 
-Overfull \hbox (0.97183pt too wide) in paragraph at lines 80--80
+Overfull \hbox (0.97183pt too wide) in paragraph at lines 81--81
 []|\OT1/cmr/m/n/12 57.7| 
  []
 
 
-Overfull \hbox (13.35448pt too wide) in paragraph at lines 65--85
- [][] 
+Overfull \hbox (13.35448pt too wide) in paragraph at lines 63--92
+[] 
+ []
+
+
+LaTeX Warning: Reference `fig:Misalignment' on page 30 undefined on input line 
+94.
+
+
+Overfull \hbox (578.64508pt too wide) in paragraph at lines 94--95
+\OT1/cmr/m/n/12 just 4$)\OML/cmm/m/it/12 :Regularrotatorswithasignificantmisali
+gnmentareeitherveryround; interactingorstronglybarred\OT1/cmr/m/n/12 (\OML/cmm/
+m/it/12 seefigure[]:Takingintoaccountthelowerqualityofdata; ourresultsareconsis
+tentwiththis \OT1/cmr/m/n/12 :
+ []
+
+
+Overfull \hbox (19.98648pt too wide) in paragraph at lines 94--95
+\OML/cmm/m/it/12 ofthe\OT1/cmr/m/n/12 4\OML/cmm/m/it/12 regularlyrotatinggalaxi
+esintheSouthernsample; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 aremisalignedtolesstha
+n\OT1/cmr/m/n/12 8$ and
  []
 
 [30] [31 <./chapter4/vimos/kin1.png>] [32pdfTeX warning (ext4): destination wit
@@ -616,612 +584,87 @@ ed
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.88 
+l.95 
       <./chapter4/vimos/kin2.png>] [33pdfTeX warning (ext4): destination with t
 he same identifier (name{figure.4.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.88 
+l.95 
       <./chapter4/vimos/kin3.png>] [34pdfTeX warning (ext4): destination with t
 he same identifier (name{figure.4.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.97 
-      <./chapter4/vimos/kin4.png>] [35 <./chapter4/muse/kin1.png>] <chapter4/la
-mbda_R.png, id=278, 1156.32pt x 867.24pt>
+l.102 
+       <./chapter4/vimos/kin4.png>] [35 <./chapter4/muse/kin1.png>] <chapter4/l
+ambda_R.png, id=281, 1156.32pt x 867.24pt>
 File: chapter4/lambda_R.png Graphic file (type png)
 <use chapter4/lambda_R.png>
-Package pdftex.def Info: chapter4/lambda_R.png used on input line 100.
-(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-<chapter4/lambda_R_ellipticity.png, id=279, 1445.4pt x 867.24pt>
+Package pdftex.def Info: chapter4/lambda_R.png used on input line 105.
+(pdftex.def)             Requested size: 303.53267pt x 227.6473pt.
+<chapter4/lambda_R_ellipticity.png, id=282, 1445.4pt x 867.24pt>
 File: chapter4/lambda_R_ellipticity.png Graphic file (type png)
 <use chapter4/lambda_R_ellipticity.png>
 Package pdftex.def Info: chapter4/lambda_R_ellipticity.png used on input line 1
-08.
-(pdftex.def)             Requested size: 433.62pt x 260.17401pt.
-<chapter4/M_k_binned.png, id=288, 1156.32pt x 867.24pt>
+13.
+(pdftex.def)             Requested size: 346.89731pt x 208.12862pt.
+<chapter4/M_k_binned.png, id=291, 1156.32pt x 867.24pt>
 File: chapter4/M_k_binned.png Graphic file (type png)
 <use chapter4/M_k_binned.png>
-Package pdftex.def Info: chapter4/M_k_binned.png used on input line 118.
-(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-<chapter4/vimos/abs1.png, id=296, 2445.6168pt x 4060.8513pt>
+Package pdftex.def Info: chapter4/M_k_binned.png used on input line 123.
+(pdftex.def)             Requested size: 260.17464pt x 195.12057pt.
+<chapter4/vimos/abs1.png, id=297, 2445.6168pt x 4060.8513pt>
 File: chapter4/vimos/abs1.png Graphic file (type png)
 <use chapter4/vimos/abs1.png>
-Package pdftex.def Info: chapter4/vimos/abs1.png used on input line 168.
+Package pdftex.def Info: chapter4/vimos/abs1.png used on input line 179.
 (pdftex.def)             Requested size: 368.20743pt x 611.40578pt.
 
-LaTeX Warning: Float too large for page by 17.83133pt on input line 171.
+LaTeX Warning: Float too large for page by 17.83133pt on input line 182.
 
-<chapter4/vimos/abs2.png, id=299, 2445.6168pt x 4060.8513pt>
+<chapter4/vimos/abs2.png, id=300, 2445.6168pt x 4060.8513pt>
 File: chapter4/vimos/abs2.png Graphic file (type png)
 <use chapter4/vimos/abs2.png>
-Package pdftex.def Info: chapter4/vimos/abs2.png used on input line 174.
+Package pdftex.def Info: chapter4/vimos/abs2.png used on input line 185.
 (pdftex.def)             Requested size: 368.20743pt x 611.40578pt.
-<chapter4/vimos/abs3.png, id=300, 2445.6168pt x 4060.8513pt>
+<chapter4/vimos/abs3.png, id=301, 2445.6168pt x 4060.8513pt>
 File: chapter4/vimos/abs3.png Graphic file (type png)
 <use chapter4/vimos/abs3.png>
-Package pdftex.def Info: chapter4/vimos/abs3.png used on input line 179.
+Package pdftex.def Info: chapter4/vimos/abs3.png used on input line 190.
 (pdftex.def)             Requested size: 368.20743pt x 611.40578pt.
-<chapter4/vimos/abs4.png, id=301, 2445.6168pt x 4060.8513pt>
+<chapter4/vimos/abs4.png, id=302, 2445.6168pt x 4060.8513pt>
 File: chapter4/vimos/abs4.png Graphic file (type png)
 <use chapter4/vimos/abs4.png>
-Package pdftex.def Info: chapter4/vimos/abs4.png used on input line 184.
+Package pdftex.def Info: chapter4/vimos/abs4.png used on input line 195.
 (pdftex.def)             Requested size: 368.20743pt x 611.40578pt.
-<chapter4/vimos/abs5.png, id=302, 2445.6168pt x 4060.8513pt>
+<chapter4/vimos/abs5.png, id=303, 2445.6168pt x 4060.8513pt>
 File: chapter4/vimos/abs5.png Graphic file (type png)
 <use chapter4/vimos/abs5.png>
-Package pdftex.def Info: chapter4/vimos/abs5.png used on input line 189.
+Package pdftex.def Info: chapter4/vimos/abs5.png used on input line 200.
 (pdftex.def)             Requested size: 368.20743pt x 611.40578pt.
-<chapter4/muse/abs1.png, id=303, 2453.3256pt x 4060.1286pt>
+<chapter4/muse/abs1.png, id=304, 2453.3256pt x 4060.1286pt>
 File: chapter4/muse/abs1.png Graphic file (type png)
 <use chapter4/muse/abs1.png>
-Package pdftex.def Info: chapter4/muse/abs1.png used on input line 195.
+Package pdftex.def Info: chapter4/muse/abs1.png used on input line 206.
 (pdftex.def)             Requested size: 369.44292pt x 611.40578pt.
 
-LaTeX Warning: Float too large for page by 16.8091pt on input line 198.
+LaTeX Warning: Float too large for page by 16.8091pt on input line 209.
 
-<chapter4/muse/abs1b.png, id=306, 2455.0119pt x 2347.3296pt>
+<chapter4/muse/abs1b.png, id=307, 2455.0119pt x 2347.3296pt>
 File: chapter4/muse/abs1b.png Graphic file (type png)
 <use chapter4/muse/abs1b.png>
-Package pdftex.def Info: chapter4/muse/abs1b.png used on input line 201.
+Package pdftex.def Info: chapter4/muse/abs1b.png used on input line 212.
 (pdftex.def)             Requested size: 367.33685pt x 351.22783pt.
-<chapter4/muse/abs2.png, id=309, 2453.3256pt x 4060.1286pt>
+<chapter4/muse/abs2.png, id=310, 2453.3256pt x 4060.1286pt>
 File: chapter4/muse/abs2.png Graphic file (type png)
 <use chapter4/muse/abs2.png>
-Package pdftex.def Info: chapter4/muse/abs2.png used on input line 206.
+Package pdftex.def Info: chapter4/muse/abs2.png used on input line 217.
 (pdftex.def)             Requested size: 369.44292pt x 611.40578pt.
-<chapter4/muse/abs2b.png, id=310, 2455.0119pt x 2347.3296pt>
+<chapter4/muse/abs2b.png, id=311, 2455.0119pt x 2347.3296pt>
 File: chapter4/muse/abs2b.png Graphic file (type png)
 <use chapter4/muse/abs2b.png>
-Package pdftex.def Info: chapter4/muse/abs2b.png used on input line 211.
+Package pdftex.def Info: chapter4/muse/abs2b.png used on input line 222.
 (pdftex.def)             Requested size: 367.33685pt x 351.22783pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--216
-[][][]\OT1/cmr/m/n/10 The trans-for-ma-tion from LICK/IDS to the LIS sys-tem is
- avail-able at
- []
-
-[36pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.217 
-       <./chapter4/muse/kin2.png>] [37 <./chapter4/lambda_R.png>] [38 <./chapte
-r4/lambda_R_ellipticity.png>] [39 <./chapter4/M_k_binned.png>] [40 <./chapter4/
-vimos/abs1.png>] [41pdfTeX warning (ext4): destination with the same identifier
- (name{figure.4.6}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.217 
-       <./chapter4/vimos/abs2.png>] [42pdfTeX warning (ext4): destination with 
-the same identifier (name{figure.4.6}) has been already used, duplicate ignored
-
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.217 
-       <./chapter4/vimos/abs3.png>] [43pdfTeX warning (ext4): destination with 
-the same identifier (name{figure.4.6}) has been already used, duplicate ignored
-
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.217 
-       <./chapter4/vimos/abs4.png>] [44pdfTeX warning (ext4): destination with 
-the same identifier (name{figure.4.6}) has been already used, duplicate ignored
-
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.217 
-       <./chapter4/vimos/abs5.png>] [45 <./chapter4/muse/abs1.png>] [46pdfTeX w
-arning (ext4): destination with the same identifier (name{figure.4.7}) has been
- already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.217 
-       <./chapter4/muse/abs1b.png>] [47pdfTeX warning (ext4): destination with 
-the same identifier (name{figure.4.7}) has been already used, duplicate ignored
-
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.217 
-       <./chapter4/muse/abs2.png>] [48pdfTeX warning (ext4): destination with t
-he same identifier (name{figure.4.7}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.217 
-       <./chapter4/muse/abs2b.png>]
-
-LaTeX Warning: Reference `' on page 49 undefined on input line 219.
-
-
-LaTeX Warning: Command \r invalid in math mode on input line 230.
-
-
-LaTeX Warning: Command \r invalid in math mode on input line 230.
-
-
-LaTeX Warning: Reference `' on page 49 undefined on input line 289.
-
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.289 ...ity (Z) and alpha enhancement (\textalpha
-                                                  ); by comparing our measur...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[49] [50] [51]
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.310 ...element enhancement parameter, \textalpha
-                                                  /Fe. This is done followin...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.310 ...O, Na, Mg, Si, Ca and Ti (i.e. \textalpha
-                                                   and other light elements)...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.312 ...-1.35, -0.33, 0.0, 0.35, 0.67 and [\alpha
-                                                  /Fe] = -0.3, 0.0, 0.3, 0.5.
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.313 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[52] <chapter4/vimos/pop1.png, id=506, 1839.5124pt x 3489.9183pt>
-File: chapter4/vimos/pop1.png Graphic file (type png)
-<use chapter4/vimos/pop1.png>
-Package pdftex.def Info: chapter4/vimos/pop1.png used on input line 322.
-(pdftex.def)             Requested size: 322.25632pt x 611.40578pt.
-
-LaTeX Warning: Float too large for page by 28.97578pt on input line 325.
-
-<chapter4/vimos/pop2.png, id=509, 1839.5124pt x 3489.9183pt>
-File: chapter4/vimos/pop2.png Graphic file (type png)
-<use chapter4/vimos/pop2.png>
-Package pdftex.def Info: chapter4/vimos/pop2.png used on input line 328.
-(pdftex.def)             Requested size: 322.25632pt x 611.40578pt.
-<chapter4/vimos/pop3.png, id=510, 1839.5124pt x 3489.9183pt>
-File: chapter4/vimos/pop3.png Graphic file (type png)
-<use chapter4/vimos/pop3.png>
-Package pdftex.def Info: chapter4/vimos/pop3.png used on input line 333.
-(pdftex.def)             Requested size: 322.25632pt x 611.40578pt.
-<chapter4/vimos/pop4.png, id=511, 1848.1848pt x 1200.1638pt>
-File: chapter4/vimos/pop4.png Graphic file (type png)
-<use chapter4/vimos/pop4.png>
-Package pdftex.def Info: chapter4/vimos/pop4.png used on input line 338.
-(pdftex.def)             Requested size: 310.49294pt x 201.6317pt.
-<chapter4/muse/pop1.png, id=512, 1848.1848pt x 3489.1956pt>
-File: chapter4/muse/pop1.png Graphic file (type png)
-<use chapter4/muse/pop1.png>
-Package pdftex.def Info: chapter4/muse/pop1.png used on input line 344.
-(pdftex.def)             Requested size: 323.832pt x 611.40578pt.
-
-LaTeX Warning: Float too large for page by 2.3091pt on input line 347.
-
-<chapter4/muse/pop2.png, id=515, 1856.6163pt x 1199.682pt>
-File: chapter4/muse/pop2.png Graphic file (type png)
-<use chapter4/muse/pop2.png>
-Package pdftex.def Info: chapter4/muse/pop2.png used on input line 350.
-(pdftex.def)             Requested size: 312.02274pt x 201.6317pt.
-Runaway argument?
-{log(Gyr) \, arcsec^{-1}$ and $-0.26\pm 0.08 \mathrm {[Fe/H]_odot \, \ETC.
-! Paragraph ended before \math@egroup was complete.
-<to be read again> 
-                   \par 
-l.359 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.359 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.359 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.368 						&
-              log(Gyr) arcsec$^{-1}$ & [Fe/H]$_\odot$ arcsec$^{-1}$ \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[53] [54 <./chapter4/vimos/pop1.png>] [55pdfTeX warning (ext4): destination wit
-h the same identifier (name{figure.4.8}) has been already used, duplicate ignor
-ed
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.390 
-       <./chapter4/vimos/pop2.png>] [56pdfTeX warning (ext4): destination with 
-the same identifier (name{figure.4.8}) has been already used, duplicate ignored
-
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.390 
-       <./chapter4/vimos/pop3.png>] <chapter4/KDC_size_age.png, id=547, 1156.32
-pt x 867.24pt>
-File: chapter4/KDC_size_age.png Graphic file (type png)
-<use chapter4/KDC_size_age.png>
-Package pdftex.def Info: chapter4/KDC_size_age.png used on input line 393.
-(pdftex.def)             Requested size: 346.89731pt x 260.17401pt.
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.399 	\subsection{Mg -- \textsigma relation}
-                                             
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 399.
-
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.404 ... existance of the internal Mg--\textsigma
-                                                   relation, but also sugges...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.404 ...s about 30\% of the global Mg--\textsigma
-                                                   relation, with metallicit...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Encoding scheme `LGR' unknown.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.404 ...as no role in the internal Mg--\textsigma
-                                                   relation.
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: Command \r invalid in math mode on input line 407.
-
-
-LaTeX Warning: Command \r invalid in math mode on input line 407.
-
-[57pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.414 
-       <./chapter4/vimos/pop4.png>] [58 <./chapter4/muse/pop1.png>] [59pdfTeX w
-arning (ext4): destination with the same identifier (name{figure.4.9}) has been
- already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.414 
-       <./chapter4/muse/pop2.png> <./chapter4/KDC_size_age.png>] <chapter4/Mg_s
-igma.png, id=583, 1156.32pt x 867.24pt>
-File: chapter4/Mg_sigma.png Graphic file (type png)
-<use chapter4/Mg_sigma.png>
-Package pdftex.def Info: chapter4/Mg_sigma.png used on input line 442.
-(pdftex.def)             Requested size: 346.89731pt x 260.17401pt.
-) [60] [61 <./chapter4/Mg_sigma.png>] (./thesis.bbl
-Missing character: There is no Â in font cmr12!
-Missing character: There is no Â in font cmr12!
-pdfTeX warning (ext4): destination with the same identifier (name{page.32}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.94 
-      [32
-
-
-
-
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.33}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.177 ...er}{Churazov et~al.}{2000}]{Churazov2000}
-                                                   [33]pdfTeX warning (ext4): d
-estination with the same identifier (name{page.34}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.258   et~al.}{1985}]{Faber1985}
-                                  [34]pdfTeX warning (ext4): destination with t
-he same identifier (name{page.35}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.346 
-       [35]pdfTeX warning (ext4): destination with the same identifier (name{pa
-ge.36}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.432 ...rt}{Hujeirat et~al.}{2003}]{Hujeirat2003}
-                                                   [36]pdfTeX warning (ext4): d
-estination with the same identifier (name{page.37}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.506   et~al.}{2011}]{Krajnovic2011}
-                                      [37]pdfTeX warning (ext4): destination wi
-th the same identifier (name{page.38}) has been already used, duplicate ignored
-
-<to be read again> 
-                   \relax 
-l.585 
-       [38]pdfTeX warning (ext4): destination with the same identifier (name{pa
-ge.39}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.678 ...Ortolani}{Puzia et~al.}{2002}]{Puzia2002}
-                                                   [39]pdfTeX warning (ext4): d
-estination with the same identifier (name{page.40}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.766 ... et~al.,}{Sarzi et~al.}{2005}]{Sarzi2005}
-                                                   [40]pdfTeX warning (ext4): d
-estination with the same identifier (name{page.41}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.850 
-       [41]pdfTeX warning (ext4): destination with the same identifier (name{pa
-ge.42}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.931 \end{thebibliography}
-                            [42])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
-pdfTeX warning (ext4): destination with the same identifier (name{page.43}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.90 \end{document}
-                    [43]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
-(./thesis.aux (./acknowledgements/dedication.aux) (./acknowledgements/acknowled
-gements.aux) (./abstract/abstract.aux) (./introduction/introduction.aux) (./cha
-pter2/chapter2.aux) (./chapter3/chapter3.aux) (./chapter4/chapter4.aux) (./chap
-ter5/chapter5.aux) (./conclusions/conclusions.aux) (./appendix/appendix1/append
-ix1.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 62816D8B7F61707F35118433B1C2AABA;1015.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
- ) 
-Here is how much of TeX's memory you used:
- 8293 strings out of 494945
- 122059 string characters out of 6181438
- 216026 words of memory out of 5000000
- 11127 multiletter control sequences out of 15000+600000
- 12792 words of font info for 49 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 34i,15n,33p,1629b,789s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figure.1.11} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.10} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.9} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.8} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.7} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.6} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.5} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.4} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.3} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.2} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.1} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.6} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.3} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.2} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.3.3} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.3.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.3.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.2.3} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.2.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.2.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.1.3} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.1.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.1.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.1} has been referenced but does not exist, 
-replaced by a fixed one
-
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1
-/public/cm-super/sfrm1200.pfb>
-Output written on thesis.pdf (49 pages, 136206614 bytes).
-PDF statistics:
- 1105 PDF objects out of 1200 (max. 8388607)
- 959 compressed objects within 10 object streams
- 283 named destinations out of 1000 (max. 500000)
- 248 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+[][][]
