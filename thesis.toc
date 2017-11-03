@@ -1,0 +1,35 @@
+\contentsline {chapter}{Acknowledgments}{i}{chapter*.1}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Early Type Galaxies}{9}{section.1.1}
+\contentsline {section}{\numberline {1.2}Active Galactic Nuclei}{16}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}AGN parameters}{18}{subsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.1.1}Bolometric Luminosity}{18}{subsubsection.1.2.1.1}
+\contentsline {subsubsection}{\numberline {1.2.1.2}Black Hole Mass}{18}{subsubsection.1.2.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1.3}Eddington Ratio}{18}{subsubsection.1.2.1.3}
+\contentsline {subsection}{\numberline {1.2.2}Radiative Mode}{19}{subsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.1}Fueling}{19}{subsubsection.1.2.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2.2}Feedback}{21}{subsubsection.1.2.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.3}Radiative Mode Radio Galaxies}{22}{subsubsection.1.2.2.3}
+\contentsline {subsection}{\numberline {1.2.3}Jet Mode}{22}{subsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.3.1}Fueling}{23}{subsubsection.1.2.3.1}
+\contentsline {subsubsection}{\numberline {1.2.3.2}Feedback}{23}{subsubsection.1.2.3.2}
+\contentsline {subsubsection}{\numberline {1.2.3.3}Jet Mode Radio Galaxies}{24}{subsubsection.1.2.3.3}
+\contentsline {section}{\numberline {1.3}The Southern Sample}{25}{section.1.3}
+\contentsline {chapter}{\numberline {2}VIMOS data}{27}{chapter.2}
+\contentsline {chapter}{\numberline {3}MUSE data}{28}{chapter.3}
+\contentsline {chapter}{\numberline {4}Stellar Kinematics and Populations}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Kinematics}{30}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Maps}{30}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Fast/Slow Rotator fraction}{34}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Stellar Population}{36}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Absorption line strengths}{36}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Most-likely stellar population model}{49}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Radial Gradients in stellar Populations}{52}{subsubsection.4.2.2.1}
+\contentsline {subsection}{\numberline {4.2.3}Kinematically Decoupled Cores}{52}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Mg -- $\sigma $ relation}{58}{subsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.4.1}Global relation}{60}{subsubsection.4.2.4.1}
+\contentsline {subsubsection}{\numberline {4.2.4.2}Spatially resolved}{60}{subsubsection.4.2.4.2}
+\contentsline {section}{\numberline {4.3}The case of NGC 612}{61}{section.4.3}
+\contentsline {chapter}{\numberline {5}Ionised Gas Component}{30}{chapter.5}
+\contentsline {chapter}{\numberline {6}Discussion and Conclusion}{31}{chapter.6}
+\contentsline {chapter}{Bibliography}{32}{section.4.3}
