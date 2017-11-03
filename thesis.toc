@@ -20,7 +20,7 @@
 \contentsline {chapter}{\numberline {4}Stellar Kinematics and Populations}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}Kinematics}{30}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Maps}{30}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Fast/Slow Rotator fraction}{34}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Fast/Slow Rotator Fraction}{36}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}Stellar Population}{36}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Absorption line strengths}{36}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Most-likely stellar population model}{49}{subsection.4.2.2}
