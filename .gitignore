@@ -1,8 +1,8 @@
-.aux
-.pdf
-.log
-.bbl
-.blg
-.lof
-.out
-.toc
+*.aux
+*.pdf
+*.log
+*.bbl
+*.blg
+*.lof
+*.out
+*.toc
