@@ -1,7 +1,7 @@
 \chapter{Stellar Kinematics and Populations}
 	\label{cha:stellar}
 % More preface here
-With the advent of the integral field spectroscopy (IFS), we can now investigate the resolved properties of a galaxy, without relying on extrapolations of long-slit data. Surveys such as the SAURON/Atlas3$^\text{D}$ projects have demonstrated the wealth of information that can be learned from a systematic IFU study. This chapter focuses on the resolved stellar properties of our sample of radio galaxies and is structured as follows: firstly we present the kinematic maps for the stellar component of each galaxy (section \ref{sec:stellarKin}) and the distribution of the sample on the $\lambda_\mathrm{R_e}$--ellipticity plane. Then, in section \ref{sec:pop}, we investigate the stellar populations of each galaxy using the measured absorption line strengths. We conclude by looking at the odd-one-out of the sample, NGC 612, in section \ref{sec:NGC612}. Through this chapter we aim to demonstrate that our radio selected sample is no different in the V-band to optically selected ETGs (from the MASSIVE and Atlas3$^\text{D}$ samples). We achieve this by showing that they are consistent with defining characteristics of ETGs that are accessible able to V-band IFS data. The list of characteristics we investigate in this chapter are (the relevant section is shown in parenthesis):
+With the advent of the integral field spectroscopy (IFS), we can now investigate the resolved properties of a galaxy, without relying on extrapolations of long-slit data. Surveys such as the SAURON/Atlas$^\text{3D}$ projects have demonstrated the wealth of information that can be learned from a systematic IFU study. This chapter focuses on the resolved stellar properties of our sample of radio galaxies and is structured as follows: firstly we present the kinematic maps for the stellar component of each galaxy (section \ref{sec:stellarKin}) and the distribution of the sample on the $\lambda_\mathrm{R_e}$--ellipticity plane. Then, in section \ref{sec:pop}, we investigate the stellar populations of each galaxy using the measured absorption line strengths. We conclude by looking at the odd-one-out of the sample, NGC 612, in section \ref{sec:NGC612}. Through this chapter we aim to demonstrate that our radio selected sample is no different in the V-band to optically selected ETGs (from the MASSIVE and Atlas$^\text{3D}$ samples). We achieve this by showing that they are consistent with defining characteristics of ETGs that are accessible able to V-band IFS data. The list of characteristics we investigate in this chapter are (the relevant section is shown in parenthesis):
 \begin{itemize}
 	\item The intrinsic shape of regular and non-regular rotators (section \ref{subsec:maps})
 	\item The fast/slow rotator fraction (\ref{subsec:FSfrac})
@@ -59,8 +59,8 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 
 
 		\begin{table}
-		\begin{threeparttable}
 			\centering
+		\begin{threeparttable}
 			\caption{Kinematic classifications}
 			\label{tab:classify}
 			\begin{tabular}{l r r p{0.7cm} l l l l}
@@ -72,33 +72,34 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 				IC 1459 	& 0.174 & 0.24 & 87.9	& SR & NRR & KDC & c \\
 				IC 1531 	& 0.100 & 0.11 & 64.4 	& SR & NRR & LV & a \\
 				IC 4296		& 0.034 & 0.03 & 83.2 	& SR & RR & -- & e \\
-				NGC 612 	& 0.519 & 0.58 & \vphantom{0}7.3 	& FR & RR & -- & e \\
+				NGC 612 	& 0.519 & 0.58 & \leavevmode\phantom{0}7.3 	& FR & RR & -- & e \\
 				NGC 1316 	& 0.100 & 0.39 & 72.1 	& FR & NRR & -- & f \\
 				NGC 1399 	& 0.090 & 0.12 & 27.2 	& SR & NRR & LV & a \\
 				NGC 3100 	& 0.418 & 0.31 & 19.8 	& FR & RR & -- & e \\
-				NGC 3557 	& 0.320 & 0.22 & \vphantom{0}7.6 	& FR & RR & -- & e\\
+				NGC 3557 	& 0.320 & 0.22 & \leavevmode\phantom{0}7.6 	& FR & RR & -- & e\\
 				NGC 7075 	& 0.048 & 0.09 & 20.0 	& SR & NRR & -- & b \\
 				PKS 718-34  & 0.152 & 0.18 & 57.7 	& SR & NRR & KDC$^\text{a}$ & b\\
 				\hline
 				\hline
-				\multicolumn{7}{L{.9\textwidth}}{\footnotesize } \\ % need to adjust size for final table
+				% \multicolumn{7}{L{.9\textwidth}}{\footnotesize } \\ % need to adjust size for final table
 			\end{tabular}
 			\begin{tablenotes}
 			\small
 			\item $^\text{a}$ This is a tentative classification. Higher S/N is required to a larger radii to confirm this.
-			\item Where we have MUSE datacubes, the value and classifications from this are given (since they rely on less extrapolation due to the larger field of view of MUSE), otherwise the values are from the VIMOS maps. Col. 1: Galaxy name, Col. 2: $\lambda_\mathrm{R_e}$, Col. 3: ellipticity, Col. 4: Misalignment between kinematic position angle and photometric position angle, Col. 5: Fast or Slow rotator, Col. 6: Regular rotator or non-regular rotator, Col. 7: Kinematic features (abbreviations defined in section \ref{sec:ETG}), Col. 8: Kinematic group as defined in section \ref{sec:ETG}
+			\item Where we have MUSE datacubes, the value and classifications from this are given (since they rely on less extrapolation due to the larger field of view of MUSE), otherwise the values are from the VIMOS maps. 
+			\item Col. 1: Galaxy name, Col. 2: $\lambda_\mathrm{R_e}$, Col. 3: ellipticity, Col. 4: Misalignment between kinematic position angle and photometric position angle, Col. 5: Fast or Slow rotator, Col. 6: Regular rotator or non-regular rotator, Col. 7: Kinematic features (abbreviations defined in section \ref{sec:ETG}), Col. 8: Kinematic group as defined in section \ref{sec:ETG}
 			\end{tablenotes}
 		\end{threeparttable}
 		\end{table}
 
-		Column 4 in table \ref{tab:classify} shows the misalignment between the photometric position angle ($PA_\text{phot}$; the angle of axis from North along which the surface brightness reaches the maximum values) and the kinematic position angle ($PA_\text{kin}$; the angle of axis from North along which the proected velocities reaches the maximum absolute values), i.e. $\Gamma_\text{kin} = \left| PA_\text{phot} - PA_\text{kin} \right|$. \citet{Cappellari2007}, \citet{Krajnovic2011} and \citet{Fogarty2015} all show that regular rotating galaxies (refered to simply as regular rotators) almost always have aligned kinematic and photometric axes (with a scatter of just 4$\degree$). Regular rotators with a significant misalignment are either very round, interacting or strongly barred (see figure \ref{fig:Misalignment}. Taking into account the lower quality of data, our results are consistent with this: of the 4 regularly rotating galaxies in the Southern sample, 2 are misaligned to less than 8$\degree$ and the other 2 are round ($\epsilon  0.3$). As noted in \citet{Cappellari2016}, this result requires that regular rotators are axis-symmetric.
+		Column 4 in table \ref{tab:classify} shows the misalignment between the photometric position angle ($PA_\text{phot}$; the angle of axis from North along which the surface brightness reaches the maximum values) and the kinematic position angle ($PA_\text{kin}$; the angle of axis from North along which the projected velocities reaches the maximum absolute values), i.e. $\Gamma_\text{kin} = \left| PA_\text{phot} - PA_\text{kin} \right|$. \citet{Cappellari2007}, \citet{Krajnovic2011} and \citet{Fogarty2015} all show that regular rotating galaxies (hereafter referred to simply as regular rotators) almost always have aligned kinematic and photometric axes (with a scatter of just 4$\degree$). Regular rotators with a significant misalignment are either very round, interacting or strongly barred (see figure \ref{fig:Misalignment}. Taking into account the lower quality of data, our results are consistent with this: of the 4 regularly rotating galaxies in the Southern sample, 2 are misaligned to less than 8$\degree$ and the other 2 are round ($\epsilon  0.3$). As noted in \citet{Cappellari2016}, this result requires that regular rotators are axis-symmetric.
 
-		Misalignments are routinely observed for non-regularly rotating galaxies. This generally implies a more triaxial intrinsic shape, however large misalignments are extremely rarely observed in galaxies with $\epsilon > 0.4$ suggesting that non-regularly rotating galaxies are more spherical in shape. This is the reason for the $\epsilon < 0.4$ requirement in the definition for slow rotators. The non-regular rotators in our sample are also consistant with this.
+		Misalignments are routinely observed for non-regularly rotating galaxies. This generally implies a more triaxial intrinsic shape, however large misalignments are extremely rarely observed in galaxies with $\epsilon > 0.4$ suggesting that non-regularly rotating galaxies are more spherical in shape. This is the reason for the $\epsilon < 0.4$ requirement in the definition for slow rotators. The non-regular rotators in our sample are also consistent with this.
 
 
 	\subsection{Fast/Slow Rotator fraction}
 		\label{subsec:FSfrac}
-		The radial $\lambda_{R_e}$ profiles are shown in figure \ref{fig:lambdaR_profile}. Using the combined samples of Atlas3$^\text{D}$ and MASSIVE, we find that there is no discernible difference between the radio selected Southern Sample and the optically selected ETGs of Atlas3$^\text{D}$ and MASSIVE, once the differences in mass distribution are taken into account. To do this, we find the fraction of slow rotators in each mass bin (using $M_k$ as a proxy), shown in black in the lower panel of figure \ref{fig:SRmassFraction}. Multiplying by the number of galaxies in the Southern Sample in each bin (red in upper panel of \ref{fig:SRmassFraction}), and summing over all bins gives an estimate of $(64 \pm 6)\%$ of the Southern Sample should be slow rotators. This is consistent with our finding of 56\% being slow rotators.
+		The radial $\lambda_{R_e}$ profiles are shown in figure \ref{fig:lambdaR_profile}. Using the combined samples of Atlas$^\text{3D}$ and MASSIVE, we find that there is no discernible difference between the radio selected Southern Sample and the optically selected ETGs of Atlas$^\text{3D}$ and MASSIVE, once the differences in mass distribution are taken into account. To do this, we find the fraction of slow rotators in each mass bin (using $M_k$ as a proxy), shown in black in the lower panel of figure \ref{fig:SRmassFraction}. Multiplying by the number of galaxies in the Southern Sample in each bin (red in upper panel of \ref{fig:SRmassFraction}), and summing over all bins gives an estimate of $(64 \pm 6)\%$ of the Southern Sample should be slow rotators. This is consistent with our finding of 56\% being slow rotators.
 
 		\begin{figure}
 			\centering
@@ -111,7 +112,7 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.8\textwidth]{chapter4/lambda_R_ellipticity.png}
-			\caption[$\lambda_{R_e}$ -- ellipticity plane]{The $\lambda_{R_e}$ -- ellipticity plane showing the definition for the fast/slow rotator classes (solid black line). Atlas3$^\text{D}$ galaxies are shown in black \citep{Emsellem2011} and MASSIVE survey galaxies are shown in gray \citep{Veale2017}. The theoretic limit of disc dominated galaxy is shown (solid magenta) with lines of constant intrinsic angular moment with varying inclination (dashed magenta). VIMOS and MUSE measurements are shown in red and blue respectively. Note: the MASSIVE survey does not classify substructure so the MASSIVE sample is simply shown with filled circles.}
+			\caption[$\lambda_{R_e}$ -- ellipticity plane]{The $\lambda_{R_e}$ -- ellipticity plane showing the definition for the fast/slow rotator classes (solid black line). Atlas$^\text{3D}$ galaxies are shown in black \citep{Emsellem2011} and MASSIVE survey galaxies are shown in gray \citep{Veale2017}. The theoretic limit of disc dominated galaxy is shown (solid magenta) with lines of constant intrinsic angular moment with varying inclination (dashed magenta). VIMOS and MUSE measurements are shown in red and blue respectively. Note: the MASSIVE survey does not classify substructure so the MASSIVE sample is simply shown with filled circles.}
 			\label{fig:lambdaR_ellip}
 		\end{figure}
 
@@ -121,7 +122,7 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.6\textwidth]{chapter4/M_k_binned.png}
-			\caption[Mass matching global kinematics]{The mass distributions (upper panel) of the combined Atlas3$^\text{D}$ and MASSIVE surveys (black) and the Southern Sample (red), as well as the slow rotators fractions within each mass bin (lower panel). The labels display the [number of slow rotators]/[total number of galaxies] in that bin. Note that the black and red have different normalizations in the mass distribution plot: The combined Atlas3$^\text{D}$ and MASSIVE samples contains 300 galaxies, while the Southern Sample is just 11 radio galaxies.}
+			\caption[Mass matching global kinematics]{The mass distributions (upper panel) of the combined Atlas$^\text{3D}$ and MASSIVE surveys (black) and the Southern Sample (red), as well as the slow rotators fractions within each mass bin (lower panel). The labels display the [number of slow rotators]/[total number of galaxies] in that bin. Note that the black and red have different normalizations in the mass distribution plot: The combined Atlas$^\text{3D}$ and MASSIVE samples contains 300 galaxies, while the Southern Sample is just 11 radio galaxies.}
 			\label{fig:SRmassFraction}
 		\end{figure}
 
@@ -129,7 +130,7 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 		
 
 
-
+ 
 
 
 \section{Stellar Population}
@@ -137,12 +138,12 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 
 	\subsection{Absorption line strengths}
 		\label{subsec:absorption}
-		Figures \ref{fig:VIMOS_absorption} and \ref{fig:MUSE_absorption} show the resolved absorption line strengths for the Southern Sample. For the VIMOS cubes, we find G4300, Fe4383, Ca4455, Fe4531, H$_\beta$, Fe5015 and Mg$_b$ indicies (bandpasses are defined in table \ref{tab:abIndex}). For the most distant galaxies, the red continuum band for Mg$_b$ is redshifted beyond the range of the VIMOS spectrograph. In these cases we have not attempted to ajust the definition of the bandpass, but have simply not included Mg$_b$ in any future analysis. For MUSE cubes, we find the H$_\beta$, Fe5015, Mg$_b$, Fe5270, Fe5335, Fe5406, Fe5709, Fe5782, NaD, TiO1 and TiO2 indicies. 
+		Figures \ref{fig:VIMOS_absorption} and \ref{fig:MUSE_absorption} show the resolved absorption line strengths for the Southern Sample. For the VIMOS cubes, we find G4300, Fe4383, Ca4455, Fe4531, H$_\beta$, Fe5015 and Mg$_b$ indices (bandpasses are defined in table \ref{tab:abIndex}). For the most distant galaxies, the red continuum band for Mg$_b$ is redshifted beyond the range of the VIMOS spectrograph. In these cases we have not attempted to adjust the definition of the bandpass, but have simply not included Mg$_b$ in any future analysis. For MUSE cubes, we find the H$_\beta$, Fe5015, Mg$_b$, Fe5270, Fe5335, Fe5406, Fe5709, Fe5782, NaD, TiO1 and TiO2 indices. 
 
 		\begin{table}
-		\begin{threeparttable}
 			\centering
-			\caption{Definiting line indices.}
+		\begin{threeparttable}
+			\caption{Definitions of bandpasses for line indices.}
 			\label{tab:abIndex}
 			\begin{tabular}{l c c c}
 				\hline
@@ -227,18 +228,18 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 	Comparison to the literature is made difficult by the inhomogeneous nature of corrections applied by different authors such as: accounting for emission lines from the interstellar medium (ISM) or velocity dispersion. We use the line index system (LIS) by \citet{Vazdekis2010} instead of the popular LICK/IDS system \citep{Faber1985, Worthey1994} since LICK/IDS is based on non-flux calibrated spectra from the IDS and Cassegrain spectrograph on the Shane telescope (Lick Observatory) which has a relatively low and wavelength dependent resolution. When using other instruments with the LICK/IDS system it is necessary to calibrate the observations by performing empirical corrections to correct for the uncalibrated continuum of LICK/IDS. This requires observing standard stars with the same instrumental set up as the main observations in order to make comparisons to the measurements from the IDS spectrograph. Since this was not requested as part of the observing strategy with VIMOS we are not able to do this: a later proposal would not have worked since VIMOS was substantially upgraded in the intervening time period. Further more, we believe that this system has had its time and the community should be making a concerted effort to move away from it, due to the low resolution and poor data quality on which it is based. However, there is a lack of non-LICK/IDS system measurements: we used the empirical functions provided by \citet{Vazdekis2010} to translate between LICK/IDS and LIS systems\footnote{The transformation from LICK/IDS to the LIS system is available at http://www.iac.es/proyecto/miles/pages/line-index-system-lis/transformations.php.} in order to make comparisons to the literature. 
 
 
-	Finally, we note that only the H$_\beta$ emission line is corrected for in some of the literature, despite [OIII] often being the strongest emission line for ETGs. This effects the reliability of the Fe5015 and Mb$_b$ absorption indices as the [OIII] and [NI] doublets fall within them respectively. They vary as to whether they fall within the index band or the continuum bands and the effect depends on the relative difference in the kinematics for the stars (which result in the absorption features) and the ISM (which results in the emission lines). Other papers correct for only H$_\beta$ and [OIII]. In order to make accurate comparisons to the literature, we mimic the corrections in the relevant paper being used for comparison: i.e. we only correct for the emission lines the paper corrects for and apply the same aperture corrections as the paper. We removing all emission lines (given in table \ref{tab:EmissionLines}) for our quoted measurements and maps. Table \ref{tab:litAbsorption} sums up our comparisons to the literature. Here we note that in the case of comparisons to \citet{Rampazzo2005}, G4300 has a very large offset. We suggest that this index is extremely sensitive to the velocity dispersion due to the steep nature of the pseudo-continuum: a difference of $30 \mathrm{km \, s^{-1}}$ can effect the corrected index value by $\sim 2$\AA. For the comparison to \citet{Vazdekis2010}, we analyzed the SAURON data set\footnote{SARUON data is available at: http://www.strw.leidenuniv.nl/sauron/.} \citep{Emsellem2004} using the same pipeline we have developed for our sample. 
+	Finally, we note that only the H$_\beta$ emission line is corrected for in some of the literature, despite [OIII] often being the strongest emission line for ETGs. This effects the reliability of the Fe5015 and Mb$_b$ absorption indices as the [OIII] and [NI] doublets fall within them respectively. They vary as to whether they fall within the index band or the continuum bands and the effect depends on the relative difference in the kinematics for the stars (which result in the absorption features) and the ISM (which results in the emission lines). Other papers correct for only H$_\beta$ and [OIII]. In order to make accurate comparisons to the literature, we mimic the corrections in the relevant paper being used for comparison: i.e. we only correct for the emission lines the paper corrects for and apply the same aperture corrections as in the paper. All emission lines (given in table \ref{tab:EmissionLines}) are removed for our quoted measurements and maps. Table \ref{tab:litAbsorption} sums up our comparisons to the literature. Here we note that in the case of comparisons to \citet{Rampazzo2005}, G4300 has a very large offset. We suggest that this index is extremely sensitive to the velocity dispersion due to the steep nature of the pseudo-continuum: a difference of $30 \mathrm{km \, s^{-1}}$ can effect the corrected index value by $\sim 2 \, \mathrm{\AA}$. For the comparison to \citet{Vazdekis2010}, we analyzed the SAURON data set\footnote{SARUON data is available at: http://www.strw.leidenuniv.nl/sauron/.} \citep{Emsellem2004} using the same pipeline we have developed for our sample. 
 
 	\begin{table}
-	\begin{threeparttable}
 		\centering
-		\caption{Comparisons of measured absorption line indicies to the literature.}
+	\begin{threeparttable}
+		\caption{Comparisons of measured absorption line indices to the literature.}
 		\label{tab:litAbsorption}
 		\begin{tabular}{l r r r}
 			\hline
 			\hline
 			Index 		& N$_{gals}$ & Offset 	& Dispersion \\
-						& 			& $\AA$		& $\AA$ \\
+						& 			& \AA		& \AA \\
 			\hline
 			\multicolumn{4}{c}{\citet{Vazdekis2010} (SAURON)} \\
 			\hline
@@ -286,6 +287,7 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 			Fe5406 		& 3 		& -0.51		& 0.06	\\
 			Fe5709 		& 3 		& -0.22		& 0.08	\\
 			NaD 		& 3 		& -1.57		& 0.16	\\
+			\hline
 			\hline
 		\end{tabular}
 		\begin{tablenotes}
@@ -395,6 +397,8 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 					NGC 3557 	& $0.000 \pm 0.006$ & $-0.023 \pm 0.007$ \\
 					NGC 7075 	& $0.006 \pm 0.003$ & $-0.067 \pm 0.006$ \\
 					PKS 718-34  & $0.008 \pm 0.007$ & $-0.115 \pm 0.007$ \\
+					\hline
+					\hline
 				\end{tabular}
 			\end{table}
 
@@ -408,7 +412,7 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 		\begin{figure}
 			\centering
 			\includegraphics[width=.8\textwidth]{chapter4/KDC_size_age.png}
-			\caption[KDC dichotomy]{The KDC size -- age relation showing KDCs are either old or small. Colors of symbols are: VIMOS in red, MUSE in blue and SAURON from \citet{Kuntschner2010} in black and gray for fast and slow rotators respectively (Atlas3$^\text{D}$ did not repeat these measurements after SAURON.}
+			\caption[KDC dichotomy]{The KDC size -- age relation showing KDCs are either old or small. Colors of symbols are: VIMOS in red, MUSE in blue and SAURON from \citet{Kuntschner2010} in black and gray for fast and slow rotators respectively (Atlas$^\text{3D}$ did not repeat these measurements after SAURON.}
 			\label{fig:KDC}
 		\end{figure}
 
@@ -421,7 +425,7 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 		\citet{Mehlert2003} showed the existence of the internal Mg--$\mathrm{\sigma}$ relation, but also suggested that it had a different origin to that of the global relation. They found that alpha-enhancement correlates with velocity dispersion and drives about 30\% of the global Mg--$\sigma$ relation, with metallicity variations providing the remaining 70\%, while the alpha-enhancement usually has no radial gradient (while velocity dispersion is highly dependent on radius) suggesting that alpha-enhancement has no role in the internal Mg--$\sigma$ relation. 
 
 		\subsubsection{Global relation}
-			Using an aperture with a radius of 2 arcsec on each dataset, we find a global linear gradient of $2.7\pm1.9 \mathrm{\AA \, log(km s^{-1})^{-1}}$. This is consistent with the gradient found by \citet{Ziegler1997} for a sample of elliptical galaxies within Virgo and Coma using data from \citet{Dressler1987}. However, figure \ref{fig:globalMg} shows there is an considerable offset of $\approx0.75\AA$ between our best-fitting line (solid line) and the best-fitting line (dashed line) from \citet{Ziegler1997}. Individual measurements for each galaxy is given in table \ref{tab:globalMg}.
+			Using an aperture with a radius of 2 arcsec on each dataset, we find a global linear gradient of $2.7\pm1.9 \mathrm{\AA \, log(km s^{-1})^{-1}}$. This is consistent with the gradient found by \citet{Ziegler1997} for a sample of elliptical galaxies within Virgo and Coma using data from \citet{Dressler1987}. However, figure \ref{fig:globalMg} shows there is an considerable offset of $\approx0.75\,\mathrm{\AA}$ between our best-fitting line (solid line) and the best-fitting line (dashed line) from \citet{Ziegler1997}. Individual measurements for each galaxy is given in table \ref{tab:globalMg}.
 			%%no uncertainties quoted in Dressler1987 so comparison is meaningless.
 			%NGC 1399 was observed by \citet{Dressler1987}, but measures Mg$_2$ instead of Mg$_b$. In order to compare we make use of the linear conversion (eq. 1 in \citet{Ziegler1997}):
 			% \begin{equation}
@@ -430,8 +434,8 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 			% Using this gives that \citet{Dressler1987} measured NGC 1399 to have a Mg$_b$ strength of 5.175 and a velocity dispersion of 299.9 km s$^{-1}$, however \citet{Dressler1987} does not quote uncertainties for their values so it is difficult to make comparisons. 
 
 			\begin{table}
-			\begin{threeparttable}
 				\centering
+			\begin{threeparttable}
 				\caption{The Mg$_b$ index and velocity dispersion within 2 arcsec.}
 				\label{tab:globalMg}
 				\begin{tabular}{l c c}
@@ -451,7 +455,8 @@ With the advent of the integral field spectroscopy (IFS), we can now investigate
 					NGC 3557 	& $4.15 \pm 0.03$ & $280.4 \pm 0.9$ \\
 					NGC 7075 	& $4.45 \pm 0.07$ & $258.7 \pm 1.9$ \\
 					PKS 718-34  & -- 		      & $258.7 \pm 1.9$ \\
-					\hline \\
+					\hline
+					\hline
 				\end{tabular}
 				\begin{tablenotes}
 				\footnotesize
