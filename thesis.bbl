@@ -118,8 +118,8 @@ Blumenthal G.~R.,  Faber S.~M.,  Primack J.~R.,   Rees M.~J.,  1984, \mn@doi
 Bond J.~R.,  Szalay A.~S.,   Turner M.~S.,  1982, \mn@doi [Physical Review
   Letters] {10.1103/PhysRevLett.48.1636}, 48, 1636
 
-\bibitem[\protect\citeauthoryear{Bondi \& H.}{Bondi \& H.}{1952}]{Bondi1952}
-Bondi H.,  H. 1952, \mn@doi [Monthly Notices of the Royal Astronomical Society]
+\bibitem[\protect\citeauthoryear{Bondi}{Bondi}{1952}]{Bondi1952}
+Bondi H.,  1952, \mn@doi [Monthly Notices of the Royal Astronomical Society]
   {10.1093/mnras/112.2.195}, 112, 195
 
 \bibitem[\protect\citeauthoryear{Bower, Benson, Malbon, Helly, Frenk, Baugh,
@@ -268,13 +268,13 @@ Faber S.~M.,  Friel E.~D.,  Burstein D.,   Gaskell C.~M.,  1985, \mn@doi [The
 Faber S.~M.,  et~al., 1997, \mn@doi [Astronomical Journal v.114, p.1771]
   {10.1086/118606}, 114, 1771
 
+\bibitem[\protect\citeauthoryear{Fabian}{Fabian}{1999}]{Fabian1999}
+Fabian A.~C.,  1999, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1046/j.1365-8711.1999.03017.x}, 308, L39
+
 \bibitem[\protect\citeauthoryear{Fabian}{Fabian}{2012}]{Fabian2012}
 Fabian A.,  2012, \mn@doi [Annual Review of Astronomy and Astrophysics]
   {10.1146/annurev-astro-081811-125521}, 50, 455
-
-\bibitem[\protect\citeauthoryear{Fabian \& C.}{Fabian \& C.}{1999}]{Fabian1999}
-Fabian A.~C.,  C. A.,  1999, \mn@doi [Monthly Notices of the Royal Astronomical
-  Society] {10.1046/j.1365-8711.1999.03017.x}, 308, L39
 
 \bibitem[\protect\citeauthoryear{Fabian, Sanders, Allen, Crawford, Iwasawa,
   Johnstone, Schmidt  \& Taylor}{Fabian et~al.}{2003}]{Fabian2003}
@@ -344,10 +344,9 @@ Fogarty L. M.~R.,  et~al., 2015, \mn@doi [Monthly Notices of the Royal
 Forman W.,  et~al., 2007, \mn@doi [The Astrophysical Journal] {10.1086/519480},
   665, 1057
 
-\bibitem[\protect\citeauthoryear{Gadotti \& A.}{Gadotti \&
-  A.}{2009}]{Gadotti2009}
-Gadotti D.~A.,  A. D.,  2009, \mn@doi [Monthly Notices of the Royal
-  Astronomical Society] {10.1111/j.1365-2966.2008.14257.x}, 393, 1531
+\bibitem[\protect\citeauthoryear{Gadotti}{Gadotti}{2009}]{Gadotti2009}
+Gadotti D.~A.,  2009, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1111/j.1365-2966.2008.14257.x}, 393, 1531
 
 \bibitem[\protect\citeauthoryear{Gebhardt et~al.,}{Gebhardt
   et~al.}{2000}]{Gebhardt2000}
@@ -383,10 +382,9 @@ Graham J.,  Fabian A.~C.,   Sanders J.~S.,  2008, \mn@doi [Monthly Notices of
 Granato G.~L.,  {De Zotti} G.,  Silva L.,  Bressan A.,   Danese L.,  2004,
   \mn@doi [The Astrophysical Journal] {10.1086/379875}, 600, 580
 
-\bibitem[\protect\citeauthoryear{Gudehus \& H.}{Gudehus \&
-  H.}{1973}]{Gudehus1973}
-Gudehus D.~H.,  H. D.,  1973, \mn@doi [The Astronomical Journal]
-  {10.1086/111459}, 78, 583
+\bibitem[\protect\citeauthoryear{Gudehus}{Gudehus}{1973}]{Gudehus1973}
+Gudehus D.~H.,  1973, \mn@doi [The Astronomical Journal] {10.1086/111459}, 78,
+  583
 
 \bibitem[\protect\citeauthoryear{Gull \& Northover}{Gull \&
   Northover}{1973}]{Gull1973}
@@ -667,10 +665,9 @@ Oser L.,  Ostriker J.~P.,  Naab T.,  Johansson P.~H.,   Burkert A.,  2010,
 \bibitem[\protect\citeauthoryear{Page et~al.,}{Page et~al.}{2012}]{Page2012}
 Page M.~J.,  et~al., 2012, \mn@doi [Nature] {10.1038/nature11096}, 485, 213
 
-\bibitem[\protect\citeauthoryear{Peebles \& E.}{Peebles \&
-  E.}{1982}]{Peebles1982}
-Peebles P. J.~E.,  E. P.~J.,  1982, \mn@doi [The Astrophysical Journal]
-  {10.1086/183911}, 263, L1
+\bibitem[\protect\citeauthoryear{Peebles}{Peebles}{1982}]{Peebles1982}
+Peebles P. J.~E.,  1982, \mn@doi [The Astrophysical Journal] {10.1086/183911},
+  263, L1
 
 \bibitem[\protect\citeauthoryear{Pinkney et~al.,}{Pinkney
   et~al.}{2003}]{Pinkney2003}
@@ -816,9 +813,8 @@ Scannapieco C.,  et~al., 2012, \mn@doi [Monthly Notices of the Royal
 Schiavon R.~P.,  Rose J.~A.,  Courteau S.,   MacArthur L.~A.,  2005, \mn@doi
   [The Astrophysical Journal Supplement Series] {10.1086/431148}, 160, 163
 
-\bibitem[\protect\citeauthoryear{Sellwood \& A.}{Sellwood \&
-  A.}{2014}]{Sellwood2014}
-Sellwood J.~A.,  A. J.,  2014, \mn@doi [Reviews of Modern Physics]
+\bibitem[\protect\citeauthoryear{Sellwood}{Sellwood}{2014}]{Sellwood2014}
+Sellwood J.~A.,  2014, \mn@doi [Reviews of Modern Physics]
   {10.1103/RevModPhys.86.1}, 86, 1
 
 \bibitem[\protect\citeauthoryear{Sijacki \& Springel}{Sijacki \&

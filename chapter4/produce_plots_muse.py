@@ -160,7 +160,10 @@ def plot(galaxies, str_galaxies, file_name):
 		fig.text(0.07, 0.5, str_galaxies[0], va='center', ha='right', 
 			rotation='vertical', size='xx-large')
 	if len(galaxies) == 2:
-		raise ValueError('Not yet coded in location of galaxy labels')
+		fig.text(0.07, 0.7, str_galaxies[0], va='center', ha='right', 
+			rotation='vertical', size='xx-large')
+		fig.text(0.07, 0.3, str_galaxies[1], va='center', ha='right', 
+			rotation='vertical', size='xx-large')
 	if len(galaxies) == 3:
 		fig.text(0.07, 0.755, str_galaxies[0], va='center', ha='right', 
 			rotation='vertical', size='xx-large')
@@ -176,7 +179,6 @@ def plot(galaxies, str_galaxies, file_name):
 
 
 if __name__=='__main__':
-	plot(['ic1459', 'ic4296', 'ngc1316'], 
-		['IC 1459', 'IC 4296', 'NGC 1316'], 'kin1')
+	plot(['ic1459', 'ic4296'], ['IC 1459', 'IC 4296'], 'kin1')
 
-	plot(['ngc1399'], ['NGC 1399'], 'kin2')
+	plot(['ngc1316', 'ngc1399'], ['NGC 1316', 'NGC 1399'], 'kin2')

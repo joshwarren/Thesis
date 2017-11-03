@@ -87,7 +87,7 @@ def plot(galaxies, str_galaxies, file_name):
 		# Flux
 		axs[2*i,0] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 			D.xBar, D.yBar, D.flux, header,  
-			vmin=vmin[attr==plots[0]], vmax=vmax[attr==plots[0]], 
+			# vmin=vmin[attr==plots[0]], vmax=vmax[attr==plots[0]], 
 			cmap='gist_yarg', flux_unbinned=D.unbinned_flux, 
 			# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 			ax=axs[2*i,0])
@@ -106,6 +106,7 @@ def plot(galaxies, str_galaxies, file_name):
 		if galaxy == 'ngc0612':
 			vmin_vel, vmax_vel = set_lims(D.components['stellar'].plot['vel'],
 				symmetric=True, n_std=5)
+			print 'NGC 612 velocity scale:', vmin_vel,'km/s to ', vmax_vel, 'km/s'
 		else:
 			vmin_vel=vmin[attr==plots[1]]
 			vmax_vel=vmax[attr==plots[1]], 
@@ -171,7 +172,10 @@ def plot(galaxies, str_galaxies, file_name):
 		fig.text(0.07, 0.5, str_galaxies[0], va='center', ha='right', 
 			rotation='vertical', size='xx-large')
 	if len(galaxies) == 2:
-		raise ValueError('Not yet coded in location of galaxy labels')
+		fig.text(0.07, 0.7, str_galaxies[0], va='center', ha='right', 
+			rotation='vertical', size='xx-large')
+		fig.text(0.07, 0.3, str_galaxies[1], va='center', ha='right', 
+			rotation='vertical', size='xx-large')
 	if len(galaxies) == 3:
 		fig.text(0.07, 0.755, str_galaxies[0], va='center', ha='right', 
 			rotation='vertical', size='xx-large')
@@ -187,13 +191,14 @@ def plot(galaxies, str_galaxies, file_name):
 
 
 if __name__=='__main__':
-	plot(['eso443-g024', 'ic1459', 'ic1531'], 
-		['ESO 443-G24', 'IC 1459', 'IC 1531'], 'kin1')
+	plot(['eso443-g024', 'ic1459'], 
+		['ESO 443-G24', 'IC 1459'], 'kin1')
 
-	plot(['ic4296', 'ngc1399', 'ngc3100'], 
-		['IC 4296', 'NGC 1399', 'NGC 3100'], 'kin2')
+	plot(['ic1531', 'ic4296', 'ngc1399'], 
+		[' IC 1531', 'IC 4296', 'NGC 1399'], 'kin2')
 
-	plot(['ngc3557', 'ngc7075', 'pks0718-34'], 
-		['NGC 3557', 'NGC 7075', 'PKS 718-34'], 'kin3')
+	plot(['ngc3100', 'ngc3557', 'ngc7075'], 
+		['NGC 3100', 'NGC 3557', 'NGC 7075'], 'kin3')
 
-	plot(['ngc0612'], ['NGC 612'], 'kin4')
+	plot(['pks0718-34', 'ngc0612'], 
+		['PKS 718-34', 'NGC 612'], 'kin4')
