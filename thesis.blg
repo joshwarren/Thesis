@@ -14,12 +14,14 @@ A level-1 auxiliary file: appendix/appendix1/appendix1.aux
 The style file: mnras.bst
 Database file #1: refs.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--I didn't find a database entry for "Bromm2011"
+Warning--I didn't find a database entry for "Stacy2014"
 Warning--I didn't find a database entry for ""
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 155 entries,
             2881 wiz_defined-function locations,
-            2085 strings with 67368 characters,
+            2089 strings with 67404 characters,
 and the built_in function-call counts, 71637 in all, are:
 = -- 6143
 > -- 5121
@@ -58,4 +60,4 @@ warning$ -- 0
 while$ -- 1155
 width$ -- 0
 write$ -- 1562
-(There was 1 warning)
+(There were 3 warnings)
