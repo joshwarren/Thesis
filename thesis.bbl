@@ -17,5 +17,43 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
+\bibitem[\protect\citeauthoryear{Baldwin, Phillips  \& Terlevich}{Baldwin
+  et~al.}{1981}]{Baldwin1981}
+Baldwin J.~A.,  Phillips M.~M.,   Terlevich R.,  1981, PUBLICATIONS OF THE
+  ASTRONOMICAL SOCIETY OF THE PACIFIC, 93
+
+\bibitem[\protect\citeauthoryear{Belfiore et~al.,}{Belfiore
+  et~al.}{2016}]{Belfiore2016a}
+Belfiore F.,  et~al., 2016, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1093/mnras/stw1234}, 461, 3111
+
+\bibitem[\protect\citeauthoryear{Kauffmann et~al.,}{Kauffmann
+  et~al.}{2003}]{Kauffmann2003a}
+Kauffmann G.,  et~al., 2003, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1111/j.1365-2966.2003.07154.x}, 346, 1055
+
+\bibitem[\protect\citeauthoryear{Kewley, Dopita, Sutherland, Heisler  \&
+  Trevena}{Kewley et~al.}{2001}]{Kewley2001}
+Kewley L.~J.,  Dopita M.~A.,  Sutherland R.~S.,  Heisler C.~A.,   Trevena J.,
+  2001, \mn@doi [The Astrophysical Journal] {10.1086/321545}, 556, 121
+
+\bibitem[\protect\citeauthoryear{Kim \& Dong-Woo}{Kim \&
+  Dong-Woo}{1989}]{Kim1989}
+Kim D.-W.,  Dong-Woo 1989, \mn@doi [Astrophysical Journal, Part 1 (ISSN
+  0004-637X), vol. 346, Nov. 15, 1989, p. 653-674. Research supported by NASA.]
+  {10.1086/168048}, 346, 653
+
+\bibitem[\protect\citeauthoryear{Sarzi et~al.,}{Sarzi et~al.}{2005}]{Sarzi2005}
+Sarzi M.,  et~al., 2005, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1111/j.1365-2966.2005.09839.x}, 366, 1151
+
+\bibitem[\protect\citeauthoryear{Sarzi et~al.,}{Sarzi et~al.}{2010}]{Sarzi2010}
+Sarzi M.,  et~al., 2010, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1111/j.1365-2966.2009.16039.x}, 402, 2187
+
+\bibitem[\protect\citeauthoryear{Singh et~al.,}{Singh et~al.}{2013}]{Singh2013}
+Singh R.,  et~al., 2013, \mn@doi [Astronomy {\&} Astrophysics]
+  {10.1051/0004-6361/201322062}, 558, A43
+
 \makeatother
 \end{thebibliography}
