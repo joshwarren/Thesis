@@ -128,6 +128,11 @@ Brinchmann J.,  Charlot S.,  White S. D.~M.,  Tremonti C.,  Kauffmann G.,
   Heckman T.,   Brinkmann J.,  2003, \mn@doi [Monthly Notices of the Royal
   Astronomical Society] {10.1111/j.1365-2966.2004.07881.x}, 351, 1151
 
+\bibitem[\protect\citeauthoryear{Bromm \& Yoshida}{Bromm \&
+  Yoshida}{2011}]{Bromm2011}
+Bromm V.,  Yoshida N.,  2011, \mn@doi [Annual Review of Astronomy and
+  Astrophysics] {10.1146/annurev-astro-081710-102608}, 49, 373
+
 \bibitem[\protect\citeauthoryear{Bryant et~al.,}{Bryant
   et~al.}{2014}]{Bryant2014}
 Bryant J.~J.,  et~al., 2014, \mn@doi [Monthly Notices of the Royal Astronomical
@@ -216,6 +221,10 @@ Croton D.~J.,  et~al., 2006, \mn@doi [Monthly Notices of the Royal Astronomical
   Matteo} et~al.}{2005}]{DiMatteo2005}
 {Di Matteo} T.,  Springel V.,   Hernquist L.,  2005, \mn@doi [Nature]
   {10.1038/nature03335}, 433, 604
+
+\bibitem[\protect\citeauthoryear{Ekers et~al.,}{Ekers et~al.}{1989}]{Ekers1989}
+Ekers R.~D.,  et~al., 1989, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1093/mnras/236.4.737}, 236, 737
 
 \bibitem[\protect\citeauthoryear{Emsellem et~al.,}{Emsellem
   et~al.}{2011}]{Emsellem2011}
@@ -723,6 +732,11 @@ Somerville R.~S.,  Hopkins P.~F.,  Cox T.~J.,  Robertson B.~E.,   Hernquist L.,
   et~al.}{2005}]{Springel2005}
 Springel V.,  {Di Matteo} T.,   Hernquist L.,  2005, \mn@doi [The Astrophysical
   Journal] {10.1086/428772}, 620, L79
+
+\bibitem[\protect\citeauthoryear{Stacy \& Bromm}{Stacy \&
+  Bromm}{2014}]{Stacy2014}
+Stacy A.,  Bromm V.,  2014, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637X/785/1/73}, 785, 73
 
 \bibitem[\protect\citeauthoryear{Stark}{Stark}{1977}]{Stark1977}
 Stark A.~A.,  1977, \mn@doi [The Astrophysical Journal] {10.1086/155164}, 213,
