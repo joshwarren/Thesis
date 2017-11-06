@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2016/Cygwin)
+This is BibTeX, Version 0.99d (TeX Live 2017/Cygwin)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: acknowledgements/dedication.aux
@@ -6,54 +6,54 @@ A level-1 auxiliary file: acknowledgements/acknowledgements.aux
 A level-1 auxiliary file: abstract/abstract.aux
 A level-1 auxiliary file: introduction/introduction.aux
 A level-1 auxiliary file: chapter2/chapter2.aux
-A level-1 auxiliary file: chapter3/chapter3.aux
 A level-1 auxiliary file: chapter4/chapter4.aux
 A level-1 auxiliary file: chapter5/chapter5.aux
 A level-1 auxiliary file: conclusions/conclusions.aux
 A level-1 auxiliary file: appendix/appendix1/appendix1.aux
 The style file: mnras.bst
+I found no \citation commands---while reading file thesis.aux
 Database file #1: refs.bib
-Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 151 entries,
+You've used 0 entries,
             2881 wiz_defined-function locations,
-            2073 strings with 68709 characters,
-and the built_in function-call counts, 70101 in all, are:
-= -- 5975
-> -- 5060
-< -- 322
-+ -- 2160
-- -- 748
-* -- 8588
-:= -- 10970
+            726 strings with 6111 characters,
+and the built_in function-call counts, 39 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 0
+:= -- 9
 add.period$ -- 0
-call.type$ -- 151
-change.case$ -- 302
-chr.to.int$ -- 149
-cite$ -- 151
-duplicate$ -- 3370
-empty$ -- 3330
-format.name$ -- 1292
-if$ -- 12206
-int.to.chr$ -- 3
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 152
-newline$ -- 467
-num.names$ -- 1022
-pop$ -- 600
+missing$ -- 0
+newline$ -- 13
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 604
+purify$ -- 0
 quote$ -- 0
-skip$ -- 2046
+skip$ -- 1
 stack$ -- 0
-substring$ -- 4215
-swap$ -- 1616
-text.length$ -- 604
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1356
+type$ -- 0
 warning$ -- 0
-while$ -- 1119
+while$ -- 0
 width$ -- 0
-write$ -- 1522
+write$ -- 12
+(There was 1 error message)
