@@ -88,9 +88,14 @@ def plot(galaxies, str_galaxies, file_name):
 			]
 
 		for j, p in enumerate(plots):
+			if 'TiO' in p:
+				vmax = 0.35
+			else:
+				vmax = 9
+
 			axs2[j, 2*i] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 				D.xBar, D.yBar, eval('D.'+p), header,  
-				vmin=vmin[attr==p], vmax=vmax[attr==p], 
+				vmin=0, vmax=vmax, 
 				cmap='gnuplot2', flux_unbinned=D.unbinned_flux, 
 				signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 				ax=axs2[j, 2*i])
@@ -107,9 +112,13 @@ def plot(galaxies, str_galaxies, file_name):
 			]
 
 		for j, p in enumerate(plots):
+			if 'TiO' in p:
+				vmax = 0.03
+			else:
+				vmax = 0.5
 			axs2[j, 2*i+1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 				D.xBar, D.yBar, eval('D.'+p), header,  
-				vmin=vmin[attr==p], vmax=vmax[attr==p], 
+				vmin=0, vmax=vmax, 
 				cmap='gnuplot2', flux_unbinned=D.unbinned_flux, 
 				signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 				ax=axs2[j, 2*i+1])
