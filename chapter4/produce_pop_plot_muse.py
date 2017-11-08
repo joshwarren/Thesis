@@ -86,8 +86,10 @@ def plot(galaxies, str_galaxies, file_name):
 				hist = hist[0]
 				plot[j] = x[np.argmax(hist)]
 
-				gt_fwhm = hist >= np.max(hist)/2
-				unc_plot[j] = np.max(x[gt_fwhm]) - np.min(x[gt_fwhm])
+				unc_plot[j] = np.nanstd(pop)
+
+				# gt_fwhm = hist >= np.max(hist)/2
+				# unc_plot[j] = np.max(x[gt_fwhm]) - np.min(x[gt_fwhm])
 
 		# Age
 		axs[2*i,0] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 

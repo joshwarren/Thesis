@@ -56,7 +56,8 @@ def plot(galaxies, str_galaxies, file_name):
 		col = np.where(file_headings=='SN_%s' % (opt))[0][0]
 		SN_target_gals = np.loadtxt(data_file, 
 			unpack=True, skiprows=1, usecols=(col,))
-		galaxy_gals = np.loadtxt(data_file, skiprows=1, usecols=(0,),dtype=str)
+		galaxy_gals = np.loadtxt(data_file, skiprows=1, usecols=(0,),
+			dtype=str)
 		i_gal = np.where(galaxy_gals==galaxy)[0][0]
 		SN_target=SN_target_gals[i_gal]
 
@@ -87,7 +88,7 @@ def plot(galaxies, str_galaxies, file_name):
 		# Flux
 		axs[2*i,0] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 			D.xBar, D.yBar, D.flux, header,  
-			vmin=vmin[attr==plots[0]], vmax=vmax[attr==plots[0]], 
+			# vmin=vmin[attr==plots[0]], vmax=vmax[attr==plots[0]], 
 			cmap='gist_yarg', flux_unbinned=D.unbinned_flux, 
 			# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 			ax=axs[2*i,0])
@@ -98,11 +99,20 @@ def plot(galaxies, str_galaxies, file_name):
 		axs[2*i+1,0].remove()
 
 		# Velocity
-		axs[2*i,1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
-			D.xBar, D.yBar, D.components['stellar'].plot['vel'], header, 
-			vmin=vmin[attr==plots[1]], vmax=vmax[attr==plots[1]], cmap=sauron, 
-			flux_unbinned=D.unbinned_flux, signal_noise=D.SNRatio, 
-			signal_noise_target=SN_target, ax=axs[2*i,1])
+		if galaxy == 'ngc1399':
+			axs[2*i,1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
+				D.xBar, D.yBar, D.components['stellar'].plot['vel']-20, 
+				header, vmin=vmin[attr==plots[1]], vmax=vmax[attr==plots[1]], 
+				cmap=sauron, flux_unbinned=D.unbinned_flux, 
+				signal_noise=D.SNRatio, signal_noise_target=SN_target, 
+				ax=axs[2*i,1])
+		else:
+			axs[2*i,1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
+				D.xBar, D.yBar, D.components['stellar'].plot['vel'], header, 
+				vmin=vmin[attr==plots[1]], vmax=vmax[attr==plots[1]], 
+				cmap=sauron, flux_unbinned=D.unbinned_flux, 
+				signal_noise=D.SNRatio, signal_noise_target=SN_target, 
+				ax=axs[2*i,1])
 		if overplot:
 			for o, color in overplot.iteritems():
 				add_(o, color, axs[2*i,1], galaxy, nolegend=True)

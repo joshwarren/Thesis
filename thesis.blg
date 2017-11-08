@@ -4,7 +4,11 @@ The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: acknowledgements/dedication.aux
 A level-1 auxiliary file: acknowledgements/acknowledgements.aux
 A level-1 auxiliary file: abstract/abstract.aux
-A level-1 auxiliary file: introduction/introduction.aux
+I couldn't open auxiliary file introduction/introduction.aux
+---line 22 of file thesis.aux
+ : \@input{introduction/introduction.aux
+ :                                      }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: chapter2/chapter2.aux
 I couldn't open auxiliary file chapter3/chapter3.aux
 ---line 24 of file thesis.aux
@@ -16,51 +20,48 @@ A level-1 auxiliary file: chapter5/chapter5.aux
 A level-1 auxiliary file: conclusions/conclusions.aux
 A level-1 auxiliary file: appendix/appendix1/appendix1.aux
 The style file: mnras.bst
-Reallocated field_info (elt_size=4) to 10022 items from 5000.
 Database file #1: refs.bib
-Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Warning--I didn't find a database entry for "Veale2016"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 185 entries,
+You've used 40 entries,
             2881 wiz_defined-function locations,
-            2330 strings with 80827 characters,
-and the built_in function-call counts, 86105 in all, are:
-= -- 7313
-> -- 6270
-< -- 382
-+ -- 2666
-- -- 946
-* -- 10570
-:= -- 13532
+            1090 strings with 24195 characters,
+and the built_in function-call counts, 18723 in all, are:
+= -- 1552
+> -- 1415
+< -- 66
++ -- 601
+- -- 222
+* -- 2339
+:= -- 2960
 add.period$ -- 0
-call.type$ -- 185
-change.case$ -- 370
-chr.to.int$ -- 183
-cite$ -- 185
-duplicate$ -- 4122
-empty$ -- 4080
-format.name$ -- 1568
-if$ -- 14976
-int.to.chr$ -- 3
+call.type$ -- 40
+change.case$ -- 80
+chr.to.int$ -- 40
+cite$ -- 40
+duplicate$ -- 889
+empty$ -- 880
+format.name$ -- 344
+if$ -- 3228
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 186
-newline$ -- 569
-num.names$ -- 1244
-pop$ -- 744
+missing$ -- 40
+newline$ -- 133
+num.names$ -- 264
+pop$ -- 168
 preamble$ -- 1
-purify$ -- 740
+purify$ -- 160
 quote$ -- 0
-skip$ -- 2494
+skip$ -- 528
 stack$ -- 0
-substring$ -- 5189
-swap$ -- 1946
-text.length$ -- 740
+substring$ -- 1094
+swap$ -- 414
+text.length$ -- 160
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1662
+type$ -- 360
 warning$ -- 0
-while$ -- 1377
+while$ -- 292
 width$ -- 0
-write$ -- 1862
-(There was 1 error message)
+write$ -- 412
+(There were 2 error messages)
