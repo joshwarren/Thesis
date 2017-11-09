@@ -8,5 +8,9 @@
 \contentsline {subsection}{\numberline {4.1.2}Gas Masses}{5}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}Ionised Gas Kinematics}{7}{section.4.2}
 \contentsline {section}{\numberline {4.3}Sources of Ionising Potential}{7}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}[\text {N\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {ii}}}] to [\text {N{i}\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {]}}} Ratio in MUSE Data}{10}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}BPT Diagnostic Plots}{12}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}MEx Diagnostic Plots}{12}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}WHaN2 and WHbN1 Plots}{12}{subsection.4.3.4}
 \contentsline {chapter}{\numberline {5}Discussion and Conclusion}{5}{chapter.5}
-\contentsline {chapter}{Bibliography}{6}{section.4.3}
+\contentsline {chapter}{Bibliography}{6}{subsection.4.3.4}

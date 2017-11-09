@@ -19,8 +19,8 @@
 
 \bibitem[\protect\citeauthoryear{Baldwin, Phillips  \& Terlevich}{Baldwin
   et~al.}{1981}]{Baldwin1981}
-Baldwin J.~A.,  Phillips M.~M.,   Terlevich R.,  1981, PUBLICATIONS OF THE
-  ASTRONOMICAL SOCIETY OF THE PACIFIC, 93
+Baldwin J.~A.,  Phillips M.~M.,   Terlevich R.,  1981, Publications of the
+  Astronomical Society of the Pacific, 93
 
 \bibitem[\protect\citeauthoryear{Belfiore et~al.,}{Belfiore
   et~al.}{2016}]{Belfiore2016a}
@@ -43,6 +43,10 @@ Kim D.-W.,  Dong-Woo 1989, \mn@doi [Astrophysical Journal, Part 1 (ISSN
   0004-637X), vol. 346, Nov. 15, 1989, p. 653-674. Research supported by NASA.]
   {10.1086/168048}, 346, 653
 
+\bibitem[\protect\citeauthoryear{Netzer}{Netzer}{1975}]{Netzer1975}
+Netzer H.,  1975, \mn@doi [Monthly Notices of the Royal Astronomical Society]
+  {10.1093/mnras/171.2.395}, 171, 395
+
 \bibitem[\protect\citeauthoryear{Sarzi et~al.,}{Sarzi et~al.}{2005}]{Sarzi2005}
 Sarzi M.,  et~al., 2005, \mn@doi [Monthly Notices of the Royal Astronomical
   Society] {10.1111/j.1365-2966.2005.09839.x}, 366, 1151
@@ -51,9 +55,17 @@ Sarzi M.,  et~al., 2005, \mn@doi [Monthly Notices of the Royal Astronomical
 Sarzi M.,  et~al., 2010, \mn@doi [Monthly Notices of the Royal Astronomical
   Society] {10.1111/j.1365-2966.2009.16039.x}, 402, 2187
 
+\bibitem[\protect\citeauthoryear{Shields}{Shields}{1974}]{Shields1974}
+Shields G.~A.,  1974, \mn@doi [The Astrophysical Journal] {10.1086/152969},
+  191, 309
+
 \bibitem[\protect\citeauthoryear{Singh et~al.,}{Singh et~al.}{2013}]{Singh2013}
 Singh R.,  et~al., 2013, \mn@doi [Astronomy {\&} Astrophysics]
   {10.1051/0004-6361/201322062}, 558, A43
+
+\bibitem[\protect\citeauthoryear{Wampler}{Wampler}{1968}]{Wampler1968}
+Wampler E.~J.,  1968, \mn@doi [The Astrophysical Journal] {10.1086/180267},
+  154, L53
 
 \makeatother
 \end{thebibliography}
