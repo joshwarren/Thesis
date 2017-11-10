@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Cygwin) (preloaded format=pdflatex 2017.5.16)  13 OCT 2017 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Cygwin) (preloaded format=pdflatex 2017.10.31)  10 NOV 2017 18:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
-LaTeX2e <2017/01/01> patch level 3
-Babel <3.9r> and hyphenation patterns for 3 language(s) loaded.
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 3 language(s) loaded.
 (./ociamthesis.cls
 Document Class: ociamthesis 2010/11/22 v2.2 OCIAM thesis class
 (/usr/share/texmf-dist/tex/latex/base/report.cls
@@ -31,7 +31,7 @@ Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 ) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
@@ -242,7 +242,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 ) (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2017/02/22 v2.0g Standard LaTeX package
+Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
 (textcomp)               4 = 5 + \texteuro
@@ -345,16 +345,9 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \extratabsurround=\skip49
 \backup@length=\skip50
 ) (./thesis.aux (./acknowledgements/dedication.aux) (./acknowledgements/acknowl
-edgements.aux) (./abstract/abstract.aux) (./introduction/introduction.aux
-
-LaTeX Warning: Label `fig:MassRe' multiply defined.
-
-) (./chapter2/chapter2.aux
-
-LaTeX Warning: Label `fig:MassRe' multiply defined.
-
-) (./chapter4/chapter4.aux) (./chapter5/chapter5.aux) (./conclusions/conclusion
-s.aux) (./appendix/appendix1/appendix1.aux))
+edgements.aux) (./abstract/abstract.aux) (./introduction/introduction.aux) (./c
+hapter2/chapter2.aux) (./chapter4/chapter4.aux) (./chapter5/chapter5.aux) (./co
+nclusions/conclusions.aux) (./appendix/appendix1/appendix1.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
@@ -439,7 +432,7 @@ erthousand on input line 47.
 LaTeX Info: Redefining \ohm on input line 47.
 Package gensymb Info: Using \textohm for \ohm on input line 47.
 Package gensymb Info: Using \textmu for \micro on input line 47.
-<oxlogo.png, id=24, 120.9318pt x 140.2038pt>
+<oxlogo.png, id=87, 120.9318pt x 140.2038pt>
 File: oxlogo.png Graphic file (type png)
 <use oxlogo.png>
 Package pdftex.def Info: oxlogo.png used on input line 59.
@@ -449,28 +442,28 @@ Package pdftex.def Info: oxlogo.png used on input line 59.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./oxlogo.png>] (./thesis.t
 oc
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2
-
-
-
-
-
-])
+))
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
-[3] (./thesis.lof)
+[2
+
+
+
+
+
+] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
-[4
+[3
 
 ]
 \openout2 = `chapter2/chapter2.aux'.
@@ -478,37 +471,648 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (./chapter2/chapter2.tex
 Chapter 2.
 
-Underfull \hbox (badness 2735) in paragraph at lines 15--15
-[][][]\OT1/cmr/m/sc/10 IDL \OT1/cmr/m/n/10 and \OT1/cmr/m/sc/10 Python \OT1/cmr
-/m/n/10 rou-tines for \OT1/cmr/m/sc/10 voronoi[]2d[]binning \OT1/cmr/m/n/10 can
- be found at http://www-
- []
+LaTeX Warning: Reference `subsec:reduct' on page 2 undefined on input line 14.
 
-
-LaTeX Warning: Reference `sec:skysubtractions' on page 27 undefined on input li
-ne 15.
-
-
-LaTeX Warning: Reference `fig:egSNR' on page 27 undefined on input line 15.
-
-[27
+[2
 
 
 
 
-] <chapter2/egSNR.png, id=131, 906.0249pt x 830.8641pt>
+]
+
+LaTeX Warning: Command \r invalid in math mode on input line 22.
+
+
+LaTeX Warning: Reference `subsec:MUSE' on page 3 undefined on input line 48.
+
+[3]
+
+LaTeX Warning: Reference `sec:skysubtractions' on page 4 undefined on input lin
+e 74.
+
+
+LaTeX Warning: Reference `fig:egSNR' on page 4 undefined on input line 74.
+
+[4] <chapter2/egSNR.png, id=185, 906.0249pt x 830.8641pt>
 File: chapter2/egSNR.png Graphic file (type png)
 <use chapter2/egSNR.png>
-Package pdftex.def Info: chapter2/egSNR.png used on input line 20.
+Package pdftex.def Info: chapter2/egSNR.png used on input line 80.
 (pdftex.def)             Requested size: 260.17464pt x 238.58632pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 [][][]\OT1/cmr/m/sc/10 IDL \OT1/cmr/m/n/10 and \OT1/cmr/m/sc/10 Python \OT1/cmr
 /m/n/10 rou-tines for \OT1/cmr/m/sc/10 ppxf \OT1/cmr/m/n/10 can be found at htt
 p://www-
  []
 
-[28 <./chapter2/egSNR.png>]) [29] (./thesis.bbl [32
+[5 <./chapter2/egSNR.png>]
+
+LaTeX Warning: Reference `tab:sample' on page 6 undefined on input line 92.
+
+[6]
+
+! LaTeX Error: Environment threeparttable undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121 	 	\begin{threeparttable}
+                               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.129 	 		[\ion
+               {O}{ii}] 	& 3726.03 & 3728.82 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \ion 
+                {O}{iii}
+l.133 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.133 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.133 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing = inserted for \ifdim.
+<to be read again> 
+                   {
+l.133 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.133 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.133 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \unskip 
+l.133 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \unskip 
+l.133 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \ion 
+                {O}{iii}
+l.133 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.133 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.133 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \ion 
+                {N}{i}
+l.134 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.134 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.134 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing = inserted for \ifdim.
+<to be read again> 
+                   {
+l.134 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.134 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.134 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \unskip 
+l.134 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \unskip 
+l.134 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \ion 
+                {N}{i}
+l.134 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.134 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.134 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \ion 
+                {O}{i}
+l.135 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.135 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.135 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing = inserted for \ifdim.
+<to be read again> 
+                   {
+l.135 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.135 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.135 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \unskip 
+l.135 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \unskip 
+l.135 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \ion 
+                {O}{i}
+l.135 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.135 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.135 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \ion 
+                {N}{ii}
+l.136 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.136 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.136 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing = inserted for \ifdim.
+<to be read again> 
+                   {
+l.136 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.136 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.136 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \unskip 
+l.136 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \unskip 
+l.136 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \ion 
+                {N}{ii}
+l.136 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.136 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.136 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \ion 
+                {S}{ii}
+l.138 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.138 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.138 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing = inserted for \ifdim.
+<to be read again> 
+                   {
+l.138 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.138 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.138 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \unskip 
+l.138 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \unskip 
+l.138 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \ion 
+                {S}{ii}
+l.138 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.138 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.138 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: \begin{table} on input line 119 ended by \end{threeparttable}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.142 	 	\end{threeparttable}
+                             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) [7] [8] (./thesis.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
+[12
 
 
 
@@ -516,11 +1120,6 @@ p://www-
 
 
 ]
-Missing character: There is no Â in font cmr12!
-Missing character: There is no Â in font cmr12!
-[33] [34] [35] [36] [37] [38] [39] [40])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
-[41]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
 (./thesis.aux (./acknowledgements/dedication.aux) (./acknowledgements/acknowled
 gements.aux) (./abstract/abstract.aux) (./introduction/introduction.aux) (./cha
@@ -528,130 +1127,56 @@ pter2/chapter2.aux) (./chapter4/chapter4.aux) (./chapter5/chapter5.aux) (./conc
 lusions/conclusions.aux) (./appendix/appendix1/appendix1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: CFF361E0CEFDC2477E5A88848B6C0503;281.
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: 87F3D74A4540C3EE88DB4CBEE5C4F103;1407
+(rerunfilecheck)             After:  F7BDDF2302FEC6C44C987DBEF548B05C;1144.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
  ) 
 Here is how much of TeX's memory you used:
- 7866 strings out of 494945
- 114220 string characters out of 6181438
- 202144 words of memory out of 5000000
- 10786 multiletter control sequences out of 15000+600000
- 14777 words of font info for 55 fonts, out of 8000000 for 9000
+ 7274 strings out of 494936
+ 103275 string characters out of 6181324
+ 190423 words of memory out of 5000000
+ 10362 multiletter control sequences out of 15000+600000
+ 15253 words of font info for 57 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,8n,30p,1882b,715s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{table.1.3} has been referenced but does not exist
+ 34i,10n,30p,1791b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist
 , replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.11} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.10} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.9} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.8} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.7} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.6} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.5} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.4} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.3} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.2} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.1.1} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.6} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
-replaced by a fixed one
 
 pdfTeX warning (dest): name{chapter.4} has been referenced but does not exist, 
 replaced by a fixed one
 
-pdfTeX warning (dest): name{section.1.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.3.3} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.3.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.3.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.2.3} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.2.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.2.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.1.3} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.1.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.1.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.1} has been referenced but does not exist
-, replaced by a fixed one
+pdfTeX warning (dest): name{chapter.3} has been referenced but does not exist, 
+replaced by a fixed one
 
 pdfTeX warning (dest): name{chapter.1} has been referenced but does not exist, 
 replaced by a fixed one
 
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti12.pfb>
-Output written on thesis.pdf (17 pages, 710753 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-s
+uper/sfrm1200.pfb>
+Output written on thesis.pdf (11 pages, 714026 bytes).
 PDF statistics:
- 633 PDF objects out of 1000 (max. 8388607)
- 594 compressed objects within 6 object streams
- 218 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 318 PDF objects out of 1000 (max. 8388607)
+ 284 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 179 words of extra memory for PDF output out of 10000 (max. 10000000)
 

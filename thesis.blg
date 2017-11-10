@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2016/Cygwin)
+This is BibTeX, Version 0.99d (TeX Live 2017/Cygwin)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: acknowledgements/dedication.aux
@@ -12,49 +12,48 @@ A level-1 auxiliary file: conclusions/conclusions.aux
 A level-1 auxiliary file: appendix/appendix1/appendix1.aux
 The style file: mnras.bst
 Database file #1: refs.bib
-Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--I didn't find a database entry for ""
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 154 entries,
+You've used 11 entries,
             2881 wiz_defined-function locations,
-            2102 strings with 69913 characters,
-and the built_in function-call counts, 71510 in all, are:
-= -- 6101
-> -- 5152
-< -- 334
-+ -- 2198
-- -- 760
-* -- 8749
-:= -- 11185
+            841 strings with 12119 characters,
+and the built_in function-call counts, 5191 in all, are:
+= -- 437
+> -- 358
+< -- 26
++ -- 157
+- -- 48
+* -- 626
+:= -- 794
 add.period$ -- 0
-call.type$ -- 154
-change.case$ -- 308
-chr.to.int$ -- 152
-cite$ -- 154
-duplicate$ -- 3439
-empty$ -- 3396
-format.name$ -- 1322
-if$ -- 12458
-int.to.chr$ -- 3
+call.type$ -- 11
+change.case$ -- 22
+chr.to.int$ -- 11
+cite$ -- 11
+duplicate$ -- 261
+empty$ -- 261
+format.name$ -- 98
+if$ -- 914
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 155
-newline$ -- 476
-num.names$ -- 1046
-pop$ -- 607
+missing$ -- 11
+newline$ -- 46
+num.names$ -- 76
+pop$ -- 46
 preamble$ -- 1
-purify$ -- 616
+purify$ -- 44
 quote$ -- 0
-skip$ -- 2093
+skip$ -- 165
 stack$ -- 0
-substring$ -- 4299
-swap$ -- 1658
-text.length$ -- 616
+substring$ -- 288
+swap$ -- 128
+text.length$ -- 45
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1383
+type$ -- 99
 warning$ -- 0
-while$ -- 1143
+while$ -- 81
 width$ -- 0
-write$ -- 1552
+write$ -- 125
 (There was 1 warning)
