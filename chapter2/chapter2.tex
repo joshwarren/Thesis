@@ -1,26 +1,50 @@
 \chapter{Data Reduction and Analysis}
 	\label{cha:Data}
 % In Section \ref{sec:}, we lay out the the Southern Sample.
+This chapter presents the observations made for this project, of the Southern Sample (as laid out in Section \ref{sec:Sample}) with the VIsable Multi-Object Spectrograph (VIMOS; see Section \ref{sec:VIMOS}). The data-reduction pipeline is laid out in Section \ref{subsec:VIMOSreduction} with a discussion of the data quality, including the artifacts from the VIMOS instrument in Section \ref{subsec:VIMOSartifacts}. Unpublished, archival observations made with the Multi-Unit Spectroscopic Explorer (MUSE) that are also used in this project are described in Section \ref{sec:MUSE}. This includes a discussion of the European Southern Observatory's (ESO's) data-reduction pipeline (Section \ref{subsec:MUSEreduction}). Finally, in Section \ref{sec:analysis}, we describe the data-analysis pipelines, which are used to produce the results presented in Chapters \ref{cha:stellar} and \ref{cha:gas}.  
 
-
-\section{VIMOS}
+\section{The VIsable Multi-Object Spectrograph (VIMOS)}
 	\label{sec:VIMOS}
-	\subsection{The VIsable Multi-Object Spectrograph (VIMOS)}
-	% Details of VIMOS instrument
-		%
-		The sample was observed with the VIsable Multi-Object Spectrograph (VIMOS), mounted on UT3 on the VLT in Paranal \citep{LeFevre2003}, using the new (at the time) HR Blue grism. All observations were taken with a spacial resolution of 0.67". Each object was imaged with a total integration time of $\sim 100$ mins equally spread over three observing blocks. Each block contained all of the necessary calibration images (3 flat fields and 1 He and Ne arc lamp image for wavelength calibration), as well as two science pointings. In addition, VIMOS provides 5 bias images per night. Flux calibrations was done using public Standards provided by ESO of Feige 110.
+	\subsection{The VIMOS Instrument}
+		VIMOS is a fibre-fed, multi-purpose spectrograph mounted on Unit Telescope 3 (UT3) on the ESO Very Large Telescope (VLT) in Paranal, Chile \citep{LeFevre2003}. It can operate in a number of configurations: direct imaging, multi-object spectroscopy (MOS) or integral-field spectroscopy (IFS). For this program, VIMOS was used in IFS mode. 
 
-		%
-		VIMOS has several well known, though not well understood technical issues. These include several low transmission (bad) fibers, strong flexure and large differences in sensitivity across its 4 separate detectors, known as quadrants. These are addressed by a specialist data reduction pipeline as described in Section \ref{subsec:reduct}. 
+		The integral-field unit (IFU) has a field of view of 40 x 40 spatial pixels (spaxels) with a choice of sampling of 0.67" or 0.33". There are 6 available grisms with varying wavelength ranges and spectral resolutions: low- or high-resolution (LR or HR) red; HR orange; or LR, medium resolution (MR) or HR blue. The observations presented in the following Section were taken using the new (at the time) HR Blue grism with a spatial resolution of 0.67". 
+
+% Find quadrant names - on postit notes on uni screen.
+		The field of view of VIMOS is split into 4 quadrants (named in the fits headers, perhaps unhelpful, \_\_\_\_\_\_). The quadrants are run in parallel as independent detectors (it is not possible to use different grisms with different quadrants). %Fibres are arranged along the short direction along the charge-coupling device (CCD) detectors, and the light from each fibre is dispersed by the grism in the other direction.  
+
+		VIMOS has several well known, though not well understood technical issues. These include several low transmission (bad) fibers, strong flexure and large differences in sensitivity across its 4 separate detectors, known as quadrants. These are addressed by a specialist data reduction pipeline as described in Section \ref{subsec:VIMOSreduction} with the a discussion of the resulting data quality in Section \ref{subsec:VIMOSartifacts} (for more detail also see the instrument manual, section 2.8 in current version\footnote{http://www.eso.org/sci/facilities/paranal/instruments/vimos/doc.html}).
 
 	\subsection{Observations with VIMOS}
-	% Details of observations: when, how
+		As stated above, the observations for this project were taken using the IFS mode (with at a spatial resolution of 0.67"), with the blue HR grism. This grism gives a wavelength range of 3700-5520\,\AA\ at a spectral resolution of 0.71\,\AA\,$\mathrm{pix^{-1}}$. 
+
+		The program of observations (ID: 089.B-0632A) ran in service mode during ESO period 89 and 90. Each object was imaged with a total integration time of $\sim 100$ mins equally spread over three observing blocks. Each block contained all of the necessary calibration images (3 continuum lamp (flat field) exposures and 1 He and Ne arc lamp exposure for wavelength calibration), as well as two science pointings. In addition, VIMOS provides 5 bias images per night. Flux calibrations were done using public Standards provided by ESO of Feige 110. A summary of the observations is given in Table \ref{tab:observations}.
+
+		
+
+
 	\subsection{Data Reduction of VIMOS Data}
+		\label{subsec:VIMOSreduction}
+		The data reduction pipeline was produced using \textsc{Py3D}, a suite of programs based on (the \textsc{python} versions of) those developed for Califa \citep{Sanchez2012, Husemann2013} and later updated for VIMOS by \citet{Husemann2014}. \textsc{Py3D} was provided to us by Husemann (personal correspondence) and is (currently) not publicly available. It  makes use of pixel tables in order to track each pixel through the pipeline, with both spectral and spatial resampling only occurring in the final step. This pipeline accounts for many of the known issues with VIMOS such as bad fibers, strong flexure and crosstalk as well as standard reduction procedures for IFS data. A full outline of the reduction is given here.
+
+		A median master bias is created from the five daily bias frames and subtracted from each raw frame. Known low-transmission (bad) fibres and offsets to account for flexure of the instrument due to gravity are taken into account when automatically identifying the fibre positions on the detector. The fibre is then traced along the dispersion axis in the flats. \citet{Husemann2014} finds this to be robust except for a few fibres at the very blue end of the spectrum ($<4300$\,\AA). 
+
+		Since flexure is dependent on position angle of the telescope and rotation of the instrument, the exposures on the source (science exposures) will be affected in a different manner to the flat field exposures. \textsc{Py3D} accounts for the offset of the science exposure to the flat field exposure by tracing the peak fibre position directly on the science exposure at 5 or 6 locations. The offsets are then extrapolated with a second order Legendre polynomial. This corrects for the flexure in the fibre number direction, but flexure also affects the dispersion direction. The effect is estimated by the positions of strong emission lines from the atmosphere (sky lines), however the HR blue only has one sky line at 5199\,\AA. 
+
+
+
+
+
+
+
+
+
+
 		%
-		The data reduction pipeline was produced using \textsc{Py3D}, a suite of programs based on those developed for Califa DR1 \citep{Sanchez2011, Husemann2013} and later updated for VIMOS by \citet{Husemann2014}. This pipeline accounts for many of the known issues with VIMOS such as bad fibers and strong flexure. A brief outline is the additional steps to accounts for these is given below, while detailed descriptions can be found in \citet{Sanchez2011} for the standard reduction steps (bias subtraction, flat-fielding and wavelength and flux calibrations) and \citep{Husemann2014} for the VIMOS specific modifications. 
+		A brief outline is the additional steps to accounts for these is given below, while detailed descriptions can be found in \citet{Sanchez2012} for the standard reduction steps (bias subtraction, flat-fielding and wavelength and flux calibrations) and \citep{Husemann2014} for the VIMOS specific modifications. 
 		\begin{itemize}
-		\item The known bad pixels and flexure offsets are included when completing the wavelength calibration. In testing, this was found to be robust except for the blue end of the spectrum ($\lambda < 4300 \AA$) when using the blue HR grism \citep{Husemann2014}. Indeed, we found that the spectrum below the 4000\AA break was not robust and was therefore discarded.
-		\item Flexure also gives an offset to flat-fielding and while this known to be only up to $\pm0.5$pixels, this is also taken into account.
+		\item The known bad pixels and flexure offsets are included when completing the wavelength calibration. In testing, this was found to be robust except for the blue end of the spectrum ($\lambda < 4300 \AA$) when using the blue HR grism \citep{Husemann2014}. Indeed, we found that the spectrum below the 4000\,\AA\ break was not robust and was therefore discarded.
+		\item Flexure also gives an offset to flat-fielding and while this known to be only up to $\pm0.5$\,pixels, this is also taken into account.
 		\item The dense packing of the fibers onto the CCD means that cross-talk is occurs and is extracted using \citep{Horne1986}. 
 		\end{itemize}
 		All of the above steps are detailed in Section 2.3 in \citet{Husemann2014}.
@@ -34,9 +58,10 @@
 		The variance spectra is propagated throughout the data reduction pipeline to be used a noise input in the analysis (\S \ref{sec:analysis})
 
 	\subsection{Data Quality}
-\section{MUSE}
+		\label{subsec:VIMOSartifacts}
+\section{The Multi-Unit Spectroscopic Explorer (MUSE)}
 	\label{sec:MUSE}
-	\subsection{The Multi-Unit Spectroscopic Explorer (MUSE)}
+	\subsection{The MUSE Instrument}
 		%
 		Four of the sample (IC1459, IC1531, NGC1316 and NGC1399) where found to be in the archive for the Multi-Unit Spectroscopic Explorer (MUSE). NGC1316 and NGC1399 where both observed as mosaics, while IC1459 and IC4296 where observed in single pointing. All were observed in the wide-field mode without adaptive optics. The phase 3 (pre-reduced) data products from ESO were used. 
 
@@ -127,14 +152,14 @@
 	 		Line name 		& Rest wavelength (\AA) & Doublet wavelength (\AA) \\
 	 		\hline
 	 		[\ion{O}{ii}] 	& 3726.03 & 3728.82 \\
-	 		H$\delta$ 		& 4101.76 \\
-	 		H$\gamma$ 		& 4340.47 \\
-	 		H$\beta$ 		& 4861.33 \\
+	 		H$\delta$ 		& 4101.76 & \\
+	 		H$\gamma$ 		& 4340.47 & \\
+	 		H$\beta$ 		& 4861.33 & \\
 	 		[\ion{O}{iii}] 	& 4958.92 & 5006.84 \\
 	 		[\ion{N}{i}] 	& 5199.36 & 5201.86 \\
 	 		[\ion{O}{i}] 	& 6300.30 & 6363.67 \\
 	 		[\ion{N}{ii}] 	& 6548.03 & 6583.41 \\
-	 		H$\alpha$ 		& 6562.30 \\
+	 		H$\alpha$ 		& 6562.30 &\\
 	 		[\ion{S}{ii}] 	& 6716.47 & 6730.85 \\
 	 		\hline
 	 		\hline
