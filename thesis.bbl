@@ -17,6 +17,10 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
+\bibitem[\protect\citeauthoryear{Cappellari}{Cappellari}{2016}]{Cappellari2016a}
+Cappellari M.,  2016, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1093/mnras/stw3020}, 466, 798
+
 \bibitem[\protect\citeauthoryear{Cappellari \& Copin}{Cappellari \&
   Copin}{2003}]{Cappellari2003}
 Cappellari M.,  Copin Y.,  2003, \mn@doi [Monthly Notices of the Royal
@@ -26,12 +30,6 @@ Cappellari M.,  Copin Y.,  2003, \mn@doi [Monthly Notices of the Royal
   Emsellem}{2004}]{Cappellari2004}
 Cappellari M.,  Emsellem E.,  2004, \mn@doi [Publications of the Astronomical
   Society of the Pacific] {10.1086/381875}, 116, 138
-
-\bibitem[\protect\citeauthoryear{Cappellari \& Michele}{Cappellari \&
-  Michele}{2016}]{Cappellari2016a}
-Cappellari M.,  Michele 2016, \mn@doi [Monthly Notices of the Royal
-  Astronomical Society, Volume 466, Issue 1, p.798-811]
-  {10.1093/mnras/stw3020}, 466, 798
 
 \bibitem[\protect\citeauthoryear{Horne \& K.}{Horne \& K.}{1986}]{Horne1986}
 Horne K.,  K. 1986, \mn@doi [Publications of the Astronomical Society of the
@@ -68,9 +66,9 @@ LeFevre O.,  et~al., 2003, in Iye M.,  Moorwood A. F.~M.,  eds, Instrument
 Sanchez-Blazquez P.,  et~al., 2006, \mn@doi [Monthly Notices of the Royal
   Astronomical Society] {10.1111/j.1365-2966.2006.10699.x}, 371, 703
 
-\bibitem[\protect\citeauthoryear{Sanchez et~al.,}{Sanchez
-  et~al.}{2011}]{Sanchez2011}
-Sanchez S.~F.,  et~al., 2011, \mn@doi [Astronomy {\&} Astrophysics]
+\bibitem[\protect\citeauthoryear{S{\'{a}}nchez et~al.,}{S{\'{a}}nchez
+  et~al.}{2012}]{Sanchez2012}
+S{\'{a}}nchez S.~F.,  et~al., 2012, \mn@doi [Astronomy {\&} Astrophysics]
   {10.1051/0004-6361/201117353}, 538, A8
 
 \bibitem[\protect\citeauthoryear{Sarzi et~al.,}{Sarzi et~al.}{2005}]{Sarzi2005}
