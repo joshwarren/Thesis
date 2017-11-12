@@ -20,7 +20,7 @@ def plot(galaxies, str_galaxies, file_name):
 	opt = 'kin'
 	overplot={'CO':'c', 'radio':'r'}
 	Prefig(size=np.array((len(galaxies)*2, 4))*10)
-	fig2, axs2 = plt.subplots(4, len(galaxies)*2)#, sharex=True, sharey=True)
+	fig, axs = plt.subplots(4, len(galaxies)*2)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter4/muse' % (cc.home_dir)
 
 
@@ -93,15 +93,15 @@ def plot(galaxies, str_galaxies, file_name):
 			else:
 				vmax = 9
 
-			axs2[j, 2*i] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
+			axs[j, 2*i] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 				D.xBar, D.yBar, eval('D.'+p), header,  
 				vmin=0, vmax=vmax, 
 				cmap='gnuplot2', flux_unbinned=D.unbinned_flux, 
 				signal_noise=D.SNRatio, signal_noise_target=SN_target, 
-				ax=axs2[j, 2*i])
+				ax=axs[j, 2*i])
 			if overplot:
 				for o, color in overplot.iteritems():
-					add_(o, color, axs2[j, 2*i], galaxy, nolegend=True)
+					add_(o, color, axs[j, 2*i], galaxy, nolegend=True)
 			
 
 		plots = [
@@ -116,48 +116,59 @@ def plot(galaxies, str_galaxies, file_name):
 				vmax = 0.03
 			else:
 				vmax = 0.5
-			axs2[j, 2*i+1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
+			axs[j, 2*i+1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 				D.xBar, D.yBar, eval('D.'+p), header,  
 				vmin=0, vmax=vmax, 
 				cmap='gnuplot2', flux_unbinned=D.unbinned_flux, 
 				signal_noise=D.SNRatio, signal_noise_target=SN_target, 
-				ax=axs2[j, 2*i+1])
+				ax=axs[j, 2*i+1])
 			
 
-	for a in axs2.flatten():
+	for a in axs.flatten():
 		if hasattr(a, 'ax_dis'):
-			a.ax_dis.tick_params(top=True, bottom=True, left=True, right=True, 
-				direction='in', which='both')
+			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
+				right=True, direction='in', which='major', length=20,
+				width=3, labelsize='large')
+			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
+				right=True, direction='in', which='minor', length=10,
+				width=3)
+			a.ax_dis.xaxis.label.set_size(22)
+			a.ax_dis.yaxis.label.set_size(22)
 
 
-	for a in axs2[:,1:].flatten():
+	for a in axs[:,1:].flatten():
 		if hasattr(a, 'ax_dis'): 
 			a.ax_dis.set_yticklabels([])
 			a.ax_dis.set_ylabel('')
 
 
-	for a in axs2[:-1,:].flatten():
+	for a in axs[:-1,:].flatten():
 		if hasattr(a, 'ax_dis'): 
 			a.ax_dis.set_xticklabels([])
 			a.ax_dis.set_xlabel('')
 
 	if len(galaxies) == 1:
-		fig2.text(0.5, 0.9, str_galaxies[0], va='top', ha='center', size='xx-large')
+		fig.text(0.5, 0.9, str_galaxies[0], va='top', ha='center', size='xx-large')
 	elif len(galaxies) == 2:
-		fig2.text(0.33, 0.9, str_galaxies[0], va='top', ha='center', size='xx-large')
-		fig2.text(0.7, 0.9, str_galaxies[1], va='top', ha='center', size='xx-large')
+		fig.text(0.33, 0.9, str_galaxies[0], va='top', ha='center', size='xx-large')
+		fig.text(0.7, 0.9, str_galaxies[1], va='top', ha='center', size='xx-large')
 
-	fig2.text(0.07, 0.8, 'Fe5782', va='center', ha='right',
+	fig.text(0.07, 0.8, 'Fe5782', va='center', ha='right',
 		rotation='vertical', size='xx-large')
-	fig2.text(0.07, 0.6, 'NaD', va='center', ha='right', 
+	fig.text(0.07, 0.6, 'NaD', va='center', ha='right', 
 		rotation='vertical', size='xx-large')
-	fig2.text(0.07, 0.4, 'TiO1', va='center', ha='right',
+	fig.text(0.07, 0.4, 'TiO1', va='center', ha='right',
 		rotation='vertical', size='xx-large')
-	fig2.text(0.07, 0.2, 'TiO2', va='center', ha='right',
+	fig.text(0.07, 0.2, 'TiO2', va='center', ha='right',
 		rotation='vertical', size='xx-large')
 
+	# Add colorbar
+	ax_loc = axs[0,3].get_position()
+	cax = fig.add_axes([0.93, ax_loc.y0, 0.02, ax_loc.height])
+	cbar = plt.colorbar(axs[0,0].cs, cax=cax)
+	cbar.ax.set_yticklabels([])
 
-	fig2.savefig('%s/%sb.png' % (out_dir, file_name), bbox_inches='tight')
+	fig.savefig('%s/%sb.png' % (out_dir, file_name), bbox_inches='tight')
 
 
 

@@ -137,8 +137,15 @@ def plot(galaxies, str_galaxies, file_name):
 
 
 	for a in axs.flatten():
-		a.ax_dis.tick_params(top=True, bottom=True, left=True, right=True, 
-			direction='in', which='both')
+		if hasattr(a, 'ax_dis'):
+			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
+				right=True, direction='in', which='major', length=20,
+				width=3, labelsize='large')
+			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
+				right=True, direction='in', which='minor', length=10,
+				width=3)
+			a.ax_dis.xaxis.label.set_size(22)
+			a.ax_dis.yaxis.label.set_size(22)
 
 	for a in axs[:,1:].flatten():
 		if hasattr(a, 'ax_dis'): 
@@ -167,20 +174,24 @@ def plot(galaxies, str_galaxies, file_name):
 		fig.text(0.07, 0.23, str_galaxies[2], va='center', ha='right',
 			rotation='vertical', size='xx-large')
 
-
+	# Add colorbar
+	ax_loc = axs[0,2].get_position()
+	cax = fig.add_axes([0.93, ax_loc.y0, 0.02, ax_loc.height])
+	cbar = plt.colorbar(axs[0,0].cs, cax=cax)
+	cbar.ax.set_yticklabels([])
 
 	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight')
 
 
 
 if __name__=='__main__':
-	# plot(['eso443-g024', 'ic1459', 'ic1531'], 
-	# 	['ESO 443-G24', 'IC 1459', 'IC 1531'], 'pop1')
+	plot(['eso443-g024', 'ic1459', 'ic1531'], 
+		['ESO 443-G24', 'IC 1459', 'IC 1531'], 'pop1')
 
-	# plot(['ic4296', 'ngc0612', 'ngc1399'], 
-	# 	['IC 4296', 'NGC 612', 'NGC 1399'], 'pop2')
+	plot(['ic4296', 'ngc0612', 'ngc1399'], 
+		['IC 4296', 'NGC 612', 'NGC 1399'], 'pop2')
 
-	# plot(['ngc3100', 'ngc3557', 'ngc7075'], 
-	# 	['NGC 3100', 'NGC 3557', 'NGC 7075'], 'pop3')
+	plot(['ngc3100', 'ngc3557', 'ngc7075'], 
+		['NGC 3100', 'NGC 3557', 'NGC 7075'], 'pop3')
 
 	plot(['pks0718-34'], ['PKS 0718-34'], 'pop4')

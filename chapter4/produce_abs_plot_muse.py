@@ -122,8 +122,14 @@ def plot(galaxies, str_galaxies, file_name):
 
 	for a in axs.flatten():
 		if hasattr(a, 'ax_dis'):
-			a.ax_dis.tick_params(top=True, bottom=True, left=True, right=True, 
-				direction='in', which='both')
+			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
+				right=True, direction='in', which='major', length=20,
+				width=3, labelsize='large')
+			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
+				right=True, direction='in', which='minor', length=10,
+				width=3)
+			a.ax_dis.xaxis.label.set_size(22)
+			a.ax_dis.yaxis.label.set_size(22)
 
 	for a in axs[:,1:].flatten():
 		if hasattr(a, 'ax_dis'): 
@@ -157,10 +163,13 @@ def plot(galaxies, str_galaxies, file_name):
 	fig.text(0.07, 0.16, 'Fe5709', va='center', ha='right',
 		rotation='vertical', size='xx-large')
 
+	# Add colorbar
+	ax_loc = axs[0,3].get_position()
+	cax = fig.add_axes([0.93, ax_loc.y0, 0.02, ax_loc.height])
+	cbar = plt.colorbar(axs[0,0].cs, cax=cax)
+	cbar.ax.set_yticklabels([])
 
 	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight')
-
-
 
 
 if __name__=='__main__':
