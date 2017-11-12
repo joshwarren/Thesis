@@ -39,7 +39,6 @@ def plot(galaxies, str_galaxies, file_name):
 	# 		self.plot = {'vel':myArray([0,1,1,2], [0,1,1,2]), 
 	# 			'sigma': myArray([0,1,1,2],[0,1,1,2])}
 
-
 	# D=Ds()
 
 
@@ -96,11 +95,6 @@ def plot(galaxies, str_galaxies, file_name):
 				add_(o, color, axs[2*i,0], galaxy, nolegend=True)
 		
 		axs[2*i+1,0].remove()
-		# axs[2*i+1,0] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
-		# 	D.xBar, D.yBar, unc_age, header, vmin=0, vmax=15, 
-		# 	cmap=sauron, flux_unbinned=D.unbinned_flux, 
-		# 	signal_noise=D.SNRatio, 
-		# 	signal_noise_target=SN_target, ax=axs[2*i+1,0])
 
 		# Velocity
 		if galaxy == 'ngc0612':
@@ -146,8 +140,15 @@ def plot(galaxies, str_galaxies, file_name):
 
 	for a in axs.flatten():
 		if hasattr(a, 'ax_dis'):
-			a.ax_dis.tick_params(top=True, bottom=True, left=True, right=True, 
-				direction='in', which='both')
+			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
+				right=True, direction='in', which='major', length=20,
+				width=3, labelsize='large')
+			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
+				right=True, direction='in', which='minor', length=10,
+				width=3)
+			a.ax_dis.xaxis.label.set_size(22)
+			a.ax_dis.yaxis.label.set_size(22)
+
 
 	for a in axs[:,2].flatten():
 		if hasattr(a, 'ax_dis'): 
@@ -171,11 +172,13 @@ def plot(galaxies, str_galaxies, file_name):
 	if len(galaxies) == 1:
 		fig.text(0.07, 0.5, str_galaxies[0], va='center', ha='right', 
 			rotation='vertical', size='xx-large')
+
 	if len(galaxies) == 2:
 		fig.text(0.07, 0.7, str_galaxies[0], va='center', ha='right', 
 			rotation='vertical', size='xx-large')
 		fig.text(0.07, 0.3, str_galaxies[1], va='center', ha='right', 
 			rotation='vertical', size='xx-large')
+
 	if len(galaxies) == 3:
 		fig.text(0.07, 0.755, str_galaxies[0], va='center', ha='right', 
 			rotation='vertical', size='xx-large')
@@ -183,6 +186,13 @@ def plot(galaxies, str_galaxies, file_name):
 			rotation='vertical', size='xx-large')
 		fig.text(0.07, 0.23, str_galaxies[2], va='center', ha='right',
 			rotation='vertical', size='xx-large')
+	
+	# Add colorbar
+	ax_loc = axs[0,2].get_position()
+	cax = fig.add_axes([0.93, ax_loc.y0, 0.02, ax_loc.height])
+	cbar = plt.colorbar(axs[1,1].cs, cax=cax)
+	cbar.ax.set_yticklabels([])
+
 
 
 
