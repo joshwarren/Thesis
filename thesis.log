@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Cygwin) (preloaded format=pdflatex 2017.10.31)  12 NOV 2017 23:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Cygwin) (preloaded format=pdflatex 2017.10.31)  13 NOV 2017 21:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -396,53 +396,29 @@ ne 4.
 
 
 
-] [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 46.
-(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
-
-LaTeX Warning: Command \r invalid in math mode on input line 46.
-
-[4]
-Overfull \hbox (15.39783pt too wide) in paragraph at lines 62--62
+] [3] [4]
+Overfull \hbox (15.39783pt too wide) in paragraph at lines 59--59
 []\OT1/cmr/bx/n/17.28 The Multi-Unit Spec-tro-scopic Ex-plorer (MUSE) 
  []
 
+[5] [6]
 
-LaTeX Warning: Reference `subsec:MUSE' on page 5 undefined on input line 73.
+LaTeX Warning: Reference `fig:egSNR' on page 7 undefined on input line 102.
 
-[5]
-
-LaTeX Warning: Reference `sec:skysubtractions' on page 6 undefined on input lin
-e 99.
-
-
-LaTeX Warning: Reference `fig:egSNR' on page 6 undefined on input line 99.
-
-<chapter2/egSNR.png, id=190, 906.0249pt x 830.8641pt>
+[7] <chapter2/egSNR.png, id=200, 906.0249pt x 830.8641pt>
 File: chapter2/egSNR.png Graphic file (type png)
 <use chapter2/egSNR.png>
-Package pdftex.def Info: chapter2/egSNR.png used on input line 105.
+Package pdftex.def Info: chapter2/egSNR.png used on input line 107.
 (pdftex.def)             Requested size: 260.17464pt x 238.58632pt.
+[8 <./chapter2/egSNR.png>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
-[][][]\OT1/cmr/m/sc/10 IDL \OT1/cmr/m/n/10 and \OT1/cmr/m/sc/10 Python \OT1/cmr
-/m/n/10 rou-tines for \OT1/cmr/m/sc/10 ppxf \OT1/cmr/m/n/10 can be found at htt
-p://www-
- []
+LaTeX Warning: Reference `tab:sample' on page 9 undefined on input line 125.
 
-[6] [7 <./chapter2/egSNR.png>]
-
-LaTeX Warning: Reference `tab:sample' on page 8 undefined on input line 117.
-
-[8]
+[9]
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.158 	 		[\ion{O}{iii}]
+l.156 	 		[\ion{O}{iii}]
                          	& 4958.92 & 5006.84 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -451,7 +427,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.158 	 		[\ion{O}{iii}]
+l.156 	 		[\ion{O}{iii}]
                          	& 4958.92 & 5006.84 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -463,14 +439,14 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing = inserted for \ifdim.
 <to be read again> 
                    \protect 
-l.158 	 		[\ion{O}{iii}]
+l.156 	 		[\ion{O}{iii}]
                          	& 4958.92 & 5006.84 \\
 I was expecting to see `<', `=', or `>'. Didn't.
 
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.158 	 		[\ion{O}{iii}]
+l.156 	 		[\ion{O}{iii}]
                          	& 4958.92 & 5006.84 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -479,7 +455,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.158 	 		[\ion{O}{iii}]
+l.156 	 		[\ion{O}{iii}]
                          	& 4958.92 & 5006.84 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -491,7 +467,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \unskip 
-l.158 	 		[\ion{O}{iii}]
+l.156 	 		[\ion{O}{iii}]
                          	& 4958.92 & 5006.84 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -500,7 +476,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \unskip 
-l.158 	 		[\ion{O}{iii}]
+l.156 	 		[\ion{O}{iii}]
                          	& 4958.92 & 5006.84 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -512,7 +488,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.158 	 		[\ion{O}{iii}]
+l.156 	 		[\ion{O}{iii}]
                          	& 4958.92 & 5006.84 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -521,7 +497,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.158 	 		[\ion{O}{iii}]
+l.156 	 		[\ion{O}{iii}]
                          	& 4958.92 & 5006.84 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -533,7 +509,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.159 	 		[\ion{N}{i}]
+l.157 	 		[\ion{N}{i}]
                        	& 5199.36 & 5201.86 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -542,7 +518,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.159 	 		[\ion{N}{i}]
+l.157 	 		[\ion{N}{i}]
                        	& 5199.36 & 5201.86 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -554,14 +530,14 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing = inserted for \ifdim.
 <to be read again> 
                    \protect 
-l.159 	 		[\ion{N}{i}]
+l.157 	 		[\ion{N}{i}]
                        	& 5199.36 & 5201.86 \\
 I was expecting to see `<', `=', or `>'. Didn't.
 
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.159 	 		[\ion{N}{i}]
+l.157 	 		[\ion{N}{i}]
                        	& 5199.36 & 5201.86 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -570,7 +546,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.159 	 		[\ion{N}{i}]
+l.157 	 		[\ion{N}{i}]
                        	& 5199.36 & 5201.86 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -582,7 +558,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \unskip 
-l.159 	 		[\ion{N}{i}]
+l.157 	 		[\ion{N}{i}]
                        	& 5199.36 & 5201.86 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -591,7 +567,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \unskip 
-l.159 	 		[\ion{N}{i}]
+l.157 	 		[\ion{N}{i}]
                        	& 5199.36 & 5201.86 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -603,7 +579,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.159 	 		[\ion{N}{i}]
+l.157 	 		[\ion{N}{i}]
                        	& 5199.36 & 5201.86 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -612,7 +588,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.159 	 		[\ion{N}{i}]
+l.157 	 		[\ion{N}{i}]
                        	& 5199.36 & 5201.86 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -624,7 +600,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.160 	 		[\ion{O}{i}]
+l.158 	 		[\ion{O}{i}]
                        	& 6300.30 & 6363.67 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -633,7 +609,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.160 	 		[\ion{O}{i}]
+l.158 	 		[\ion{O}{i}]
                        	& 6300.30 & 6363.67 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -645,14 +621,14 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing = inserted for \ifdim.
 <to be read again> 
                    \protect 
-l.160 	 		[\ion{O}{i}]
+l.158 	 		[\ion{O}{i}]
                        	& 6300.30 & 6363.67 \\
 I was expecting to see `<', `=', or `>'. Didn't.
 
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.160 	 		[\ion{O}{i}]
+l.158 	 		[\ion{O}{i}]
                        	& 6300.30 & 6363.67 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -661,7 +637,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.160 	 		[\ion{O}{i}]
+l.158 	 		[\ion{O}{i}]
                        	& 6300.30 & 6363.67 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -673,7 +649,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \unskip 
-l.160 	 		[\ion{O}{i}]
+l.158 	 		[\ion{O}{i}]
                        	& 6300.30 & 6363.67 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -682,7 +658,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \unskip 
-l.160 	 		[\ion{O}{i}]
+l.158 	 		[\ion{O}{i}]
                        	& 6300.30 & 6363.67 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -694,7 +670,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.160 	 		[\ion{O}{i}]
+l.158 	 		[\ion{O}{i}]
                        	& 6300.30 & 6363.67 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -703,7 +679,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.160 	 		[\ion{O}{i}]
+l.158 	 		[\ion{O}{i}]
                        	& 6300.30 & 6363.67 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -715,7 +691,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.161 	 		[\ion{N}{ii}]
+l.159 	 		[\ion{N}{ii}]
                         	& 6548.03 & 6583.41 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -724,7 +700,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.161 	 		[\ion{N}{ii}]
+l.159 	 		[\ion{N}{ii}]
                         	& 6548.03 & 6583.41 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -736,14 +712,14 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing = inserted for \ifdim.
 <to be read again> 
                    \protect 
-l.161 	 		[\ion{N}{ii}]
+l.159 	 		[\ion{N}{ii}]
                         	& 6548.03 & 6583.41 \\
 I was expecting to see `<', `=', or `>'. Didn't.
 
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.161 	 		[\ion{N}{ii}]
+l.159 	 		[\ion{N}{ii}]
                         	& 6548.03 & 6583.41 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -752,7 +728,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.161 	 		[\ion{N}{ii}]
+l.159 	 		[\ion{N}{ii}]
                         	& 6548.03 & 6583.41 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -764,7 +740,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \unskip 
-l.161 	 		[\ion{N}{ii}]
+l.159 	 		[\ion{N}{ii}]
                         	& 6548.03 & 6583.41 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -773,7 +749,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \unskip 
-l.161 	 		[\ion{N}{ii}]
+l.159 	 		[\ion{N}{ii}]
                         	& 6548.03 & 6583.41 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -785,7 +761,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.161 	 		[\ion{N}{ii}]
+l.159 	 		[\ion{N}{ii}]
                         	& 6548.03 & 6583.41 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -794,7 +770,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.161 	 		[\ion{N}{ii}]
+l.159 	 		[\ion{N}{ii}]
                         	& 6548.03 & 6583.41 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -806,7 +782,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.163 	 		[\ion{S}{ii}]
+l.161 	 		[\ion{S}{ii}]
                         	& 6716.47 & 6730.85 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -815,7 +791,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.163 	 		[\ion{S}{ii}]
+l.161 	 		[\ion{S}{ii}]
                         	& 6716.47 & 6730.85 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -827,14 +803,14 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing = inserted for \ifdim.
 <to be read again> 
                    \protect 
-l.163 	 		[\ion{S}{ii}]
+l.161 	 		[\ion{S}{ii}]
                         	& 6716.47 & 6730.85 \\
 I was expecting to see `<', `=', or `>'. Didn't.
 
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.163 	 		[\ion{S}{ii}]
+l.161 	 		[\ion{S}{ii}]
                         	& 6716.47 & 6730.85 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -843,7 +819,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.163 	 		[\ion{S}{ii}]
+l.161 	 		[\ion{S}{ii}]
                         	& 6716.47 & 6730.85 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -855,7 +831,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \unskip 
-l.163 	 		[\ion{S}{ii}]
+l.161 	 		[\ion{S}{ii}]
                         	& 6716.47 & 6730.85 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -864,7 +840,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \unskip 
-l.163 	 		[\ion{S}{ii}]
+l.161 	 		[\ion{S}{ii}]
                         	& 6716.47 & 6730.85 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -876,7 +852,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.163 	 		[\ion{S}{ii}]
+l.161 	 		[\ion{S}{ii}]
                         	& 6716.47 & 6730.85 \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -885,7 +861,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.163 	 		[\ion{S}{ii}]
+l.161 	 		[\ion{S}{ii}]
                         	& 6716.47 & 6730.85 \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -894,7 +870,7 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-) [9] (./thesis.bbl)
+) [10] [11] (./thesis.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
 [16
 
@@ -919,13 +895,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 7031 strings out of 494936
- 99522 string characters out of 6181324
- 191556 words of memory out of 5000000
- 10120 multiletter control sequences out of 15000+600000
- 13226 words of font info for 51 fonts, out of 8000000 for 9000
+ 7025 strings out of 494936
+ 99433 string characters out of 6181324
+ 192932 words of memory out of 5000000
+ 10112 multiletter control sequences out of 15000+600000
+ 13527 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,12n,30p,1791b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,12n,30p,1932b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{table.A.1} has been referenced but does not exist
 , replaced by a fixed one
 
@@ -955,10 +931,10 @@ lic/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (12 pages, 713584 bytes).
+Output written on thesis.pdf (14 pages, 716557 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
+ 331 PDF objects out of 1000 (max. 8388607)
+ 295 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
  139 words of extra memory for PDF output out of 10000 (max. 10000000)
 

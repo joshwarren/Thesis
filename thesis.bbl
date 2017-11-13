@@ -31,9 +31,13 @@ Cappellari M.,  Copin Y.,  2003, \mn@doi [Monthly Notices of the Royal
 Cappellari M.,  Emsellem E.,  2004, \mn@doi [Publications of the Astronomical
   Society of the Pacific] {10.1086/381875}, 116, 138
 
-\bibitem[\protect\citeauthoryear{Horne \& K.}{Horne \& K.}{1986}]{Horne1986}
-Horne K.,  K. 1986, \mn@doi [Publications of the Astronomical Society of the
-  Pacific] {10.1086/131801}, 98, 609
+\bibitem[\protect\citeauthoryear{Falc{\'{o}}n-Barroso,
+  S{\'{a}}nchez-Bl{\'{a}}zquez, Vazdekis, Ricciardelli, Cardiel, Cenarro,
+  Gorgas  \& Peletier}{Falc{\'{o}}n-Barroso et~al.}{2011}]{Falcon-Barroso2011a}
+Falc{\'{o}}n-Barroso J.,  S{\'{a}}nchez-Bl{\'{a}}zquez P.,  Vazdekis A.,
+  Ricciardelli E.,  Cardiel N.,  Cenarro A.~J.,  Gorgas J.,   Peletier R.~F.,
+  2011, \mn@doi [Astronomy {\&} Astrophysics] {10.1051/0004-6361/201116842},
+  532
 
 \bibitem[\protect\citeauthoryear{Husemann \& Jahnke}{Husemann \&
   Jahnke}{2013}]{Husemann2013}
@@ -74,6 +78,11 @@ S{\'{a}}nchez S.~F.,  et~al., 2012, \mn@doi [Astronomy {\&} Astrophysics]
 \bibitem[\protect\citeauthoryear{Sarzi et~al.,}{Sarzi et~al.}{2005}]{Sarzi2005}
 Sarzi M.,  et~al., 2005, \mn@doi [Monthly Notices of the Royal Astronomical
   Society] {10.1111/j.1365-2966.2005.09839.x}, 366, 1151
+
+\bibitem[\protect\citeauthoryear{Wenger et~al.,}{Wenger
+  et~al.}{2000}]{Wenger2000}
+Wenger M.,  et~al., 2000, \mn@doi [Astronomy and Astrophysics Supplement,
+  v.143, p.9-22] {10.1051/aas:2000332}, 143, 9
 
 \makeatother
 \end{thebibliography}

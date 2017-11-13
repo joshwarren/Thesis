@@ -12,48 +12,46 @@ A level-1 auxiliary file: conclusions/conclusions.aux
 A level-1 auxiliary file: appendix/appendix1/appendix1.aux
 The style file: mnras.bst
 Database file #1: refs.bib
-Warning--I didn't find a database entry for ""
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 11 entries,
+You've used 12 entries,
             2881 wiz_defined-function locations,
-            838 strings with 12077 characters,
-and the built_in function-call counts, 5131 in all, are:
-= -- 433
-> -- 350
-< -- 26
-+ -- 155
-- -- 46
-* -- 618
-:= -- 788
+            849 strings with 12707 characters,
+and the built_in function-call counts, 5560 in all, are:
+= -- 447
+> -- 407
+< -- 24
++ -- 180
+- -- 58
+* -- 684
+:= -- 866
 add.period$ -- 0
-call.type$ -- 11
-change.case$ -- 22
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 259
-empty$ -- 261
-format.name$ -- 92
-if$ -- 902
+call.type$ -- 12
+change.case$ -- 24
+chr.to.int$ -- 12
+cite$ -- 12
+duplicate$ -- 279
+empty$ -- 282
+format.name$ -- 104
+if$ -- 965
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 11
-newline$ -- 46
-num.names$ -- 74
-pop$ -- 48
+missing$ -- 12
+newline$ -- 49
+num.names$ -- 78
+pop$ -- 55
 preamble$ -- 1
-purify$ -- 44
+purify$ -- 48
 quote$ -- 0
-skip$ -- 163
+skip$ -- 173
 stack$ -- 0
-substring$ -- 288
-swap$ -- 120
-text.length$ -- 45
+substring$ -- 286
+swap$ -- 124
+text.length$ -- 49
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 99
+type$ -- 108
 warning$ -- 0
-while$ -- 81
+while$ -- 85
 width$ -- 0
-write$ -- 125
-(There was 1 warning)
+write$ -- 135

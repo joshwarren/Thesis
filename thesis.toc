@@ -9,12 +9,12 @@
 \contentsline {section}{\numberline {2.2}The Multi-Unit Spectroscopic Explorer (MUSE)}{5}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}The MUSE Instrument}{5}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}MUSE Archival Observations}{5}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Reducing MUSE Data}{5}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Data Analysis}{5}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Spatial Binning}{6}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.2.3}Reducing MUSE Data}{6}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Data Analysis}{7}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Spatial Binning}{7}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Stellar Kinematics}{8}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Emission-line Kinematics}{8}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Stellar Populations}{9}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.3}Emission-line Kinematics}{10}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Stellar Populations}{10}{subsection.2.3.4}
 \contentsline {chapter}{\numberline {3}Stellar Component}{10}{chapter.3}
 \contentsline {chapter}{\numberline {4}Ionised Gas Component}{11}{chapter.4}
 \contentsline {chapter}{\numberline {5}Discussion and Conclusions}{12}{chapter.5}
