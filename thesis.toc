@@ -12,11 +12,13 @@
 \contentsline {subsection}{\numberline {2.2.3}Reducing MUSE Data}{6}{subsection.2.2.3}
 \contentsline {section}{\numberline {2.3}Data Analysis}{7}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Spatial Binning}{7}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Stellar Kinematics}{8}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}Stellar Kinematics}{9}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Emission-line Kinematics}{10}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Stellar Populations}{10}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.4}Stellar Populations}{11}{subsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.4.1}Absorption Line Strengths}{12}{subsubsection.2.3.4.1}
+\contentsline {subsubsection}{\numberline {2.3.4.2}Fitting Stellar Population Models}{14}{subsubsection.2.3.4.2}
 \contentsline {chapter}{\numberline {3}Stellar Component}{10}{chapter.3}
 \contentsline {chapter}{\numberline {4}Ionised Gas Component}{11}{chapter.4}
 \contentsline {chapter}{\numberline {5}Discussion and Conclusions}{12}{chapter.5}
 \contentsline {chapter}{\numberline {A}Summary of Observational Logs}{13}{appendix.A}
-\contentsline {chapter}{Bibliography}{16}{subsection.2.3.4}
+\contentsline {chapter}{Bibliography}{16}{subsubsection.2.3.4.2}

@@ -29,7 +29,7 @@ This chapter presents the observations made for this project, of the Southern Sa
 
 		A median master bias is created from the five daily bias frames and subtracted from each raw frame. Known low-transmission (bad) fibres, detected cosmic ray hits and offsets to account for flexure of the instrument due to gravity are taken into account when automatically identifying the fibre positions on the detector. The fibre is then traced along the dispersion axis in the flats. \citet{Husemann2014} finds this to be robust except for a few fibres at the very blue end of the spectrum ($<4300$\,\AA). 
 
-		Since flexure is dependent on position angle of the telescope and rotation of the instrument, the exposures on the source (science exposures) will be affected in a different manner to the flat field exposures. \textsc{Py3D} accounts for the offset of the science exposure to the flat field exposure by tracing the peak fibre position directly on the science exposure at 5 or 6 locations. The offsets are then extrapolated with a second order Legendre polynomial. This corrects for the flexure in the fibre number direction, but flexure also affects the dispersion direction. The effect is estimated by the positions of strong emission lines from the atmosphere (sky lines), however the HR blue only has one sky line at 5199\,\AA, which in many of our science frames was very dim or even not present. This lack of sky lines had previously been an issue with our initial attempt at data reduction using the publicly available \textsc{p3d} program\footnote{http://p3d.sourceforge.net/}. Here the lack of sky lines meant \textsc{p3d} was not able to flux calibrate the quadrants to each other. For this reason (and the lack of accounting for the flexure of VIMOS), we switched to using \textsc{Py3D}. 
+		Since flexure is dependent on position angle of the telescope and rotation of the instrument, the exposures on the source (science exposures) will be affected in a different manner to the flat field exposures. \textsc{Py3D} accounts for the offset of the science exposure to the flat field exposure by tracing the peak fibre position directly on the science exposure at 5 or 6 locations. The offsets are then extrapolated with a second order Legendre polynomial. This corrects for the flexure in the fibre number direction, but flexure also affects the dispersion direction. The effect is estimated by the positions of strong emission lines from the atmosphere (sky lines), however the HR blue only has one sky line at 5199\,\AA, which in many of our science frames was very dim or even not present. This lack of sky lines had previously been an issue with our initial attempt at data reduction using the publicly available \textsc{p3d}\footnote{http://p3d.sourceforge.net/} program. Here the lack of sky lines meant \textsc{p3d} was not able to flux calibrate the quadrants to each other. For this reason (and the lack of accounting for the flexure of VIMOS), we switched to using \textsc{Py3D}.
 
 		Another issue taken into account by \textsc{Py3D} is cross-talk, where fibres are so densely packed that light from one fibre bleeds into the image of neighboring fibres. The spectra are extracted assuming a Gaussian profile for the cross-dispersion of each fibre with the width fitted for each fibre individually. After this, the spectra are adaptively smoothed to a 3\,\AA\ full-width, half-maximum (FWHM) resolution and resampled.
 
@@ -37,12 +37,25 @@ This chapter presents the observations made for this project, of the Southern Sa
 
 		The quadrant were finally combined into a single file, which was converted from the RSS format to a cube (with dimensions of RA, Dec. and wavelength, $\lambda$). Finally, the change in position of the centre of the galaxy due to differential atmospheric refection (DAR) was measured and corrected for. 
 
-		Following on from this, we noted that the cubes where still not fully corrected. A fringe-like pattern was still observable in the spectral direction and quadrants were not calibrated to each other. These were improved by implementing a \textsc{python} version of the ad-hoc corrections given in \citet{Lagerholm2012}. This involves re-normalizing the quadrants to each other by minimizing the difference of the integrated spectra in neighboring fibers along the edge of each quadrant (Q2 was held constant). This was followed by the removal of a fringe-like pattern, by dividing out a smoothed median spectrum from the eight surrounding fibers of any given fiber, over a scale of 150 pixels. These steps mean that the data-cubes will not be perfectly flux-calibrated, however the effect is multiplicative and thus will not effect equivalent width measurements. From comparison the the MUSE data (Section \ref{sec:MUSE}) we estimate flux of the resulting datacubes to be in units of $\sim 10^{-15} \, \mathrm{erg\,s^{-1}\,cm^{-2}}$. 
+		Following on from this, we noted that the cubes where still not fully corrected. A fringe-like pattern was still observable in the spectral direction and quadrants were not calibrated to each other. These were improved by implementing a \textsc{python} version of the ad-hoc corrections given in \citet{Lagerholm2012}. This involves re-normalizing the quadrants to each other by minimizing the difference of the integrated spectra in neighboring fibers along the edge of each quadrant (Q2 was held constant). This was followed by the removal of a fringe-like pattern, by dividing out a smoothed median spectrum from the eight surrounding fibers of any given fiber, over a scale of 150 pixels. Figure \ref{fig:Correction} shows the image (datacube collapsed in the spectral direction) of NGC 3557 before and after this correction. These steps mean that the data-cubes will not be perfectly flux-calibrated, however the effect is multiplicative and thus will not effect equivalent width measurements. From comparison the the MUSE data (Section \ref{sec:MUSE}) we estimate flux of the resulting datacubes to be in units of $\sim 10^{-15} \, \mathrm{erg\,s^{-1}\,cm^{-2}}$. 
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=.7\textwidth]{chapter2/ngc3557_corr_image.png}
+			\caption[Affect of Ad-hoc Correction to VIMOS datacubes]{Before and after ad-hoc correction is applied to NGC 3557. The correction is aimed to improve the quadrant-to-quadrant calibration and reduce diagonal intensity strips. }
+			\label{fig:Correction}
+		\end{figure}
+
+
+
+		
 
 		The variance spectra is propagated throughout the data reduction pipeline and square-rooted at this point, to be used a noise input in the analysis (Section \ref{sec:analysis})
 
 	\subsection{Data Quality}
 		\label{subsec:VIMOSartifacts}
+
+
 
 
 
@@ -87,13 +100,14 @@ This chapter presents the observations made for this project, of the Southern Sa
 
 
 	%
-	The entire pipeline summed up is as follows:
+	The entire pipeline summed up is as follows.
 	\begin{enumerate}
-		\item Spatial binning using Voronoi binning
-		\item Find relevant stellar templates by fitting the entire galaxy spectra with all the templates from the Miles library
-		\item Estimate redshifts and global line-of-sight velocity dispersion with MCMC routine 
-		\item Find best-fitting LOSVD for each individual bin
-		\item Use bootstrapping method to estimate uncertainties LOSVD measurements. 
+		\item Spatially bin using Voronoi binning, then,
+		\item find the relevant stellar templates by fitting the entire galaxy spectra with all the templates from the Miles library and using only the non-zero weighted templates from here on in. Then,
+		\item estimate redshifts and global line-of-sight velocity dispersion with MCMC routine. After this,
+		\item find the best-fitting LOSVD for the stellar and emission line components for each individual bin. A bootstrapping method to estimate uncertainties LOSVD measurements. Removing the fitted emission lines,
+		\item measure absorption line strengths. Finally, 
+		\item use these absorption line strengths to find the best-fitting stellar population models.
 	\end{enumerate}
 
 
@@ -137,7 +151,7 @@ This chapter presents the observations made for this project, of the Southern Sa
 		\end{enumerate}
 		All steps are repeated with the MC method described above to propagate uncertainties and include a tenth order multiplicative Lagrange polynomial to account for continuum emission. 
 
-		The residuals between the best-fitting spectra and the input spectra are smoothed and averaged using a weighted, moving average. This is then summed in quadrature with the noise spectrum to give a combined `residual noise' spectrum. For each fitted emission line, the amplitude (of the fitted line) to the median residual noise (in the region of the emission line) ratio ($A/N$) is used as a detection threshold. As in \citet{Sarzi2005}, for [\ion{O}{iii}], a fit is considered a detection if $(A/N)_{[\text{\ion{O}{iii}}]} \ge 4$; for all other lines, i, except [NI], a detection is recorded if [\ion{O}{iii}] is detected in the same bin and $(A/N)_\mathrm{i} \ge 3$; while a detection of [NI] required a detection of H$_\beta$ and $(A/N)_{[\text{\ion{N}{i}}]} \ge 4$. Emission lines included are given in Table \ref{tab:EmissionLine} along with their rest wavelengths and that of any doublet counterparts (for so-called forbidden lines). 
+		The residuals between the best-fitting spectra and the input spectra are smoothed and averaged using a weighted, moving average. This is then summed in quadrature with the noise spectrum to give a combined `residual noise' spectrum. For each fitted emission line, the amplitude (of the fitted line) to the median residual noise (in the region of the emission line) ratio ($A/N$) is used as a detection threshold. As in \citet{Sarzi2005}, for [\ion{O}{iii}], a fit is considered a detection if $(A/N)_{[\text{\ion{O}{iii}}]} \ge 4$; for all other lines, i, except [NI], a detection is recorded if [\ion{O}{iii}] is detected in the same bin and $(A/N)_\mathrm{i} \ge 3$; while a detection of [NI] required a detection of H\,$\beta$ and $(A/N)_{[\text{\ion{N}{i}}]} \ge 4$. Emission lines included are given in Table \ref{tab:EmissionLine} along with their rest wavelengths and that of any doublet counterparts (for so-called forbidden lines). 
 
 	 	\begin{table}
 	 		\centering
@@ -150,14 +164,14 @@ This chapter presents the observations made for this project, of the Southern Sa
 	 		Line name 		& Rest wavelength (\AA) & Doublet wavelength (\AA) \\
 	 		\hline
 	 		[\ion{O}{ii}] 	& 3726.03 & 3728.82 \\
-	 		H$\delta$ 		& 4101.76 & \\
-	 		H$\gamma$ 		& 4340.47 & \\
-	 		H$\beta$ 		& 4861.33 & \\
+	 		H\,$\delta$ 		& 4101.76 & \\
+	 		H\,$\gamma$ 		& 4340.47 & \\
+	 		H\,$\beta$ 		& 4861.33 & \\
 	 		[\ion{O}{iii}] 	& 4958.92 & 5006.84 \\
 	 		[\ion{N}{i}] 	& 5199.36 & 5201.86 \\
 	 		[\ion{O}{i}] 	& 6300.30 & 6363.67 \\
 	 		[\ion{N}{ii}] 	& 6548.03 & 6583.41 \\
-	 		H$\alpha$ 		& 6562.30 &\\
+	 		H\,$\alpha$ 		& 6562.30 &\\
 	 		[\ion{S}{ii}] 	& 6716.47 & 6730.85 \\
 	 		\hline
 	 		\hline
@@ -170,6 +184,93 @@ This chapter presents the observations made for this project, of the Southern Sa
 
 	 \subsection{Stellar Populations}
 	 	\label{subsec:PopFit}
+	 	In order to investigate stellar populations of our sample we assume that a given spectra (a global, spatially integrated spectrum or the spectrum from a given bin) is well approximated to a simple/single stellar population (SSP), i.e. that spectrum represents a system of stars born all at the same time, in the same environment. 
+
+	 	There are two methods for finding the best-fitting SSP: either use full spectral fitting of synthetic spectra with different properties or compare the observed absorption line strengths to empirical or modeled line strengths. The former has the advantage of retaining more information, being able to fit fine structure in the spectrum and can easily find complex stellar populations, but requires on highly reliable synthetic spectra for each permutation of stellar population properties that is considered. Also, for massive ETGs, fine structures in spectra are lost because of the smoothing from the high velocity dispersions. The later has the advantage of only considering the parts of the spectrum that are highly sensitive to the stellar population. It can be more easily based on empirical observations of stars in the solar neighborhood and thus is less model dependent. Interpolation between well populated regions of the parameter space of the stellar population properties can be used to minimize the errors in sparse regions of the parameter space. We also found that full spectral fitting almost always returned models from an extreme corner of the parameter space of models. For these reasons we use the absorption line strength approach.
+
+	 	\subsubsection{Absorption Line Strengths}
+	 		\label{subsubsec:Absorption}
+	 		Absorption line strengths are measured as an equivalent width of a given index. Each index consists of 3 bandpasses: one blue and one red continuum bandpass on either side of the central bandpass containing the absorption feature. A pseudo-continuum is defined as a straight line between two points at the center of each continuum bandpass with heights of the median intensity of the given bandpass. The index, $I$, is measured as the equivalent width of the spectrum, $F_\mathrM{I}(\lambda)$, within the central bandpass (defined between wavelengths $\lambda_1$ and $\lambda_2$) with respect to this pseudo-continuum, $F_\mathrm{C}(\lambda)$, i.e for the so-called atomic indices, measured in \AA,
+	 		\begin{align}
+	 			I_\text{\AA} \equiv \, & \int^{\lambda_2}_{\lambda_1} \! \left(1 - \frac{F_\mathrm{I}(\lambda)}{F_\mathrm{C}(\lambda)}\right) \, \mathrm{d}\lambda \, , \\
+	 		\intertext{while molecular indices, measured in magnitude units is}
+	 			I_\text{mag} \equiv \, & -2.5 \log\left(\frac{1}{\lambda_2 - \lambda_1} \int^{\lambda_2}_{\lambda_1} \! \frac{F_\mathrm{I}(\lambda)}{F_\mathrm{C}(\lambda)} \, \mathrm{d}\lambda\right) \, .
+	 		\end{align}
+	 		The indices we use for this project, along the defining bandpasses are taken from \citet{Trager1998} and are given in Table \ref{tab:abIndex}.
 
 
+		 	\begin{table}
+				\centering
+			\begin{threeparttable}
+				\caption{Definitions of bandpasses for line indices.}
+				\label{tab:abIndex}
+				\begin{tabular}{l c c c}
+					\hline
+					\hline
+					Index 	& Blue cont. 		& Index band 		& Red cont. \\
+					\hline 
+					G4300 	& 4266.375--4282.625 & 4281.375--4316.375 & 4318.875--4335.125 \\
+					Fe4383 	& 4359.125--4370.375 & 4369.125--4420.375 & 4442.875--4455.375 \\
+					Ca4455 	& 4445.875--4454.625 & 4452.125--4474.625 & 4477.125--4492.125 \\
+					Fe4531 	& 4504.250--4514.250 & 4514.250--4559.250 & 4560.500--4579.250 \\
+					H\,$\beta$ & 4827.875--4847.875 & 4847.875--4876.625 & 4876.625--4891.625 \\
+					Fe5015 	& 4946.500--4977.750 & 4977.750--5054.000 & 5054.000--5065.250 \\
+					Mg\,b 	& 5142.625--5161.375 & 5160.125--5192.625 & 5191.375--5206.375 \\
+					Fe5270 	& 5233.150--5248.150 & 5245.650--5285.650 & 5285.650--5318.150 \\
+					Fe5335 	& 5304.625--5315.875 & 5312.125--5352.125 & 5353.375--5363.375 \\
+					Fe5406 	& 5376.250--5387.500 & 5387.500--5415.000 & 5415.000--5425.000 \\
+					Fe5709 	& 5672.875--5696.625 & 5696.625--5720.375 & 5722.875--5736.625 \\
+					Fe5782 	& 5765.375--5775.375 & 5776.625--5796.625 & 5797.875--5811.625 \\
+					NaD 	& 5860.625--5875.625 & 5876.875--5909.375 & 5922.125--5948.125 \\
+					TiO1 	& 5816.625--5849.125 & 5936.625--5994.125 & 6038.625--6103.625 \\
+					TiO2 	& 6066.625--6141.625 & 6189.625--6272.125 & 6372.625--6415.125 \\
+					\hline
+					\hline
+				\end{tabular}
+				\begin{tablenotes}
+				\footnotesize
+				\item \textit{Notes:} Indices are from \citet{Trager1998}.
+				\end{tablenotes}
+			\end{threeparttable}
+			\end{table}
 
+			Much of the literature measures absorption line strengths under the Lick/Cassegrain image dissector scanner spectrograph (hereafter Lick/IDS) system \citep{Faber1985, Worthey1994}. This has several disadvantages. Firstly, the Lick/IDS system is based on non-flux calibrated spectra from the IDS spectrograph on the Shane telescope (Lick Observatory), that has a relatively low and wavelength-dependent spectral resolution. When using the Lick/IDS system with other instruments, it is thus necessary to calibrate the observations by performing empirical corrections meant to correct for the uncalibrated continuum of the Lick/IDS data. This requires observations of standard stars with the same instrumental set-up as the main observations. Since this was not requested as part of the VIMOS observing strategy, we are not able to do this (a later proposal was not possible either as VIMOS was substantially upgraded in the intervening time). Given the low spectral resolution and poor data quality on which the Lick/IDS system is based, we believe in any case that the community should be making a concerted effort to use alternative systems. We therefore choose here to use an alternative: the line strength system (LIS) of \citet{Vazdekis2010}. LIS is based on flux calibrated measurements as several resolutions (5.0, 8.4 and 14.0\,\AA). \citet{Vazdekis2010} also provides empirical cubic functions for transforming literature measurements from the Lick/IDS system to LIS\footnote{http://www.iac.es/proyecto/miles/pages/line-index-system-lis/transformations.php}.
+
+			Because of the models we use to for the stellar population fitting (detailed in Section \ref{subsubsec:StellarPop}), we actually measure absorption indices at a resolution of 2.5\,\AA\ (FWHM). For the purposes of comparisons to the literature (see Section \ref{subsec:absorption}) we also measure the absorption indices at 8.4\,\AA\ resolution. 
+
+			Since the aim is to find the best-fitting stellar population is it important that we first remove the effect of the ISM. This involves fitting for (as described in Section \ref{subsec:EmissionFit}) and subtracting detected emission lines. 
+
+			We also must correct for the affect of velocity dispersion of the stellar populations which will spread absorption features such that some of the absorption is outside of the central bandpass. To do this, we first build a spectrum that is not convolved with the velocity dispersion. This done by creating the best-fitting spectrum the previous step, but not convolving it with the LOSVD. A given index, $i$, is measure for both this `unconvolved' spectrum, ($I^\text{unc}_i$) and the convolved best-fitting spectrum ($I^\text{conv}_i$). The ratio of the indices measured for these two spectra is used as a (multiplicative) correction factor for the index measured on the emission line-corrected observed spectra ($I^\text{obs}_i$), such that
+			\begin{equation}
+				I^\text{corr}_i \equiv \frac{I^\text{unc}_i}{I^\text{conv}_i} I^\text{obs}_i \, .
+			\end{equation}}
+
+
+		\subsubsection{Fitting Stellar Population Models}
+			\label{subsubsec:StellarPop}
+			The final step of the data analysis pipeline is to find the best-fitting SSP models for a given spectrum. Sets of SSP models consist of a grid of models characterised by stellar properties such as age ($t$), metallicity ($[Fe/H]$) and alpha-element enhancement ($\alpha$-enhancement; $[\alpha/Fe]$). Here, we first give an overview of the process of generating synthetic stellar populations before detailing the specifics of the models used below. 
+
+			Synthetic SSPs are created using the following components:
+			\begin{itemize}
+				\item the loci of a star of a given mass and metallicity, as they travel across the Hertzsprung--Russel Diagram (HRD) by aging. These are known as stellar evolutionary tracks and are generally empirical. Also required is,
+				\item the function, $\Phi(M)$, representing the number of stars formed, $N(M)$, for a given mass, $M$, respect to mass. I.e. $\Phi(M) \equiv \frac{\mathrm{d}N(M)}{\mathrm{d}M}$. This is the initial mass function (IMF). And finally,
+				\item an empirical library of stellar spectra to be able to assign a a spectra to a position on the HRD. 
+			\end{itemize}
+			The desired output of expected line strengths for a 3 dimensional grid of varying age, metallicity and $\alpha$-enhancement can be computed in one of two ways: (i) producing full synthetic spectra from the evolution of stellar atmospheres or (ii) finding a `fitting function' for each index which analytically calibrates the line strengths measured from empirical libraries to physical stellar parameters. The former is dependent on a good understanding of the physics of stellar atmospheres and is known to suffer from incomplete line lists and continuum uncertainties \citep{Thomas2004}. It is the appropriate method for producing spectra for full-spectral fitting had we chosen that method for investigating stellar populations (see Section \ref{subsec:PopFit}). The later, and more popular method, interpolates between well populated regions of the parameter space. This allows the computing of the uncertainties in the model predictions and decreases those uncertainties in sparse regions of the parameter space. 
+
+			ETGs often have very different fractional abundances of various metals to the nearby stars that we are able to observe (all of which have near solar abundances). As such the stellar libraries that are used to calibrate the models fall far short of the required coverage of the parameter space. Most methods make some effort to extrapolate to non-solar abundances. In a similar way to the fitting functions described above, `index response functions' can be found. This calibrates the effect of varying abundances of individual elements. In this case, comparison must be made to completely theoretical spectra.
+
+			We use the SSP models by \citet{Thomas2010} (referred to hereafter as the TMJ models) as they are based on flux calibrated spectra and therefore do not require calibration to the Lick/IDS system. These models assume a \citet{Salpeter1955} IMF ($\Phi(M) \propto M^{-2.35}$) and are based on the evolutionary population synthesis code by \citet{Maraston1998}. The models use stellar evolutionary tracks by \citet{Cassisi1997} for metallicities of $[Z/H] < -0.33$ and \citet{Girardi2000} for $[Z/H] \ge -0.33$; the MILES stellar spectral library by \citet{Sanchez-Blazquez2006a} and \citet{Falcon-Barroso2011a}; fitting functions by \citet{Johansson2010} and index response functions by \citet{Korn2005}. The MILES library gives the models a resolution of 2.5\,\AA\ (FWHM). This is below the resolution of the reduced VIMOS data (at 3\,\AA), but we ignore this effect. Comparing the absorption line strengths measured at 2.5\,\AA\ and 3\,\AA\ for the MUSE datasets does not show much difference.
+% Produce a 2.5A vs 3A plot for a MUSE galaxy for above ^^^^^^.
+
+			The response functions by \citet{Korn2005} extend the work of \citet{Tripicco1995} who investigated the response functions of the original 21 Lick indices when the individual element abundance fractions are varied for 5 Gyr old SSP at solar metallicities. The new functions include varying metallicities, as well as individual element fractions, and are calculated for all 25 Lick indices. The effect of age on these response function was tested by computing them for 1 Gyr models and comparing them to the 5 Gyr models by \citet{Tripicco1995}. They found a 1\% difference for two indices (G4300 and Fe4383) and a significantly lower result for all other indices, concluding that age does not significantly effect the response functions.
+
+			Finally, the individual element abundances are combined to give the alpha element enhancement parameter, $\alpha/Fe$. This is done following \citet{Trager2000} who grouped the elements into three categories: enhanced, containing C, N, O, Na, Mg, Si, Ca and Ti (i.e. $\alpha$ and light elements); depressed, containing Cr and Fe (i.e. iron peak elements); and all other elements are fixed. The fixed group are held with solar abundances, while the enhanced and depressed groups are scaled up and down respectively by the same factor. 
+
+			The TMJ models return index strengths for a 3 dimensional grid ($t$, $[Z/H]$ and $[\alpha/Fe]$) with $t$ = 0.1, 0.2, 0.4, 0.6, 0.8, 1,2, 3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 Gyr; $[Z/H]$ = -2.25, -1.35, -0.33, 0.0, 0.35, 0.67 $\mathrm{[Z/H]_\odot}$; and $[\alpha/Fe]$ = -0.3, 0.0, 0.3, 0.5 $\mathrm{[\alpha/Fe]_\odot}$.
+
+			\citet{Thomas2010} showed that the TMJ models produces a good fit to globular cluster measurements of \citet{Puzia2002} and \citet{Schiavon2005} and the galaxy measurements by the SAURON group by \citet{Kuntschner2010}. \citet{Conroy2010} suggests that the stellar evolutionary tracks by \citet{Girardi2000} used for the high metallicity models do not fit the globular clusters well, however \citet{Thomas2010} point out that this can be explained by an anomaly in the Balmer lines which is not seen in the analysis of the SAURON data. \citet{Thomas2010} therefore suggest, that this is an issue with the globular cluster observations themselves. 
+
+			Following the method of \citet{McDermid2006} we first linearly interpolate the TMJ models to a 3-dimensional grid with sides of length 40 in age, metallicity and $\alpha$-enhancement. Metallicity and $\alpha$-enhancement directions are evenly spaced, while the age direction is logarithmically spaced. We then use \mathsc{emcee}, a \textsc{python} package for MCMC fitting, to find the most-likely SSP model by comparing the absorption line strengths (measured with the method described in Section \ref{subsubsec:Absorption}) to the absorption line strengths of the SSP models. We take the standard deviation of the positions of the walkers in the MCMC code as the uncertainties.
+
+			The following chapters will use results from these pipelines to compare our radio galaxy sample, the Southern Sample to radio-quiet ETGs.

@@ -31,6 +31,21 @@ Cappellari M.,  Copin Y.,  2003, \mn@doi [Monthly Notices of the Royal
 Cappellari M.,  Emsellem E.,  2004, \mn@doi [Publications of the Astronomical
   Society of the Pacific] {10.1086/381875}, 116, 138
 
+\bibitem[\protect\citeauthoryear{Cassisi, Castellani  \& Castellani}{Cassisi
+  et~al.}{1997}]{Cassisi1997}
+Cassisi S.,  Castellani M.,   Castellani V.,  1997, Astronomy and Astrophysics,
+  317, 108
+
+\bibitem[\protect\citeauthoryear{Conroy \& Gunn}{Conroy \&
+  Gunn}{2010}]{Conroy2010}
+Conroy C.,  Gunn J.~E.,  2010, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637X/712/2/833}, 712, 833
+
+\bibitem[\protect\citeauthoryear{Faber, Friel, Burstein  \& Gaskell}{Faber
+  et~al.}{1985}]{Faber1985}
+Faber S.~M.,  Friel E.~D.,  Burstein D.,   Gaskell C.~M.,  1985, \mn@doi [The
+  Astrophysical Journal Supplement Series] {10.1086/191024}, 57, 711
+
 \bibitem[\protect\citeauthoryear{Falc{\'{o}}n-Barroso,
   S{\'{a}}nchez-Bl{\'{a}}zquez, Vazdekis, Ricciardelli, Cardiel, Cenarro,
   Gorgas  \& Peletier}{Falc{\'{o}}n-Barroso et~al.}{2011}]{Falcon-Barroso2011a}
@@ -38,6 +53,11 @@ Falc{\'{o}}n-Barroso J.,  S{\'{a}}nchez-Bl{\'{a}}zquez P.,  Vazdekis A.,
   Ricciardelli E.,  Cardiel N.,  Cenarro A.~J.,  Gorgas J.,   Peletier R.~F.,
   2011, \mn@doi [Astronomy {\&} Astrophysics] {10.1051/0004-6361/201116842},
   532
+
+\bibitem[\protect\citeauthoryear{Girardi, Bressan, Bertelli  \& Chiosi}{Girardi
+  et~al.}{2000}]{Girardi2000}
+Girardi L.,  Bressan A.,  Bertelli G.,   Chiosi C.,  2000, \mn@doi [Astronomy
+  and Astrophysics Supplement] {10.1051/aas:2000126}, 141, 371
 
 \bibitem[\protect\citeauthoryear{Husemann \& Jahnke}{Husemann \&
   Jahnke}{2013}]{Husemann2013}
@@ -49,6 +69,21 @@ Husemann B.,  Jahnke K.,  2013, \mn@doi [Astronomy {\&} Astrophysics]
 Husemann B.,  Jahnke K.,  S{\'{a}}nchez S.~F.,  Wisotzki L.,  Nugroho D.,
   Kupko D.,   Schramm M.,  2014, \mn@doi [Monthly Notices of the Royal
   Astronomical Society] {10.1093/mnras/stu1167}, 443, 755
+
+\bibitem[\protect\citeauthoryear{Johansson, Thomas  \& Maraston}{Johansson
+  et~al.}{2010}]{Johansson2010}
+Johansson J.,  Thomas D.,   Maraston C.,  2010, \mn@doi [Monthly Notices of the
+  Royal Astronomical Society] {10.1111/j.1365-2966.2010.16683.x}, 406, 165
+
+\bibitem[\protect\citeauthoryear{Korn, Maraston  \& Thomas}{Korn
+  et~al.}{2005}]{Korn2005}
+Korn A.~J.,  Maraston C.,   Thomas D.,  2005, \mn@doi [Astronomy {\&}
+  Astrophysics] {10.1051/0004-6361:20042126}, 438, 685
+
+\bibitem[\protect\citeauthoryear{Kuntschner et~al.,}{Kuntschner
+  et~al.}{2010}]{Kuntschner2010}
+Kuntschner H.,  et~al., 2010, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1111/j.1365-2966.2010.17161.x}, 408, 97
 
 \bibitem[\protect\citeauthoryear{Lagerholm, Kuntschner, Cappellari,
   Krajnovi{\'{c}}, McDermid  \& Rejkuba}{Lagerholm
@@ -65,9 +100,34 @@ LeFevre O.,  et~al., 2003, in Iye M.,  Moorwood A. F.~M.,  eds, Instrument
   \mn@doi{10.1117/12.460959}, \url
   {http://proceedings.spiedigitallibrary.org/proceeding.aspx?doi=10.1117/12.460959}
 
+\bibitem[\protect\citeauthoryear{Maraston \& Claudia}{Maraston \&
+  Claudia}{1998}]{Maraston1998}
+Maraston C.,  Claudia 1998, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1046/j.1365-8711.1998.01947.x}, 300, 872
+
+\bibitem[\protect\citeauthoryear{McDermid et~al.,}{McDermid
+  et~al.}{2006}]{McDermid2006}
+McDermid R.~M.,  et~al., 2006, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1111/j.1365-2966.2006.11065.x}, 373, 906
+
+\bibitem[\protect\citeauthoryear{Puzia, Saglia, Kissler-Patig, Maraston,
+  Greggio, Renzini  \& Ortolani}{Puzia et~al.}{2002}]{Puzia2002}
+Puzia T.~H.,  Saglia R.~P.,  Kissler-Patig M.,  Maraston C.,  Greggio L.,
+  Renzini A.,   Ortolani S.,  2002, \mn@doi [Astronomy and Astrophysics]
+  {10.1051/0004-6361:20021283}, 395, 45
+
+\bibitem[\protect\citeauthoryear{Salpeter}{Salpeter}{1955}]{Salpeter1955}
+Salpeter E.~E.,  1955, \mn@doi [The Astrophysical Journal] {10.1086/145971},
+  121, 161
+
 \bibitem[\protect\citeauthoryear{Sanchez-Blazquez et~al.,}{Sanchez-Blazquez
-  et~al.}{2006}]{Sanchez-Blazquez2006}
-Sanchez-Blazquez P.,  et~al., 2006, \mn@doi [Monthly Notices of the Royal
+  et~al.}{2006a}]{Sanchez-Blazquez2006a}
+Sanchez-Blazquez P.,  et~al., 2006a, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1111/j.1365-2966.2006.10699.x}, 371, 703
+
+\bibitem[\protect\citeauthoryear{Sanchez-Blazquez et~al.,}{Sanchez-Blazquez
+  et~al.}{2006b}]{Sanchez-Blazquez2006}
+Sanchez-Blazquez P.,  et~al., 2006b, \mn@doi [Monthly Notices of the Royal
   Astronomical Society] {10.1111/j.1365-2966.2006.10699.x}, 371, 703
 
 \bibitem[\protect\citeauthoryear{S{\'{a}}nchez et~al.,}{S{\'{a}}nchez
@@ -79,10 +139,55 @@ S{\'{a}}nchez S.~F.,  et~al., 2012, \mn@doi [Astronomy {\&} Astrophysics]
 Sarzi M.,  et~al., 2005, \mn@doi [Monthly Notices of the Royal Astronomical
   Society] {10.1111/j.1365-2966.2005.09839.x}, 366, 1151
 
+\bibitem[\protect\citeauthoryear{Schiavon, Rose, Courteau  \&
+  MacArthur}{Schiavon et~al.}{2005}]{Schiavon2005}
+Schiavon R.~P.,  Rose J.~A.,  Courteau S.,   MacArthur L.~A.,  2005, \mn@doi
+  [The Astrophysical Journal Supplement Series] {10.1086/431148}, 160, 163
+
+\bibitem[\protect\citeauthoryear{Thomas, Maraston  \& Korn}{Thomas
+  et~al.}{2004}]{Thomas2004}
+Thomas D.,  Maraston C.,   Korn A.,  2004, \mn@doi [Monthly Notices of the
+  Royal Astronomical Society] {10.1111/j.1365-2966.2004.07944.x}, 351, L19
+
+\bibitem[\protect\citeauthoryear{Thomas, Maraston, Schawinski, Sarzi  \&
+  Silk}{Thomas et~al.}{2010}]{Thomas2010}
+Thomas D.,  Maraston C.,  Schawinski K.,  Sarzi M.,   Silk J.,  2010, \mn@doi
+  [Monthly Notices of the Royal Astronomical Society]
+  {10.1111/j.1365-2966.2010.16427.x}, 404, 1775
+
+\bibitem[\protect\citeauthoryear{Trager, Worthey, Faber, Burstein  \&
+  Gonzalez}{Trager et~al.}{1998}]{Trager1998}
+Trager S.~C.,  Worthey G.,  Faber S.~M.,  Burstein D.,   Gonzalez J.~J.,  1998,
+  \mn@doi [The Astrophysical Journal Supplement Series] {10.1086/313099}, 116,
+  1
+
+\bibitem[\protect\citeauthoryear{Trager, Faber, Worthey  \&
+  Gonz{\'{a}}lez}{Trager et~al.}{2000}]{Trager2000}
+Trager S.~C.,  Faber S.~M.,  Worthey G.,   Gonz{\'{a}}lez J.~J.,  2000, \mn@doi
+  [The Astronomical Journal] {10.1086/301299}, 119, 1645
+
+\bibitem[\protect\citeauthoryear{Tripicco \& Bell}{Tripicco \&
+  Bell}{1995}]{Tripicco1995}
+Tripicco M.~J.,  Bell R.~A.,  1995, \mn@doi [The Astronomical Journal]
+  {10.1086/117744}, 110, 3035
+
+\bibitem[\protect\citeauthoryear{Vazdekis, S{\'{a}}nchez-Bl{\'{a}}zquez,
+  Falc{\'{o}}n-Barroso, Cenarro, Beasley, Cardiel, Gorgas  \&
+  Peletier}{Vazdekis et~al.}{2010}]{Vazdekis2010}
+Vazdekis A.,  S{\'{a}}nchez-Bl{\'{a}}zquez P.,  Falc{\'{o}}n-Barroso J.,
+  Cenarro A.~J.,  Beasley M.~A.,  Cardiel N.,  Gorgas J.,   Peletier R.~F.,
+  2010, \mn@doi [Monthly Notices of the Royal Astronomical Society]
+  {10.1111/j.1365-2966.2010.16407.x}, 404, 1639
+
 \bibitem[\protect\citeauthoryear{Wenger et~al.,}{Wenger
   et~al.}{2000}]{Wenger2000}
 Wenger M.,  et~al., 2000, \mn@doi [Astronomy and Astrophysics Supplement,
   v.143, p.9-22] {10.1051/aas:2000332}, 143, 9
+
+\bibitem[\protect\citeauthoryear{Worthey, Faber, Gonzalez  \& Burstein}{Worthey
+  et~al.}{1994}]{Worthey1994}
+Worthey G.,  Faber S.~M.,  Gonzalez J.~J.,   Burstein D.,  1994, \mn@doi [The
+  Astrophysical Journal Supplement Series] {10.1086/192087}, 94, 687
 
 \makeatother
 \end{thebibliography}
