@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Cygwin) (preloaded format=pdflatex 2017.10.31)  14 NOV 2017 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Cygwin) (preloaded format=pdflatex 2017.10.31)  15 NOV 2017 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -266,8 +266,12 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \backup@length=\skip56
 ) (./thesis.aux (./acknowledgements/dedication.aux) (./acknowledgements/acknowl
 edgements.aux) (./abstract/abstract.aux) (./introduction/introduction.aux) (./c
-hapter2/chapter2.aux) (./chapter4/chapter4.aux) (./chapter5/chapter5.aux) (./co
-nclusions/conclusions.aux) (./appendix/appendix1/appendix1.aux))
+hapter2/chapter2.aux
+
+LaTeX Warning: Label `fig:MassRe' multiply defined.
+
+) (./chapter4/chapter4.aux) (./chapter5/chapter5.aux) (./conclusions/conclusion
+s.aux) (./appendix/appendix1/appendix1.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
@@ -346,7 +350,7 @@ Package gensymb Info: Using \Omega for \ohm on input line 51.
 
 Package gensymb Warning: Not defining \micro.
 
-<oxlogo.png, id=75, 120.9318pt x 140.2038pt>
+<oxlogo.png, id=80, 120.9318pt x 140.2038pt>
 File: oxlogo.png Graphic file (type png)
 <use oxlogo.png>
 Package pdftex.def Info: oxlogo.png used on input line 63.
@@ -396,483 +400,491 @@ ne 4.
 
 
 
-] [3] [4]
-Overfull \hbox (15.39783pt too wide) in paragraph at lines 59--59
+] [3] [4] <chapter2/corr_image.png, id=200, 2312.64pt x 1300.86pt>
+File: chapter2/corr_image.png Graphic file (type png)
+<use chapter2/corr_image.png>
+Package pdftex.def Info: chapter2/corr_image.png used on input line 46.
+(pdftex.def)             Requested size: 390.25534pt x 219.51561pt.
+
+LaTeX Warning: Reference `cha:Gas' on page 5 undefined on input line 57.
+
+[5] [6 <./chapter2/corr_image.png>]
+Overfull \hbox (15.39783pt too wide) in paragraph at lines 70--70
 []\OT1/cmr/bx/n/17.28 The Multi-Unit Spec-tro-scopic Ex-plorer (MUSE) 
  []
 
-[5] [6]
+[7] [8]
 
-LaTeX Warning: Reference `fig:egSNR' on page 7 undefined on input line 103.
+LaTeX Warning: Reference `fig:egSNR' on page 9 undefined on input line 114.
 
-[7] <chapter2/egSNR.png, id=216, 906.0249pt x 830.8641pt>
+<chapter2/egSNR.png, id=231, 906.0249pt x 830.8641pt>
 File: chapter2/egSNR.png Graphic file (type png)
 <use chapter2/egSNR.png>
-Package pdftex.def Info: chapter2/egSNR.png used on input line 108.
+Package pdftex.def Info: chapter2/egSNR.png used on input line 119.
 (pdftex.def)             Requested size: 260.17464pt x 238.58632pt.
-[8 <./chapter2/egSNR.png>]
+[9] [10 <./chapter2/egSNR.png>]
 
-LaTeX Warning: Reference `tab:sample' on page 9 undefined on input line 126.
-
-[9] [10]
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.157 	 		[\ion{O}{iii}]
-                         	& 4958.92 & 5006.84 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.157 	 		[\ion{O}{iii}]
-                         	& 4958.92 & 5006.84 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing = inserted for \ifdim.
-<to be read again> 
-                   \protect 
-l.157 	 		[\ion{O}{iii}]
-                         	& 4958.92 & 5006.84 \\
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.157 	 		[\ion{O}{iii}]
-                         	& 4958.92 & 5006.84 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.157 	 		[\ion{O}{iii}]
-                         	& 4958.92 & 5006.84 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \unskip 
-l.157 	 		[\ion{O}{iii}]
-                         	& 4958.92 & 5006.84 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \unskip 
-l.157 	 		[\ion{O}{iii}]
-                         	& 4958.92 & 5006.84 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.157 	 		[\ion{O}{iii}]
-                         	& 4958.92 & 5006.84 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.157 	 		[\ion{O}{iii}]
-                         	& 4958.92 & 5006.84 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.158 	 		[\ion{N}{i}]
-                       	& 5199.36 & 5201.86 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.158 	 		[\ion{N}{i}]
-                       	& 5199.36 & 5201.86 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing = inserted for \ifdim.
-<to be read again> 
-                   \protect 
-l.158 	 		[\ion{N}{i}]
-                       	& 5199.36 & 5201.86 \\
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.158 	 		[\ion{N}{i}]
-                       	& 5199.36 & 5201.86 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.158 	 		[\ion{N}{i}]
-                       	& 5199.36 & 5201.86 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \unskip 
-l.158 	 		[\ion{N}{i}]
-                       	& 5199.36 & 5201.86 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \unskip 
-l.158 	 		[\ion{N}{i}]
-                       	& 5199.36 & 5201.86 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.158 	 		[\ion{N}{i}]
-                       	& 5199.36 & 5201.86 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.158 	 		[\ion{N}{i}]
-                       	& 5199.36 & 5201.86 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.159 	 		[\ion{O}{i}]
-                       	& 6300.30 & 6363.67 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.159 	 		[\ion{O}{i}]
-                       	& 6300.30 & 6363.67 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing = inserted for \ifdim.
-<to be read again> 
-                   \protect 
-l.159 	 		[\ion{O}{i}]
-                       	& 6300.30 & 6363.67 \\
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.159 	 		[\ion{O}{i}]
-                       	& 6300.30 & 6363.67 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.159 	 		[\ion{O}{i}]
-                       	& 6300.30 & 6363.67 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \unskip 
-l.159 	 		[\ion{O}{i}]
-                       	& 6300.30 & 6363.67 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \unskip 
-l.159 	 		[\ion{O}{i}]
-                       	& 6300.30 & 6363.67 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.159 	 		[\ion{O}{i}]
-                       	& 6300.30 & 6363.67 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.159 	 		[\ion{O}{i}]
-                       	& 6300.30 & 6363.67 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.160 	 		[\ion{N}{ii}]
-                        	& 6548.03 & 6583.41 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.160 	 		[\ion{N}{ii}]
-                        	& 6548.03 & 6583.41 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing = inserted for \ifdim.
-<to be read again> 
-                   \protect 
-l.160 	 		[\ion{N}{ii}]
-                        	& 6548.03 & 6583.41 \\
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.160 	 		[\ion{N}{ii}]
-                        	& 6548.03 & 6583.41 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.160 	 		[\ion{N}{ii}]
-                        	& 6548.03 & 6583.41 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \unskip 
-l.160 	 		[\ion{N}{ii}]
-                        	& 6548.03 & 6583.41 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \unskip 
-l.160 	 		[\ion{N}{ii}]
-                        	& 6548.03 & 6583.41 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.160 	 		[\ion{N}{ii}]
-                        	& 6548.03 & 6583.41 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.160 	 		[\ion{N}{ii}]
-                        	& 6548.03 & 6583.41 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.162 	 		[\ion{S}{ii}]
-                        	& 6716.47 & 6730.85 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.162 	 		[\ion{S}{ii}]
-                        	& 6716.47 & 6730.85 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing = inserted for \ifdim.
-<to be read again> 
-                   \protect 
-l.162 	 		[\ion{S}{ii}]
-                        	& 6716.47 & 6730.85 \\
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.162 	 		[\ion{S}{ii}]
-                        	& 6716.47 & 6730.85 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.162 	 		[\ion{S}{ii}]
-                        	& 6716.47 & 6730.85 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \unskip 
-l.162 	 		[\ion{S}{ii}]
-                        	& 6716.47 & 6730.85 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \unskip 
-l.162 	 		[\ion{S}{ii}]
-                        	& 6716.47 & 6730.85 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.162 	 		[\ion{S}{ii}]
-                        	& 6716.47 & 6730.85 \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.162 	 		[\ion{S}{ii}]
-                        	& 6716.47 & 6730.85 \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
+LaTeX Warning: Reference `tab:sample' on page 11 undefined on input line 137.
 
 [11]
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.168 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.168 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing = inserted for \ifdim.
+<to be read again> 
+                   \protect 
+l.168 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.168 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.168 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \unskip 
+l.168 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \unskip 
+l.168 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.168 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.168 	 		[\ion{O}{iii}]
+                         	& 4958.92 & 5006.84 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.169 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.169 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing = inserted for \ifdim.
+<to be read again> 
+                   \protect 
+l.169 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.169 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.169 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \unskip 
+l.169 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \unskip 
+l.169 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.169 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.169 	 		[\ion{N}{i}]
+                       	& 5199.36 & 5201.86 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.170 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.170 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing = inserted for \ifdim.
+<to be read again> 
+                   \protect 
+l.170 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.170 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.170 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \unskip 
+l.170 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \unskip 
+l.170 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.170 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.170 	 		[\ion{O}{i}]
+                       	& 6300.30 & 6363.67 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.171 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.171 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing = inserted for \ifdim.
+<to be read again> 
+                   \protect 
+l.171 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.171 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.171 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \unskip 
+l.171 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \unskip 
+l.171 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.171 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.171 	 		[\ion{N}{ii}]
+                        	& 6548.03 & 6583.41 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.173 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.173 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing = inserted for \ifdim.
+<to be read again> 
+                   \protect 
+l.173 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.173 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.173 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \unskip 
+l.173 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \unskip 
+l.173 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.173 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.173 	 		[\ion{S}{ii}]
+                        	& 6716.47 & 6730.85 \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+[12]
 ! Undefined control sequence.
-l.180 ...ivalent width of the spectrum, $F_\mathrM
+l.191 ...ivalent width of the spectrum, $F_\mathrM
                                                   {I}(\lambda)$, within the ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -880,34 +892,54 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Overfull \hbox (6.63516pt too wide) in paragraph at lines 224--225
+[13]
+Overfull \hbox (6.63516pt too wide) in paragraph at lines 235--236
 []\OT1/cmr/m/n/12 Much of the lit-er-a-ture mea-sures ab-sorp-tion line strengt
 hs un-der the Lick/Cassegrain
  []
 
-[12]
+[14]
 
-LaTeX Warning: Reference `subsec:absorption' on page 13 undefined on input line
- 226.
+LaTeX Warning: Reference `subsec:absorption' on page 15 undefined on input line
+ 237.
 
-[13]
 ! Too many }'s.
-l.233 			\end{equation}}
+l.244 			\end{equation}}
                         
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 242.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 253.
 
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 242.
-[14] [15]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 253.
+[15]
+
+LaTeX Warning: Reference `fig:' on page 16 undefined on input line 261.
+
+
+LaTeX Warning: File `chapter2/compare_resolutions.png' not found on input line 
+265.
+
+
+! Package pdftex.def Error: File `chapter2/compare_resolutions.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.265 ...twidth]{chapter2/compare_resolutions.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[16] [17]
 ! Undefined control sequence.
-l.261 ...garithmically spaced. We then use \mathsc
+l.278 ...garithmically spaced. We then use \mathsc
                                                   {emcee}, a \textsc{python}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -915,8 +947,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-) [16] (./thesis.bblpdfTeX warning (ext4): destination with the same identifier
- (name{page.16}) has been already used, duplicate ignored
+) [18] [19] (./thesis.bblpdfTeX warning (ext4): destination with the same ident
+ifier (name{page.16}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.102 
@@ -927,9 +959,19 @@ l.102
 
 
 
-] [17])
+]pdfTeX warning (ext4): destination with the same identifier (name{page.17}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.176 ...er}{Vazdekis et~al.}{2010}]{Vazdekis2010}
+                                                   [17])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
-[18]
+pdfTeX warning (ext4): destination with the same identifier (name{page.18}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.94 \end{document}
+                    [18]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
 (./thesis.aux (./acknowledgements/dedication.aux) (./acknowledgements/acknowled
 gements.aux) (./abstract/abstract.aux) (./introduction/introduction.aux) (./cha
@@ -938,17 +980,20 @@ lusions/conclusions.aux) (./appendix/appendix1/appendix1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 004C0BA4FD32353B3D40A4B46925137E;1365.
+(rerunfilecheck)             Checksum: 9A5A74A5AD4DA188452EF72072213A5B;1430.
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 7145 strings out of 494936
- 101507 string characters out of 6181324
- 197477 words of memory out of 5000000
- 10193 multiletter control sequences out of 15000+600000
+ 7162 strings out of 494936
+ 101780 string characters out of 6181324
+ 196675 words of memory out of 5000000
+ 10203 multiletter control sequences out of 15000+600000
  13873 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  34i,12n,30p,1932b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -984,10 +1029,10 @@ ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.p
 fb>
-Output written on thesis.pdf (22 pages, 773232 bytes).
+Output written on thesis.pdf (25 pages, 1683466 bytes).
 PDF statistics:
- 520 PDF objects out of 1000 (max. 8388607)
- 471 compressed objects within 5 object streams
- 101 named destinations out of 1000 (max. 500000)
- 155 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 548 PDF objects out of 1000 (max. 8388607)
+ 494 compressed objects within 5 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 168 words of extra memory for PDF output out of 10000 (max. 10000000)
 
