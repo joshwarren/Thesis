@@ -1,60 +1,60 @@
 \chapter{Stellar Kinematics and Populations}
 	\label{cha:stellar}
 % More preface here
-With the advent of the integral field spectroscopy (IFS), we can now observe the resolved properties of a galaxy, without relying on extrapolations of or multiple observations with long-slits. Surveys such as the SAURON/Atlas$^\text{3D}$ project have demonstrated that a systematic IFS survey provides a the wealth of information. This chapter focuses on the resolved stellar properties of our sample of radio galaxies and is structured as follows: firstly we present the kinematic maps for the stellar component of each galaxy (section \ref{sec:stellarKin}) and the distribution of the sample on the $\lambda_\mathrm{R_e}$--ellipticity plane. Then, in section \ref{sec:pop}, we investigate the stellar populations of each galaxy using the measured absorption line strengths. We conclude in section \ref{secNGC612} by looking at NGC612, the outlier of the sample. In this chapter we aim to demonstrate that our radio selected sample is no different in the V-band to optically selected ETGs (from the MASSIVE and Atlas$^\text{3D}$ samples). We achieve this by showing that they are consistent with defining characteristics of early-type galaxies (ETGs) that are accessible to V-band IFS data. The list of characteristics we investigate in this chapter are (the relevant section is shown in parenthesis):
-\begin{itemize}
-	\item The intrinsic shape of regular and non-regular rotators (section \ref{subsec:maps})
-	\item The fast/slow rotator fraction (\ref{subsec:FSfrac})
-	\item Absorption line strengths (\ref{subsec:absorption})
-	\item Mg -- $\mathrm{\sigma}$ relation (\ref{subsec:Mgsigma})
-	\item Old and metal rich stellar populations (\ref{subsec:ssp})
-	\item Stellar population radial gradients (\ref{subsubsec:popGrad})
-	\item Kinematically decoupled core (KDC) age -- size relation (\ref{subsec:popKDC})
-\end{itemize}
+With the advent of integral-field spectroscopy (IFS), we can now observe the spatially-resolved properties of a galaxy without relying on extrapolations of or multiple observations with slits. Surveys such as the Spectrographic Areal Unit for Research on Optical Nebulae (SAURON) \citep{deZeeuw2002} and Atlas$^\text{3D}$ \citep{Cappellari2011} have demonstrated that a systematic IFS survey provides a wealth of information. This chapter focuses on the resolved stellar properties of our sample of radio galaxies. In this we aim to demonstrate that our radio selected sample is no different in the $V$-band than optically-selected early-type galaxies ETGs from the MASSIVE (not an acronym; \citealt{Ma2014}) and Atlas$^\text{3D}$ samples. We achieve this by showing that they are consistent with the defining characteristics of ETGs that are accessible to $V$-band IFS data. The characteristics we investigate in this chapter are (relevant section is shown in parentheses): regular/non-regular rotator classification scheme, qualitative kinematic classes (see Fig.\,\ref{fig:EgSubstructure}; \ref{subsec:maps}), fast/slow rotator classifications (\ref{subsec:FSfrac}), radially resolved specific angular momentum profiles (with $\lambda_R$), absorption line strengths(\ref{subsec:absorption}), Mg--$\sigma$ relation (\ref{subsec:Mgsigma}), stellar populations (\ref{subsec:ssp}) and their gradients (\ref{subsubsec:popGrad}) and the kinematically-decoupled core (KDC) age--size relation(\ref{subsec:popKDC}). 
+% ^^^^^^^^^^^^^^^ check section references above are correct ^^^^^^^^^^^^^^^
+
+The chapter is structured as follows: firstly we present the kinematic maps for the stellar component of each galaxy (section \ref{sec:stellarKin}) and the distribution of the sample on the $\lambda_\mathrm{R_e}$--ellipticity diagram. Then, in section \ref{sec:pop}, we investigate the stellar populations of each galaxy using the measured absorption line strengths. Finally, in Section \ref{sec:NGC612} we specifically discuss NGC612, the outlier of the sample.
+
 
 \section{Kinematics}
 	\label{sec:stellarKin}
 
 	\subsection{Maps}
 		\label{subsec:maps}
-		Figures \ref{fig:VIMOS_stellar} and \ref{fig:MUSE_stellar} show the stellar line-of-sight velocity distribution (LOSVD) with associated uncertainties for all VIMOS and MUSE datacubes.
+		Using the methods described in Chapter \ref{cha:Data} to reduce (see Sections \ref{subsec:VIMOSreduction} and \ref{subsec:MUSE reduction}), spatially bin (Section \ref{subsec:Binning}) and fit the stellar line-of-sight velocity distributions (LOSVDs; here parametrised by the mean velocity, $v$ and velocity dispersion, $\sigma$, only; Section \ref{subsec:StellarFit}), we produce stellar kinematic maps. These kinematic maps and their associated uncertainties are shown in Figs.\,\ref{fig:VIMOS_stellar} and \ref{fig:MUSE_stellar} with their associated uncertainties for the VIMOS and MUSE datacubes, respectively. 
+
+		As part of this project, radio continuum maps have been produced by Robert Laing (private correspondence) by re-reducing archival data from the Very Large Array (VLA) in a variety of bands. We also use the VLA image from \citet{Lanz2010} for NGC 1316. These images have a variety of resolutions and spatial scales: we choose the image that closest matches our VIMOS and MUSE observations and overlay this on all maps (except those showing uncertainties) in red. Additionally, this project has also secured observations of the Southern Sample (except NGC 1316 and NGC 1399 for technique reasons) from the Atacama Large Millimeter/sub-millimeter Array (ALMA). \ce{^{12}CO(2-1)} flux maps have been produced by Ruffa et al.\ (in prep.). These are shown in cyan on all maps (except those showing uncertainties). 
+% Is the radio still in red contours? 
+
+
 
 		\begin{figure}
 			\centering
 			\includegraphics[height=0.62\textheight]{chapter4/vimos/kin1.png}
-			\caption[VIMOS stellar kinematic maps]{VIMOS stellar kinematic maps: From left to right: flux (image), velocity and velocity dispersion. Top to bottom: ESO 443-G24 and IC 1459. Rows show parameter and uncertainty in the parameter on alternate rows. Flux contours are shown in black, CO from ALMA in cyan and radio from VLA in red. The radio band displayed depends on the data available in the archive and which images had a similar resolution and and scales. Limits on the color scale (min/max $\mathrm{km \, s^{-1}}$) are: velocity maps (-425/425), velocity uncertainty (1/19), velocity dispersion (30/36) and velocity dispersion uncertainty (1/33).} 
+			\caption[VIMOS stellar kinematic maps]{VIMOS stellar kinematic maps. Left to right: flux (image), mean velocity and velocity dispersion. Top to bottom: ESO 443-G24 and IC 1459. Alternate rows show a given parameter its associated uncertainty. Flux contours (isophotes) are shown in black, \ce{^{12}CO(2-1)} contours from ALMA in cyan and radio continuum contours from VLA in red. The radio band displayed depends on the data available in the archive and which images had a similar resolution and scales. Limits on the colour scale (min/max $\mathrm{km \, s^{-1}}$) are: velocity maps (-425/425), velocity uncertainty (1/19), velocity dispersion (30/36) and velocity dispersion uncertainty (1/33).} 
 			\label{fig:VIMOS_stellar}
 		\end{figure}
 		\begin{figure}
 			\centering
 			\includegraphics[height=0.94\textheight]{chapter4/vimos/kin2.png}
-			\contcaption{continued for IC 1531, IC 4296 and NGC 1399.}
+			\contcaption{\textit{Cont.}}
 		\end{figure}
 		\begin{figure}
 			\centering
 			\includegraphics[height=0.94\textheight]{chapter4/vimos/kin3.png}
-			\contcaption{continued for NGC3100, NGC 3557 and NGC 7075.}
+			\contcaption{\textit{Cont.}}
 		\end{figure}
 		\begin{figure}
 			\centering
 			\includegraphics[height=0.62\textheight]{chapter4/vimos/kin4.png}
-			\contcaption{continued for PKS 718-34 and NGC 612. The color scale for NGC 612 for the velocity map is from $-322 \, \mathrm{km \, s^{-1}}$ to $322 \, \mathrm{km \, s^{-1}}$.}
+			\contcaption{\textit{Cont.} The colour scale for the mean velocity map of NGC 612 only is $-322$ to $322 \, \mathrm{km \, s^{-1}}$.}
 		\end{figure}
 
 		\begin{figure}
 			\centering
 			\includegraphics[height=0.62\textheight]{chapter4/muse/kin1.png}
-			\caption[MUSE stellar kinematic maps]{MUSE stellar kinematic maps: From top to bottom: IC 1459 and IC 4296. Plots are as in \ref{fig:MUSE_stellar} with the limits in the color scale (min/max $\mathrm{km \, s^{-1}}$): velocity maps (-111/111), velocity uncertainty (3/9), velocity dispersion (196/403) and velocity dispersion uncertainty (3/10).}
+			\caption[MUSE stellar kinematic maps]{As in Figure \ref{fig:VIMOS_stellar} but for the MUSE stellar kinematic maps. Limits on the colour scale are (min/max $\mathrm{km \, s^{-1}}$): mean velocity maps (-111/111), mean velocity uncertainty (3/9), velocity dispersion (196/403) and velocity dispersion uncertainty (3/10).}
 			\label{fig:MUSE_stellar}
 		\end{figure}
 		\begin{figure}
 			\centering
 			\includegraphics[height=0.62\textheight]{chapter4/muse/kin2.png}
-			\contcaption{continued for  NGC 1316 and NGC 1399}
+			\contcaption{\textit{Cont.}}
 		\end{figure}
 
 		
-		The kinematics of the sample are classified according to the regular-rotator/non regular-rotator (RR/NRR) regime given by \citet{Krajnovic2011} and fast/slow rotator (FR/SR) regime given by \citet{Cappellari2016} (originally defined by \citealt{Emsellem2011}, but later refined by \citealt{Cappellari2016}; see Section \ref{sec:ETG}). The $\lambda_{R_e}$--ellipticity plane is shown in figure \ref{fig:lambdaR_ellip}. Beyond this, we attempted to spot kinematic features, as defined in \citet{Krajnovic2011}, in an algorithmic way. However, artifacts from the VIMOS quadrants confuse any ellipse fitting methods and, as such, only maps from the MUSE data have been classified in this way: kinematic features in maps from VIMOS data were identified by eye. All these classifications are given in table \ref{tab:classify}. 
+		The kinematics of the sample are classified according to the regular-rotator/non regular-rotator (RR/NRR) regime given by \citet{Krajnovic2011} and fast/slow rotator (FR/SR) regime given by \citet{Cappellari2016} (originally defined by \citealt{Emsellem2011}, but later refined by \citealt{Cappellari2016}; see Section \ref{sec:ETG}). The $\lambda_{R_e}$--ellipticity plane is shown in figure \ref{fig:lambdaR_ellip}. Beyond this, we attempted to spot kinematic features, as defined in \citet{Krajnovic2011}, in an algorithmic way. However, artifacts from the VIMOS quadrants confuse any ellipse fitting methods and, as such, only maps from the MUSE data have been classified in this way: kinematic features in maps from VIMOS data were identified by eye. All these classifications are given in table \ref{tab:classify}. Here and hereafter, where MUSE datacubes exist their derived properties are quoted. Otherwise the values are derived from the VIMOS datacubes.  
 
 
 		\begin{table}
@@ -65,7 +65,7 @@ With the advent of the integral field spectroscopy (IFS), we can now observe the
 			\begin{tabular}{l r r p{0.7cm} l l l l}
 				\hline
 				\hline
-				Galaxy		& $\lambda_{R_e}$ & $\epsilon$  & $\Gamma_\text{kin}$ (deg) & FR/ SR 	& RR/ NRR 	& Feat. & Group 	\\
+				Galaxy		& $\lambda_\mathrm{R_e}$ & $\epsilon$  & $\Gamma_\text{kin}$ (deg) & FR/SR 	& RR/NRR 	& Feature & Group 	\\
 				\hline 
 				ESO 443-G024 & 0.031 & 0.32 & 55.2 	& FR & NRR & KDC & c \\
 				IC 1459 	& 0.174 & 0.24 & 87.9	& SR & NRR & KDC & c \\
@@ -83,12 +83,12 @@ With the advent of the integral field spectroscopy (IFS), we can now observe the
 			\end{tabular}
 			\begin{tablenotes}
 			\small
-			\item $^\text{a}$ This is a tentative classification. A higher signal to noise ratio (S/N) is required to a larger radii to confirm this.
-			\item Here and hereafter where MUSE datacubes exist, their derived properties are quoted preferentially. Otherwise the values are VIMOS derived properties. 
-			\item Col. 1: Galaxy name, Col. 2: $\lambda_\mathrm{R_e}$, Col. 3: Ellipticity, Col. 4: Misalignment between kinematic position angle and photometric position angle, Col. 5: Fast or slow rotator, Col. 6: Regular rotator or non-regular rotator, Col. 7: Kinematic features (abbreviations defined in section \ref{sec:ETG}), Col. 8: Kinematic group as defined in section \ref{sec:ETG}
+			\item \textit{Notes:} $^\text{a}$ Tentative classification. A higher signal-to-noise ratio (S/N) in the outer regions of the field of view is required for confirmation.
+			\item col.\,1: Galaxy name; col.\,2: $\lambda_\mathrm{R_e}$; col.\,3: Ellipticity; col.\,4: Misalignment between the kinematic and photometric position angles; col.\,5: Fast-/slow-rotator (FR/SR) classification; col.\,6: Regular-rotator (RR) or non-regular-rotator (NRR); col.\,7: Kinematic features (see Section \ref{sec:ETG}); col.\,8: Kinematic group (see Section \ref{sec:ETG}).
 			\end{tablenotes}
 		\end{threeparttable}
 		\end{table}
+
 
 		The photometric position angle, $PA_\text{phot}$, is the angle of axis from North along which the surface brightness reaches the maximum values. Similarly, the kinematic position angle, $PA_\text{kin}$, is the angle of axis from North along which the projected velocities reaches the maximum absolute values. Column 4 in table \ref{tab:classify} shows the misalignment between the photometric position angle and the kinematic position angle, $\Gamma_\text{kin} = \left| PA_\text{phot} - PA_\text{kin} \right|$. \citet{Cappellari2007}, \citet{Krajnovic2011} and \citet{Fogarty2015} all show that regular rotating galaxies (hereafter referred to as regular rotators) almost always have aligned kinematic and photometric axes (with a scatter of 4$\degree$). 
 		Regular rotators with a significant misalignment are either very round, interacting or strongly barred (see figure \ref{fig:Misalignment}). Taking into account the lower quality of data, our results are consistent with this. Of the 4 regularly rotating galaxies in the Southern sample, 2 are misaligned to less than 8$\degree$ (NGC 612 and NGC 3557) and the other 2 are round ($\epsilon < 0.3$; IC 4296 and NGC 3100). As noted in \citet{Cappellari2016}, this result requires that regular rotators are axis-symmetric.
@@ -182,7 +182,7 @@ With the advent of the integral field spectroscopy (IFS), we can now observe the
 		\begin{figure}
 			\centering
 			\includegraphics[height=0.94\textheight]{chapter4/vimos/abs1.png}
-			\caption[VIMOS absorption line strength maps]{VIMOS stellar kinematic maps: From left to right: ESO 443-G24, ESO 443-G24 uncertainties, IC 1459 and IC 1459 uncertainties. From top to bottom: G4300, Fe4383, Ca4455, Fe4531, H$_\beta$, Fe5015, Mg$_b$. Plots are as in \ref{fig:VIMOS_stellar}. Limits on the color scale are 0-9 \AA  for the line strengths and 0-0.5 \AA  for the uncertainties.}
+			\caption[VIMOS absorption line strength maps]{VIMOS stellar kinematic maps: From left to right: ESO 443-G24, ESO 443-G24 uncertainties, IC 1459 and IC 1459 uncertainties. From top to bottom: G4300, Fe4383, Ca4455, Fe4531, H$_\beta$, Fe5015, Mg$_b$. Plots are as in \ref{fig:VIMOS_stellar}. Limits on the colour scale are 0-9 \AA  for the line strengths and 0-0.5 \AA  for the uncertainties.}
 			\label{fig:VIMOS_absorption}
 		\end{figure}
 		\begin{figure}
@@ -209,13 +209,13 @@ With the advent of the integral field spectroscopy (IFS), we can now observe the
 		\begin{figure}
 			\centering
 			\includegraphics[height=0.94\textheight]{chapter4/muse/abs1.png}
-			\caption[MUSE absorption line strength maps]{MUSE stellar kinematic maps: From left to right: IC1459, IC1459 uncertainties, IC4296 and IC4296 uncertainties. Plots are as in Figure \ref{fig:VIMOS_stellar}. Limits on the color scale are 0-9 \AA  for the line strengths and 0-0.5 \AA  for the uncertainties.}
+			\caption[MUSE absorption line strength maps]{MUSE stellar kinematic maps: From left to right: IC1459, IC1459 uncertainties, IC4296 and IC4296 uncertainties. Plots are as in Figure \ref{fig:VIMOS_stellar}. Limits on the colour scale are 0-9 \AA  for the line strengths and 0-0.5 \AA  for the uncertainties.}
 			\label{fig:MUSE_absorption}
 		\end{figure}
 		\begin{figure}
 			\centering
 			\includegraphics[height=0.54\textheight]{chapter4/muse/abs1b.png}
-			\contcaption{continued: From top to bottom: Fe5782, NaD, TiO1, TiO2. Plots are as in \ref{fig:VIMOS_stellar}. Limits on the color scale are 0-9 \AA  for the line strengths and 0-1 \AA  for the uncertainties and 0-0.35 mag for TiO1 and TiO2 line strengths and 0-0.03 mag for the uncertainty in TiO1 and TiO2.}
+			\contcaption{continued: From top to bottom: Fe5782, NaD, TiO1, TiO2. Plots are as in \ref{fig:VIMOS_stellar}. Limits on the colour scale are 0-9 \AA  for the line strengths and 0-1 \AA  for the uncertainties and 0-0.35 mag for TiO1 and TiO2 line strengths and 0-0.03 mag for the uncertainty in TiO1 and TiO2.}
 		\end{figure}
 		\begin{figure}
 			\centering
@@ -341,7 +341,7 @@ With the advent of the integral field spectroscopy (IFS), we can now observe the
 		\begin{figure}
 			\centering
 			\includegraphics[height=0.94\textheight]{chapter4/vimos/pop1.png}
-			\caption[VIMOS stellar population maps]{VIMOS stellar population maps: From left to right: age, metallicity and alpha enhancement, Top to bottom ESO 443-G24, IC 1459 and IC 1531. Rows show parameter and uncertainty in the parameter on alternate rows. Plots are as in figure \ref{fig:VIMOS_stellar}. Color scales have limits reflecting the range of SSP available models.}
+			\caption[VIMOS stellar population maps]{VIMOS stellar population maps: From left to right: age, metallicity and alpha enhancement, Top to bottom ESO 443-G24, IC 1459 and IC 1531. Rows show parameter and uncertainty in the parameter on alternate rows. Plots are as in figure \ref{fig:VIMOS_stellar}. colour scales have limits reflecting the range of SSP available models.}
 			\label{fig:VIMOS_pop}
 		\end{figure}
 		\begin{figure}
@@ -363,7 +363,7 @@ With the advent of the integral field spectroscopy (IFS), we can now observe the
 		\begin{figure}
 			\centering
 			\includegraphics[height=0.94\textheight]{chapter4/muse/pop1.png}
-			\caption[MUSE stellar population maps]{MUSE stellar population maps: From top to bottom IC 1459, IC 4296 and NGC 1316. Plots are as in figure \ref{fig:VIMOS_stellar}. Color scales have limits reflecting the range of SSP available models.}
+			\caption[MUSE stellar population maps]{MUSE stellar population maps: From top to bottom IC 1459, IC 4296 and NGC 1316. Plots are as in figure \ref{fig:VIMOS_stellar}. colour scales have limits reflecting the range of SSP available models.}
 			\label{fig:MUSE_pop}
 		\end{figure}
 		\begin{figure}
@@ -414,7 +414,7 @@ With the advent of the integral field spectroscopy (IFS), we can now observe the
 		\begin{figure}
 			\centering
 			\includegraphics[width=.7\textwidth]{chapter4/KDC_size_age.png}
-			\caption[KDC dichotomy]{The KDC size -- age relation showing KDCs are either old or small. Colors of symbols are: VIMOS in red, MUSE in blue and SAURON from \citet{Kuntschner2010} in black and gray for fast and slow rotators respectively (Atlas$^\text{3D}$ did not repeat these measurements after SAURON.}
+			\caption[KDC dichotomy]{The KDC size -- age relation showing KDCs are either old or small. colours of symbols are: VIMOS in red, MUSE in blue and SAURON from \citet{Kuntschner2010} in black and gray for fast and slow rotators respectively (Atlas$^\text{3D}$ did not repeat these measurements after SAURON.}
 			\label{fig:KDC}
 		\end{figure}
 
