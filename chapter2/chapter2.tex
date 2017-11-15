@@ -6,12 +6,12 @@ This chapter presents the observations made for this project, of the Southern Sa
 \section{The VIsable Multi-Object Spectrograph (VIMOS)}
 	\label{sec:VIMOS}
 	\subsection{The VIMOS Instrument}
-		VIMOS is a fibre-fed, multi-purpose spectrograph mounted on Unit Telescope 3 (UT3) on the ESO Very Large Telescope (VLT) in Paranal, Chile \citep{LeFevre2003}. It can operate in a number of configurations: direct imaging, multi-object spectroscopy (MOS) or integral-field spectroscopy (IFS). For this program, VIMOS was used in IFS mode. 
+		VIMOS is a fibre-fed, multi-purpose spectrograph mounted on Unit Telescope 3 (UT3) on the European Southern Observatory's (ESO's) Very Large Telescope (VLT) in Paranal, Chile \citep{LeFevre2003}. It can operate in a number of configurations: direct imaging, multi-object spectroscopy (MOS) or integral-field spectroscopy (IFS). For this program, VIMOS was used in IFS mode. 
 
 		The integral-field unit (IFU) has a field of view of 40 x 40 spatial pixels (spaxels) with a choice of sampling of 0.67" or 0.33". There are 6 available grisms with varying wavelength ranges and spectral resolutions: low- or high-resolution (LR or HR) red; HR orange; or LR, medium resolution (MR) or HR blue. The observations presented in the following Section were taken using the new (at the time) HR Blue grism with a spatial resolution of 0.67". 
 
 % Find quadrant names - on postit notes on uni screen.
-		The field of view of VIMOS is split into 4 quadrants (named in the fits headers, perhaps unhelpful, \_\_\_\_\_\_). The quadrants are run in parallel as independent detectors (it is not possible to use different grisms with different quadrants). Fibres are arranged in a row along the short direction along the charge-coupling device (CCD) detectors, and the light from each fibre is dispersed by the grism in the other direction, giving rise the row-stack spectra (RSS) format of most IFU devices.
+		The field of view of VIMOS is split into 4 quadrants (named in the fits headers, perhaps unhelpfully, \_\_\_\_\_\_). The quadrants are run in parallel as independent detectors (it is not possible to use different grisms with different quadrants). Fibres are arranged in a row along the short direction along the charge-coupling device (CCD) detectors, and the light from each fibre is dispersed by the grism in the other direction, giving rise the row-stack spectra (RSS) format of most IFU devices.
 
 		VIMOS has several well known, though not well understood technical issues. These include several low transmission (bad) fibers, strong flexure and large differences in sensitivity across its 4 separate detectors, known as quadrants. These are addressed by a specialist data reduction pipeline as described in Section \ref{subsec:VIMOSreduction} with the a discussion of the resulting data quality in Section \ref{subsec:VIMOSartifacts} (for more detail also see the instrument manual, section 2.8 in current version\footnote{http://www.eso.org/sci/facilities/paranal/instruments/vimos/doc.html}).
 
@@ -37,32 +37,31 @@ This chapter presents the observations made for this project, of the Southern Sa
 
 		The quadrant were finally combined into a single file, which was converted from the RSS format to a cube (with dimensions of RA, Dec. and wavelength, $\lambda$). Finally, the change in position of the centre of the galaxy due to differential atmospheric refection (DAR) was measured and corrected for. 
 
-		Following on from this, we noted that the cubes where still not fully corrected. A fringe-like pattern was still observable in the spectral direction and quadrants were not calibrated to each other. These were improved by implementing a \textsc{python} version of the ad-hoc corrections given in \citet{Lagerholm2012}. This involves re-normalizing the quadrants to each other by minimizing the difference of the integrated spectra in neighboring fibers along the edge of each quadrant (Q2 was held constant). This was followed by the removal of a fringe-like pattern, by dividing out a smoothed median spectrum from the eight surrounding fibers of any given fiber, over a scale of 150 pixels. Figure \ref{fig:Correction} shows the image (datacube collapsed in the spectral direction) of NGC 3557 before and after this correction. These steps mean that the data-cubes will not be perfectly flux-calibrated, however the effect is multiplicative and thus will not effect equivalent width measurements. From comparison the the MUSE data (Section \ref{sec:MUSE}) we estimate flux of the resulting datacubes to be in units of $\sim 10^{-15} \, \mathrm{erg\,s^{-1}\,cm^{-2}}$. 
+		Following on from this, we noted that the cubes where still not fully corrected. Three main issues remain: quadrants have different intensities, clearly showing an uncorrected difference in throughput; diagonal intensity stripes; and a fringe-like pattern was still observable in the spectral direction. \citet{Lagerholm2012} points out that the intensity strips do not seem to be bound to the quadrants. They conclude that the stripes therefore originate from an unknown reduction pipeline problem. They make use of the reduction pipeline supplied by ESO\footnote{http://www.eso.org/sci/software/pipelines/vimos/}, while we have used the independent \textsc{Py3D} and also observe the intensity stripes. This suggests that the pipeline may not be the cause. The fringe-like patterns appear to be due to position-angle and hysteresis dependent reflections occurring within the fibres. 
+
+		These issues were corrected by implementing a \textsc{python} version of the ad-hoc corrections given in \citet{Lagerholm2012}. This involves re-normalizing the quadrants to each other by minimizing the difference of the integrated spectra in neighboring fibers along the edge of each quadrant (Q2 was held constant). This was followed by the removal of a fringe-like pattern, by dividing out a smoothed median spectrum from the eight surrounding fibers of any given fiber, over a scale of 150 pixels (example shown for a single spaxel in NGC 3100 in the bottom panel of Fig.\,\ref{fig:Correction}). The top two panels in Fig.\,\ref{fig:Correction} show the images (where the datacube is collapsed in the spectral direction) of NGC 3557 before and after these corrections are applied. These steps mean that the data-cubes will not be perfectly flux-calibrated, however the effect is multiplicative and thus will not effect equivalent width measurements. From comparison the the MUSE data (Section \ref{sec:MUSE}) we estimate flux of the resulting datacubes to be in units of $\sim 10^{-15} \, \mathrm{erg\,s^{-1}\,cm^{-2}}$. 
 
 		\begin{figure}
 			\centering
-			\includegraphics[width=.7\textwidth]{chapter2/ngc3557_corr_image.png}
-			\caption[Affect of Ad-hoc Correction to VIMOS datacubes]{Before and after ad-hoc correction is applied to NGC 3557. The correction is aimed to improve the quadrant-to-quadrant calibration and reduce diagonal intensity strips. }
+			\includegraphics[width=.9\textwidth]{chapter2/corr_image.png}
+			\caption[Ad-hoc correction to VIMOS datacubes]{The affect of the ad-hoc corrections applied as part of the VIMOS data reduction pipeline. Top panels show before and after ad-hoc correction is applied to NGC 3557. The correction is aimed to improve the quadrant-to-quadrant calibration and reduce diagonal intensity strips. Bottom panel: an example of the correction applied to a single spaxel in NGC 3100 to correct for the fringe-like pattern.}
 			\label{fig:Correction}
 		\end{figure}
-
-
-
-		
 
 		The variance spectra is propagated throughout the data reduction pipeline and square-rooted at this point, to be used a noise input in the analysis (Section \ref{sec:analysis})
 
 	\subsection{Data Quality}
 		\label{subsec:VIMOSartifacts}
+		By comparing the top panels in Fig.\,\ref{fig:Correction}, we can clearly see that while there is an obvious improvement to the calibration between the quadrants, there is still a sharp transition. This often gives rise to characteristic diamond shaped isophotes, rather than ellipses. The neighboring spaxels along the transitions can have fluxes that are different by as much as 20-30\%. Luckily, the worst affected galaxies are IC 4296 and NGC 1399, for which we have MUSE archival data for (see Section \ref{sec:MUSE}). 
 
+		The ad-hoc corrections applied will correlate much of the data. However the affect should not be large and we therefore chose to neglect this correlation and treat these corrections as absolute i.e. the variance spectra are scaled by the same factor as the observed spectra. These correction will however, spatially smooth the data. This is particularly undesirable at the centres of our sample, where the affects of the active-galactic nuclei (AGN) should be observed. This should be taken into account (particularly for Chapter \ref{cha:Gas}).
 
-
-
-
-
-
-
-
+	\subsection{Other Pipelines Tested}
+		\label{subsec:Other}
+		There are two other data-reduction pipelines that are publicly available. First is the ESO supplied VIMOS pipeline recipe (a plug-in) for their general purpose data handling tool \textsc{Gasgano}. At the start of this project, this pipeline was not well received by the community. Indeed ESO support suggested I try the alternative: \textsc{P3D}. Upgrades have since been made to both the instrument and the pipeline as well as improving the suggested observing schedules to remove some of the issues that we found when calibrating. 
+		
+% Describe P3D and the issues we had with it. 
+		\textsc{P3D} is comprehensive, multi-instrument package with 
 
 
 
@@ -260,8 +259,14 @@ This chapter presents the observations made for this project, of the Southern Sa
 
 			ETGs often have very different fractional abundances of various metals to the nearby stars that we are able to observe (all of which have near solar abundances). As such the stellar libraries that are used to calibrate the models fall far short of the required coverage of the parameter space. Most methods make some effort to extrapolate to non-solar abundances. In a similar way to the fitting functions described above, `index response functions' can be found. This calibrates the effect of varying abundances of individual elements. In this case, comparison must be made to completely theoretical spectra.
 
-			We use the SSP models by \citet{Thomas2010} (referred to hereafter as the TMJ models) as they are based on flux calibrated spectra and therefore do not require calibration to the Lick/IDS system. These models assume a \citet{Salpeter1955} IMF ($\Phi(M) \propto M^{-2.35}$) and are based on the evolutionary population synthesis code by \citet{Maraston1998}. The models use stellar evolutionary tracks by \citet{Cassisi1997} for metallicities of $[Z/H] < -0.33$ and \citet{Girardi2000} for $[Z/H] \ge -0.33$; the MILES stellar spectral library by \citet{Sanchez-Blazquez2006a} and \citet{Falcon-Barroso2011a}; fitting functions by \citet{Johansson2010} and index response functions by \citet{Korn2005}. The MILES library gives the models a resolution of 2.5\,\AA\ (FWHM). This is below the resolution of the reduced VIMOS data (at 3\,\AA), but we ignore this effect. Comparing the absorption line strengths measured at 2.5\,\AA\ and 3\,\AA\ for the MUSE datasets does not show much difference.
-% Produce a 2.5A vs 3A plot for a MUSE galaxy for above ^^^^^^.
+			We use the SSP models by \citet{Thomas2010} (referred to hereafter as the TMJ models) as they are based on flux calibrated spectra and therefore do not require calibration to the Lick/IDS system. These models assume a \citet{Salpeter1955} IMF ($\Phi(M) \propto M^{-2.35}$) and are based on the evolutionary population synthesis code by \citet{Maraston1998}. The models use stellar evolutionary tracks by \citet{Cassisi1997} for metallicities of $[Z/H] < -0.33$ and \citet{Girardi2000} for $[Z/H] \ge -0.33$; the MILES stellar spectral library by \citet{Sanchez-Blazquez2006a} and \citet{Falcon-Barroso2011a}; fitting functions by \citet{Johansson2010} and index response functions by \citet{Korn2005}. The MILES library gives the models a resolution of 2.5\,\AA\ (FWHM). This is below the resolution of the reduced VIMOS data (at 3\,\AA), but we in Fig.\,\ref{fig:} we show that this effect is negligible. Comparing the absorption line strengths measured at 2.5\,\AA\ and 3\,\AA\ for the MUSE datasets shows the most effected index is Fe5782 with a mean difference of 1\% between the index measured at 3\,\AA\ and 2.5\,\AA. All other indices show a few tenths of a percent difference. 
+
+			\begin{figure}
+				\centering
+				\includegraphics[width=.7\textwidth]{chapter2/compare_resolutions.png}
+				\caption[Affect of resolution on absorption line index strength]{The effect of resolution of the measure absorption line strength. This shows that we can assume the effect of a lower spectral resolution in the VIMOS spectra, compared to the TMJ models will be negligible.}
+				\label{fig:MassRe}
+			\end{figure}
 
 			The response functions by \citet{Korn2005} extend the work of \citet{Tripicco1995} who investigated the response functions of the original 21 Lick indices when the individual element abundance fractions are varied for 5 Gyr old SSP at solar metallicities. The new functions include varying metallicities, as well as individual element fractions, and are calculated for all 25 Lick indices. The effect of age on these response function was tested by computing them for 1 Gyr models and comparing them to the 5 Gyr models by \citet{Tripicco1995}. They found a 1\% difference for two indices (G4300 and Fe4383) and a significantly lower result for all other indices, concluding that age does not significantly effect the response functions.
 
