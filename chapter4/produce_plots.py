@@ -69,8 +69,6 @@ def plot(galaxies, str_galaxies, file_name):
 		D = pickle.load(pickleFile)
 		pickleFile.close()
 
-		vin_dir += '/pop'
-
 		f = fits.open(get_dataCubeDirectory(galaxy))
 		header = f[0].header
 		f.close()
@@ -164,6 +162,27 @@ def plot(galaxies, str_galaxies, file_name):
 			a.ax_dis.set_xticklabels([])
 			a.ax_dis.set_xlabel('')
 
+	# Create gap between galaxies
+	for i in range(2, len(galaxies)*2, 2):
+		for a in axs[i:i+2, :].flatten():
+			ax_loc = a.get_position()
+			ax_loc.y0 -= i*0.01
+			ax_loc.y1 -= i*0.01
+
+			a.set_position(ax_loc)
+			if hasattr(a, 'ax_dis'):
+				a.ax_dis.set_position(ax_loc)
+	for i in range(0, len(galaxies)*2, 2):
+		for a in axs[i+1, :].flatten():
+			ax_loc = a.get_position()
+			ax_loc.y0 += 0.01
+			ax_loc.y1 += 0.01
+
+			a.set_position(ax_loc)
+			if hasattr(a, 'ax_dis'):
+				a.ax_dis.set_position(ax_loc)
+
+
 	fig.text(0.24, 0.9, r'Flux', va='top', ha='center', size='xx-large')
 	fig.text(0.51, 0.9, r'Velocty', va='top', ha='center', size='xx-large')
 	fig.text(0.8, 0.9, r'Velocty Dispersion', va='top', ha='center', 
@@ -176,26 +195,24 @@ def plot(galaxies, str_galaxies, file_name):
 	if len(galaxies) == 2:
 		fig.text(0.07, 0.7, str_galaxies[0], va='center', ha='right', 
 			rotation='vertical', size='xx-large')
-		fig.text(0.07, 0.3, str_galaxies[1], va='center', ha='right', 
+		fig.text(0.07, 0.29, str_galaxies[1], va='center', ha='right', 
 			rotation='vertical', size='xx-large')
 
 	if len(galaxies) == 3:
 		fig.text(0.07, 0.755, str_galaxies[0], va='center', ha='right', 
 			rotation='vertical', size='xx-large')
-		fig.text(0.07, 0.5, str_galaxies[1], va='center', ha='right',
+		fig.text(0.07, 0.48, str_galaxies[1], va='center', ha='right',
 			rotation='vertical', size='xx-large')
-		fig.text(0.07, 0.23, str_galaxies[2], va='center', ha='right',
+		fig.text(0.07, 0.19, str_galaxies[2], va='center', ha='right',
 			rotation='vertical', size='xx-large')
 	
 	# Add colorbar
 	ax_loc = axs[0,2].get_position()
-	cax = fig.add_axes([0.93, ax_loc.y0, 0.02, ax_loc.height])
+	cax = fig.add_axes([ax_loc.x1+0.03, ax_loc.y0, 0.02, ax_loc.height])
 	cbar = plt.colorbar(axs[1,1].cs, cax=cax)
 	cbar.ax.set_yticklabels([])
 
-
-
-
+	# plt.show()
 	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight')
 
 
