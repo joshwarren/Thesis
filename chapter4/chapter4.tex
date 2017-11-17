@@ -1,7 +1,7 @@
 \chapter{Stellar Kinematics and Populations}
 	\label{cha:stellar}
 % More preface here
-With the advent of integral-field spectroscopy (IFS), we can now observe the spatially-resolved properties of a galaxy without relying on extrapolations of or multiple observations with slits. Surveys such as the Spectrographic Areal Unit for Research on Optical Nebulae (SAURON) \citep{deZeeuw2002} and Atlas$^\text{3D}$ \citep{Cappellari2011} have demonstrated that a systematic IFS survey provides a wealth of information. This chapter focuses on the resolved stellar properties of our sample of radio galaxies. In this we aim to demonstrate that our radio selected sample is no different in the $V$-band than optically-selected early-type galaxies ETGs from the MASSIVE (not an acronym; \citealt{Ma2014}) and Atlas$^\text{3D}$ samples. We achieve this by showing that they are consistent with the defining characteristics of ETGs that are accessible to $V$-band IFS data. The characteristics we investigate in this chapter are (relevant section is shown in parentheses): regular/non-regular rotator classification scheme, qualitative kinematic classes (see Fig.\,\ref{fig:EgSubstructure}; \ref{subsec:maps}), fast/slow rotator classifications (\ref{subsec:FSfrac}), radially resolved specific angular momentum profiles (with $\lambda_R$), absorption line strengths(\ref{subsec:absorption}), Mg--$\sigma$ relation (\ref{subsec:Mgsigma}), stellar populations (\ref{subsec:ssp}) and their gradients (\ref{subsubsec:popGrad}) and the kinematically-decoupled core (KDC) age--size relation(\ref{subsec:popKDC}). 
+With the advent of integral-field spectroscopy (IFS), we can now observe the spatially-resolved properties of a galaxy without relying on extrapolations of or multiple observations with slits. Surveys such as the Spectrographic Areal Unit for Research on Optical Nebulae (SAURON) \citep{deZeeuw2002} and Atlas$^\text{3D}$ \citep{Cappellari2011} have demonstrated that a systematic IFS survey provides a wealth of information. This chapter focuses on the resolved stellar properties of our sample of radio galaxies. In this we aim to demonstrate that our radio selected sample is no different in the $V$-band than optically-selected early-type galaxies ETGs from the MASSIVE (not an acronym; \citealt{Ma2014}) and Atlas$^\text{3D}$ samples. We achieve this by showing that they are consistent with the defining characteristics of ETGs that are accessible to $V$-band IFS data. The characteristics we investigate in this chapter are (relevant section is shown in parentheses): regular/non-regular rotator classification scheme, qualitative kinematic classes (see Fig.\,\ref{fig:EgSubstructure}; \ref{subsec:maps}), fast/slow rotator classifications (\ref{subsec:FSRot}), radially resolved specific angular momentum profiles (with $\lambda_R$; \ref{subsec:ResolvedLambda_R}), absorption line strengths(\ref{subsec:absorption}), Mg--$\sigma$ relation (\ref{subsec:Mgsigma}), stellar populations (\ref{subsec:ssp}) and their gradients (\ref{subsubsec:popGrad}) and the kinematically-decoupled core (KDC) age--size relation(\ref{subsec:popKDC}). 
 % ^^^^^^^^^^^^^^^ check section references above are correct ^^^^^^^^^^^^^^^
 
 The chapter is structured as follows: firstly we present the kinematic maps for the stellar component of each galaxy (section \ref{sec:stellarKin}) and the distribution of the sample on the $\lambda_\mathrm{R_e}$--ellipticity diagram. Then, in section \ref{sec:pop}, we investigate the stellar populations of each galaxy using the measured absorption line strengths. Finally, in Section \ref{sec:NGC612} we specifically discuss NGC612, the outlier of the sample.
@@ -53,8 +53,6 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 			\contcaption{\textit{Cont.}}
 		\end{figure}
 
-		
-		The kinematics of the sample are classified according to the regular-rotator/non regular-rotator (RR/NRR) regime given by \citet{Krajnovic2011} and fast/slow rotator (FR/SR) regime given by \citet{Cappellari2016} (originally defined by \citealt{Emsellem2011}, but later refined by \citealt{Cappellari2016}; see Section \ref{sec:ETG}). The $\lambda_{R_e}$--ellipticity plane is shown in figure \ref{fig:lambdaR_ellip}. Beyond this, we attempted to spot kinematic features, as defined in \citet{Krajnovic2011}, in an algorithmic way. However, artifacts from the VIMOS quadrants confuse any ellipse fitting methods and, as such, only maps from the MUSE data have been classified in this way: kinematic features in maps from VIMOS data were identified by eye. All these classifications are given in table \ref{tab:classify}. Here and hereafter, where MUSE datacubes exist their derived properties are quoted. Otherwise the values are derived from the VIMOS datacubes.  
 
 
 		\begin{table}
@@ -90,45 +88,88 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 		\end{table}
 
 
-		The photometric position angle, $PA_\text{phot}$, is the angle of axis from North along which the surface brightness reaches the maximum values. Similarly, the kinematic position angle, $PA_\text{kin}$, is the angle of axis from North along which the projected velocities reaches the maximum absolute values. Column 4 in table \ref{tab:classify} shows the misalignment between the photometric position angle and the kinematic position angle, $\Gamma_\text{kin} = \left| PA_\text{phot} - PA_\text{kin} \right|$. \citet{Cappellari2007}, \citet{Krajnovic2011} and \citet{Fogarty2015} all show that regular rotating galaxies (hereafter referred to as regular rotators) almost always have aligned kinematic and photometric axes (with a scatter of 4$\degree$). 
-		Regular rotators with a significant misalignment are either very round, interacting or strongly barred (see figure \ref{fig:Misalignment}). Taking into account the lower quality of data, our results are consistent with this. Of the 4 regularly rotating galaxies in the Southern sample, 2 are misaligned to less than 8$\degree$ (NGC 612 and NGC 3557) and the other 2 are round ($\epsilon < 0.3$; IC 4296 and NGC 3100). As noted in \citet{Cappellari2016}, this result requires that regular rotators are axis-symmetric.
 
-		Misalignments between the photometric and kinematic position angles are routinely observed for non-regularly rotating galaxies (hereafter referred to as non regular-rotators). This generally implies a more triaxial intrinsic shape, however large misalignments are extremely rarely observed in galaxies with $\epsilon > 0.4$. This suggests that non-regularly rotating galaxies are more spherical in shape. This is the reason for the $\epsilon < 0.4$ requirement in the definition for slow rotators. The non-regular rotators in our sample all have $\epsilon < 0.4$. 
+
+		% Talk about RR/NRR and maybe kinematic subclasses/groups. Compare to Atlas3D/MASSIVE. 
+		The stellar kinematics of the sample galaxies are classified according to the regular rotator/non-regular rotator (RR/NRR) categories of \citet{Krajnovic2011}, with the results listed in Col.\,6 of Table \ref{tab:classify}. Here and hereafter, where MUSE datacubes exist their derived properties are quoted. Otherwise the values are derived from the VIMOS datacubes. 
+
+		We find 4/11 of our sample galaxies are regular rotators.
+
+
+		In addition to this, we attempt to identify the kinematic features defined by \citet{Krajnovic2011} in an algorithmic way. However, the artifacts from the VIMOS quadrants (see Section \ref{}) confuse ellipse fitting algorithms so only maps deroved from the MUSE data are classified in this way; kinematic features in maps derived from the VIMOS data are identified by eye. These classification are listed in Col.\,7 of Table \ref{tab:classify} and corresponding kinematic group (see Table \ref{} and Fig.\,\ref{} for group definitions and examples) that a given galaxy belongs to is given is Col.\,8. We see 3 KDCs (although PKS 718-34 is only a tentative classification). 
+	% Comparisons. ^^^^
+
+
+		\subsection{Ellipticities}
+			\label{subsec:Ellipticity}
+
+		\subsection{Fast/Slow Rotator Classification}
+			\label{subsec:FSRot}
+			The specific angular momentum parameter $\lambda_R$ is evaluated at one effective radius, $R_\mathrm{e}$. This is plotted against the ellipticity, $\epsilon$ (see Section \ref{subsec:Ellipticity}) in Fig.\,\ref{fig:lambdaR_ellip}. This plot shows the classification scheme of \citet{Cappellari2016} for the fast-/slow-rotator (FR/SR) categories (originally defined by \citealt{Emsellem2011}, but later refined by \citealt{Cappellari2016}; see Section \ref{sec:ETG}). This classification is given in Col.\,5 of Table \ref{tab:classify}.
+
+			%
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.7\textwidth]{chapter4/lambda_R_ellipticity.png}
+				\caption[$\lambda_{R_e}$ -- ellipticity plane]{The $\lambda_{R_e}$ -- ellipticity plane showing the definition for the fast/slow rotator classes (solid black line). Atlas$^\text{3D}$ galaxies are shown in black \citep{Emsellem2011} and MASSIVE survey galaxies are shown in gray \citep{Veale2017}. VIMOS and MUSE measurements are shown in red and blue respectively. The theoretical limit of disc dominated galaxy is shown (solid magenta) with lines of constant intrinsic angular moment with varying inclination (dashed magenta). The MASSIVE survey does not classify substructure so the MASSIVE sample is simply shown with filled circles.}
+				\label{fig:lambdaR_ellip}
+			\end{figure}
+
+
+			%
+			The radial $\lambda_{R_e}$ profiles are shown in figure \ref{fig:lambdaR_profile}. Using the combined samples from Atlas$^\text{3D}$ and MASSIVE (hereafter the combined sample), we find that there is no discernible difference between the radio selected Southern Sample and the optically selected ETGs, once the difference in mass distribution is taken into account. 
+
+			%
+			We find the expected fraction of slow rotators in the southern sample, $f'$, corrected to the mass distribution of the combined sample as
+			\begin{equation}
+				f' = \sum_{n=0}^N N_\mathrm{SS} f_\mathrm{CS}\, , 
+			\end{equation}
+			where $N_\mathrm{SS}$ is the number of southern sample galaxies in the n$^\mathrm{th}$ mass bin, $N_\mathrm{CS}$ is the fraction of slow rotators in the n$^\mathrm{th}$ in the combined sample and $N$ is the total number of mass bins. In our case we use K-band magnitude ($M_K$) as a proxy for mass, with bins 0.5 mag wide. This gives $f' = 0.64 \pm 0.06$. This is consistent with our finding of 56\% of the Southern Sample being slow rotators.
+
+			
+
+			
+
+
+			
+			%
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.8\textwidth]{chapter4/M_k_binned.png}
+				\caption[Upper panel: Mass matching global kinematics]{The mass distributions of the combined Atlas$^\text{3D}$ and MASSIVE surveys (black) and the Southern Sample (red). Lower panel: the fraction of slow rotators within each mass bin. The labels display the [number of slow rotators]/[total number of galaxies] in that bin. Note that the black and red have different normalizations in the mass distribution plot: the combined Atlas$^\text{3D}$ and MASSIVE samples contains 300 galaxies, while the Southern Sample is just 11 radio galaxies.}
+				\label{fig:SRmassFraction}
+			\end{figure}
+
+		\subsection{Radial Angular Momentum Profile}
+			\label{subsec:ResolvedLambda_R}
+			%
+			\begin{figure}
+				\centering
+				\includegraphics[width=.7\textwidth]{chapter4/lambda_R.png}
+				\caption[$\lambda_{R}$ radial profiles]{The radial $\lambda_{R}$ profiles. Profiles from VIMOS data are in blue, while MUSE data is in red. Solid lines represent fast rotators, while dashed lines represent slow rotators.}
+				\label{fig:lambdaR_profile}
+			\end{figure}
+
+		
+
+		\subsection{Missalignments Between Kinematic and Photometric Axes}
+			\label{subsec:Misalignment}
+			%
+			The photometric position angle, $PA_\text{phot}$, is the angle of axis from North along which the surface brightness reaches the maximum values. Similarly, the kinematic position angle, $PA_\text{kin}$, is the angle of axis from North along which the projected velocities reaches the maximum absolute values. Column 4 in table \ref{tab:classify} shows the misalignment between the photometric position angle and the kinematic position angle, $\Gamma_\text{kin} = \left| PA_\text{phot} - PA_\text{kin} \right|$. \citet{Cappellari2007}, \citet{Krajnovic2011} and \citet{Fogarty2015} all show that regular rotating galaxies (hereafter referred to as regular rotators) almost always have aligned kinematic and photometric axes (with a scatter of 4$\degree$). 
+
+			%
+			Regular rotators with a significant misalignment are either very round, interacting or strongly barred (see figure \ref{fig:Misalignment}). Taking into account the lower quality of data, our results are consistent with this. Of the 4 regularly rotating galaxies in the Southern sample, 2 are misaligned to less than 8$\degree$ (NGC 612 and NGC 3557) and the other 2 are round ($\epsilon < 0.3$; IC 4296 and NGC 3100). As noted in \citet{Cappellari2016}, this result requires that regular rotators are axis-symmetric.
+
+		
+			%
+			Misalignments between the photometric and kinematic position angles are routinely observed for non-regularly rotating galaxies (hereafter referred to as non regular-rotators). This generally implies a more triaxial intrinsic shape, however large misalignments are extremely rarely observed in galaxies with $\epsilon > 0.4$. This suggests that non-regularly rotating galaxies are more spherical in shape. This is the reason for the $\epsilon < 0.4$ requirement in the definition for slow rotators. The non-regular rotators in our sample all have $\epsilon < 0.4$. 
+		
+		
 
 
 	\subsection{Fast/Slow Rotator Fraction}
 		\label{subsec:FSfrac}
-		The radial $\lambda_{R_e}$ profiles are shown in figure \ref{fig:lambdaR_profile}. Using the combined samples from Atlas$^\text{3D}$ and MASSIVE (hereafter the combined sample), we find that there is no discernible difference between the radio selected Southern Sample and the optically selected ETGs, once the difference in mass distribution is taken into account. 
-		We find the expected fraction of slow rotators in the southern sample, $f'$, corrected to the mass distribution of the combined sample as
-		\begin{equation}
-			f' = \sum_{n=0}^N N_\mathrm{SS} f_\mathrm{CS}\, , 
-		\end{equation}
-		where $N_\mathrm{SS}$ is the number of southern sample galaxies in the n$^\mathrm{th}$ mass bin, $N_\mathrm{CS}$ is the fraction of slow rotators in the n$^\mathrm{th}$ in the combined sample and $N$ is the total number of mass bins. In our case we use K-band magnitude ($M_K$) as a proxy for mass, with bins 0.5 mag wide. This gives $f' = 0.64 \pm 0.06$. This is consistent with our finding of 56\% of the Southern Sample being slow rotators.
-
-		\begin{figure}
-			\centering
-			\includegraphics[width=.7\textwidth]{chapter4/lambda_R.png}
-			\caption[$\lambda_{R}$ radial profiles]{The radial $\lambda_{R}$ profiles. Profiles from VIMOS data are in blue, while MUSE data is in red. Solid lines represent fast rotators, while dashed lines represent slow rotators.}
-			\label{fig:lambdaR_profile}
-		\end{figure}
-
-
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.7\textwidth]{chapter4/lambda_R_ellipticity.png}
-			\caption[$\lambda_{R_e}$ -- ellipticity plane]{The $\lambda_{R_e}$ -- ellipticity plane showing the definition for the fast/slow rotator classes (solid black line). Atlas$^\text{3D}$ galaxies are shown in black \citep{Emsellem2011} and MASSIVE survey galaxies are shown in gray \citep{Veale2017}. VIMOS and MUSE measurements are shown in red and blue respectively. The theoretical limit of disc dominated galaxy is shown (solid magenta) with lines of constant intrinsic angular moment with varying inclination (dashed magenta). The MASSIVE survey does not classify substructure so the MASSIVE sample is simply shown with filled circles.}
-			\label{fig:lambdaR_ellip}
-		\end{figure}
-
-
 		
-
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.8\textwidth]{chapter4/M_k_binned.png}
-			\caption[Upper panel: Mass matching global kinematics]{The mass distributions of the combined Atlas$^\text{3D}$ and MASSIVE surveys (black) and the Southern Sample (red). Lower panel: the fraction of slow rotators within each mass bin. The labels display the [number of slow rotators]/[total number of galaxies] in that bin. Note that the black and red have different normalizations in the mass distribution plot: the combined Atlas$^\text{3D}$ and MASSIVE samples contains 300 galaxies, while the Southern Sample is just 11 radio galaxies.}
-			\label{fig:SRmassFraction}
-		\end{figure}
 
 
 		
@@ -153,14 +194,15 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 				\hline
 				\hline
 				Index 	& Blue cont. 		& Index band 		& Red cont. \\
+						& (\AA) 			& (\AA)				& (\AA) \\
 				\hline 
 				G4300 	& 4266.375--4282.625 & 4281.375--4316.375 & 4318.875--4335.125 \\
 				Fe4383 	& 4359.125--4370.375 & 4369.125--4420.375 & 4442.875--4455.375 \\
 				Ca4455 	& 4445.875--4454.625 & 4452.125--4474.625 & 4477.125--4492.125 \\
 				Fe4531 	& 4504.250--4514.250 & 4514.250--4559.250 & 4560.500--4579.250 \\
-				H$_\beta$ & 4827.875--4847.875 & 4847.875--4876.625 & 4876.625--4891.625 \\
+				H\,$\beta$ & 4827.875--4847.875 & 4847.875--4876.625 & 4876.625--4891.625 \\
 				Fe5015 	& 4946.500--4977.750 & 4977.750--5054.000 & 5054.000--5065.250 \\
-				Mg$_b$ 	& 5142.625--5161.375 & 5160.125--5192.625 & 5191.375--5206.375 \\
+				Mg\,b 	& 5142.625--5161.375 & 5160.125--5192.625 & 5191.375--5206.375 \\
 				Fe5270 	& 5233.150--5248.150 & 5245.650--5285.650 & 5285.650--5318.150 \\
 				Fe5335 	& 5304.625--5315.875 & 5312.125--5352.125 & 5353.375--5363.375 \\
 				Fe5406 	& 5376.250--5387.500 & 5387.500--5415.000 & 5415.000--5425.000 \\
@@ -174,7 +216,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 			\end{tabular}
 			\begin{tablenotes}
 			\footnotesize
-			\item Indices are from \citet{Trager1998}.
+			\item \textit{Notes:} Indices are from \citet{Trager1998}.
 			\end{tablenotes}
 		\end{threeparttable}
 		\end{table}

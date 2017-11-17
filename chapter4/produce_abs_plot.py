@@ -34,6 +34,12 @@ def plot(galaxies, str_galaxies, file_name):
 	# 		self.components = {'stellar':comp()}
 	# 		self.flux = np.array([0,1,1,2])
 
+	# 	def absorption_line(self, p, uncert=False):
+	# 		if uncert:
+	# 			return [0,1,1,2], [0,1,1,2]
+	# 		else:
+	# 			return [0,1,1,2]
+
 	# class comp(object):
 	# 	def __init__(self):
 	# 		self.plot = {'vel':myArray([0,1,1,2], [0,1,1,2]), 
@@ -41,8 +47,6 @@ def plot(galaxies, str_galaxies, file_name):
 
 
 	# D=Ds()
-
-
 
 	for i, galaxy in enumerate(galaxies):
 	# for i in range(3):
@@ -176,11 +180,34 @@ def plot(galaxies, str_galaxies, file_name):
 				a.ax_dis.set_xticklabels([])
 				a.ax_dis.set_xlabel('')
 
+	# Create gap between galaxies
+	for i in range(2, len(galaxies)*2, 2):
+		for a in axs[:, i:i+2].flatten():
+			ax_loc = a.get_position()
+			ax_loc.x0 += i*0.01
+			ax_loc.x1 += i*0.01
+
+			a.set_position(ax_loc)
+			if hasattr(a, 'ax_dis'):
+				a.ax_dis.set_position(ax_loc)
+
+	for i in range(1, len(galaxies)*2, 2):
+		for a in axs[:, i].flatten():
+			ax_loc = a.get_position()
+			ax_loc.x0 -= 0.01
+			ax_loc.x1 -= 0.01
+
+			a.set_position(ax_loc)
+			if hasattr(a, 'ax_dis'):
+				a.ax_dis.set_position(ax_loc)
+	
+
+
 	if len(galaxies) == 1:
 		fig.text(0.5, 0.9, str_galaxies[0], va='top', ha='center', size='xx-large')
 	elif len(galaxies) == 2:
 		fig.text(0.33, 0.9, str_galaxies[0], va='top', ha='center', size='xx-large')
-		fig.text(0.7, 0.9, str_galaxies[1], va='top', ha='center', size='xx-large')
+		fig.text(0.72, 0.9, str_galaxies[1], va='top', ha='center', size='xx-large')
 
 
 
@@ -201,7 +228,7 @@ def plot(galaxies, str_galaxies, file_name):
 
 	# Add colorbar
 	ax_loc = axs[0,3].get_position()
-	cax = fig.add_axes([0.93, ax_loc.y0, 0.02, ax_loc.height])
+	cax = fig.add_axes([ax_loc.x1+0.03, ax_loc.y0, 0.02, ax_loc.height])
 	cbar = plt.colorbar(axs[0,0].cs, cax=cax)
 	cbar.ax.set_yticklabels([])
 
