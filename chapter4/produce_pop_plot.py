@@ -11,8 +11,8 @@ from astropy.io import fits
 
 def plot(galaxies, str_galaxies, file_name):
 	opt = 'pop'
-	overplot={'CO':'c', 'radio':'r'}
-	Prefig(size=np.array((3, len(galaxies)*2))*10)
+	overplot={'CO':'c', 'radio':'g'}
+	Prefig(size=np.array((3, len(galaxies)*2))*7)
 	fig, axs = plt.subplots(len(galaxies)*2, 3)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter4/vimos' % (cc.home_dir)
 
@@ -90,7 +90,8 @@ def plot(galaxies, str_galaxies, file_name):
 		axs[2*i,0] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 			D.xBar, D.yBar, age, header,  
 			vmin=0, vmax=15, 
-			cmap='gnuplot2', flux_unbinned=D.unbinned_flux, 
+			cmap='inferno', 
+			flux_unbinned=D.unbinned_flux, 
 			signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 			ax=axs[2*i,0])
 		if overplot:
@@ -99,15 +100,16 @@ def plot(galaxies, str_galaxies, file_name):
 		
 
 		axs[2*i+1,0] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
-			D.xBar, D.yBar, unc_age, header, vmin=0, vmax=15, 
-			cmap='gnuplot2', flux_unbinned=D.unbinned_flux, 
+			D.xBar, D.yBar, unc_age, header, vmin=0, vmax=2, 
+			cmap='inferno', 
+			flux_unbinned=D.unbinned_flux, 
 			signal_noise=D.SNRatio, 
 			signal_noise_target=SN_target, ax=axs[2*i+1,0])
 
 		# Metalicity
 		axs[2*i,1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 			D.xBar, D.yBar, met, header, vmin=-2.25, vmax=0.67, 
-			cmap='gnuplot2', 
+			cmap='inferno', 
 			flux_unbinned=D.unbinned_flux, signal_noise=D.SNRatio, 
 			signal_noise_target=SN_target, ax=axs[2*i,1])
 		if overplot:
@@ -116,13 +118,13 @@ def plot(galaxies, str_galaxies, file_name):
 
 
 		axs[2*i+1,1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, 
-			D.yBar, unc_met, header, vmin=0, vmax=0.67+2.25, cmap='gnuplot2', 
+			D.yBar, unc_met, header, vmin=0, vmax=0.4, cmap='inferno', 
 			flux_unbinned=D.unbinned_flux, signal_noise=D.SNRatio, 
 			signal_noise_target=SN_target, ax=axs[2*i+1,1])
 
 		# Alpha
 		axs[2*i,2] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, 
-			D.yBar, alp, header, vmin=-0.3, vmax=0.5, cmap='gnuplot2', 
+			D.yBar, alp, header, vmin=-0.3, vmax=0.5, cmap='inferno', 
 			flux_unbinned=D.unbinned_flux, signal_noise=D.SNRatio, 
 			signal_noise_target=SN_target, ax=axs[2*i,2])
 		if overplot:
@@ -131,7 +133,7 @@ def plot(galaxies, str_galaxies, file_name):
 
 
 		axs[2*i+1,2] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar,
-			D.yBar, unc_alp, header, vmin=0, vmax=0.5+0.3, cmap='gnuplot2', 
+			D.yBar, unc_alp, header, vmin=0, vmax=0.25, cmap='inferno', 
 			flux_unbinned=D.unbinned_flux, signal_noise=D.SNRatio, 
 			signal_noise_target=SN_target, ax=axs[2*i+1,2])
 
@@ -173,9 +175,9 @@ def plot(galaxies, str_galaxies, file_name):
 			ax_loc.y1 += 0.01
 
 
-	fig.text(0.24, 0.9, r'Age', va='top', ha='center', size='xx-large')
-	fig.text(0.51, 0.9, r'Metalicity', va='top', ha='center', size='xx-large')
-	fig.text(0.8, 0.9, r'Alpha-enhancement', va='top', ha='center', 
+	fig.text(0.24, 0.9, r'Age', va='center', ha='center', size='xx-large')
+	fig.text(0.51, 0.9, r'Metalicity', va='center', ha='center', size='xx-large')
+	fig.text(0.8, 0.9, r'Alpha-enhancement', va='center', ha='center', 
 		size='xx-large')
 
 	if len(galaxies) == 1:
@@ -197,8 +199,8 @@ def plot(galaxies, str_galaxies, file_name):
 	cbar = plt.colorbar(axs[0,0].cs, cax=cax)
 	cbar.ax.set_yticklabels([])
 
-	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight')
-
+	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
+		dpi=60)
 
 
 if __name__=='__main__':
