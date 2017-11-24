@@ -8,7 +8,6 @@ from prefig import Prefig
 from checkcomp import checkcomp
 cc = checkcomp()
 from astropy.io import fits 
-from sauron_colormap import sauron#2 as sauron
 from plot_results import set_lims
 
 
@@ -16,8 +15,8 @@ from Bin import myArray
 
 def plot(galaxies, str_galaxies, file_name):
 	opt = 'kin'
-	overplot={'CO':'c', 'radio':'r'}
-	Prefig(size=np.array((len(galaxies)*2, 7))*10)
+	overplot={'CO':'c', 'radio':'g'}
+	Prefig(size=np.array((len(galaxies)*2, 7))*7)
 	fig, axs = plt.subplots(7, len(galaxies)*2)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter4/vimos' % (cc.home_dir)
 
@@ -91,11 +90,22 @@ def plot(galaxies, str_galaxies, file_name):
 			]
 
 		for j, p in enumerate(plots):
+			if any([l in p for l in ['H_beta','Ca4455','Fe5270','Fe5335',
+				'Fe5406','Fe5709','Fe5782']]):
+				vmin, vmax = 0.5, 3.5
+			elif 'TiO1' in p:
+				vmin, vmax = 0, 0.35
+			elif 'Ti02' in p:
+				vmin, vmax = 0, 0.1
+			else:
+				vmin, vmax = 3, 7
+
+
 			if 'Mg_b' not in p or galaxy not in ['ngc0612', 'pks0718-34']:
 				axs[j, 2*i] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 					D.xBar, D.yBar, eval('D.'+p), header,  
-					vmin=0, vmax=9, 
-					cmap='gnuplot2', flux_unbinned=D.unbinned_flux, 
+					vmin=vmin, vmax=vmax, 
+					cmap='inferno', flux_unbinned=D.unbinned_flux, 
 					signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 					ax=axs[j, 2*i])
 				if overplot:
@@ -119,7 +129,7 @@ def plot(galaxies, str_galaxies, file_name):
 				axs[j, 2*i+1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 					D.xBar, D.yBar, eval('D.'+p), header,  
 					vmin=0, vmax=0.5, 
-					cmap='gnuplot2', flux_unbinned=D.unbinned_flux, 
+					cmap='inferno', flux_unbinned=D.unbinned_flux, 
 					signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 					ax=axs[j, 2*i+1])
 			else:
@@ -232,7 +242,8 @@ def plot(galaxies, str_galaxies, file_name):
 	cbar = plt.colorbar(axs[0,0].cs, cax=cax)
 	cbar.ax.set_yticklabels([])
 
-	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight')
+	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
+		dpi=60)
 
 
 

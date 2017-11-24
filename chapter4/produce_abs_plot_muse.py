@@ -18,8 +18,8 @@ from Bin import myArray
 
 def plot(galaxies, str_galaxies, file_name):
 	opt = 'kin'
-	overplot={'CO':'c', 'radio':'r'}
-	Prefig(size=np.array((len(galaxies)*2, 7))*10)
+	overplot={'CO':'c', 'radio':'brown'}
+	Prefig(size=np.array((len(galaxies)*2, 7))*7)
 	fig, axs = plt.subplots(7, len(galaxies)*2)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter4/muse' % (cc.home_dir)
 
@@ -85,15 +85,26 @@ def plot(galaxies, str_galaxies, file_name):
 			"absorption_line('Fe5270')",
 			"absorption_line('Fe5335')",
 			"absorption_line('Fe5406')",
-			"absorption_line('Fe5709')"
+			# "absorption_line('Fe5709')"
 			]
 
 		for j, p in enumerate(plots):
+			if any([l in p for l in ['H_beta','Ca4455','Fe5270','Fe5335',
+				'Fe5406','Fe5709','Fe5782']]):
+				vmin, vmax = 0.5, 3.5
+			elif 'TiO1' in p:
+				vmin, vmax = 0, 0.35
+			elif 'Ti02' in p:
+				vmin, vmax = 0, 0.1
+			else:
+				vmin, vmax = 3, 7
+				
 			axs[j, 2*i] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 				D.xBar, D.yBar, eval('D.'+p), header,  
-				vmin=0, vmax=9, 
-				cmap='gnuplot2', flux_unbinned=D.unbinned_flux, 
-				signal_noise=D.SNRatio, signal_noise_target=SN_target, 
+				vmin=vmin, vmax=vmax, 
+				cmap='inferno', flux_unbinned=D.unbinned_flux, 
+				signal_noise=D.SNRatio - SN_target/2., 
+				signal_noise_target=SN_target/2., 
 				ax=axs[j, 2*i])
 			if overplot:
 				for o, color in overplot.iteritems():
@@ -107,14 +118,14 @@ def plot(galaxies, str_galaxies, file_name):
 			"absorption_line('Fe5270',uncert=True)[1]",
 			"absorption_line('Fe5335',uncert=True)[1]",
 			"absorption_line('Fe5406',uncert=True)[1]",
-			"absorption_line('Fe5709',uncert=True)[1]"
+			# "absorption_line('Fe5709',uncert=True)[1]"
 			]
 
 		for j, p in enumerate(plots):
 			axs[j, 2*i+1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 				D.xBar, D.yBar, eval('D.'+p), header,  
 				vmin=0, vmax=0.5, 
-				cmap='gnuplot2', flux_unbinned=D.unbinned_flux, 
+				cmap='inferno', flux_unbinned=D.unbinned_flux, 
 				signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 				ax=axs[j, 2*i+1])
 
@@ -182,8 +193,8 @@ def plot(galaxies, str_galaxies, file_name):
 		rotation='vertical', size='xx-large')
 	fig.text(0.07, 0.27, 'Fe5406', va='center', ha='right',
 		rotation='vertical', size='xx-large')
-	fig.text(0.07, 0.16, 'Fe5709', va='center', ha='right',
-		rotation='vertical', size='xx-large')
+	# fig.text(0.07, 0.16, 'Fe5709', va='center', ha='right',
+	# 	rotation='vertical', size='xx-large')
 
 	# Add colorbar
 	ax_loc = axs[0,3].get_position()
@@ -191,7 +202,8 @@ def plot(galaxies, str_galaxies, file_name):
 	cbar = plt.colorbar(axs[0,0].cs, cax=cax)
 	cbar.ax.set_yticklabels([])
 
-	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight')
+	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
+		dpi=40)
 
 
 if __name__=='__main__':

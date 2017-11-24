@@ -18,7 +18,7 @@
 \usepackage{textcomp} % textdegree symbol in non-math enviroments
 \usepackage{gensymb} % degree symbol in math enviroments
 \usepackage{ccaption} % for contcaption to continue figure onto multiple pages
-\usepackage{threeparttable} % Adding notes under tables
+\usepackage[flushleft, referable]{threeparttablex} % Adding notes under tables
 \usepackage{mhchem} % typeset chemistry symbols
 
 
@@ -31,6 +31,10 @@
 %input macros (i.e. write your own macros file called mymacros.tex 
 %and uncomment the next line)
 %\include{mymacros}
+\newcommand\ion[2]{\text{#1\,\textsc{\lowercase{#2}}}}	% ionization states - from MNRAS class
+\newcommand{\bracket}[1]{[#1]} % to be able to use [] in arguments
+
+
 
 \includeonly{chapter4/chapter4}
 
@@ -72,7 +76,7 @@
 %now include the files of latex for each of the chapters etc
 \include{introduction/introduction}
 \include{chapter2/chapter2}
-\include{chapter3/chapter3}
+
 \include{chapter4/chapter4}
 \include{chapter5/chapter5}
 \include{conclusions/conclusions}

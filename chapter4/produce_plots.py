@@ -16,8 +16,8 @@ from Bin import myArray
 
 def plot(galaxies, str_galaxies, file_name):
 	opt = 'kin'
-	overplot={'CO':'c', 'radio':'r'}
-	Prefig(size=np.array((3, len(galaxies)*2))*10)
+	overplot={'CO':'c', 'radio':'g'}
+	Prefig(size=np.array((3, len(galaxies)*2))*7)
 	fig, axs = plt.subplots(len(galaxies)*2, 3)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter4/vimos' % (cc.home_dir)
 
@@ -213,7 +213,8 @@ def plot(galaxies, str_galaxies, file_name):
 	cbar.ax.set_yticklabels([])
 
 	# plt.show()
-	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight')
+	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
+		dpi=60)
 
 
 
