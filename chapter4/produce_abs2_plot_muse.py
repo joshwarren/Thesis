@@ -11,16 +11,15 @@ from plot_results_muse import add_, set_lims
 from errors2_muse import get_dataCubeDirectory
 from prefig import Prefig
 from astropy.io import fits 
-from sauron_colormap import sauron#2 as sauron
 
 
 from Bin import myArray
 
 def plot(galaxies, str_galaxies, file_name):
 	opt = 'kin'
-	overplot={'CO':'c', 'radio':'brown'}
-	Prefig(size=np.array((len(galaxies)*2, 4))*7)
-	fig, axs = plt.subplots(4, len(galaxies)*2)#, sharex=True, sharey=True)
+	overplot={'CO':'c', 'radio':'g'}
+	Prefig(size=np.array((len(galaxies)*2, 5))*7)
+	fig, axs = plt.subplots(5, len(galaxies)*2)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter4/muse' % (cc.home_dir)
 
 
@@ -182,15 +181,20 @@ def plot(galaxies, str_galaxies, file_name):
 		fig.text(0.33, 0.9, str_galaxies[0], va='top', ha='center', size='xx-large')
 		fig.text(0.72, 0.9, str_galaxies[1], va='top', ha='center', size='xx-large')
 
-	fig.text(0.07, 0.8, 'Fe5709', va='center', ha='right',
+	y_loc = np.mean([axs[0,0].get_position().y0, axs[0,0].get_position().y1])
+	fig.text(0.07, y_loc, 'Fe5709', va='center', ha='right',
 		rotation='vertical', size='xx-large')
-	fig.text(0.07, 0.8, 'Fe5782', va='center', ha='right',
+	y_loc = np.mean([axs[1,0].get_position().y0, axs[1,0].get_position().y1])
+	fig.text(0.07, y_loc, 'Fe5782', va='center', ha='right',
 		rotation='vertical', size='xx-large')
-	fig.text(0.07, 0.6, 'NaD', va='center', ha='right', 
+	y_loc = np.mean([axs[2,0].get_position().y0, axs[2,0].get_position().y1])
+	fig.text(0.07, y_loc, 'NaD', va='center', ha='right', 
 		rotation='vertical', size='xx-large')
-	fig.text(0.07, 0.4, 'TiO1', va='center', ha='right',
+	y_loc = np.mean([axs[3,0].get_position().y0, axs[3,0].get_position().y1])
+	fig.text(0.07, y_loc, 'TiO1', va='center', ha='right',
 		rotation='vertical', size='xx-large')
-	fig.text(0.07, 0.2, 'TiO2', va='center', ha='right',
+	y_loc = np.mean([axs[4,0].get_position().y0, axs[4,0].get_position().y1])
+	fig.text(0.07, y_loc, 'TiO2', va='center', ha='right',
 		rotation='vertical', size='xx-large')
 
 	# Add colorbar
@@ -200,7 +204,7 @@ def plot(galaxies, str_galaxies, file_name):
 	cbar.ax.set_yticklabels([])
 
 	fig.savefig('%s/%sb.png' % (out_dir, file_name), bbox_inches='tight',
-		dpi=40)
+		dpi=60)
 
 
 

@@ -180,18 +180,28 @@ def plot(galaxies, str_galaxies, file_name):
 	fig.text(0.8, 0.9, r'Alpha-enhancement', va='center', ha='center', 
 		size='xx-large')
 
-	if len(galaxies) == 1:
-		fig.text(0.07, 0.5, str_galaxies[0], va='center', ha='right', 
+	for i in range(len(str_galaxies)):
+		y_loc = np.mean([axs[i*2,0].get_position().y0, 
+			axs[i*2+1,0].get_position().y1])
+		fig.text(0.07, y_loc, str_galaxies[i], va='center', ha='right', 
 			rotation='vertical', size='xx-large')
-	if len(galaxies) == 2:
-		raise ValueError('Not yet coded in location of galaxy labels')
-	if len(galaxies) == 3:
-		fig.text(0.07, 0.755, str_galaxies[0], va='center', ha='right', 
-			rotation='vertical', size='xx-large')
-		fig.text(0.07, 0.48, str_galaxies[1], va='center', ha='right',
-			rotation='vertical', size='xx-large')
-		fig.text(0.07, 0.19, str_galaxies[2], va='center', ha='right',
-			rotation='vertical', size='xx-large')
+
+
+
+
+
+	# if len(galaxies) == 1:
+	# 	fig.text(0.07, 0.5, str_galaxies[0], va='center', ha='right', 
+	# 		rotation='vertical', size='xx-large')
+	# if len(galaxies) == 2:
+	# 	raise ValueError('Not yet coded in location of galaxy labels')
+	# if len(galaxies) == 3:
+	# 	fig.text(0.07, 0.755, str_galaxies[0], va='center', ha='right', 
+	# 		rotation='vertical', size='xx-large')
+	# 	fig.text(0.07, 0.48, str_galaxies[1], va='center', ha='right',
+	# 		rotation='vertical', size='xx-large')
+	# 	fig.text(0.07, 0.19, str_galaxies[2], va='center', ha='right',
+	# 		rotation='vertical', size='xx-large')
 
 	# Add colorbar
 	ax_loc = axs[0,2].get_position()
@@ -204,13 +214,14 @@ def plot(galaxies, str_galaxies, file_name):
 
 
 if __name__=='__main__':
-	plot(['eso443-g024', 'ic1459', 'ic1531'], 
-		['ESO 443-G24', 'IC 1459', 'IC 1531'], 'pop1')
+	plot(['eso443-g024', 'ic1459'], 
+		['ESO 443-G24', 'IC 1459'], 'pop1')
 
-	plot(['ic4296', 'ngc0612', 'ngc1399'], 
-		['IC 4296', 'NGC 612', 'NGC 1399'], 'pop2')
+	plot(['ic1531', 'ic4296', 'ngc0612'], 
+		['IC 1531', 'IC 4296', 'NGC 612'], 'pop2')
 
-	plot(['ngc3100', 'ngc3557', 'ngc7075'], 
-		['NGC 3100', 'NGC 3557', 'NGC 7075'], 'pop3')
+	plot(['ngc1399', 'ngc3100', 'ngc3557'], 
+		['NGC 1399', 'NGC 3100', 'NGC 3557'], 'pop3')
 
-	plot(['pks0718-34'], ['PKS 0718-34'], 'pop4')
+	plot(['ngc7075', 'pks0718-34'], 
+		['NGC 7075', 'PKS 0718-34'], 'pop4')

@@ -11,16 +11,15 @@ from plot_results_muse import add_, set_lims
 from errors2_muse import get_dataCubeDirectory
 from prefig import Prefig
 from astropy.io import fits 
-from sauron_colormap import sauron#2 as sauron
 
 
 from Bin import myArray
 
 def plot(galaxies, str_galaxies, file_name):
 	opt = 'kin'
-	overplot={'CO':'c', 'radio':'brown'}
-	Prefig(size=np.array((len(galaxies)*2, 7))*7)
-	fig, axs = plt.subplots(7, len(galaxies)*2)#, sharex=True, sharey=True)
+	overplot={'CO':'c', 'radio':'g'}
+	Prefig(size=np.array((len(galaxies)*2, 6))*7)
+	fig, axs = plt.subplots(6, len(galaxies)*2)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter4/muse' % (cc.home_dir)
 
 
@@ -181,17 +180,23 @@ def plot(galaxies, str_galaxies, file_name):
 		fig.text(0.72, 0.9, str_galaxies[1], va='top', ha='center', size='xx-large')
 
 
-	fig.text(0.07, 0.83, r'H$_\beta$', va='center', ha='right', 
+	y_loc = np.mean([axs[0,0].get_position().y0, axs[0,0].get_position().y1])
+	fig.text(0.07, y_loc, r'H$_\beta$', va='center', ha='right', 
 		rotation='vertical', size='xx-large')
-	fig.text(0.07, 0.72, 'Fe5015', va='center', ha='right',
+	y_loc = np.mean([axs[1,0].get_position().y0, axs[1,0].get_position().y1])
+	fig.text(0.07, y_loc, 'Fe5015', va='center', ha='right',
 		rotation='vertical', size='xx-large')
-	fig.text(0.07, 0.61, r'Mg$_b$', va='center', ha='right',
+	y_loc = np.mean([axs[2,0].get_position().y0, axs[2,0].get_position().y1])
+	fig.text(0.07, y_loc, r'Mg$_b$', va='center', ha='right',
 		rotation='vertical', size='xx-large')
-	fig.text(0.07, 0.5, 'Fe5270', va='center', ha='right',
+	y_loc = np.mean([axs[3,0].get_position().y0, axs[3,0].get_position().y1])
+	fig.text(0.07, y_loc, 'Fe5270', va='center', ha='right',
 		rotation='vertical', size='xx-large')
-	fig.text(0.07, 0.39, 'Fe5335', va='center', ha='right',
+	y_loc = np.mean([axs[4,0].get_position().y0, axs[4,0].get_position().y1])
+	fig.text(0.07, y_loc, 'Fe5335', va='center', ha='right',
 		rotation='vertical', size='xx-large')
-	fig.text(0.07, 0.27, 'Fe5406', va='center', ha='right',
+	y_loc = np.mean([axs[5,0].get_position().y0, axs[5,0].get_position().y1])
+	fig.text(0.07, y_loc, 'Fe5406', va='center', ha='right',
 		rotation='vertical', size='xx-large')
 	# fig.text(0.07, 0.16, 'Fe5709', va='center', ha='right',
 	# 	rotation='vertical', size='xx-large')
@@ -203,10 +208,10 @@ def plot(galaxies, str_galaxies, file_name):
 	cbar.ax.set_yticklabels([])
 
 	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
-		dpi=40)
+		dpi=60)
 
 
 if __name__=='__main__':
 	plot(['ic1459', 'ic4296'], ['IC 1459', 'IC 4296'], 'abs1')
 
-	plot(['ngc1316', 'ngc1399'], ['NGC 1316', 'NGC 1399'], 'abs2')
+	# plot(['ngc1316', 'ngc1399'], ['NGC 1316', 'NGC 1399'], 'abs2')

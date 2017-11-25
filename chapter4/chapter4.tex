@@ -1,7 +1,7 @@
 \chapter{Stellar Kinematics and Populations}
 	\label{cha:stellar}
 % More preface here
-With the advent of integral-field spectroscopy (IFS), we can now observe the spatially-resolved properties of a galaxy without relying on extrapolations of or multiple observations with slits. Surveys such as the Spectrographic Areal Unit for Research on Optical Nebulae (SAURON) \citep{deZeeuw2002} and Atlas$^\text{3D}$ \citep{Cappellari2011} have demonstrated that a systematic IFS survey provides a wealth of information. This chapter focuses on the resolved stellar properties of our sample of radio galaxies. In this we aim to demonstrate that our radio selected sample is no different in the $V$-band than optically-selected early-type galaxies ETGs from the MASSIVE (not an acronym; \citealt{Ma2014}) and Atlas$^\text{3D}$ samples. We achieve this by showing that they are consistent with the defining characteristics of ETGs that are accessible to $V$-band IFS data. The characteristics we investigate in this chapter are (relevant section is shown in parentheses): regular/non-regular rotator classification scheme, qualitative kinematic classes (see Fig.\,\ref{fig:EgSubstructure}; \ref{subsec:maps}), fast/slow rotator classifications (\ref{subsec:FSRot}), radially resolved specific angular momentum profiles (with $\lambda_R$; \ref{subsec:ResolvedLambda_R}), absorption line strengths(\ref{subsec:absorption}), Mg--$\sigma$ relation (\ref{subsec:Mgsigma}), stellar populations (\ref{subsec:ssp}) and their gradients (\ref{subsubsec:popGrad}) and the kinematically-decoupled core (KDC) age--size relation(\ref{subsec:popKDC}). 
+With the advent of integral-field spectroscopy (IFS), we can now observe the spatially-resolved properties of a galaxy without relying on extrapolations of or multiple observations with slits. Surveys such as the Spectrographic Areal Unit for Research on Optical Nebulae (SAURON; \citealt{deZeeuw2002}) and Atlas$^\text{3D}$ \citep{Cappellari2011} have demonstrated that a systematic IFS survey provides a wealth of information. This chapter focuses on the resolved stellar properties of our sample of radio galaxies. In this we aim to demonstrate that our radio selected sample is no different in the $V$-band than optically-selected early-type galaxies ETGs from the MASSIVE (not an acronym; \citealt{Ma2014}) and Atlas$^\text{3D}$ samples. We achieve this by showing that they are consistent with the defining characteristics of ETGs that are accessible to $V$-band IFS data. The characteristics we investigate in this chapter are (relevant section is shown in parentheses): regular/non-regular rotator classification scheme, qualitative kinematic classes (see Fig.\,\ref{fig:EgSubstructure}; Section \ref{subsec:maps}), fast/slow rotator classifications (\ref{subsec:FSRot}), radially resolved specific angular momentum profiles (with $\lambda_R$; \ref{subsec:ResolvedLambda_R}), absorption line strengths(\ref{subsec:absorption}), Mg--$\sigma$ relation (\ref{subsubssec:Mgsigma}), stellar populations (\ref{subsec:ssp}) and their gradients (\ref{subsubsec:popGrad}) and the kinematically-decoupled core (KDC) age--size relation(\ref{subsec:popKDC}). 
 % ^^^^^^^^^^^^^^^ check section references above are correct ^^^^^^^^^^^^^^^
 
 The chapter is structured as follows: firstly we present the kinematic maps for the stellar component of each galaxy (section \ref{sec:stellarKin}) and the distribution of the sample on the $\lambda_\mathrm{R_e}$--ellipticity diagram. Then, in section \ref{sec:pop}, we investigate the stellar populations of each galaxy using the measured absorption line strengths. Finally, in Section \ref{sec:NGC612} we specifically discuss NGC612, the outlier of the sample.
@@ -12,7 +12,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 
 	\subsection{Maps}
 		\label{subsec:maps}
-		Using the methods described in Chapter \ref{cha:Data} to reduce (see Sections \ref{subsec:VIMOSreduction} and \ref{subsec:MUSE reduction}), spatially bin (Section \ref{subsec:Binning}) and fit the stellar line-of-sight velocity distributions (LOSVDs; here parametrised by the mean velocity, $v$ and velocity dispersion, $\sigma$, only; Section \ref{subsec:StellarFit}), we produce stellar kinematic maps. These kinematic maps and their associated uncertainties are shown in Figs.\,\ref{fig:VIMOS_stellar} and \ref{fig:MUSE_stellar} with their associated uncertainties for the VIMOS and MUSE datacubes, respectively. 
+		Using the methods described in Chapter \ref{cha:Data} to reduce (see Sections \ref{subsec:VIMOSreduction} and \ref{subsec:MUSEreduction}), spatially bin (Section \ref{subsec:Binning}) and fit the stellar line-of-sight velocity distributions (LOSVDs; here parametrised by the mean velocity, $v$ and velocity dispersion, $\sigma$, only; Section \ref{subsec:StellarFit}), we produce stellar kinematic maps. These kinematic maps and their associated uncertainties are shown in Figs.\,\ref{fig:VIMOS_stellar} and \ref{fig:MUSE_stellar} with their associated uncertainties for the VIMOS and MUSE datacubes, respectively. 
 
 		As part of this project, radio continuum maps have been produced by Robert Laing (private correspondence) by re-reducing archival data from the Very Large Array (VLA) in a variety of bands. We also use the VLA image from \citet{Lanz2010} for NGC 1316. These images have a variety of resolutions and spatial scales: we choose the image that closest matches our VIMOS and MUSE observations and overlay this on all maps (except those showing uncertainties) in green contours. Additionally, this project has also secured observations of the Southern Sample (except NGC 1316 and NGC 1399 for technique reasons) from the Atacama Large Millimeter/sub-millimeter Array (ALMA). \ce{^{12}CO(2-1)} flux maps have been produced by Ruffa et al.\ (in prep.). These are shown in cyan contours on all maps (except those showing uncertainties). 
 % Is the radio still in green contours? 
@@ -43,13 +43,13 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 
 		\begin{figure}
 			\centering
-			\includegraphics[height=0.62\textheight]{chapter4/muse/kin1.png}
+			\includegraphics[height=0.94\textheight]{chapter4/muse/kin1.png}
 			\caption[MUSE stellar kinematic maps]{As in Figure \ref{fig:VIMOS_stellar} but for the MUSE stellar kinematic maps.}
 			\label{fig:MUSE_stellar}
 		\end{figure}
 		\begin{figure}
 			\centering
-			\includegraphics[height=0.62\textheight]{chapter4/muse/kin2.png}
+			\includegraphics[height=0.31\textheight]{chapter4/muse/kin2.png}
 			\contcaption{\textit{Continued.}}
 		\end{figure}
 
@@ -75,41 +75,42 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 				NGC 3100 	& 0.354 & 0.24 & \leavevmode\phantom{0}$-8\pm\leavevmode\phantom{0}2$ & FR &\leavevmode\phantom{N}RR & -- & e \\
 				NGC 3557 	& 0.312 & 0.20 & \leavevmode\phantom{$-$}$16\pm\leavevmode\phantom{0}5$ & FR &\leavevmode\phantom{N}RR & -- & e\\
 				NGC 7075 	& 0.068 & 0.04 & \leavevmode\phantom{$-$}$36\pm50$ & SR & NRR & -- & b \\
-				PKS 718-34  & 0.159 & 0.17 & \leavevmode\phantom{$-$}$15\pm25$ & FR & NRR & KDC$^\text{a}$ & b\\
+				PKS 718-34  & 0.159 & 0.17 & \leavevmode\phantom{$-$}$15\pm25$ & FR & NRR & KDC\tnote{a} & b\\
 				\hline
 				\hline
 			\end{tabular}
 			\begin{tablenotes}
 			\footnotesize
-			\note $^\text{a}$ tentative classification. A higher signal-to-noise ratio (S/N) in the outer regions of the field of view is required for confirmation.
-			\item Col.\,1: Galaxy name; col.\,2: $\lambda_\mathrm{R}$ evaluated at $R_\mathrm{e}$; col.\,3: Ellipticity at $R_\mathrm{e}$; col.\,4: Misalignment between the kinematic and photometric position angles; col.\,5: Fast-/slow-rotator (FR/SR) classification; col.\,6: Regular-rotator (RR) or non-regular-rotator (NRR); col.\,7: Kinematic features; col.\,8: Kinematic group.
+			\item [a] Tentative classification. A higher signal-to-noise ratio (S/N) in the outer regions of the field of view is required for confirmation.
+			\note Col.\,1: Galaxy name; col.\,2: $\lambda_\mathrm{R}$ evaluated at $R_\mathrm{e}$; col.\,3: Ellipticity at $R_\mathrm{e}$; col.\,4: Misalignment between the kinematic and photometric position angles; col.\,5: Fast-/slow-rotator (FR/SR) classification; col.\,6: Regular-rotator (RR) or non-regular-rotator (NRR); col.\,7: Kinematic features; col.\,8: Kinematic group.
 			\end{tablenotes}
 		\end{threeparttable}
 		\end{table}
 
-		The stellar kinematics of the sample galaxies are classified according to the regular rotator/non-regular rotator (RR/NRR) categories of \citet{Krajnovic2011}, with the results listed in Col.\,6 of Table \ref{tab:classify}. Here and hereafter, where MUSE datacubes exist their derived properties are quoted. Otherwise the values are derived from the VIMOS datacubes. We find 4/11 of our sample galaxies are regular rotators.
+		The stellar kinematics of the sample galaxies are classified according to the regular rotator/non-regular rotator (RR/NRR) categories of \citet{Krajnovic2011}, with the results listed in Col.\,6 of Table \ref{tab:classify}. Here and hereafter, where MUSE datacubes exist their derived properties are quoted. Otherwise the values are derived from the VIMOS datacubes. We find 4/11 of our sample galaxies are regular rotators. This compares to 82\% of the Atlas$^\text{3D}$ sample being classified as regular rotators \citep{Krajnovic2011}. However the likely-hood of a given galaxy being a regular rotator is highly mass dependent with the likely-hood decreasing with increasing mass. Thus since our Southern sample are all extremely massive galaxies, we expect to find a higher fraction of non-regular rotators than the Atlas$^\text{3D}$ survey. 
 
-		In addition to this, we attempt to identify the kinematic features defined by \citet{Krajnovic2011} in an algorithmic way. However, the artifacts from the VIMOS quadrants (see Section \ref{subsec:VIMOSartifacts}) confuse ellipse fitting algorithms so only maps derived from the MUSE data are classified in this way; kinematic features in maps derived from the VIMOS data are identified by eye. These classification are listed in Col.\,7 of Table \ref{tab:classify} and corresponding kinematic group (see Table \ref{tab:KinGroups} and Fig.\,\ref{fig:EgSubstructure} for group definitions and examples) that a given galaxy belongs to is given is Col.\,8. We see 3 KDCs (although PKS 718-34 is only a tentative classification). 
-% Comparisons. ^^^^
+		In addition to this, we attempt to identify the kinematic features defined by \citet{Krajnovic2011} in an algorithmic way. However, the artifacts from the VIMOS quadrants (see Section \ref{subsec:VIMOSartifacts}) confuse ellipse fitting algorithms so only maps derived from the MUSE data are classified in this way; kinematic features in maps derived from the VIMOS data are identified by eye. These classification are listed in Col.\,7 of Table \ref{tab:classify} and corresponding kinematic group (see Table \ref{tab:KinGroups} and Fig.\,\ref{fig:EgSubstructure} for group definitions and examples) that a given galaxy belongs to is given is Col.\,8. We see 3 KDCs (although PKS 718-34 is only a tentative classification). This means that we find $29\pm19$\% of non-regular rotators in our Southern sample definitely (not including PKS 718-34) contain KDCs (or $43\pm19$\% including PKS 718-34), with the large uncertainties reflecting the low-number statistics. This is consistent with the Atlas$^\text{3D}$ survey who found find $25\pm7$\% of non-regular rotators host KDCs \citep{Krajnovic2011}.
 
 
 		\subsection{Ellipticity}
 			\label{subsec:Ellipticity}
-			Ellipticity is measured as the ellipticity of the best-fitting ellipse to the surface-brightness map with an mean radius, $R_\mathrm{m}$, of 1 effective radius, $R_\mathrm{e}$. Firstly the centre of the galaxy is found as the luminosity weighted centre using the \textsc{python} routine \textsc{find\_galaxy}, which is part of the \textsc{mge} package\footnote{http://www-astro.physics.ox.ac.uk/\~mxc/software/} by \citet{Cappellari2002}. This is then used as an input for the \textsc{IDL} routine \textsc{kinemetry}\footnote{http://davor.krajnovic.org/idl/} by \citet{krajnovic2006} which finds the best-fitting ellipses at a range of evenly spaced semi-major axes. This is achieved by performing harmonic expansion of maps along ellipses with a given semi-major axis and, when used for even moments (e.g. surface brightness, velocity dispersion, h$_4$ etc.), minimising the amplitude of the first and second harmonics. The results include the ellipticity, $epsilon$ and position angle $PA_\text{phot}$ of the best-fitting ellipse for each semi-major axis. The fit is repeated for increasing semi-major axis until $<$75\% of the ellipse is not contained within the field of view. 
+
+			\begin{figure}
+				\centering
+				\includegraphics[width=.9\textwidth]{chapter4/lambda_R_ellipticity.png}
+				\caption[$\lambda_\mathrm{R_e}$ -- ellipticity diagram]{$\lambda_\mathrm{R_e}$ -- ellipticity diagram. VIMOS and MUSE measurements are shown in red and blue, respectively. For comparison, Atlas$^\text{3D}$ galaxies \citep{Emsellem2011} are shown in black and MASSIVE galaxies \citep{Veale2017} in grey. The theoretical limit (edge-on systems) of disc-dominated galaxies is shown in solid magenta, with lines of constant intrinsic angular momentum but varying inclination in dotted magenta. The black solid lines show the limits of the fast-/slow-rotator classes. The MASSIVE survey does not report substructure, so the MASSIVE sample galaxies are shown with filled circles.}
+				\label{fig:lambdaR_ellip}
+			\end{figure}
+
+			Ellipticity is measured as the ellipticity of the best-fitting ellipse to the surface-brightness map with an mean radius, $R_\mathrm{m}$, of 1 effective radius, $R_\mathrm{e}$. Firstly the centre of the galaxy is found as the luminosity weighted centre using the \textsc{python} routine \textsc{find\_galaxy}, which is part of the \textsc{mge} package\footnote{http://www-astro.physics.ox.ac.uk/\~mxc/software/} by \citet{Cappellari2002}. This is then used as an input for the \textsc{IDL} routine \textsc{kinemetry}\footnote{http://davor.krajnovic.org/idl/} by \citet{krajnovic2006} which finds the best-fitting ellipses at a range of evenly spaced semi-major axes. This is achieved by performing harmonic expansion of maps along ellipses with a given semi-major axis and, when used for even moments (e.g. surface brightness, velocity dispersion, h$_4$ etc.), minimising the amplitude of the first and second harmonics. The results include the ellipticity, $epsilon$ and position angle $PA_\text{phot}$ of the best-fitting ellipse for each semi-major axis. The fit is repeated for increasing semi-major axis until $<$75\% of the ellipse is not contained within the field of view.
 
 			In reality, the VIMOS field of view does not always contain 1 $R_\mathrm{e}$. Where this is the case, we follow the method by \citet{Emsellem2007}, were $R_\mathrm{m}$ is redefined as $R_\mathrm{m} \equiv \sqrt{A_\mathrm{s}/\pi}$, where $A_\mathrm{s}$ is the area of the ellipse contained within the field of view. For a given galaxy, we fit ellipses as described above, up to $R_\mathrm{m} = R_\mathrm{max}$, where $A_\mathrm{s}$ reaches a maximum difference if 15\% to the area of the fitted ellipse, $A_\text{ellipse}$. The value $\epsilon_\mathrm{e}$, the ellipticity at 1 $R_\mathrm{e}$ or the $R_\text{max}$, whichever is smallest, is given in Table \ref{tab:classify}. 
 
 		\subsection{Fast-/Slow-Rotator Classification}
 			\label{subsec:FSRot}
+
 			The specific angular momentum parameter $\lambda_R$ is evaluated at 1 $R_\mathrm{e}$ or $R_\text{max}$, whichever is smaller (as described for ellipticity in Section \ref{subsec:Ellipticity}), and is given in Table \ref{tab:classify}. This is plotted against the ellipticity, $\epsilon_\mathrm{e}$ (see Section \ref{subsec:Ellipticity}) in Fig.\,\ref{fig:lambdaR_ellip}. This plot shows the classification scheme of \citet{Cappellari2016} for the fast-/slow-rotator (FR/SR) categories (originally defined by \citealt{Emsellem2011}, but later refined by \citealt{Cappellari2016}; see Section \ref{sec:ETG}). This classification is given in Col.\,5 of Table \ref{tab:classify}.
 
-
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.85\textwidth]{chapter4/lambda_R_ellipticity.png}
-				\caption[$\lambda_\mathrm{R_e}$ -- ellipticity diagram]{$\lambda_\mathrm{R_e}$ -- ellipticity diagram. VIMOS and MUSE measurements are shown in red and blue, respectively. For comparison, Atlas$^\text{3D}$ galaxies \citep{Emsellem2011} are shown in black and MASSIVE galaxies \citep{Veale2017} in grey. The theoretical limit (edge-on systems) of disc-dominated galaxies is shown in solid magenta, with lines of constant intrinsic angular momentum but varying inclination in dotted magenta. The black solid lines show the limits of the fast-/slow-rotator classes. The MASSIVE survey does not report substructure, so the MASSIVE sample galaxies are shown with filled circles.}
-				\label{fig:lambdaR_ellip}
-			\end{figure}
 			We find that 5 out of 11 galaxies, or $(45\pm13)$\%, are slow rotators. This very different to that of the Atlas$^\text{3D}$ and MASSIVE samples, which find 13.1\% and 77.5\%, respectively. However, slow rotators are more likely to be found in higher mass galaxies and the three samples (Atlas$^\text{3D}$, MASSIVE and our Southern sample) have very different mass distributions (see upper panel of Fig.\,\ref{fig:SRmassFraction}).
 
 			In order to account for the difference in mass distribution, we find the expected fraction of slow rotators in the Southern sample, $f'$, corrected to the mass distribution of the combined Atlas$^\text{3D}$ and MASSIVE samples (hereafter the A+M sample), as
@@ -137,11 +138,10 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 			\end{figure}
 
 		
-% Change to intrinsic shape? - discuss ellipticity
 		\subsection{Intrinsic Shape}
 			\label{subsec:Misalignment}
 
-			The photometric position angle, $PA_\text{phot}$, is defined as the angle westwards from North of semi-major axis of the largest best-fitting ellipse as found in Section \ref{fig:Ellipticity}.  
+			The photometric position angle, $PA_\text{phot}$, is defined as the angle westwards from North of semi-major axis of the largest best-fitting ellipse as found in Section \ref{subsec:Ellipticity}.  
 
 			The kinematic position angle, $PA_\text{kin}$, is defined as the angle of the axis perpendicular to the apparent angular momentum vector westwards from North. A global value of $PA_\text{kin}$ is found using the \textsc{python} routine \textsc{fit\_kinematic\_pa}\footnote{http://www-astro.physics.ox.ac.uk/\~mxc/software/\#pa\_kin} as described in appendix C of \citet{krajnovic2006}. This routine finds a symmetric (about $PA_\text{kin}$) velocity field, by replacing the mean velocity, $V$, in each bin with
 			\begin{equation}
@@ -149,27 +149,16 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 			\end{equation}
 			where $x$ and $y$ are the centroid coordinates of a given bin, with the origin at the centre of the galaxy and the x axis aligned along $PA_\text{kin}$. Linear interpolation is used where necessary.
 
-			Column 4 in Table \ref{tab:classify} lists the misalignments between the photometric and kinematic position angles, $\Gamma_\text{kin} \equiv \arcsin\sin\left( PA_\text{phot} - PA_\text{kin} \right)$. As described in Section \ref{sec:ETG}, while is cannot be used to describe the intrinsic shape of an individual galaxy, it can be used in a statistical way. We find all the regular rotators in our Southern sample, are consistent with having aligned photometry and kinematic position angles to within 11\degree, while non-regular rotators have a large range of values of $\Gamma_\text{kin}$. IC 1531, NGC7075 and PKS 718-34 all have very large uncertainties in the value of $PA_\text{phot}$ due to the VIMOS quadrant artifacts causing the fitting routine of \textsc{kinemetry} to become unreliable. 
+			Column 4 in Table \ref{tab:classify} lists the misalignments between the photometric and kinematic position angles, $\Gamma_\text{kin} \equiv \arcsin(\sin[PA_\text{phot} - PA_\text{kin}])$. While misalignment cannot be used to describe the intrinsic shape of an individual galaxy, as described in Section \ref{sec:ETG} it can be used in a statistical way. We find all the regular rotators in our Southern sample, are consistent with having aligned photometry and kinematic position angles to within 11\degree, while non-regular rotators have a large range of values of $\Gamma_\text{kin}$. IC 1531, NGC7075 and PKS 718-34 all have very large uncertainties in the value of $PA_\text{phot}$ due to the VIMOS quadrant artifacts causing the fitting routine of \textsc{kinemetry} to become unreliable. 
 
+			The lack of misalignments in regular rotators is consistent with \citet{Cappellari2007}, \citet{Krajnovic2011} and \citet{Fogarty2015}, who all showed that regular rotators almost always have aligned photometric and kinematic axes with very little scatter. Regular rotators with a significant misalignment can be seen to either be interacting or strongly barred. The lack of misalignments suggests that the regular rotators within our Southern sample are consistent with being axisymmetric \citep{Cappellari2016}.
 
-			
-
-
-
-
-
-
-			\citet{Cappellari2007}, \citet{Krajnovic2011} and \citet{Fogarty2015} all showed that regular rotators almost always have aligned photometric and kinematic axes (with a scatter of 4$\degree$). 
-
-% CHeck numbers here - issue with uncertainty from KINEMETRY
-			Regular rotators with a significant misalignment are either very round, interacting or strongly barred (see Fig.\,\ref{fig:Misalignment}). Taking into account the lower quality of our data, our results are consistent with this. Of the 4 regular rotators in our Southern sample, 2 are misaligned by less than 8$\degree$ (NGC 612 and NGC 3557) and the other 2 are round ($\epsilon < 0.3$; IC 4296 and NGC 3100). As noted in \citet{Cappellari2016}, this result requires that regular rotators are axisymmetric.
-
-			Misalignments between the photometric and kinematic position angles are routinely observed for non-regular rotators. This generally implies a more triaxial intrinsic shape, although large misalignments are extremely rarely observed in galaxies with $\epsilon > 0.4$, suggesting that non-regular rotators are more spherical in shape. This is the reason for the $\epsilon < 0.4$ requirement in the definition of slow rotators. The non-regular rotators in our sample indeed all have $\epsilon < 0.4$.
+			Misalignments between the photometric and kinematic position angles are routinely observed for non-regular rotators. This generally implies a more triaxial intrinsic shape, although large misalignments are extremely rarely observed in galaxies with $\epsilon > 0.4$, suggesting that non-regular rotators are more spherical in shape. The non-regular rotators in our Southern sample indeed all have $\epsilon < 0.4$ showing that they are consistent with a fairly spherical, triaxial intrinsic shape.
 
 
 \section{Stellar Population}
 	\label{sec:pop}
-	As described in Section \ref{subsec:PopFit}, in order to find the best-fitting stellar populations for our Southern sample, we must first measure the absorption line strengths of the indices in Table \ref{tab:tab:abIndex}. We first present maps of the strength of each index (Section \ref{subsec:absorption}), before examining the Mg -- $\sigma$ relation (Section \ref{subsubssec:Mgsigma}), comparing the measured line strengths to the literature (Section \ref{{subsubsec:Lit}}) and finally presenting maps of the stellar populations (Section \ref{subsec:ssp}).
+	As described in Section \ref{subsec:PopFit}, in order to find the best-fitting stellar populations for our Southern sample, we must first measure the absorption line strengths of the indices in Table \ref{tab:tab:abIndex}. We first present maps of the strength of each index (Section \ref{subsec:absorption}), before examining the Mg -- $\sigma$ relation (Section \ref{subsubssec:Mgsigma}), comparing the measured line strengths to the literature (Section \ref{subsubsec:Lit}) and finally presenting maps of the stellar populations (Section \ref{subsec:ssp}).
 
 	\subsection{Absorption Line Strengths}
 		\label{subsec:absorption}
@@ -178,7 +167,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 
 		\begin{figure}
 			\centering
-			\includegraphics[height=0.94\textheight]{chapter4/vimos/abs1.png}
+			\includegraphics[height=0.89\textheight]{chapter4/vimos/abs1.png}
 			\caption[VIMOS absorption line strength maps]{VIMOS absorption line strength maps. Left to right: ESO 443-G24 line index and associated uncertainties, IC 1459 line index and associated uncertainties. Top to bottom: G4300, Fe4383, Ca4455, Fe4531, H\,$\beta$, Fe5015 and Mg\,b index. Contours are as in Fig.\,\ref{fig:VIMOS_stellar}. Limits on the colour scales are 0.5--3.5\,\AA\ for H\,$\beta$ and Ca4455 line strengths, 3--7\,\AA\ for all other line strengths and 0--0.5\,\AA\ for the associated uncertainties.}
 			\label{fig:VIMOS_absorption}
 		\end{figure}
@@ -225,7 +214,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 			\contcaption{\textit{Continued.}}% for NGC1316 and NGC1399.}
 		\end{figure}
 
-			We observe that most of our Southern sample show almost uniform, small H\,$\beta$ line strengths throughout a given galaxy, as well as slight central concentration in Fe, Ca4455 and Mg\,b index maps. NGC 612 is the exception to these trends, with large H\,$\beta$ line strengths, particularly along the dust lane and larger gradients in Fe and Ca4455 (Mg\,b is redshifted out of the spectral range of VIMOS for this galaxy; see Section \ref{secNGC612}). The MUSE derived maps also show a significantly central concentration in the NaD index. The NaD feature is thought to be significantly increased by absorption from the interstellar medium (ISM) if present \citet[e.g.][]{Phillips1993, Bergmann2009}, a concept consistent with the apparent tracing of the dust lane within NGC 1316 of the NaD line strength. Like NGC 612, NGC 1316 also has large H\,$\beta$ line strengths, again with the highest values along the dust lane. 
+			We observe that most of our Southern sample show almost uniform, small H\,$\beta$ line strengths throughout a given galaxy, as well as slight central concentration in Fe, Ca4455 and Mg\,b index maps. NGC 612 is the exception to these trends, with large H\,$\beta$ line strengths, particularly along the dust lane and larger gradients in Fe and Ca4455 (Mg\,b is redshifted out of the spectral range of VIMOS for this galaxy; see Section \ref{sec:NGC612}). The MUSE derived maps also show a significantly central concentration in the NaD index. The NaD feature is thought to be significantly increased by absorption from the interstellar medium (ISM) if present \citet[e.g.][]{Phillips1993, Bergmann2009}, a concept consistent with the apparent tracing of the dust lane within NGC 1316 of the NaD line strength. Like NGC 612, NGC 1316 also has large H\,$\beta$ line strengths, again with the highest values along the dust lane. 
 
 		\subsubsection{Mg -- $\sigma$ relation}
 			\label{subsubssec:Mgsigma}
@@ -233,9 +222,9 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 
 			Since part of the red continuum band of the Mg$_2$ index is outside of the spectral range of VIMOS, we instead use the Mg\,b index. \citet{Ziegler1997} show there is a linear relationship between Mg\,b and Mg$_2$, with a gradient of 14.3--15.5\,mag\,\AA$^{-1}$\ depending on metallicity. We thus use Mg\,b as a proxy for Mg$_2$. 
 
-			Using an aperture with a radius of 2 arcsec on each datacube, we measure $\sigma_0$ and Mg\,b at a spectral resolution of 8.4\,\AA full-width half-maximum (FWHM; see Table \ref{tab:globalMg} and points in Fig.\,\ref{fig:globalMg}). The best-fitting linear relationship (found using \textsc{lts\_linefit} by \citet{Cappellari2013}) has a gradient of $2.3 \pm 0.5 \,\mathrm{\AA/\log(km \, s^{-1})}$ (solid black line in Fig.\,\ref{fig:globalMg}) with an intrinsic scatter of $0.12 \pm 0.10 \, \mathrm{\AA}$. 
+			Using an aperture with a radius of 2 arcsec on each datacube, we measure $\sigma_0$ and Mg\,b at a spectral resolution of 8.4\,\AA full-width half-maximum (FWHM; see Table \ref{tab:globalMg} and points in Fig.\,\ref{fig:globalMg}). The best-fitting linear relationship (found using \textsc{lts\_linefit} by \citet{Cappellari2013}) has a gradient of $2.3 \pm 0.5 \,\mathrm{\AA/\log(km \, s^{-1})}$ (solid black line in Fig.\,\ref{fig:globalMg}) with an intrinsic scatter of $0.13 \pm 0.10 \, \mathrm{\AA}$. Individual measurements for each galaxy are given in table \ref{tab:globalMg}.
 
-			This is in very good agreement with the gradient found by \citet{Ziegler1997} for a sample of elliptical galaxies within Virgo and Coma using data from \citet{Dressler1987} of $2.5\,\mathrm{\AA/\log(km \, s^{-1})}$ (shown as the blue dotted line in Fig.\,\ref{fig:globalMg}), with an intrinsic scatter of 0.16\,\AA\ for galaxies with $\log \sigma_0 \geqslant 2.3$. However, Fig.\,\ref{fig:globalMg} shows there is a considerable offset of $\approx0.75\,\mathrm{\AA}$ between our best-fitting line (solid line) and the best-fitting line (dashed line) from \citet{Ziegler1997}. Individual measurements for each galaxy are given in table \ref{tab:globalMg}.
+			This is in very good agreement with the gradient found by \citet{Ziegler1997} for a sample of elliptical galaxies within Virgo and Coma using data from \citet{Dressler1987} of $2.5\,\mathrm{\AA/\log(km \, s^{-1})}$ (shown as the blue dotted line in Fig.\,\ref{fig:globalMg}), with an intrinsic scatter of 0.16\,\AA\ for galaxies with $\log \sigma_0 \geqslant 2.3$. 
 
 			\begin{table}
 				\centering
@@ -248,17 +237,17 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 					Galaxy 	& Mg\,b & $\sigma_0$ \\
 							& \AA 	& km s$^{-1}$ \\
 					\hline
-					ESO 443-G024 & $4.43 \pm 0.08$ & $332.4 \pm 1.6$ \\
-					IC 1459 	& $4.67 \pm 0.03$ & $292.7 \pm 0.6$ \\
-					IC 1531 	& $3.74 \pm 0.06$ & $222.9 \pm 1.3$ \\
-					IC 4296		& $4.57 \pm 0.13$ & $361.7 \pm 2.1$ \\
-					NGC 612 	& --   			  & $228.5 \pm 1.9$ \\
-					NGC 1316 	& $3.45 \pm 0.08$ & $233.3 \pm 1.5$ \\
-					NGC 1399 	& $4.57 \pm 0.13$ & $319.1 \pm 2.1$ \\
-					NGC 3100 	& $4.36 \pm 0.05$ & $214.2 \pm 1.1$ \\
-					NGC 3557 	& $4.15 \pm 0.03$ & $280.4 \pm 0.9$ \\
-					NGC 7075 	& $4.45 \pm 0.07$ & $258.7 \pm 1.9$ \\
-					PKS 718-34  & -- 		      & $258.7 \pm 1.9$ \\
+					ESO 443-G024 & $4.42 \pm 0.03$ & $220.8 \pm 0.8$ \\
+					IC 1459 	& $4.66 \pm 0.012$ & $311.5 \pm 1.6$ \\
+					IC 1531 	& $4.01 \pm 0.04$ & $149.6 \pm 1.1$ \\
+					IC 4296		& $4.57 \pm 0.10$ & $338.5 \pm 2.1$ \\
+					NGC 612 	& --   			  & $228.0 \pm 3.0$ \\
+					NGC 1316 	& $3.41 \pm 0.05$ & $207.4 \pm 1.3$ \\
+					NGC 1399 	& $4.90 \pm 0.13$ & $303.0 \pm 2.9$ \\
+					NGC 3100 	& $4.37 \pm 0.04$ & $134.6 \pm 0.9$ \\
+					NGC 3557 	& $4.26 \pm 0.04$ & $232.9 \pm 0.4$ \\
+					NGC 7075 	& $4.43 \pm 0.06$ & $194.5 \pm 1.4$ \\
+					PKS 718-34  & -- 		      & $217.0 \pm 1.6$ \\
 					\hline
 					\hline
 				\end{tabular}
@@ -269,7 +258,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 			\end{threeparttable}
 			\end{table}
 
-% Is the captions still true? Is it consistant?
+
 			\begin{figure}
 				\centering
 				\includegraphics[width=.8\textwidth]{chapter4/Mg_sigma.png}
@@ -363,21 +352,21 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 
 			We note that G4300 has a very large offset with respect to the results of \citet{Rampazzo2005}. As noted above, this index is extremely sensitive to the stellar velocity dispersion correction. We measure the stellar velocity dispersion to be different to that found by \citet{Rampazzo2005} by an average of $21\,\mathrm{km\,s^{-1}}$. 
 
-% How do these compare? Is this good or not
+			We also observe that the offset in the Fe5015 index is also quite large in comparisons with \citet{Rampazzo2005} and \citet{Vazdekis2010}. In the case of the comparison with \citet{Rampazzo2005} we suggest that the difference is due to differences in method for accounting for the [\ion{O}{iii}] emission lines. 
 
-
+			Other than G4300 and Fe5015, the comparisons show fairly consistent agreement with literature value. We suggest that the translation between Lick and LIS systems may be the source of the spread in the difference between our measurements and the relevant paper.
 
 
 	\subsection{Most-likely stellar population model}
 		\label{subsec:ssp}
-		We have assumed that each bin in each galaxy from our Southern sample can be well described by a SSP. We use the method described in section \ref{subsubsec:StellarPop} to find maps of the most-likely SSP characteristics: age (t), metallicity (Z/H) and alpha enhancement ($\mathrm{\alpha/Fe}$) from the absorption line strength maps. 
+		We have assumed that each bin in each galaxy from our Southern sample can be well described by a SSP. We use the method described in section \ref{subsubsec:StellarPop} to find maps of the most-likely SSP characteristics: age ($t$), metallicity ($Z/H$) and alpha enhancement ($\alpha/Fe$) from the absorption line strength maps. 
 
 		Figs.\,\ref{fig:VIMOS_pop} and \ref{fig:MUSE_pop} show the resolved most-likely stellar populations for our Southern sample. In general they show old, metal rich and alpha enhanced SSPs; qualities which ETGs are well known for. The exceptions are NGC 612 and NGC 1316. NGC 612 is discussed in more detail in section \ref{sec:NGC612}, while NGC 1316 shows a very young stellar population (our fit agrees with that of \citealt{Kuntschner2000}, but is conflicting with the older and less metal rich stellar population found by \citealt{Koleva2011} who found $t=4.5 \pm 0.3 \,\mathrm{Gyr}$ and $[Fe/H]=0.12 \pm 0.01 \,\mathrm{[Fe/H]_\odot}$ for an aperture covering the central 0.1 kpc). 
 
 		\begin{figure}
 			\centering
-			\includegraphics[height=0.94\textheight]{chapter4/vimos/pop1.png}
-			\caption[VIMOS stellar population maps]{VIMOS stellar population maps: Left to right: age, metallicity and alpha enhancement; Top to bottom: ESO 443-G24, IC 1459 and IC 1531. Alternate rows show a given parameter its associated uncertainty. Contours are as in Fig.\,\ref{fig:VIMOS_stellar}. The colour scales have limits of 0--15\,Gyr, -2.25--0.67\,$\mathrm{[Fe/H]_\odot}$ and -0.3--0.5\,$\mathrm{[\alpha/FeH]_\odot}$ for age, metallicity and alpha-enhancement maps and 0--2\,Gyr, 0--0.4\,$\mathrm{[Fe/H]_\odot}$ and 0--0.25\,$\mathrm{[\alpha/Fe]_\odot}$ for their respective associated uncertainties.}
+			\includegraphics[height=0.63\textheight]{chapter4/vimos/pop1.png}
+			\caption[VIMOS stellar population maps]{VIMOS stellar population maps: Left to right: age, metallicity and alpha enhancement; Top to bottom: ESO 443-G24 and IC 1459. Alternate rows show a given parameter its associated uncertainty. Contours are as in Fig.\,\ref{fig:VIMOS_stellar}. The colour scales have limits of 0--15\,Gyr, -2.25--0.67\,$\mathrm{[Fe/H]_\odot}$ and -0.3--0.5\,$\mathrm{[\alpha/FeH]_\odot}$ for age, metallicity and alpha-enhancement maps and 0--2\,Gyr, 0--0.4\,$\mathrm{[Fe/H]_\odot}$ and 0--0.25\,$\mathrm{[\alpha/Fe]_\odot}$ for their respective associated uncertainties.}
 			\label{fig:VIMOS_pop}
 		\end{figure}
 		\begin{figure}
@@ -392,7 +381,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 		\end{figure}
 		\begin{figure}
 			\centering
-			\includegraphics[height=0.31\textheight]{chapter4/vimos/pop4.png}
+			\includegraphics[height=0.63\textheight]{chapter4/vimos/pop4.png}
 			\contcaption{\textit{Continued.}}% for PKS 718-34}
 		\end{figure}
 
@@ -442,7 +431,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 				\end{tabular}
 			\end{table}
 
-			We find average gradients of $\Delta_\text{log age} = -0.004\pm0.003 \,\mathrm{log(Gyr) \, arcsec^{-1}}$ and $\Delta_\text{[Fe/H]} = -0.025\pm0.002 \mathrm{[Fe/H]_\odot \, arcsec^{-1}}$. This is consistent with \citet{Koleva2011} who, for elliptical galaxies found average gradients of $0.06\pm0.09 \, \mathrm{log(Gyr) \, arcsec^{-1}}$ and $-0.26\pm0.08 \, \mathrm{[Fe/H]_\odot \, arcsec^{-1}}$ for the age and metallicity gradients, respectively. For S0s they find flatter corresponding gradients of $0.01\pm0.11\, \mathrm{log(Gyr) \, arcsec^{-1}}$ and $-012\pm0.13\, \mathrm{[Fe/H]_\odot \, arcsec^{-1}}$. 
+			We find average gradients of $\Delta_\text{log age} = -0.004\pm0.003 \,\mathrm{log(Gyr) \, arcsec^{-1}}$ and $\Delta_\text{[Fe/H]} = -0.025\pm0.002 \, \mathrm{[Fe/H]_\odot \, arcsec^{-1}}$. This is consistent with \citet{Koleva2011} who, for elliptical galaxies found average gradients of $0.06\pm0.09 \, \mathrm{log(Gyr) \, arcsec^{-1}}$ and $-0.26\pm0.08 \, \mathrm{[Fe/H]_\odot \, arcsec^{-1}}$ for the age and metallicity gradients, respectively. For S0s they find flatter corresponding gradients of $0.01\pm0.11\, \mathrm{log(Gyr) \, arcsec^{-1}}$ and $-012\pm0.13\, \mathrm{[Fe/H]_\odot \, arcsec^{-1}}$. 
 
 % SSP -- sigma relation here?
 

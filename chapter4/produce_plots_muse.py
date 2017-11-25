@@ -18,7 +18,7 @@ from Bin import myArray
 
 def plot(galaxies, str_galaxies, file_name):
 	opt = 'kin'
-	overplot={'CO':'c', 'radio':'m'}
+	overplot={'CO':'c', 'radio':'g'}
 	Prefig(size=np.array((3, len(galaxies)*2))*7)
 	fig, axs = plt.subplots(len(galaxies)*2, 3)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter4/muse' % (cc.home_dir)
@@ -213,11 +213,12 @@ def plot(galaxies, str_galaxies, file_name):
 
 
 	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
-		dpi=40)
+		dpi=60)
 
 
 
 if __name__=='__main__':
-	plot(['ic1459', 'ic4296'], ['IC 1459', 'IC 4296'], 'kin1')
+	plot(['ic1459', 'ic4296', 'ngc1316'], 
+		['IC 1459', 'IC 4296', 'NGC 1316'], 'kin1')
 
-	plot(['ngc1316', 'ngc1399'], ['NGC 1316', 'NGC 1399'], 'kin2')
+	plot(['ngc1399'], ['NGC 1399'], 'kin2')

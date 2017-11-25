@@ -14,7 +14,7 @@ from astropy.io import fits
 
 def plot(galaxies, str_galaxies, file_name):
 	opt = 'pop'
-	overplot={'CO':'c', 'radio':'m'}
+	overplot={'CO':'c', 'radio':'g'}
 	Prefig(size=np.array((3, len(galaxies)*2))*7)
 	fig, axs = plt.subplots(len(galaxies)*2, 3)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter4/muse' % (cc.home_dir)
@@ -202,7 +202,7 @@ def plot(galaxies, str_galaxies, file_name):
 	cbar.ax.set_yticklabels([])
 
 	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
-		dpi=40)
+		dpi=60)
 
 
 
