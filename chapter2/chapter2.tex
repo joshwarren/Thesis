@@ -92,6 +92,7 @@ This chapter presents the observations of the Southern Sample (as laid out in Se
 
 \section{The Multi-Unit Spectroscopic Explorer (MUSE)}
 	\label{sec:MUSE}
+
 	\subsection{The MUSE Instrument}
 		The Multi-Unit Spectroscopic Explorer (MUSE) is located on UT4 of the VLT. It is comprised of 24 IFU modules with a total field of view of 1 x 1' at spatial sampling of 0.2". It has a spectral range of 4800-9300\,\AA\ with a resolution of $\approx 2.3$\,\AA\ sampled at 1.25\,\AA\,pix$^{-1}$. MUSE is currently offered with and without adaptive optics (AO) and a narrow-field mode (with an order of magnitude between spatial resolution and sampling) is planned for the future. 
 		
@@ -103,6 +104,8 @@ This chapter presents the observations of the Southern Sample (as laid out in Se
 		Every OB in both programs were observed following the standard MUSE calibration plan.
 
 	\subsection{Reducing MUSE Data}
+		\label{subsec:MUSEreduction}
+		
 		For this project, the prereduced (known as Phase 3) data products from ESO were used. This means the ESO data reduction pipeline\footnote{http://www.eso.org/sci/software/pipelines/muse/muse-pipe-recipes.html} had already been applied. This was used since the computing resources required to reduce the raw MUSE data may have been prohibitively large.
 
 		The ESO pipeline contains all standard IFU data reduction steps: bias subtraction, flat-fielding of detectors with a continuum lamp exposure, flat-fielding of fibres with twilight exposures, wavelength calibration, flux calibration with standard star observations and sky subtraction. Tiled observations, where present, are combined to give a final mosaic.
