@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Cygwin) (preloaded format=pdflatex 2017.10.31)  24 NOV 2017 19:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Cygwin) (preloaded format=pdflatex 2017.10.31)  25 NOV 2017 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -800,9 +800,6 @@ LaTeX Warning: Reference `fig:EgSubstructure' on page 3 undefined on input line
  4.
 
 
-LaTeX Warning: Reference `subsec:Mgsigma' on page 3 undefined on input line 4.
-
-
 LaTeX Warning: Reference `cha:Data' on page 3 undefined on input line 15.
 
 
@@ -810,8 +807,8 @@ LaTeX Warning: Reference `subsec:VIMOSreduction' on page 3 undefined on input l
 ine 15.
 
 
-LaTeX Warning: Reference `subsec:MUSE reduction' on page 3 undefined on input l
-ine 15.
+LaTeX Warning: Reference `subsec:MUSEreduction' on page 3 undefined on input li
+ne 15.
 
 
 LaTeX Warning: Reference `subsec:Binning' on page 3 undefined on input line 15.
@@ -827,56 +824,50 @@ LaTeX Warning: Reference `subsec:StellarFit' on page 3 undefined on input line
 
 
 
-] <chapter4/vimos/kin1.png, id=167, 1382.766pt x 1689.9135pt>
+] <chapter4/vimos/kin1.png, id=168, 1382.766pt x 1689.9135pt>
 File: chapter4/vimos/kin1.png Graphic file (type png)
 
 <use chapter4/vimos/kin1.png>
 Package pdftex.def Info: chapter4/vimos/kin1.png used on input line 24.
 (pdftex.def)             Requested size: 329.95059pt x 403.26341pt.
 
-<chapter4/vimos/kin2.png, id=168, 1382.766pt x 2559.5625pt>
+<chapter4/vimos/kin2.png, id=169, 1382.766pt x 2559.5625pt>
 File: chapter4/vimos/kin2.png Graphic file (type png)
 
 <use chapter4/vimos/kin2.png>
 Package pdftex.def Info: chapter4/vimos/kin2.png used on input line 30.
 (pdftex.def)             Requested size: 330.30928pt x 611.40578pt.
 
-<chapter4/vimos/kin3.png, id=169, 1382.766pt x 2559.5625pt>
+<chapter4/vimos/kin3.png, id=170, 1382.766pt x 2559.5625pt>
 File: chapter4/vimos/kin3.png Graphic file (type png)
 
 <use chapter4/vimos/kin3.png>
 Package pdftex.def Info: chapter4/vimos/kin3.png used on input line 35.
 (pdftex.def)             Requested size: 330.30928pt x 611.40578pt.
 
-<chapter4/vimos/kin4.png, id=170, 1382.766pt x 1689.9135pt>
+<chapter4/vimos/kin4.png, id=171, 1382.766pt x 1689.9135pt>
 File: chapter4/vimos/kin4.png Graphic file (type png)
 
 <use chapter4/vimos/kin4.png>
 Package pdftex.def Info: chapter4/vimos/kin4.png used on input line 40.
 (pdftex.def)             Requested size: 329.95059pt x 403.26341pt.
 
-<chapter4/muse/kin1.png, id=171, 1380.357pt x 1703.163pt>
+<chapter4/muse/kin1.png, id=172, 1380.357pt x 2560.767pt>
 File: chapter4/muse/kin1.png Graphic file (type png)
 
 <use chapter4/muse/kin1.png>
 Package pdftex.def Info: chapter4/muse/kin1.png used on input line 46.
-(pdftex.def)             Requested size: 326.8272pt x 403.26341pt.
+(pdftex.def)             Requested size: 329.56532pt x 611.40578pt.
 
-<chapter4/muse/kin2.png, id=174, 1380.357pt x 1703.163pt>
+<chapter4/muse/kin2.png, id=175, 1380.357pt x 868.4445pt>
 File: chapter4/muse/kin2.png Graphic file (type png)
 
 <use chapter4/muse/kin2.png>
 Package pdftex.def Info: chapter4/muse/kin2.png used on input line 52.
-(pdftex.def)             Requested size: 326.8272pt x 403.26341pt.
+(pdftex.def)             Requested size: 320.46631pt x 201.6317pt.
+ [4] [5 <./chapter4/vimos/kin1.png>] [6pdfTeX warning (ext4): destination with 
+the same identifier (name{figure.3.1}) has been already used, duplicate ignored
 
-
-LaTeX Warning: Reference `sec:ETG' on page 4 undefined on input line 85.
-
-
-LaTeX Warning: Reference `sec:ETG' on page 4 undefined on input line 85.
-
-[4] [5 <./chapter4/vimos/kin1.png>] [6pdfTeX warning (ext4): destination with t
-he same identifier (name{figure.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -893,292 +884,273 @@ e same identifier (name{figure.3.1}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.91 
-      <./chapter4/vimos/kin4.png>] [9 <./chapter4/muse/kin1.png>] [10pdfTeX war
-ning (ext4): destination with the same identifier (name{figure.3.2}) has been a
-lready used, duplicate ignored
+      <./chapter4/vimos/kin4.png>] [9 <./chapter4/muse/kin1.png>]
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.91 
-      <./chapter4/muse/kin2.png>]
-
-LaTeX Warning: Reference `subsec:VIMOSartifacts' on page 11 undefined on input 
+LaTeX Warning: Reference `subsec:VIMOSartifacts' on page 10 undefined on input 
 line 92.
 
 
-LaTeX Warning: Reference `tab:KinGroups' on page 11 undefined on input line 92.
+LaTeX Warning: Reference `tab:KinGroups' on page 10 undefined on input line 92.
 
 
 
-LaTeX Warning: Reference `fig:EgSubstructure' on page 11 undefined on input lin
+LaTeX Warning: Reference `fig:EgSubstructure' on page 10 undefined on input lin
 e 92.
 
-
-LaTeX Warning: Reference `sec:ETG' on page 11 undefined on input line 104.
-
-[11] <chapter4/lambda_R_ellipticity.png, id=260, 1011.78pt x 650.43pt>
+<chapter4/lambda_R_ellipticity.png, id=226, 1011.78pt x 650.43pt>
 File: chapter4/lambda_R_ellipticity.png Graphic file (type png)
 
 <use chapter4/lambda_R_ellipticity.png>
 Package pdftex.def Info: chapter4/lambda_R_ellipticity.png used on input line 1
-09.
-(pdftex.def)             Requested size: 368.57964pt x 236.94347pt.
- [12 <./chapter4/lambda_R_ellipticity.png>] <chapter4/M_k_binned.png, id=279, 8
-67.24pt x 650.43pt>
+00.
+(pdftex.def)             Requested size: 390.25534pt x 250.87782pt.
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.103 			\end{figure}
+                      <./chapter4/muse/kin2.png>] [11 <./chapter4/lambda_R_elli
+pticity.png>]
+
+LaTeX Warning: Reference `sec:ETG' on page 12 undefined on input line 112.
+
+<chapter4/M_k_binned.png, id=274, 867.24pt x 650.43pt>
 File: chapter4/M_k_binned.png Graphic file (type png)
 
 <use chapter4/M_k_binned.png>
-Package pdftex.def Info: chapter4/M_k_binned.png used on input line 123.
+Package pdftex.def Info: chapter4/M_k_binned.png used on input line 124.
 (pdftex.def)             Requested size: 346.89731pt x 260.1773pt.
- [13 <./chapter4/M_k_binned.png>]
-<chapter4/lambda_R.png, id=289, 1156.32pt x 867.24pt>
+ [12]
+<chapter4/lambda_R.png, id=287, 1156.32pt x 867.24pt>
 File: chapter4/lambda_R.png Graphic file (type png)
 
 <use chapter4/lambda_R.png>
-Package pdftex.def Info: chapter4/lambda_R.png used on input line 134.
+Package pdftex.def Info: chapter4/lambda_R.png used on input line 135.
 (pdftex.def)             Requested size: 303.53267pt x 227.6473pt.
+ [13 <./chapter4/M_k_binned.png>]
 
-
-LaTeX Warning: Reference `fig:Ellipticity' on page 14 undefined on input line 1
-44.
+LaTeX Warning: Reference `sec:ETG' on page 14 undefined on input line 152.
 
 [14 <./chapter4/lambda_R.png>]
 
-LaTeX Warning: Reference `fig:Misalignment' on page 15 undefined on input line 
-155.
-
-
-LaTeX Warning: Reference `subsec:PopFit' on page 15 undefined on input line 162
+LaTeX Warning: Reference `subsec:PopFit' on page 15 undefined on input line 161
 .
 
 
 LaTeX Warning: Reference `tab:tab:abIndex' on page 15 undefined on input line 1
-62.
+61.
 
 
-LaTeX Warning: Reference `{subsubsec:Lit}' on page 15 undefined on input line 1
-62.
+LaTeX Warning: Reference `tab:abIndex' on page 15 undefined on input line 166.
 
 
-LaTeX Warning: Reference `tab:abIndex' on page 15 undefined on input line 167.
+LaTeX Warning: Reference `tab:abIndex' on page 15 undefined on input line 166.
 
-
-LaTeX Warning: Reference `tab:abIndex' on page 15 undefined on input line 167.
-
-<chapter4/vimos/abs1.png, id=316, 1856.1345pt x 2867.9145pt>
+<chapter4/vimos/abs1.png, id=325, 1856.1345pt x 2867.9145pt>
 File: chapter4/vimos/abs1.png Graphic file (type png)
 
 <use chapter4/vimos/abs1.png>
-Package pdftex.def Info: chapter4/vimos/abs1.png used on input line 171.
-(pdftex.def)             Requested size: 395.6908pt x 611.40578pt.
+Package pdftex.def Info: chapter4/vimos/abs1.png used on input line 170.
+(pdftex.def)             Requested size: 374.64732pt x 578.8823pt.
 
 
-LaTeX Warning: Float too large for page by 57.97578pt on input line 174.
+LaTeX Warning: Float too large for page by 25.4523pt on input line 173.
 
-[15] <chapter4/vimos/abs2.png, id=328, 1856.1345pt x 2867.9145pt>
+<chapter4/vimos/abs2.png, id=328, 1856.1345pt x 2867.9145pt>
 File: chapter4/vimos/abs2.png Graphic file (type png)
 
 <use chapter4/vimos/abs2.png>
-Package pdftex.def Info: chapter4/vimos/abs2.png used on input line 177.
+Package pdftex.def Info: chapter4/vimos/abs2.png used on input line 176.
 (pdftex.def)             Requested size: 395.6908pt x 611.40578pt.
 
 <chapter4/vimos/abs3.png, id=329, 1856.1345pt x 2867.9145pt>
 File: chapter4/vimos/abs3.png Graphic file (type png)
 
 <use chapter4/vimos/abs3.png>
-Package pdftex.def Info: chapter4/vimos/abs3.png used on input line 182.
+Package pdftex.def Info: chapter4/vimos/abs3.png used on input line 181.
 (pdftex.def)             Requested size: 395.6908pt x 611.40578pt.
 
 <chapter4/vimos/abs4.png, id=330, 1856.1345pt x 2867.9145pt>
 File: chapter4/vimos/abs4.png Graphic file (type png)
 
 <use chapter4/vimos/abs4.png>
-Package pdftex.def Info: chapter4/vimos/abs4.png used on input line 187.
+Package pdftex.def Info: chapter4/vimos/abs4.png used on input line 186.
 (pdftex.def)             Requested size: 395.6908pt x 611.40578pt.
 
 <chapter4/vimos/abs5.png, id=331, 1856.1345pt x 2867.9145pt>
 File: chapter4/vimos/abs5.png Graphic file (type png)
 
 <use chapter4/vimos/abs5.png>
-Package pdftex.def Info: chapter4/vimos/abs5.png used on input line 192.
+Package pdftex.def Info: chapter4/vimos/abs5.png used on input line 191.
 (pdftex.def)             Requested size: 395.6908pt x 611.40578pt.
 
 <chapter4/muse/abs1.png, id=332, 1848.9075pt x 2461.998pt>
 File: chapter4/muse/abs1.png Graphic file (type png)
 
 <use chapter4/muse/abs1.png>
-Package pdftex.def Info: chapter4/muse/abs1.png used on input line 198.
+Package pdftex.def Info: chapter4/muse/abs1.png used on input line 197.
 (pdftex.def)             Requested size: 395.64537pt x 526.8467pt.
 
 <chapter4/muse/abs1b.png, id=335, 1845.294pt x 2063.3085pt>
 File: chapter4/muse/abs1b.png Graphic file (type png)
 
 <use chapter4/muse/abs1b.png>
-Package pdftex.def Info: chapter4/muse/abs1b.png used on input line 204.
+Package pdftex.def Info: chapter4/muse/abs1b.png used on input line 203.
 (pdftex.def)             Requested size: 389.71942pt x 435.7869pt.
 
 <chapter4/muse/abs2.png, id=336, 1848.30525pt x 2861.892pt>
 File: chapter4/muse/abs2.png Graphic file (type png)
 
 <use chapter4/muse/abs2.png>
-Package pdftex.def Info: chapter4/muse/abs2.png used on input line 209.
+Package pdftex.def Info: chapter4/muse/abs2.png used on input line 208.
 (pdftex.def)             Requested size: 340.23895pt x 526.8467pt.
 
 <chapter4/muse/abs2b.png, id=337, 1845.294pt x 2063.3085pt>
 File: chapter4/muse/abs2b.png Graphic file (type png)
 
 <use chapter4/muse/abs2b.png>
-Package pdftex.def Info: chapter4/muse/abs2b.png used on input line 214.
+Package pdftex.def Info: chapter4/muse/abs2b.png used on input line 213.
 (pdftex.def)             Requested size: 389.71942pt x 435.7869pt.
-
-
-LaTeX Warning: Reference `secNGC612' on page 16 undefined on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 220.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 220.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 220.
-
-
-Overfull \hbox (2.66905pt too wide) in paragraph at lines 222--223
-\OT1/cmr/m/n/12 The def-i-ni-tion of the Mg$[]$ ab-sorp-tion line in-dex (blue 
-con-tin-uum: 4895.125--4957.625[]A,
- []
-
-
-LaTeX Warning: Command \r invalid in math mode on input line 226.
-
-
-LaTeX Warning: Command \r invalid in math mode on input line 226.
-
-
-LaTeX Warning: Command \r invalid in math mode on input line 228.
-
-
-LaTeX Warning: Command \r invalid in math mode on input line 228.
-
-[16] [17 <./chapter4/vimos/abs1.png>] [18pdfTeX warning (ext4): destination wit
-h the same identifier (name{figure.3.6}) has been already used, duplicate ignor
-ed
+ [15] [16 <./chapter4/vimos/abs1.png>] [17pdfTeX warning (ext4): destination wi
+th the same identifier (name{figure.3.6}) has been already used, duplicate igno
+red
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.229 
-       <./chapter4/vimos/abs2.png>] [19pdfTeX warning (ext4): destination with 
+l.218 
+       <./chapter4/vimos/abs2.png>] [18pdfTeX warning (ext4): destination with 
 the same identifier (name{figure.3.6}) has been already used, duplicate ignored
 
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.229 
-       <./chapter4/vimos/abs3.png>] [20pdfTeX warning (ext4): destination with 
+l.218 
+       <./chapter4/vimos/abs3.png>] [19pdfTeX warning (ext4): destination with 
 the same identifier (name{figure.3.6}) has been already used, duplicate ignored
 
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.229 
-       <./chapter4/vimos/abs4.png>] [21pdfTeX warning (ext4): destination with 
+l.218 
+       <./chapter4/vimos/abs4.png>] [20pdfTeX warning (ext4): destination with 
 the same identifier (name{figure.3.6}) has been already used, duplicate ignored
 
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.229 
-       <./chapter4/vimos/abs5.png>] [22 <./chapter4/muse/abs1.png>] [23pdfTeX w
+l.218 
+       <./chapter4/vimos/abs5.png>] [21 <./chapter4/muse/abs1.png>] [22pdfTeX w
 arning (ext4): destination with the same identifier (name{figure.3.7}) has been
  already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.229 
-       <./chapter4/muse/abs1b.png>] [24pdfTeX warning (ext4): destination with 
+l.218 
+       <./chapter4/muse/abs1b.png>] [23pdfTeX warning (ext4): destination with 
 the same identifier (name{figure.3.7}) has been already used, duplicate ignored
 
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.229 
-       <./chapter4/muse/abs2.png>] [25pdfTeX warning (ext4): destination with t
+l.218 
+       <./chapter4/muse/abs2.png>] [24pdfTeX warning (ext4): destination with t
 he same identifier (name{figure.3.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.229 
+l.218 
        <./chapter4/muse/abs2b.png>]
-<chapter4/Mg_sigma.png, id=437, 1156.32pt x 867.24pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 219.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sigma' on input line 219.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 219.
+
+
+Overfull \hbox (2.66905pt too wide) in paragraph at lines 221--222
+\OT1/cmr/m/n/12 The def-i-ni-tion of the Mg$[]$ ab-sorp-tion line in-dex (blue 
+con-tin-uum: 4895.125--4957.625[]A,
+ []
+
+
+LaTeX Warning: Command \r invalid in math mode on input line 225.
+
+
+LaTeX Warning: Command \r invalid in math mode on input line 225.
+
+
+LaTeX Warning: Command \r invalid in math mode on input line 227.
+
+<chapter4/Mg_sigma.png, id=410, 1156.32pt x 867.24pt>
 File: chapter4/Mg_sigma.png Graphic file (type png)
 
 <use chapter4/Mg_sigma.png>
-Package pdftex.def Info: chapter4/Mg_sigma.png used on input line 265.
+Package pdftex.def Info: chapter4/Mg_sigma.png used on input line 264.
 (pdftex.def)             Requested size: 346.89731pt x 260.17401pt.
- [26]
+ [25] [26 <./chapter4/Mg_sigma.png>]
 
 LaTeX Warning: Reference `subsubsec:Absorption' on page 27 undefined on input l
-ine 280.
+ine 279.
 
 
 LaTeX Warning: Reference `subsubsec:Absorption' on page 27 undefined on input l
-ine 280.
+ine 279.
 
 
-LaTeX Warning: Float too large for page by 22.22432pt on input line 352.
+LaTeX Warning: Float too large for page by 22.22432pt on input line 351.
 
-[27 <./chapter4/Mg_sigma.png>] [28]
+[27] [28]
 
 LaTeX Warning: Reference `subsubsec:StellarPop' on page 29 undefined on input l
-ine 363.
+ine 362.
 
-<chapter4/vimos/pop1.png, id=506, 1382.766pt x 2606.538pt>
+<chapter4/vimos/pop1.png, id=495, 1382.766pt x 1726.0485pt>
 File: chapter4/vimos/pop1.png Graphic file (type png)
 
 <use chapter4/vimos/pop1.png>
-Package pdftex.def Info: chapter4/vimos/pop1.png used on input line 369.
-(pdftex.def)             Requested size: 324.33818pt x 611.40578pt.
+Package pdftex.def Info: chapter4/vimos/pop1.png used on input line 368.
+(pdftex.def)             Requested size: 328.26265pt x 409.77406pt.
 
-
-LaTeX Warning: Float too large for page by 60.97578pt on input line 372.
-
-<chapter4/vimos/pop2.png, id=509, 1382.766pt x 2606.538pt>
+<chapter4/vimos/pop2.png, id=498, 1382.766pt x 2606.538pt>
 File: chapter4/vimos/pop2.png Graphic file (type png)
 
 <use chapter4/vimos/pop2.png>
-Package pdftex.def Info: chapter4/vimos/pop2.png used on input line 375.
+Package pdftex.def Info: chapter4/vimos/pop2.png used on input line 374.
 (pdftex.def)             Requested size: 324.33818pt x 611.40578pt.
 
-<chapter4/vimos/pop3.png, id=510, 1382.766pt x 2606.538pt>
+<chapter4/vimos/pop3.png, id=499, 1382.766pt x 2606.538pt>
 File: chapter4/vimos/pop3.png Graphic file (type png)
 
 <use chapter4/vimos/pop3.png>
-Package pdftex.def Info: chapter4/vimos/pop3.png used on input line 380.
+Package pdftex.def Info: chapter4/vimos/pop3.png used on input line 379.
 (pdftex.def)             Requested size: 324.33818pt x 611.40578pt.
 
-<chapter4/vimos/pop4.png, id=511, 1382.766pt x 882.8985pt>
+<chapter4/vimos/pop4.png, id=500, 1382.766pt x 1726.0485pt>
 File: chapter4/vimos/pop4.png Graphic file (type png)
 
 <use chapter4/vimos/pop4.png>
-Package pdftex.def Info: chapter4/vimos/pop4.png used on input line 385.
-(pdftex.def)             Requested size: 315.77187pt x 201.6317pt.
+Package pdftex.def Info: chapter4/vimos/pop4.png used on input line 384.
+(pdftex.def)             Requested size: 328.26265pt x 409.77406pt.
 
-<chapter4/muse/pop1.png, id=512, 1380.357pt x 2583.6525pt>
+<chapter4/muse/pop1.png, id=501, 1380.357pt x 2583.6525pt>
 File: chapter4/muse/pop1.png Graphic file (type png)
 
 <use chapter4/muse/pop1.png>
-Package pdftex.def Info: chapter4/muse/pop1.png used on input line 391.
+Package pdftex.def Info: chapter4/muse/pop1.png used on input line 390.
 (pdftex.def)             Requested size: 326.63763pt x 611.40578pt.
 
-<chapter4/muse/pop2.png, id=515, 1380.357pt x 860.013pt>
+<chapter4/muse/pop2.png, id=504, 1380.357pt x 860.013pt>
 File: chapter4/muse/pop2.png Graphic file (type png)
 
 <use chapter4/muse/pop2.png>
-Package pdftex.def Info: chapter4/muse/pop2.png used on input line 397.
+Package pdftex.def Info: chapter4/muse/pop2.png used on input line 396.
 (pdftex.def)             Requested size: 323.62569pt x 201.6317pt.
  [29] [30 <./chapter4/vimos/pop1.png>] [31pdfTeX warning (ext4): destination wi
 th the same identifier (name{figure.3.9}) has been already used, duplicate igno
@@ -1186,36 +1158,36 @@ red
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.445 
+l.444 
        <./chapter4/vimos/pop2.png>] [32pdfTeX warning (ext4): destination with 
 the same identifier (name{figure.3.9}) has been already used, duplicate ignored
 
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.445 
+l.444 
        <./chapter4/vimos/pop3.png>] [33pdfTeX warning (ext4): destination with 
 the same identifier (name{figure.3.9}) has been already used, duplicate ignored
 
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.445 
+l.444 
        <./chapter4/vimos/pop4.png>] [34 <./chapter4/muse/pop1.png>] [35pdfTeX w
 arning (ext4): destination with the same identifier (name{figure.3.10}) has bee
 n already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.449 
+l.444 
        <./chapter4/muse/pop2.png>]
-<chapter4/KDC_size_age.png, id=582, 1156.32pt x 867.24pt>
+<chapter4/KDC_size_age.png, id=569, 1156.32pt x 867.24pt>
 File: chapter4/KDC_size_age.png Graphic file (type png)
 
 <use chapter4/KDC_size_age.png>
-Package pdftex.def Info: chapter4/KDC_size_age.png used on input line 454.
+Package pdftex.def Info: chapter4/KDC_size_age.png used on input line 453.
 (pdftex.def)             Requested size: 303.53267pt x 227.6473pt.
- [36 <./chapter4/KDC_size_age.png>]) [37]
+ [36]) [37 <./chapter4/KDC_size_age.png>]
 (./thesis.bbl [42
 
 
@@ -1242,11 +1214,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 16563 strings out of 494936
- 297951 string characters out of 6181324
- 378748 words of memory out of 5000000
- 19498 multiletter control sequences out of 15000+600000
- 542416 words of font info for 66 fonts, out of 8000000 for 9000
+ 16557 strings out of 494936
+ 297864 string characters out of 6181324
+ 379748 words of memory out of 5000000
+ 19493 multiletter control sequences out of 15000+600000
+ 542108 words of font info for 65 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,18n,59p,10344b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist
@@ -1262,27 +1234,26 @@ pdfTeX warning (dest): name{chapter.1} has been referenced but does not exist,
 replaced by a fixed one
 
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
-r/sfrm1200.pfb>
-Output written on thesis.pdf (41 pages, 14610803 bytes).
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/
+public/cm-super/sfrm1200.pfb>
+Output written on thesis.pdf (41 pages, 14614081 bytes).
 PDF statistics:
- 765 PDF objects out of 1000 (max. 8388607)
- 628 compressed objects within 7 object streams
+ 751 PDF objects out of 1000 (max. 8388607)
+ 616 compressed objects within 7 object streams
  127 named destinations out of 1000 (max. 500000)
  264 words of extra memory for PDF output out of 10000 (max. 10000000)
 
