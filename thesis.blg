@@ -4,7 +4,11 @@ The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: acknowledgements/dedication.aux
 A level-1 auxiliary file: acknowledgements/acknowledgements.aux
 A level-1 auxiliary file: abstract/abstract.aux
-A level-1 auxiliary file: introduction/introduction.aux
+I couldn't open auxiliary file introduction/introduction.aux
+---line 22 of file thesis.aux
+ : \@input{introduction/introduction.aux
+ :                                      }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: chapter2/chapter2.aux
 A level-1 auxiliary file: chapter4/chapter4.aux
 A level-1 auxiliary file: chapter5/chapter5.aux
@@ -55,3 +59,4 @@ warning$ -- 0
 while$ -- 260
 width$ -- 0
 write$ -- 382
+(There was 1 error message)
