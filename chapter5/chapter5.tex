@@ -113,15 +113,15 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 	\label{sec:Diagnostics}
 	Determining the source of the ionising radiation using line ratio plots, such as Baldwin--Phillips--Terlevich (BPT) diagrams (\citealt{Baldwin1981}; and revised by \citealt{Kewley2001, Kauffmann2003a}), has become increasingly useful tool. That said, there are several important caveats. Firstly, great care must be taken in applying the definitions of each diagnostics line. Much of the literature mis-interprets the classifications. Secondly, in the absence of spatially resolved spectra, low-ionisation nuclear emission-line region (LINER) classifications have often been taken as a marker for jet-mode active galactic nuclei (AGN). As discussed in Section \ref{subsubsection:JetFeedback}, several recent surveys have shown that many of these galaxies may not be bona fide AGN \citep[e.g.][]{Sarzi2005, Sarzi2010, Singh2013, Belfiore2016a}. In such cases, the emission may not even originate from the centre of the galaxies, the location of the supposed AGN. This led to the creation of the low-ionisation emission-line region (LIER) classification, with the same criteria as LINER, but not necessarily in the nuclear region.
 
-	This section is laid out as follows. Firstly we find the conversion factors from [\ion{N}{ii}] to [\ion{N}{i}] and [\ion{O}{i}] to [\ion{O}{iii}] (Section \ref{subsec:NII_NI}). With the Balmer decrement, this allows the use of diagnostic plots that use either H$\alpha$, [\ion{N}{ii}] or [\ion{O}{i}] emission lines, for data where these emission lines are outside of the wavelength range i.e. we use [\ion{N}{i}], [\ion{O}{iii}] and H$\beta$ as proxies for [\ion{N}{ii}], [\ion{O}{i}] and H$\alpha$ respectively. We then examine each of the the following diagnostics plots for each galaxy: BPT plots, mass--excitation (MEx), equivalent width of H$\alpha$ verse [\ion{N}{ii}]/H$\alpha$ line ratio (WHaN2).%; or for VIMOS, the equivalent width of H$\beta$ verse [\ion{N}{i}]/H$\beta$ line ratio i.e. WHbN1). 
+	This section is laid out as follows. Firstly we find the conversion factors from [\ion{N}{ii}] to [\ion{N}{i}] and [\ion{O}{i}] to [\ion{O}{iii}] (Section \ref{subsec:Ndec}). With the Balmer decrement, this allows the use of diagnostic plots that use either H$\alpha$, [\ion{N}{ii}] or [\ion{O}{i}] emission lines, for data where these emission lines are outside of the wavelength range i.e. we use [\ion{N}{i}], [\ion{O}{iii}] and H$\beta$ as proxies for [\ion{N}{ii}], [\ion{O}{i}] and H$\alpha$ respectively. We then examine each of the the following diagnostics plots for each galaxy: BPT plots, mass--excitation (MEx), equivalent width of H$\alpha$ verse [\ion{N}{ii}]/H$\alpha$ line ratio (WHaN2).%; or for VIMOS, the equivalent width of H$\beta$ verse [\ion{N}{i}]/H$\beta$ line ratio i.e. WHbN1). 
 
-	\subsection{\bracket{\ion{N}{ii}} to \bracket{\ion{N{i}}} Ratio in MUSE Data}
-		\label{subsec:NII_NI}
-		Since H$\alpha$, [\ion{O}{i}] and [\ion{N}{ii}] emission lines are all outside of the wavelength range of VIMOS, we transpose boundary lines 
-%Need a better description of the lines
-		using the Balmer decrement and a linear fit to the analogous `nitrogen decrement' and a quadratic fit to the `oxygen decrement'.
+	% \subsection{\bracket{\ion{N}{ii}} to \bracket{\ion{N{i}}} Ratio in MUSE Data}
+	\subsection{Finding Emission-Line Fluxes Beyond the Range of VIMOS Data}
+		\label{subsec:Ndec}
 
-		The Balmer decrement, $d_\mathrm{H}$, is the ratio of the H$\alpha$ to H$\beta$ fluxes and has good theoretical motivation that it has a constant value of $d_\mathrm{H} = 2.86$ in a wide variety of conditions. In reality, higher values are routinely observed. These can be explained as either due to the presence of dust, causing extinction, whereby emission lines at longer wavelengths to appear brighter than expected compared the their bluer counterparts as the dust preferentially scatters bluer light; or some mechanism that populates hydrogen levels from the ground up. Such mechanisms may be important in high-density environments such at within powerful (type 1) AGN nuclei \citep[e.g.][]{Shields1974, Netzer1975}. Large ETGs tend to be dusty in nature, often being bright in the infrared (where the thermal emission from dust is seen in the `dust bump') and other emission line ratios \citep[e.g. \bracket{\ion{S}{ii}} in ][]{Wampler1968} show similar reddening in type 2 AGN. Thus, assuming the observed steeping of the Balmer decrement is entirely due to dust, the ratio of the observed decrement to the theoretical value of 2.86 is a good estimate for the reddening effect of the dust.
+		The Balmer decrement, $d_\mathrm{H}$, is the ratio of the H$\alpha$ to H$\beta$ fluxes and has good theoretical motivation that it has a near constant value of $d_\mathrm{H} = 2.86$ under a wide variety of conditions. In reality, however, higher values are routinely observed. These observation can be explained as either due to the presence of dust, causing extinction, whereby emission lines at longer wavelengths to appear brighter than expected compared the their bluer counterparts as the dust preferentially scatters bluer light; or some mechanism that populates hydrogen levels from the ground up. Such mechanisms may be important in high-density environments such at within powerful (type 1) AGN nuclei \citep[e.g.][]{Shields1974, Netzer1975}. The majority ($\approx 60$\%) of ETGs and all low-ionized nuclear emission region galaxies (LINERs) and Seyfert galaxies are dusty in nature \citep[e.g.][]{Martini2013}. Such galaxies have clear dust observations in \textit{Hubble Space Telescope (HST)} observations \citep[e.g.][]{Martini2013}, are bright in the infrared (where the thermal emission from dust is seen in the `dust bump'; e.g. \citealt{Jura1987, Knapp1992}) and other emission line ratios \citep[e.g. \bracket{\ion{S}{ii}} in ][]{Wampler1968} show similar reddening. Thus, assuming the observed steeping of the Balmer decrement is entirely due to dust, the ratio of the observed decrement to the theoretical value of 2.86 is a good estimate for the reddening effect of the dust.
+
+		If we assume that different ionization states of a given atom occur in the same locations (namely, the location of the abundance of the atom), implying that shielding is not important or at least is not non-linear in its affect on the emission-line ratios. Given that the different species must have been produced under the same conditions, it might be natural to expect a relationship between them. Thus, using the emission line fluxes derived from the MUSE data, we observe that the relationship between [\ion{N}{ii}] and [\ion{N}{i}] appears to be linear, while the relationship between [\ion{O}{i}] and [\ion{O}{iii}] appears to be quadratic. We emphasis that these are purely empirical observations and differ from the Balmer decrement as they lack strong theoretical basis. 
 
 		In order find the intrinsic conversion from both [\ion{O}{iii}] and [\ion{N}{i}] to [\ion{O}{i}] and [\ion{N}{ii}] we must first correct them for dust reddening. Assuming that the extinction can be approximated to a linear form in the V-band, we correct the flux of the bluer emission line, $I_\mathrm{b}$ of the pair by applying
 		\begin{equation}
@@ -129,14 +129,35 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 		\end{equation}
 		where $\Delta\lambda$ is the difference in wavelength of the two lines, $\lambda_\mathrm{H\alpha}$ and $\lambda_\mathrm{H\beta}$ are the rest-frame wavelengths of the H$\alpha$ (6563 \AA) and H$\beta$ (4861 \AA) emission lines with intensities of $I_\mathrm{H\alpha}$ and $I_\mathrm{H\beta}$, respectively. The intrinsic conversion can then be found by comparing $I^\mathrm{corr}_\mathrm{b}$ to $I_\mathrm{r}$, the intensity of the redder line in the pair. 
 
-		In Fig.\ref{fig:NII_NI} we fit a straight line to the intensity of [\ion{N}{ii}] verse [\ion{N}{i}] corrected for dust extinction, and in Fig.\ref{fig:OI_OIII} we fit a quadratic to the intensity of [\ion{O}{i}] verse [\ion{O}{iii}] corrected for dust extinction. We find the following relationships:
+		In Fig.\,\ref{fig:NII_NI} we fit a straight line to the intensity of [\ion{N}{ii}] verse [\ion{N}{i}] corrected for dust extinction using the least-trimmed squares routine, \textsc{lts\_linefit} by \citet{Cappellari2013} due to its robust handling of uncertainty in both axes. In Fig.\,\ref{fig:OI_OIII} we fit a quadratic to the intensity of [\ion{O}{i}] verse [\ion{O}{iii}] corrected for dust extinction. For this fit with use the orthogonal distance regression routines (ODR) within the \textsc{scipy} package. ODR must be used with care, particularly when the functional form of the model is not well known, i.e. the residuals to the fit may not be purely noise. While this is the case here: we have no theoretical reason for fitting a quadratic, we can see from Fig.\,\ref{fig:OI_OIII} that it is a good fit across 8 orders of magnitude in the [\ion{O}{iii}] direction. Thus, while, the actual parameters of the fit may not reflect the underlying physics, they do give a good representation of the data.
+
+		In this way, we find the following relationships:
 		\begin{align}
 			I_\text{[\ion{N}{ii}]} = & \, a I^\text{corr}_\text{[\ion{N}{i}]} + b \\
 			\intertext{and}
 			I_\text{[\ion{O}{i}]} = & \, (3.96 \pm 0.18) \times 10^{-6} I^\text{corr}_\text{[\ion{O}{iii}]}^2 + (0.51 \pm 0.01) I^\text{corr}_\text{[\ion{O}{iii}]} +  \, .
 		\end{align}
-		It should be emphasized that these relationships are purely empirical, unlike the Balmer decrement.
 
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth]{chapter5/vimos/NII_NI_ratio.png}
+			\caption[The nitrogen `decrement']{The Nitrogen `decrement'.} 
+			\label{fig:NII_NI}
+		\end{figure}
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth]{chapter5/OIII_OI_ratio.png}
+			\caption[The oxygen `decrement']{The oxygen `decrement'.} 
+			\label{fig:OI_OIII}
+		\end{figure}
+
+
+
+		Since H$\alpha$, [\ion{O}{i}] and [\ion{N}{ii}] emission lines are all outside of the wavelength range of VIMOS, we transpose observations and empirical boundary lines  
+%Need a better description of the lines
+		using the Balmer decrement, a linear fit to an analogous `nitrogen decrement' and a quadratic fit to the `oxygen decrement'.
 
 	\subsection{BPT Diagnostic Plots}
 		\label{subsec:BPT}
