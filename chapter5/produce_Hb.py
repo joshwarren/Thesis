@@ -94,8 +94,14 @@ def plot(galaxies):
 
 	for a in axs.flatten():
 		if hasattr(a, 'ax_dis'):
-			a.ax_dis.tick_params(top=True, bottom=True, left=True, right=True, 
-				direction='in', which='both')
+			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
+				right=True, direction='in', which='major', length=20,
+				width=3, labelsize='large')
+			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
+				right=True, direction='in', which='minor', length=10,
+				width=3)
+			a.ax_dis.xaxis.label.set_size(22)
+			a.ax_dis.yaxis.label.set_size(22)
 
 	for a in axs.flatten()[[1,2,3,5,6,7,10]]:
 		if hasattr(a, 'ax_dis'): 

@@ -9,9 +9,9 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 	\label{sec:GasFlux}
 	\subsection{Maps}
 		\label{subsec:GasMaps}
-		Only 4 galaxies of the Southern Sample have detections of emission lines outside of the central region (IC 1459, NGC 612, NGC 1316 and NGC 3100; see Figs.\ref{fig:VIMOS_Hb} and \ref{fig:MUSE_Hb}).  Of the remaining 7 galaxies, NGC 1399 has no detection of H$\beta$ at all, while the remaining 6 galaxies have detections only in the centre. 
+		Only 4 galaxies of the Southern Sample have detections of emission lines outside of the central region (IC 1459, NGC 612, NGC 1316 and NGC 3100; see Figs.\,\ref{fig:VIMOS_Hb} and \ref{fig:MUSE_Hb}).  Of the remaining 7 galaxies, NGC 1399 has no detection of H$\beta$ at all, while the remaining 6 galaxies have detections only in the centre. 
 
-		Images of each galaxy in the Southern Sample in H$\beta$ is shown in Figs.\ref{fig:VIMOS_Hb} and \ref{fig:MUSE_Hb}. All other emission lines have the same distribution, but at different intensities, with the exception of NGC 612, which shows a significant cloud in [\ion{O}{iii}] to the south of the centre of the galaxy (see Fig.\ref{fig:NGC612_OIII}). 
+		Images of each galaxy in the Southern Sample in H$\beta$ is shown in Figs.\ref{fig:VIMOS_Hb} and \ref{fig:MUSE_Hb}. All other emission lines have the same distribution, but at different intensities, with the exception of NGC 612, which shows a significant cloud in [\ion{O}{iii}] to the south of the centre of the galaxy (see Fig.\,\ref{fig:NGC612_OIII}). 
 
 
 		\begin{figure}
@@ -36,7 +36,7 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 		\end{figure}
 
 
-		Because equivalent width is not dependent on overall intensity (except for the initial detection threshold: a line must be detected in order to observe its equivalent width), it can be used to highlight local structures that cannot be seen in flux maps. The equivalent width maps for each emission line for each galaxy in the Southern Sample are shown in Figs.\ref{fig:VIMOS_ew} and \ref{fig:MUSE_ew}. 
+		Because equivalent width is not dependent on overall intensity (except for the initial detection threshold: a line must be detected in order to observe its equivalent width), it can be used to highlight local structures that cannot be seen in flux maps. The equivalent width maps for each emission line for each galaxy in the Southern Sample are shown in Figs.\,\ref{fig:VIMOS_ew} and \ref{fig:MUSE_ew}. 
 
 		\begin{figure}
 			\centering
@@ -90,6 +90,7 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 			\end{tabular*}
 			\begin{tablenotes}
 			\footnotesize
+			\note Col.\,1: Galaxy. Col.\,2: \ion{H}{ii} mass derived from the H\,$\beta$ line in the VIMOS data, assuming a Balmer decrement of 2.85. Col.\,3: \ion{H}{ii} mass derived from the H\,$\alpha$ line in the MUSE data. Col.\,4: Observed Balmer decrement derived from the MUSE data.
 			\item [a] H$\beta$ was not detected in IC 4296, thus the formal observed Balmer decrement is $\infty$. 
 			\item [b] H$\beta$ was not detected with an A/N $> 2.5$ meaning that the fit is not reliable (hence this is an upper limit). 
 			\end{tablenotes}
@@ -107,6 +108,75 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 
 \section{Ionised Gas Kinematics}
 	\label{sec:GasKin}
+	Using the methods described in Section \ref{subsec:EmissionFit} we find the best-fitting line-of-sight velocity distribution (LOSVD; assumed to be Gaussian in form and represented by the mean velocity and velocity dispersion only) for the ISM. As described in \ref{subsec:EmissionFit}, all emission lines are fitted with the same LOSVD, but with each individual line fitted with its own flux. In the cases of the [\ion{O}{iii}], [\ion{O{i}}] and [\ion{N}{ii}] doublets, the components of the doublets are fitted with a fixed flux ratio of 1:0.34; the [\ion{N}{i}] doublet has a ratio of 1:0.65 \citep{Safier1992}; and the components of the [\ion{O}{ii}] and [\ion{S}{ii}] doublets are fitted independently.
+
+	In Figs.\,\ref{fig:VIMOS_Gaskine} and \ref{fig:MUSE_Gaskine}, we show the maps of the mean velocity and velocity dispersion for the ISM in the galaxies with a significant number of spatial bins that have gas detected in our Southern sample (IC 1459, NGC 612, NGC 1316 and NGC 3100). 
+
+	\begin{figure}
+		\centering
+		\includegraphics[height=0.62\textheight]{chapter4/vimos/kin.png}
+		\caption[VIMOS ISM kinematic maps]{VIMOS ISM kinematic maps. Left to right: mean velocity and velocity dispersion. Alternate columns show a given parameter its associated uncertainty. Top to bottom: IC 1459, NGC 612 and NGC 3100. Flux contours (isophotes) are shown in black, \ce{^{12}CO(2-1)} contours from ALMA in cyan and radio continuum contours from VLA in green. The radio band displayed depends on the data available in the archive and which images had a similar resolution and scales. Limits on the colour scale are: mean velocity maps -360 to 360\,$\mathrm{km \, s^{-1}}$ (except for NGC 3100 which has limits of -100 to 100\,$\mathrm{km \, s^{-1}}$), mean velocity uncertainty 1 to 15\,$\mathrm{km \, s^{-1}}$, velocity dispersion 35 to 200\,$\mathrm{km \, s^{-1}}$ and velocity dispersion uncertainty 1 to 20\,$\mathrm{km \, s^{-1}}$.} 
+		\label{fig:VIMOS_Gaskine}
+	\end{figure}
+
+	\begin{figure}
+		\centering
+		\includegraphics[height=0.94\textheight]{chapter4/muse/kin1.png}
+		\caption[MUSE ISM kinematic maps]{As in Figure \ref{fig:VIMOS_Gaskine} but for the MUSE ISM kinematic maps.}
+		\label{fig:MUSE_Gaskine}
+	\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+	\subsection{Misalignment of Gas}
+		\label{subsec:Gasmisaligment}
+		It is immediately clear when comparing the mean stellar velocity maps in Figs.\,\ref{fig:VIMOS_stellar} and \ref{fig:MUSE_stellar} to the mean gas velocity maps in Figs.\,\ref{fig:VIMOS_gaskine} and \ref{fig:MUSE_gaskine} that where gas is detected, its angular momentum vector is not often aligned with that of the stars. IC 1459 shows the gas counter-rotating with respect to the kinematically-decoupled core, and rotating independently from the rest of the galaxy too. The kinematics of the gas in NGC 612 appear to be well aligned to that of the stars. 
+
+
+
+
+	\subsection{The Changing Orbits of the ISM}
+		\label{subsec:outflows}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Sources of Ionising Potential}
@@ -116,7 +186,7 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 	This section is laid out as follows. Firstly we find the conversion factors from [\ion{N}{ii}] to [\ion{N}{i}] and [\ion{O}{i}] to [\ion{O}{iii}] (Section \ref{subsec:Ndec}). With the Balmer decrement, this allows the use of diagnostic plots that use either H$\alpha$, [\ion{N}{ii}] or [\ion{O}{i}] emission lines, for data where these emission lines are outside of the wavelength range i.e. we use [\ion{N}{i}], [\ion{O}{iii}] and H$\beta$ as proxies for [\ion{N}{ii}], [\ion{O}{i}] and H$\alpha$ respectively. We then examine each of the the following diagnostics plots for each galaxy: BPT plots, mass--excitation (MEx), equivalent width of H$\alpha$ verse [\ion{N}{ii}]/H$\alpha$ line ratio (WHaN2).%; or for VIMOS, the equivalent width of H$\beta$ verse [\ion{N}{i}]/H$\beta$ line ratio i.e. WHbN1). 
 
 	% \subsection{\bracket{\ion{N}{ii}} to \bracket{\ion{N{i}}} Ratio in MUSE Data}
-	\subsection{Finding Emission-Line Fluxes Beyond the Range of VIMOS Data}
+	\subsection{Using Emission Lines Beyond the Range of VIMOS Data}
 		\label{subsec:Ndec}
 
 		The Balmer decrement, $d_\mathrm{H}$, is the ratio of the H$\alpha$ to H$\beta$ fluxes and has good theoretical motivation that it has a near constant value of $d_\mathrm{H} = 2.86$ under a wide variety of conditions. In reality, however, higher values are routinely observed. These observation can be explained as either due to the presence of dust, causing extinction, whereby emission lines at longer wavelengths to appear brighter than expected compared the their bluer counterparts as the dust preferentially scatters bluer light; or some mechanism that populates hydrogen levels from the ground up. Such mechanisms may be important in high-density environments such at within powerful (type 1) AGN nuclei \citep[e.g.][]{Shields1974, Netzer1975}. The majority ($\approx 60$\%) of ETGs and all low-ionized nuclear emission region galaxies (LINERs) and Seyfert galaxies are dusty in nature \citep[e.g.][]{Martini2013}. Such galaxies have clear dust observations in \textit{Hubble Space Telescope (HST)} observations \citep[e.g.][]{Martini2013}, are bright in the infrared (where the thermal emission from dust is seen in the `dust bump'; e.g. \citealt{Jura1987, Knapp1992}) and other emission line ratios \citep[e.g. \bracket{\ion{S}{ii}} in ][]{Wampler1968} show similar reddening. Thus, assuming the observed steeping of the Balmer decrement is entirely due to dust, the ratio of the observed decrement to the theoretical value of 2.86 is a good estimate for the reddening effect of the dust.
@@ -135,7 +205,7 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 		\begin{align}
 			I_\text{[\ion{N}{ii}]} = & \, a I^\text{corr}_\text{[\ion{N}{i}]} + b \\
 			\intertext{and}
-			I_\text{[\ion{O}{i}]} = & \, (3.96 \pm 0.18) \times 10^{-6} I^\text{corr}_\text{[\ion{O}{iii}]}^2 + (0.51 \pm 0.01) I^\text{corr}_\text{[\ion{O}{iii}]} +  \, .
+			I_\text{[\ion{O}{i}]} = & \, (8.02 \pm 0.43) \times 10^{-6} I^\text{corr}_\text{[\ion{O}{iii}]}^2 + (0.388 \pm 0.009) I^\text{corr}_\text{[\ion{O}{iii}]} + (1.37 \pm 0.11) \times 10^{-6} \, .
 		\end{align}
 
 
@@ -161,13 +231,14 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 
 	\subsection{BPT Diagnostic Plots}
 		\label{subsec:BPT}
+% Include SUARON diagnoistic plots here
 
 
 	\subsection{MEx Diagnostic Plots}
 		\label{subsec:MEx}
 
 
-	\subsection{WHaN2 and WHbN1 Plots}
+	\subsection{WHaN2 Plots}
 		\label{subsec:WHaN2}
 
 
