@@ -23,14 +23,24 @@ Baldwin J.~A.,  Phillips M.~M.,   Terlevich R.,  1981, Publications of the
   Astronomical Society of the Pacific, 93
 
 \bibitem[\protect\citeauthoryear{Belfiore et~al.,}{Belfiore
-  et~al.}{2016}]{Belfiore2016a}
-Belfiore F.,  et~al., 2016, \mn@doi [Monthly Notices of the Royal Astronomical
+  et~al.}{2016a}]{Belfiore2016a}
+Belfiore F.,  et~al., 2016a, \mn@doi [Monthly Notices of the Royal Astronomical
   Society] {10.1093/mnras/stw1234}, 461, 3111
+
+\bibitem[\protect\citeauthoryear{Belfiore et~al.,}{Belfiore
+  et~al.}{2016b}]{Belfiore2016}
+Belfiore F.,  et~al., 2016b, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1093/mnras/stw3211}, 466, 2570
 
 \bibitem[\protect\citeauthoryear{Cappellari et~al.,}{Cappellari
   et~al.}{2013}]{Cappellari2013}
 Cappellari M.,  et~al., 2013, \mn@doi [Monthly Notices of the Royal
   Astronomical Society] {10.1093/mnras/stt562}, 432, 1709
+
+\bibitem[\protect\citeauthoryear{Juneau, Dickinson, Alexander  \& Salim}{Juneau
+  et~al.}{2011}]{Juneau2011}
+Juneau S.,  Dickinson M.,  Alexander D.~M.,   Salim S.,  2011, \mn@doi [The
+  Astrophysical Journal] {10.1088/0004-637X/736/2/104}, 736, 104
 
 \bibitem[\protect\citeauthoryear{Jura, Kim, Knapp  \& Guhathakurta}{Jura
   et~al.}{1987}]{Jura1987}
@@ -66,6 +76,15 @@ Martini P.,  Dicken D.,   Storchi-Bergmann T.,  2013, \mn@doi [The
 \bibitem[\protect\citeauthoryear{Netzer}{Netzer}{1975}]{Netzer1975}
 Netzer H.,  1975, \mn@doi [Monthly Notices of the Royal Astronomical Society]
   {10.1093/mnras/171.2.395}, 171, 395
+
+\bibitem[\protect\citeauthoryear{Nyland et~al.,}{Nyland
+  et~al.}{2016}]{Nyland2016}
+Nyland K.,  et~al., 2016, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1093/mnras/stw391}, 458, 2221
+
+\bibitem[\protect\citeauthoryear{Safier}{Safier}{1992}]{Safier1992}
+Safier P.~N.,  1992, \mn@doi [The Astrophysical Journal] {10.1086/171449}, 392,
+  492
 
 \bibitem[\protect\citeauthoryear{Sarzi et~al.,}{Sarzi et~al.}{2005}]{Sarzi2005}
 Sarzi M.,  et~al., 2005, \mn@doi [Monthly Notices of the Royal Astronomical
