@@ -17,6 +17,12 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
+\bibitem[\protect\citeauthoryear{Allen, Groves, Dopita, Sutherland  \&
+  Kewley}{Allen et~al.}{2008}]{Allen2008}
+Allen M.~G.,  Groves B.~A.,  Dopita M.~A.,  Sutherland R.~S.,   Kewley L.~J.,
+  2008, \mn@doi [The Astrophysical Journal Supplement Series] {10.1086/589652},
+  178, 20
+
 \bibitem[\protect\citeauthoryear{Baldwin, Phillips  \& Terlevich}{Baldwin
   et~al.}{1981}]{Baldwin1981}
 Baldwin J.~A.,  Phillips M.~M.,   Terlevich R.,  1981, Publications of the
@@ -36,6 +42,16 @@ Belfiore F.,  et~al., 2016b, \mn@doi [Monthly Notices of the Royal Astronomical
   et~al.}{2013}]{Cappellari2013}
 Cappellari M.,  et~al., 2013, \mn@doi [Monthly Notices of the Royal
   Astronomical Society] {10.1093/mnras/stt562}, 432, 1709
+
+\bibitem[\protect\citeauthoryear{Davis et~al.,}{Davis
+  et~al.}{2011}]{Davis2011a}
+Davis T.~A.,  et~al., 2011, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1111/j.1365-2966.2011.19355.x}, 417, 882
+
+\bibitem[\protect\citeauthoryear{Dopita \& Sutherland}{Dopita \&
+  Sutherland}{1996}]{Dopita1996}
+Dopita M.~A.,  Sutherland R.~S.,  1996, \mn@doi [The Astrophysical Journal
+  Supplement Series] {10.1086/192255}, 102, 161
 
 \bibitem[\protect\citeauthoryear{Juneau, Dickinson, Alexander  \& Salim}{Juneau
   et~al.}{2011}]{Juneau2011}
