@@ -12,7 +12,7 @@ from sauron_colormap import sauron#2 as sauron
 from plot_results import set_lims
 
 
-def plot(galaxies):
+def plot(galaxies, str_galaxies):
 	opt = 'pop'
 	overplot={'CO':'c', 'radio':'r'}
 	Prefig(size=np.array((4, 3))*10)
@@ -31,7 +31,7 @@ def plot(galaxies):
 	# 		self.SNRatio = np.array([0,1,1,2])
 	# 		self.unbinned_flux = np.zeros((40,40))
 	# 		self.number_of_bins = 4
-	# 		self.components = {'stellar':comp(),'Hbeta':comp()}
+	# 		self.components = {'stellar':comp(),'[OIII]5007d':comp()}
 	# 		self.e_line = {f:v for f,v in self.components.iteritems()
 	# 			if f!='stellar'}
 	# 		self.flux = np.array([0,1,1,2])
@@ -78,21 +78,53 @@ def plot(galaxies):
 		header = f[0].header
 		f.close()
 
-		if 'Hbeta' in D.components.keys():
+		if '[OIII]5007d' in D.components.keys():
 			axs.flatten()[i] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
-				D.xBar, D.yBar, D.components['Hbeta'].flux, header,  
+				D.xBar, D.yBar, D.components['[OIII]5007d'].flux, header,  
 				# vmin=vmin[attr==plots[0]], vmax=vmax[attr==plots[0]], 
 				cmap=sauron, flux_unbinned=D.unbinned_flux, 
-				signal_noise=D.e_line['Hbeta'].amp_noise, 
-				signal_noise_target=4,
-				galaxy=galaxy, ax=axs.flatten()[i])
+				signal_noise=D.e_line['[OIII]5007d'].amp_noise, 
+				signal_noise_target=4, galaxy_labelcolor='w',
+				galaxy=str_galaxies[j], ax=axs.flatten()[i])
 			if overplot:
 				for o, color in overplot.iteritems():
 					add_(o, color, axs.flatten()[i], galaxy, nolegend=True)
 		else:
 			pass
 
-	for a in axs.flatten():
+		# if galaxy == 'ngc0612':
+		# 	Prefig()
+		# 	fig2, ax2 = plt.subplots()
+		# 	ax2 = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
+		# 		D.xBar, D.yBar, D.components['Hbeta'].flux, header,  
+		# 		# vmin=vmin[attr==plots[0]], vmax=vmax[attr==plots[0]], 
+		# 		cmap=sauron, flux_unbinned=D.unbinned_flux, 
+		# 		signal_noise=D.e_line['Hbeta'].amp_noise, 
+		# 		signal_noise_target=4, galaxy_labelcolor='w',
+		# 		galaxy=str_galaxies[j], ax=ax2)
+		# 	if overplot:
+		# 		for o, color in overplot.iteritems():
+		# 			add_(o, color, ax2, galaxy, nolegend=True)
+
+			
+		# 	ax2.ax_dis.tick_params(top=True, bottom=True, left=True, 
+		# 		right=True, direction='in', which='major', length=20,
+		# 		width=3, labelsize='large')
+		# 	ax2.ax_dis.tick_params(top=True, bottom=True, left=True, 
+		# 		right=True, direction='in', which='minor', length=10,
+		# 		width=3)
+		# 	ax2.ax_dis.xaxis.label.set_size(22)
+		# 	ax2.ax_dis.yaxis.label.set_size(22)
+
+		# 	# Add colorbar
+		# 	ax_loc = ax2.get_position()
+		# 	cax = fig2.add_axes([ax_loc.x1+0.03, ax_loc.y0, 0.02, ax_loc.height])
+		# 	cbar = plt.colorbar(ax2.cs, cax=cax)
+		# 	cbar.ax.set_yticklabels([])
+
+		# 	fig2.savefig('%s/ngc0612_Hb.png' % (out_dir))
+
+	for a in axs.flatten()[[1,2,3,5,6,7,10]]:
 		if hasattr(a, 'ax_dis'):
 			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
 				right=True, direction='in', which='major', length=20,
@@ -113,14 +145,20 @@ def plot(galaxies):
 			a.ax_dis.set_xticklabels([])
 			a.ax_dis.set_xlabel('')
 
+	# Add colorbar
+	ax_loc = axs[0,3].get_position()
+	cax = fig.add_axes([ax_loc.x1+0.03, ax_loc.y0, 0.02, ax_loc.height])
+	cbar = plt.colorbar(axs[1,1].cs, cax=cax)
+	cbar.ax.set_yticklabels([])
 
 
-	fig.savefig('%s/Hb.png' % (out_dir), bbox_inches='tight')
+
+	fig.savefig('%s/Hb.png' % (out_dir))#, bbox_inches='tight')
 
 
 
 if __name__=='__main__':
 	plot(['eso443-g024', 'ic1459', 'ic1531', 'ic4296', 'ngc0612', 
-		'ngc1399', 'ngc3100', 'ngc3557', 'ngc7075', 'pks0718-34'])#, 
-		# ['ESO 443-G24', 'IC 1459', 'IC 1531', 'IC 4296', 'NGC 612',
-		# 'NGC 1399', 'NGC 3100', 'NGC 3557', 'NGC 7075', 'PKS 718-34'])
+		'ngc1399', 'ngc3100', 'ngc3557', 'ngc7075', 'pks0718-34'], 
+		['ESO 443-G24', 'IC 1459', 'IC 1531', 'IC 4296', 'NGC 612',
+		'NGC 1399', 'NGC 3100', 'NGC 3557', 'NGC 7075', 'PKS 718-34'])

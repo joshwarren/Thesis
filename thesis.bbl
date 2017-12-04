@@ -43,6 +43,12 @@ Belfiore F.,  et~al., 2016b, \mn@doi [Monthly Notices of the Royal Astronomical
 Cappellari M.,  et~al., 2013, \mn@doi [Monthly Notices of the Royal
   Astronomical Society] {10.1093/mnras/stt562}, 432, 1709
 
+\bibitem[\protect\citeauthoryear{{Cid Fernandes}, Stasi{\'{n}}ska, Mateus  \&
+  {Vale Asari}}{{Cid Fernandes} et~al.}{2011}]{CidFernandes2011}
+{Cid Fernandes} R.,  Stasi{\'{n}}ska G.,  Mateus A.,   {Vale Asari} N.,  2011,
+  \mn@doi [Monthly Notices of the Royal Astronomical Society]
+  {10.1111/j.1365-2966.2011.18244.x}, 413, 1687
+
 \bibitem[\protect\citeauthoryear{Davis et~al.,}{Davis
   et~al.}{2011}]{Davis2011a}
 Davis T.~A.,  et~al., 2011, \mn@doi [Monthly Notices of the Royal Astronomical
@@ -73,11 +79,15 @@ Kauffmann G.,  et~al., 2003, \mn@doi [Monthly Notices of the Royal Astronomical
 Kewley L.~J.,  Dopita M.~A.,  Sutherland R.~S.,  Heisler C.~A.,   Trevena J.,
   2001, \mn@doi [The Astrophysical Journal] {10.1086/321545}, 556, 121
 
+\bibitem[\protect\citeauthoryear{Kewley, Groves, Kauffmann  \& Heckman}{Kewley
+  et~al.}{2006}]{Kewley2006}
+Kewley L.~J.,  Groves B.,  Kauffmann G.,   Heckman T.,  2006, \mn@doi [Mon.
+  Not. R. Astron. Soc] {10.1111/j.1365-2966.2006.10859.x}, 372, 961
+
 \bibitem[\protect\citeauthoryear{Kim \& Dong-Woo}{Kim \&
   Dong-Woo}{1989}]{Kim1989}
-Kim D.-W.,  Dong-Woo 1989, \mn@doi [Astrophysical Journal, Part 1 (ISSN
-  0004-637X), vol. 346, Nov. 15, 1989, p. 653-674. Research supported by NASA.]
-  {10.1086/168048}, 346, 653
+Kim D.-W.,  Dong-Woo 1989, \mn@doi [Astrophysical Journal] {10.1086/168048},
+  346, 653
 
 \bibitem[\protect\citeauthoryear{Knapp, Gunn  \& Wynn-Williams}{Knapp
   et~al.}{1992}]{Knapp1992}
@@ -97,6 +107,10 @@ Netzer H.,  1975, \mn@doi [Monthly Notices of the Royal Astronomical Society]
   et~al.}{2016}]{Nyland2016}
 Nyland K.,  et~al., 2016, \mn@doi [Monthly Notices of the Royal Astronomical
   Society] {10.1093/mnras/stw391}, 458, 2221
+
+\bibitem[\protect\citeauthoryear{Osterbrock}{Osterbrock}{1974}]{Osterbrock1974}
+Osterbrock D.~E.,  1974, {Astrophysics of Gaseous Nebulae}.
+Freeman and Co., San Francisco
 
 \bibitem[\protect\citeauthoryear{Safier}{Safier}{1992}]{Safier1992}
 Safier P.~N.,  1992, \mn@doi [The Astrophysical Journal] {10.1086/171449}, 392,

@@ -190,7 +190,7 @@ def plot(galaxies, str_galaxies, file_name, instrument):
 				a.ax_dis.set_position(ax_loc)
 
 	loc = np.mean([axs[0,0].get_position().x0, axs[0,1].get_position().x1])
-	fig.text(loc, 0.92, r'Velocity', va='top', ha='center', size='xx-large')
+	fig.text(loc, 0.92, r'Mean Velocity', va='top', ha='center', size='xx-large')
 	loc = np.mean([axs[0,2].get_position().x0, axs[0,3].get_position().x1])
 	fig.text(loc, 0.92, r'Velocity Dispersion', va='top', ha='center', 
 		size='xx-large')
@@ -290,7 +290,7 @@ def ngc1316_inflow():
 def BPT():
 	from errors2_muse import get_dataCubeDirectory
 	opt = 'pop'
-	Prefig(size=np.array((3, 2))*7, transparent=False)
+	Prefig(size=np.array((3, 2))*6, transparent=False)
 	fig, ax = plt.subplots(2,3, sharey=True)
 	
 	analysis_dir = "%s/Data/muse/analysis" % (cc.base_dir)
@@ -333,6 +333,10 @@ def BPT():
 			SF_combined = np.ones(len(x)).astype(bool)
 			x_line1 = np.arange(-2.2, 1, 0.001)
 			if l == '[SII]6716':
+				ax[j, i].text(-0.7, 1.2, 'Seyfert 2')
+				ax[j, i].text(-1.1, -0.2, 'Star-forming')
+				ax[j, i].text(0.2, -0.5, 'LINER')
+
 				Seyfert2 = ((0.72/(x - 0.32) + 1.30 < y) + (x > 0.32)) \
 					* (1.89 * x + 0.76 < y) * ~large_err
 				LINER = ((0.72/(x - 0.32) + 1.30 < y) + (x > 0.32)) \
@@ -356,6 +360,11 @@ def BPT():
 
 			elif l == '[NII]6583d':
 				x /= 1.34
+
+				ax[j, i].text(-0.5, 1.2, 'Seyfert 2/LINER')
+				ax[j, i].text(-1.9, -0.2, 'Star-forming')
+				ax[j, i].text(-0.1, -0.75, 'Composite', rotation=280, va='center',
+					ha='center')
 
 				Seyfert2 = ((0.61/(x - 0.47) + 1.19 < y) + (x > 0.47)) \
 					* ~large_err
@@ -382,6 +391,10 @@ def BPT():
 
 			elif l == '[OI]6300d':
 				x /= 1.33
+
+				ax[j, i].text(-1.5, 1.2, 'Seyfert 2')
+				ax[j, i].text(-2.0, -0.2, 'Star-forming')
+				ax[j, i].text(-0.6, -0.5, 'LINER')
 
 				Seyfert2 = ((y > 0.73/(x + 0.59) + 1.33) + (x > -0.59)) \
 					* (y > 1.18 * x + 1.30) * ~large_err
@@ -422,7 +435,7 @@ def BPT():
 	y_loc = np.mean([ax[0,0].get_position().y0, ax[1,0].get_position().y1])
 	fig.text(ax[0,0].get_position().x0-0.02, y_loc, 
 		r'log [OIII]$\lambda$5007/H$\,\beta$', va='center', ha='right', 
-		rotation='vertical', size='xx-large')
+		rotation='vertical', size='x-large')
 	for i, g in enumerate(['IC 1459', 'NGC 1316']):
 		loc = np.mean([ax[i,0].get_position().y0, 
 			ax[i,0].get_position().y1])
@@ -435,7 +448,7 @@ def BPT():
 
 	saveTo = '%s/Documents/thesis/chapter5/BPT.png' % (cc.home_dir)		
 	fig.subplots_adjust(wspace=0,hspace=0)
-	fig.savefig(saveTo, dpi=100)
+	fig.savefig(saveTo, dpi=120)
 	plt.close()
 
 
@@ -478,6 +491,9 @@ def SAURON():
 				fmt='o', ms=9)
 
 	ax.legend()
+	ax.text(0, 1.2, 'Seyfert 2/LINER')
+	ax.text(-1.9, -0.2, 'Star-forming')
+	ax.text(-0.7, -0.75, 'Composite', rotation=280, va='center', ha='center')
 
 	ax.set_xlabel(r'log [NI]$\lambda\lambda$5197,5200/H$\,\beta$')
 	ax.set_ylabel(r'log [OIII]$\lambda$5007/H$\,\beta$')
@@ -503,6 +519,7 @@ def SAURON():
 	add_grids(ax, '[NI]', '[OIII]')
 	ax.set_xlim([-2., 1.])
 	ax.set_ylim([-1.5, 1.5])
+
 
 	fig.savefig('%s/Documents/thesis/chapter5/SAURON.png' % (cc.home_dir))
 
@@ -542,7 +559,7 @@ def WHbN1():
 			ax.errorbar(x, y, xerr=x_err, yerr=y_err, label=str_galaxies[i],
 				fmt='o', ms=9)
 
-	ax.legend()
+	ax.legend(loc=3)
 
 	ax.set_ylim([-1., 0.6])
 	ax.set_xlim([-1.75, 0.75])
@@ -678,9 +695,9 @@ def H_profile(instrument='vimos'):
 		# ax.plot(r[o][1:], Hb[np.argmin(np.abs(r-1))] * r[o][1:]**-2, 'k')
 			lim = ax[i].get_xlim()
 			x = np.arange(0, lim[1], 0.05)
-			ax[i].plot(x, 0.5*np.nanmedian(r[o][np.isfinite(H[o])])**2
+			ax[i].plot(x, np.nanmedian(r[o][np.isfinite(H[o])])**2
 				* np.nanmedian(H[o][np.isfinite(H[o])])/x**2 / np.nanmax(H),
-				'k', zorder=10, color='k')
+				'k', zorder=10, color='r')
 			ax[i].set_xlim(lim)
 
 			ax[i].text(0.93*lim[1], 0.7, str_galaxies[i], ha='right')
@@ -718,16 +735,16 @@ if __name__=='__main__':
 	if 'home' in cc.device:
 		# H_profile(instrument='vimos')
 
-		WHbN1()
+		# WHbN1()
 		
-		# SAURON()
+		SAURON()
 
 		# plot(['ic1459', 'ngc0612', 'ngc3100'], 
 		# 	['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
 	elif cc.device == 'uni':
 		ic4296_WHaN2()
 
-		H_profile(instrument='muse')
+		# H_profile(instrument='muse')
 
 		# ngc1316_inflow()
 
