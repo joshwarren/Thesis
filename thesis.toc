@@ -3,20 +3,20 @@
 \contentsline {chapter}{\numberline {2}Data Reduction}{2}{chapter.2}
 \contentsline {chapter}{\numberline {3}Stellar Component}{3}{chapter.3}
 \contentsline {chapter}{\numberline {4}Ionised Gas Distribution, Kinematics and Ionisation}{4}{chapter.4}
-\contentsline {section}{\numberline {4.1}Ionised Gas Fluxes}{5}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Maps}{5}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Gas Masses}{5}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.1}Ionised Gas Fluxes}{6}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Maps}{6}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Gas Masses}{6}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}Ionised Gas Kinematics}{6}{section.4.2}
-\contentsline {paragraph}{IC 1459}{9}{section*.6}
-\contentsline {paragraph}{NGC 612}{9}{section*.7}
-\contentsline {paragraph}{NGC 1316}{9}{section*.8}
-\contentsline {paragraph}{NGC 3100}{10}{section*.9}
+\contentsline {paragraph}{IC 1459}{9}{section*.7}
+\contentsline {paragraph}{NGC 612}{9}{section*.8}
+\contentsline {paragraph}{NGC 1316}{9}{section*.9}
+\contentsline {paragraph}{NGC 3100}{10}{section*.10}
 \contentsline {section}{\numberline {4.3}Sources of Ionising Potential}{10}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Using Emission Lines Beyond the Range of VIMOS Data}{12}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}BPT Diagnostic Plots}{14}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}WHaN2 Plots}{17}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}H\tmspace +\thinmuskip {.1667em}$\beta $ profiles}{17}{subsection.4.3.4}
-\contentsline {subsection}{\numberline {4.3.5}MEx Diagnostic Plots}{18}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.4}H\tmspace +\thinmuskip {.1667em}$\beta $ Profiles}{18}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}MEx Diagnostic Plots}{20}{subsection.4.3.5}
 \contentsline {section}{\numberline {4.4}Discussion}{20}{section.4.4}
-\contentsline {chapter}{\numberline {5}Discussion and Conclusion}{5}{chapter.5}
-\contentsline {chapter}{Bibliography}{6}{section.4.4}
+\contentsline {chapter}{\numberline {5}Discussion and Conclusion}{22}{chapter.5}
+\contentsline {chapter}{Bibliography}{23}{section.4.4}
