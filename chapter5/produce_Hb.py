@@ -153,7 +153,7 @@ def plot(galaxies, str_galaxies):
 
 
 
-	fig.savefig('%s/Hb.png' % (out_dir))#, bbox_inches='tight')
+	fig.savefig('%s/Hb.png' % (out_dir), bbox_inches='tight', dpi=120)
 
 
 

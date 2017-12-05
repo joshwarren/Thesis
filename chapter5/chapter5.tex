@@ -1,14 +1,53 @@
 \chapter{Ionised Gas Distribution, Kinematics and Ionisation}
 	\label{cha:gas}
-The inter-stellar medium (ISM) in early-type galaxies (ETGs) has several components: a diffuse hot ($\sim 10^7 \, \mathrm{K}$) X-ray halo (with typical mass range $10^8$--$10^{10} \, \mathrm{M_\odot}$); warm ($\sim 10^4 \, \mathrm{K}$) ionised gas ($10^2$--$10^4 \, \mathrm{M_\odot}$), which can be more clumpy; and cold ($<10^2 \, \mathrm{K}$) atomic and molecular gas ($10^6$--$10^8 \, \mathrm{M_\odot}$), which generally confined to small (kpc or less) scale clouds. In this chapter we study the spatially resolved properties of the ionised gas component in radio galaxies (RGs) from the emission lines in the VIMOS and MUSE datacubes of the Southern Sample.
+The inter-stellar medium (ISM) in early-type galaxies (ETGs) has several components: a diffuse hot ($\sim 10^7 \, \mathrm{K}$) X-ray halo (with typical mass range $10^8$--$10^{10} \, \mathrm{M_\odot}$); warm ($\sim 10^4 \, \mathrm{K}$) ionised gas ($10^2$--$10^5 \, \mathrm{M_\odot}$), which can be more clumpy; and cold ($<10^2 \, \mathrm{K}$) atomic and molecular gas ($10^6$--$10^8 \, \mathrm{M_\odot}$), which generally confined to small (kpc or less) scale clouds. In this chapter we study the spatially resolved properties of the ionised gas component in radio galaxies (RGs) from the emission lines in the VIMOS and MUSE datacubes of the Southern Sample.
 
 Using the methods described in Section \ref{subsec:EmissionFit} we find the best-fitting line-of-sight velocity distribution (LOSVD; assumed to be Gaussian in form and represented by the mean velocity and velocity dispersion only) for the ISM. As described in \ref{subsec:EmissionFit}, all emission lines are fitted with the same LOSVD, but with each individual line fitted with its own flux. In the cases of the [\ion{O}{iii}], [\ion{O{i}}] and [\ion{N}{ii}] doublets, the components of the doublets are fitted with a fixed flux ratio of 1:0.34; the [\ion{N}{i}] doublet has a ratio of 1:0.65 \citep{Safier1992}; and the components of the [\ion{O}{ii}] and [\ion{S}{ii}] doublets are fitted independently.
 
-The chapter is structured as follows. First, the flux and equivalent width maps for each emission line within the relevant wavelength ranges of VIMOS and MUSE are shown. Gas masses are calculated and upper limits given in the cases of non-detections (see Section \ref{sec:GasFlux}). Secondly, in Section \ref{sec:GasKin}, the kinematics of the ionised gas is discussed. Thirdly, the source of the ionising potential is investigated, making use of several emission line diagnostics (see Section \ref{sec:Diagnostics}). Finally we finish in Section \ref{sec:discuss} with a discussion of the results of this chapter.
+The chapter is structured as follows. First, the flux and equivalent width maps for each emission line within the relevant wavelength ranges of VIMOS and MUSE are shown. Gas masses are calculated and upper limits given in the cases of non-detections (see Section \ref{sec:GasFlux}). Secondly, in Section \ref{sec:GasKin}, the kinematics of the ionised gas is discussed. Thirdly, the source of the ionising potential is investigated, making use of several emission line diagnostics (see Section \ref{sec:Diagnostics}). Our results for each galaxy in our Southern sample are given in Table \ref{tab:gasMass}. Finally we finish in Section \ref{sec:discuss} with a discussion of the results of this chapter.
+
+
+\begin{table}
+	\centering
+\begin{threeparttable}
+	\caption{Gas Masses for the Southern Sample.}
+	\label{tab:gasMass}
+	% \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l r r r l}
+	\begin{tabular}{l c c c c}
+		\hline
+		\hline
+		Galaxy & \multicolumn{2}{c}{\ion{H}{ii} Mass} & Balmer & LINER/ \\
+		& VIMOS\tnote{a} & MUSE & Decrement & Seyfert \\
+		& ($\log\mathrm{M_\odot}$) & ($\log\mathrm{M_\odot}$) & \\
+		\hline
+		ESO 443-G024 & $5.31 \pm 0.01$ 	& --  		& -- & -- \\
+		IC 1459 	& $5.25 \pm 0.01$	& $5.51 \pm 0.01$ & $4.57 \pm 0.06$ & LINER-AGN\\
+		IC 1531 	& $5.04 \pm 0.01$	& -- 		& -- & Seyfert 2\\
+		IC 4296		& $5.43 \pm 0.01$	& $< 4.14$ 	& $<10.9$\tnote{b} & LINER-AGN \\
+		NGC 612 	& $6.21 \pm 0.01$ 	& -- 		& -- & LINER-AGN \\
+		NGC 1316 	& -- 				& $ 5.29 \pm 0.01$ & $3.54 \pm 0.05$ & LINER-AGN \\
+		NGC 1399 	& $3.94 \pm 0.02$ 	& $ 4.54 \pm 0.01$ & \tnote{c} & LINER \\
+		NGC 3100 	& $5.27 \pm 0.01$	& -- 		& -- & Seyfert 2 \\
+		NGC 3557 	& $4.89 \pm 0.01$ 	& -- 		& -- & LINER/Retired \\
+		NGC 7075 	& $5.36 \pm 0.01$	& -- 		& -- & LINER \\
+		PKS 718-34  & $< 5.08$	 		& -- 		& -- & -- \\
+		\hline
+		\hline
+	\end{tabular}
+	\begin{tablenotes}
+	\footnotesize
+	\note Col.\,1: Galaxy. Col.\,2: \ion{H}{ii} mass derived from the H\,$\beta$ line in the VIMOS data, assuming a Balmer decrement of 2.85. Col.\,3: \ion{H}{ii} mass derived from the H\,$\alpha$ line in the MUSE data. Col.\,4: Observed Balmer decrement derived from the MUSE data. Col.\,5: Main source of ionizing radiation (see Section \ref{sec:Diagnostics} for a description of classification methods.)
+	\item [a] VIMOS flux calibration is only approximate and these values to should be taken as such (see Section \ref{subsec:VIMOSreduction} for more detail about the flux calibration methods.)
+	\item [b] H$\beta$ was not detected with an A/N $> 2.5$ meaning that the fit is not reliable (hence this is an upper limit). 
+	\item [c] H$\beta$ was not detected, thus the formal observed Balmer decrement is $\infty$.
+	\end{tablenotes}
+\end{threeparttable}
+\end{table}
 
 
 \section{Ionised Gas Fluxes}
 	\label{sec:GasFlux}
+
 	\subsection{Maps}
 		\label{subsec:GasMaps}
 		Images of each galaxy in the Southern Sample in [\ion{O}{iii}]$\lambda\lambda$4957,5007 is shown in Figs.\ref{fig:VIMOS_OIII} and \ref{fig:MUSE_OIII}. Only 4 galaxies of the Southern Sample have detections of emission lines outside of the central region (IC 1459, NGC 612, NGC 1316 and NGC 3100; see Figs.\,\ref{fig:VIMOS_OIII} and \ref{fig:MUSE_OIII}). Of the remaining 7 galaxies, NGC 1399 and PKS 718-34 have no detection of H$\beta$ in the spatially resolved maps (we do find a detection in the spatially integrated spectrum of NGC 1399; see Section \ref{subsec:GasMass}), while the remaining 5 galaxies have detections only in the centre. All other emission lines have similar distribution, but at different intensities.%, with the exception of NGC 612, where the significant cloud in [\ion{O}{iii}] to the south of the centre of the galaxy is not seen in H\,$\beta$ (see Fig.\,\ref{fig:NGC612_Hb}). 
@@ -17,16 +56,19 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{chapter5/vimos/Hb.png}
-			\caption[VIMOS \bracket{\ion{O}{iii}} maps]{VIMOS [\ion{O}{iii}]$\lambda\lambda$4957,5007 maps.} 
-			\label{fig:VIMOS_OIII}
-		\end{figure}
-		\begin{figure}
-			\centering
+			\caption[VIMOS \bracket{\ion{O}{iii}} maps]{VIMOS [\ion{O}{iii}]$\lambda\lambda$4957,5007 maps.\label{fig:VIMOS_OIII}} 
+			
+		% \end{figure}
+		% \begin{figure}
+		% 	\centering
+			\vspace{\floatsep}
 			\includegraphics[width=\textwidth]{chapter5/muse/Hb.png}
-			\caption[MUSE \bracket{\ion{O}{iii}} maps]{MUSE [\ion{O}{iii}]$\lambda\lambda$4957,5007 maps.} 
-			\label{fig:MUSE_OIII}
+			\caption[MUSE \bracket{\ion{O}{iii}} maps]{MUSE [\ion{O}{iii}]$\lambda\lambda$4957,5007 maps.\label{fig:MUSE_OIII}} 
+			
 		\end{figure}
 
+
+		
 
 		% \begin{figure}
 		% 	\centering
@@ -63,43 +105,7 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 		Upper limits are set by the mass found from the residual noise level (see Section \ref{subsec:EmissionFit}) or the H\,$\alpha$ (H\,$\beta$, in the case of VIMOS data) flux measurement which does not meet out A/N criteria, whichever is larger, for the entire field of view.
 
 
-		\begin{table}
-			\centering
-		\begin{threeparttable}
-			\caption{Gas Masses for the Southern Sample.}
-			\label{tab:gasMass}
-			% \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l r r r l}
-			\begin{tabular}{l c c c c}
-				\hline
-				\hline
-				Galaxy & \multicolumn{2}{c}{\ion{H}{ii} Mass} & Balmer & LINER/ \\
-				& VIMOS\tnote{a} & MUSE & Decrement & Seyfert \\
-				& ($\log\mathrm{M_\odot}$) & ($\log\mathrm{M_\odot}$) & \\
-				\hline
-				ESO 443-G024 & $2.19 \pm 0.01$ 	& --  		& -- & -- \\
-				IC 1459 	& $2.14 \pm 0.01$	& $1.24 \pm 0.01$ & $4.57 \pm 0.06$ & LINER-AGN\\
-				IC 1531 	& $2.25 \pm 0.01$	& -- 		& -- & Seyfert 2\\
-				IC 4296		& $2.31 \pm 0.01$	& $0.81 \pm 0.01$ & \tnote{b} & LINER-AGN \\
-				NGC 612 	& $3.10 \pm 0.01$ 	& -- 		& -- & LINER-AGN \\
-				NGC 1316 	& -- 				& $ 1.03 \pm 0.01$ & $3.54 \pm 0.05$ & LINER-AGN \\
-				NGC 1399 	& $1.22 \pm 0.01$ 	& $ 0.29 \pm 0.01$ & \tnote{b} & LINER \\
-				NGC 3100 	& $2.17 \pm 0.01$	& -- 		& -- & Seyfert 2 \\
-				NGC 3557 	& $1.77 \pm 0.01$ 	& -- 		& -- & LINER/Retired \\
-				NGC 7075 	& $2.40 \pm 0.01$	& -- 		& -- & LINER \\
-				PKS 718-34  & --		 		& -- 		& -- & -- \\
-				\hline
-				\hline
-			\end{tabular}
-			\begin{tablenotes}
-			\footnotesize
-			\note Col.\,1: Galaxy. Col.\,2: \ion{H}{ii} mass derived from the H\,$\beta$ line in the VIMOS data, assuming a Balmer decrement of 2.85. Col.\,3: \ion{H}{ii} mass derived from the H\,$\alpha$ line in the MUSE data. Col.\,4: Observed Balmer decrement derived from the MUSE data. Col.\,5: Main source of ionizing radiation (see Section \ref{sec:Diagnostics} for a description of classification methods.)
-			\item [a] VIMOS flux calibration is only approximate and these values to should be taken as such (see Section \ref{subsec:VIMOSreduction} for more detail about the flux calibration methods.)
-			\item [b] H$\beta$ was not detected in either IC 4296 or NGC 1399, thus the formal observed Balmer decrement is $\infty$.
-
-			% \item [b] H$\beta$ was not detected with an A/N $> 2.5$ meaning that the fit is not reliable (hence this is an upper limit). 
-			\end{tablenotes}
-		\end{threeparttable}
-		\end{table}
+		
 		
 
 % So what?
@@ -209,10 +215,6 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 			\label{fig:BPT}
 		\end{figure}
 
-		\citet{Sarzi2010} show that Seyferts, LINERs and star-forming galaxies are reasonable separated in the [\ion{N}{i}]/H\,$\beta$ verses [\ion{O}{iii}]/H\,$\beta$ plot (hereafter the SAURON plot). We use the [\ion{N}{ii}] to [\ion{N}{i}] gradient (found in Section \ref{subsec:Ndec}) along with the Balmer decrement to transpose the \citet{Kewley2001} extreme starburst and \citet{Kauffmann2003a} pure star formation lines from the [\ion{N}{ii}]/H\,$\alpha$ verse [\ion{O}{iii}]/H\,$\beta$ plot to the SAURON plot.
-
-		For the MUSE derived maps, only IC 1459 and NGC 1316 have detections of [\ion{N}{i}]. Given that we already have the superior BPT plots for these galaxies, we only show the VIMOS derived maps. These are shown in Fig.\,\ref{fig:SAURON}. All 6 galaxies with detectable emission lines within our binning system show AGN/LINER behavior.
-
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.8\textwidth]{chapter5/SAURON.png}
@@ -220,20 +222,21 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 			\label{fig:SAURON}
 		\end{figure}
 
+		\citet{Sarzi2010} show that Seyferts, LINERs and star-forming galaxies are reasonable separated in the [\ion{N}{i}]/H\,$\beta$ verses [\ion{O}{iii}]/H\,$\beta$ plot (hereafter the SAURON plot). We use the [\ion{N}{ii}] to [\ion{N}{i}] gradient (found in Section \ref{subsec:Ndec}) along with the Balmer decrement to transpose the \citet{Kewley2001} extreme starburst and \citet{Kauffmann2003a} pure star formation lines from the [\ion{N}{ii}]/H\,$\alpha$ verse [\ion{O}{iii}]/H\,$\beta$ plot to the SAURON plot.
+
+		For the MUSE derived maps, only IC 1459 and NGC 1316 have detections of [\ion{N}{i}]. Given that we already have the superior BPT plots for these galaxies, we only show the VIMOS derived maps. These are shown in Fig.\,\ref{fig:SAURON}. All 6 galaxies with detectable emission lines within our binning system show AGN/LINER behavior.
+
+		
+
 
 	\subsection{WHaN2 Plots}
 		\label{subsec:WHaN2}
-		The final resolved line ratio plot that we use is the equivalent width of H\,$\alpha$ verses log [\ion{N}{ii}]/H\,$\alpha$. This is known as the WHaN2 plot. In Fig.\,\ref{fig:WHaN2} we show the WHaN2 plot for the MUSE derived emission lines for IC 4296. We do not include IC 1459 and NGC 1316 since they have already been classified via the standard BPT plots (see Section \ref{subsec:BPT}). We interpret a weak AGN classification as LINER-AGN.
-
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.8\textwidth]{chapter5/WHaN2.png}
 			\caption[WHaN2 plot for IC 4296]{WHaN2 plot for IC 4296. The colour scale (blue to yellow) represents increasing distance from the centre of the galaxy.}
 			\label{fig:WHaN2}
 		\end{figure}
-
-
-		For the emission lines derived from VIMOS datacubes we use H\,$\beta$ as a proxy for H\,$\alpha$ and [\ion{N}{i}] as a proxy for [\ion{N}{ii}] using the Balmer, nitrogen and stellar `decrements' to translate the classification lines. We call this the WHbN1 plot.
 
 		\begin{figure}
 			\centering
@@ -242,26 +245,35 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 			\label{fig:WHaN2}
 		\end{figure}
 
+		The final resolved line ratio plot that we use is the equivalent width of H\,$\alpha$ verses log [\ion{N}{ii}]/H\,$\alpha$. This is known as the WHaN2 plot. In Fig.\,\ref{fig:WHaN2} we show the WHaN2 plot for the MUSE derived emission lines for IC 4296. We do not include IC 1459 and NGC 1316 since they have already been classified via the standard BPT plots (see Section \ref{subsec:BPT}). We interpret a weak AGN classification as LINER-AGN.
+
+		For the emission lines derived from VIMOS datacubes we use H\,$\beta$ as a proxy for H\,$\alpha$ and [\ion{N}{i}] as a proxy for [\ion{N}{ii}] using the Balmer, nitrogen and stellar `decrements' to translate the classification lines. We call this the WHbN1 plot.
+
+		
+
 % Comment on this
 
 
-	\subsection{H\,$\beta$ profiles}
+	\subsection{H\,$\beta$ Profiles}
 		\label{subsec:Hb}
-		As discussed in Section \ref{sec:ETG} many galaxies classified as LINERs are in fact LIERs \citep[e.g.][]{Sarzi2005, Sarzi2010, Singh2013, Belfiore2016} i.e. the source of the ionising potential is not concentrated to the nuclear region of the galaxy. As we can see from Figs.\ref{fig:BPT} and \ref{fig:SAURON}, most bins are tightly grouped together on the BPT plots. In order to check if the ionizing radiation field is entirely due to the AGN throughout the entire host galaxy we plot the H\,$\alpha$ and H\,$\beta$ flux radial profiles for the MUSE and VIMOS data respectively. A point source, such as an AGN, will result in the profile having an $r^{-2}$ shape, where $r$ is the distance of the bin from the centre of the galaxy. A shallower profile points to a dispersed source, presumably non-circumnuclear stellar processes such as formation or radiation from post-asymptotic giant branch (pAGB) stars (see Section \ref{subsubsec:JetFeedback}), as the cause of the ionizing field in the outer parts of the galaxy (i.e. LIER rather than LINER). The profiles for our observations are shown in Figs.\,\ref{fig:Hb_profile_VIMOS} and \ref{fig:Ha_profile_MUSE}. All galaxies with spatially extended Balmer emission lines in our Southern sample show a central point source as the dominant source to the ionizing field. The plots with large scatter (NGC 612 and NGC 3100) suggest that stellar processes (likely to be radiation from pAGB stars considering these are ETGs and therefore are likely have very low star-formation rates) are also have an impact.
 
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{chapter5/vimos/Hbeta_profile.png}
-			\caption[VIMOS H\,$\beta$ radial profiles]{H\,$\beta$ radial profiles derived from the VIMOS datacubes. Solid black line shows $H\,\beta \propto r^{-2}$.} 
-			\label{fig:Hb_profile_VIMOS}
-		\end{figure}
+			\caption[VIMOS H\,$\beta$ radial profiles]{H\,$\beta$ radial profiles derived from the VIMOS datacubes. Solid red line shows $H\,\beta \propto r^{-2}$.\label{fig:Hb_profile_VIMOS}} 
+			
+		% \end{figure}
 
-		\begin{figure}
-			\centering
+		% \begin{figure}
+		% 	\centering
 			\includegraphics[width=0.66\textwidth]{chapter5/muse/Halpha_profile.png}
-			\caption[MUSE H\,$\alpha$ radial profiles]{H\,$\alpha$ radial profiles derived from the MUSE datacubes. Solid black line shows $H\,\alpha \propto r^{-2}$.} 
-			\label{fig:Ha_profile_MUSE}
+			\caption[MUSE H\,$\alpha$ radial profiles]{H\,$\alpha$ radial profiles derived from the MUSE datacubes. Solid red line shows $H\,\alpha \propto r^{-2}$.\label{fig:Ha_profile_MUSE}} 
+			
 		\end{figure}
+		
+		As discussed in Section \ref{sec:ETG} many galaxies classified as LINERs are in fact LIERs \citep[e.g.][]{Sarzi2005, Sarzi2010, Singh2013, Belfiore2016} i.e. the source of the ionising potential is not concentrated to the nuclear region of the galaxy. As we can see from Figs.\ref{fig:BPT} and \ref{fig:SAURON}, most bins are tightly grouped together on the BPT plots. In order to check if the ionizing radiation field is entirely due to the AGN throughout the entire host galaxy we plot the H\,$\alpha$ and H\,$\beta$ flux radial profiles for the MUSE and VIMOS data respectively. A point source, such as an AGN, will result in the profile having an $r^{-2}$ shape, where $r$ is the distance of the bin from the centre of the galaxy. A shallower profile points to a dispersed source, presumably non-circumnuclear stellar processes such as formation or radiation from post-asymptotic giant branch (pAGB) stars (see Section \ref{subsubsec:JetFeedback}), as the cause of the ionizing field in the outer parts of the galaxy (i.e. LIER rather than LINER). The profiles for our observations are shown in Figs.\,\ref{fig:Hb_profile_VIMOS} and \ref{fig:Ha_profile_MUSE}. All galaxies with spatially extended Balmer emission lines in our Southern sample show a central point source as the dominant source to the ionizing field. The plots with large scatter (NGC 612 and NGC 3100) suggest that stellar processes (likely to be radiation from pAGB stars considering these are ETGs and therefore are likely have very low star-formation rates) are also have an impact.
+
+		
 
 
 	\subsection{MEx Diagnostic Plots}
@@ -281,7 +293,9 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 \section{Discussion}
 	\label{sec:discuss}
 % Check this paragraph. How did the results from whole_image.py turn out?
-	In this chapter we have firstly shown that galaxies within our Southern sample have low masses ($10^2$--$10^3\,\mathrm{M_\odot}$ of ionized gas. These are within the typical masses observed in ETGs, albeit at the lower end. Given that our sample contains some of the most massive galaxies, this means that we observe very low gas fractions. 
+	In this chapter we have shown that galaxies within our Southern sample have masses $10^4$--$10^6\,\mathrm{M_\odot}$ of ionized gas. These are at the upper limit, and possibly exceeding, of the typical masses observed in ETGs, although given our sample contains massive galaxies, a high gas mass is not unexpected. 
+
+	%albeit at the lower end. Given that our sample contains some of the most massive galaxies, this means that we observe very low gas fractions. 
 
 	The only slow rotator with detected, spatially-extended ionized gas, IC 1459, show kinematic evidence that the gas has an external origin, although we do suggest that the gas may have been re-accreted after it was ejected during the merger that resulted in the KDC. 
 
@@ -289,4 +303,4 @@ The chapter is structured as follows. First, the flux and equivalent width maps 
 
 	All galaxies in our Southern Sample with detectable emission lines show LINER (or LIER) or Seyfert 2 characteristics. The two galaxies that are classified as Seyfert 2s (NGC 612 and NGC 3100) are very close to the boundary line between Seyfert 2 and LINER. We observe that both galaxies classified as Seyfert 2s are fast rotators. This is consistent with \citet{Nyland2016}, who shows that all ETGs in the Atlas$^\text{3D}$ sample, classified as Seyferts are fast rotators. 
 
-	Overall we find that our Southern sample is consistent with representing radio-detected, jet-mode AGN, which are ordinary ETGs experiencing an active phase, presumably due to the central black hole accreting gas in some form. 
+	Overall, we find that our Southern sample is consistent with radio-detected, jet-mode AGN. These are ordinary ETGs experiencing an active phase, presumably due to the central black hole accreting gas in some form. 
