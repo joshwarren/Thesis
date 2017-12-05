@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2016/Cygwin)
+This is BibTeX, Version 0.99d (TeX Live 2017/Cygwin)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: acknowledgements/dedication.aux
@@ -6,54 +6,56 @@ A level-1 auxiliary file: acknowledgements/acknowledgements.aux
 A level-1 auxiliary file: abstract/abstract.aux
 A level-1 auxiliary file: introduction/introduction.aux
 A level-1 auxiliary file: chapter2/chapter2.aux
-A level-1 auxiliary file: chapter3/chapter3.aux
 A level-1 auxiliary file: chapter4/chapter4.aux
 A level-1 auxiliary file: chapter5/chapter5.aux
 A level-1 auxiliary file: conclusions/conclusions.aux
 A level-1 auxiliary file: appendix/appendix1/appendix1.aux
+A level-1 auxiliary file: appendix/appendix2/appendix2.aux
 The style file: mnras.bst
 Database file #1: refs.bib
-Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--I didn't find a database entry for "Franx1988"
+Warning--I didn't find a database entry for "Franz1988"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 151 entries,
+You've used 20 entries,
             2881 wiz_defined-function locations,
-            2073 strings with 68709 characters,
-and the built_in function-call counts, 70101 in all, are:
-= -- 5975
-> -- 5060
-< -- 322
-+ -- 2160
-- -- 748
-* -- 8588
-:= -- 10970
+            921 strings with 17079 characters,
+and the built_in function-call counts, 9249 in all, are:
+= -- 756
+> -- 700
+< -- 32
++ -- 296
+- -- 110
+* -- 1152
+:= -- 1465
 add.period$ -- 0
-call.type$ -- 151
-change.case$ -- 302
-chr.to.int$ -- 149
-cite$ -- 151
-duplicate$ -- 3370
-empty$ -- 3330
-format.name$ -- 1292
-if$ -- 12206
-int.to.chr$ -- 3
+call.type$ -- 20
+change.case$ -- 40
+chr.to.int$ -- 20
+cite$ -- 20
+duplicate$ -- 442
+empty$ -- 439
+format.name$ -- 172
+if$ -- 1589
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 152
-newline$ -- 467
-num.names$ -- 1022
-pop$ -- 600
+missing$ -- 20
+newline$ -- 73
+num.names$ -- 130
+pop$ -- 81
 preamble$ -- 1
-purify$ -- 604
+purify$ -- 80
 quote$ -- 0
-skip$ -- 2046
+skip$ -- 268
 stack$ -- 0
-substring$ -- 4215
-swap$ -- 1616
-text.length$ -- 604
+substring$ -- 526
+swap$ -- 202
+text.length$ -- 80
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1356
+type$ -- 180
 warning$ -- 0
-while$ -- 1119
+while$ -- 142
 width$ -- 0
-write$ -- 1522
+write$ -- 212
+(There were 2 warnings)
