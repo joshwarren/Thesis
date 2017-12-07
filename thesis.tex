@@ -13,10 +13,12 @@
 	linkcolor=black,
 	urlcolor=black
 }
-\usepackage{textgreek} % text greek lettering
 \usepackage{amsmath} % align enviroment 
-\usepackage{textcomp} % textdegree symbol in non-math enviroments
 \usepackage{gensymb} % degree symbol in math enviroments
+\usepackage{mhchem} % typeset chemistry symbols
+\usepackage{ccaption} % for contcaption to continue figure onto multiple pages
+\usepackage[flushleft, referable]{threeparttablex} % Adding notes under tables
+
 
 
 \usepackage{array} % For wrapping text in cell in tables
@@ -28,20 +30,21 @@
 %input macros (i.e. write your own macros file called mymacros.tex 
 %and uncomment the next line)
 %\include{mymacros}
+\newcommand\ion[2]{\text{#1\,\textsc{\lowercase{#2}}}}	% ionization states - from MNRAS class
 
 % \includeonly{introduction/introduction}
 
 
 
-\title{An IFS study of\\[1ex]     %your thesis title,
-        Low-Powered Radio Galaxies}   %note \\[1ex] is a line break in the title
+\title{An IFS Study of\\[1ex]     %your thesis title,
+        Low-powered Radio Galaxies}   %note \\[1ex] is a line break in the title
 
 \author{Joshua Warren}             %your name
 \college{Mansfield College}  %your college
 
 %\renewcommand{\submittedtext}{change the default text here if needed}
 \degree{Doctor of Philosophy}     %the degree
-\degreedate{Hilary 2018}         %the degree date
+\degreedate{Hilary Term 2018}         %the degree date
 
 %end the preamble and start the document
 \begin{document}
@@ -69,7 +72,7 @@
 %now include the files of latex for each of the chapters etc
 \include{introduction/introduction}
 \include{chapter2/chapter2}
-\include{chapter3/chapter3}
+
 \include{chapter4/chapter4}
 \include{chapter5/chapter5}
 \include{conclusions/conclusions}
