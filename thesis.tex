@@ -15,9 +15,15 @@
 }
 \usepackage{amsmath} % align enviroment 
 \usepackage{gensymb} % degree symbol in math enviroments
+<<<<<<< HEAD
 \usepackage{mhchem} % typeset chemistry symbols
 \usepackage{ccaption} % for contcaption to continue figure onto multiple pages
 \usepackage[flushleft, referable]{threeparttablex} % Adding notes under tables
+=======
+\usepackage{multirow} % for multirow command
+\usepackage{ccaption} % for contcaption to continue figure onto multiple pages
+\usepackage{threeparttable} % Adding notes under tables
+>>>>>>> chapter2
 
 
 
@@ -31,8 +37,14 @@
 %and uncomment the next line)
 %\include{mymacros}
 \newcommand\ion[2]{\text{#1\,\textsc{\lowercase{#2}}}}	% ionization states - from MNRAS class
+<<<<<<< HEAD
 
 % \includeonly{introduction/introduction}
+=======
+\newcommand{\bracket}[1]{[#1]} % to be able to use [] in arguments
+
+\includeonly{chapter2/chapter2}
+>>>>>>> chapter2
 
 
 
@@ -72,7 +84,11 @@
 %now include the files of latex for each of the chapters etc
 \include{introduction/introduction}
 \include{chapter2/chapter2}
+<<<<<<< HEAD
 
+=======
+% \include{chapter3/chapter3} % Now combining chapter 2 and 3
+>>>>>>> chapter2
 \include{chapter4/chapter4}
 \include{chapter5/chapter5}
 \include{conclusions/conclusions}
