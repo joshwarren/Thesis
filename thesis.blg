@@ -9,53 +9,52 @@ A level-1 auxiliary file: chapter2/chapter2.aux
 A level-1 auxiliary file: chapter4/chapter4.aux
 A level-1 auxiliary file: chapter5/chapter5.aux
 A level-1 auxiliary file: conclusions/conclusions.aux
+The style file: mnras.bst
 A level-1 auxiliary file: appendix/appendix1/appendix1.aux
 A level-1 auxiliary file: appendix/appendix2/appendix2.aux
-The style file: mnras.bst
 Database file #1: refs.bib
-Warning--I didn't find a database entry for "Franx1988"
-Warning--I didn't find a database entry for "Franz1988"
+Warning--I didn't find a database entry for "Otrupcek1990"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 20 entries,
+You've used 44 entries,
             2881 wiz_defined-function locations,
-            921 strings with 17079 characters,
-and the built_in function-call counts, 9249 in all, are:
-= -- 756
-> -- 700
-< -- 32
-+ -- 296
-- -- 110
-* -- 1152
-:= -- 1465
+            1127 strings with 25784 characters,
+and the built_in function-call counts, 20481 in all, are:
+= -- 1681
+> -- 1548
+< -- 88
++ -- 656
+- -- 242
+* -- 2523
+:= -- 3254
 add.period$ -- 0
-call.type$ -- 20
-change.case$ -- 40
-chr.to.int$ -- 20
-cite$ -- 20
-duplicate$ -- 442
-empty$ -- 439
-format.name$ -- 172
-if$ -- 1589
+call.type$ -- 44
+change.case$ -- 88
+chr.to.int$ -- 44
+cite$ -- 44
+duplicate$ -- 977
+empty$ -- 966
+format.name$ -- 386
+if$ -- 3531
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 20
-newline$ -- 73
-num.names$ -- 130
-pop$ -- 81
+missing$ -- 44
+newline$ -- 145
+num.names$ -- 296
+pop$ -- 177
 preamble$ -- 1
-purify$ -- 80
+purify$ -- 176
 quote$ -- 0
-skip$ -- 268
+skip$ -- 596
 stack$ -- 0
-substring$ -- 526
-swap$ -- 202
-text.length$ -- 80
+substring$ -- 1164
+swap$ -- 464
+text.length$ -- 176
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 180
+type$ -- 396
 warning$ -- 0
-while$ -- 142
+while$ -- 322
 width$ -- 0
-write$ -- 212
-(There were 2 warnings)
+write$ -- 451
+(There was 1 warning)

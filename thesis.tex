@@ -34,7 +34,7 @@
 \newcommand{\bracket}[1]{[#1]} % to be able to use [] in arguments
 
 
-% \includeonly{conclusions/conclusions}
+\includeonly{conclusions/conclusions, appendix/appendix2/appendix2}
 
 
 
@@ -78,10 +78,7 @@
 \include{chapter5/chapter5}
 \include{conclusions/conclusions}
 
-%now enable appendix numbering format and include any appendices
-\appendix
-\include{appendix/appendix1/appendix1}
-\include{appendix/appendix2/appendix2}
+
 
 %next line adds the Bibliography to the contents page
 \addcontentsline{toc}{chapter}{Bibliography}
@@ -90,5 +87,9 @@
 \bibliographystyle{mnras}   % MNRAS bib style
 \bibliography{refs}        %use a bibtex bibliography file refs.bib
 % \bibliographystyle{plain}  %use the plain bibliography style
+%now enable appendix numbering format and include any appendices
+\appendix
+\include{appendix/appendix1/appendix1}
+\include{appendix/appendix2/appendix2}
 
 \end{document}

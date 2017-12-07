@@ -5,16 +5,5 @@
 \contentsline {chapter}{\numberline {4}Ionised Gas Component}{4}{chapter.4}
 \contentsline {chapter}{\numberline {5}Discussion and Conclusion}{5}{chapter.5}
 \contentsline {section}{\numberline {5.1}Future Work}{7}{section.5.1}
-\contentsline {chapter}{\numberline {A}Descriptions of the Southern Sample}{8}{appendix.A}
-\contentsline {paragraph}{ESO 443-G24}{8}{section*.4}
-\contentsline {paragraph}{IC 1459}{8}{section*.5}
-\contentsline {paragraph}{IC 1531}{8}{section*.6}
-\contentsline {paragraph}{IC 4296}{8}{section*.7}
-\contentsline {paragraph}{NGC 612}{9}{section*.8}
-\contentsline {paragraph}{NGC 1316}{9}{section*.9}
-\contentsline {paragraph}{NGC 1399}{9}{section*.10}
-\contentsline {paragraph}{NGC 3100}{10}{section*.11}
-\contentsline {paragraph}{NGC 3557}{10}{section*.12}
-\contentsline {paragraph}{NGC 7075}{10}{section*.13}
-\contentsline {paragraph}{PKS 718-34}{10}{section*.14}
-\contentsline {chapter}{Bibliography}{11}{section*.14}
+\contentsline {chapter}{Bibliography}{9}{section.5.1}
+\contentsline {chapter}{\numberline {A}Descriptions of the Southern Sample}{10}{appendix.A}
