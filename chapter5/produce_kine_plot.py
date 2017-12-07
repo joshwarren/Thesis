@@ -645,6 +645,8 @@ def ic4296_WHaN2():
 
 
 def H_profile(instrument='vimos'):
+	from matplotlib import ticker
+
 	if instrument=='vimos':
 		galaxies = np.array(['ic1459', 'ngc0612', 'ngc3100'])
 		str_galaxies = np.array(['IC 1459', 'NGC 612', 'NGC 3100'])
@@ -698,6 +700,7 @@ def H_profile(instrument='vimos'):
 			ax[i].plot(x, np.nanmedian(r[o][np.isfinite(H[o])])**2
 				* np.nanmedian(H[o][np.isfinite(H[o])])/x**2 / np.nanmax(H),
 				'k', zorder=10, color='r')
+			# ax[i].plot(x, 1/x**2, 'k', zorder=10, color='r')
 			ax[i].set_xlim(lim)
 
 			ax[i].text(0.93*lim[1], 0.7, str_galaxies[i], ha='right')
@@ -712,6 +715,9 @@ def H_profile(instrument='vimos'):
 			# import matplotlib
 			# ax[i].get_xaxis().set_major_formatter(
 			# 	matplotlib.ticker.ScalarFormatter())
+			for axis in [ax[i].xaxis, ax[i].yaxis]:
+				axis.set_major_formatter(
+					ticker.FuncFormatter(lambda y, _: '{:g}'.format(y)))
 
 	if instrument == 'vimos':
 		ax[0].set_ylabel(r'H$\,\beta$ normalised flux')
@@ -733,11 +739,11 @@ def H_profile(instrument='vimos'):
 
 if __name__=='__main__':
 	if 'home' in cc.device:
-		# H_profile(instrument='vimos')
+		H_profile(instrument='vimos')
 
 		# WHbN1()
 		
-		SAURON()
+		# SAURON()
 
 		# plot(['ic1459', 'ngc0612', 'ngc3100'], 
 		# 	['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')

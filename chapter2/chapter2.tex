@@ -54,7 +54,7 @@ This chapter presents the observations of the Southern Sample (as laid out in Se
 		\label{subsec:VIMOSartifacts}
 		By comparing the top panels in Fig.\,\ref{fig:Correction}, we can clearly see that while there is an obvious improvement to the calibration between the quadrants, there is still a sharp transition. This often gives rise to characteristic diamond shaped isophotes, rather than ellipses. The neighboring spaxels along the transitions can have fluxes that are different by as much as 20-30\%. Luckily, the worst affected galaxies are IC 4296 and NGC 1399, for which we have MUSE archival data for (see Section \ref{sec:MUSE}). 
 
-		Similar transitions are also observed in the spectral direction, with a slight offset in wavelength calibration between quadrants. This is most clearly seen in the mean velocity maps after the routines described in Section \ref{subsec:StellarFit} are applied. The left panel in Fig.\,\ref{fig:egVel} shows the mean velocity map for NGC 1399 and clearly shows the top-right quadrant to have a slightly higher velocity than would be expected for a normal rotating galaxy. This corresponds to a shift in the spectra. For comparison, the right panel of Fig.\,\ref{egVel} shows the mean velocity map from a different instrument which does not suffer from this issue. Again the worst affected galaxies are IC 4296 and NGC 1399.
+		Similar transitions are also observed in the spectral direction, with a slight offset in wavelength calibration between quadrants. This is most clearly seen in the mean velocity maps after the routines described in Section \ref{subsec:StellarFit} are applied. The left panel in Fig.\,\ref{fig:egVel} shows the mean velocity map for NGC 1399 and clearly shows the top-right quadrant to have a slightly higher velocity than would be expected for a normal rotating galaxy. This corresponds to a shift in the spectra. For comparison, the right panel of Fig.\,\ref{fig:egVel} shows the mean velocity map from a different instrument which does not suffer from this issue. Again the worst affected galaxies are IC 4296 and NGC 1399.
 
 		\begin{figure}
 			\centering
@@ -64,7 +64,7 @@ This chapter presents the observations of the Southern Sample (as laid out in Se
 			\label{fig:egVel}
 		\end{figure}
 
-		The ad-hoc corrections applied will correlate much of the data. However the affect should not be large and we therefore chose to neglect this correlation and treat these corrections as absolute i.e. the variance spectra are scaled by the same factor as the observed spectra. These correction will however, spatially smooth the data. This is particularly undesirable at the centres of our sample, where the affects of the active-galactic nuclei (AGN) should be observed. This should be taken into account (particularly for Chapter \ref{cha:Gas}).
+		The ad-hoc corrections applied will correlate much of the data. However the affect should not be large and we therefore chose to neglect this correlation and treat these corrections as absolute i.e. the variance spectra are scaled by the same factor as the observed spectra. These correction will however, spatially smooth the data. This is particularly undesirable at the centres of our sample, where the affects of the active-galactic nuclei (AGN) should be observed. This should be taken into account (particularly for Chapter \ref{cha:gas}).
 
 
 	\subsection{Other Pipelines Tested}
@@ -212,7 +212,7 @@ This chapter presents the observations of the Southern Sample (as laid out in Se
 
 	 	\subsubsection{Absorption Line Strengths}
 	 		\label{subsubsec:Absorption}
-	 		Absorption line strengths are measured as an equivalent width of a given index. Each index consists of 3 bandpasses: one blue and one red continuum bandpass on either side of the central bandpass containing the absorption feature. A pseudo-continuum is defined as a straight line between two points at the centre of each continuum bandpass with heights of the median intensity of the given bandpass. The index, $I$, is measured as the equivalent width of the spectrum, $F_\mathrM{I}(\lambda)$, within the central bandpass (defined between wavelengths $\lambda_1$ and $\lambda_2$) with respect to this pseudo-continuum, $F_\mathrm{C}(\lambda)$, i.e for the so-called atomic indices, measured in \AA,
+	 		Absorption line strengths are measured as an equivalent width of a given index. Each index consists of 3 bandpasses: one blue and one red continuum bandpass on either side of the central bandpass containing the absorption feature. A pseudo-continuum is defined as a straight line between two points at the centre of each continuum bandpass with heights of the median intensity of the given bandpass. The index, $I$, is measured as the equivalent width of the spectrum, $F_\mathrm{I}(\lambda)$, within the central bandpass (defined between wavelengths $\lambda_1$ and $\lambda_2$) with respect to this pseudo-continuum, $F_\mathrm{C}(\lambda)$, i.e for the so-called atomic indices, measured in \AA,
 	 		\begin{align}
 	 			I_\text{\AA} \equiv \, & \int^{\lambda_2}_{\lambda_1} \! \left(1 - \frac{F_\mathrm{I}(\lambda)}{F_\mathrm{C}(\lambda)}\right) \, \mathrm{d}\lambda \, , \\
 	 		\intertext{while molecular indices, measured in magnitude units is}
@@ -265,7 +265,7 @@ This chapter presents the observations of the Southern Sample (as laid out in Se
 			We must also correct for the effect of velocity dispersion of the stellar populations which will spread absorption features such that some of the absorption is outside of the central bandpass. To do this, we first build a spectrum that is not convolved with the velocity dispersion. This is done by creating the best-fitting spectrum (as in the previous step), but not convolving it with the LOSVD. A given index, $i$, is measured for both this `unconvolved' spectrum, ($I^\text{unc}_i$) and the convolved best-fitting spectrum ($I^\text{conv}_i$). The ratio of the indices measured for these two spectra is used as a (multiplicative) correction factor for the index measured on the emission line-corrected observed spectra ($I^\text{obs}_i$), such that
 			\begin{equation}
 				I^\text{corr}_i \equiv \frac{I^\text{unc}_i}{I^\text{conv}_i} I^\text{obs}_i \, .
-			\end{equation}}
+			\end{equation}
 
 
 		\subsubsection{Fitting Stellar Population Models}
@@ -305,6 +305,6 @@ This chapter presents the observations of the Southern Sample (as laid out in Se
 
 			\citet{Thomas2010} showed that the TMJ models produce a good fit to globular cluster measurements of \citet{Puzia2002} and \citet{Schiavon2005} and the galaxy measurements by the SAURON group by \citet{Kuntschner2010}. \citet{Conroy2010} suggests that the stellar evolutionary tracks by \citet{Girardi2000} used for the high metallicity models do not fit the globular clusters well, however \citet{Thomas2010} point out that this can be explained by an anomaly in the Balmer lines which is not seen in the analysis of the SAURON data. \citet{Thomas2010} therefore suggest, that this is an issue with the globular cluster observations themselves. 
 
-			Following the method of \citet{McDermid2006} we first linearly interpolate the TMJ models to a 3-dimensional grid with sides of length 40 in age, metallicity and $\alpha$-enhancement. Metallicity and $\alpha$-enhancement directions are evenly spaced, while the age direction is logarithmically spaced. We then use \mathsc{emcee}, a \textsc{python} package for MCMC fitting, to find the most-likely SSP model by comparing the absorption line strengths (measured with the method described in Section \ref{subsubsec:Absorption}) to the absorption line strengths of the SSP models. We take the standard deviation of the positions of the walkers in the MCMC code as the uncertainties.
+			Following the method of \citet{McDermid2006} we first linearly interpolate the TMJ models to a 3-dimensional grid with sides of length 40 in age, metallicity and $\alpha$-enhancement. Metallicity and $\alpha$-enhancement directions are evenly spaced, while the age direction is logarithmically spaced. We then use \textsc{emcee}, a \textsc{python} package for MCMC fitting, to find the most-likely SSP model by comparing the absorption line strengths (measured with the method described in Section \ref{subsubsec:Absorption}) to the absorption line strengths of the SSP models. We take the standard deviation of the positions of the walkers in the MCMC code as the uncertainties.
 
 			The following chapters will use results from these pipelines to compare our radio galaxy sample, the Southern Sample to radio-quiet ETGs.
