@@ -23,7 +23,7 @@ opt = 'kin'
 out_dir = '%s/Documents/thesis/chapter2' % (cc.home_dir)
 
 if True:
-	Prefig(size=(10,10))
+	Prefig(size=(8,8))
 	fig, ax = plt.subplots()#, sharex=True, sharey=True)
 	print galaxy
 
@@ -59,7 +59,8 @@ if True:
 		D.xBar, D.yBar, D.components['stellar'].plot['vel']-20, header, 
 		vmin=vmin_vel+30, vmax=vmax_vel-30, cmap=sauron, signal_noise=D.SNRatio, 
 		colorbar=True, label=r'Mean velocity (km s$^{-1}$)', 
-		signal_noise_target=SN_target, ax=ax, galaxy='MUSE')
+		signal_noise_target=SN_target, ax=ax, galaxy='MUSE', 
+		galaxy_labelcolor='w')
 
 
 

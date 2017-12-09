@@ -20,7 +20,7 @@ out_dir = '%s/Documents/thesis/chapter2' % (cc.home_dir)
 
 
 if True:
-	Prefig(size=(10,10))
+	Prefig(size=(8,8))
 	fig, ax = plt.subplots()#, sharex=True, sharey=True)
 
 
@@ -31,11 +31,12 @@ if True:
 	data_file =  "%s/galaxies.txt" % (vin_dir)
 	file_headings = np.loadtxt(data_file, dtype=str)[0]
 	col = np.where(file_headings=='SN_%s' % (opt))[0][0]
-	SN_target_gals = np.loadtxt(data_file, 
-		unpack=True, skiprows=1, usecols=(col,))
+	x_gals, y_gals, SN_target_gals = np.loadtxt(data_file, 
+		unpack=True, skiprows=1, usecols=(4,5,col,), dtype='int,int,float')
 	galaxy_gals = np.loadtxt(data_file, skiprows=1, usecols=(0,),dtype=str)
 	i_gal = np.where(galaxy_gals==galaxy)[0][0]
 	SN_target=SN_target_gals[i_gal]
+	center = (x_gals[i_gal], y_gals[i_gal])
 
 
 	vin_dir += '/%s/%s' % (galaxy, opt) 
@@ -59,19 +60,21 @@ if True:
 		D.xBar, D.yBar, D.components['stellar'].plot['vel'], header, 
 		vmin=vmin_vel, vmax=vmax_vel, cmap=sauron, signal_noise=D.SNRatio, 
 		colorbar=True, label=r'Mean velocity (km s$^{-1}$)', 
-		signal_noise_target=SN_target, ax=ax, galaxy='VIMOS', center=center)
+		signal_noise_target=SN_target, ax=ax, galaxy='VIMOS', center=center,
+		galaxy_labelcolor='w')
 
 
 	ax.ax_dis.tick_params(top=True, bottom=True, left=True, 
 		right=True, direction='in', which='major', length=15,
-		width=2, labelsize='large')
+		width=2, labelsize='large', color='w')
 	ax.ax_dis.tick_params(top=True, bottom=True, left=True, 
 		right=True, direction='in', which='minor', length=7,
-		width=2)
+		width=2, color='w')
 	ax.ax_dis.xaxis.label.set_size(22)
 	ax.ax_dis.yaxis.label.set_size(22)
 
-	fig.savefig('%s/VIMOS_NGC1399_vel.png' % (out_dir), bbox_inches='tight')
+	fig.savefig('%s/VIMOS_NGC1399_vel.png' % (out_dir), bbox_inches='tight',
+		dpi=120)
 	plt.close()
 
 
@@ -137,6 +140,7 @@ if False:
 
 	# _new added to file name so that photoshoped version is not accidentally 
 	# overwritten
-	fig.savefig('%s/P3D_NGC1399_new.png' % (out_dir), bbox_inches='tight')
+	fig.savefig('%s/P3D_NGC1399_new.png' % (out_dir), bbox_inches='tight',
+		dpi=120)
 
 
