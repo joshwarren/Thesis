@@ -111,7 +111,7 @@ if False:
 
 	ax = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 		D.xBar, D.yBar, D.SNRatio, header, 
-		cmap=sauron, colorbar=True, label=r'Signal-to-noise ratio', 
+		cmap=sauron, colorbar=True, label=r'S/N', 
 		ax=ax)
 
 
