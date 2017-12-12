@@ -21,7 +21,7 @@ sed -i -e 's/Physical Review D/\\prd/g' refs.bib
 sed -i -e 's/New Astronomy Reviews/\\nar/g' refs.bib
 sed -i -e 's/Journal of Cosmology and Astroparticle Physics/\\jcap/g' refs.bib
 
-
+cat refs.bib | tr '\n' '\f' | sed -e 's/booktitle = {Proc. SPIE},\fdoi = {10.1117\/12.856027}/booktitle = {Proc. SPIE},\nseries = {III},\ndoi = {10.1117\/12.856027}/'  | tr '\f' '\n' > refs.bib
 
 
 pdflatex -interaction=batchmode thesis.tex
