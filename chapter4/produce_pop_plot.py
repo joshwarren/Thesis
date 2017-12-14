@@ -96,7 +96,8 @@ def plot(galaxies, str_galaxies, file_name):
 			ax=axs[2*i,0])
 		if overplot:
 			for o, color in overplot.iteritems():
-				add_(o, color, axs[2*i,0], galaxy, nolegend=True)
+				scale = 'log' if o == 'radio' else 'lin'
+				add_(o, color, axs[2*i,0], galaxy, nolegend=True, scale=scale)
 		
 
 		axs[2*i+1,0] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
@@ -114,7 +115,8 @@ def plot(galaxies, str_galaxies, file_name):
 			signal_noise_target=SN_target, ax=axs[2*i,1])
 		if overplot:
 			for o, color in overplot.iteritems():
-				add_(o, color, axs[2*i,1], galaxy, nolegend=True)
+				scale = 'log' if o == 'radio' else 'lin'
+				add_(o, color, axs[2*i,1], galaxy, nolegend=True, scale=scale)
 
 
 		axs[2*i+1,1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, 
@@ -129,7 +131,8 @@ def plot(galaxies, str_galaxies, file_name):
 			signal_noise_target=SN_target, ax=axs[2*i,2])
 		if overplot:
 			for o, color in overplot.iteritems():
-				add_(o, color, axs[2*i,2], galaxy, nolegend=True)
+				scale = 'log' if o == 'radio' else 'lin'
+				add_(o, color, axs[2*i,2], galaxy, nolegend=True, scale=scale)
 
 
 		axs[2*i+1,2] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar,

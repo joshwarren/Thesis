@@ -20,6 +20,8 @@
 \usepackage{ccaption} % for contcaption to continue figure onto multiple pages
 \usepackage[flushleft, referable]{threeparttablex} % Adding notes under tables
 \usepackage{multirow} % for multirow command
+\usepackage{url}
+\urlstyle{same}
 
 
 \usepackage{array} % For wrapping text in cell in tables
@@ -46,8 +48,9 @@
 
 
 
-\includeonly{chapter2/chapter2, appendix/appendix1/appendix1}
-% \includeonly{abstract/abstract, acknowledgements/origionality, conclusions/conclusions, appendix/appendix2/appendix2}
+% \includeonly{chapter2/chapter2}
+\includeonly{chapter4/chapter4}
+\includeonly{abstract/abstract, acknowledgements/origionality, conclusions/conclusions, appendix/appendix2/appendix2}
 
 \title{An IFS Study of\\[1ex]     %your thesis title,
         Low-powered Radio Galaxies}   %note \\[1ex] is a line break in the title
@@ -74,7 +77,7 @@
 \maketitle                  % create a title page from the preamble info
 
 \begin{romanpages}          % start roman page numbering
-	\include{acknowledgements/dedication}   % include a dedication.tex file
+	% \include{acknowledgements/dedication}   % include a dedication.tex file
 	\include{abstract/abstract}          % include the abstract
 	\include{acknowledgements/origionality}
 	\include{acknowledgements/acknowledgements} % include an acknowledgements.tex file
@@ -93,15 +96,25 @@
 
 
 %next line adds the Bibliography to the contents page
-\addcontentsline{toc}{chapter}{Bibliography}
+\addcontentsline{toc}{chapter}{References}
 %uncomment next line to change bibliography name to references
-%\renewcommand{\bibname}{References}
+\renewcommand\bibname{References}
 \bibliographystyle{mnras}   % MNRAS bib style
 \bibliography{refs}        %use a bibtex bibliography file refs.bib
 % \bibliographystyle{plain}  %use the plain bibliography style
 %now enable appendix numbering format and include any appendices
 \appendix
-\include{appendix/appendix1/appendix1}
+% Appendix 1 has been moved into Chapter 2
 \include{appendix/appendix2/appendix2}
+
+
+% \newpage
+% \vspace*{3cm}
+
+% \begin{center}
+
+% \emph{To the stars... \\ and who says we have to come back?}
+% \end{center}
+
 
 \end{document}

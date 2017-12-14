@@ -122,7 +122,9 @@ def plot(galaxies, str_galaxies, file_name, instrument):
 			signal_noise_target=SN_target, ax=axs[i,0])
 		if overplot:
 			for o, color in overplot.iteritems():
-				add_(o, color, axs[i,0], galaxy, nolegend=True)
+				scale = 'log' if o == 'radio' else 'lin'
+				add_(o, color, axs[j, 2*i], galaxy, nolegend=True, 
+					scale=scale)
 
 
 		axs[i,1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, 
@@ -141,8 +143,9 @@ def plot(galaxies, str_galaxies, file_name, instrument):
 			ax=axs[i,2])
 		if overplot:
 			for o, color in overplot.iteritems():
-				add_(o, color, axs[i,2], galaxy, nolegend=True)
-
+				scale = 'log' if o == 'radio' else 'lin'
+				add_(o, color, axs[j, 2*i], galaxy, nolegend=True, 
+					scale=scale)
 
 		axs[i,3] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar,
 			D.yBar, D.components['[OIII]5007d'].plot['sigma'].uncert, header, 
@@ -252,7 +255,9 @@ def ngc1316_inflow():
 
 	for a in ax:
 		for o, c in {'radio':'g','CO':'c'}.iteritems():
-			add_(o, c, a, galaxy, scale='log')#, radio_band='L')
+			scale = 'log' if o == 'radio' else 'lin'
+			add_(o, color, axs[j, 2*i], galaxy, nolegend=True, 
+				scale=scale)
 
 	# Decrease gap between maps
 	for i in range(len(ax)):
@@ -748,12 +753,12 @@ if __name__=='__main__':
 		# plot(['ic1459', 'ngc0612', 'ngc3100'], 
 		# 	['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
 	elif cc.device == 'uni':
-		ic4296_WHaN2()
+		# ic4296_WHaN2()
 
 		# H_profile(instrument='muse')
 
-		# ngc1316_inflow()
+		ngc1316_inflow()
 
 		# BPT()
 
-		# plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')
+		plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')

@@ -83,11 +83,12 @@ def plot(galaxies):
 			D.xBar, D.yBar, D.components['[OIII]5007d'].flux, header,  
 			# vmin=vmin[attr==plots[0]], vmax=vmax[attr==plots[0]], 
 			cmap=sauron, flux_unbinned=D.unbinned_flux, galaxy_labelcolor='w',
-			signal_noise=D.e_line['[OIII]5007d'].amp_noise, signal_noise_target=4,
-			galaxy=galaxy, ax=axs[i])
+			signal_noise=D.e_line['[OIII]5007d'].amp_noise, 
+			signal_noise_target=4, galaxy=galaxy, ax=axs[i])
 		if overplot:
 			for o, color in overplot.iteritems():
-				add_(o, color, axs[i], galaxy, nolegend=True)
+				scale = 'log' if o == 'radio' else 'lin'
+				add_(o, color, axs[j, 2*i], galaxy, nolegend=True, scale=scale)
 
 	for a in axs:
 		if hasattr(a, 'ax_dis'):

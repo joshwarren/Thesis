@@ -96,49 +96,55 @@ def plot(galaxies, str_galaxies, file_name):
 			D.xBar, D.yBar, age, header,  
 			vmin=0, vmax=15, 
 			cmap='inferno', flux_unbinned=D.unbinned_flux, 
-			signal_noise=D.SNRatio, signal_noise_target=SN_target, 
+			# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 			ax=axs[2*i,0])
 		if overplot:
 			for o, color in overplot.iteritems():
-				add_(o, color, axs[2*i,0], galaxy, nolegend=True)
+				scale = 'log' if o == 'radio' else 'lin'
+				add_(o, color, axs[2*i,0], galaxy, nolegend=True, scale=scale)
 		
 
 		axs[2*i+1,0] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 			D.xBar, D.yBar, unc_age, header, vmin=0, vmax=2, 
 			cmap='inferno', flux_unbinned=D.unbinned_flux, 
-			signal_noise=D.SNRatio, 
-			signal_noise_target=SN_target, ax=axs[2*i+1,0])
+			# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
+			ax=axs[2*i+1,0])
 
 		# Metalicity
 		axs[2*i,1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 			D.xBar, D.yBar, met, header, vmin=-2.25, vmax=0.67, 
-			cmap='inferno', 
-			flux_unbinned=D.unbinned_flux, signal_noise=D.SNRatio, 
-			signal_noise_target=SN_target, ax=axs[2*i,1])
+			cmap='inferno', flux_unbinned=D.unbinned_flux, 
+			# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
+			ax=axs[2*i,1])
 		if overplot:
 			for o, color in overplot.iteritems():
-				add_(o, color, axs[2*i,1], galaxy, nolegend=True)
+				scale = 'log' if o == 'radio' else 'lin'
+				add_(o, color, axs[2*i,1], galaxy, nolegend=True, scale=scale)
 
 
 		axs[2*i+1,1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, 
 			D.yBar, unc_met, header, vmin=0, vmax=0.4, cmap='inferno', 
-			flux_unbinned=D.unbinned_flux, signal_noise=D.SNRatio, 
-			signal_noise_target=SN_target, ax=axs[2*i+1,1])
+			flux_unbinned=D.unbinned_flux, 
+			# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
+			ax=axs[2*i+1,1])
 
 		# Alpha
 		axs[2*i,2] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, 
 			D.yBar, alp, header, vmin=-0.3, vmax=0.5, cmap='inferno', 
-			flux_unbinned=D.unbinned_flux, signal_noise=D.SNRatio, 
-			signal_noise_target=SN_target, ax=axs[2*i,2])
+			flux_unbinned=D.unbinned_flux, 
+			# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
+			ax=axs[2*i,2])
 		if overplot:
 			for o, color in overplot.iteritems():
-				add_(o, color, axs[2*i,2], galaxy, nolegend=True)
+				scale = 'log' if o == 'radio' else 'lin'
+				add_(o, color, axs[2*i,2], galaxy, nolegend=True, scale=scale)
 
 
 		axs[2*i+1,2] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar,
 			D.yBar, unc_alp, header, vmin=0, vmax=0.25, cmap='inferno', 
-			flux_unbinned=D.unbinned_flux, signal_noise=D.SNRatio, 
-			signal_noise_target=SN_target, ax=axs[2*i+1,2])
+			flux_unbinned=D.unbinned_flux, 
+			# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
+			ax=axs[2*i+1,2])
 
 
 	for a in axs.flatten():

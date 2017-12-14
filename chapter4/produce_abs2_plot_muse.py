@@ -84,7 +84,7 @@ def plot(galaxies, str_galaxies, file_name):
 			"absorption_line('Fe5782')",
 			"absorption_line('NaD')",
 			"absorption_line('TiO1')",
-			"absorption_line('TiO2')"
+			"absorption_line('TiO2',remove_badpix=True)"
 			]
 
 		for j, p in enumerate(plots):
@@ -92,9 +92,10 @@ def plot(galaxies, str_galaxies, file_name):
 				'Fe5406','Fe5709','Fe5782']]):
 				vmin, vmax = 0.5, 3.5
 			elif 'TiO1' in p:
-				vmin, vmax = 0, 0.35
-			elif 'Ti02' in p:
-				vmin, vmax = 0, 0.1
+				# vmin, vmax = 0, 0.35
+				vmin, vmax = 0, 0.05
+			elif 'TiO2' in p:
+				vmin, vmax = 0, 2.
 			else:
 				vmin, vmax = 3, 7
 
@@ -102,11 +103,13 @@ def plot(galaxies, str_galaxies, file_name):
 				D.xBar, D.yBar, eval('D.'+p), header,  
 				vmin=vmin, vmax=vmax, 
 				cmap='inferno', flux_unbinned=D.unbinned_flux, 
-				signal_noise=D.SNRatio, signal_noise_target=SN_target, 
+				# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 				ax=axs[j, 2*i])
 			if overplot:
 				for o, color in overplot.iteritems():
-					add_(o, color, axs[j, 2*i], galaxy, nolegend=True)
+					scale = 'log' if o == 'radio' else 'lin'
+					add_(o, color, axs[j, 2*i], galaxy, nolegend=True, 
+						scale=scale)
 			
 
 		plots = [
@@ -114,7 +117,7 @@ def plot(galaxies, str_galaxies, file_name):
 			"absorption_line('Fe5782',uncert=True)[1]",
 			"absorption_line('NaD',uncert=True)[1]",
 			"absorption_line('TiO1',uncert=True)[1]",
-			"absorption_line('TiO2',uncert=True)[1]"
+			"absorption_line('TiO2',uncert=True,remove_badpix=True)[1]"
 			]
 
 		for j, p in enumerate(plots):
@@ -126,7 +129,7 @@ def plot(galaxies, str_galaxies, file_name):
 				D.xBar, D.yBar, eval('D.'+p), header,  
 				vmin=0, vmax=vmax, 
 				cmap='inferno', flux_unbinned=D.unbinned_flux, 
-				signal_noise=D.SNRatio, signal_noise_target=SN_target, 
+				# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 				ax=axs[j, 2*i+1])
 			
 

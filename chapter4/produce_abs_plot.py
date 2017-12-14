@@ -110,7 +110,9 @@ def plot(galaxies, str_galaxies, file_name):
 					ax=axs[j, 2*i])
 				if overplot:
 					for o, color in overplot.iteritems():
-						add_(o, color, axs[j, 2*i], galaxy, nolegend=True)
+						scale = 'log' if o == 'radio' else 'lin'
+						add_(o, color, axs[j, 2*i], galaxy, nolegend=True, 
+							scale=scale)
 			else:
 				axs[j, 2*i].remove()
 

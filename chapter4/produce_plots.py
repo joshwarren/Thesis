@@ -90,7 +90,10 @@ def plot(galaxies, str_galaxies, file_name):
 			ax=axs[2*i,0])
 		if overplot:
 			for o, color in overplot.iteritems():
-				add_(o, color, axs[2*i,0], galaxy, nolegend=True)
+				scale = 'log' if o == 'radio' else 'lin'
+				add_(o, color, axs[2*i,0], galaxy, nolegend=True, scale=scale)
+			add_('CO', 'c', axs[2*i,0], galaxy, nolegend=True)
+			add_('radio', 'g', axs[2*i,0], galaxy, nolegend=True, scale='log')
 		
 		axs[2*i+1,0].remove()
 
@@ -107,9 +110,9 @@ def plot(galaxies, str_galaxies, file_name):
 			vmin=vmin_vel, vmax=vmax_vel, cmap=sauron, 
 			flux_unbinned=D.unbinned_flux, signal_noise=D.SNRatio, 
 			signal_noise_target=SN_target, ax=axs[2*i,1])
-		if overplot:
-			for o, color in overplot.iteritems():
-				add_(o, color, axs[2*i,1], galaxy, nolegend=True)
+		for o, color in overplot.iteritems():
+				scale = 'log' if o == 'radio' else 'lin'
+				add_(o, color, axs[2*i,1], galaxy, nolegend=True, scale=scale)
 
 
 		axs[2*i+1,1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, 
@@ -126,8 +129,8 @@ def plot(galaxies, str_galaxies, file_name):
 			signal_noise_target=SN_target, ax=axs[2*i,2])
 		if overplot:
 			for o, color in overplot.iteritems():
-				add_(o, color, axs[2*i,2], galaxy, nolegend=True)
-
+				scale = 'log' if o == 'radio' else 'lin'
+				add_(o, color, axs[2*i,2], galaxy, nolegend=True, scale=scale)
 
 		axs[2*i+1,2] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar,
 			D.yBar, D.components['stellar'].plot['sigma'].uncert, header, 

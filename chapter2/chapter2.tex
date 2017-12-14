@@ -18,10 +18,73 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 
 		The field of view of VIMOS is split into 4 quadrants (cheerfully named in the Flexible Image Transport System, FITS, headers, Brian, Keith, Tom and David). A schematic of the layout is shown in Fig.\,\ref{fig:quadrants}. The quadrants are operated in parallel as independent detectors and it is not possible to use different grisms with different quadrants. The IFU fibres are arranged in a row parallel to and above the short sides of the charge-coupling device (CCD) detectors, and the light from each fibre is then dispersed by the grism in the other direction. This gives rise the to row-stack spectra (RSS) format of most fibre-fed IFU devices.
 
-		VIMOS has several well-known though poorly-understood technical issues. These include several low transmission (bad) fibres, strong flexure and large differences in sensitivity across its 4 quadrants. These are partially dealt with using a specialist data-reduction pipeline described in Section \ref{subsec:VIMOSreduction}, with a discussion of the resulting data quality presented in Section \ref{subsec:VIMOSartefacts} (for more details see the instrument manual, Section 2.8 in the version for Observing Period 100\footnote{http://www.eso.org/sci/facilities/paranal/instruments/vimos/doc.html}).
+		VIMOS has several well-known though poorly-understood technical issues. These include several low transmission (bad) fibres, strong flexure and large differences in sensitivity across its 4 quadrants. These are partially dealt with using a specialist data-reduction pipeline described in Section \ref{subsec:VIMOSreduction}, with a discussion of the resulting data quality presented in Section \ref{subsec:VIMOSartefacts} (for more details see the instrument manual, Section 2.8 in the version for Observing Period 100\footnote{\url{http://www.eso.org/sci/facilities/paranal/instruments/vimos/doc.html}}).
 
 	\subsection{VIMOS Observations}
 		As stated above,  observations for our project were obtained using the VIMOS IFS mode with a spatial sampling of $0\farcs67$ per spaxel and the HR blue grism, yielding a wavelength range of 3700-5520\,\AA\ with a spectral resolution of 1440 and sampling of 0.71\,\AA\,$\mathrm{pix^{-1}}$. Our program (ID: 089.B-0632A) ran in service mode during ESO's period 89 and 90. Each object was observed with a total integration time of $\approx 100$\,min on-source, equally spread over three observing blocks (OBs). Each OB contained 2 science exposures followed by 3 continuum lamp exposures for flatfielding and finally 1 He-Ne arc lamp exposure for wavelength calibration. In addition, the standard VIMOS calibration programme provided 5 bias exposures per night. The flux calibration was calculated using publicly available observations of the spectro-photometric standard star Feige 110 provided by ESO. A summary of the observations is given in Table \ref{tab:observations}.
+
+
+		\begin{table}
+			\centering
+		\begin{threeparttable}
+			\caption{A summary of the VIMOS observational logs.}
+			\label{tab:observations} 
+			\begin{tabular}{c c c c c c c}
+			\hline
+			\hline
+				Galaxy 	& OB  & Date  & Av. DIMM & I. seeing & F. seeing & Airmass \\
+				& & (2012) & (arcsec) & (arcsec) & (arcsec) & (arcsec) \\
+			\hline
+				\multirow{3}{*}{ESO 443-G24}& 1 & 15 Apr & 0.79 & 0.83 & 0.71 & 1.023 \\
+				& 2 & 27 Apr & 2.14 & 2.67 & 1.69 & 1.012 \\
+				& 3 & 27 Apr  & 2.36 & --\tnote{a} & 2.78 & 1.039 \\
+			\hline
+				\multirow{3}{*}{IC 1459}& 1 & 21 May & 0.82 & 0.84 & 0.82 & 1.238 \\
+				& 2 & 28 May & 1.20 & 1.26 & 1.01 & 1.175 \\
+				& 3 & 18 Jun  & 1.10 & 1.27 & 1.09 & 1.277 \\
+			\hline
+				\multirow{3}{*}{IC 1531}& 1 & 18 Jun & 1.12 & 1.45 & 1.07 & 1.292 \\
+				& 2 & 18 Jun & 1.21 & 1.29 & 1.38 & 1.137 \\
+				& 3 & 16 Jul  & 1.05 & 1.03 & 0.98 & 1.149 \\
+			\hline
+				\multirow{3}{*}{IC 4296}& 1 & 23 Apr & 0.78 & 1.00 & 0.61 & 1.015 \\
+				& 2 & 23 Apr & 1.09 & 0.90 & 0.86 & 1.101 \\
+				& 3 & 23 Apr  & 0.86 & 1.07 & 0.89 & 1.224 \\
+			\hline
+				\multirow{3}{*}{NGC 612}& 1 & 25 Jun & 0.74 & 0.72 & 0.78 & 1.244 \\
+				& 2 & 19 Jul & 1.25 & 1.45 & 1.46 & 1.177 \\
+				& 3 & 19 Jul  & 1.19 & 1.08 & 1.11 & 1.076 \\
+			\hline
+				\multirow{3}{*}{NGC 1399}& 1 & 27 Jul & 1.09 & 0.95 & 1.28 & 1.314 \\
+				& 2 & 29 Jul & 1.02 & 0.95 & 1.04 & 1.219 \\
+				& 3 & 15 Aug  & 1.51 & 1.06 & 1.57 & 1.281 \\
+			\hline
+				\multirow{3}{*}{NGC 3100}& 1 & 15 Apr & 0.76 & 0.76 & 0.82 & 1.017 \\
+				& 2 & 15 Apr & 0.79 & 0.75 & 0.82 & 1.066 \\
+				& 3 & 25 Apr  & 1.22 & 1.16 & 1.20 & 1.010 \\
+			\hline
+				\multirow{3}{*}{NGC 3557}& 1 & 27 Apr & 0.89 & 1.08 & 0.71 & 1.033 \\
+				& 2 & 27 Apr & 1.10 & 0.80 & 0.96 & 1.030 \\
+				& 3 & 27 Apr  & 1.66 & 1.46 & 1.36 & 1.065 \\
+			\hline
+				\multirow{3}{*}{NGC 7075}& 1 & 18 May & 1.29 & 1.64 & 1.02 & 1.138 \\
+				& 2 & 19 May & 0.91 & 1.18 & 0.66 & 1.200 \\
+				& 3 & 21 May & 0.87 & 0.80 & 1.33 & 1.229 \\
+			\hline
+				\multirow{3}{*}{PKS 718-34}& 1 & 15 Apr & 1.02 & 0.99 & 0.95 & 1.113 \\
+				& 2 & 16 Apr & 1.05 & 1.25\tnote{b} & 1.05 & 1.126 \\
+				& 3 & 12 Nov  & 0.69 & 0.68 & 0.65 & 1.146 \\
+			\hline
+			\hline
+		\end{tabular}
+			\begin{tablenotes}
+			\footnotesize
+			\note Col.\,1: Galaxy name. Col.\,2: Observation block (OB) number. Col.\,3: Date of observation. Col.\,4: Average differential image motion monitor(DIMM) during OB. Col.\,5: Inital seeing. Col\,6: Final seeing. Col\.7: Average airmass during OB.
+			\item [a] Failed eeing reading at both start and end of first exposure for ESO 443-G24, OB 3 
+			\item [b] Failed seeing reading at start of first exposure for PKS 718-34, OB 2. Seeing from end of exposure quoted instead. 
+			\end{tablenotes}
+		\end{threeparttable}
+		\end{table}
 
 	\subsection{VIMOS Data Reduction}
 		\label{subsec:VIMOSreduction}
@@ -29,7 +92,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 
 		A median `master' bias is first created from the five daily bias frames and subtracted from each raw frame. Known low-transmission (bad) fibres, identified cosmic rays and offsets accounting for flexure of the instrument due to gravity are all considered when automatically identifying the fibre peak positions on the detector. Each fibre is then traced along the dispersion axis in the flat frames. \citet{Husemann2014} find this process to be robust, except for a few fibres at the very blue end of the spectra ($<4300$\,\AA). 
 
-		Since flexure is dependent on the altitude of the pointing of the telescope and the rotation of the instrument, the science exposures will be affected in a manner slightly different than the flatfield exposures. \textsc{Py3D} accounts for these offsets by tracing the peak of the cross-dispersion profile directly on the science exposures at 5 or 6 locations along the dispersion direction for each spectra. The offsets between these positions and the traced spectra at the relevant wavelengths in the flatfield exposures are then interpolated along the dispersion axis with a second order Legendre polynomial. This procedure corrects for the flexure in the cross-dispersion direction, but flexure also affects the dispersion direction due to differences in the pointing of the telescope between the science and arc lamp exposures. This effect is estimated by measuring the positions of strong sky emission lines, but our HR blue grism data have only one sky line at 5199\,\AA, which in many of our science frames was very dim or not detected. This lack of sky lines had previously been an issue with our initial attempt at data reduction using the publicly available \textsc{p3d} suite of programs\footnote{http://p3d.sourceforge.net/}. Here the lack of sky lines means that \textsc{p3d} is not able to flux calibrate the quadrants with respect to each other. For this reason (and the lack of flexure correction), we use \textsc{Py3D} instead.
+		Since flexure is dependent on the altitude of the pointing of the telescope and the rotation of the instrument, the science exposures will be affected in a manner slightly different than the flatfield exposures. \textsc{Py3D} accounts for these offsets by tracing the peak of the cross-dispersion profile directly on the science exposures at 5 or 6 locations along the dispersion direction for each spectra. The offsets between these positions and the traced spectra at the relevant wavelengths in the flatfield exposures are then interpolated along the dispersion axis with a second order Legendre polynomial. This procedure corrects for the flexure in the cross-dispersion direction, but flexure also affects the dispersion direction due to differences in the pointing of the telescope between the science and arc lamp exposures. This effect is estimated by measuring the positions of strong sky emission lines, but our HR blue grism data have only one sky line at 5199\,\AA, which in many of our science frames was very dim or not detected. This lack of sky lines had previously been an issue with our initial attempt at data reduction using the publicly available \textsc{p3d} suite of programs\footnote{\url{http://p3d.sourceforge.net/}}. Here the lack of sky lines means that \textsc{p3d} is not able to flux calibrate the quadrants with respect to each other. For this reason (and the lack of flexure correction), we use \textsc{Py3D} instead.
 
 		Another issue taken into account by \textsc{Py3D} is cross-talk, where fibres are so densely packed that light from one fibre contaminates (in the cross-dispersion direction) that of neighbouring fibres. The spectra are extracted assuming a Gaussian profile for each fibre in the cross-dispersion direction, with the Gaussian width fitted for each fibre individually. After this, the spectra are adaptively smoothed to a 3\,\AA\ full-width at half-maximum (FWHM) resolution in the dispersion direction and are resampled to a common wavelength solution.
 
@@ -45,7 +108,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 			\label{fig:Correction}
 		\end{figure}
 
-		Following this, we noted that the cubes where still not properly calibrated. Three main issues remain: the quadrants have different intensities, clearly showing uncorrected throughput differences; diagonal intensity stripes are present in the reconstructed images at all wavelengths; and spectral features are observed \citep{Jullo2008} that are visually similar to fringe patterns caused by interference within the CCD between incident light and light reflected from the interfaces between layers of the CCD materials. Given the thickness of the CCD layers, such fringes should only be observed at $>7000$\,\AA, however they can be seen at all wavelengths, suggesting a different origin. \citet{Lagerholm2012} notes that they appear to be due to altitude angle and hysteresis-dependent reflections occurring within the fibres. We refer to these features hereafter as fringe-like patterns. The first two of these issues are illustrated in the top-left panel of Fig.\,\ref{fig:Correction}. \citet{Lagerholm2012} pointed out that the intensity stripes do not seem to be bound by the quadrants, and concluded that they therefore probably originate from an unknown data-reduction pipeline problem. They however made use of the data-reduction pipeline supplied by ESO\footnote{http://www.eso.org/sci/software/pipelines/vimos/}, while we use \textsc{Py3D} and also observe the intensity stripes, suggesting that the specific pipeline may not be the cause.  
+		Following this, we noted that the cubes where still not properly calibrated. Three main issues remain: the quadrants have different intensities, clearly showing uncorrected throughput differences; diagonal intensity stripes are present in the reconstructed images at all wavelengths; and spectral features are observed \citep{Jullo2008} that are visually similar to fringe patterns caused by interference within the CCD between incident light and light reflected from the interfaces between layers of the CCD materials. Given the thickness of the CCD layers, such fringes should only be observed at $>7000$\,\AA, however they can be seen at all wavelengths, suggesting a different origin. \citet{Lagerholm2012} notes that they appear to be due to altitude angle and hysteresis-dependent reflections occurring within the fibres. We refer to these features hereafter as fringe-like patterns. The first two of these issues are illustrated in the top-left panel of Fig.\,\ref{fig:Correction}. \citet{Lagerholm2012} pointed out that the intensity stripes do not seem to be bound by the quadrants, and concluded that they therefore probably originate from an unknown data-reduction pipeline problem. They however made use of the data-reduction pipeline supplied by ESO\footnote{\url{http://www.eso.org/sci/software/pipelines/vimos/}}, while we use \textsc{Py3D} and also observe the intensity stripes, suggesting that the specific pipeline may not be the cause.  
 
 		These issues were corrected by implementing a \textsc{python} version of the ad-hoc corrections given in \citet{Lagerholm2012}. This involves re-normalizing the quadrants to each other by finding the multiplicative factor for each quadrant which minimizes the differences of the integrated spectra of neighbouring fibres across the edges of neighbouring quadrants (quadrant 2 is held constant). This is followed by the removal of the fringe-like pattern by constructing a correction spectrum by dividing the spectrum of a given fibre by the median spectrum from the eight fibres spatially surrounding it and smoothing over a scale of 150 pixels in the dispersion direction. Each spectrum of the original datacube is then divided by the corresponding correction spectrum (example shown for a single spaxel in NGC 3100 in the bottom panel of Fig.\,\ref{fig:Correction}). The top two panels of Fig.\,\ref{fig:Correction} show the reconstructed images (where the datacube is collapsed in the spectral direction) of NGC 3557 before and after these corrections are applied. These additional steps mean that the datacubes are not perfectly flux-calibrated, but all the corrections are multiplicative and thus will not effect equivalent width measurements. From comparisons to the MUSE data (see Section \ref{sec:MUSE}), we can then estimate the flux calibration of the resulting datacubes. 
 
@@ -70,10 +133,10 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 
 	\subsection{Other VIMOS Pipelines}
 		\label{subsec:Other}
-		Two other publicly available data-reduction pipelines exist for VIMOS. First, the ESO supplied VIMOS pipeline recipe, a plug-in for ESO's general purpose data handling tool \textsc{Gasgano}\footnote{http://www.eso.org/sci/data-processing/software/gasgano} \citep{Izzo2004, ESO2012}. At the start of this project, this pipeline was not well received by the community. Indeed, ESO's support team suggested I try the alternative pipeline, \textsc{P3D}. Upgrades have since been made to both the instrument and the pipeline, as well as improved suggestions for the observing strategies (OBs), that are meant to remove some of the calibration issues discussed here. However, given the periods when all data were obtained, we have nevertheless decided not to experiment with this tool.
+		Two other publicly available data-reduction pipelines exist for VIMOS. First, the ESO supplied VIMOS pipeline recipe, a plug-in for ESO's general purpose data handling tool \textsc{Gasgano}\footnote{\url{http://www.eso.org/sci/data-processing/software/gasgano}} \citep{Izzo2004, ESO2012}. At the start of this project, this pipeline was not well received by the community. Indeed, ESO's support team suggested I try the alternative pipeline, \textsc{P3D}. Upgrades have since been made to both the instrument and the pipeline, as well as improved suggestions for the observing strategies (OBs), that are meant to remove some of the calibration issues discussed here. However, given the periods when all data were obtained, we have nevertheless decided not to experiment with this tool.
 		
 		% No publication paper for IDL? Is this because it is commerical?
-		Second, \textsc{P3D}\footnote{http://p3d.sourceforge.net/} is a comprehensive, multi-instrument package with both a decent graphical user interface (GUI) and an application programing interface (API) in the commercial \textsc{Interactive Data Language}\footnote{http://www.harrisgeospatial.com/SoftwareTechnology/IDL.aspx} (\textsc{IDL}) \citep{Sandin2010, Sandin2011}. It includes routines for all the standard reduction steps: bias subtraction, tracing of the fibres along the dispersion axis, flatfielding, wavelength calibration, flux calibration, cosmic-ray removal and DAR correction. It also combines the quadrants into a single FITS file, although as mentioned above the flux calibration of the different quadrants is attempted by comparing the intensities of the blended sky line at 5199\,\AA. In our case, this calibration step failed for most galaxies as the 5199\,\AA\ sky line is extremely faint (or not detected) in many of the exposures. This failure can be seen in the extremely sharp offsets between the quadrants on the left and right of the reconstructed image shown in the left panel of Fig.\,\ref{fig:P3D}. 
+		Second, \textsc{P3D}\footnote{\url{http://p3d.sourceforge.net/}} is a comprehensive, multi-instrument package with both a decent graphical user interface (GUI) and an application programing interface (API) in the commercial \textsc{Interactive Data Language}\footnote{\url{http://www.harrisgeospatial.com/SoftwareTechnology/IDL.aspx}} (\textsc{IDL}) \citep{Sandin2010, Sandin2011}. It includes routines for all the standard reduction steps: bias subtraction, tracing of the fibres along the dispersion axis, flatfielding, wavelength calibration, flux calibration, cosmic-ray removal and DAR correction. It also combines the quadrants into a single FITS file, although as mentioned above the flux calibration of the different quadrants is attempted by comparing the intensities of the blended sky line at 5199\,\AA. In our case, this calibration step failed for most galaxies as the 5199\,\AA\ sky line is extremely faint (or not detected) in many of the exposures. This failure can be seen in the extremely sharp offsets between the quadrants on the left and right of the reconstructed image shown in the left panel of Fig.\,\ref{fig:P3D}. 
 
 		\begin{figure}
 			\centering
@@ -98,11 +161,11 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 	\subsection{MUSE Data Reducing}
 		\label{subsec:MUSEreduction}
 		
-		Because the computing resources required to reduce raw MUSE data are very large (the recommended system configuration for the reduction of a single-pointing OB of 5 exposures is: 64\,GB of memory, 24 CPU cores and 4\,TB of free disk space), the data quality is high, and the pipelines products are known to be robust, we adopt for this project the pre-reduced (known as Phase 3) data products from ESO, so that the ESO data reduction pipeline\footnote{http://www.eso.org/sci/software/pipelines/muse/muse-pipe-recipes.html} is already applied. 
+		Because the computing resources required to reduce raw MUSE data are very large (the recommended system configuration for the reduction of a single-pointing OB of 5 exposures is: 64\,GB of memory, 24 CPU cores and 4\,TB of free disk space), the data quality is high, and the pipelines products are known to be robust, we adopt for this project the pre-reduced (known as Phase 3) data products from ESO, so that the ESO data reduction pipeline\footnote{\url{http://www.eso.org/sci/software/pipelines/muse/muse-pipe-recipes.html}} is already applied. 
 
 		The ESO pipeline contains all standard IFU data reduction steps: bias subtraction, flatfielding of detectors using continuum lamp exposures, flatfielding of fibres using twilight exposures, wavelength calibration, flux calibration using standard stars and sky subtraction (both programmes included dedicated sky exposures). Tiled observations, where present, are combined into a final mosaic.
 
-		We found that the Phase 3 data products were indeed generally of a sufficient quality for our purposes, except that in both IC 1459 and IC 4296 the sky appears to have been over-subtracted. The ESO Phase 3 data release description for MUSE\footnote{https://www.eso.org/sci/observing/phase3/data\_releases/IDP\_MUSE\_IFU\_release\_description\_1.0.pdf} points out that the automatic data-reduction routine does not verify stable conditions (such as photometry and moon visibility) before applying the sky subtraction. Unstable conditions may well be the source of over subtraction which manifested itself as enormous apparent absorption features (often with negative fluxes) in the spectra. To remove this over-subtraction, we developed our own pseudo-sky subtraction routine. A median spectrum was taken from four $20 \times 20$\,spaxel regions, one in from each spatial corner of the ESO reduced cube. After checking that no stellar continuum could be fit to the medium sky spectrum (i.e.\ that very little light from the galaxy is contaminating the pseudo-sky regions), this median sky spectrum was subtracted from each spaxel in the cube. 
+		We found that the Phase 3 data products were indeed generally of a sufficient quality for our purposes, except that in both IC 1459 and IC 4296 the sky appears to have been over-subtracted. The ESO Phase 3 data release description for MUSE\footnote{\url{https://www.eso.org/sci/observing/phase3/data\_releases/IDP\_MUSE\_IFU\_release\_description\_1.0.pdf}} points out that the automatic data-reduction routine does not verify stable conditions (such as photometry and moon visibility) before applying the sky subtraction. Unstable conditions may well be the source of over subtraction which manifested itself as enormous apparent absorption features (often with negative fluxes) in the spectra. To remove this over-subtraction, we developed our own pseudo-sky subtraction routine. A median spectrum was taken from four $20 \times 20$\,spaxel regions, one in from each spatial corner of the ESO reduced cube. After checking that no stellar continuum could be fit to the medium sky spectrum (i.e.\ that very little light from the galaxy is contaminating the pseudo-sky regions), this median sky spectrum was subtracted from each spaxel in the cube. 
 
 		This extra (pseudo-)sky subtraction was not possible for NGC 1316 and NGC 1399 due to mosaic nature of the observations, since this sky subtraction should be applied to each exposure of the mosaics independently (while the different exposures are already combined as part of the automated data reduction). It is also impossible to access data products from intermediate steps in the data-reduction process, such as immediately before the mosaic is produced. Fortunately, both NGC 1316 and NGC 1399 are not as badly affected by poor sky subtraction as IC 1459 and IC 4296, so they are left uncorrected. 
 
@@ -128,7 +191,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 	
 	\subsection{Spatial Binning}
 		\label{subsec:Binning}
-		Given that galaxies are brightest at their centres and fade away radially, and that the noise (assumed to be Poisson dominated) scales as the square root of the signal, the S/N of the galaxy spectra will also be highest at the galaxy centres, decreasing with increasing radius. In the outer regions of galaxies, the S/N becomes too low to extract meaningful information from the spectra. Because of this, we spatially bin the spectra to a fixed target S/N (increasing a bin's size until it reaches the required S/N). This is performed using the adaptive Voronoi binning routine\footnote{http://www-astro.physics.ox.ac.uk/~mxc/software/} of \citet{Cappellari2003}. For our purposes, we define the `signal' and `noise' of each spaxel as the median value of its spectrum and noise spectrum, respectively. We require a S/N of 30 for all VIMOS datacubes and 50 for the IC 1459 and IC 4296 MUSE datacubes. The NGC 1316 and NGC 1399 MUSE datacubes were binned to a S/N of 50 for the analysis of the stellar kinematics and 100 for the analysis of the emission line kinematics and stellar populations. These target S/N were chosen in order to be as low as possible, while still returning meaningful information (as assessed by eye). The NGC 1316 and NGC 1399 MUSE datacubes have different S/N thresholds due to the extra (pseudo-)sky subtraction applied to the IC 1459 and IC 4296 datacubes, that were successful at removing artefacts from the spectra (thus allowing us to retain a higher level of spatial information for these two galaxies). The remaining artefacts in NGC 1316 and NGC 1399 datacubes did not seem to affect the analysis of the stellar kinematics, but did affect the emission line fits, so we enforced a higher S/N threshold for the emission line analysis and where careful subtraction of the emission lines is important (i.e.\ in the analysis of the stellar populations). 
+		Given that galaxies are brightest at their centres and fade away radially, and that the noise (assumed to be Poisson dominated) scales as the square root of the signal, the S/N of the galaxy spectra will also be highest at the galaxy centres, decreasing with increasing radius. In the outer regions of galaxies, the S/N becomes too low to extract meaningful information from the spectra. Because of this, we spatially bin the spectra to a fixed target S/N (increasing a bin's size until it reaches the required S/N). This is performed using the adaptive Voronoi binning routine\footnote{\url{http://www-astro.physics.ox.ac.uk/~mxc/software/}} of \citet{Cappellari2003}. For our purposes, we define the `signal' and `noise' of each spaxel as the median value of its spectrum and noise spectrum, respectively. We require a S/N of 30 for all VIMOS datacubes and 50 for the IC 1459 and IC 4296 MUSE datacubes. The NGC 1316 and NGC 1399 MUSE datacubes were binned to a S/N of 50 for the analysis of the stellar kinematics and 100 for the analysis of the emission line kinematics and stellar populations. These target S/N were chosen in order to be as low as possible, while still returning meaningful information (as assessed by eye). The NGC 1316 and NGC 1399 MUSE datacubes have different S/N thresholds due to the extra (pseudo-)sky subtraction applied to the IC 1459 and IC 4296 datacubes, that were successful at removing artefacts from the spectra (thus allowing us to retain a higher level of spatial information for these two galaxies). The remaining artefacts in NGC 1316 and NGC 1399 datacubes did not seem to affect the analysis of the stellar kinematics, but did affect the emission line fits, so we enforced a higher S/N threshold for the emission line analysis and where careful subtraction of the emission lines is important (i.e.\ in the analysis of the stellar populations). 
 
 		Figure \ref{fig:egSNR} shows an example of the Voronoi bins. Concentric rings can clearly be seen around the centre of the galaxy, as bins with a S/N just below the target are increased in size by a single spaxel, resulting in a final S/N well over the target. Spaxels within the first ring are not binned and can have arbitrarily high S/N (dictated by the galaxy surface-brightness profile), while bins outside the central rings are composed of many spaxels and naturally have S/Ns clustered around the target value.
 
@@ -141,7 +204,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 
 	\subsection{Stellar Kinematics}
 		\label{subsec:StellarFit}
-		For our analysis, we make use of the penalized-fitting (\textsc{pPXF}) routine\footnote{http://www-astro.physics.ox.ac.uk/~mxc/software/} of \citet{Cappellari2004} and \citet{Cappellari2016a}. This routine finds the best-fit stellar kinematics of each bin by minimizing the reduced chi-square ($\chi^2_\text{red}$) of a model spectrum built from a linear combination of empirical stellar templates, convolved with a Gaussian LOSVD (here parametrised by the mean velocity, $v$, and velocity dispersion, $\sigma$). Gaussian templates are also used to independently fit emission lines from the interstellar medium (ISM), with their own LOSVDs. Throughout our analysis, we fit all emission lines as a single component independently from the stars, and thus they have individual fluxes (except for fixed flux ratios within forbidden line doublets) but the same kinematics. \textsc{pPXF} requires an initial guess for the LOSVD of each component and we use here the redshift of the galaxy and $\sigma = 200\,\mathrm{km\,s^{-1}}$ for both components (stars and gas). Finally, Lagrange polynomials are used to make additive and/or multiplicative corrections to the continuum level of the fit. A potential sky line at 5199\,\AA\ in the Earth's frame of reference is masked in all fits.
+		For our analysis, we make use of the penalized-fitting (\textsc{pPXF}) routine\footnote{\url{http://www-astro.physics.ox.ac.uk/~mxc/software/}} of \citet{Cappellari2004} and \citet{Cappellari2016a}. This routine finds the best-fit stellar kinematics of each bin by minimizing the reduced chi-square ($\chi^2_\text{red}$) of a model spectrum built from a linear combination of empirical stellar templates, convolved with a Gaussian LOSVD (here parametrised by the mean velocity, $v$, and velocity dispersion, $\sigma$). Gaussian templates are also used to independently fit emission lines from the interstellar medium (ISM), with their own LOSVDs. Throughout our analysis, we fit all emission lines as a single component independently from the stars, and thus they have individual fluxes (except for fixed flux ratios within forbidden line doublets) but the same kinematics. \textsc{pPXF} requires an initial guess for the LOSVD of each component and we use here the redshift of the galaxy and $\sigma = 200\,\mathrm{km\,s^{-1}}$ for both components (stars and gas). Finally, Lagrange polynomials are used to make additive and/or multiplicative corrections to the continuum level of the fit. A potential sky line at 5199\,\AA\ in the Earth's frame of reference is masked in all fits.
 
 		To improve the speed of our analysis, we first collapse each datacube spatially to produce a global spectrum of the galaxy, by summing across both spatial dimensions at each wavelength. The entire MILES stellar library \citep{Sanchez-Blazquez2006, Falcon-Barroso2011a} is then used to provide templates for the \textsc{pPXF} fit. We mask $600\,\mathrm{km\,s^{-1}}$--wide regions around potential emission lines (see Table \ref{tab:EmissionLine}), and use a fourth order Lagrange polynomial for an additive continuum correction. Here we use the redshift values from Simbad \citep{Wenger2000} as our initial velocity guesses. For our 14 datacubes (10 VIMOS and 4 MUSE datacubes), these fits use an average of 23 templates (with non-zero weights) out of 985. The other templates are discarded for all future analyses of a given datacube. This drastically improves the runtime of \textsc{pPXF} without affecting the quality of the fits.
 
@@ -159,10 +222,10 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 		Deriving the distribution and kinematics of the emission lines is achieved in a manner similar to that of deriving the stellar kinematics. However, to minimize template mismatch, whereby emission lines are erroneously fitted to the edges of badly modeled and thus subtracted absorption features, we follow the method set out in \citet{Sarzi2005}. This is a three-step process, applied to each bin:
 		\begin{enumerate}
 			\item The region around each emission line's rest-frame wavelength is masked, and the stellar spectrum is fitted, ignoring the masked regions.
-			\item The kinematics of the stellar component (i.e. all stellar templates) is fixed to that found in step 1. The region around the [\ion{O}{iii}] doublet is then unmasked and fitted with an additional (and positive) Gaussian with free intensity, mean velocity and velocity dispersion.
-			\item All potential emission lines are unmasked and fit with additional Gaussians, but with their kinematics fixed to that of [\ion{O}{iii}] derived in Step 2. Only the amplitudes of the Gaussians (i.e. the intensity of the emission lines) therefore fit. 
+			\item The kinematics of the stellar component (i.e.\ all stellar templates) is fixed to that found in step 1. The region around the [\ion{O}{iii}] doublet is then unmasked and fitted with an additional (and positive) Gaussian with free intensity, mean velocity and velocity dispersion.
+			\item All potential emission lines are unmasked and fit with additional Gaussians, but with their kinematics fixed to that of [\ion{O}{iii}] derived in Step 2. Only the amplitudes of the Gaussians (i.e.\ the intensity of the emission lines) therefore fit. 
 		\end{enumerate}
-		All the steps above are repeated with the aforementioned MC method to estimates the uncertainties, and include a tenth order multiplicative Lagrange polynomial to account for poorly modeled continuum emission. 
+		All the steps above are repeated with the aforementioned MC method to estimates the uncertainties, and include a tenth order multiplicative Lagrange polynomial to account for poorly modeled continuum emission. The ratio of the amplitudes of the constituent emission lines within a doublet is fixed for some forbidden lines (see Table \ref{tab:EmissionLine}).
 
 		The residuals between the best-fit spectrum and the input spectrum are smoothed in wavelength using a weighted, moving average. This is then summed in quadrature with the noise spectrum to produce a combined `residual noise' spectrum. For each fitted emission line $i$, the ratio of the amplitude of the fitted line to the median residual noise across the line, $(A/N)_i$, is used to estimate the reliability of the detection threshold. As in \citet{Sarzi2005}, a fit to the [\ion{O}{iii}] doublet only is considered a detection if $(A/N)_{[\text{\ion{O}{iii}}]} \ge 4$. For all other lines except [\ion{N}{i}], a fit to the line is only considered a detection if [\ion{O}{iii}] is detected in the same bin and $(A/N)_i \ge 3$. For a fit to the [\ion{N}{i}] doublet, we require a detection of both [\ion{O}{iii}] and H\,$\beta$ and $(A/N)_{[\text{\ion{N}{i}}]} \ge 4$. The emission lines considered are listed in Table \ref{tab:EmissionLine}, along with their rest wavelengths and that of any doublet counterparts (for so-called forbidden lines). 
 
@@ -171,26 +234,29 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 	 	\begin{threeparttable}
 	 		\caption{Emission lines considered in the \textsc{pPXF} fits.}
 	 		\label{tab:EmissionLine}
-	 		\begin{tabular}{l c c}
+	 		\begin{tabular}{l c c c}
 	 		\hline
 	 		\hline
-	 		Line 		& Rest-frame wavelength & Doublet rest-frame  \\
-	 		 &   & wavelength \\
+	 		Emission Line & Rest-frame & Doublet rest-frame & Amplitude ratio \\
+	 		 & wavelength & wavelength & \\
 	 		 & (\AA) & (\AA) \\
 	 		\hline
-	 		\bracket{\ion{O}{ii}} 	& 3726.03 & 3728.82 \\
-	 		H\,$\delta$ 	& 4101.76 \\
-	 		H\,$\gamma$ 	& 4340.47 \\
-	 		H\,$\beta$ 		& 4861.33 \\
-	 		\bracket{\ion{O}{iii}}	& 4958.92 & 5006.84 \\
-	 		\bracket{\ion{N}{i}} 	& 5199.36 & 5201.86 \\
-	 		\bracket{\ion{O}{i}} 	& 6300.30 & 6363.67 \\
-	 		\bracket{\ion{N}{ii}} 	& 6548.03 & 6583.41 \\
-	 		H\,$\alpha$ 	& 6562.30 \\
-	 		\bracket{\ion{S}{ii}} 	& 6716.47 & 6730.85 \\
+	 		\bracket{\ion{O}{ii}} 	& 3726.03 & 3728.82 & Free \\
+	 		H\,$\delta$ 	& 4101.76 & -- & -- \\
+	 		H\,$\gamma$ 	& 4340.47 & -- & -- \\
+	 		H\,$\beta$ 		& 4861.33 & -- & -- \\
+	 		\bracket{\ion{O}{iii}}	& 4958.92 & 5006.84 & 0.35 \\
+	 		\bracket{\ion{N}{i}} 	& 5199.36 & 5201.86 & 0.65 \\
+	 		\bracket{\ion{O}{i}} 	& 6300.30 & 6363.67 & 0.33 \\
+	 		\bracket{\ion{N}{ii}} 	& 6548.03 & 6583.41 & 0.34 \\
+	 		H\,$\alpha$ 	& 6562.30 & -- & -- \\
+	 		\bracket{\ion{S}{ii}} 	& 6716.47 & 6730.85 & Free \\
 	 		\hline
 	 		\hline
 	 		\end{tabular}
+	 		\begin{tablenotes}
+	 		\note Col\,1: Emission line name. Col\,2: Emission line rest-frame wavelength. Col\,3: Doublet rest-frame wavelength for forbidden lines. Col\,4: The fixed ratio of the amplitudes of the lines within a doublet. `Free' indicates the amplitudes of both doublet constituents are fit independently of each other. 
+	 		\end{tablenotes}
 	 	\end{threeparttable}
 	 	\end{table}
 
@@ -251,7 +317,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 			\end{threeparttable}
 			\end{table}
 
-			Much of the literature provides absorption line strength measurements in the Lick/Cassegrain Image Dissector Scanner spectrograph system (hereafter Lick/IDS system; \citealt{Faber1985, Worthey1994}), but this has several disadvantages. Firstly, the Lick/IDS system is based on non-flux-calibrated spectra from the IDS spectrograph on the Shane telescope (Lick Observatory), that has a relatively low and wavelength-dependent spectral resolution. When using the Lick/IDS system with other instruments, it is thus necessary to calibrate the observations by performing empirical corrections aiming to compensate for the uncalibrated continua of the Lick/IDS data. This requires observations of standard stars using the same instrumental set-up as the main observations. Since this was not requested as part of the VIMOS observing strategy and standard star observations are thus unavailable, we are unable to transform our measurements to the Lick/IDS system. An additional/new proposal is not possible either, as VIMOS has been substantially upgraded in the intervening time. Given the low spectral resolution and poor data quality on which the Lick/IDS system is based, we believe in any case that the community should be making a concerted effort to use alternative systems. We therefore choose to use the line index system (LIS) of \citet{Vazdekis2010}. LIS is based on flux-calibrated measurements at several spectral resolutions (5.0, 8.4 and 14.0\,\AA\ FWHM). \citet{Vazdekis2010} also provide empirical cubic functions to transform Lick/IDS literature measurements to LIS\footnote{http://www.iac.es/proyecto/miles/pages/line-index-system-lis/transformations.php}.
+			Much of the literature provides absorption line strength measurements in the Lick/Cassegrain Image Dissector Scanner spectrograph system (hereafter Lick/IDS system; \citealt{Faber1985, Worthey1994}), but this has several disadvantages. Firstly, the Lick/IDS system is based on non-flux-calibrated spectra from the IDS spectrograph on the Shane telescope (Lick Observatory), that has a relatively low and wavelength-dependent spectral resolution. When using the Lick/IDS system with other instruments, it is thus necessary to calibrate the observations by performing empirical corrections aiming to compensate for the uncalibrated continua of the Lick/IDS data. This requires observations of standard stars using the same instrumental set-up as the main observations. Since this was not requested as part of the VIMOS observing strategy and standard star observations are thus unavailable, we are unable to transform our measurements to the Lick/IDS system. An additional/new proposal is not possible either, as VIMOS has been substantially upgraded in the intervening time. Given the low spectral resolution and poor data quality on which the Lick/IDS system is based, we believe in any case that the community should be making a concerted effort to use alternative systems. We therefore choose to use the line index system (LIS) of \citet{Vazdekis2010}. LIS is based on flux-calibrated measurements at several spectral resolutions (5.0, 8.4 and 14.0\,\AA\ FWHM). \citet{Vazdekis2010} also provide empirical cubic functions to transform Lick/IDS literature measurements to LIS\footnote{\url{http://www.iac.es/proyecto/miles/pages/line-index-system-lis/transformations.php}}.
 
 			Because of the models we use for stellar population fitting (see Section \ref{subsubsec:StellarPop}), we actually measure the absorption line indices at a slightly degraded spectral resolution of 2.5\,\AA. For comparisons to the literature (Section \ref{subsec:absorption}), we also measure the absorption line indices at 8.4\,\AA\ resolution. 
 
@@ -278,12 +344,12 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 
 			ETGs often have very different fractional abundances of the various metals than those of the nearby stars that we are able to observe (all of which have near solar abundances). As such, the empirical stellar libraries used to calibrate the models fall short of the required coverage of parameter space. Most methods somehow attempt to extrapolate their results to non-solar abundances, and in a similar way to the fitting functions described above, `index response functions' can be constructed. These attempt to calibrate the effects of the varying abundances of individual elements, and comparison must then be made to completely theoretical spectra.
 
-			Here we use the SSP models of \citet[; hereafter TMJ]{Thomas2010}, as they are based on flux-calibrated spectra and therefore do not require calibration to the Lick/IDS system. These models assume a \citet{Salpeter1955} IMF ($\Phi(M) \propto M^{-2.35}$) and are based on the evolutionary population synthesis code of \citet{Maraston1998}. The models use the stellar evolutionary tracks of \citet{Cassisi1997} for metallicities $[Z/H] < -0.33$ and of \citet{Girardi2000} for $[Z/H] \ge -0.33$, the MILES stellar spectral library of \citet{Sanchez-Blazquez2006a} and \citet{Falcon-Barroso2011a}, the fitting functions of \citet{Johansson2010} and the index response functions of \citet{Korn2005}. The MILES library and thus the models have spectral resolution of 2.5\,\AA. This is better then the resolution of the reduced VIMOS data (3\,\AA), but we show in Fig.\,\ref{fig:res} that this has a negligible effect. Indeed, comparing the absorption line strengths measured at 2.5\,\AA\ and 3\,\AA\ for the MUSE datasets shows that the worst affected index is Fe5782 with a mean difference of only 1\% between the indices measured at 3\,\AA\ and 2.5\,\AA resolution. All other indices show a difference of only a few tenths of a percent. 
+			Here we use the SSP models of \citet[; hereafter TMJ]{Thomas2010}, as they are based on flux-calibrated spectra and therefore do not require calibration to the Lick/IDS system. These models assume a \citet{Salpeter1955} IMF ($\Phi(M) \propto M^{-2.35}$) and are based on the evolutionary population synthesis code of \citet{Maraston1998}. The models use the stellar evolutionary tracks of \citet{Cassisi1997} for metallicities $[Z/H] < -0.33$ and of \citet{Girardi2000} for $[Z/H] \ge -0.33$, the MILES stellar spectral library of \citet{Sanchez-Blazquez2006a} and \citet{Falcon-Barroso2011a}, the fitting functions of \citet{Johansson2010} and the index response functions of \citet{Korn2005}. The MILES library and thus the models have spectral resolution of 2.5\,\AA. This is better then the resolution of the reduced VIMOS data (3\,\AA), but we show in Fig.\,\ref{fig:res} that this has a negligible effect. Indeed, comparing the absorption line strengths measured at 2.5\,\AA\ and 3\,\AA\ for the MUSE datasets shows that the worst affected index is Fe5782 with a mean difference of only 1\% between the indices measured at 3\,\AA\ and 2.5\,\AA\ resolution. All other indices show a difference of only a few tenths of a percent. 
 
 			\begin{figure}
 				\centering
 				\includegraphics[width=.7\textwidth]{chapter2/compare_resolutions.png}
-				\caption[Resolution effects on absorption line index strengths]{Resolution effect on absorption line strength measurements. Absorption line strength indices at 2.5\AA\ and 3.0\AA\ spectral resolution are compared, showing that the effect of a slightly lower spectral resolution is negligible.}
+				\caption[Resolution effects on absorption line index strengths]{Resolution effect on absorption line strength measurements. Absorption line strength indices at 2.5\AA\ and 3.0\AA\ spectral resolution are compared, showing that the effect of a slightly lower spectral resolution is negligible. The dotted lines mark a difference of $\pm1$\% between the measurements at each resolution.}
 				\label{fig:res}
 			\end{figure}
 
@@ -301,7 +367,19 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 
 			TMJ showed that their models produce  good fits to globular cluster measurements of \citet{Puzia2002} and \citet{Schiavon2005} and the galaxy measurements of the SAURON team by \citet{Kuntschner2010}. \citet{Conroy2010} suggest that the stellar evolutionary tracks of \citet{Girardi2000} used for the high-metallicity models do not fit the globular clusters well, but TMJ point out that this can be explained by an anomaly in the Balmer lines that is not present in the SAURON data analysis. TMJ therefore suggest that this is an issue with the globular cluster measurements themselves. 
 
-			Following the method of \citet{McDermid2006}, we first linearly interpolate the TMJ models to a three-dimensional grid with sides of length 40 in age, metallicity and $\alpha$-enhancement. The metallicity and $\alpha$-enhancement axes are linearly sampled, while the age axis is logarithmically sampled. We then use \textsc{emcee}, a \textsc{python} package for Markov chain Monte--Carlo (MCMC) fitting, to find the most-likely SSP model, by comparing the absorption line strength indices measured (with the method described above in Section \ref{subsubsec:Absorption}) to those of the SSP models. We take the standard deviation of the positions of the walkers in the MCMC code as the uncertainty on a given index.
+			% Following the method of \citet{McDermid2006}, we first linearly interpolate the TMJ models to a three-dimensional grid with sides of length 40 in age, metallicity and $\alpha$-enhancement. The metallicity and $\alpha$-enhancement axes are linearly sampled, while the age axis is logarithmically sampled. 
+
+% Finish this off WITHOUT looking at Becky's thesis			
+			Markov chain Monte--Carlo (MCMC) fitting is useful as it allows for the efficent exploration of parameter space by avoiding regions with low probablities (high $\chi^2_\text{red}$). A large number of `walkers' are
+
+
+
+
+			We use \textsc{emcee}, a \textsc{python} package for Markov chain Monte--Carlo (MCMC) fitting \citep{Foreman-Mackey2013}, to find the most-likely SSP model, by comparing the absorption line strength indices measured (with the method described above in Section \ref{subsubsec:Absorption}) to those of the SSP models. 
+
+
+
+			\textsc{emcee} is an affine-invarinet ensemble MCMC sampler meaning that we can take the standard deviation of the positions of the walkers in the MCMC code as the uncertainty on a given index.
 
 
 			In Section \ref{sec:pop} we will use the results from this pipeline to compare the absorption line strength indices and the stellar populations of our Southern Sample radio galaxies to those of radio-quiet ETGs.

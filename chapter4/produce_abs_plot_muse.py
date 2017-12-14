@@ -102,12 +102,13 @@ def plot(galaxies, str_galaxies, file_name):
 				D.xBar, D.yBar, eval('D.'+p), header,  
 				vmin=vmin, vmax=vmax, 
 				cmap='inferno', flux_unbinned=D.unbinned_flux, 
-				signal_noise=D.SNRatio - SN_target/2., 
-				signal_noise_target=SN_target/2., 
+				# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 				ax=axs[j, 2*i])
 			if overplot:
 				for o, color in overplot.iteritems():
-					add_(o, color, axs[j,2*i], galaxy, nolegend=True)
+					scale = 'log' if o == 'radio' else 'lin'
+					add_(o, color, axs[j,2*i], galaxy, nolegend=True, 
+						scale=scale)
 			
 
 		plots = [
@@ -125,7 +126,7 @@ def plot(galaxies, str_galaxies, file_name):
 				D.xBar, D.yBar, eval('D.'+p), header,  
 				vmin=0, vmax=0.5, 
 				cmap='inferno', flux_unbinned=D.unbinned_flux, 
-				signal_noise=D.SNRatio, signal_noise_target=SN_target, 
+				# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 				ax=axs[j, 2*i+1])
 
 			
@@ -214,4 +215,4 @@ def plot(galaxies, str_galaxies, file_name):
 if __name__=='__main__':
 	plot(['ic1459', 'ic4296'], ['IC 1459', 'IC 4296'], 'abs1')
 
-	# plot(['ngc1316', 'ngc1399'], ['NGC 1316', 'NGC 1399'], 'abs2')
+	plot(['ngc1316', 'ngc1399'], ['NGC 1316', 'NGC 1399'], 'abs2')
