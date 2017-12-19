@@ -76,11 +76,12 @@ if True:
 	ax.ax_dis.xaxis.label.set_size(22)
 	ax.ax_dis.yaxis.label.set_size(22)
 
-	fig.savefig('%s/MUSE_NGC1399_vel.png' % (out_dir), bbox_inches='tight')
+	fig.savefig('%s/MUSE_NGC1399_vel.png' % (out_dir), bbox_inches='tight',
+		dpi=240)
 
 
 
-if False:
+if True:
 	Prefig(size=(10,10))
 	fig, ax = plt.subplots()#, sharex=True, sharey=True)
 	galaxy = 'ic1459'
@@ -125,5 +126,5 @@ if False:
 	ax.ax_dis.xaxis.label.set_size(22)
 	ax.ax_dis.yaxis.label.set_size(22)
 
-	fig.savefig('%s/egSNR.png' % (out_dir), bbox_inches='tight')
+	fig.savefig('%s/egSNR.png' % (out_dir), bbox_inches='tight', dpi=240)
 	plt.close()

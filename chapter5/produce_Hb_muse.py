@@ -88,7 +88,7 @@ def plot(galaxies):
 		if overplot:
 			for o, color in overplot.iteritems():
 				scale = 'log' if o == 'radio' else 'lin'
-				add_(o, color, axs[j, 2*i], galaxy, nolegend=True, scale=scale)
+				add_(o, color, axs[i], galaxy, nolegend=True, scale=scale)
 
 	for a in axs:
 		if hasattr(a, 'ax_dis'):
@@ -118,7 +118,7 @@ def plot(galaxies):
 	cbar.ax.set_yticklabels([])
 
 
-	fig.savefig('%s/Hb.png' % (out_dir), bbox_inches='tight', dpi=120)
+	fig.savefig('%s/Hb.png' % (out_dir), bbox_inches='tight', dpi=240)
 
 
 

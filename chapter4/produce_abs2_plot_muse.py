@@ -83,7 +83,7 @@ def plot(galaxies, str_galaxies, file_name):
 			"absorption_line('Fe5709')",
 			"absorption_line('Fe5782')",
 			"absorption_line('NaD')",
-			"absorption_line('TiO1')",
+			"absorption_line('TiO1',remove_badpix=True)",
 			"absorption_line('TiO2',remove_badpix=True)"
 			]
 
@@ -95,7 +95,7 @@ def plot(galaxies, str_galaxies, file_name):
 				# vmin, vmax = 0, 0.35
 				vmin, vmax = 0, 0.05
 			elif 'TiO2' in p:
-				vmin, vmax = 0, 2.
+				vmin, vmax = 0, 1.5
 			else:
 				vmin, vmax = 3, 7
 
@@ -116,7 +116,7 @@ def plot(galaxies, str_galaxies, file_name):
 			"absorption_line('Fe5709',uncert=True)[1]",
 			"absorption_line('Fe5782',uncert=True)[1]",
 			"absorption_line('NaD',uncert=True)[1]",
-			"absorption_line('TiO1',uncert=True)[1]",
+			"absorption_line('TiO1',uncert=True,remove_badpix=True)[1]",
 			"absorption_line('TiO2',uncert=True,remove_badpix=True)[1]"
 			]
 
@@ -207,7 +207,7 @@ def plot(galaxies, str_galaxies, file_name):
 	cbar.ax.set_yticklabels([])
 
 	fig.savefig('%s/%sb.png' % (out_dir, file_name), bbox_inches='tight',
-		dpi=60)
+		dpi=200)
 
 
 

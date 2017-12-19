@@ -14,7 +14,7 @@ from plot_results import set_lims
 
 def plot(galaxies, str_galaxies):
 	opt = 'pop'
-	overplot={'CO':'c', 'radio':'r'}
+	overplot={'CO':'c', 'radio':'g'}
 	Prefig(size=np.array((4, 3))*10)
 	fig, axs = plt.subplots(3, 4)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter5/vimos' % (cc.home_dir)
@@ -88,7 +88,9 @@ def plot(galaxies, str_galaxies):
 				galaxy=str_galaxies[j], ax=axs.flatten()[i])
 			if overplot:
 				for o, color in overplot.iteritems():
-					add_(o, color, axs.flatten()[i], galaxy, nolegend=True)
+					scale = 'log' if o == 'radio' else 'lin'
+					add_(o, color, axs.flatten()[i], galaxy, nolegend=True, 
+						scale=scale)
 		else:
 			pass
 
@@ -153,7 +155,7 @@ def plot(galaxies, str_galaxies):
 
 
 
-	fig.savefig('%s/Hb.png' % (out_dir), bbox_inches='tight', dpi=120)
+	fig.savefig('%s/Hb.png' % (out_dir), bbox_inches='tight', dpi=240)
 
 
 

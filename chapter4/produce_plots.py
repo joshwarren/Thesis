@@ -217,7 +217,7 @@ def plot(galaxies, str_galaxies, file_name):
 
 	# plt.show()
 	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
-		dpi=60)
+		dpi=200)
 
 
 

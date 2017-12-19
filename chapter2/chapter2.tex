@@ -79,8 +79,8 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 		\end{tabular}
 			\begin{tablenotes}
 			\footnotesize
-			\note Col.\,1: Galaxy name. Col.\,2: Observation block (OB) number. Col.\,3: Date of observation. Col.\,4: Average differential image motion monitor(DIMM) during OB. Col.\,5: Inital seeing. Col\,6: Final seeing. Col\.7: Average airmass during OB.
-			\item [a] Failed eeing reading at both start and end of first exposure for ESO 443-G24, OB 3 
+			\note Col.\,1: Galaxy name. Col.\,2: Observation block (OB) number. Col.\,3: Date of observation. Col.\,4: Average differential image motion monitor(DIMM) during OB. Col.\,5: Initial seeing. Col\,6: Final seeing. Col\.7: Average airmass during OB.
+			\item [a] Failed seeing reading at both start and end of first exposure for ESO 443-G24, OB 3 
 			\item [b] Failed seeing reading at start of first exposure for PKS 718-34, OB 2. Seeing from end of exposure quoted instead. 
 			\end{tablenotes}
 		\end{threeparttable}
@@ -110,7 +110,9 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 
 		Following this, we noted that the cubes where still not properly calibrated. Three main issues remain: the quadrants have different intensities, clearly showing uncorrected throughput differences; diagonal intensity stripes are present in the reconstructed images at all wavelengths; and spectral features are observed \citep{Jullo2008} that are visually similar to fringe patterns caused by interference within the CCD between incident light and light reflected from the interfaces between layers of the CCD materials. Given the thickness of the CCD layers, such fringes should only be observed at $>7000$\,\AA, however they can be seen at all wavelengths, suggesting a different origin. \citet{Lagerholm2012} notes that they appear to be due to altitude angle and hysteresis-dependent reflections occurring within the fibres. We refer to these features hereafter as fringe-like patterns. The first two of these issues are illustrated in the top-left panel of Fig.\,\ref{fig:Correction}. \citet{Lagerholm2012} pointed out that the intensity stripes do not seem to be bound by the quadrants, and concluded that they therefore probably originate from an unknown data-reduction pipeline problem. They however made use of the data-reduction pipeline supplied by ESO\footnote{\url{http://www.eso.org/sci/software/pipelines/vimos/}}, while we use \textsc{Py3D} and also observe the intensity stripes, suggesting that the specific pipeline may not be the cause.  
 
-		These issues were corrected by implementing a \textsc{python} version of the ad-hoc corrections given in \citet{Lagerholm2012}. This involves re-normalizing the quadrants to each other by finding the multiplicative factor for each quadrant which minimizes the differences of the integrated spectra of neighbouring fibres across the edges of neighbouring quadrants (quadrant 2 is held constant). This is followed by the removal of the fringe-like pattern by constructing a correction spectrum by dividing the spectrum of a given fibre by the median spectrum from the eight fibres spatially surrounding it and smoothing over a scale of 150 pixels in the dispersion direction. Each spectrum of the original datacube is then divided by the corresponding correction spectrum (example shown for a single spaxel in NGC 3100 in the bottom panel of Fig.\,\ref{fig:Correction}). The top two panels of Fig.\,\ref{fig:Correction} show the reconstructed images (where the datacube is collapsed in the spectral direction) of NGC 3557 before and after these corrections are applied. These additional steps mean that the datacubes are not perfectly flux-calibrated, but all the corrections are multiplicative and thus will not effect equivalent width measurements. From comparisons to the MUSE data (see Section \ref{sec:MUSE}), we can then estimate the flux calibration of the resulting datacubes. 
+		These issues were corrected by implementing a \textsc{python} version of the ad-hoc corrections given in \citet{Lagerholm2012}. This involves re-normalizing the quadrants to each other by finding the multiplicative factor for each quadrant which minimizes the differences of the integrated spectra of neighbouring fibres across the edges of neighbouring quadrants (quadrant 2 is held constant). This is followed by the removal of the fringe-like pattern by constructing a correction spectrum by dividing the spectrum of a given fibre by the median spectrum from the eight fibres spatially surrounding it and smoothing over a scale of 150 pixels in the dispersion direction. Each spectrum of the original datacube is then divided by the corresponding correction spectrum (example shown for a single spaxel in NGC 3100 in the bottom panel of Fig.\,\ref{fig:Correction}). The diagonal stripes are not addressed, however the top two panels of Fig.\,\ref{fig:Correction}, which show the reconstructed images (where the datacube is collapsed in the spectral direction) of NGC 3557 before and after these corrections are applied, shows that their impact is significantly lessened by these corrections. This suggests that they may have some connection to the fringe-like patterns. 
+
+		These additional steps mean that the datacubes are not perfectly flux-calibrated, but all the corrections are multiplicative and thus will not effect equivalent width measurements. From comparisons to the MUSE data (see Section \ref{sec:MUSE}), we can then estimate the flux calibration of the resulting datacubes. 
 
 		The variance spectra are propagated throughout the data-reduction pipeline (including these ad-hoc corrections) and are square-rooted at this point, to be used as noise inputs in the following analyses (see Section \ref{sec:analysis}).
 
@@ -332,7 +334,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 
 		\subsubsection{Stellar Population Models}
 			\label{subsubsec:StellarPop}
-			The final step of the data analysis pipeline is to find the best-fit SSP model of a given spectrum. Sets of SSP models consist of a grid of models characterised by stellar properties such as age ($t$), metallicity ($[Fe/H]$) and alpha-element enhancement ($[\alpha/Fe]$). Here, we first provide a generic overview of the process of generating synthetic stellar population models, and then detail the specific of the models adopted. 
+			The final step of the data analysis pipeline is to find the best-fit SSP model of a given spectrum. Sets of SSP models consist of a grid of models characterised by stellar properties such as age ($t$), metallicity ([Fe/H]) and alpha-element enhancement ([$\alpha$/Fe]). Here, we first provide a generic overview of the process of generating synthetic stellar population models, and then detail the specific of the models adopted. 
 
 			Synthetic SSPs are created using the following components:
 			\begin{itemize}
@@ -355,7 +357,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 
 			The response functions of \citet{Korn2005} extend the work of \citet{Tripicco1995}, who investigated the response functions of the original 21 Lick indices when the individual element abundance fractions are varied for a 5 Gyr old SSP at solar metallicity. The new functions include varying metallicities as well as individual element fractions, and are calculated for all 25 Lick indices. The effect of age on these response functions was tested by computing them for 1 Gyr models and comparing them to the 5 Gyr models of \citet{Tripicco1995}. \citet{Korn2005} found a 1\% difference for two indices (G4300 and Fe4383) and significantly smaller differences for all other indices, thus concluding that age does not significantly affect the response functions.
 
-			Finally, individual element abundances are combined to calculate the alpha-element enhancement parameter $[\alpha/Fe]$. This is done following \citet{Trager2000}, who grouped the elements into three categories: 
+			Finally, individual element abundances are combined to calculate the alpha-element enhancement parameter [$\alpha$/Fe]. This is done following \citet{Trager2000}, who grouped the elements into three categories: 
 			\begin{itemize}
 				\item enhanced elements, including C, N, O, Na, Mg, Si, Ca and Ti (i.e.\ $\alpha$ and light elements); 
 				\item depressed elements, including Cr and Fe (i.e.\ iron peak elements); and
@@ -363,23 +365,12 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 			\end{itemize}
 			The fixed-element group elements are held at solar abundances, while the enhanced-(depressed-)element group elements are scaled up (down) by the same factor. 
 
-			The TMJ models return absorption line strength indices for a 3 dimensional grid ($t$, $[Z/H]$, $[\alpha/Fe]$) with $t$ = 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 and 15 Gyr; $[Z/H]$ = -2.25, -1.35, -0.33, 0.0, 0.35 and 0.67; and $[\alpha/Fe]$ = -0.3, 0.0, 0.3 and 0.5.
+			The TMJ models return absorption line strength indices for a 3 dimensional grid ($t$, $[Z/H]$, [$\alpha$/Fe]) with $t$ = 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 and 15 Gyr; $[Z/H]$ = -2.25, -1.35, -0.33, 0.0, 0.35 and 0.67; and [$\alpha$/Fe] = -0.3, 0.0, 0.3 and 0.5.
 
 			TMJ showed that their models produce  good fits to globular cluster measurements of \citet{Puzia2002} and \citet{Schiavon2005} and the galaxy measurements of the SAURON team by \citet{Kuntschner2010}. \citet{Conroy2010} suggest that the stellar evolutionary tracks of \citet{Girardi2000} used for the high-metallicity models do not fit the globular clusters well, but TMJ point out that this can be explained by an anomaly in the Balmer lines that is not present in the SAURON data analysis. TMJ therefore suggest that this is an issue with the globular cluster measurements themselves. 
 
 			% Following the method of \citet{McDermid2006}, we first linearly interpolate the TMJ models to a three-dimensional grid with sides of length 40 in age, metallicity and $\alpha$-enhancement. The metallicity and $\alpha$-enhancement axes are linearly sampled, while the age axis is logarithmically sampled. 
 
-% Finish this off WITHOUT looking at Becky's thesis			
-			Markov chain Monte--Carlo (MCMC) fitting is useful as it allows for the efficent exploration of parameter space by avoiding regions with low probablities (high $\chi^2_\text{red}$). A large number of `walkers' are
-
-
-
-
-			We use \textsc{emcee}, a \textsc{python} package for Markov chain Monte--Carlo (MCMC) fitting \citep{Foreman-Mackey2013}, to find the most-likely SSP model, by comparing the absorption line strength indices measured (with the method described above in Section \ref{subsubsec:Absorption}) to those of the SSP models. 
-
-
-
-			\textsc{emcee} is an affine-invarinet ensemble MCMC sampler meaning that we can take the standard deviation of the positions of the walkers in the MCMC code as the uncertainty on a given index.
-
+			Markov chain Monte--Carlo (MCMC) fitting is useful as it allows for the efficient exploration of parameter space by avoiding regions with low probabilities (high $\chi^2_\text{red}$). A large number of `walkers' are placed at an initial position (the hypothesis). In each iteration, each walker moves a random distance in a random direction. For a given walker, if the probability is higher at its new location it accepts the move, otherwise it is rejected and the walker remains in its initial position. In this thesis we choose to use \textsc{emcee}, a \textsc{python} MCMC fitting  package \citep{Foreman-Mackey2013}. \textsc{emcee} is an ensemble MCMC sampler, meaning that the steps taken by each walker are influenced by the position of all the other walkers. This allows for a quicker convergence on the most-likely result. We use the MCMC method to find the most-likely SSP model, by comparing the absorption line strength indices measured (with the method described above in Section \ref{subsubsec:Absorption}) to those of the SSP models. \textsc{emcee} is an affine-invariant ensemble MCMC sampler meaning that we can take the standard deviation of the positions of the walkers in the MCMC code as the uncertainty on the most-likely stellar population.
 
 			In Section \ref{sec:pop} we will use the results from this pipeline to compare the absorption line strength indices and the stellar populations of our Southern Sample radio galaxies to those of radio-quiet ETGs.

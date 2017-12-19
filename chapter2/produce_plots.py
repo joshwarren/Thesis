@@ -19,7 +19,7 @@ opt = 'kin'
 out_dir = '%s/Documents/thesis/chapter2' % (cc.home_dir)
 
 
-if True:
+if False:
 	Prefig(size=(8,8))
 	fig, ax = plt.subplots()#, sharex=True, sharey=True)
 
@@ -74,7 +74,7 @@ if True:
 	ax.ax_dis.yaxis.label.set_size(22)
 
 	fig.savefig('%s/VIMOS_NGC1399_vel.png' % (out_dir), bbox_inches='tight',
-		dpi=120)
+		dpi=240)
 	plt.close()
 
 
@@ -82,7 +82,7 @@ if True:
 
 
 
-if False:
+if True:
 	Prefig(size=(20,10))
 	fig, ax = plt.subplots(1,2)
 	from Bin import Data
@@ -102,7 +102,8 @@ if False:
 	D.components_no_mask['stellar'].setkin('vel', vel)
 
 	f = fits.open('/mnt/x/Data/vimosindi/reduced/ngc1399/cube/VIMOS'
-		+'.2012-07-27T08-49-07.769_crcl_oextr1_fluxcal_vmcmb_cor_cexp_cube.fits')
+		+'.2012-07-27T08-49-07.769_crcl_oextr1_fluxcal_vmcmb_cor_cexp_'
+		+'cube.fits')
 	header=f[1].header
 
 	vmin_vel, vmax_vel = set_lims(D.components['stellar'].plot['vel'],
@@ -141,6 +142,6 @@ if False:
 	# _new added to file name so that photoshoped version is not accidentally 
 	# overwritten
 	fig.savefig('%s/P3D_NGC1399_new.png' % (out_dir), bbox_inches='tight',
-		dpi=120)
+		dpi=240)
 
 

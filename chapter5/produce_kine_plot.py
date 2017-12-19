@@ -123,7 +123,7 @@ def plot(galaxies, str_galaxies, file_name, instrument):
 		if overplot:
 			for o, color in overplot.iteritems():
 				scale = 'log' if o == 'radio' else 'lin'
-				add_(o, color, axs[j, 2*i], galaxy, nolegend=True, 
+				add_(o, color, axs[i, 0], galaxy, nolegend=True, 
 					scale=scale)
 
 
@@ -144,7 +144,7 @@ def plot(galaxies, str_galaxies, file_name, instrument):
 		if overplot:
 			for o, color in overplot.iteritems():
 				scale = 'log' if o == 'radio' else 'lin'
-				add_(o, color, axs[j, 2*i], galaxy, nolegend=True, 
+				add_(o, color, axs[i, 2], galaxy, nolegend=True, 
 					scale=scale)
 
 		axs[i,3] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar,
@@ -212,7 +212,7 @@ def plot(galaxies, str_galaxies, file_name, instrument):
 
 	# plt.show()
 	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
-		dpi=60)
+		dpi=240)
 
 def ngc1316_inflow():
 	galaxy = 'ngc1316'
@@ -254,9 +254,9 @@ def ngc1316_inflow():
 		colorbar=False, ax=ax[2])
 
 	for a in ax:
-		for o, c in {'radio':'g','CO':'c'}.iteritems():
+		for o, color in {'radio':'g','CO':'c'}.iteritems():
 			scale = 'log' if o == 'radio' else 'lin'
-			add_(o, color, axs[j, 2*i], galaxy, nolegend=True, 
+			add_(o, color, ax[2], galaxy, nolegend=True, 
 				scale=scale)
 
 	# Decrease gap between maps
@@ -288,7 +288,7 @@ def ngc1316_inflow():
 		rotation=270, verticalalignment='center')
 	
 	fig.savefig('%s/Documents/thesis/chapter5/ngc1316_inflow.png' % (
-		cc.home_dir), dpi=100)
+		cc.home_dir), dpi=240)
 
 
 
@@ -453,7 +453,7 @@ def BPT():
 
 	saveTo = '%s/Documents/thesis/chapter5/BPT.png' % (cc.home_dir)		
 	fig.subplots_adjust(wspace=0,hspace=0)
-	fig.savefig(saveTo, dpi=120)
+	fig.savefig(saveTo, dpi=240)
 	plt.close()
 
 
@@ -526,7 +526,7 @@ def SAURON():
 	ax.set_ylim([-1.5, 1.5])
 
 
-	fig.savefig('%s/Documents/thesis/chapter5/SAURON.png' % (cc.home_dir))
+	fig.savefig('%s/Documents/thesis/chapter5/SAURON.png' % (cc.home_dir), dpi=240)
 
 
 
@@ -586,7 +586,7 @@ def WHbN1():
 	ax.text(-0.95, 0.1, 'Weak AGN')
 	ax.text(-1.65, -0.2,'Retired Galaxies')
 
-	fig.savefig('%s/Documents/thesis/chapter5/WHbN1.png' % (cc.home_dir))
+	fig.savefig('%s/Documents/thesis/chapter5/WHbN1.png' % (cc.home_dir), dpi=240)
 
 
 
@@ -645,7 +645,7 @@ def ic4296_WHaN2():
 	ax.text(-0.3, 0.65, 'Weak AGN')
 	ax.text(-0.95, 0.3,'Retired Galaxies')
 
-	fig.savefig('%s/Documents/thesis/chapter5/WHaN2.png' % (cc.home_dir))
+	fig.savefig('%s/Documents/thesis/chapter5/WHaN2.png' % (cc.home_dir), dpi=240)
 
 
 
@@ -736,7 +736,7 @@ def H_profile(instrument='vimos'):
 
 	fig.subplots_adjust(wspace=0,hspace=0)
 	fig.savefig('%s/Documents/thesis/chapter5/%s/%s_profile.png' % (
-		cc.home_dir, instrument, line))
+		cc.home_dir, instrument, line), dpi=240)
 	plt.close(fig)
 	
 
@@ -746,19 +746,19 @@ if __name__=='__main__':
 	if 'home' in cc.device:
 		H_profile(instrument='vimos')
 
-		# WHbN1()
+		WHbN1()
 		
-		# SAURON()
+		SAURON()
 
-		# plot(['ic1459', 'ngc0612', 'ngc3100'], 
-		# 	['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
+		plot(['ic1459', 'ngc0612', 'ngc3100'], 
+			['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
 	elif cc.device == 'uni':
-		# ic4296_WHaN2()
+		ic4296_WHaN2()
 
-		# H_profile(instrument='muse')
+		H_profile(instrument='muse')
 
 		ngc1316_inflow()
 
-		# BPT()
+		BPT()
 
 		plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')
