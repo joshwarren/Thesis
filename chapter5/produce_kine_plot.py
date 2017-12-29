@@ -220,8 +220,9 @@ def ngc1316_inflow():
 	instrument = 'muse'
 	from plot_results_muse import add_
 	from errors2_muse import get_dataCubeDirectory
+	import disk_fit_functions_binned as dfn
 
-	Prefig(size=np.array((3.5, 1))*7)
+	Prefig(size=np.array((3.5, 1))*5.5)
 	fig, ax = plt.subplots(1,3)
 
 	f = fits.open(get_dataCubeDirectory(galaxy))
@@ -237,21 +238,27 @@ def ngc1316_inflow():
 	D = pickle.load(pickleFile)
 	pickleFile.close()
 
+	vel = D.components['[OIII]5007d'].plot['vel']
+	m = ~np.isnan(vel)
+
+	d, params = dfn.disk_fit_exp(D.xBar[m], D.yBar[m], np.array(vel).copy()[m], 
+		vel.uncert.copy()[m], sigclip=5.0, leeway=0., verbose=False, grid_length=150)
+	d *= -1 # Seems to be slight quirk of the system.
+	params[5:] *= -1
+	disc = vel.copy() # reinsert nans
+	disc[m] = d
+
 	vmin, vmax = set_lims(D.components['[OIII]5007d'].plot['vel'], 
 		symmetric=True, positive=False)
 	ax[0] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, D.yBar, 
-		D.components['[OIII]5007d'].plot['vel'], header, vmin=vmin, 
-		vmax=vmax, nodots=True, flux_unbinned=D.unbinned_flux,
+		vel, header, vmin=vmin, max=vmax, nodots=True, flux_unbinned=D.unbinned_flux,
 		colorbar=False, ax=ax[0])
 	ax[1] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, D.yBar, 
-		D.components['stellar'].plot['vel'], header, vmin=vmin, 
-		vmax=vmax, nodots=True, flux_unbinned=D.unbinned_flux,
-		colorbar=False, ax=ax[1])
+		disc, header, vmin=vmin, vmax=vmax, nodots=True, 
+		flux_unbinned=D.unbinned_flux, colorbar=False, ax=ax[1])
 	ax[2] = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, D.yBar, 
-		D.components['[OIII]5007d'].plot['vel'] 
-		- D.components['stellar'].plot['vel'], header, vmin=vmin, 
-		vmax=vmax, nodots=True, flux_unbinned=D.unbinned_flux,
-		colorbar=False, ax=ax[2])
+		vel - disc, header, vmin=vmin, vmax=vmax, nodots=True, 
+		flux_unbinned=D.unbinned_flux, colorbar=False, ax=ax[2])
 
 	for a in ax:
 		for o, color in {'radio':'g','CO':'c'}.iteritems():
@@ -270,8 +277,8 @@ def ngc1316_inflow():
 			if hasattr(a, 'ax_dis'):
 				a.ax_dis.set_position(ax_loc)
 
-	for i, t in enumerate([r'$V_\mathrm{gas}$', r'$V_\mathrm{stars}$', 
-		r'$V_\mathrm{residuals} = V_\mathrm{gas} - V_\mathrm{stars}$']):
+	for i, t in enumerate([r'$V_\mathrm{gas}$', r'$V_\mathrm{model}$', 
+		r'$V_\mathrm{residuals} = V_\mathrm{gas} - V_\mathrm{model}$']):
 		fig.text(ax[i].ax_dis.get_position().x0+0.02, 
 			ax[i].ax_dis.get_position().y1-0.03, t, va='top')
 
@@ -288,7 +295,7 @@ def ngc1316_inflow():
 		rotation=270, verticalalignment='center')
 	
 	fig.savefig('%s/Documents/thesis/chapter5/ngc1316_inflow.png' % (
-		cc.home_dir), dpi=240)
+		cc.home_dir), dpi=300)
 
 
 
@@ -657,11 +664,13 @@ def H_profile(instrument='vimos'):
 		str_galaxies = np.array(['IC 1459', 'NGC 612', 'NGC 3100'])
 		cols = (4, 5)
 		line = 'Hbeta'
+		res = 0.67 # arcsec/pix
 	elif instrument=='muse':
 		galaxies = np.array(['ic1459', 'ngc1316'])
 		str_galaxies = np.array(['IC 1459', 'NGC 1316'])
 		cols = (1, 2)
 		line = 'Halpha'
+		res = 0.2 # arcsec/pix
 
 	Prefig(size=np.array((len(galaxies), 1))*7)
 	fig, ax = plt.subplots(1, len(galaxies), sharey=True)#, sharex=True)
@@ -685,7 +694,7 @@ def H_profile(instrument='vimos'):
 		i_gal = np.where(galaxy_gals==galaxy)[0][0]
 		center = (x_cent_gals[i_gal], y_cent_gals[i_gal])
 
-		r = np.sqrt((D.xBar - center[0])**2 + (D.yBar - center[1])**2)
+		r = np.sqrt((D.xBar - center[0])**2 + (D.yBar - center[1])**2) * res
 		if line in D.e_components:
 
 			H = D.e_line[line].flux
@@ -729,7 +738,7 @@ def H_profile(instrument='vimos'):
 	if instrument == 'muse':
 		ax[0].set_ylabel(r'H$\,\alpha$ normalised flux')
 	for a in ax:
-		a.set_xlabel('Radius (pixels)')
+		a.set_xlabel('Radius (arcsec)')
 	# for a in ax[1:].flatten():
 	# 	a.set_yticklabels([])
 	# 	a.set_ylabel('')
@@ -746,19 +755,19 @@ if __name__=='__main__':
 	if 'home' in cc.device:
 		H_profile(instrument='vimos')
 
-		WHbN1()
+		# WHbN1()
 		
-		SAURON()
+		# SAURON()
 
-		plot(['ic1459', 'ngc0612', 'ngc3100'], 
-			['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
+		# plot(['ic1459', 'ngc0612', 'ngc3100'], 
+		# 	['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
 	elif cc.device == 'uni':
-		ic4296_WHaN2()
+		# ic4296_WHaN2()
 
-		H_profile(instrument='muse')
+		# H_profile(instrument='muse')
 
 		ngc1316_inflow()
 
-		BPT()
+		# BPT()
 
-		plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')
+		# plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')

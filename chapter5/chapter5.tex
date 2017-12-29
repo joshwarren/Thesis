@@ -175,46 +175,64 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 	% \subsection{Using Emission Line Beyond the VIMOS Wavelength Range}
 	\subsection{Extrapolating VIMOS Data}
 		\label{subsec:Ndec}
-
-		The Balmer decrement, $d_\mathrm{H}$, is the ratio of the H$\alpha$ to H$\beta$ fluxes. There are good theoretical motivations for this ratio to be near constant at $d_\mathrm{H} = 2.86$, under a wide variety of conditions. In reality, however, higher values are routinely observed. These can be explained as due to either the presence of dust causing extinction (whereby emission lines at shorter wavelengths appear dimmer than expected from their redder counterparts due to dust preferentially scattering and absorbing bluer light) or some mechanism that populates hydrogen levels from the ground up. Such mechanisms may be important in high-density environments, such as within powerful (type 1) AGN \citep[e.g.][]{Shields1974, Netzer1975}. 
-		%
-		The majority ($\approx 60$\%) of ETGs and all LINER and Seyfert galaxies are dusty \citep[e.g.][]{Martini2013}. 
-		Such galaxies reveal clear dust lanes in \textit{Hubble Space Telescope (HST)} observations \citep[e.g.][]{Martini2013}, are bright in the infrared (where the thermal emission from dust is seen as a dust ``bump''; e.g.\ \citealt{Jura1987, Knapp1992}), and possess other emission lines \citep[e.g.\ \bracket{\ion{S}{ii}};][]{Wampler1968} showing similar reddening. Thus, assuming the observed steepening of the Balmer decrement is entirely due to dust, the ratio of the observed decrement to the theoretical value of 2.86 is a good estimate of the dust reddening.
-
-		If we assume that different ionization states of a given atom occur in the same spatial location, then shielding is not important or at least is not non-linear in its effect on the emission-line ratios. Given that the different species are then produced under the same conditions, it is natural to expect a simple relationship between them. Using the emission line fluxes derived from our MUSE data, we find that the relationship between [\ion{N}{ii}] flux and [\ion{N}{i}] flux is approximately linear (see Fig.\,\ref{fig:NII_NI}). We emphasize that this is a purely empirical correlation and thus differs substantially from the Balmer decrement with its strong theoretical basis. 
-
-% I actually work with luminosity - how will that effect things?
-		To find the intrinsic conversion from [\ion{N}{i}] flux to [\ion{N}{ii}] flux we must first correct for dust reddening. Assuming that the extinction can be approximated by a linear form in the $V$-band, we correct the flux of the bluer emission line of the pair $F_\mathrm{b}$, using
-		\begin{equation}
-			F^\mathrm{corr}_\mathrm{b} = F_\mathrm{b} \left(\frac{\Delta\lambda}{\lambda_\mathrm{H\alpha} - \lambda_\mathrm{H\beta}}\right) \left(\frac{F_\mathrm{H\alpha}}{2.86 F_\mathrm{H\beta}}\right) \, ,
-		\end{equation}
-		where $\Delta\lambda$ is the difference in wavelength between the two lines, $\lambda_\mathrm{H\alpha}$ and $\lambda_\mathrm{H\beta}$ are the rest-frame wavelengths of the H$\alpha$ (6563 \AA) and H$\beta$ (4861 \AA) emission lines with fluxes of $F_\mathrm{H\alpha}$ and $F_\mathrm{H\beta}$, respectively and $F^\mathrm{corr}_\mathrm{b}$ is the dust-corrected flux of the bluer line. The intrinsic conversion can then be found by comparing $F^\mathrm{corr}_\mathrm{b}$ to $F_\mathrm{r}$, the flux of the redder line in the pair. 
-
-		In Fig.\,\ref{fig:NII_NI}, we fit a straight line to the [\ion{N}{ii}] flux versus [\ion{N}{i}] (flux corrected for dust extinction) relation of IC 1459 and NGC 1316 using the least-trimmed squares routine, \textsc{lts\_linefit} of \citet{Cappellari2013} due to its robust handling of the uncertainties along both axes. 
-% THIS NEEDS SOME WORK!!!  *****^^^^^^^^^
-		As can be seen in the figure, there two galaxies have quite different gradients. We require a single function in order to be able to use [\ion{N}{i}] as a proxy for [\ion{N}{ii}] for our VIMOS data. We thus fit each galaxy independently and use the mean gradient, neglecting the intercept. We find a mean gradient of $12.23 \pm 0.14$.
+		As stated above, most of the diagnostic plots for identifying the dominant source of ionization in a given galaxy require measurements of emissions line that lie outside of the spectral range of VIMOS. As such, to be able to classify our VIMOS data in this way we transform the classification boundary lines to plots involving the same atoms, but different ionization species e.g.\ 
+		% Is species the right word?
+		transform from the classic BPT [\ion{N}{ii}]/H$\alpha$ versus [\ion{O}{iii}]/H$\beta$ to [\ion{N}{i}]/H$\beta$ versus [\ion{O}{iii}]/H$\beta$ diagnostic plot (hereafter the SAURON diagnostic plot). 
 
 		\begin{figure}
 			\centering
-			\includegraphics[width=0.7\textwidth]{chapter5/NII_NI_ratio.png}
-			\caption[The nitrogen `decrement']{Nitrogen `decrement': plot of the [\ion{N}{ii}] versus [\ion{N}{i}] flux for the galaxies IC 1459 and NGC 1316, used to transform the classification boundaries of line ratio diagnostics involving [\ion{N}{ii}] to those involving [\ion{N}{i}]. The line fluxes have been corrected for the galaxies' distances.} 
-			\label{fig:NII_NI}
+			\includegraphics[width=0.7\textwidth]{chapter5/ratio_fit.png}
+			\caption[\brackets{\ion{N}{ii}}/H$\alpha$ vs \brackets{\ion{N}{i}}/H$\beta$]{Comparing [\ion{N}{ii}]/H$\alpha$ and [\ion{N}{i}]/H$\beta$ line ratios for the galaxies IC 1459 and NGC 1316, used to transform the classification boundaries of diagnostics involving the H$\alpha$ equivalent width to those involving H$\beta$.} 
+			\label{fig:ratio_relation}
 		\end{figure}
-
-		% Some of the brightest bins in Figs.\,\ref{fig:NII_NI} and \ref{figLOI_OIII} deviate away from the best-fitting line, with an excess in the bluer line. Given that these bins are located at the centre of the galaxy, we suggest that we are possibly over correcting for dust in these regions and that some of the reddening for the Balmer decrement is actually due to the different conditions close to the AGN. 
-
-		To use the H$\beta$ equivalent width instead of the H$\alpha$ equivalent width, we require not only the Balmer decrement, but also the stellar `decrement', i.e.\ the ratio of the continuum level at H$\alpha$ to that at H$\beta$. In the same manner as we did for the Nitrogen `decrement', we find in Fig.\,\ref{fig:stellarDec} an approximately linear relationship between the continuum level at 6563\,\AA, $C_\text{6563\AA}$, and the continuum level corrected for dust extinction at 4861\,\AA, $C^\text{corr}_\text{4861\AA}$, using our MUSE data of IC 1459 and NGC 1316. Using the data shown in Fig.\,\ref{fig:stellarDec}, we find
-		\begin{equation}
-			C_\text{6563\AA} = \,  (0.142\pm0.004757) \times 10^{-6} + (1.047\pm0.008) C^\text{corr}_\text{4861\AA} \, .
-		\end{equation}
-		This is used to be transform the classification boundaries of diagnostics dependent on the equivalent width of H$\alpha$ to those involving H$\beta$. 
 
 		\begin{figure}
 			\centering
-			\includegraphics[width=0.7\textwidth]{chapter5/stellar_ratio.png}
-			\caption[The stellar `decrement']{Stellar `decrement'. Plot of the continuum flux at H$\alpha$ versus the continuum flux at H$\beta$ for the galaxies IC 1459 and NGC 1316, used to transform the classification boundaries of diagnostics involving the H$\alpha$ equivalent width to those involving H$\beta$. As in Fig.\,\ref{fig:NII_NI}m the fluxes have been corrected for the galaxies' distances.} 
-			\label{fig:stellarDec}
+			\includegraphics[width=0.7\textwidth]{chapter5/EQw_fit.png}
+			\caption[Comparing H$\alpha$ and H$\beta$ equivalent widths]{Comparing H$\alpha$ and H$\beta$ equivalent widths for the galaxies IC 1459 and NGC 1316. The best-fit relationship is used to transform the classification boundaries of the classic [\ion{N}{ii}] BPT plot to the SARUON diagnostic plot.} 
+			\label{fig:ratio_relation}
 		\end{figure}
+
+% 		The Balmer decrement, $d_\mathrm{H}$, is the ratio of the H$\alpha$ to H$\beta$ fluxes. There are good theoretical motivations for this ratio to be near constant at $d_\mathrm{H} = 2.86$, under a wide variety of conditions. In reality, however, higher values are routinely observed. These can be explained as due to either the presence of dust causing extinction (whereby emission lines at shorter wavelengths appear dimmer than expected from their redder counterparts due to dust preferentially scattering and absorbing bluer light) or some mechanism that populates hydrogen levels from the ground up. Such mechanisms may be important in high-density environments, such as within powerful (type 1) AGN \citep[e.g.][]{Shields1974, Netzer1975}. 
+% 		%
+% 		The majority ($\approx 60$\%) of ETGs and all LINER and Seyfert galaxies are dusty \citep[e.g.][]{Martini2013}. 
+% 		Such galaxies reveal clear dust lanes in \textit{Hubble Space Telescope (HST)} observations \citep[e.g.][]{Martini2013}, are bright in the infrared (where the thermal emission from dust is seen as a dust ``bump''; e.g.\ \citealt{Jura1987, Knapp1992}), and possess other emission lines \citep[e.g.\ \bracket{\ion{S}{ii}};][]{Wampler1968} showing similar reddening. Thus, assuming the observed steepening of the Balmer decrement is entirely due to dust, the ratio of the observed decrement to the theoretical value of 2.86 is a good estimate of the dust reddening.
+
+% 		If we assume that different ionization states of a given atom occur in the same spatial location, then shielding is not important or at least is not non-linear in its effect on the emission-line ratios. Given that the different species are then produced under the same conditions, it is natural to expect a simple relationship between them. Using the emission line fluxes derived from our MUSE data, we find that the relationship between [\ion{N}{ii}] flux and [\ion{N}{i}] flux is approximately linear (see Fig.\,\ref{fig:NII_NI}). We emphasize that this is a purely empirical correlation and thus differs substantially from the Balmer decrement with its strong theoretical basis. 
+
+% % I actually work with luminosity - how will that effect things?
+% 		To find the intrinsic conversion from [\ion{N}{i}] flux to [\ion{N}{ii}] flux we must first correct for dust reddening. Assuming that the extinction can be approximated by a linear form in the $V$-band, we correct the flux of the bluer emission line of the pair $F_\mathrm{b}$, using
+% 		\begin{equation}
+% 			F^\mathrm{corr}_\mathrm{b} = F_\mathrm{b} \left(\frac{\Delta\lambda}{\lambda_\mathrm{H\alpha} - \lambda_\mathrm{H\beta}}\right) \left(\frac{F_\mathrm{H\alpha}}{2.86 F_\mathrm{H\beta}}\right) \, ,
+% 		\end{equation}
+% 		where $\Delta\lambda$ is the difference in wavelength between the two lines, $\lambda_\mathrm{H\alpha}$ and $\lambda_\mathrm{H\beta}$ are the rest-frame wavelengths of the H$\alpha$ (6563 \AA) and H$\beta$ (4861 \AA) emission lines with fluxes of $F_\mathrm{H\alpha}$ and $F_\mathrm{H\beta}$, respectively and $F^\mathrm{corr}_\mathrm{b}$ is the dust-corrected flux of the bluer line. The intrinsic conversion can then be found by comparing $F^\mathrm{corr}_\mathrm{b}$ to $F_\mathrm{r}$, the flux of the redder line in the pair. 
+
+% 		In Fig.\,\ref{fig:NII_NI}, we fit a straight line to the [\ion{N}{ii}] flux versus [\ion{N}{i}] (flux corrected for dust extinction) relation of IC 1459 and NGC 1316 using the least-trimmed squares routine, \textsc{lts\_linefit} of \citet{Cappellari2013} due to its robust handling of the uncertainties along both axes. 
+% % THIS NEEDS SOME WORK!!!  *****^^^^^^^^^
+% 		As can be seen in the figure, there two galaxies have quite different gradients. We require a single function to be able to use [\ion{N}{i}] as a proxy for [\ion{N}{ii}] for our VIMOS data. We thus fit each galaxy independently and use the mean gradient, neglecting the intercept. We find a mean gradient of $12.23 \pm 0.14$.
+
+% 		\begin{figure}
+% 			\centering
+% 			\includegraphics[width=0.7\textwidth]{chapter5/NII_NI_ratio.png}
+% 			\caption[The nitrogen `decrement']{Nitrogen `decrement': plot of the [\ion{N}{ii}] versus [\ion{N}{i}] flux for the galaxies IC 1459 and NGC 1316, used to transform the classification boundaries of line ratio diagnostics involving [\ion{N}{ii}] to those involving [\ion{N}{i}]. The line fluxes have been corrected for the galaxies' distances.} 
+% 			\label{fig:NII_NI}
+% 		\end{figure}
+
+% 		% Some of the brightest bins in Figs.\,\ref{fig:NII_NI} and \ref{figLOI_OIII} deviate away from the best-fitting line, with an excess in the bluer line. Given that these bins are located at the centre of the galaxy, we suggest that we are possibly over correcting for dust in these regions and that some of the reddening for the Balmer decrement is actually due to the different conditions close to the AGN. 
+
+% 		To use the H$\beta$ equivalent width instead of the H$\alpha$ equivalent width, we require not only the Balmer decrement, but also the stellar `decrement', i.e.\ the ratio of the continuum level at H$\alpha$ to that at H$\beta$. In the same manner as we did for the Nitrogen `decrement', we find in Fig.\,\ref{fig:stellarDec} an approximately linear relationship between the continuum level at 6563\,\AA, $C_\text{6563\AA}$, and the continuum level corrected for dust extinction at 4861\,\AA, $C^\text{corr}_\text{4861\AA}$, using our MUSE data of IC 1459 and NGC 1316. Using the data shown in Fig.\,\ref{fig:stellarDec}, we find
+% 		\begin{equation}
+% 			C_\text{6563\AA} = \,  (0.142\pm0.004757) \times 10^{-6} + (1.047\pm0.008) C^\text{corr}_\text{4861\AA} \, .
+% 		\end{equation}
+% 		This is used to be transform the classification boundaries of diagnostics dependent on the equivalent width of H$\alpha$ to those involving H$\beta$. 
+
+% 		\begin{figure}
+% 			\centering
+% 			\includegraphics[width=0.7\textwidth]{chapter5/stellar_ratio.png}
+% 			\caption[The stellar `decrement']{Stellar `decrement'. Plot of the continuum flux at H$\alpha$ versus the continuum flux at H$\beta$ for the galaxies IC 1459 and NGC 1316, used to transform the classification boundaries of diagnostics involving the H$\alpha$ equivalent width to those involving H$\beta$. As in Fig.\,\ref{fig:NII_NI}m the fluxes have been corrected for the galaxies' distances.} 
+% 			\label{fig:stellarDec}
+% 		\end{figure}
+
 
 	\subsection{BPT Diagnostics}
 		\label{subsec:BPT}
@@ -234,7 +252,7 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 			\label{fig:SAURON}
 		\end{figure}
 
-		\citet{Sarzi2010} showed that Seyferts, LINERs and star-forming galaxies are reasonable separated in the [\ion{N}{i}]/H$\beta$ versus [\ion{O}{iii}]/H$\beta$ diagnostic plot (hereafter the SAURON diagnostic plot). To exploit the VIMOS datacubes we thus use the [\ion{N}{ii}] -- [\ion{N}{i}] relation derived in Section \ref{subsec:Ndec}, along with the Balmer decrement, to transform the \citet{Kewley2001} extreme starburst and the \citet{Kauffmann2003a} pure star-formation boundaries in the [\ion{N}{ii}]/H$\alpha$ versus [\ion{O}{iii}]/H$\beta$ plot to boundaries in the SAURON plot. For the MUSE datacubes, only IC 1459 and NGC 1316 have detections of [\ion{N}{i}]. Given that we already have the superior classic BPT plots for these galaxies, we only show the VIMOS-derived SAURON diagnostic plot. This is shown in Fig.\,\ref{fig:SAURON} for all 6 VIMOS galaxies with detectable, spatially-resolved emission lines. All exhibit LINER-AGN behaviour.
+		\citet{Sarzi2010} showed that Seyferts, LINERs and star-forming galaxies are reasonable separated in the SAURON diagnostic plot. To exploit the VIMOS datacubes we thus use the [\ion{N}{ii}] -- [\ion{N}{i}] relation derived in Section \ref{subsec:Ndec}, along with the Balmer decrement, to transform the \citet{Kewley2001} extreme starburst and the \citet{Kauffmann2003a} pure star-formation boundaries in the [\ion{N}{ii}]/H$\alpha$ versus [\ion{O}{iii}]/H$\beta$ plot to boundaries in the SAURON plot. For the MUSE datacubes, only IC 1459 and NGC 1316 have detections of [\ion{N}{i}]. Given that we already have the superior classic BPT plots for these galaxies, we only show the VIMOS-derived SAURON diagnostic plot. This is shown in Fig.\,\ref{fig:SAURON} for all 6 VIMOS galaxies with detectable, spatially-resolved emission lines. All exhibit LINER-AGN behaviour.
 
 		
 
