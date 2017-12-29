@@ -214,6 +214,48 @@ def plot(galaxies, str_galaxies, file_name, instrument):
 	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
 		dpi=240)
 
+
+def ngc3100_NI_Hb():
+	galaxy = 'ngc3100'
+	opt='pop'
+	instrument='vimos'
+	from plot_results import add_
+	from errors2 import get_dataCubeDirectory
+
+	Prefig(size=(10,10))
+	fig, ax = plt.subplots()
+
+	f = fits.open(get_dataCubeDirectory(galaxy))
+	header = f[0].header
+	f.close()
+
+	vin_dir = '%s/Data/%s/analysis/%s/%s' % (cc.base_dir, instrument, 
+		galaxy, opt)
+
+	# D = Ds()
+	pickle_file = '%s/pickled' % (vin_dir)
+	pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
+	D = pickle.load(pickleFile)
+	pickleFile.close()
+
+	ax = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, D.yBar, 
+		D.components['[NI]d'].flux/D.components['Hbeta'].flux, header, 
+		nodots=True, flux_unbinned=D.unbinned_flux, colorbar=True, ax=ax,
+		label=r'$\mathrm{\frac{[NI]\lambda\lambda5197,5200}{H\beta}}$', 
+		label_size=1.4)
+
+	for o, color in {'radio':'g','CO':'c'}.iteritems():
+		scale = 'log' if o == 'radio' else 'lin'
+		add_(o, color, ax, galaxy, nolegend=True, scale=scale)
+	ax.ax_dis.tick_params(top=True, bottom=True, left=True, right=True, 
+		direction='in', which='major', length=20, width=3, labelsize='large')
+	ax.ax_dis.tick_params(top=True, bottom=True, left=True, right=True, 
+		direction='in', which='minor', length=10, width=3)
+
+	fig.savefig('%s/Documents/thesis/chapter5/vimos/ngc3100_NI_Hb.png' % (
+		cc.home_dir), dpi=300, bbox_inches='tight')
+
+
 def ngc1316_inflow():
 	galaxy = 'ngc1316'
 	opt = 'pop'
@@ -222,7 +264,7 @@ def ngc1316_inflow():
 	from errors2_muse import get_dataCubeDirectory
 	import disk_fit_functions_binned as dfn
 
-	Prefig(size=np.array((3.5, 1))*5.5)
+	Prefig(size=np.array((3.6, 1))*5.5)
 	fig, ax = plt.subplots(1,3)
 
 	f = fits.open(get_dataCubeDirectory(galaxy))
@@ -263,8 +305,14 @@ def ngc1316_inflow():
 	for a in ax:
 		for o, color in {'radio':'g','CO':'c'}.iteritems():
 			scale = 'log' if o == 'radio' else 'lin'
-			add_(o, color, ax[2], galaxy, nolegend=True, 
-				scale=scale)
+			add_(o, color, a, galaxy, nolegend=True, scale=scale)
+		if hasattr(a, 'ax_dis'):
+			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
+				right=True, direction='in', which='major', length=20,
+				width=3, labelsize='large')
+			a.ax_dis.tick_params(top=True, bottom=True, left=True, 
+				right=True, direction='in', which='minor', length=10,
+				width=3)
 
 	# Decrease gap between maps
 	for i in range(len(ax)):
@@ -280,7 +328,7 @@ def ngc1316_inflow():
 	for i, t in enumerate([r'$V_\mathrm{gas}$', r'$V_\mathrm{model}$', 
 		r'$V_\mathrm{residuals} = V_\mathrm{gas} - V_\mathrm{model}$']):
 		fig.text(ax[i].ax_dis.get_position().x0+0.02, 
-			ax[i].ax_dis.get_position().y1-0.03, t, va='top')
+			ax[i].ax_dis.get_position().y1-0.04, t, va='top', color='w', zorder=15)
 
 	for a in ax[1:]:
 		if hasattr(a, 'ax_dis'): 
@@ -295,7 +343,7 @@ def ngc1316_inflow():
 		rotation=270, verticalalignment='center')
 	
 	fig.savefig('%s/Documents/thesis/chapter5/ngc1316_inflow.png' % (
-		cc.home_dir), dpi=300)
+		cc.home_dir), dpi=300, bbox_inches='tight')
 
 
 
@@ -753,7 +801,9 @@ def H_profile(instrument='vimos'):
 
 if __name__=='__main__':
 	if 'home' in cc.device:
-		H_profile(instrument='vimos')
+		# H_profile(instrument='vimos')
+
+		ngc3100_NI_Hb()
 
 		# WHbN1()
 		

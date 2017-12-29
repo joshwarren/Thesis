@@ -20,16 +20,16 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 		& VIMOS\tnote{a} & MUSE & Decrement & Seyfert \\
 		& ($\log\mathrm{M_\odot}$) & ($\log\mathrm{M_\odot}$) & \\
 		\hline
-		ESO 443-G024 & $5.31 \pm 0.01$ 	& --  		& -- & No detections \\
-		IC 1459 	& $5.25 \pm 0.01$	& $5.51 \pm 0.01$ & $4.57 \pm 0.06$ & LINER-AGN\\
-		IC 1531 	& $5.04 \pm 0.01$	& -- 		& -- & Seyfert 2\\
-		IC 4296		& $5.43 \pm 0.01$	& $< 4.14$ 	& $<10.9$\tnote{b} & LINER-AGN \\
-		NGC 612 	& $6.21 \pm 0.01$ 	& -- 		& -- & LINER-AGN \\
-		NGC 1316 	& -- 				& $ 5.29 \pm 0.01$ & $3.54 \pm 0.05$ & LINER-AGN \\
-		NGC 1399 	& $3.94 \pm 0.02$ 	& $ 4.54 \pm 0.01$ & \tnote{c} & LINER \\
-		NGC 3100 	& $5.27 \pm 0.01$	& -- 		& -- & Seyfert 2 \\
-		NGC 3557 	& $4.89 \pm 0.01$ 	& -- 		& -- & LINER/Retired \\
-		NGC 7075 	& $5.36 \pm 0.01$	& -- 		& -- & LINER \\
+		ESO 443-G024 & $5.02 \pm 0.01$ 	& --  		& -- & No detections \\
+		IC 1459 	& $5.21 \pm 0.01$	& $5.50 \pm 0.01$ & $4.54 \pm 0.12$ & LINER-AGN\\
+		IC 1531 	& $5.09 \pm 0.01$	& -- 		& -- & Seyfert 2\\
+		IC 4296		& $5.43 \pm 0.01$	& $< 4.48$ 	& \tnote{b} & LINER-AGN \\
+		NGC 612 	& $6.00 \pm 0.01$ 	& -- 		& -- & LINER-AGN \\
+		NGC 1316 	& -- 				& $ 5.29 \pm 0.01$ & $3.52 \pm 0.11$ & LINER-AGN \\
+		NGC 1399 	& $< 3.86$ 			& $ 4.54 \pm 0.01$ & $< 21.4$\tnote{c} & LINER \\
+		NGC 3100 	& $5.26 \pm 0.01$	& -- 		& -- & Seyfert 2 \\
+		NGC 3557 	& $4.61 \pm 0.02$ 	& -- 		& -- & LINER/Retired \\
+		NGC 7075 	& $4.68 \pm 0.01$	& -- 		& -- & LINER \\
 		PKS 718-34  & $< 5.08$	 		& -- 		& -- & No detections \\
 		\hline
 		\hline
@@ -38,8 +38,8 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 	\footnotesize
 	\note Col.\,1: Galaxy. Col.\,2: \ion{H}{ii} mass derived from the H$\beta$ line in the VIMOS data, assuming a Balmer decrement of 2.85. Col.\,3: \ion{H}{ii} mass derived from the H$\alpha$ line in the MUSE data. Col.\,4: Balmer decrement measured from the MUSE data. Col.\,5: Main source of ionizing radiation (see Section \ref{sec:Diagnostics} for a description of the different classes). A -- means we have no data.
 	\item [a] The VIMOS flux calibration and thus the derived gas masses are only approximate (see Section \ref{subsec:VIMOSreduction} for more detail on the flux calibration).
-	\item [b] H$\beta$ was not detected with A/N $> 2.5$, so the fit is unreliable (hence an upper limit). 
-	\item [c] H$\beta$ was not detected, so the formal measured Balmer decrement is infinite. 
+	\item [b] Both H$\alpha$ and H$\beta$ are not detected with A/N $>2.5$, so no information can be gained.
+	\item [c] H$\beta$ is not detected with A/N $> 2.5$, so the fit is unreliable (hence an upper limit). 
 	\end{tablenotes}
 \end{threeparttable}
 \end{table}
@@ -50,7 +50,7 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 
 	\subsection{Maps}
 		\label{subsec:GasMaps}
-		Images of the Southern Sample galaxies in the [\ion{O}{iii}]$\lambda\lambda$4957,5007 lines are shown in Figs.\ \ref{fig:VIMOS_OIII} and \ref{fig:MUSE_OIII}. Only 4 galaxies of the Southern Sample have emission lines detected outside of their central region (IC 1459, NGC 612, NGC 1316 and NGC 3100; see Figs.\,\ref{fig:VIMOS_OIII} and \ref{fig:MUSE_OIII}). Of the remaining 7 galaxies, NGC 1399 and PKS 718-34 have no detection of H$\beta$ in their spatially-resolved map (although we do detect H$\beta$ in the spatially-integrated spectrum of NGC 1399; see Section \ref{subsec:GasMass}), while the other 5 galaxies are only detected in their centre. All other emission lines have similar distributions, but with different fluxes.%, with the exception of NGC 612, where the significant cloud in [\ion{O}{iii}] to the south of the centre of the galaxy is not seen in H$\beta$ (see Fig.\,\ref{fig:NGC612_Hb}). 
+		Images of the Southern Sample galaxies in the [\ion{O}{iii}]$\lambda\lambda$4957,5007 lines are shown in Figs.\ \ref{fig:VIMOS_OIII} and \ref{fig:MUSE_OIII} (we choose to show [\ion{O}{iii}] as detections of all emission lines require a detection of [\ion{O}{iii}] first, see Section \ref{subsec:EmissionFit}). Only 4 galaxies of the Southern Sample have emission lines detected outside of their central region (IC 1459, NGC 612, NGC 1316 and NGC 3100; see Figs.\,\ref{fig:VIMOS_OIII} and \ref{fig:MUSE_OIII}). Of the remaining 7 galaxies, NGC 1399 and PKS 718-34 have no detection of H$\beta$ in their spatially-resolved map (although we do detect H$\beta$ in the spatially-integrated spectrum of NGC 1399; see Section \ref{subsec:GasMass}), while the other 5 galaxies are only detected in their centre. All other emission lines have similar distributions, but with different fluxes.%, with the exception of NGC 612, where the significant cloud in [\ion{O}{iii}] to the south of the centre of the galaxy is not seen in H$\beta$ (see Fig.\,\ref{fig:NGC612_Hb}). 
 
 
 		\begin{figure}
@@ -63,7 +63,7 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 		% 	\centering
 			\vspace{\floatsep}
 			\includegraphics[width=\textwidth]{chapter5/muse/Hb.png}
-			\caption[MUSE \bracket{\ion{O}{iii}} maps]{MUSE [\ion{O}{iii}]$\lambda\lambda$4957,5007 maps.\label{fig:MUSE_OIII}} 
+			\caption[MUSE \bracket{\ion{O}{iii}} maps]{As in Fig.\ \ref{fig:VIMOS_OIII} but for MUSE [\ion{O}{iii}]$\lambda\lambda$4957,5007 maps.\label{fig:MUSE_OIII}} 
 			
 		\end{figure}
 
@@ -100,9 +100,9 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 		\begin{equation}
 			\left(\frac{M_\text{\ion{H}{ii}}}{M_\odot}\right) = 280 \left(\frac{D}{10\, \mathrm{Mpc}}\right)^2 \left(\frac{F(\mathrm{H\alpha})}{10^{-14} \, \mathrm{erg \, s^{-1} \, cm^{-2}}}\right) \left(\frac{10^3 \, \mathrm{cm^{-3}}}{n_\mathrm{e}}\right) \, ,
 		\end{equation}
-		where $M_\text{\ion{H}{ii}}$ is the total mass of \ion{H}{ii} in the galaxy, $D$ is the galaxy distance, and $F(\mathrm{H\alpha})$ is the total observed galaxy H$\alpha$ flux. This method assumes an electron density $n_\mathrm{e} = 100 \, \mathrm{cm^{-3}}$, a temperature of $10^4$ K and case-B recombination (electrons above 13.6\,eV are not reabsorbed; e.g.\ \citealt[p.\,74]{Osterbrock1974}). Like \citet{Sarzi2005}, we only claim a detection if the amplitude-to-noise ratio (A/N) is $>4$ for [\ion{O}{iii}] and $>2.5$ for H$\beta$ or H$\alpha$. Since most of the gas is centrally concentrated, a large field of view, often only serves to increase the noise (thus reducing A/N). 
-		% Our lower limits on the gas mass, are set by the mass measured from the largest aperture that still meets our detection criteria. This would be the gas mass of the galaxy if there was no gas at larger radii. 
-		Upper limits are calculated using the $1\sigma$ noise level (see Section \ref{subsec:EmissionFit}) or the H$\alpha$ (H$\beta$, in the case of VIMOS data) flux measurement that does not meet out A/N criterion, whichever is larger, assuming that the gas is distributed over the entire field of view.
+		where $M_\text{\ion{H}{ii}}$ is the total mass of \ion{H}{ii} in the galaxy, $D$ is the galaxy distance, and $F(\mathrm{H\alpha})$ is the H$\alpha$ flux measured from the spectrum created by summing spatially all spaxels within an aperture of $\frac{R_\mathrm{e}}{2}$ (chosen to exclude outer noisy regions of the observations, but include spatially extended gas regions). This method assumes an electron density $n_\mathrm{e} = 100 \, \mathrm{cm^{-3}}$, a temperature of $10^4$ K and case-B recombination (electrons above 13.6\,eV are not reabsorbed; e.g.\ \citealt[p.\,74]{Osterbrock1974}). Like \citet{Sarzi2005}, we only claim a detection if the amplitude-to-noise ratio (A/N) is $>4$ for [\ion{O}{iii}] and $>2.5$ for H$\beta$ or H$\alpha$. Upper limits are calculated using the $1\sigma$ noise level (see Section \ref{subsec:EmissionFit}).
+
+		Our calculated gas masses are given Table \ref{tab:gasMass}. 
 
 
 		
@@ -115,7 +115,7 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 
 \section{Ionized Gas Kinematics}
 	\label{sec:GasKin}
-	In Figs.\,\ref{fig:VIMOS_Gaskine} and \ref{fig:MUSE_Gaskine}, we show maps of the mean velocity and velocity dispersion of the ionized gas for the 4 galaxies with extended emission lines, IC 1459, NGC 612, NGC 1316 and NGC 3100. Due to that fact that, unlike stars, gas is dissipational, it is to be expected th at given sufficient time, the ISM will always settle into a disc. These maps show that the ISM of the Southern sample galaxies varies from largely settled discs in IC 1459 and NGC 612 to more disordered kinematics of NGC 3100 and a possible inflow in NGC 1316.
+	In Figs.\,\ref{fig:VIMOS_Gaskine} and \ref{fig:MUSE_Gaskine}, we show maps of the mean velocity and velocity dispersion of the ionized gas for the 4 galaxies with extended emission lines, IC 1459, NGC 612, NGC 1316 and NGC 3100. Due to that fact that, unlike stars, gas is dissipational, it is to be expected that given sufficient time, the ISM will always settle into a disc. These maps show that the ISM of the Southern sample galaxies varies from largely settled discs in IC 1459 and NGC 612 to more disordered kinematics of NGC 3100 and a possible inflow in NGC 1316.
 
 	\begin{figure}
 		\centering
@@ -135,32 +135,29 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 % Separate section?
 	% \subsection{Misalignment of Gas}
 	% 	\label{subsec:Gasmisaligment}
-	It is immediately clear when comparing the mean stellar velocity maps (Figs.\,\ref{fig:VIMOS_stellar} and \ref{fig:MUSE_stellar}) to the mean gas velocity maps (Figs.\,\ref{fig:VIMOS_Gaskine} and \ref{fig:MUSE_Gaskine}) that where gas is detected, its angular momentum is not often aligned with that of the stars. A misalignment between the kinematics of the stars and gas suggests an external origin for the gas (e.g.\ accretion or wet merger). However it should be noted that the conversus is not necessarily true: aligned kinematics is consistent with an internal origin (e.g.\ stellar-mass loss), but it does \emph{not} require it \citep[e.g.][]{Davis2011a}. 
+	It is immediately clear when comparing the mean stellar velocity maps (Figs.\,\ref{fig:VIMOS_stellar} and \ref{fig:MUSE_stellar}) to the mean gas velocity maps (Figs.\,\ref{fig:VIMOS_Gaskine} and \ref{fig:MUSE_Gaskine}) that where gas is detected, its angular momentum is not often aligned with that of the stars. A misalignment between the kinematics of the stars and gas suggests an external origin for the gas (e.g.\ accretion or wet merger). However it should be noted that the converses is not necessarily true: aligned kinematics is consistent with an internal origin (e.g.\ stellar-mass loss), but it does \emph{not} require it \citep[e.g.][]{Davis2011a}. 
 
 	We now comment on each galaxy in turn.
 
-	\paragraph{IC 1459} has ionized gas counter-rotating with respect to the stellar kinematically-decoupled core, and also rotating independently from the rest of the galaxy. The gas is rotating with a mean velocity an order of magnitude higher than that of the stars (outside of the KDC). As the stellar disc did not survive the merger even that created the KDC, it is unlikely that the gas in IC 1459 progenitor galaxy survived. The lost gas may, however, have been re-accreted. Alternatively, the ISM may have yet another external origin. 
+	\paragraph{IC 1459} has ionized gas counter-rotating with respect to the stellar kinematically-decoupled core, and also rotating independently from the rest of the galaxy. \citet{Franx1988} claim that the rotation of the gas is aligned with that of the stars outside of the KDC, however we observe outer stellar kinematics to be non-rotating. As the stellar disc did not survive the merger even that created the KDC, it is unlikely that the gas in IC 1459 progenitor galaxy survived. The lost gas may, however, have been re-accreted. Alternatively, the ISM may have yet another external origin. 
 
 	\paragraph{NGC 612} has well aligned stellar and gaseous kinematics. The misalignment between the position angle of the stellar and gas kinematics (using the method described in Section \ref{subsec:Misalignment}) is just $1\fdg0\pm0\fdg7$, consistent with an internal origin for the gas. This adds to the evidence (see Section \ref{sec:NGC612}) that NGC 612 has not undergone a major merger (major mergers exhaust galaxies of their gas and destroy a stellar disc; see Section \ref{sec:stellarDiscussion}) and suggests that, the fueling and powering of the radio jet must be a purely secular process. 
 
 
-	\paragraph{NGC 1316} is a complex object. The gas disc is consistent with being aligned with the stellar kinematics, but with a large inflow towards the nucleus from the south-west (see Fig.\,\ref{fig:Inflow}), almost perpendicular to the radio jet. However, other interpretations are possible, and better quality data (longer exposure times) are required to add certainty to this interpretation. Nevertheless, it is clear that the gas in not in a settled disc. 
+	\paragraph{NGC 1316} is a complex object. Since there are redshifted emission lines with respect to the rest frame of the galaxy on both sides of the galaxy, the gas is not in a settled disc and that there must be some inflow/outflows. We used a fitting routine based on the method of \citet{Swinbank2012}, \citet{Stott2016} and Tiley et.al.\ (in prep.) to fit an exponential disc (middle panel of Fig.\ \ref{fig:Infow}) to the ionized gas mean velocity map (left panel), with the residuals shown in the right panel of Fig.\ \ref{fig:Inflow}. This shows a large residual on the southwest side of the galaxy, which we interpret as an inflow towards the nucleus, almost perpendicular to the radio jet. However, there are still significant residuals in other parts of the galaxy, suggesting that the model may not be a good representation of the reality of the galaxy, thus other interpretations are possible, and better quality data (longer exposure times) are required to add certainty to this interpretation. Nevertheless, it is clear that the gas in not in a settled disc. 
 
 	\begin{figure}
 		\centering
 		\includegraphics[width=\textwidth]{chapter5/ngc1316_inflow.png}
-		\caption[Inflows in NGC 1316]{Ionized gas inflows in NGC 1316.} 
+		\caption[Inflows in NGC 1316]{Ionized gas inflows in NGC 1316. Left: [\ion{O}{iii}] mean velocity map. Middle: best-fit model. Right: Residual map = mean velocity - model. A large region, redshifted with respect to the galaxy, can be seen in the southwest which we interpret as an inflow. Contours are as in Fig.\ \ref{fig:VIMOS_OIII}.}
 		\label{fig:Inflow}
 	\end{figure}
 
 
-	\paragraph{NGC 3100} has an interesting ISM morphology. The \ce{^{12}CO(2-1)} contours (shown in cyan in all figures) show a broken ring with the radio jet passing through the gaps in the ring (Ruffa et\,al., in prep.). We observe the ionized gas to be brightest in the gaps of this ring. The simplest comment that we can make of the ionized gas kinematics is that it is completely different than that of the stars. Secondly, that the centre of rotation of the gas appears to be offset from the centre of the galaxy (as defined by the stellar surface brightness) by several arcseconds to the west. 
+	\paragraph{NGC 3100} has an interesting ISM morphology. The \ce{^{12}CO(2-1)} contours (shown in cyan in all figures) show a broken ring with the radio jet passing through the gaps in the ring (Ruffa et\,al., in prep.). We observe the ionized gas to be brightest in the gaps of this ring which we interpret as additional excitation of the gas due to shocks from the impact of the jet (discussed in more detail in Section \ref{subsec:BPT}). The simplest comment that we can make of the ionized gas kinematics is that it is completely different than that of the stars. Secondly, that the centre of rotation of the gas appears to be offset from the centre of the galaxy (as defined by the stellar surface brightness) by several arcseconds to the west. 
 
 	\subsection{Kinematic mis-alignments}
-
-		\citet{Davis2011a} showed that $36\pm5$\% of fast rotators have ionized gas kinematics misaligned with respect to the stellar kinematics, while slow rotators have a flat distribution of misalignments. This indicates that slow rotators are dominated by external sources of gas, while fast rotators can have either internal or external sources. This is consistent with our observations of the Southern Sample: the only slow rotator with detected ionized gas is IC 1459, which has significantly kinematically-misaligned gas; of the 3 fast rotators, only 1 (NGC 3100) is definitely misaligned, while the other 2 (NGC 612 and NGC 1316) are consistent with an internal gas origin.
-
-
+		\citet{Davis2011a} showed that $36\pm5$\% of fast rotators have ionized gas kinematics misaligned with respect to the stellar kinematics, while slow rotators have a flat distribution of misalignments. This indicates that slow rotators are dominated by external sources of gas, while fast rotators can have either internal or external sources. This is consistent with our observations of the Southern Sample: the only slow rotator with detected ionized gas is IC 1459, which has significantly kinematically-misaligned gas; of the 3 fast rotators, only 1 (NGC 3100) is definitely misaligned, while NGC 612 is consistent with an internal gas origin and NGC 1316 is not clear, although the best-fit exponential disc model (see Fig.\ \ref{fig:Inflow}) is definitely misaligned to the stellar kinematics.
 
 \section{Ionization Sources}
 	\label{sec:Diagnostics}
@@ -175,30 +172,36 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 	% \subsection{Using Emission Line Beyond the VIMOS Wavelength Range}
 	\subsection{Extrapolating VIMOS Data}
 		\label{subsec:Ndec}
-		As stated above, most of the diagnostic plots for identifying the dominant source of ionization in a given galaxy require measurements of emissions line that lie outside of the spectral range of VIMOS. As such, to be able to classify our VIMOS data in this way we transform the classification boundary lines to plots involving the same atoms, but different ionization species e.g.\ 
-		% Is species the right word?
-		transform from the classic BPT [\ion{N}{ii}]/H$\alpha$ versus [\ion{O}{iii}]/H$\beta$ to [\ion{N}{i}]/H$\beta$ versus [\ion{O}{iii}]/H$\beta$ diagnostic plot (hereafter the SAURON diagnostic plot). 
+		The Balmer decrement, $d_\mathrm{H}$, is the ratio of the H$\alpha$ to H$\beta$ fluxes. There are good theoretical motivations for this ratio to be near constant at $d_\mathrm{H} = 2.86$, under a wide variety of conditions. In reality, however, higher values are routinely observed. These can be explained as due to either the presence of dust causing extinction (whereby emission lines at shorter wavelengths appear dimmer than expected from their redder counterparts due to dust preferentially scattering and absorbing bluer light) or some mechanism that populates hydrogen levels from the ground up. Such mechanisms may be important in high-density environments, such as within powerful (type 1) AGN \citep[e.g.][]{Shields1974, Netzer1975}. 
+		%
+		% The majority ($\approx 60$\%) of ETGs and all LINER and Seyfert galaxies are dusty \citep[e.g.][]{Martini2013}. 
+		% Such galaxies reveal clear dust lanes in \textit{Hubble Space Telescope (HST)} observations \citep[e.g.][]{Martini2013}, are bright in the infrared (where the thermal emission from dust is seen as a dust ``bump''; e.g.\ \citealt{Jura1987, Knapp1992}), and possess other emission lines \citep[e.g.\ \bracket{\ion{S}{ii}};][]{Wampler1968} showing similar reddening. Thus, assuming the observed steepening of the Balmer decrement is entirely due to dust, the ratio of the observed decrement to the theoretical value of 2.86 is a good estimate of the dust reddening.
+
+		If we assume that different ionization states of a given atomic species occur in the same spatial location, then shielding is not important or at least is not non-linear in its effect on the emission-line ratios. Given that the different states are then produced under the same conditions, it is natural to expect a simple relationship between their emission line fluxes, similar to the Balmer decrement. We exploit such relationships to transform classification boundaries from diagnostic plots which use emission lines outside of the spectral range of VIMOS to diagnostics which can be measured with our VIMOS data e.g.\ transform from the classic BPT [\ion{N}{ii}]/H$\alpha$ versus [\ion{O}{iii}]/H$\beta$ to [\ion{N}{i}]/H$\beta$ versus [\ion{O}{iii}]/H$\beta$ diagnostic plot (hereafter the SAURON diagnostic plot) of \citet{Sarzi2010}. We achieve this by finding a best-fit relationship between the relevant measurements taken in each bin of the galaxies for which we have the relevant detections in our MUSE data (due to the lack of detectable emission line in the observations of IC 4296 and NGC 1399, we therefore use the observations of IC 1459 and NGC 1316). This relationship is then applied to the diagnostic boundary lines in the relevant plots below. We emphasize that these are purely empirical relationships and thus differ substantially from the Balmer decrement with its strong theoretical basis (although these relationships include the effect of the Balmer decrement). 
+
+		The two transformations that we use are from [\ion{N}{ii}]/H$\alpha$ to [\ion{N}{i}]/H$\beta$ line ratios and from the H$\alpha$ to the H$\beta$ equivalent widths. In both cases we fit a linear relationship $y = Ax + B$ using the least-trimmed squares routine, \textsc{lts\_linefit}\footnote{http://www-astro.physics.ox.ac.uk/\~mxc/software/\#lts} of \citet{Cappellari2013} due to its robust handling of the uncertainties along both axes. These are shown in Figs.\ \ref{fig:ratio_relation} and \ref{fig:EqW_relation}, where we find
+		\begin{align}
+		\frac{[\text{\ion{N}{i}}]}{H\beta} & = \, (0.38 \pm 0.02) \frac{[\text{\ion{N}{ii}}]}{H\alpha} + (1.80 \pm 0.02)
+		\intertext{and}
+		\mathrm{EW}(H\beta) & = \, (2.92 \pm 0.03) \mathrm{EW}(H\alpha) - (0.16 \pm 0.02) \, ,
+		\end{align}
+		respectively.
 
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.7\textwidth]{chapter5/ratio_fit.png}
-			\caption[\brackets{\ion{N}{ii}}/H$\alpha$ vs \brackets{\ion{N}{i}}/H$\beta$]{Comparing [\ion{N}{ii}]/H$\alpha$ and [\ion{N}{i}]/H$\beta$ line ratios for the galaxies IC 1459 and NGC 1316, used to transform the classification boundaries of diagnostics involving the H$\alpha$ equivalent width to those involving H$\beta$.} 
+			\caption[\brackets{\ion{N}{ii}}/H$\alpha$ vs \brackets{\ion{N}{i}}/H$\beta$]{Upper panel: [\ion{N}{ii}]/H$\alpha$ vs [\ion{N}{i}]/H$\beta$ line ratios for the galaxies IC 1459 and NGC 1316, used to transform the classification boundaries of the classic [\ion{N}{ii}] BPT plot to the SARUON diagnostic plot. Lower panel: Residuals = ([\ion{N}{ii}]/H$\alpha$ - best-fit)/[\ion{N}{i}]/H$\beta$.} 
 			\label{fig:ratio_relation}
 		\end{figure}
 
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.7\textwidth]{chapter5/EQw_fit.png}
-			\caption[Comparing H$\alpha$ and H$\beta$ equivalent widths]{Comparing H$\alpha$ and H$\beta$ equivalent widths for the galaxies IC 1459 and NGC 1316. The best-fit relationship is used to transform the classification boundaries of the classic [\ion{N}{ii}] BPT plot to the SARUON diagnostic plot.} 
-			\label{fig:ratio_relation}
+			\caption[Comparing H$\alpha$ and H$\beta$ equivalent widths]{Upper panel: H$\alpha$ vs H$\beta$ equivalent widths for the galaxies IC 1459 and NGC 1316 used to transform the classification boundaries of diagnostics involving the H$\alpha$ equivalent width to those involving H$\beta$. Lower panel: Residuals = (EW(H$\alpha$) - best-fit)/EW(H$\beta$)} 
+			\label{fig:EqW_relation}
 		\end{figure}
 
-% 		The Balmer decrement, $d_\mathrm{H}$, is the ratio of the H$\alpha$ to H$\beta$ fluxes. There are good theoretical motivations for this ratio to be near constant at $d_\mathrm{H} = 2.86$, under a wide variety of conditions. In reality, however, higher values are routinely observed. These can be explained as due to either the presence of dust causing extinction (whereby emission lines at shorter wavelengths appear dimmer than expected from their redder counterparts due to dust preferentially scattering and absorbing bluer light) or some mechanism that populates hydrogen levels from the ground up. Such mechanisms may be important in high-density environments, such as within powerful (type 1) AGN \citep[e.g.][]{Shields1974, Netzer1975}. 
-% 		%
-% 		The majority ($\approx 60$\%) of ETGs and all LINER and Seyfert galaxies are dusty \citep[e.g.][]{Martini2013}. 
-% 		Such galaxies reveal clear dust lanes in \textit{Hubble Space Telescope (HST)} observations \citep[e.g.][]{Martini2013}, are bright in the infrared (where the thermal emission from dust is seen as a dust ``bump''; e.g.\ \citealt{Jura1987, Knapp1992}), and possess other emission lines \citep[e.g.\ \bracket{\ion{S}{ii}};][]{Wampler1968} showing similar reddening. Thus, assuming the observed steepening of the Balmer decrement is entirely due to dust, the ratio of the observed decrement to the theoretical value of 2.86 is a good estimate of the dust reddening.
-
-% 		If we assume that different ionization states of a given atom occur in the same spatial location, then shielding is not important or at least is not non-linear in its effect on the emission-line ratios. Given that the different species are then produced under the same conditions, it is natural to expect a simple relationship between them. Using the emission line fluxes derived from our MUSE data, we find that the relationship between [\ion{N}{ii}] flux and [\ion{N}{i}] flux is approximately linear (see Fig.\,\ref{fig:NII_NI}). We emphasize that this is a purely empirical correlation and thus differs substantially from the Balmer decrement with its strong theoretical basis. 
+		
 
 % % I actually work with luminosity - how will that effect things?
 % 		To find the intrinsic conversion from [\ion{N}{i}] flux to [\ion{N}{ii}] flux we must first correct for dust reddening. Assuming that the extinction can be approximated by a linear form in the $V$-band, we correct the flux of the bluer emission line of the pair $F_\mathrm{b}$, using
@@ -254,9 +257,15 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 
 		\citet{Sarzi2010} showed that Seyferts, LINERs and star-forming galaxies are reasonable separated in the SAURON diagnostic plot. To exploit the VIMOS datacubes we thus use the [\ion{N}{ii}] -- [\ion{N}{i}] relation derived in Section \ref{subsec:Ndec}, along with the Balmer decrement, to transform the \citet{Kewley2001} extreme starburst and the \citet{Kauffmann2003a} pure star-formation boundaries in the [\ion{N}{ii}]/H$\alpha$ versus [\ion{O}{iii}]/H$\beta$ plot to boundaries in the SAURON plot. For the MUSE datacubes, only IC 1459 and NGC 1316 have detections of [\ion{N}{i}]. Given that we already have the superior classic BPT plots for these galaxies, we only show the VIMOS-derived SAURON diagnostic plot. This is shown in Fig.\,\ref{fig:SAURON} for all 6 VIMOS galaxies with detectable, spatially-resolved emission lines. All exhibit LINER-AGN behaviour.
 
-		
+		NGC 3100 appears to occupy to distinct regions in the SAURON diagnostic plot (Fig.\ \ref{fig:SAURON}). If the ionization is due to shocks from the impact of the jet, then using the shock models of \citet{Allen2008}, we can see that the right-hand group of bins have been ionized by a higher shock velocity that the left-hand group. As can be seen in Fig.\ \ref{fig:ngc3100_NI_Hb}, these bins are directly in the gap (presumable created by the jet blowing a hole) in the CO ring.
 
-
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.5\textwidth]{chapter5/vimos/ngc3100_NI_Hb.png}
+			\caption[NGC 3100 \brackets{\ion{N}{i}}/H$\beta$ line ratio map]{The [\ion{N}{i}]/H$\beta$ line ratio map of NGC 3100, showing the hardest ionization field is in gap in the CO ring (cyan contours), spatially coincident with the radio jet (green contours). Surface brightness contours are in black.}
+			\label{fig:ngc3100_NI_Hb}
+		\end{figure}
+ 
 	\subsection{WHaN2 Plots}
 		\label{subsec:WHaN2}
 		\begin{figure}
@@ -273,7 +282,7 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 			\label{fig:WHbN1}
 		\end{figure}
 
-		The final spatially-resolved line ratio diagnostic plot that we use is that of the equivalent width of H$\alpha$ versus $log(\text{[\ion{N}{ii}]/H\alpha})$, known as the WHaN2 plot \citep{}. In Fig.\,\ref{fig:WHaN2} we show the WHaN2 plot for the MUSE derived emission lines of IC 4296. We do not include IC 1459 and NGC 1316, as they have already been classified via the classic BPT plots (see Section \ref{subsec:BPT}). We interpret the weak AGN classification of IC 4296 as LINER-AGN.
+		The final spatially-resolved line ratio diagnostic plot that we use is that of the equivalent width of H$\alpha$ versus $\log([\text{\ion{N}{ii}}]/H\alpha)$, known as the WHaN2 plot \citep{}. In Fig.\,\ref{fig:WHaN2} we show the WHaN2 plot for the MUSE derived emission lines of IC 4296. We do not include IC 1459 and NGC 1316, as they have already been classified via the classic BPT plots (see Section \ref{subsec:BPT}). We interpret the weak AGN classification of IC 4296 as LINER-AGN.
 
 		For the emission lines measured from the VIMOS datacubes, we use H$\beta$ as a proxy for H$\alpha$ and [\ion{N}{i}] as a proxy for [\ion{N}{ii}] utilising the Balmer, Nitrogen and stellar `decrements' to transform the classification boundaries (see Section \ref{subsec:Ndec}). We call the resulting diagnostic plot the WHbN1 plot, as shown in Fig.\,\ref{fig:WHbN1}.
 
