@@ -13,7 +13,9 @@ from sauron_colormap import sauron#2 as sauron
 from plot_results import set_lims
 from tools import myerrorbar
 from Bin import myArray
-from BPT import lbd, lnd, lsd, add_grids
+# from BPT import lbd, lnd, lsd, add_grids
+from BPT import add_grids, NII_Ha_to_NI_Hb, log_NII_Ha_to_NI_Hb, EqW_Ha_to_EqW_Hb, \
+	log_EqW_Ha_to_EqW_Hb
 
 class Ds(object):
 	def __init__(self):
@@ -565,7 +567,7 @@ def SAURON():
 	y_line = 0.61/(x_line - 0.47) + 1.19
 
 	m = y_line < 1
-	plt.plot(x_line[m]-lnd+lbd, y_line[m], 'k')
+	plt.plot(log_NII_Ha_to_NI_Hb(x_line[m]), y_line[m], 'k')
 
 	y_line2 = 0.61/(x_line - 0.05) + 1.3
 	m1 = y_line2 < y_line
@@ -573,7 +575,7 @@ def SAURON():
 	x_line2 = np.arange(a, 0.60, 0.001)
 	y_line2 = 0.61/(x_line2 - 0.05) + 1.3
 	m2 = y_line2 < 1
-	ax.plot(x_line2[m2]-lnd+lbd, y_line2[m2],'k--')
+	ax.plot(log_NII_Ha_to_NI_Hb(x_line2[m2]), y_line2[m2],'k--')
 
 	## Add MAPPINGS-III grids
 	add_grids(ax, '[NI]', '[OIII]')
@@ -589,12 +591,18 @@ def WHbN1():
 	Prefig()
 	fig, ax = plt.subplots()
 
-	galaxies = np.array(['eso443-g024', 'ic1459', 'ic1531', 'ic4296', 
-		'ngc0612', 'ngc1399', 'ngc3100', 'ngc3557', 'ngc7075', 
-		'pks0718-34'])
-	str_galaxies = np.array(['ESO 443-G24', 'IC 1459', 'IC 1531', 'IC 4296', 
-		'NGC 612', 'NGC 1399', 'NGC 3100', 'NGC 3557', 'NGC 7075', 
-		'PKS 718-34'])
+	# galaxies = np.array(['eso443-g024', 'ic1459', 'ic1531', 'ic4296', 
+	# 	'ngc0612', 'ngc1399', 'ngc3100', 'ngc3557', 'ngc7075', 
+	# 	'pks0718-34'])
+	# str_galaxies = np.array(['ESO 443-G24', 'IC 1459', 'IC 1531', 'IC 4296', 
+	# 	'NGC 612', 'NGC 1399', 'NGC 3100', 'NGC 3557', 'NGC 7075', 
+	# 	'PKS 718-34'])
+
+	galaxies = np.array(['ic1459', 'ic1531', 'ic4296', 'ngc3100', 'ngc3557', 
+		'ngc7075'])
+	str_galaxies = np.array(['IC 1459', 'IC 1531', 'IC 4296', 'NGC 3100', 
+		'NGC 3557', 'NGC 7075'])
+	c = np.array(['b', 'orange', 'g', 'r', 'mediumorchid', 'saddlebrown'])
 
 	# galaxies = ['ic1459']
 	# D = Ds()
@@ -616,8 +624,14 @@ def WHbN1():
 			y = np.log10(D.e_line['Hbeta'].equiv_width)
 			y_err = y.uncert
 
-			ax.errorbar(x, y, xerr=x_err, yerr=y_err, label=str_galaxies[i],
-				fmt='o', ms=9)
+			m = (D.components['[NI]d'].equiv_width < 0.5) * (
+				D.components['Hbeta'].equiv_width < EqW_Ha_to_EqW_Hb(0.5))
+
+			ax.errorbar(x[~m], y[~m], xerr=x_err[~m], yerr=y_err[~m], 
+				label=str_galaxies[i], fmt='o', ms=9, c=c[i])
+
+			ax.errorbar(x[m], y[m], xerr=x_err[m], yerr=y_err[m], fmt='x', ms=9, 
+				c=c[i])
 
 	ax.legend(loc=3)
 
@@ -625,12 +639,13 @@ def WHbN1():
 	ax.set_xlim([-1.75, 0.75])
 	xlim = ax.get_xlim()
 	ylim = ax.get_ylim()
-	ax.axhline(np.log10(3)-lbd+lsd, ls=':', c='k')
+	ax.axhline(np.log10(EqW_Ha_to_EqW_Hb(3)), ls=':', c='k')
 
-	ax.plot([-0.4+lbd-lnd, -0.4+lbd-lnd],
-		[np.log10(3)-lbd+lsd, ylim[1]], ls=':', c='k')
-	ax.plot([-0.4+lbd-lnd, xlim[1]], 
-		[np.log10(6)-lbd+lsd, np.log10(6)-lbd+lsd], ls=':', c='k')
+	ax.plot([log_NII_Ha_to_NI_Hb(-0.4), log_NII_Ha_to_NI_Hb(-0.4)],
+		[np.log10(EqW_Ha_to_EqW_Hb(3)), ylim[1]], ls=':', c='k')
+	ax.plot([log_NII_Ha_to_NI_Hb(-0.4), xlim[1]], 
+		[np.log10(EqW_Ha_to_EqW_Hb(6)), np.log10(EqW_Ha_to_EqW_Hb(6))], ls=':', 
+		c='k')
 
 	ax.set_xlim(xlim)
 	ax.set_ylim(ylim)
@@ -670,7 +685,7 @@ def ic4296_WHaN2():
 	D.sauron = True
 	if all([l in D.e_components for l in ['[NII]6583d', 'Halpha']]):
 
-		x = np.log10(D.e_line['[NII]6583d'].flux/D.e_line['Halpha'].flux)
+		x = np.log10(D.e_line['[NII]6583d'].flux/1.34/D.e_line['Halpha'].flux)
 		x_err = np.sqrt((D.e_line['[NII]6583d'].flux.uncert/
 			D.e_line['[NII]6583d'].flux)**2 +
 			(D.e_line['Halpha'].flux.uncert/D.e_line['Halpha'].flux)**2)/\
@@ -680,7 +695,12 @@ def ic4296_WHaN2():
 		y_err = y.uncert
 
 		r = np.sqrt((D.xBar-center[0])**2 + (D.yBar-center[1])**2)
-		myerrorbar(ax, x, y, xerr=x_err, yerr=y_err, color=r, marker='o')
+		m = np.isfinite(x)*np.isfinite(y)*np.isfinite(x_err)*np.isfinite(y_err)*\
+			np.isfinite(r)
+		myerrorbar(ax, x[m], y[m], xerr=x_err[m], yerr=y_err[m], color=r[m], 
+			marker='o')
+
+		# myerrorbar(ax, x, y, xerr=x_err, yerr=y_err, color=r, marker='o')
 
 	ax.set_ylim([-0.1, 1.2])
 	ax.set_xlim([-1., 1.])
@@ -694,7 +714,7 @@ def ic4296_WHaN2():
 	ax.set_xlim(xlim)
 	ax.set_ylim(ylim)
 	ax.set_ylabel(r'log(EW(H$_\alpha$)/$\AA$)')
-	ax.set_xlabel(r'log [NII]$\lambda\lambda$6548,6583/H$\,\alpha$')
+	ax.set_xlabel(r'log [NII]$\lambda$6548/H$\,\alpha$')
 	ax.text(-0.95, 1., 'Star Forming')
 	ax.text(-0.3, 1., 'Strong AGN')
 	ax.text(-0.3, 0.65, 'Weak AGN')
@@ -803,20 +823,20 @@ if __name__=='__main__':
 	if 'home' in cc.device:
 		# H_profile(instrument='vimos')
 
-		ngc3100_NI_Hb()
+		# ngc3100_NI_Hb()
 
-		# WHbN1()
+		WHbN1()
 		
-		# SAURON()
+		SAURON()
 
 		# plot(['ic1459', 'ngc0612', 'ngc3100'], 
 		# 	['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
 	elif cc.device == 'uni':
-		# ic4296_WHaN2()
+		ic4296_WHaN2()
 
 		# H_profile(instrument='muse')
 
-		ngc1316_inflow()
+		# ngc1316_inflow()
 
 		# BPT()
 

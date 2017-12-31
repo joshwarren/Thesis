@@ -1,6 +1,6 @@
 \chapter{Ionized Gas Distribution, Kinematics and Ionization}
 	\label{cha:gas}
-The interstellar medium (ISM) of early-type galaxies (ETGs) has several components: a diffuse hot ($\sim 10^7 \, \mathrm{K}$) X-ray halo (with typical mass $10^8$--$10^{10} \, \mathrm{M_\odot}$); a warm ($\sim 10^4 \, \mathrm{K}$) ionized gas component ($10^2$--$10^5 \, \mathrm{M_\odot}$), which can be more clumpy; and cold ($<10^2 \, \mathrm{K}$) atomic and molecular gas ($10^6$--$10^8 \, \mathrm{M_\odot}$), which is generally confined to small (kpc or less) clouds. In this chapter we study the spatially-resolved properties of the ionized gas component of radio galaxies (RGs), exploiting the emission lines in the VIMOS and MUSE datacubes of the Southern Sample.
+The interstellar medium (ISM) of early-type galaxies (ETGs) has several components: a diffuse hot ($\sim 10^7 \, \mathrm{K}$) X-ray halo (with typical mass $10^8$\,--\,$10^{10} \, \mathrm{M_\odot}$); a warm ($\sim 10^4 \, \mathrm{K}$) ionized gas component ($10^2$\,--\,$10^5 \, \mathrm{M_\odot}$), which can be more clumpy; and cold ($<10^2 \, \mathrm{K}$) atomic and molecular gas ($10^6$\,--\,$10^8 \, \mathrm{M_\odot}$), which is generally confined to small (kpc or less) clouds. In this chapter we study the spatially-resolved properties of the ionized gas component of radio galaxies (RGs), exploiting the emission lines in the VIMOS and MUSE datacubes of the Southern Sample.
 
 Using the methods described in Section \ref{subsec:EmissionFit}, we find the best-fit line-of-sight velocity distribution (LOSVD; assumed to be Gaussian and parametrised by the mean velocity and velocity dispersion only) of the emission lines in each bin. As described in \ref{subsec:EmissionFit}, all emission lines are fit with the same LOSVD, but each with its own flux. In the cases of the [\ion{O}{iii}], [\ion{O}{i}] and [\ion{N}{ii}] doublets, the two components of the doublets are fit with a fixed flux ratio of 1:0.34. The [\ion{N}{i}] doublet has a fixed ratio of 1:0.65 \citep{Safier1992}. The two components of the [\ion{O}{ii}] and [\ion{S}{ii}] doublets are fit independently.
 
@@ -20,7 +20,7 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 		& VIMOS\tnote{a} & MUSE & Decrement & Seyfert \\
 		& ($\log\mathrm{M_\odot}$) & ($\log\mathrm{M_\odot}$) & \\
 		\hline
-		ESO 443-G024 & $5.02 \pm 0.01$ 	& --  		& -- & No detections \\
+		ESO 443-G024 & $5.02 \pm 0.01$ 	& --  		& -- & Passive \\
 		IC 1459 	& $5.21 \pm 0.01$	& $5.50 \pm 0.01$ & $4.54 \pm 0.12$ & LINER-AGN\\
 		IC 1531 	& $5.09 \pm 0.01$	& -- 		& -- & Seyfert 2\\
 		IC 4296		& $5.43 \pm 0.01$	& $< 4.48$ 	& \tnote{b} & LINER-AGN \\
@@ -30,13 +30,13 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 		NGC 3100 	& $5.26 \pm 0.01$	& -- 		& -- & Seyfert 2 \\
 		NGC 3557 	& $4.61 \pm 0.02$ 	& -- 		& -- & LINER/Retired \\
 		NGC 7075 	& $4.68 \pm 0.01$	& -- 		& -- & LINER \\
-		PKS 718-34  & $< 5.08$	 		& -- 		& -- & No detections \\
+		PKS 718-34  & $< 5.08$	 		& -- 		& -- & Passive \\
 		\hline
 		\hline
 	\end{tabular}
 	\begin{tablenotes}
 	\footnotesize
-	\note Col.\,1: Galaxy. Col.\,2: \ion{H}{ii} mass derived from the H$\beta$ line in the VIMOS data, assuming a Balmer decrement of 2.85. Col.\,3: \ion{H}{ii} mass derived from the H$\alpha$ line in the MUSE data. Col.\,4: Balmer decrement measured from the MUSE data. Col.\,5: Main source of ionizing radiation (see Section \ref{sec:Diagnostics} for a description of the different classes). A -- means we have no data.
+	\note Col.\,1: Galaxy. Col.\,2: \ion{H}{ii} mass derived from the H$\beta$ line in the VIMOS data, assuming a Balmer decrement of 2.85. Col.\,3: \ion{H}{ii} mass derived from the H$\alpha$ line in the MUSE data. Col.\,4: Balmer decrement measured from the MUSE data. Col.\,5: Main source of ionizing radiation (see Section \ref{sec:Diagnostics} for a description of the different classes). -- means we have no data.
 	\item [a] The VIMOS flux calibration and thus the derived gas masses are only approximate (see Section \ref{subsec:VIMOSreduction} for more detail on the flux calibration).
 	\item [b] Both H$\alpha$ and H$\beta$ are not detected with A/N $>2.5$, so no information can be gained.
 	\item [c] H$\beta$ is not detected with A/N $> 2.5$, so the fit is unreliable (hence an upper limit). 
@@ -157,11 +157,11 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 	\paragraph{NGC 3100} has an interesting ISM morphology. The \ce{^{12}CO(2-1)} contours (shown in cyan in all figures) show a broken ring with the radio jet passing through the gaps in the ring (Ruffa et\,al., in prep.). We observe the ionized gas to be brightest in the gaps of this ring which we interpret as additional excitation of the gas due to shocks from the impact of the jet (discussed in more detail in Section \ref{subsec:BPT}). The simplest comment that we can make of the ionized gas kinematics is that it is completely different than that of the stars. Secondly, that the centre of rotation of the gas appears to be offset from the centre of the galaxy (as defined by the stellar surface brightness) by several arcseconds to the west. 
 
 	\subsection{Kinematic mis-alignments}
-		\citet{Davis2011a} showed that $36\pm5$\% of fast rotators have ionized gas kinematics misaligned with respect to the stellar kinematics, while slow rotators have a flat distribution of misalignments. This indicates that slow rotators are dominated by external sources of gas, while fast rotators can have either internal or external sources. This is consistent with our observations of the Southern Sample: the only slow rotator with detected ionized gas is IC 1459, which has significantly kinematically-misaligned gas; of the 3 fast rotators, only 1 (NGC 3100) is definitely misaligned, while NGC 612 is consistent with an internal gas origin and NGC 1316 is not clear, although the best-fit exponential disc model (see Fig.\ \ref{fig:Inflow}) is definitely misaligned to the stellar kinematics.
+		\citet{Davis2011a} showed that $36\pm5$\% of fast rotators have ionized gas kinematics misaligned with respect to the stellar kinematics, while slow rotators have a flat distribution with respect to their misalignment angles \citep[see fig.\ 4]{Davis2011a}. This indicates that slow rotators are dominated by external sources of gas, while fast rotators can have either internal or external sources. This is consistent with our observations of the Southern Sample: the only slow rotator with detected ionized gas is IC 1459, which has significantly kinematically-misaligned gas; of the 3 fast rotators, only 1 (NGC 3100) is definitely misaligned, while NGC 612 is consistent with an internal gas origin and NGC 1316 is not clear, although the best-fit exponential disc model (see Fig.\ \ref{fig:Inflow}) is definitely misaligned to the stellar kinematics.
 
 \section{Ionization Sources}
 	\label{sec:Diagnostics}
-	Determining the sources of ionizing radiation in galaxies using emission line ratios, such as Baldwin--Phillips--Terlevich (BPT) plots (\citealt{Baldwin1981}; revised by \citealt{Kewley2001, Kewley2006} and \citealt{Kauffmann2003a}), has become increasingly widespread exercise. That said, there are several important caveats. Firstly, great care must be taken when applying each diagnostic; much of the literature misinterprets the resulting classifications. Secondly, in the absence of spatially-resolved spectra, low-ionization nuclear emission-line region (LINER) classifications have often been taken as a marker for jet-mode active galactic nuclei (AGN). As discussed in Section \ref{subsubsec:JetFeedback} however, several recent surveys have shown that many of these may not be bona fide AGN \citep[e.g.][]{Sarzi2005, Sarzi2010, Singh2013, Belfiore2016a}. In these cases, the emission may not even originate exclusively from the centres of the galaxies, the location of the putative AGN. This led to the creation of the low-ionization emission-line region (LIER) classification, with the same criteria as LINERs, but not necessarily restricted to the nuclear regions.
+	Determining the sources of ionizing radiation in galaxies using emission line ratios, such as Baldwin\,--\,Phillips\,--\,Terlevich (BPT) plots (\citealt{Baldwin1981}; revised by \citealt{Kewley2001, Kewley2006} and \citealt{Kauffmann2003a}), has become increasingly widespread exercise. That said, there are several important caveats. Firstly, great care must be taken when applying each diagnostic; much of the literature misinterprets the resulting classifications. Secondly, in the absence of spatially-resolved spectra, low-ionization nuclear emission-line region (LINER) classifications have often been taken as a marker for jet-mode active galactic nuclei (AGN). As discussed in Section \ref{subsubsec:JetFeedback} however, several recent surveys have shown that many of these may not be bona fide AGN \citep[e.g.][]{Sarzi2005, Sarzi2010, Singh2013, Belfiore2016a}. In these cases, the emission may not even originate exclusively from the centres of the galaxies, the location of the putative AGN. This led to the creation of the low-ionization emission-line region (LIER) classification, with the same criteria as LINERs, but not necessarily restricted to the nuclear regions.
 
 	The problem with classifying ETGs by their emission lines is that they often have very little ionized gas and weak ionizing radiation fields, so that it is often difficult to detect emission lines from their ISM. Furthermore, the BPT plots require a larger spectral range than many integral-field spectrographs (IFS) deliver. This has given rise to a number of other, analogous, classifying plots, that we take advantage of here. A description of our ionization source classifying process follows below. 
 
@@ -181,9 +181,9 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 
 		The two transformations that we use are from [\ion{N}{ii}]/H$\alpha$ to [\ion{N}{i}]/H$\beta$ line ratios and from the H$\alpha$ to the H$\beta$ equivalent widths. In both cases we fit a linear relationship $y = Ax + B$ using the least-trimmed squares routine, \textsc{lts\_linefit}\footnote{http://www-astro.physics.ox.ac.uk/\~mxc/software/\#lts} of \citet{Cappellari2013} due to its robust handling of the uncertainties along both axes. These are shown in Figs.\ \ref{fig:ratio_relation} and \ref{fig:EqW_relation}, where we find
 		\begin{align}
-		\frac{[\text{\ion{N}{i}}]}{H\beta} & = \, (0.38 \pm 0.02) \frac{[\text{\ion{N}{ii}}]}{H\alpha} + (1.80 \pm 0.02)
+		\frac{[\text{\ion{N}{ii}}]}{H\alpha} & = \, (0.38 \pm 0.02) \frac{[\text{\ion{N}{i}}]}{H\beta} + (1.80 \pm 0.02)
 		\intertext{and}
-		\mathrm{EW}(H\beta) & = \, (2.92 \pm 0.03) \mathrm{EW}(H\alpha) - (0.16 \pm 0.02) \, ,
+		\mathrm{EW}(H\alpha) & = \, (2.92 \pm 0.03) \mathrm{EW}(H\beta) - (0.16 \pm 0.02) \, ,
 		\end{align}
 		respectively.
 
@@ -255,7 +255,7 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 			\label{fig:SAURON}
 		\end{figure}
 
-		\citet{Sarzi2010} showed that Seyferts, LINERs and star-forming galaxies are reasonable separated in the SAURON diagnostic plot. To exploit the VIMOS datacubes we thus use the [\ion{N}{ii}] -- [\ion{N}{i}] relation derived in Section \ref{subsec:Ndec}, along with the Balmer decrement, to transform the \citet{Kewley2001} extreme starburst and the \citet{Kauffmann2003a} pure star-formation boundaries in the [\ion{N}{ii}]/H$\alpha$ versus [\ion{O}{iii}]/H$\beta$ plot to boundaries in the SAURON plot. For the MUSE datacubes, only IC 1459 and NGC 1316 have detections of [\ion{N}{i}]. Given that we already have the superior classic BPT plots for these galaxies, we only show the VIMOS-derived SAURON diagnostic plot. This is shown in Fig.\,\ref{fig:SAURON} for all 6 VIMOS galaxies with detectable, spatially-resolved emission lines. All exhibit LINER-AGN behaviour.
+		\citet{Sarzi2010} showed that Seyferts, LINERs and star-forming galaxies are reasonable separated in the SAURON diagnostic plot. To exploit the VIMOS datacubes we thus use the [\ion{N}{ii}]\,--\,[\ion{N}{i}] relation derived in Section \ref{subsec:Ndec}, along with the Balmer decrement, to transform the \citet{Kewley2001} extreme starburst and the \citet{Kauffmann2003a} pure star-formation boundaries in the [\ion{N}{ii}]/H$\alpha$ versus [\ion{O}{iii}]/H$\beta$ plot to boundaries in the SAURON plot. For the MUSE datacubes, only IC 1459 and NGC 1316 have detections of [\ion{N}{i}]. Given that we already have the superior classic BPT plots for these galaxies, we only show the VIMOS-derived SAURON diagnostic plot. This is shown in Fig.\,\ref{fig:SAURON} for all 6 VIMOS galaxies with detectable, spatially-resolved emission lines. All exhibit LINER-AGN behaviour.
 
 		NGC 3100 appears to occupy to distinct regions in the SAURON diagnostic plot (Fig.\ \ref{fig:SAURON}). If the ionization is due to shocks from the impact of the jet, then using the shock models of \citet{Allen2008}, we can see that the right-hand group of bins have been ionized by a higher shock velocity that the left-hand group. As can be seen in Fig.\ \ref{fig:ngc3100_NI_Hb}, these bins are directly in the gap (presumable created by the jet blowing a hole) in the CO ring.
 
@@ -282,9 +282,11 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 			\label{fig:WHbN1}
 		\end{figure}
 
-		The final spatially-resolved line ratio diagnostic plot that we use is that of the equivalent width of H$\alpha$ versus $\log([\text{\ion{N}{ii}}]/H\alpha)$, known as the WHaN2 plot \citep{}. In Fig.\,\ref{fig:WHaN2} we show the WHaN2 plot for the MUSE derived emission lines of IC 4296. We do not include IC 1459 and NGC 1316, as they have already been classified via the classic BPT plots (see Section \ref{subsec:BPT}). We interpret the weak AGN classification of IC 4296 as LINER-AGN.
+		The final spatially-resolved line ratio diagnostic plot that we use is that of the equivalent width of H$\alpha$ versus $\log([\text{\ion{N}{ii}}]/H\alpha)$, known as the WHaN2 plot \citep{CidFernandes2011}. We interpret the strong AGN, weak AGN and retired regions on this plot as Seyfert 2, LINER-AGN and LIER classifications, respectively. Passive (i.e.\ line-less) galaxies are marked with crosses instead of circles. Fig.\,\ref{fig:WHaN2} shows the WHaN2 plot for the MUSE derived emission lines of IC 4296 where all the bins fall within the weak AGN (LINER-AGN) class. This is consistent with the measurements from the VIMOS observations of the IC 4296 as shown in the SAURON diagnostic plot, where IC 4296 is well within the shocks grid (i.e.\ LINERs; see Fig.\ \ref{fig:SAURON}). We do not include IC 1459 and NGC 1316, as they have already been classified via the classic BPT plots (see Section \ref{subsec:BPT}). 
 
-		For the emission lines measured from the VIMOS datacubes, we use H$\beta$ as a proxy for H$\alpha$ and [\ion{N}{i}] as a proxy for [\ion{N}{ii}] utilising the Balmer, Nitrogen and stellar `decrements' to transform the classification boundaries (see Section \ref{subsec:Ndec}). We call the resulting diagnostic plot the WHbN1 plot, as shown in Fig.\,\ref{fig:WHbN1}.
+		For the emission lines measured from the VIMOS datacubes, we use H$\beta$ as a proxy for H$\alpha$ and [\ion{N}{i}] as a proxy for [\ion{N}{ii}] utilising the relations found in Section \ref{subsec:} to transform the classification boundaries (see Section \ref{subsec:Ndec}). We call the resulting diagnostic plot the WHbN1 plot, shown in Fig.\,\ref{fig:WHbN1}. 
+
+
 
 		
 
@@ -315,24 +317,24 @@ This chapter is structured as follows. Firstly in Section \ref{sec:gasFlux} the 
 
 	\subsection{MEx Diagnostic Plots}
 		\label{subsec:MEx}
-		The mass--excitation (MEx) plot of \citet{Juneau2011} is useful to classify galaxies with intermediate excitation levels ($0.5 < \mathrm{[\ion{O}{iii}]/H\,\beta} < 8.0$), particularly as it does not depend on faint lines such as the [\ion{N}{I}] doublet. We use here the calibrations by \citet{Nyland2016}, including an attempt to separate LINERs powered by AGN from those powered by pAGB stars (the former have [\ion{O}{iii}] equivalent widths $>0.8$\,\AA). We use an aperture of 3\arcsec to plot the nuclear MEx for our Southern Sample galaxies, and the resulting diagnostic plot is shown in Fig.\,\ref{fig:MEx}. 
+		The mass\,--\,excitation (MEx) plot of \citet{Juneau2011} is useful to classify galaxies with intermediate excitation levels ($0.5 < \mathrm{[\ion{O}{iii}]/H\,\beta} < 8.0$), particularly as it does not depend on faint lines such as the [\ion{N}{I}] doublet. We use here the calibrations by \citet{Nyland2016}, including an attempt to separate LINERs powered by AGN from those powered by pAGB stars (the former have [\ion{O}{iii}] equivalent widths $>0.8$\,\AA). We use an aperture of 3\arcsec to plot the nuclear MEx for our Southern Sample galaxies, and the resulting diagnostic plot is shown in Fig.\,\ref{fig:MEx}. 
 
 
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.8\textwidth]{chapter5/nuclear_MEx.png}
-			\caption[Nuclear mass--excitation plot]{Nuclear MEx plot, allowing to classify the sources of the ionizing radiation within the central 3\arcsec. Data points derived from the VIMOS and MUSE datacubes are in red and blue, respectively. Crosses mark galaxies with [\ion{O}{iii}]$\lambda$5007 equivalent width $> 0.8$\,\AA, while filled circles show galaxies with [\ion{O}{iii}]$\lambda$5007 equivalent width $\leqslant 0.8$\,\AA. The VIMOS and MUSE data points of IC 1459 are linked with a black dashed line. Classification boundaries are from \citet{Nyland2016}.}
+			\caption[Nuclear mass\,--\,excitation plot]{Nuclear MEx plot, allowing to classify the sources of the ionizing radiation within the central 3\arcsec. Data points derived from the VIMOS and MUSE datacubes are in red and blue, respectively. Crosses mark galaxies with [\ion{O}{iii}]$\lambda$5007 equivalent width $> 0.8$\,\AA, while filled circles show galaxies with [\ion{O}{iii}]$\lambda$5007 equivalent width $\leqslant 0.8$\,\AA. The VIMOS and MUSE data points of IC 1459 are linked with a black dashed line. Classification boundaries are from \citet{Nyland2016}.}
 			\label{fig:MEx}
 		\end{figure}
 
 
 \section{Discussion}
 	\label{sec:gasDiscussion}
-	In the previous subsections we have shown that galaxies in our Southern Sample have ionized gas masses of $10^4$--$10^6\,\mathrm{M_\odot}$. These are at the upper limit of, and possibly exceed, the typical masses observed in ETGs, although given that our sample contains particularly massive galaxies, high ionized gas masses are not unexpected. 
+	In the previous subsections we have shown that galaxies in our Southern Sample have ionized gas masses of $10^4$\,--\,$10^6\,\mathrm{M_\odot}$. These are at the upper limit of, and possibly exceed, the typical masses observed in ETGs, although given that our sample contains particularly massive galaxies, high ionized gas masses are not unexpected. 
 
-	The only slow rotator with detected, spatially-extended ionized gas, IC 1459, shows evidence through gas--star kinematic misalignment that the gas has an external origin, although it is possible that the gas has been re-accreted after it was first ejected during the merger that resulted in the stellar KDC. 
+	The only slow rotator with detected, spatially-extended ionized gas, IC 1459, shows evidence through gas\,--\,star kinematic misalignment that the gas has an external origin, although it is possible that the gas has been re-accreted after it was first ejected during the merger that resulted in the stellar KDC. 
 
-	Of the other 3 galaxies with detected, spatially-extended ionized gas (NGC 612, NGC 1316 and NGC 3100, all fast rotators), we find that one, NGC 3100, again has kinematic evidence of an external gas origin; another, NGC 612, is consistent with an internal origin; while the situation for the last one (NGC 1316) is not clear, although is definitely not in a settled disc. This is in keeping with the findings of \citet{Davis2011a}, who showed that $36\pm5$\% of fast rotators have ionized gas kinematics misaligned with respect to the stellar kinematics, while slow rotators have a flat distribution of misalignments. This indicates that slow rotators are dominated by external sources of gas, while fast rotators can have either internal or external sources. 
+	Of the other 3 galaxies with detected, spatially-extended ionized gas (NGC 612, NGC 1316 and NGC 3100, all fast rotators), we find that one, NGC 3100, again has kinematic evidence of an external gas origin; another, NGC 612, is consistent with an internal origin; while the situation for the last one (NGC 1316) is not clear, although is definitely not in a settled disc. This is in keeping with the findings of \citet{Davis2011a}, who showed that $36\pm5$\% of fast rotators have ionized gas kinematics misaligned with respect to the stellar kinematics, while slow rotators have a flat distribution with respect to their misalignment angles. This indicates that slow rotators are dominated by external sources of gas, while fast rotators can have either internal or external sources. 
 
 	All galaxies with detectable emission lines in our Southern Sample show LINER or Seyfert 2 characteristics, and the two galaxies that are classified as Seyfert 2s (NGC 612 and NGC 3100) are very close to the boundary between the Seyfert 2 and LINER classes. Both are also fast rotators. This is consistent with the results of \citet{Nyland2016}, who showed that all ETGs in the Atlas$^\text{3D}$ sample classified as Seyferts are also fast rotators. 
 
