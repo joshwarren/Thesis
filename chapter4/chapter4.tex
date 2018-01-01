@@ -1,10 +1,8 @@
 \chapter{Stellar Kinematics and Populations}
 	\label{cha:stellar}
-% More preface here
 With the advent of integral-field spectroscopy (IFS), we can now observe the spatially-resolved properties of a galaxy without relying on extrapolations of or multiple observations with slits. Surveys such as the Spectrographic Areal Unit for Research on Optical Nebulae (SAURON; \citealt{deZeeuw2002}) and Atlas$^\text{3D}$ \citep{Cappellari2011} have demonstrated that systematic IFS surveys provide a wealth of information about the structure of nearby galaxies. This chapter focuses on the resolved stellar properties of our sample of radio galaxies. In this we aim to demonstrate that our radio selected sample is no different in the $V$-band than optically-selected early-type galaxies ETGs from the MASSIVE (not an acronym; \citealt{Ma2014}) and Atlas$^\text{3D}$ samples. We achieve this by showing that they are consistent with the defining characteristics of ETGs that are accessible to $V$-band IFS data. These characteristics are (with relevant section is shown in parentheses): regular/non-regular rotator classification scheme, qualitative kinematic classes (see Fig.\,\ref{fig:EgSubstructure}; Section \ref{subsec:maps}), fast/slow rotator classifications (\ref{subsec:FSRot}), radially resolved specific angular momentum profiles (with $\lambda_R$; \ref{subsec:ResolvedLambda_R}), absorption line strengths(\ref{subsec:absorption}), Mg\,--\,$\sigma$ relation (\ref{subsubssec:Mgsigma}), stellar populations (\ref{subsec:ssp}) and their gradients (\ref{subsubsec:popGrad}) and the kinematically-decoupled core (KDC) age\,--\,size relation(\ref{subsec:popKDC}). 
-% ^^^^^^^^^^^^^^^ check section references above are correct ^^^^^^^^^^^^^^^
 
-The chapter is structured as follows: firstly we present the kinematic maps for the stellar component of each galaxy (section \ref{sec:stellarKin}) and the distribution of the sample on the $\lambda_\mathrm{R_e}$\,--\,ellipticity diagram. Then, in section \ref{sec:pop}, we investigate the stellar populations of each galaxy using the measured absorption line strengths. Finally, in Section \ref{sec:stellarDiscussion} we discuss these observation.
+The chapter is structured as follows: firstly we present the kinematic maps for the stellar component of each galaxy (section \ref{sec:stellarKin}) and the distribution of the sample on the $\lambda_\mathrm{R_e}$\,--\,ellipticity diagram. Then, in section \ref{sec:pop}, we investigate the stellar populations of each galaxy using the measured absorption line strengths, looking for atypical ETGs (a typical ETG has old, metal rich, alpha-enhanced stellar populations with vertually no radial gradients). Finally, in Section \ref{sec:stellarDiscussion} we discuss these observations.
 
 
 \section{Kinematics}
@@ -15,9 +13,6 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 		Using the methods described in Chapter \ref{cha:Data} to reduce (see Sections \ref{subsec:VIMOSreduction} and \ref{subsec:MUSEreduction}), spatially bin (Section \ref{subsec:Binning}) and fit the stellar line-of-sight velocity distributions (LOSVDs; here parametrised by the mean velocity, $v$ and velocity dispersion, $\sigma$, only; Section \ref{subsec:StellarFit}), we produce stellar kinematic maps. These kinematic maps are shown in Figs.\,\ref{fig:VIMOS_stellar} and \ref{fig:MUSE_stellar} with their associated uncertainties for the VIMOS and MUSE datacubes, respectively. 
 
 		As part of this project, radio continuum maps have been produced by Robert Laing (private communication) by re-reducing archival data from the Very Large Array (VLA) in a variety of bands. We also use the VLA image from \citet{Lanz2010} for NGC 1316. These images have a variety of resolutions and spatial scales: we choose the image that closest matches our VIMOS and MUSE observations and overlay this on all maps (except those showing uncertainties) in green contours. Additionally, this project has also secured observations of the Southern Sample (except NGC 1316 and NGC 1399 for technique reasons) from the Atacama Large Millimeter/sub-millimeter Array (ALMA). \ce{^{12}CO(2-1)} flux maps have been produced by Ruffa et al.\ (in prep.). These are shown in cyan contours on all maps (except those showing uncertainties). 
-% Is the radio still in green contours? 
-
-
 
 		\begin{figure}
 			\centering
@@ -279,7 +274,6 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 			Table \ref{tab:litAbsorption} summarises our comparisons to the literature. For the comparison to \citet{Vazdekis2010}, we analysed the SAURON dataset\footnote{\url{http://www.strw.leidenuniv.nl/sauron/}} \citep{Emsellem2004} using the same analysis pipeline as for our Southern Sample. 
 
 
-% Should SARUON comparison be in Chapter 2 as a test of the pipeline?
 			\begin{table}
 				\centering
 			\begin{threeparttable}
@@ -359,12 +353,12 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 		\label{subsec:ssp}
 		We have assumed that a given spectrum from our Southern sample can be well approximated by a SSP. We use the method described in Section \ref{subsubsec:StellarPop} to produce maps of the most-likely SSP characteristics: age ($t$), metallicity ($Z/H$) and alpha-element enhancement ($\alpha$/Fe) from the absorption line strength maps. 
 
-		Figs.\,\ref{fig:VIMOS_pop} and \ref{fig:MUSE_pop} show the resolved most-likely stellar populations for our Southern sample. In general they show old, metal rich and alpha enhanced SSPs; qualities which ETGs are well known for. The exceptions are NGC 612 and NGC 1316. Both galaxies are described in more detail in Appendix \ref{cha:Description}, but NGC 1316 shows a very young stellar population (our fit of $t \approx 2$\,Gyr agrees with that of \citealt{Kuntschner2000}, but is conflicting with the older and less metal rich stellar population of \citealt{Koleva2011} who found $t=4.5 \pm 0.3 \,\mathrm{Gyr}$ and $\mathrm{[Fe/H]}=0.12 \pm 0.01 \,\mathrm{[Fe/H]_\odot}$ for an aperture covering the central 0.1 kpc). NGC 3557 is notable for containing a significantly younger ($t\approx 4$\,Gyr) core of about 10\arcsec\ diameter and NGC 3100 has a branch of young stars ($\approx 4$\,Gyr) along the southeast branch of the molecular gas (cyan contours).
+		Figs.\,\ref{fig:VIMOS_pop} and \ref{fig:MUSE_pop} show the resolved most-likely stellar populations for our Southern sample. In general they show old, metal rich and alpha enhanced SSPs; qualities which ETGs are well known for. The exceptions are NGC 612 and NGC 1316. Both galaxies are described in more detail in Appendix \ref{cha:Description}, but NGC 1316 shows a very young stellar population (our fit of $t \approx 2$\,Gyr agrees with that of \citealt{Kuntschner2000}, but is conflicting with the older and less metal rich stellar population of \citealt{Koleva2011} who found $t=4.5 \pm 0.3 \,\mathrm{Gyr}$ and $\mathrm{[Fe/H]}=0.12 \pm 0.01 \,\mathrm{dex}$ for an aperture covering the central 0.1 kpc). NGC 3557 is notable for containing a significantly younger ($t\approx 4$\,Gyr) core of about 10\arcsec\ diameter and NGC 3100 has a branch of young stars ($\approx 4$\,Gyr) along the southeast branch of the molecular gas (cyan contours).
 
 		\begin{figure}
 			\centering
 			\includegraphics[height=0.63\textheight]{chapter4/vimos/pop1.png}
-			\caption[VIMOS stellar population maps]{VIMOS stellar population maps: Left to right: age, metallicity and alpha enhancement; Top to bottom: ESO 443-G24 and IC 1459. Alternate rows show a given parameter its associated uncertainty. Contours are as in Fig.\,\ref{fig:VIMOS_stellar}. Limits on the colour scale are: age (and associated uncertainty) 0--15 (0--2)\,Gyr, metallicity (and associated uncertainty) -2.25--0.67 (0--0.4)\,$\mathrm{[Fe/H]_\odot}$ and alpha enhancement (and associated uncertainty) -0.3--0.5 (0-0.25)\,$\mathrm{[\alpha/Fe]_\odot}$.}
+			\caption[VIMOS stellar population maps]{VIMOS stellar population maps: Left to right: age, metallicity and alpha enhancement; Top to bottom: ESO 443-G24 and IC 1459. Alternate rows show a given parameter its associated uncertainty. Contours are as in Fig.\,\ref{fig:VIMOS_stellar}. Limits on the colour scale are: age (and associated uncertainty) 0--15 (0--2)\,Gyr, metallicity (and associated uncertainty) -2.25--0.67 (0--0.4)\,$\mathrm{dex}$ and alpha enhancement (and associated uncertainty) -0.3--0.5 (0-0.25)\,$\mathrm{dex}$.}
 			\label{fig:VIMOS_pop}
 		\end{figure}
 		\begin{figure}
@@ -395,9 +389,6 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 			\contcaption{\textit{Continued.}}
 		\end{figure}
 
-% Could be moved to discussion?
-		% If molecular (cold) gas is the fuel source that is accreted on to the the central black holes of our Southern sample in order to power the radio jets, unless it is accreted in a highly turbulent fashion, it might be expected that some of that gas might form stars \citep[e.g.][]{Collin1999, Diamond-Stanic2012, LaMassa2013}. If this is the case then a young stellar population might be expected to dominate in the very central (1--2) spaxels. We our maps show no evidence of this. 
-
 
 		\subsubsection{Radial Gradients in Stellar Populations}
 			\label{subsubsec:popGrad}
@@ -412,7 +403,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 					\hline
 					\hline 
 					Galaxy 	& $\Delta_\text{log age}$ & $\Delta_\text{[Fe/H]}$ \\ 
-						& dex\,arcsec$^{-1}$ & [Fe/H]$_\odot$ arcsec$^{-1}$ \\
+						& dex\,arcsec$^{-1}$ & dex\,arcsec$^{-1}$ \\
 					\hline
 					ESO 443-G024 & $0.019 \pm 0.013$ & $-0.01 \pm 0.02$ \\
 					IC 1459 	& $0.003 \pm 0.002$ & $0.00 \pm 0.06$ \\
@@ -430,7 +421,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 				\end{tabular}
 			\end{table}
 
-			We find average gradients of $\Delta_\text{log age} = 0.014\pm0.007 \,\mathrm{dex \, arcsec^{-1}}$ and $\Delta_\text{[Fe/H]} = -0.03\pm0.01 \, \mathrm{[Fe/H]_\odot \, arcsec^{-1}}$. This is consistent with \citet{Koleva2011} who, for elliptical galaxies found average gradients of $0.06\pm0.09 \, \mathrm{dex \, arcsec^{-1}}$ and $-0.26\pm0.08 \, \mathrm{[Fe/H]_\odot \, arcsec^{-1}}$ for the age and metallicity gradients, respectively. For S0s they find flatter corresponding gradients of $0.01\pm0.11\, \mathrm{dex \, arcsec^{-1}}$ and $-0.12\pm0.13\, \mathrm{[Fe/H]_\odot \, arcsec^{-1}}$. 
+			We find average gradients of $\Delta_\text{log age} = 0.014\pm0.007 \,\mathrm{dex \, arcsec^{-1}}$ and $\Delta_\text{[Fe/H]} = -0.03\pm0.01 \, \mathrm{dex \, arcsec^{-1}}$. This is consistent with \citet{Koleva2011} who, for elliptical galaxies found average gradients of $0.06\pm0.09 \, \mathrm{dex \, arcsec^{-1}}$ and $-0.26\pm0.08 \, dex \, arcsec^{-1}}$ for the age and metallicity gradients, respectively. For S0s they find flatter corresponding gradients of $0.01\pm0.11\, \mathrm{dex \, arcsec^{-1}}$ and $-0.12\pm0.13\, \mathrm{dex \, arcsec^{-1}}$. 
 
 % SSP -- sigma relation here?
 
@@ -456,20 +447,12 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 	
 \section{Discussion}
 	\label{sec:stellarDiscussion}
-	In this chapter we have shown that in terms of the stellar kinematic properties and stellar populations, our radio-selected Southern sample are no different to ordinary optically-selected ETGs. 
-	Our sample shows a mixture of of regularly- and non-regularly-rotating behaviours, with both classes showing evidence of consistency with observations of the intrinsic shapes of ordinary regular and non-regular rotators. 
-	We also classify our sample galaxies into fast- and slow-rotators and find a consistent fraction of slow-rotators to the ordinary ETG samples of the A+M sample, once the difference in the mass distribution between our Southern sample and the A+M sample are taken into account. 
+	In this chapter we have shown that in terms of the stellar kinematic properties and stellar populations, our radio-selected Southern sample are no different to ordinary optically-selected ETGs. Our sample shows a mixture of of regularly- and non-regularly-rotating behaviours, with both classes showing evidence of consistency with observations of the intrinsic shapes of ordinary regular and non-regular rotators. At this stage we observe that 2 (with a tentivitly third) galaxies host large kinematically decoupled cores (KDCs). We also classify our sample galaxies into fast- and slow-rotators and find a consistent fraction ($45\pm13$\%) of slow-rotators to the ordinary ETG samples of the A+M sample, once the difference in the mass distribution between our Southern sample and the A+M sample are taken into account. 
 
-	
-% better word than common?
+	In terms of stellar populations, we find a remarkably similar gradient to the central Mg\,b verse stellar velocity dispersion relation to that of \citet{Ziegler1997}. Most of the galaxies in our Southern sample show typical ETG behavior: old, metal rich stellar populations, with a few exceptions: NGC 612 and NGC 1316 are both significantly younger than most ETGs and NGC 3557 has a young core. All are described in more detail in Appendix \ref{cha:Description}. We observe that all 3 KDCs contain old stellar populations and are consistent with being merger remiants. 
 
-	% We interpret S0 galaxies as well inclined discs, but we should should however make explicit the distinction between fast rotators and disc galaxies. We define disc galaxies as rotationally supported with $\frac{|v_\text{int}|}{\sigma} > 1$, where $v_\text{int}$ is the peak intrinsic velocity. It is not uncommon to have dispersion-dominated fast-rotators. Assuming our fast rotators to be axisymmetric (i.e. the intrinsic ellipticity is 1 such that $\frac{|v_\text{int}|}{\sigma} = \frac{|v|}{\sigma \cos\sin^{-1}\epsilon}$), we find only NGC 612 to be a true disc with $\frac{|v_\text{int}|}{\sigma} = 1.04$, consistent with is classification as one of the few radio-loud S0s \citep{}. NGC 3100 and NGC 3557 are the next closest, both with $\frac{|v_\text{int}|}{\sigma} \approx 0.8$. 
+	All these observations and findings, are consistant with those of typical massive ETGs. This is consistant with the hypothosis that radio-galaxies are ordinary massive ETGs experiencing a normal but short-lived active phase. 
 
-	% This suggests that while the formation of jet-mode AGN does not explicitly require the galaxy disc to have been destroyed (presumably via a dry major merger), such an event significantly enhances the likelihood of it occurring.
+	Radio-loud lenticular (S0) galaxies are extremely rare with only a handful of known cases \citep[e.g.][]{Heckman1982, Morganti2011}, presumably due to the associated mass functions of both S0s and radio galaxies: both massive S0s and low-mass radio galaxies are rare, with a similar transition masses from rare to more numerous. NGC 612 is one of those rare cases.
 
-	In terms of stellar populations, we find a remarkably similar gradient to the central Mg\,b verse stellar velocity dispersion relation to that of \citet{Ziegler1997}. Most of the galaxies in our Southern sample show typical ETG behavior: old, metal rich stellar populations, with a few exceptions: NGC 612 and NGC 1316 are both significantly younger than most ETGs and NGC 3557 has a young core. All are described in more detail in Appendix \ref{cha:Description} 
-% Does NGC 3557 have a large -ve age gradient?  
-
-	Radio-loud lenticular (S0) galaxies are extremely rare with only a handful of known cases \citep[e.g.][]{Heckman1982, Morganti2011}, presumably due to the associated mass functions of both S0s and radio galaxies: both massive S0s and non-massive radio galaxies are rare, with a similar transition masses from rare to more numerous. NGC 612 is one of those rare cases. 	
-
-	Finally, if molecular (cold) gas is the fuel source that is accreted on to the the central black holes of our Southern sample in order to power the radio jets, unless it is accreted in a highly turbulent fashion, it might be expected that some of that gas might form stars \citep[e.g.][]{Collin1999, Diamond-Stanic2012, LaMassa2013}. If this is the case then a young stellar population might be expected to dominate in the very central (1--2) spaxels. We our maps show no evidence of this. 
+	Finally, if molecular (cold) gas is the fuel source that is accreted on to the the central black holes of our Southern sample in order to power the radio jets, unless it is accreted in a highly turbulent fashion, it might be expected that some of that gas might form stars \citep[e.g.][]{Collin1999, Diamond-Stanic2012, LaMassa2013}. If this is the case then a young stellar population might be expected to dominate in the very central (1--2) spaxels. We our best-fitting age maps show no evidence of this. 

@@ -224,7 +224,7 @@ def ngc3100_NI_Hb():
 	from plot_results import add_
 	from errors2 import get_dataCubeDirectory
 
-	Prefig(size=(10,10))
+	Prefig(size=(8,8))
 	fig, ax = plt.subplots()
 
 	f = fits.open(get_dataCubeDirectory(galaxy))
@@ -416,7 +416,7 @@ def BPT():
 				y_line2 = 1.89 * x_line2 + 0.76
 				ax[j, i].plot(x_line2, y_line2, 'k')
 
-				lab = r'[SII]$\lambda$$\lambda$6717,6731'
+				lab = r'$\log\left(\frac{[SII]\lambda\lambda6717,6731}{H\alpha}\right)$'
 				ax[j, i].set_xlim([-1.2, 0.7])
 
 
@@ -446,7 +446,7 @@ def BPT():
 				m2 = y_line2 < 1
 				ax[j, i].plot(x_line2[m2], y_line2[m2],'k--')
 
-				lab = r'[NII]$\lambda$6584'
+				lab = r'$\log\left(\frac{[NII]\lambda6584}{H\alpha}\right)$'
 
 				ax[j, i].set_xlim([-2, 1])
 				# add_grids(ax[j, i], '[NII]','[OIII]', x_Ha=True)
@@ -477,7 +477,7 @@ def BPT():
 
 				# ax[j, i].axvline(-0.59, ls='--', c='k')
 
-				lab = r'[OI]$\lambda$6300'
+				lab = r'$\log\left(\frac{[OI]\lambda6300}{H\alpha}\right)$'
 
 				ax[j, i].set_xlim([-2.2, 0])
 
@@ -492,17 +492,18 @@ def BPT():
 			myerrorbar(ax[j, i], x, y, xerr=x_err, yerr=y_err, marker='.', 
 				color=r)
 
-			ax[1, i].set_xlabel(r'log(%s/$H_\alpha$)' %( lab), size='x-large')
+			# ax[1, i].set_xlabel(r'%sH$\alpha$)' % (lab), size='x-large')
+			ax[1, i].set_xlabel(lab, size='x-large')
 
 	y_loc = np.mean([ax[0,0].get_position().y0, ax[1,0].get_position().y1])
-	fig.text(ax[0,0].get_position().x0-0.02, y_loc, 
-		r'log [OIII]$\lambda$5007/H$\,\beta$', va='center', ha='right', 
+	fig.text(ax[0,0].get_position().x0-0.03, y_loc, 
+		r'$\log\left(\frac{[OIII]\lambda5007}{H\beta}\right)$', va='center', ha='right', 
 		rotation='vertical', size='x-large')
 	for i, g in enumerate(['IC 1459', 'NGC 1316']):
 		loc = np.mean([ax[i,0].get_position().y0, 
 			ax[i,0].get_position().y1])
 		print g
-		fig.text(0.07, loc, g, va='center', ha='right', 
+		fig.text(0.06, loc, g, va='center', ha='right', 
 			rotation='vertical', size='xx-large')
 	for a in ax[0,:]:
 		a.set_xticklabels([])
@@ -515,7 +516,7 @@ def BPT():
 
 
 def SAURON():
-	Prefig()
+	Prefig(size=(13,10))
 	fig, ax = plt.subplots()
 
 	galaxies = np.array(['eso443-g024', 'ic1459', 'ic1531', 'ic4296', 
@@ -557,8 +558,8 @@ def SAURON():
 	ax.text(-1.9, -0.2, 'Star-forming')
 	ax.text(-0.7, -0.75, 'Composite', rotation=280, va='center', ha='center')
 
-	ax.set_xlabel(r'log [NI]$\lambda\lambda$5197,5200/H$\,\beta$')
-	ax.set_ylabel(r'log [OIII]$\lambda$5007/H$\,\beta$')
+	ax.set_xlabel(r'$\log\left(\frac{[NI]\lambda\lambda5197,5200}{H\beta}\right)$')
+	ax.set_ylabel(r'$\log\left(\frac{[OIII]\lambda5007}{H\beta}\right)$')
 
 	ax.set_xlim([-2., 1.])
 	ax.set_ylim([-1.5, 1.5])
@@ -583,7 +584,8 @@ def SAURON():
 	ax.set_ylim([-1.5, 1.5])
 
 
-	fig.savefig('%s/Documents/thesis/chapter5/SAURON.png' % (cc.home_dir), dpi=240)
+	fig.savefig('%s/Documents/thesis/chapter5/SAURON.png' % (cc.home_dir), dpi=240,
+		bbox_inches='tight')
 
 
 
@@ -657,7 +659,6 @@ def WHbN1():
 	ax.text(-1.65, -0.2,'Retired Galaxies')
 
 	fig.savefig('%s/Documents/thesis/chapter5/WHbN1.png' % (cc.home_dir), dpi=240)
-
 
 
 def ic4296_WHaN2():
@@ -825,19 +826,19 @@ if __name__=='__main__':
 
 		# ngc3100_NI_Hb()
 
-		WHbN1()
+		# WHbN1()
 		
 		SAURON()
 
 		# plot(['ic1459', 'ngc0612', 'ngc3100'], 
 		# 	['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
 	elif cc.device == 'uni':
-		ic4296_WHaN2()
+		# ic4296_WHaN2()
 
 		# H_profile(instrument='muse')
 
 		# ngc1316_inflow()
 
-		# BPT()
+		BPT()
 
 		# plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')
