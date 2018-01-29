@@ -65,7 +65,7 @@ For millennia, Man has turned his gaze skyward in awe and wonder at the heavens,
 
 	Most galaxies also emit at radio frequencies. These galaxies are known as radio galaxies (RGs). Mostly this is attributed to star formation, which radiates due to free-free (thermal) emission from regions of ionized ISM (\ion{H}{ii} regions) and synchrotron emission from supernova remnants as relativistic electrons spiral along the strong magnetic field lines. Except in extreme star bursts, radio emission due to star formation is fairly low-level. Many AGN also emit in at radio frequencies due to synchrotron emission from the jets. Not considering star bursts, the brightest sources can be considered bona-fide detections of the AGN jets. However, distinguishing between star-formation and AGN jets can be difficult for fainter sources, though there is no consensus on where this transition should lie. Emission from AGN will always be from the centre of the galaxy (the location of the AGN) and extending out along the trajectory of the jets. However, \citet{Nyland2016} note that in the fainter centrally concentrated RGs, the radio emission is also consistent with circumnuclear star formation.
 
-	There is broad consensus within the literature that the most powerful RGs ($\log P_\mathrm{1.4\, GHz}/(\mathrm{W \, Hz^{-1}}) \gtrsim 25.5$) are the product of gas-rich (wet) major mergers of galaxies (a major merger is defined as a merger of galaxies with a mass ratio smaller than 3:1). These AGN tend to be extremely luminous. Indeed, despite clearly containing a very powerful jet, they are mostly radiative mode AGN. These RGs form a very small minority of the RG population and hence are not representative. Indeed, \citet{Heckman2014} present evidence that most RGs are fueled through secular processes.
+	There is broad consensus within the literature that the most powerful RGs \linebreak($\log P_\mathrm{1.4\, GHz}/(\mathrm{W \, Hz^{-1}}) \gtrsim 25.5$) are the product of gas-rich (wet) major mergers of galaxies (a major merger is defined as a merger of galaxies with a mass ratio smaller than 3:1). These AGN tend to be extremely luminous. Indeed, despite clearly containing a very powerful jet, they are mostly radiative mode AGN. These RGs form a very small minority of the RG population and hence are not representative. Indeed, \citet{Heckman2014} present evidence that most RGs are fueled through secular processes.
 
 	This thesis will compare and contrast the stellar and ionized gas properties of RGs and radio-quiet ETGs. The rest of this chapter will thus cover the background required to study the RG population. Firstly, since RGs are primarily found in ETGs, the current understanding of ETGs will be reviewed. This is mostly a summary of the recent integral field spectroscopy (IFS) surveys including Atlas$^\text{3D}$, MaNGA, MASSIVE, SAMI and Califa, and can be considered as setting out of the control sample for later investigations (see Section \ref{sec:ETG}). Secondly, in Section \ref{sec:AGN}, a more detailed summary of the current state of our understanding of AGN will be presented, including RGs. Finally, the selection criteria of the sample used throughout this thesis will be described (Section \ref{sec:Sample}).
 
@@ -97,7 +97,7 @@ For millennia, Man has turned his gaze skyward in awe and wonder at the heavens,
 		\intertext{where the angled brackets represent flux-weighted averages within a radius $R$, $V$ is the mean stellar velocity and $\sigma$ is the stellar velocity dispersion. For spatially-binned data:}
 		\lambda_R = & \frac{\sum_{i=1}^{N} F_i R_i |V_i|}{\sum_{i=1}^{N} F_i R_i \sqrt{V_i^2 + \sigma_i^2}} \, ,
 	\end{align}
-	where $F_i$ is the flux of the $i^\text{th}$ bin, $R_i$ its distance from the centre and $V_i$ and $\sigma_i$ its mean stellar velocity and velocity dispersion, respectively. The sum is computed over all $N$ bins with a radius $R$. 
+	where $F_i$ is the flux of the $i^\text{th}$ bin, $R_i$ its distance from the centre and $V_i$ and $\sigma_i$ its mean stellar velocity and velocity dispersion, respectively. The sum is computed over all $N$ bins within a radius $R$ of the centre of the galaxy.
 
 	The most recent definition of a slow rotator is
 	\begin{equation}
@@ -331,9 +331,9 @@ For millennia, Man has turned his gaze skyward in awe and wonder at the heavens,
 	\begin{table}
 		\centering
 	\begin{threeparttable}
-		\caption{Key sample characteristics of the Southern Sample galaxies.}
+		\caption{Key observed characteristics of the Southern Sample galaxies.}
 		\label{tab:sample}
-		\begin{tabular}{l l r r r l}
+		\begin{tabular}{l c c c c l}
 			\hline
 			\hline
 			Host galaxy	& Radio source 	& Redshift	& $S_\text{1.4\,GHz}$	& $m_K$ & Dust morphology\\
@@ -341,14 +341,14 @@ For millennia, Man has turned his gaze skyward in awe and wonder at the heavens,
 			\hline 
 			ESO 443-G024 & 1258-321 	& 0.01703	& $1387 \pm 45$		& 8.51 & no dust\tnote{a}	\\ 
 			IC 1459 	& 2254-367 		& 0.00565 	& $1280 \pm 45$		& 6.81 & dust lane\tnote{b}	\\
-			IC 1531 	& 0007-325 		& 0.02553 	& $388 \pm 12$		& 9.55 & --					\\
+			IC 1531 	& 0007-325 		& 0.02553 	& \leavevmode\phantom{0}$388 \pm 12$		& 9.55 & --					\\
 			IC 4296		& 1333-\leavevmode\phantom{0}33 		& 0.01248 	& $1342 \pm 41$		& 7.50 & edge-on disc\tnote{b} \\
-			NGC 612 	& 0131-\leavevmode\phantom{0}36 		& 0.02954 	& $585 \pm 18$		& 9.58 & dust lane\tnote{c}	\\
-			NGC 1316 	& 0320-\leavevmode\phantom{0}37 & 0.00591 	& $255 \pm 10$		& 5.59 & dust patches\tnote{b} \\
-			NGC 1399 	& 0336-\leavevmode\phantom{0}35 & 0.00472 	& $209 \pm \leavevmode\phantom{0}7$	& 6.31 & no dust\tnote{b}	\\
-			NGC 3100 	& 0958-314 		& 0.00879 	& $530 \pm 16$		& 8.08 & dust lane\tnote{d}	\\
-			NGC 3557 	& 1107-372 		& 0.01016 	& $484 \pm 16$		& 7.203 & face-on disc\tnote{b}\\
-			NGC 7075 	& 2128-388 		& 0.01819 	& $837 \pm 28$		& 9.56 & --					\\
+			NGC 612 	& 0131-\leavevmode\phantom{0}36 		& 0.02954 	& \leavevmode\phantom{0}$585 \pm 18$		& 9.58 & dust lane\tnote{c}	\\
+			NGC 1316 	& 0320-\leavevmode\phantom{0}37 & 0.00591 	& \leavevmode\phantom{0}$255 \pm 10$		& 5.59 & dust patches\tnote{b} \\
+			NGC 1399 	& 0336-\leavevmode\phantom{0}35 & 0.00472 	& \leavevmode\phantom{0}$209 \pm \leavevmode\phantom{0}7$	& 6.31 & no dust\tnote{b}	\\
+			NGC 3100 	& 0958-314 		& 0.00879 	& \leavevmode\phantom{0}$530 \pm 16$		& 8.08 & dust lane\tnote{d}	\\
+			NGC 3557 	& 1107-372 		& 0.01016 	& \leavevmode\phantom{0}$484 \pm 16$		& 7.20 & face-on disc\tnote{b}\\
+			NGC 7075 	& 2128-388 		& 0.01819 	& \leavevmode\phantom{0}$837 \pm 28$		& 9.56 & --					\\
 			--			& 0718-\leavevmode\phantom{0}34 		& 0.02897 	& $1119 \pm 41$		& 9.97 & dust patches\tnote{e} \\
 			\hline
 			\hline
