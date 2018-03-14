@@ -3,7 +3,6 @@ cc = checkcomp()
 if 'home' not in cc.device:
 	import matplotlib # 20160202 JP to stop lack-of X-windows error
 	matplotlib.use('Agg') # 20160202 JP to stop lack-of X-windows error
-import cPickle as pickle
 import matplotlib.pyplot as plt 
 import numpy as np 
 from plot_velfield_nointerp import plot_velfield_nointerp
@@ -68,10 +67,14 @@ def plot(galaxies, str_galaxies, file_name):
 
 		vin_dir += '/%s/%s' % (galaxy, opt) 
 
-		pickle_file = '%s/pickled' % (vin_dir)
-		pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
-		D = pickle.load(pickleFile)
-		pickleFile.close()
+		# import cPickle as pickle
+		# pickle_file = '%s/pickled' % (vin_dir)
+		# pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
+		# D = pickle.load(pickleFile)
+		# pickleFile.close()
+
+		from Bin2 import Data
+		D = Data(galaxy, instrument='muse')
 
 		f = fits.open(get_dataCubeDirectory(galaxy))
 		header = f[1].header
@@ -190,8 +193,8 @@ def plot(galaxies, str_galaxies, file_name):
 			ax_loc.y1 += 0.01
 
 	fig.text(0.24, 0.9, r'Flux', va='top', ha='center', size='xx-large')
-	fig.text(0.51, 0.9, r'Velocty', va='top', ha='center', size='xx-large')
-	fig.text(0.8, 0.9, r'Velocty Dispersion', va='top', ha='center', 
+	fig.text(0.51, 0.9, r'Velocity', va='top', ha='center', size='xx-large')
+	fig.text(0.8, 0.9, r'Velocity Dispersion', va='top', ha='center', 
 		size='xx-large')
 
 	if len(galaxies) == 1:

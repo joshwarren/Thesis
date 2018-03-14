@@ -213,6 +213,7 @@ def single_absorption_plot(instrument='vimos'):
 
 	fig.subplots_adjust(wspace=0,hspace=0)
 	fig.savefig('%s/absorption.png' % (instrument), bbox_inches='tight', dpi=200)
+	plt.close('all')
 
 
 
@@ -220,25 +221,124 @@ def single_absorption_plot(instrument='vimos'):
 
 
 def plot_bin(ax, galaxy, bin_num, instrument='vimos', opt='kin'):
+	print 'Plot spectrum fit'
+	ax2 = ax.twinx()
 	D = Data(galaxy, instrument=instrument, opt=opt)
-
 	b = D.bin[bin_num]
 
 	lam = b.lam
 	spectrum = b.spectrum
 	bestfit = b.bestfit
+	resid = spectrum - bestfit
+
 
 	ax.plot(lam, spectrum, 'k', label='Data')
 	ax.plot(lam, bestfit, 'r', label='Bestfit')
 
-	ax2 = ax.twinx()
+	ax2.plot(lam, resid, '.', color='LimeGreen', mec='LimeGreen', ms=4, 
+		label='Residuals')
 
-	ax2.plot(lam, spectrum - bestfit, '.', color='LimeGreen', 
-		mec='LimeGreen', ms=4, label='Residuals')
+	mn = np.min(bestfit)#[goodpixels])
+	mx = np.max(bestfit)#[goodpixels])
+	mn1 = np.max([mn-2*np.std(resid),#[self.goodpixels]), 
+		np.min(resid)])#[self.goodpixels])])
+	ax.set_ylim([mn1, mx] + np.array([-0.05, 0.05])*(mx-mn1))
+	ax2.set_ylim(*ax.get_ylim() - mn)
 
 	plt.show()
 
 
+
+
+# Compare VIMOS and MUSE results
+def compare():
+	print 'Compare VIMOS and MUSE results'
+	
+	plots = ["components['stellar'].plot['sigma']", "components['Hbeta'].flux", 
+		"components['[OIII]5007d'].flux", "absorption_line('Mg_b',uncert=True)"]
+	str_plots = [r'$\sigma\ (km\,s^{-1})$', 
+		r'F(H$\beta)\ (10^{-15}\,erg\,s^{-1}\,cm^{-2})$', 
+		r'F(OIII) $(10^{-15}\,erg\,s^{-1}\,cm^{-2})$', 
+		r'Mg b ($\AA$)']
+
+	for galaxy in ['ic1459', 'ic4296', 'ngc1399']:
+		print '     '+galaxy
+		Prefig(size=np.array((2, 2))*7)
+		fig, ax = plt.subplots(2,2, sharex=True)
+
+		DV = Data(galaxy, instrument='vimos', opt='pop')
+		DM = Data(galaxy, instrument='muse', opt='pop')
+
+		DV_kin = Data(galaxy, instrument='vimos', opt='kin')
+		DM_kin = Data(galaxy, instrument='muse', opt='kin')
+
+		for i, p in enumerate(plots):
+			try:
+				if "absorption_line" in p:
+					ab, err = eval('DM.'+p)
+					ax.flatten()[i].errorbar(np.sqrt(DM.xBar**2+DM.yBar**2)*0.2, 
+						ab, fmt='x', label='MUSE', c='b', yerr=err)
+				elif "sigma" in p:
+					ax.flatten()[i].errorbar(
+						np.sqrt(DM_kin.xBar**2+DM_kin.yBar**2)*0.2, 
+						eval('DM_kin.'+p), fmt='x', label='MUSE', c='b',
+						yerr=eval('DM_kin.'+p+'.uncert'))
+				else:
+					# ax.flatten()[i].errorbar(np.sqrt(DM.xBar**2+DM.yBar**2)*0.2, 
+					# 	eval('DM.'+p)/10**5/DM.n_spaxels_in_bin/0.2**2, 
+					# 	fmt='x', c='b', label='MUSE',
+					# 	yerr=eval('DM.'+p+'.uncert')/10**5/DM.n_spaxels_in_bin
+					# 	/0.2**2)
+					ax.flatten()[i].errorbar(np.sqrt(DM.xBar**2+DM.yBar**2)*0.2, 
+						eval('DM.'+p)/10**5/0.2**2, 
+						fmt='x', c='b', label='MUSE',
+						yerr=eval('DM.'+p+'.uncert')/10**5
+						/0.2**2)
+			except:
+				# pass
+				print 'MUSE', p
+			try:
+				if "absorption_line" in p:
+					ab, err = eval('DV.'+p)
+					ax.flatten()[i].errorbar(np.sqrt(DV.xBar**2+DV.yBar**2)*0.67, 
+						ab, fmt='.', label='VIMOS', yerr=err, c='r')
+				elif "sigma" in p:
+					ax.flatten()[i].errorbar(
+						np.sqrt(DV_kin.xBar**2+DV_kin.yBar**2)*0.67, 
+						eval('DV_kin.'+p), fmt='.', label='VIMOS', c='r',
+						yerr=eval('DV_kin.'+p+'.uncert'))
+				else:
+					# ax.flatten()[i].errorbar(np.sqrt(DV.xBar**2+DV.yBar**2)*0.67, 
+					# 	eval('DV.'+p)/DV.n_spaxels_in_bin/0.67**2, 
+					# 	fmt='.', c='r', label='VIMOS',
+					# 	yerr=eval('DV.'+p+'.uncert')/DV.n_spaxels_in_bin/0.67**2)
+					ax.flatten()[i].errorbar(np.sqrt(DV.xBar**2+DV.yBar**2)*0.67, 
+						eval('DV.'+p)/0.67**2, 
+						fmt='.', c='r', label='VIMOS',
+						yerr=eval('DV.'+p+'.uncert')/0.67**2)
+
+			except:
+				# pass		
+				print 'VIMOS', p
+
+		# ax[1,1].scatter(np.nan, np.nan, marker='.', 
+		# 	label='VIMOS' + ' ' + galaxy.upper())
+		# ax[1,1].scatter(np.nan, np.nan, marker='x', 
+		# 	label='MUSE' + ' ' + galaxy.upper())
+		for i, p in enumerate(plots):
+			ax.flatten()[i].set_ylabel(str_plots[i])
+		for a in ax[1,:]:
+			a.set_xlabel('Radius (arcsec)')
+
+		ax[1,1].set_ylim([3,9])
+		# ax[1,1].axis('off')
+		# h, l = ax[0,0].get_legend_handles_labels()
+		# ax[1,1].legend(h,l)
+		ax[1,1].legend()
+		fig.tight_layout()
+		fig.savefig('compare_'+galaxy+'.png', bbox_inches='tight', dpi=200)
+
+	plt.close('all')
 
 
 
@@ -257,9 +357,10 @@ if __name__=='__main__':
 		# single_absorption_plot(instrument='vimos')
 
 
-
-		fig,ax = plt.subplots()
-		plot_bin(ax, 'ic1459', 100, opt='pop')
+		compare()
+		
+		# fig,ax = plt.subplots()
+		# plot_bin(ax, 'ic1459', 100, opt='pop')
 
 	elif cc.device == 'uni':
 		for galaxy in ['ic1459', 'ic4296', 'ngc1316', 'ngc1399']:

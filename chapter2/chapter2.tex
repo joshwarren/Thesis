@@ -143,12 +143,12 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 		\begin{figure}
 			\centering
 			\includegraphics[width=.9\textwidth]{chapter2/P3D_NGC1399.png}
-			\caption[\textsc{P3D}-reduced data problems]{Examples of problems with \textsc{P3D}-reduced data. Right panel: flux map (reconstructed image) of NGC 1399 Left panel: mean stellar velocity map of NGC 1399. Both maps show sharp offsets between the quadrants. The outer 2 spaxels on all sides of the velocity map were discarded.}
+			\caption[\textsc{P3D}-reduced data problems]{Examples of problems with \textsc{P3D}-reduced data. Left panel: flux map (reconstructed image) of NGC 1399 Right panel: mean stellar velocity map of NGC 1399. Both maps show sharp offsets between the quadrants. The outer 2 spaxels on all sides of the velocity map were discarded.}
 			\label{fig:P3D}
 		\end{figure}
 
 
-		The \textsc{p3d} wavelength-calibration step was not very successful either, as sharp offsets remain between the quadrants in the spectral direction. While this was still the case with \textsc{Py3D}-reduced data, the issue was much worse and more prevalent for \textsc{P3D}-reduced data. For example, the right panel of Fig.\,\ref{fig:P3D} shows the mean stellar velocity map of NGC 1399 extracted from \textsc{P3D}-reduced data. The wavelength calibration is so bad that rotation pattern of the galaxy is completely obfuscated.
+		The \textsc{p3d} wavelength-calibration step was not very successful either, as sharp offsets remain between the quadrants in the spectral direction. While this was still the case with \textsc{Py3D}-reduced data, the issue was much worse and more prevalent for \textsc{P3D}-reduced data. For example, the right panel of Fig.\,\ref{fig:P3D} shows the mean stellar velocity map of NGC 1399 extracted from \textsc{P3D}-reduced data. The wavelength calibration is so poor that the rotation pattern of the galaxy is completely obfuscated.
 
 		
 \section{Multi-unit Spectroscopic Explorer (MUSE)}
@@ -158,7 +158,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 		The Multi-unit Spectroscopic Explorer (MUSE) is located on UT4 of ESO's VLT \citep{Bacon2010}. It is comprised of 24 channels, each feeding an IFU (image slices) and spectrographs for a total contiguous field of view of $1\arcmin \times 1\arcmin$ at spatial sampling of $0\farcs2$. It has a spectral range of 4800-9300\,\AA\ with a spectral resolution of $\approx 2.3$\,\AA\ sampled at 1.25\,\AA\,pix$^{-1}$. MUSE is currently offered with and without adaptive optics (AO), and a narrow-field mode (with an order of magnitude improvement in spatial resolution and sampling) is planned for the future. 
 		
 	\subsection{MUSE Archival Observations}
-		Four of the sample galaxies are in the MUSE archive: IC 1459, IC 4296, NGC 1316 and NGC 1399. NGC 1316 (observed as part of programme 094.B-0298A) and NGC 1399 (programme 094.B-0903A) where both observed as mosaics, while IC 1459 and IC 4296 (both also programme 094.B-0298A) where observed in single pointings. All were observed in service mode during ESO period 94, in the MUSE wide-field mode without adaptive optics. Every OB in both programmes followed the standard MUSE calibration plan.
+		Four of the sample galaxies are in the MUSE archive: IC 1459, IC 4296, NGC 1316 and NGC 1399. NGC 1316 (observed as part of programme 094.B-0298A) and NGC 1399 (programme 094.B-0903A) were both observed as mosaics, while IC 1459 and IC 4296 (both also programme 094.B-0298A) were observed in single pointings. All were observed in service mode during ESO period 94, in the MUSE wide-field mode without adaptive optics. Every OB in both programmes followed the standard MUSE calibration plan.
 
 	\subsection{MUSE Data Reducing}
 		\label{subsec:MUSEreduction}
@@ -179,7 +179,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 	\label{sec:analysis}
 	From this point on, the VIMOS and MUSE datasets are treated almost identically, the only difference (other than the different spectral ranges and resolutions) being that the MUSE datacubes are binned to a higher signal-to-noise ratio (S/N).
 
-	For each galaxy (i.e.\ each combined cube), the data analysis process can summed up as follows, each step being detailed below:
+	For each galaxy (i.e.\ each combined cube), the data analysis process can be summed up as follows, each step being detailed below:
 	\begin{enumerate}
 		\item Spatially bin the spectra using Voronoi binning.
 		\item Identify the relevant stellar templates, by fitting the entire galaxy spectrum (obtained by summing all galaxy spectra) with all the templates from the Medium-resolution Issac Newton Telescope (INT) Library of Empirical Spectra (MILES) library, and hereafter using only the non-zero weight templates.
@@ -224,7 +224,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 		Deriving the distribution and kinematics of the emission lines is achieved in a manner similar to that of deriving the stellar kinematics. However, to minimize template mismatch, whereby emission lines are erroneously fitted to the edges of badly modeled and thus subtracted absorption features, we follow the method set out in \citet{Sarzi2005}. This is a three-step process, applied to each bin:
 		\begin{enumerate}
 			\item The region around each emission line's rest-frame wavelength is masked, and the stellar spectrum is fitted, ignoring the masked regions.
-			\item The kinematics of the stellar component (i.e.\ all stellar templates) is fixed to that found in step 1. The region around the [\ion{O}{iii}] doublet is then unmasked and fitted with two (one for each doublet component) additional (and positive) Gaussians with a single free amplitude, mean velocity and velocity dispersion. The ratio of the amplitudes is fixed to 0.035.
+			\item The kinematics of the stellar component (i.e.\ all stellar templates) is fixed to that found in step 1. The region around the [\ion{O}{iii}] doublet is then unmasked and fitted with two (one for each doublet component) additional (and positive) Gaussians with a single free amplitude, mean velocity and velocity dispersion. The ratio of the amplitudes is fixed to 0.35.
 			\item All potential emission lines are unmasked and fit with additional Gaussians, but with their kinematics fixed to that of [\ion{O}{iii}] derived in Step 2. Only the amplitudes of the Gaussians (i.e.\ the amplitude of the emission lines) therefore fit. 
 		\end{enumerate}
 		All the steps above are repeated with the aforementioned MC method to estimates the uncertainties, and include a tenth order multiplicative Lagrange polynomial to account for poorly modeled continuum emission. The ratio of the amplitudes of the constituent emission lines within a doublet is fixed for some forbidden lines (see Table \ref{tab:EmissionLine}).
@@ -234,7 +234,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 	 	\begin{table}
 	 		\centering
 	 	\begin{threeparttable}
-	 		\caption{Emission lines considered in the \textsc{pPXF} fits.}
+	 		\caption{Emission lines considered in the \textsc{pPXF} fits. Every emission line given below, within the wavelength range of a given datacube was included in the analysis, thus VIMOS datacubes are fitted with H$\gamma$, H$\beta$, \brackets{\ion{O}{iii}} and \brackets{\ion{N}{i}} lines and doublets, while MUSE datacubes are fitted with H$\beta$, \brackets{\ion{O}{iii}}, \brackets{\ion{N}{i}}, \brackets{\ion{O}{i}}, \brackets{N}{ii}, H$\alpha$ and \brackets{\ion{S}{ii}} lines and doubletes.}
 	 		\label{tab:EmissionLine}
 	 		\begin{tabular}{l c c c}
 	 		\hline
@@ -243,8 +243,8 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 	 		 & wavelength & wavelength & \\
 	 		 & (\AA) & (\AA) \\
 	 		\hline
-	 		\bracket{\ion{O}{ii}} 	& 3726.03 & 3728.82 & Free \\
-	 		H$\delta$ 	& 4101.76 & -- & -- \\
+	 		% \bracket{\ion{O}{ii}} 	& 3726.03 & 3728.82 & Free \\
+	 		% H$\delta$ 	& 4101.76 & -- & -- \\
 	 		H$\gamma$ 	& 4340.47 & -- & -- \\
 	 		H$\beta$ 		& 4861.33 & -- & -- \\
 	 		\bracket{\ion{O}{iii}}	& 4958.92 & 5006.84 & 0.35 \\
@@ -286,7 +286,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 		 	\begin{table}
 				\centering
 			\begin{threeparttable}
-				\caption{Line index bandpass definitions.}
+				\caption{Line index bandpass definitions. All absorption indices where the entirety of all bandpasses within the rest-frame wavelength range of a given datacube are measured, thus G4300, Fe4383, Ca4455, Fe4531, H$\beta$ and Fe5015 indices are measured for all VIMOS datacubes, while Mg\,b is measured for most VIMOS datacubes (the red continuum band is redshifted out of the wavelength range of NGC 612 and PKS 718-34). H$\beta$, Fe5015, Mg\,b, Fe5270, Fe5335, Fe5406, Fe5709, Fe5782, NaD, TiO1 and TiO2 are measured for all MUSE datacubes.}
 				\label{tab:abIndex}
 				\begin{tabular}{l c c c}
 					\hline
@@ -325,7 +325,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 
 			Since our aim is to find the best-fitting stellar population model, it is important to first remove the contribution of the ISM to the spectra. This involves fitting for and subtracting the emission lines detected (as described in Section \ref{subsec:EmissionFit}). 
 
-			We must also correct for the effect of the different velocity dispersions of the stellar populations, that varyingly spread absorption features such that differing fractions of the absorption is outside of the central bandpasses. To do this, we simply create a best-fitting spectrum (as in the previous step) that is not convolved with the best-fitting LOSVD. A given index, $I$, is then measured for both this `unconvolved' spectrum ($I^\text{unc}$) and the convolved best-fitting spectrum ($I^\text{conv}$), and the ratio of these two indices is used as a multiplicative correction factor for the index measured ($I^\text{obs}$), such that the corrected index ($I^\text{corr}$) is given by
+			We must also correct for the effect of the different velocity dispersions of the stellar populations, that varyingly spread absorption features such that differing fractions of the absorption are outside of the central bandpasses. To do this, we simply create a best-fitting spectrum (as in the previous step) that is not convolved with the best-fitting LOSVD. A given index, $I$, is then measured for both this `unconvolved' spectrum ($I^\text{unc}$) and the convolved best-fitting spectrum ($I^\text{conv}$), and the ratio of these two indices is used as a multiplicative correction factor for the index measured ($I^\text{obs}$), such that the corrected index ($I^\text{corr}$) is given by
 			\begin{equation}
 				I^\text{corr} \equiv \frac{I^\text{unc}}{I^\text{conv}} I^\text{obs} \, .
 			\end{equation}

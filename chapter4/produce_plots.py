@@ -1,4 +1,3 @@
-import cPickle as pickle
 import matplotlib.pyplot as plt 
 import numpy as np 
 from plot_velfield_nointerp import plot_velfield_nointerp
@@ -64,10 +63,13 @@ def plot(galaxies, str_galaxies, file_name):
 
 		vin_dir += '/%s/%s' % (galaxy, opt) 
 
-		pickle_file = '%s/pickled' % (vin_dir)
-		pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
-		D = pickle.load(pickleFile)
-		pickleFile.close()
+		# import cPickle as pickle
+		# pickle_file = '%s/pickled' % (vin_dir)
+		# pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
+		# D = pickle.load(pickleFile)
+		# pickleFile.close()
+		from Bin2 import Data
+		D = Data(galaxy, instrument='vimos', opt='kin')
 
 		f = fits.open(get_dataCubeDirectory(galaxy))
 		header = f[0].header
@@ -187,8 +189,8 @@ def plot(galaxies, str_galaxies, file_name):
 
 
 	fig.text(0.24, 0.9, r'Flux', va='top', ha='center', size='xx-large')
-	fig.text(0.51, 0.9, r'Velocty', va='top', ha='center', size='xx-large')
-	fig.text(0.8, 0.9, r'Velocty Dispersion', va='top', ha='center', 
+	fig.text(0.51, 0.9, r'Velocity', va='top', ha='center', size='xx-large')
+	fig.text(0.8, 0.9, r'Velocity Dispersion', va='top', ha='center', 
 		size='xx-large')
 
 	if len(galaxies) == 1:
@@ -210,15 +212,63 @@ def plot(galaxies, str_galaxies, file_name):
 			rotation='vertical', size='xx-large')
 	
 	# Add colorbar
-	ax_loc = axs[0,2].get_position()
-	cax = fig.add_axes([ax_loc.x1+0.03, ax_loc.y0, 0.02, ax_loc.height])
-	cbar = plt.colorbar(axs[1,1].cs, cax=cax)
-	cbar.ax.set_yticklabels([])
+	if False:
+		ax_loc = axs[0,2].get_position()
+		cax = fig.add_axes([ax_loc.x1+0.03, ax_loc.y0, 0.02, ax_loc.height])
+		cbar = plt.colorbar(axs[1,1].cs, cax=cax)
+		cbar.ax.set_yticklabels([])
+	else:
 
-	# plt.show()
+		print axs[0,1].cs.get_clim()
+		from matplotlib import ticker
+
+		ticks = ticker.MaxNLocator(nbins=4)
+		# ticks2 = ticker.MaxNLocator(nbins=3)
+		ax_loc = axs[0,2].get_position()
+		cax = fig.add_axes([ax_loc.x1+0.06, ax_loc.y0, 0.02, ax_loc.height])
+		cbar = plt.colorbar(axs[0,2].cs, cax=cax)#, ticks=ticks)
+		# cbar.ax.set_yticklabels([])
+		fig.text(ax_loc.x0-0.12, (ax_loc.y0+ax_loc.y1)/2, 
+			r'Velocity (km s$^{-1}$)',
+			rotation=90, va='center', ha='center')
+		fig.text(ax_loc.x1+0.12, (ax_loc.y0+ax_loc.y1)/2, 
+			r'Velocity Dispersion (km s$^{-1}$)',
+			rotation=270, va='center', ha='center')
+		cax2 = cax.twinx()
+		clim = axs[0,1].cs.get_clim()
+		# cax.set_ylim([clim[0][0], clim[1][0]])
+		# clim = axs[0,2].cs.get_clim()
+		cax2.set_ylim([clim[0][0], clim[1][0]])
+		cax2.yaxis.set_major_locator(ticks)
+
+
+		# ticks = ticker.MaxNLocator(nbins=4)
+		# ax_loc = axs[1,2].get_position()
+		# cax3 = fig.add_axes([ax_loc.x1+0.06, ax_loc.y0, 0.02, ax_loc.height])
+		# cbar2 = plt.colorbar(axs[1,1].cs, cax=cax3, ticks=ticks)
+		# # cbar.ax.set_yticklabels([])
+		# fig.text(ax_loc.x0-0.12, (ax_loc.y0+ax_loc.y1)/2, 
+		# 	r'Velocity Uncertainty (km s$^{-1}$)', 
+		# 	rotation=90, va='center', 
+		# 	ha='center')
+		# fig.text(ax_loc.x1+0.12, (ax_loc.y0+ax_loc.y1)/2, 
+		# 	r'Velocity Dispersion Uncertainty (km s$^{-1}$)', 
+		# 	rotation=270, va='center', 
+		# 	ha='center')
+		# cax4 = cax3.twinx()
+		# cax4.set_ylim([-2,1])
+		# cax4.yaxis.set_major_locator(ticks)
+		
+
+
+
+		# plt.show()
+		# kldfjkl
 	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
 		dpi=200)
+	plt.close('all')
 
+	asdasd
 
 
 if __name__=='__main__':
