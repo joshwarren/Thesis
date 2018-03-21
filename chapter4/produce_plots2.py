@@ -5,11 +5,19 @@ import numpy as np
 if 'home' not in cc.device:
 	import matplotlib # 20160202 JP to stop lack-of X-windows error
 	matplotlib.use('Agg') # 20160202 JP to stop lack-of X-windows error
-import matplotlib.pyplot as plt 
+	import matplotlib.pyplot as plt 
+else:
+	import matplotlib.pyplot as plt 
+from plot_velfield_nointerp import plot_velfield_nointerp
 from prefig import Prefig
 from Bin2 import Data
 # import corner
 from tools import myerrorbar
+from astropy.io import fits
+from scipy.ndimage import zoom
+
+
+overplot={'CO':'c', 'radio':'g'}
 
 def populations_corner(galaxy, instrument='vimos'):
 	# D = Data(galaxy, instrument=instrument, opt='pop')
@@ -148,7 +156,6 @@ def absorption_plots(galaxy, instrument='vimos'):
 
 	plt.close('all')
 
-
 def single_absorption_plot(instrument='vimos'):
 	if instrument == 'vimos':
 		galaxies = ['eso443-g024', 'ic1459', 'ic1531', 'ic4296', 'ngc1399', 
@@ -215,21 +222,70 @@ def single_absorption_plot(instrument='vimos'):
 	fig.savefig('%s/absorption.png' % (instrument), bbox_inches='tight', dpi=200)
 	plt.close('all')
 
+def show_spectra(galaxy, bins, instrument='vimos', opt='kin'):
+	print 'pPXF fit for ' + galaxy + '(' + instrument + ')'
+	Prefig(size=(26,12))
+	if instrument == 'vimos':
+		ext = 0
+		from plot_results import add_
+		from errors2 import get_dataCubeDirectory
+	elif instrument == 'muse':
+		ext = 1
+		from plot_results_muse import add_
+		from errors2_muse import get_dataCubeDirectory
 
-
-
-
-
-def plot_bin(ax, galaxy, bin_num, instrument='vimos', opt='kin'):
-	print 'Plot spectrum fit'
-	ax2 = ax.twinx()
 	D = Data(galaxy, instrument=instrument, opt=opt)
-	b = D.bin[bin_num]
+
+	a1 = plt.subplot(121)
+
+	f = fits.open(get_dataCubeDirectory(galaxy))
+	header = f[ext].header
+	f.close()
+	
+	a1 = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, D.yBar, D.flux, 
+		header, show_bin_num=False, flux_unbinned=D.unbinned_flux, ax=a1, 
+		dots=bins)
+
+	for o, color in overplot.iteritems():
+			scale = 'log' if o == 'radio' else 'lin'
+			add_(o, color, a1, galaxy, nolegend=True, scale=scale)
+
+	for i, b in enumerate(bins):
+		a = plt.subplot(len(bins)*100 + 20 + (i+1)*2)
+		a.text(0.03, 0.8, str(i+1), color='k', size=25, transform=a.transAxes)
+		b_obj = D.bin[b]
+		plot_bin(a, D, b)
+		if i != len(bins)-1:
+			a.set_xticklabels([])
+		else:
+			a.set_xlabel(r'Wavelength ($\AA$)')
+
+		if (i+1) == (len(bins)+1)/2:
+			a.set_ylabel(r"Flux ($10^{-15}\,erg\,s^{-1}\,\AA^{-1}\,cm^{-2}$)",
+				labelpad=10)
+			a.ax2.set_ylabel('Residuals, Emission lines and Noise '
+				+ r'($10^{-15}\,erg\,s^{-1}\,\AA^{-1}\,cm^{-2}$)',rotation=270,
+				labelpad=50)
+
+
+	plt.gcf().savefig('pPXF_fits_'+instrument+'_'+galaxy+'.png', 
+		bbox_inches='tight', dpi=200)
+	plt.close('all')
+
+# Produce the indervidual spectra showing the pPXF fit
+def plot_bin(ax, D, b):
+	b = D.bin[b]
+	ax2 = ax.twinx()
+
+	scale = 1 if D.instrument == 'vimos' else 10**-5
 
 	lam = b.lam
-	spectrum = b.spectrum
-	bestfit = b.bestfit
-	resid = spectrum - bestfit
+	spectrum = b.spectrum * scale
+	bestfit = b.bestfit * scale
+	resid = (spectrum - bestfit) * scale
+	emission = np.nansum([b.e_line[l].spectrum for l in D.e_line_no_mask], 
+		axis=0)*scale
+
 
 
 	ax.plot(lam, spectrum, 'k', label='Data')
@@ -237,6 +293,7 @@ def plot_bin(ax, galaxy, bin_num, instrument='vimos', opt='kin'):
 
 	ax2.plot(lam, resid, '.', color='LimeGreen', mec='LimeGreen', ms=4, 
 		label='Residuals')
+	ax2.plot(lam, emission, 'orange', label='Emission Lines')
 
 	mn = np.min(bestfit)#[goodpixels])
 	mx = np.max(bestfit)#[goodpixels])
@@ -245,10 +302,7 @@ def plot_bin(ax, galaxy, bin_num, instrument='vimos', opt='kin'):
 	ax.set_ylim([mn1, mx] + np.array([-0.05, 0.05])*(mx-mn1))
 	ax2.set_ylim(*ax.get_ylim() - mn)
 
-	plt.show()
-
-
-
+	ax.ax2 = ax2
 
 # Compare VIMOS and MUSE results
 def compare():
@@ -259,7 +313,7 @@ def compare():
 	str_plots = [r'$\sigma\ (km\,s^{-1})$', 
 		r'F(H$\beta)\ (10^{-15}\,erg\,s^{-1}\,cm^{-2})$', 
 		r'F(OIII) $(10^{-15}\,erg\,s^{-1}\,cm^{-2})$', 
-		r'Mg b ($\AA$)']
+		r'$Mg\,b\ (\AA)$']
 
 	for galaxy in ['ic1459', 'ic4296', 'ngc1399']:
 		print '     '+galaxy
@@ -340,13 +394,114 @@ def compare():
 
 	plt.close('all')
 
+# Compare velocity fields
+def compare_velfield():
+	print 'Compare velocity fields'
+	Prefig(size=(20,20))
 
+	fig, ax = plt.subplots(3,3, sharex=True, sharey=True, 
+		subplot_kw={'aspect':'equal'})
 
+	galaxy_str = ['IC 1459', 'IC 4296', 'NGC 1399']
+	for g, galaxy in enumerate(['ic1459', 'ic4296', 'ngc1399']):
+		Dv = Data(galaxy, instrument='vimos', opt='kin')
+		Dm = Data(galaxy, instrument='muse', opt='kin')
 
+		from errors2 import get_dataCubeDirectory
+		f = fits.open(get_dataCubeDirectory(galaxy))
+		headerv = f[0].header
+		f.close()
+		from errors2_muse import get_dataCubeDirectory
+		f = fits.open(get_dataCubeDirectory(galaxy))
+		headerm = f[1].header
+		f.close()
 
+		offset={'RA':0.0014, 'DEC':0.0004}
+		headerv['HIERARCH CCD1 ESO INS IFU RA'] += offset['RA']
+		headerv['HIERARCH CCD1 ESO INS IFU DEC'] += offset['DEC']
 
+		vv_temp = regrid(Dv.x, Dv.y, Dv.bin_num, Dv.components['stellar'].plot['vel'], 
+			headerv, 10)
 
+		vm = regrid(Dm.x, Dm.y, Dm.bin_num, Dm.components['stellar'].plot['vel'], 
+			headerm, 3)
+		
+		out = np.zeros((51,51))
+		for i in range(51):
+			for j in range(51):
+				vv = np.array(vm)*np.nan
+				vv[i:400+i,j:400+j] = vv_temp
+				out[i,j] = np.nansum(np.abs(vv-vm))
 
+		w = np.where(out == np.min(out))
+		i, j = w[0][0], w[1][0]
+		vv = np.array(vm)*np.nan
+		vv[i:400+i,j:400+j] = vv_temp
+
+		from sauron_colormap import sauron
+
+		from plot_results import set_lims
+		vmin, vmax = set_lims(Dm.components['stellar'].plot['vel'])
+
+		ax[0,g].imshow(vv, cmap=sauron, clim=[vmin, vmax], 
+			extent=[-75*0.2, 75*0.2, -75*0.2, 75*0.2])
+		res = np.array(vm - vv)
+		ax[1,g].imshow(vm-np.nanmean(res), cmap=sauron, clim=[vmin, vmax],
+			extent=[-75*0.2, 75*0.2, -75*0.2, 75*0.2])
+
+		ax[2,g].imshow(res-np.nanmean(res), cmap=sauron, clim=[vmin, vmax],
+			extent=[-75*0.2, 75*0.2, -75*0.2, 75*0.2])
+
+		ax[0,g].set_title(galaxy_str[g], size='x-large')
+
+	for a in ax.flatten():
+		a.tick_params(top=True, bottom=True, left=True, right=True, 
+			direction='in', which='major', length=10, width=3, labelsize='large')
+		# a.tick_params(top=True, bottom=True, left=True, right=True, 
+		# 	direction='in', which='minor', length=10, width=3)
+	ax[2,1].set_xlabel(r'$\Delta$ RA (arcsec)')
+	ax[1,0].set_ylabel(r'$\Delta$ Dec (arcsec)')
+
+	fig.text(0.07, 0.75, 'VIMOS', va='center', ha='right', 
+		rotation='vertical', size='x-large')
+	fig.text(0.07, 0.5, 'MUSE', va='center', ha='right',
+		rotation='vertical', size='x-large')
+	fig.text(0.07, 0.23, 'MUSE - VIMOS', va='center', ha='right',
+		rotation='vertical', size='x-large')
+
+	fig.subplots_adjust(hspace=0.05, wspace=0.05)
+
+	fig.savefig('compare_velfield.png', bbox_inches='tight', dpi=200)
+
+def regrid(x, y, bin_num, vel, header, scale):
+	# Much of this code is taken from plot_velfield_nointerp.py
+	try:
+		# VIMOS parameters
+		header['CRVAL1'] = header['HIERARCH CCD1 ESO INS IFU RA']
+		header['CRVAL2'] = header['HIERARCH CCD1 ESO INS IFU DEC']
+		header['CD1_1'] = -abs(header['CDELT1']/(60**2))
+		header['CD2_2'] = header['CDELT2']/(60**2)
+	except KeyError:
+		header['CD1_1'] = -abs(header['CD1_1'])
+		#pass # MUSE has the correctly labelled headers
+
+	x, y = x.astype(float), y.astype(float)
+	from scipy.spatial import distance
+	pixelSize = np.min(distance.pdist(np.column_stack([x, y])))
+
+	xmin = 0
+	xmax = header['NAXIS1']
+	ymin = 0
+	ymax = header['NAXIS2']
+
+	nx = int(round((xmax - xmin)/pixelSize))
+	ny = int(round((ymax - ymin)/pixelSize))
+	img = np.full((nx, ny), np.nan)  # use nan for missing data
+	j = np.round((x - xmin)/pixelSize).astype(int)-1
+	k = np.round((y - ymin)/pixelSize).astype(int)-1
+	img[j, k] = vel[bin_num]
+	img = zoom(img, scale, order=0)
+	return img
 
 if __name__=='__main__':
 	if 'home' in cc.device:
@@ -357,10 +512,14 @@ if __name__=='__main__':
 		# single_absorption_plot(instrument='vimos')
 
 
-		compare()
-		
-		# fig,ax = plt.subplots()
-		# plot_bin(ax, 'ic1459', 100, opt='pop')
+		# compare()
+
+		# show_spectra('ic1459', [0,100,400], instrument='vimos', opt='pop')
+		# show_spectra('ic1459', [0,494,2522], instrument='muse', opt='pop')
+		# show_spectra('ic4296', [0,100,630], instrument='vimos', opt='pop')
+		# show_spectra('ic4296', [0,414,279], instrument='muse', opt='pop')
+
+		compare_velfield()
 
 	elif cc.device == 'uni':
 		for galaxy in ['ic1459', 'ic4296', 'ngc1316', 'ngc1399']:
