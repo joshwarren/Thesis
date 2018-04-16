@@ -2,7 +2,7 @@
 	\label{cha:stellar}
 With the advent of integral-field spectroscopy (IFS), we can now observe the spatially-resolved properties of a galaxy without relying on extrapolations of or multiple observations with slits. Surveys such as the Spectrographic Areal Unit for Research on Optical Nebulae (SAURON; \citealt{deZeeuw2002}) and Atlas$^\text{3D}$ \citep{Cappellari2011} have demonstrated that systematic IFS surveys provide a wealth of information about the structure of nearby galaxies. This chapter focuses on the resolved stellar properties of our sample of radio galaxies. In this we aim to demonstrate that our radio selected sample is no different in the $V$-band than optically-selected early-type galaxies ETGs from the MASSIVE (not an acronym; \citealt{Ma2014}) and Atlas$^\text{3D}$ samples. We achieve this by showing that they are consistent with the defining characteristics of ETGs that are accessible to $V$-band IFS data. These characteristics are (with relevant section is shown in parentheses): regular/non-regular rotator classification scheme, qualitative kinematic classes (see Fig.\,\ref{fig:EgSubstructure}; Section \ref{subsec:maps}), fast/slow rotator classifications (\ref{subsec:FSRot}), radially resolved specific angular momentum profiles (with $\lambda_R$; \ref{subsec:ResolvedLambda_R}), absorption line strengths(\ref{subsec:absorption}), Mg\,--\,$\sigma$ relation (\ref{subsubssec:Mgsigma}), stellar populations (\ref{subsec:ssp}) and their gradients (\ref{subsubsec:popGrad}) and the kinematically-decoupled core (KDC) age\,--\,size relation(\ref{subsec:popKDC}). 
 
-The chapter is structured as follows: firstly we present the kinematic maps for the stellar component of each galaxy (section \ref{sec:stellarKin}) and the distribution of the sample on the $\lambda_\mathrm{R_e}$\,--\,ellipticity diagram. Then, in section \ref{sec:pop}, we investigate the stellar populations of each galaxy using the measured absorption line strengths, looking for atypical ETGs (a typical ETG has old, metal rich, alpha-enhanced stellar populations with vertually no radial gradients). Finally, in Section \ref{sec:stellarDiscussion} we discuss these observations.
+The chapter is structured as follows: firstly we present the kinematic maps for the stellar component of each galaxy (section \ref{sec:stellarKin}) and the distribution of the sample on the $\lambda_\mathrm{R_e}$\,--\,ellipticity diagram. Then, in section \ref{sec:pop}, we investigate the stellar populations of each galaxy using the measured absorption line strengths, looking for atypical ETGs (a typical ETG has old, metal rich, alpha-enhanced stellar populations with virtually no radial gradients). Finally, in Section \ref{sec:stellarDiscussion} we discuss these observations.
 
 
 \section{Kinematics}
@@ -86,51 +86,110 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 
 		In addition to this, we attempt to identify the kinematic features defined by \citet{Krajnovic2011} in an algorithmic way. However, the artefacts from the VIMOS quadrants (see Section \ref{subsec:VIMOSartefacts}) confuse ellipse fitting algorithms so only maps derived from the MUSE data are classified in this way; kinematic features in maps derived from the VIMOS data are identified by eye. These classification are listed in Col.\,7 of Table \ref{tab:classify} and the corresponding kinematic group (see Table \ref{tab:KinGroups} and Fig.\,\ref{fig:EgSubstructure} for group definitions and examples) to which a given galaxy belongs to is given is Col.\,8. We observe 3 KDCs (although PKS 718-34 is only a tentative classification) such that $29\pm19$\% of non-regular rotators in our Southern sample definitely (not including PKS 718-34) contain KDCs (or $43\pm19$\% including PKS 718-34), with the large uncertainty reflecting the low-number statistics. This is consistent with the Atlas$^\text{3D}$ survey who found find $25\pm7$\% of non-regular rotators host KDCs \citep{Krajnovic2011}.
 
+		\subsubsection{Robustness of Stellar Results}
+			\label{subsubsec:RobustKin}
+			Given the problems with the reduction and analysis of VIMOS data, as outlined in Section \ref{VIMOSartefacts}, it is necessary to examine the robustness of these results. Firstly, in Figures \ref{fig:ppxf1} -- \ref{fig:ppxf4}, we show the best-fitting spectra for 3 locations (as marked in the reconstructed images with a number, 1--3) in IC 1459 and IC 4296 for both VIMOS and MUSE datacubes. 
 
-		\subsection{Ellipticity}
-			\label{subsec:Ellipticity}
+			%Whilst, on first inspection, it may seem that both VIMOS and MUSE have similar quality data in terms of cleanliness, it is worth noting that each spaxel in VIMOS has $>11$ times the collecting area of each spaxel in MUSE, and that the exposure time for the VIMOS data was $>16$ that of the corresponding MUSE data.
 
-			\begin{figure}
-				\centering
-				\includegraphics[width=.9\textwidth]{chapter4/lambda_R_ellipticity.png}
-				\caption[$\lambda_\mathrm{R_e}$\,--\,ellipticity diagram]{$\lambda_\mathrm{R_e}$\,--\,ellipticity diagram. VIMOS and MUSE measurements are shown in red and blue, respectively. For comparison, Atlas$^\text{3D}$ galaxies \citep{Emsellem2011} are shown in black and MASSIVE galaxies \citep{Veale2017} in grey. The theoretical limit (edge-on systems) of disc-dominated galaxies is shown in solid magenta, with lines of constant intrinsic angular momentum but varying inclination in dotted magenta. The black solid lines show the limits of the fast-/slow-rotator classes. The MASSIVE survey does not report substructure, so the MASSIVE sample galaxies are shown with filled circles.}
-				\label{fig:lambdaR_ellip}
-			\end{figure}
+			As can be seen from the small values of and lack of obvious sign of correlation within the residuals (green dots) the best-fitting total spectra (red line) are good fits to the data (black line). The best-fitting emission lines are shown in yellow. Given the coincidental alignment in these figures of H$\beta$ and [\ion{O}{iii}] in the VIMOS spectra with [\ion{N}{ii}], H$\alpha$ and [\ion{S}{ii}] in the MUSE spectra, it is worth explicitly pointing out the different wavelength ranges between the MUSE and VIMOS datasets. 
 
-			Ellipticity is measured as the ellipticity of the best-fitting ellipse to the surface-brightness map with an mean radius $R_\mathrm{m}$, of 1 effective radius $R_\mathrm{e}$. Firstly the centre of the galaxy is found as the luminosity weighted centre using the \textsc{python} routine \textsc{find\_galaxy}, which is part of the \textsc{mge} package\footnote{\url{http://www-astro.physics.ox.ac.uk/\~mxc/software/}} by \citet{Cappellari2002}. This is then used as an input for the \textsc{idl} routine \textsc{kinemetry}\footnote{\url{http://davor.krajnovic.org/idl/}} by \citet{Krajnovic2006} which finds the best-fitting ellipses at a range of evenly spaced semi-major axes. This is achieved by performing harmonic expansion of maps along ellipses with a given semi-major axis and, when used for even moments (e.g.\ surface brightness, velocity dispersion, h$_4$ etc.), minimizing the amplitude of the first and second harmonics. The results include the ellipticity, $\epsilon$ and position angle $PA_\text{phot}$ of the best-fitting ellipse for each semi-major axis. The fit is repeated for increasing semi-major axis until $<$75\% of the ellipse is not contained within the field of view.
-
-			In reality, the field of view does not always contain 1 $R_\mathrm{e}$. Where this is the case, we follow the method by \citet{Emsellem2007}, where $R_\mathrm{m}$ is redefined as $R_\mathrm{m} \equiv \sqrt{A_\mathrm{s}/\pi}$, where $A_\mathrm{s}$ is the area of the ellipse contained within the field of view. For a given galaxy, we fit ellipses as described above, up to $R_\mathrm{m} = R_\mathrm{max}$, where $A_\mathrm{s}$ reaches a maximum difference of 15\% to the area of the fitted ellipse, $A_\text{ellipse}$. The value $\epsilon_\mathrm{e}$, the ellipticity at 1 $R_\mathrm{e}$ or $R_\text{max}$, whichever is smallest, is given in Table \ref{tab:classify}. 
-
-		\subsection{Fast-/Slow-Rotator Classification}
-			\label{subsec:FSRot}
-
-			The specific angular momentum parameter $\lambda_R$ (see Section \ref{sec:ETG} for for definitions of $\lambda_R$) is evaluated at 1 $R_\mathrm{e}$ or $R_\text{max}$, whichever is smaller (as described for ellipticity in Section \ref{subsec:Ellipticity}), and is given in Table \ref{tab:classify}. This is plotted against the ellipticity, $\epsilon_\mathrm{e}$ (see Section \ref{subsec:Ellipticity}) in Fig.\,\ref{fig:lambdaR_ellip}. This plot shows the classification scheme of \citet{Cappellari2016} for the fast-/slow-rotator (FR/SR) categories (originally defined by \citealt{Emsellem2011}, but later refined by \citealt{Cappellari2016}; see Section \ref{sec:ETG}). This classification is given in Col.\,5 of Table \ref{tab:classify}.
-
-			We find that 5 out of 11 galaxies, or $(45\pm13)$\%, are slow rotators. This is between that of the Atlas$^\text{3D}$ and MASSIVE projects, who find 13.1\% and 77.5\% of their respective sample galaxies to be slow rotators. However, slow rotators are more likely to be found in higher mass galaxies and the three samples (Atlas$^\text{3D}$, MASSIVE and our Southern sample) have very different mass distributions (see upper panel of Fig.\,\ref{fig:SRmassFraction}).
-
-			In order to account for the difference in mass distribution, we find the expected fraction of slow rotators in the Southern sample, $f'$, corrected to the mass distribution of the combined Atlas$^\text{3D}$ and MASSIVE samples (hereafter the A+M sample), as
-			\begin{equation}
-				f' = \sum_{i=0}^N N^\mathrm{SS}_i f^\mathrm{AM}_i \, , 
-			\end{equation}
-			where $N^\mathrm{SS}_i$ is the number of Southern sample galaxies in the $i^\mathrm{th}$ mass bin, $N^\mathrm{AM}_i$ is the fraction of slow rotators in the $i^\mathrm{th}$ mass bin in the A+M sample and $N$ is the total number of mass bins. In our case we use the $K$-band absolute magnitude ($M_K$) as a proxy for stellar mass, with bins of 0.5 mag. This gives an expected fraction of $f' = 0.64 \pm 0.06$, just consistent with our finding of $(45\pm13)$\% of the Southern sample galaxies being slow rotators. Again the large uncertainty reflects the low number statistics of the Southern sample. There is, therefore, no discernible difference in the fraction of galaxies that are slow-rotators between our radio-selected Southern sample and the optically-selected A+M sample, once differences in the mass distributions are taken into account. 
+			We can also see some of the bad pixels in the MUSE spectra. These are residuals of the poor sky subtraction by the ESO routines as discussed in Section \ref{subsec:MUSEreduction}. It can also be seen that they do not obviously effect the result of the stellar fit. Since [\ion{O}{iii}] is first fitted, with the kinematics of all other lines tied to that of [\ion{O}{iii}] and that the region surrounding the [\ion{O}{iii}] doublet is free of such residuals, it is likely that the best-fitting [\ion{N}{ii}], H$\alpha$ and [\ion{S}{ii}] lines/doublets are also reliable, despite occurring in regions effected by these residuals. 
 
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.8\textwidth]{chapter4/M_k_binned.png}
-				\caption[Mass matching global kinematics]{Upper panel: mass distribution of the A+M sample (black) and of our Southern sample (red). Lower panel: fraction of slow rotators within each mass bin. The labels list the number of slow rotators and total number of galaxies in each bin.}
-				\label{fig:SRmassFraction}
+				\includegraphics[width=.9\textwidth]{chapter4/pPXF_fits_vimos_ic1459.png}
+				\caption[Best-fitting spectra by \textsc{pPXF} for the VIMOS datacube for IC 1459]{The best-fitting spectra (red line) from the \textsc{pPXF} fits to spatially-binned VIMOS spectra (black line) of IC 1459 at 3 locations as corresponding to the locations marked by the red numbering (1--3) in the reconstructed image (right). Residuals (data - best-fitting spectra) and best-fitting emission lines are shown as green dots and orange lines, respectively.}
+				\label{fig:ppxf1}
+			\end{figure}
+			\begin{figure}
+				\centering
+				\includegraphics[width=.9\textwidth]{chapter4/pPXF_fits_muse_ic1459.png}
+				\caption[Best-fitting spectra by \textsc{pPXF} for the MUSE datacube for IC 1459]{As in Figure \ref{fig:ppxf1} but for MUSE spectra.}
+				\label{fig:ppxf2}
+			\end{figure}
+			\begin{figure}
+				\centering
+				\includegraphics[width=.9\textwidth]{chapter4/pPXF_fits_vimos_ic4296.png}
+				\caption[Best-fitting spectra by \textsc{pPXF} for the VIMOS datacube for IC 4296]{As in Figure \ref{fig:ppxf1} but for IC 4296.}
+				\label{fig:ppxf3}
+			\end{figure}
+			\begin{figure}
+				\centering
+				\includegraphics[width=.9\textwidth]{chapter4/pPXF_fits_muse_ic4296.png}
+				\caption[Best-fitting spectra by \textsc{pPXF} for the MUSE datacube for IC 4296]{As in Figure \ref{fig:ppxf1} but for MUSE spectra of IC 4296.}}
+				\label{fig:ppxf4}
 			\end{figure}
 
-		\subsection{Radial Angular Momentum Profile}
-			\label{subsec:ResolvedLambda_R}
-			The radial $\lambda_R$ profiles (i.e.\ $\lambda_R$ as a function of aperture radius) are shown in Fig.\,\ref{fig:lambdaR_profile}. We see, with the exception of IC 1531, a disc with very low inclination, fast and slow rotators are separated by $\approx 0.3\,\mathrm{R_\odot}$. We also see that most of the fast rotators of our Southern sample have a rapidly rising $\lambda_R$ profile, which flatten out by $\approx 0.5\,\mathrm{R_\odot}$. This is consistent with the SAURON surveys findings \citep[e.g.][Fig.\,2]{Emsellem2007}. 
+			We also directly compare the stellar velocity maps from VIMOS and MUSE (see Fig.\,\ref{fig:compare_velfield}). In IC 4296 and NGC 1399, we see the artifacts from the VIMOS instrument almost entirely obstruct any meaningful interpretation the velocity maps generated from VIMOS data. However in IC 1459, we can see that both instruments give similar results, although some artifact can been seen in the MUSE data (such as the an arrowhead shape above the KDC). 
 
 			\begin{figure}
 				\centering
-				\includegraphics[width=.7\textwidth]{chapter4/lambda_R.png}
-				\caption[$\lambda_{R}$ radial profiles]{Radial $\lambda_{R}$ profiles. Profiles derived from VIMOS data are in blue, while those derived from MUSE data are in red. Solid lines represent fast rotators; dashed lines, slow rotators.}
-				\label{fig:lambdaR_profile}
+				\includegraphics[width=.9\textwidth]{chapter4/compare_velfield.png}
+				\caption[Comparison between stellar velocity maps from VIMOS and MUSE datacubes]{A comparison between stellar velocity maps from VIMOS and MUSE datacubes. The top row shows the VIMOS derived maps; the middle row, MUSE derived maps and the bottom row, the residuals of the VIMOS map subtracted from the MUSE map.}
+				\label{fig:compare_velfield}
 			\end{figure}
+
+			Finally, we compare the radial profiles of the stellar velocity dispersion (see Fig.\,\ref{fig:compare_sigprofile}). Here, we see that in the cases of both IC 1459 and IC 4296 the stellar velocity dispersions are systematically lower for VIMOS data than MUSE. This is particularly noticeable within the inner 5\arcsec. %This may be due to the fact that VIMOS spaxels are over 11 times larger in area than the MUSE spaxels -- but should it not be the other way round? As we are using bin centroid...
+			We can also see the degeneration of the VIMOS derived values in IC 1459 at large radii. 
+			There are two groups of bins with large ($\approx$600--700\,km\,s$^{-1}$) and small ($\approx 0$\,km\,s$^{-1}$) stellar velocity dispersions at radius $r \approx 17\arcsec$ in NGC 1399 which are outside of the limits of the y-axis which are due to a foreground star to the north of the centre of the galaxy. We excluded this from the plot in order to better show detail of the galaxy's radial stellar velocity dispersion profile.
+% needs further comment - have emailed Martin
+
+
+			\begin{figure}
+				\centering
+				\includegraphics[width=.9\textwidth]{chapter4/compare_sigma.png}
+				\caption[Comparison between stellar velocity dispersion radial profiles from VIMOS and MUSE datacubes]{A comparison of the stellar velocity dispersion ($\sigma$) for the VIMOS (red) and MUSE (blue) datasets.}
+				\label{fig:compare_sigprofile}
+			\end{figure}
+
+			All of the above comparisons show that in the case of IC 1459, which we take as representative of all the well reduced VIMOS datacubes, the best-fitting parameters are consistent with the values of parameters derived from the MUSE datacubes. However IC 4296 and NGC 1399 have (from simple inspection) the strongest artifacts from VIMOS and hence have the worst reduction and least reliability. In fact, as can be clearly seen from some of the Fig.\,\ref{fig:compare_velfield}, the artifacts dominate the spatially resolved maps completely obscuring any structure, however the VIMOS derived parameters still well represent the radial stellar velocity dispersion profile (see Fig.\,\ref{fig:compare_sigprofile}). Similar analysis, with similar conclusions, but for measured absorption line strengths and best-fitting emission lines, is shown in Sections \ref{subsec:RobustAbs} and \ref{subsec:RobustEmi}, respectively.
+
+
+	\subsection{Ellipticity}
+		\label{subsec:Ellipticity}
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=.9\textwidth]{chapter4/lambda_R_ellipticity.png}
+			\caption[$\lambda_\mathrm{R_e}$\,--\,ellipticity diagram]{$\lambda_\mathrm{R_e}$\,--\,ellipticity diagram. VIMOS and MUSE measurements are shown in red and blue, respectively. For comparison, Atlas$^\text{3D}$ galaxies \citep{Emsellem2011} are shown in black and MASSIVE galaxies \citep{Veale2017} in grey. The theoretical limit (edge-on systems) of disc-dominated galaxies is shown in solid magenta, with lines of constant intrinsic angular momentum but varying inclination in dotted magenta. The black solid lines show the limits of the fast-/slow-rotator classes. The MASSIVE survey does not report substructure, so the MASSIVE sample galaxies are shown with filled circles.}
+			\label{fig:lambdaR_ellip}
+		\end{figure}
+
+		Ellipticity is measured as the ellipticity of the best-fitting ellipse to the surface-brightness map with an mean radius $R_\mathrm{m}$, of 1 effective radius $R_\mathrm{e}$. Firstly the centre of the galaxy is found as the luminosity weighted centre using the \textsc{python} routine \textsc{find\_galaxy}, which is part of the \textsc{mge} package\footnote{\url{http://www-astro.physics.ox.ac.uk/\~mxc/software/}} by \citet{Cappellari2002}. This is then used as an input for the \textsc{idl} routine \textsc{kinemetry}\footnote{\url{http://davor.krajnovic.org/idl/}} by \citet{Krajnovic2006} which finds the best-fitting ellipses at a range of evenly spaced semi-major axes. This is achieved by performing harmonic expansion of maps along ellipses with a given semi-major axis and, when used for even moments (e.g.\ surface brightness, velocity dispersion, h$_4$ etc.), minimizing the amplitude of the first and second harmonics. The results include the ellipticity, $\epsilon$ and position angle $PA_\text{phot}$ of the best-fitting ellipse for each semi-major axis. The fit is repeated for increasing semi-major axis until $<$75\% of the ellipse is not contained within the field of view.
+
+		In reality, the field of view does not always contain 1 $R_\mathrm{e}$. Where this is the case, we follow the method by \citet{Emsellem2007}, where $R_\mathrm{m}$ is redefined as $R_\mathrm{m} \equiv \sqrt{A_\mathrm{s}/\pi}$, where $A_\mathrm{s}$ is the area of the ellipse contained within the field of view. For a given galaxy, we fit ellipses as described above, up to $R_\mathrm{m} = R_\mathrm{max}$, where $A_\mathrm{s}$ reaches a maximum difference of 15\% to the area of the fitted ellipse, $A_\text{ellipse}$. The value $\epsilon_\mathrm{e}$, the ellipticity at 1 $R_\mathrm{e}$ or $R_\text{max}$, whichever is smallest, is given in Table \ref{tab:classify}. 
+
+	\subsection{Fast-/Slow-Rotator Classification}
+		\label{subsec:FSRot}
+
+		The specific angular momentum parameter $\lambda_R$ (see Section \ref{sec:ETG} for for definitions of $\lambda_R$) is evaluated at 1 $R_\mathrm{e}$ or $R_\text{max}$, whichever is smaller (as described for ellipticity in Section \ref{subsec:Ellipticity}), and is given in Table \ref{tab:classify}. This is plotted against the ellipticity, $\epsilon_\mathrm{e}$ (see Section \ref{subsec:Ellipticity}) in Fig.\,\ref{fig:lambdaR_ellip}. This plot shows the classification scheme of \citet{Cappellari2016} for the fast-/slow-rotator (FR/SR) categories (originally defined by \citealt{Emsellem2011}, but later refined by \citealt{Cappellari2016}; see Section \ref{sec:ETG}). This classification is given in Col.\,5 of Table \ref{tab:classify}.
+
+		We find that 5 out of 11 galaxies, or $(45\pm13)$\%, are slow rotators. This is between that of the Atlas$^\text{3D}$ and MASSIVE projects, who find 13.1\% and 77.5\% of their respective sample galaxies to be slow rotators. However, slow rotators are more likely to be found in higher mass galaxies and the three samples (Atlas$^\text{3D}$, MASSIVE and our Southern sample) have very different mass distributions (see upper panel of Fig.\,\ref{fig:SRmassFraction}).
+
+		In order to account for the difference in mass distribution, we find the expected fraction of slow rotators in the Southern sample, $f'$, corrected to the mass distribution of the combined Atlas$^\text{3D}$ and MASSIVE samples (hereafter the A+M sample), as
+		\begin{equation}
+			f' = \sum_{i=0}^N N^\mathrm{SS}_i f^\mathrm{AM}_i \, , 
+		\end{equation}
+		where $N^\mathrm{SS}_i$ is the number of Southern sample galaxies in the $i^\mathrm{th}$ mass bin, $N^\mathrm{AM}_i$ is the fraction of slow rotators in the $i^\mathrm{th}$ mass bin in the A+M sample and $N$ is the total number of mass bins. In our case we use the $K$-band absolute magnitude ($M_K$) as a proxy for stellar mass, with bins of 0.5 mag. This gives an expected fraction of $f' = 0.64 \pm 0.06$, just consistent with our finding of $(45\pm13)$\% of the Southern sample galaxies being slow rotators. Again the large uncertainty reflects the low number statistics of the Southern sample. There is, therefore, no discernible difference in the fraction of galaxies that are slow-rotators between our radio-selected Southern sample and the optically-selected A+M sample, once differences in the mass distributions are taken into account. 
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.8\textwidth]{chapter4/M_k_binned.png}
+			\caption[Mass matching global kinematics]{Upper panel: mass distribution of the A+M sample (black) and of our Southern sample (red). Lower panel: fraction of slow rotators within each mass bin. The labels list the number of slow rotators and total number of galaxies in each bin.}
+			\label{fig:SRmassFraction}
+		\end{figure}
+
+	\subsection{Radial Angular Momentum Profile}
+		\label{subsec:ResolvedLambda_R}
+		The radial $\lambda_R$ profiles (i.e.\ $\lambda_R$ as a function of aperture radius) are shown in Fig.\,\ref{fig:lambdaR_profile}. We see, with the exception of IC 1531, a disc with very low inclination, fast and slow rotators are separated by $\approx 0.3\,\mathrm{R_\odot}$. We also see that most of the fast rotators of our Southern sample have a rapidly rising $\lambda_R$ profile, which flatten out by $\approx 0.5\,\mathrm{R_\odot}$. This is consistent with the SAURON surveys findings \citep[e.g.][Fig.\,2]{Emsellem2007}. 
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=.7\textwidth]{chapter4/lambda_R.png}
+			\caption[$\lambda_{R}$ radial profiles]{Radial $\lambda_{R}$ profiles. Profiles derived from VIMOS data are in blue, while those derived from MUSE data are in red. Solid lines represent fast rotators; dashed lines, slow rotators.}
+			\label{fig:lambdaR_profile}
+		\end{figure}
 
 		
 		\subsection{Intrinsic Shape}
@@ -348,6 +407,20 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 			We also observe that the offset in the Fe5015 index is also quite large in comparisons with \citet{Rampazzo2005} and \citet{Vazdekis2010}. In the case of the comparison with \citet{Rampazzo2005} we suggest that the difference is due to differences in method for accounting for the [\ion{O}{iii}] emission lines, however the origin of the offset is less clear in case of the comparison with \citet{Vazdekis2010}. 
 
 			Other than G4300 and Fe5015, the comparisons show fairly consistent agreement with literature measurements although the dispersion of the comparisons are fairly large. We suggest that the translation between Lick and LIS systems may be the source of this spread.
+
+
+		\subsubsection{Robustness of Absorption Line Strength Results}
+			\label{subsubsec:RobustAbs}
+			As well as comparison to the literature, we also compare the Mg\,b radial profiles between the VIMOS and MUSE datasets (see Fig.\,\ref{fig:compare_mgb}) for the 3 galaxies for which we have both observations. As in Fig.\,\ref{fig:compare_sigprofile}, the degradation of VIMOS measurements at large radii from the galaxy's centre is immediately apparent. It is also immediately clear, that at lower radii the lines strengths from the VIMOS datasets are much more tightly constrained than the MUSE line strengths. This is particularly evident in IC 1459 where in the MUSE dataset, the Mg\,b line strengths has a double peak which occur in the outer regions of the KDC, however this feature is not seen in the VIMOS measurements. 
+
+			\begin{figure}
+				\centering
+				\includegraphics[width=.9\textwidth]{chapter4/compare_Mgb.png}
+				\caption[Comparison between Mg\,b radial profiles from VIMOS and MUSE datacubes]{A comparison of the Mg\,b absorption line strengths for VIMOS (red) and MUSE (blue) datasets.}
+				\label{fig:compare_mgbprofile}
+			\end{figure}
+
+			Overall the two datasets appear to be consistent with each other even in the cases of IC 4296 and NGC 1399 which both have large artifacts from the VIMOS instrument (see Section \ref{subsec:VIMOSartefacts}). 
 
 
 	\subsection{Most-likely Stellar Population Models}

@@ -246,9 +246,9 @@ def show_spectra(galaxy, bins, instrument='vimos', opt='kin'):
 		header, show_bin_num=False, flux_unbinned=D.unbinned_flux, ax=a1, 
 		dots=bins)
 
-	for o, color in overplot.iteritems():
-			scale = 'log' if o == 'radio' else 'lin'
-			add_(o, color, a1, galaxy, nolegend=True, scale=scale)
+	# for o, color in overplot.iteritems():
+	# 		scale = 'log' if o == 'radio' else 'lin'
+	# 		add_(o, color, a1, galaxy, nolegend=True, scale=scale)
 
 	for i, b in enumerate(bins):
 		a = plt.subplot(len(bins)*100 + 20 + (i+1)*2)
@@ -262,10 +262,10 @@ def show_spectra(galaxy, bins, instrument='vimos', opt='kin'):
 
 		if (i+1) == (len(bins)+1)/2:
 			a.set_ylabel(r"Flux ($10^{-15}\,erg\,s^{-1}\,\AA^{-1}\,cm^{-2}$)",
-				labelpad=10)
-			a.ax2.set_ylabel('Residuals, Emission lines and Noise '
+				labelpad=15)
+			a.ax2.set_ylabel('Residuals and Emission lines '
 				+ r'($10^{-15}\,erg\,s^{-1}\,\AA^{-1}\,cm^{-2}$)',rotation=270,
-				labelpad=50)
+				labelpad=60)
 
 
 	plt.gcf().savefig('pPXF_fits_'+instrument+'_'+galaxy+'.png', 
@@ -282,9 +282,9 @@ def plot_bin(ax, D, b):
 	lam = b.lam
 	spectrum = b.spectrum * scale
 	bestfit = b.bestfit * scale
-	resid = (spectrum - bestfit) * scale
+	resid = spectrum - bestfit
 	emission = np.nansum([b.e_line[l].spectrum for l in D.e_line_no_mask], 
-		axis=0)*scale
+		axis=0) * scale
 
 
 
@@ -314,85 +314,100 @@ def compare():
 		r'F(H$\beta)\ (10^{-15}\,erg\,s^{-1}\,cm^{-2})$', 
 		r'F(OIII) $(10^{-15}\,erg\,s^{-1}\,cm^{-2})$', 
 		r'$Mg\,b\ (\AA)$']
+	sav_plots = ['sigma', 'Hb', 'OIII', 'Mgb']
 
-	for galaxy in ['ic1459', 'ic4296', 'ngc1399']:
-		print '     '+galaxy
+	lims_plots = [[150,475], False, False, [2,7]]
+
+	str_galaxies = ['IC 1459', 'IC 4296', 'NGC 1399']
+
+	for i, p in enumerate(plots):
+		print '     '+ p
 		Prefig(size=np.array((2, 2))*7)
-		fig, ax = plt.subplots(2,2, sharex=True)
+		if lims_plots[i]:
+			fig, ax = plt.subplots(2,2, sharex=True, sharey=True)
+		else:
+			fig, ax = plt.subplots(2,2, sharex=True)
 
-		DV = Data(galaxy, instrument='vimos', opt='pop')
-		DM = Data(galaxy, instrument='muse', opt='pop')
+		for j, galaxy in enumerate(['ic1459', 'ic4296', 'ngc1399']):
+			print '         '+galaxy
+			ax.flatten()[j].text(0.1, 0.9, str_galaxies[j], 
+				transform=ax.flatten()[j].transAxes)
 
-		DV_kin = Data(galaxy, instrument='vimos', opt='kin')
-		DM_kin = Data(galaxy, instrument='muse', opt='kin')
+			if "sigma" in p:
+				DV = Data(galaxy, instrument='vimos', opt='kin')
+				DM = Data(galaxy, instrument='muse', opt='kin')
+			else:
+				DV = Data(galaxy, instrument='vimos', opt='pop')
+				DM = Data(galaxy, instrument='muse', opt='pop')
 
-		for i, p in enumerate(plots):
+			
+			r = np.sqrt((DM.xBar - DM.center[0])**2 
+				+ (DM.yBar - DM.center[1])**2)*0.2
 			try:
 				if "absorption_line" in p:
 					ab, err = eval('DM.'+p)
-					ax.flatten()[i].errorbar(np.sqrt(DM.xBar**2+DM.yBar**2)*0.2, 
-						ab, fmt='x', label='MUSE', c='b', yerr=err)
+					ax.flatten()[j].errorbar(r, ab, fmt='x', label='MUSE', 
+						c='b', yerr=err)
 				elif "sigma" in p:
-					ax.flatten()[i].errorbar(
-						np.sqrt(DM_kin.xBar**2+DM_kin.yBar**2)*0.2, 
-						eval('DM_kin.'+p), fmt='x', label='MUSE', c='b',
-						yerr=eval('DM_kin.'+p+'.uncert'))
+					ax.flatten()[j].errorbar(r, eval('DM.'+p), fmt='x', 
+						label='MUSE', c='b', yerr=eval('DM.'+p+'.uncert'))
 				else:
 					# ax.flatten()[i].errorbar(np.sqrt(DM.xBar**2+DM.yBar**2)*0.2, 
 					# 	eval('DM.'+p)/10**5/DM.n_spaxels_in_bin/0.2**2, 
 					# 	fmt='x', c='b', label='MUSE',
 					# 	yerr=eval('DM.'+p+'.uncert')/10**5/DM.n_spaxels_in_bin
 					# 	/0.2**2)
-					ax.flatten()[i].errorbar(np.sqrt(DM.xBar**2+DM.yBar**2)*0.2, 
-						eval('DM.'+p)/10**5/0.2**2, 
+					ax.flatten()[j].errorbar(r, eval('DM.'+p)/10**5/0.2**2, 
 						fmt='x', c='b', label='MUSE',
 						yerr=eval('DM.'+p+'.uncert')/10**5
 						/0.2**2)
 			except:
 				# pass
-				print 'MUSE', p
+				print 'MUSE', p, galaxy
+			r = np.sqrt((DV.xBar - DV.center[0])**2 
+				+ (DV.yBar - DV.center[1])**2)*0.67
 			try:
 				if "absorption_line" in p:
 					ab, err = eval('DV.'+p)
-					ax.flatten()[i].errorbar(np.sqrt(DV.xBar**2+DV.yBar**2)*0.67, 
-						ab, fmt='.', label='VIMOS', yerr=err, c='r')
+					ax.flatten()[j].errorbar(r, ab, fmt='.', label='VIMOS', 
+						yerr=err, c='r')
+					ax.flatten()[j].set_ylim([0,10])
 				elif "sigma" in p:
-					ax.flatten()[i].errorbar(
-						np.sqrt(DV_kin.xBar**2+DV_kin.yBar**2)*0.67, 
-						eval('DV_kin.'+p), fmt='.', label='VIMOS', c='r',
-						yerr=eval('DV_kin.'+p+'.uncert'))
+					ax.flatten()[j].errorbar(r, eval('DV.'+p), fmt='.', 
+						label='VIMOS', c='r', yerr=eval('DV.'+p+'.uncert'))
 				else:
 					# ax.flatten()[i].errorbar(np.sqrt(DV.xBar**2+DV.yBar**2)*0.67, 
 					# 	eval('DV.'+p)/DV.n_spaxels_in_bin/0.67**2, 
 					# 	fmt='.', c='r', label='VIMOS',
 					# 	yerr=eval('DV.'+p+'.uncert')/DV.n_spaxels_in_bin/0.67**2)
-					ax.flatten()[i].errorbar(np.sqrt(DV.xBar**2+DV.yBar**2)*0.67, 
-						eval('DV.'+p)/0.67**2, 
-						fmt='.', c='r', label='VIMOS',
-						yerr=eval('DV.'+p+'.uncert')/0.67**2)
+					ax.flatten()[j].errorbar(r, eval('DV.'+p)/0.67**2, 	fmt='.', 
+						c='r', label='VIMOS', yerr=eval('DV.'+p+'.uncert')/0.67**2)
 
 			except:
 				# pass		
-				print 'VIMOS', p
+				print 'VIMOS', p, galaxy
 
-		# ax[1,1].scatter(np.nan, np.nan, marker='.', 
-		# 	label='VIMOS' + ' ' + galaxy.upper())
-		# ax[1,1].scatter(np.nan, np.nan, marker='x', 
-		# 	label='MUSE' + ' ' + galaxy.upper())
-		for i, p in enumerate(plots):
-			ax.flatten()[i].set_ylabel(str_plots[i])
-		for a in ax[1,:]:
+		if lims_plots[i]:
+			for a in ax[:,0]:
+				a.set_ylabel(str_plots[i])
+			ax[0,0].set_ylim(lims_plots[i])
+			fig.subplots_adjust(hspace=0, wspace=0)
+		else:
+			for a in ax.flatten():
+				a.set_ylabel(str_plots[i])
+			fig.tight_layout()
+			fig.subplots_adjust(hspace=0.05)
+		for a in ax.flatten()[1:]:
 			a.set_xlabel('Radius (arcsec)')
+		ax[0,1].xaxis.set_tick_params(labelbottom=True)
 
-		ax[1,1].set_ylim([3,9])
-		# ax[1,1].axis('off')
-		# h, l = ax[0,0].get_legend_handles_labels()
-		# ax[1,1].legend(h,l)
-		ax[1,1].legend()
-		fig.tight_layout()
-		fig.savefig('compare_'+galaxy+'.png', bbox_inches='tight', dpi=200)
+		ax[1,1].axis('off')
+		h, l = ax[0,0].get_legend_handles_labels()
+		ax[1,1].legend(h,l, bbox_to_anchor=(0,0.88), loc='upper left')
 
-	plt.close('all')
+		fig.savefig('compare_'+sav_plots[i]+'.png', bbox_inches='tight', dpi=200)
+
+		plt.close('all')
 
 # Compare velocity fields
 def compare_velfield():
@@ -512,16 +527,40 @@ if __name__=='__main__':
 		# single_absorption_plot(instrument='vimos')
 
 
-		# compare()
-
-		# show_spectra('ic1459', [0,100,400], instrument='vimos', opt='pop')
+		compare()
+		# pass
+		# show_spectra('ic1459', [0,100,192], instrument='vimos', opt='pop')
 		# show_spectra('ic1459', [0,494,2522], instrument='muse', opt='pop')
 		# show_spectra('ic4296', [0,100,630], instrument='vimos', opt='pop')
 		# show_spectra('ic4296', [0,414,279], instrument='muse', opt='pop')
 
-		compare_velfield()
+		# compare_velfield()
 
 	elif cc.device == 'uni':
 		for galaxy in ['ic1459', 'ic4296', 'ngc1316', 'ngc1399']:
 			# populations_corner('eso443-g024', instrument='muse')
 			absorption_plots(galaxy, instrument='muse')
+
+
+
+	if False:
+		D = Data('ngc1316', instrument='muse')
+		f = fits.open(get_dataCubeDirectory('ngc1316'))
+		header = f[1].header
+		f.close()
+
+		Prefig()
+		fig, ax = plt.subplots(2)
+		vmin, vmax = set_lims(D.components['stellar'].plot['vel'])
+		plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, D.yBar, 
+			D.components['stellar'].plot['vel'], 
+			header, show_bin_num=False, flux_unbinned=D.unbinned_flux, ax=ax[0], 
+			colorbar=True, vmin=vmin, vmax=vmax)
+
+		plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, D.yBar, 
+			D.components['[OIII]5007d'].plot['vel'], 
+			header, show_bin_num=False, flux_unbinned=D.unbinned_flux, ax=ax[1],
+			colorbar=True, vmin=vmin, vmax=vmax)
+
+
+		plt.show()
