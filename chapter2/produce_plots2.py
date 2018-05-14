@@ -12,7 +12,9 @@ from Bin2 import Data
 from prefig import Prefig
 from astropy.io import fits
 from scipy.ndimage import zoom
-from plot_velfield_nointerp import correct_header
+from plot_velfield_nointerp import correct_header,plot_velfield_nointerp
+from errors2_muse import get_dataCubeDirectory, run_ppxf, set_params
+from plot_results import set_lims
 
 
 # Copied from ../chapter4/produce_plots2.py
@@ -141,7 +143,7 @@ def compare_hst(galaxy, instrument='vimos'):
 
 	plt.imshow(res)
 
-	plt.imshow(np.log(hst), alpha=0.8)
+	plt.imshow(hst, alpha=0.8, vmax=400)
 
 	plt.show()
 
@@ -190,6 +192,160 @@ def test():
 
 
 
+
+
+
+
+def ngc1316_NaD_effect():
+	bin = 918
+	D = Data('ngc1316', instrument='muse', opt='kin')
+
+	tessellation_File = "/Data/muse/analysis/ngc1316/pop_no_Na/"+\
+		"setup/voronoi_2d_binning_output.txt"
+
+	x,y,bin_num = np.loadtxt(tessellation_File, usecols=(0,1,2), \
+	    unpack=True, skiprows=1).astype(int)#, dtype='int,int,int')
+
+	n_bins = max(bin_num) + 1
+	## Contains the order of the bin numbers in terms of index number.
+	order = np.sort(bin_num)
+	## ----------========= Reading the spectrum  ===============---------
+
+	dataCubeDirectory = get_dataCubeDirectory('ngc1316')
+
+	f = fits.open(dataCubeDirectory)
+	galaxy_data, header = f[1].data, f[1].header
+	galaxy_noise = f[2].data
+
+	## write key parameters from header - can then be altered in future	
+	CRVAL_spec = header['CRVAL3']
+	CDELT_spec = header['CD3_3']
+	## ----------============= Spatially Binning ===============---------
+	spaxels_in_bin = np.where(bin_num == bin)[0]
+	n_spaxels_in_bin = len(spaxels_in_bin)
+
+	bin_lin = np.nansum(galaxy_data[:,x[spaxels_in_bin],y[spaxels_in_bin]], 
+	    axis=1)/n_spaxels_in_bin
+	bin_lin_noise = np.nansum(galaxy_noise[:,x[spaxels_in_bin],
+	    y[spaxels_in_bin]]**2, axis=1)
+	bin_lin_noise = np.sqrt(bin_lin_noise)/n_spaxels_in_bin
+
+	params = set_params(opt='kin', set_range_star=np.array([2000, 5800]), reps=0)
+
+	pp_No_Na = run_ppxf('ngc1316', np.array(bin_lin), np.array(bin_lin_noise), 
+		CDELT_spec, CRVAL_spec, params)
+
+	params = set_params(opt='kin', reps=0)
+
+	pp = run_ppxf('ngc1316', np.array(bin_lin), np.array(bin_lin_noise), 
+		CDELT_spec, CRVAL_spec, params)
+
+
+
+	fig, ax = plt.subplots()
+
+	ax.plot(pp.lam, pp.galaxy, 'k', label='Spectrum')
+	ax.plot(pp.lam, pp.bestfit, 'r--', label='Bestfit including NaD')
+	ax.plot(pp_No_Na.lam, pp_No_Na.bestfit, 'g--', label='Bestfit excluding NaD')
+
+	# ax.set_xlim([5250,5450])
+	# ax.set_ylim([0.000007, 0.000012])
+	ax.legend()
+
+
+
+
+
+
+
+
+
+
+
+
+def compare_hst2(galaxy, instrument='vimos'):
+	print 'HST comparsion to %s for %s' % (instrument, galaxy)
+	from scipy import ndimage
+	if instrument == 'vimos':
+		ext = 0
+		from errors2 import get_dataCubeDirectory
+		scale = 1
+		spectral_res = 0.7
+	elif instrument == 'muse':
+		ext = 1
+		from errors2_muse import get_dataCubeDirectory
+		scale = 10**-5
+		spectral_res = 1.25
+	Prefig()
+	fig, ax = plt.subplots()
+
+	f = fits.open(get_dataCubeDirectory(galaxy).hst)
+	hst = f[1].data
+	hst = hst[::-1, :]
+	# hst = hst[::-1, ::-1]
+	hst_header = f[1].header
+	f.close()
+	if instrument=='vimos':
+		if galaxy == 'ngc3557':
+			hst = ndimage.gaussian_filter(hst, sigma=1)
+		else:
+			hst = ndimage.gaussian_filter(hst, sigma=2)
+	elif instrument=='muse':
+		hst = ndimage.gaussian_filter(hst, sigma=3)
+
+	f = fits.open(get_dataCubeDirectory(galaxy))
+	cube_header = f[ext].header
+	cube_header = correct_header(cube_header)
+	f.close()
+
+	# hst *= 3.396e-18/10**-15 *1729 / 0.159
+
+	size = 200
+	s = hst.shape
+	extent = np.array([-size/2.,size/2.])*hst_header['CD1_1']*60*60
+
+	extent = np.array([-size/2.,size/2.])*np.sqrt(hst_header['OCD1_1']**2 + 
+		hst_header['OCD1_2']**2) * 60**2
+
+	D = Data(galaxy, instrument=instrument, opt='kin')
+
+	vmin, vmax = set_lims(D.flux, positive=True)
+	ax = plot_velfield_nointerp(D.x,D.y,D.bin_num,D.xBar,D.yBar, D.flux, cube_header,
+		colorbar=False, cmap='gist_yarg', vmax=vmax, vmin=vmin, ax=ax, 
+		galaxy=galaxy.upper()) #, flux_unbinned=D.unbinned_flux)
+
+	RA_cent = (cube_header['NAXIS1'] - D.center[0] - cube_header['CRPIX1'] #+1
+		) * -1 * abs(cube_header['CD1_1']) + cube_header['CRVAL1']
+	dec_cent = (cube_header['NAXIS2'] - D.center[1] - cube_header['CRPIX2'] #+1
+		) * abs(cube_header['CD2_2']) + cube_header['CRVAL2']
+
+	xlim = ax.get_xlim()
+	ylim = ax.get_ylim()
+
+	from find_galaxy import find_galaxy # part of mge package: fits photometry
+	f = find_galaxy(hst, quiet=True, plot=False)
+
+	extent=np.append(
+		(np.array([0, hst_header['NAXIS1']]) - f.ymed) * 
+			hst_header['CD1_1'] + RA_cent, # hst_header['CRVAL1'],
+		(np.array([0, hst_header['NAXIS2']]) - f.xmed) * 
+			hst_header['CD2_2'] + dec_cent) # hst_header['CRVAL2'])
+
+	ax.contour(-2.5*np.log10(hst/np.max(hst)), extent=extent, levels=np.arange(20),
+		colors='r')
+
+	ax.set_xlim(xlim)
+	ax.set_ylim(ylim)
+
+	fig.savefig('hst_%s_%s.png' % (instrument, galaxy), bbox_inches='tight', dpi=240)
+
+
+
 if __name__=='__main__':
 	# compare_hst('ic1459', instrument='vimos')
-	test()
+	# test()
+	# ngc1316_NaD_effect()
+	for g in ['ic1459', 'ic4296', 'ngc1399', 'ngc3557']:
+		compare_hst2(g, instrument='vimos')
+	for g in ['ic1459', 'ic4296', 'ngc1316', 'ngc1399']:
+		compare_hst2(g, instrument='muse')

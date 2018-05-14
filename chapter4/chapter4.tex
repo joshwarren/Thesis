@@ -12,7 +12,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 		\label{subsec:maps}
 		Using the methods described in Chapter \ref{cha:Data} to reduce (see Sections \ref{subsec:VIMOSreduction} and \ref{subsec:MUSEreduction}), spatially bin (Section \ref{subsec:Binning}) and fit the stellar line-of-sight velocity distributions (LOSVDs; here parametrised by the mean velocity, $v$ and velocity dispersion, $\sigma$, only; Section \ref{subsec:StellarFit}), we produce stellar kinematic maps. These kinematic maps are shown in Figs.\,\ref{fig:VIMOS_stellar} and \ref{fig:MUSE_stellar} with their associated uncertainties for the VIMOS and MUSE datacubes, respectively. 
 
-		As part of this project, radio continuum maps have been produced by Robert Laing (private communication) by re-reducing archival data from the Very Large Array (VLA) in a variety of bands. We also use the VLA image from \citet{Lanz2010} for NGC 1316. These images have a variety of resolutions and spatial scales: we choose the image that closest matches our VIMOS and MUSE observations and overlay this on all maps (except those showing uncertainties) in green contours. Additionally, this project has also secured observations of the Southern Sample (except NGC 1316 and NGC 1399 for technique reasons) from the Atacama Large Millimeter/sub-millimeter Array (ALMA). \ce{^{12}CO(2-1)} flux maps have been produced by Ruffa et al.\ (in prep.). These are shown in cyan contours on all maps (except those showing uncertainties). 
+		As part of this project, radio continuum maps have been produced by Robert Laing (private communication) by re-reducing archival data from the Very Large Array (VLA) in a variety of bands. We also use the VLA image from \citet{Lanz2010} for NGC 1316. These images have a variety of resolutions and spatial scales: we choose the image that closest matches our VIMOS and MUSE observations and overlay this on all maps (except those showing uncertainties) in green contours. Additionally, this project has also secured observations of the Southern Sample (except NGC 1316 and NGC 1399 for technique reasons) from the Atacama Large Millimetre/sub-millimetre Array (ALMA). \ce{^{12}CO(2-1)} flux maps have been produced by Ruffa et al.\ (in prep.). These are shown in cyan contours on all maps (except those showing uncertainties). 
 
 		\begin{figure}
 			\centering
@@ -121,7 +121,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 				\label{fig:ppxf4}
 			\end{figure}
 
-			We also directly compare the stellar velocity maps from VIMOS and MUSE (see Fig.\,\ref{fig:compare_velfield}). In IC 4296 and NGC 1399, we see the artifacts from the VIMOS instrument almost entirely obstruct any meaningful interpretation the velocity maps generated from VIMOS data. However in IC 1459, we can see that both instruments give similar results, although some artifact can been seen in the MUSE data (such as the an arrowhead shape above the KDC). 
+			We also directly compare the stellar velocity maps from VIMOS and MUSE (see Fig.\,\ref{fig:compare_velfield}). In IC 4296 and NGC 1399, we see the artefacts from the VIMOS instrument almost entirely obstruct any meaningful interpretation the velocity maps generated from VIMOS data. However in IC 1459, we can see that both instruments give similar results, although some artefact can been seen in the MUSE data (such as the an arrowhead shape above the KDC). 
 
 			\begin{figure}
 				\centering
@@ -130,8 +130,16 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 				\label{fig:compare_velfield}
 			\end{figure}
 
-			Finally, we compare the radial profiles of the stellar velocity dispersion (see Fig.\,\ref{fig:compare_sigprofile}). Here, we see that in the cases of both IC 1459 and IC 4296 the stellar velocity dispersions are systematically lower for VIMOS data than MUSE. This is particularly noticeable within the inner 5\arcsec. %This may be due to the fact that VIMOS spaxels are over 11 times larger in area than the MUSE spaxels -- but should it not be the other way round? As we are using bin centroid...
+			Finally, we compare the radial profiles of the stellar velocity dispersion (see Fig.\,\ref{fig:compare_sigprofile}). Here, we see that in the cases of both IC 1459 and IC 4296 the stellar velocity dispersions are systematically lower for VIMOS data than MUSE. This is particularly noticeable within the inner 5\arcsec. 
+			%This may be due to the fact that VIMOS spaxels are over 11 times larger in area than the MUSE spaxels -- but should it not be the other way round? As we are using bin centroid...
+			% We speculate that this underestimating of the VIMOS stellar velocity dispersion may be due to a variable, and uncorrected, instrumental dispersion across the field of view. As discussed in Section \ref{subsec:VIMOSreduction}, the additional dispersion of the spectrum in the dispersion direction on the detectors could not be accounted for by the data-reduction pipeline due to the lack of skylines within the wavelength range of the grism used. 
+
+			We speculate that this underestimating of the VIMOS stellar velocity dispersion may be due to a variable, and uncorrected, instrumental dispersion across the field of view. As discussed in Section \ref{subsec:VIMOSreduction}, the only correction made for flexure in the dispersion direction is a zero-th order shift based on the shift in position of the 5199\AA sky line. This means that an higher order shifts in not corrected for and may be the cause of this mis-calibration between the VIMOS and MUSE derived stellar velocity dispersions.
+
+			% additional dispersion of the spectrum in the dispersion direction on the detectors could not be accounted for by the data-reduction pipeline due to the lack of skylines within the wavelength range of the grism used. 
+
 			We can also see the degeneration of the VIMOS derived values in IC 1459 at large radii. 
+
 			There are two groups of bins with large ($\approx$600--700\,km\,s$^{-1}$) and small ($\approx 0$\,km\,s$^{-1}$) stellar velocity dispersions at radius $r \approx 17\arcsec$ in NGC 1399 which are outside of the limits of the y-axis which are due to a foreground star to the north of the centre of the galaxy. We excluded this from the plot in order to better show detail of the galaxy's radial stellar velocity dispersion profile.
 % needs further comment - have emailed Martin
 
@@ -143,7 +151,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 				\label{fig:compare_sigprofile}
 			\end{figure}
 
-			All of the above comparisons show that in the case of IC 1459, which we take as representative of all the well reduced VIMOS datacubes, the best-fitting parameters are consistent with the values of parameters derived from the MUSE datacubes. However IC 4296 and NGC 1399 have (from simple inspection) the strongest artifacts from VIMOS and hence have the worst reduction and least reliability. In fact, as can be clearly seen from some of the Fig.\,\ref{fig:compare_velfield}, the artifacts dominate the spatially resolved maps completely obscuring any structure, however the VIMOS derived parameters still well represent the radial stellar velocity dispersion profile (see Fig.\,\ref{fig:compare_sigprofile}). Similar analysis, with similar conclusions, but for measured absorption line strengths and best-fitting emission lines, is shown in Sections \ref{subsec:RobustAbs} and \ref{subsec:RobustEmi}, respectively.
+			All of the above comparisons show that in the case of IC 1459, which we take as representative of all the well reduced VIMOS datacubes, the best-fitting parameters are consistent with the values of parameters derived from the MUSE datacubes. However IC 4296 and NGC 1399 have (from simple inspection) the strongest artefacts from VIMOS and hence have the worst reduction and least reliability. In fact, as can be clearly seen from some of the Fig.\,\ref{fig:compare_velfield}, the artefacts dominate the spatially resolved maps completely obscuring any structure, however the VIMOS derived parameters still well represent the radial stellar velocity dispersion profile (see Fig.\,\ref{fig:compare_sigprofile}). Similar analysis, with similar conclusions, but for measured absorption line strengths and best-fitting emission lines, is shown in Sections \ref{subsec:RobustAbs} and \ref{subsec:RobustEmi}, respectively.
 
 
 	\subsection{Ellipticity}
@@ -274,9 +282,11 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 
 			Since part of the red continuum band of the Mg$_2$ index is outside of the spectral range of VIMOS, but \citet{Ziegler1997} show there is a linear relationship between Mg\,b and Mg$_2$, with a gradient of 14.3--15.5\,mag\,\AA$^{-1}$\ depending on metallicity. We thus use Mg\,b as a proxy for Mg$_2$. 
 
-			Using an aperture with a radius of 2\arcsec\ on each datacube, we measure $\sigma_0$ and Mg\,b at a spectral resolution of 8.4\,\AA\ full-width half-maximum (FWHM; see Table \ref{tab:globalMg} and points in Fig.\,\ref{fig:globalMg}). The best-fitting linear relationship (found using \textsc{lts\_linefit} by \citealt{Cappellari2013}) has a gradient of $2.3 \pm 0.5 \,\mathrm{\AA\,dex^{-1}}$ (solid black line in Fig.\,\ref{fig:globalMg}) with an intrinsic scatter of $0.13 \pm 0.10 \, \mathrm{\AA}$. Individual measurements for each galaxy are given in table \ref{tab:globalMg}.
+			Using an aperture with a radius of 2\arcsec\ on each datacube, we measure $\sigma_0$ and Mg\,b at a spectral resolution of 8.4\,\AA\ full-width half-maximum (FWHM; see Table \ref{tab:globalMg} and points in Fig.\,\ref{fig:globalMg}). The best-fitting linear relationship (found using \textsc{lts\_linefit} by \citealt{Cappellari2013}) has a gradient of $3.3 \pm 1.0 \,\mathrm{\AA\,dex^{-1}}$ (solid black line in Fig.\,\ref{fig:globalMg}) with an root-mean-square (RMS) of $0.2 \, \mathrm{\AA}$ (individual measurements for each galaxy are given in table \ref{tab:globalMg}). It was noticed that NGC 1316 is a possible outlier. Removing NGC 1316 from the fit gives a gradient of $2.5 \pm 0.7 \,\mathrm{\AA\,dex^{-1}}$ with an RMS of $0.1 \, \mathrm{\AA}$ (green dashed line in Fig.\,\ref{fig:globalMg}). Both fits are in good agreement with the gradient found by \citet{Ziegler1997} for a sample of elliptical galaxies within Virgo and Coma using data from \citet{Dressler1987} of $2.5\,\mathrm{\AA\,dex^{-1}}$ (shown as the blue dotted line in Fig.\,\ref{fig:globalMg}), with an intrinsic scatter of 0.16\,\AA\ for galaxies with $\log \sigma_0 \geqslant 2.3$. 
 
-			This is in very good agreement with the gradient found by \citet{Ziegler1997} for a sample of elliptical galaxies within Virgo and Coma using data from \citet{Dressler1987} of $2.5\,\mathrm{\AA\,dex^{-1}}$ (shown as the blue dotted line in Fig.\,\ref{fig:globalMg}), with an intrinsic scatter of 0.16\,\AA\ for galaxies with $\log \sigma_0 \geqslant 2.3$. 
+
+			
+
 
 			\begin{table}
 				\centering
@@ -290,17 +300,17 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 						& \multicolumn{2}{c}{\AA} & \multicolumn{2}{c}{km s$^{-1}$} \\
 						& VIMOS & MUSE 	& VIMOS & MUSE \\
 					\hline
-					ESO 443-G024 & $4.42 \pm 0.03$ & -- & $220.8 \pm 0.8$ & -- \\
-					IC 1459 	& $4.85\pm0.07$ & $4.66 \pm 0.012$ & $248.3\pm0.6$ & $311.5 \pm 1.6$ \\
-					IC 1531 	& $4.01 \pm 0.04$ & -- & $149.6 \pm 1.1$ & -- \\
-					IC 4296		& $4.66\pm0.03$ & $4.57 \pm 0.10$ &  $299.1\pm1.0$ & $338.5 \pm 2.1$ \\
-					NGC 612 	& -- & -- & $228.0 \pm 3.0$ & -- \\
-					NGC 1316 	& -- & $3.41 \pm 0.05$ & -- & $207.4 \pm 1.3$ \\
-					NGC 1399 	& $5.39\pm0.11$ & $4.90 \pm 0.13$ & $282.2\pm0.6$ & $303.0 \pm 2.9$ \\
-					NGC 3100 	& $4.37 \pm 0.04$ & -- & $134.6 \pm 0.9$ & -- \\
-					NGC 3557 	& $4.26 \pm 0.04$ & -- & $232.9 \pm 0.4$ & -- \\
-					NGC 7075 	& $4.43 \pm 0.06$ & -- & $194.5 \pm 1.4$ & -- \\
-					PKS 718-34  & -- 		      & -- & $217.0 \pm 1.6$ & -- \\
+					ESO 443-G024 & $4.43 \pm 0.03$ & -- & $221 \pm 24$ & -- \\
+					IC 1459 	& $4.85\pm0.07$ & $4.66 \pm 0.012$ & $248\pm33$ & $312 \pm 61$ \\
+					IC 1531 	& $4.04 \pm 0.04$ & -- & $150 \pm 29$ & -- \\
+					IC 4296		& $4.67\pm0.03$ & $4.57 \pm 0.10$ &  $299\pm30$ & $339 \pm 59$ \\
+					NGC 612 	& -- & -- & $228 \pm 31$ & -- \\
+					NGC 1316 	& -- & $3.41 \pm 0.05$ & -- & $207 \pm 51$ \\
+					NGC 1399 	& $5.39\pm0.11$ & $4.90 \pm 0.13$ & $282\pm31$ & $303 \pm 36$ \\
+					NGC 3100 	& $4.38 \pm 0.04$ & -- & $135 \pm 25$ & -- \\
+					NGC 3557 	& $4.27 \pm 0.03$ & -- & $233 \pm 22$ & -- \\
+					NGC 7075 	& $4.45 \pm 0.06$ & -- & $194 \pm 29$ & -- \\
+					PKS 718-34  & -- 		      & -- & $217 \pm 29$ & -- \\
 					\hline
 					\hline
 				\end{tabular}
@@ -315,7 +325,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 			\begin{figure}
 				\centering
 				\includegraphics[width=.8\textwidth]{chapter4/Mg_sigma.png}
-				\caption[Global Mg\,b\,--\,$\sigma$]{The Mg\,b\,--\,velocity dispersion relation using a 2\arcsec aperture. We find a similar gradient to our best-fitting (solid) as that found by \citet[; dotted line]{Ziegler1997}.}
+				\caption[Global Mg\,b\,--\,$\sigma$]{The Mg\,b\,--\,velocity dispersion relation using a 2\arcsec aperture. We find a similar gradient to our best-fitting (solid black) line as that found by \citet[; blue dotted line]{Ziegler1997}, while removing NGC 1316 from the fit (green dashed) results in an extremely good agreement with \citet{Ziegler1997}.}
 				\label{fig:globalMg}
 			\end{figure}
 
@@ -420,14 +430,14 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 				\label{fig:compare_mgbprofile}
 			\end{figure}
 
-			Overall the two datasets appear to be consistent with each other even in the cases of IC 4296 and NGC 1399 which both have large artifacts from the VIMOS instrument (see Section \ref{subsec:VIMOSartefacts}). 
+			Overall the two datasets appear to be consistent with each other even in the cases of IC 4296 and NGC 1399 which both have large artefacts from the VIMOS instrument (see Section \ref{subsec:VIMOSartefacts}). 
 
 
 	\subsection{Most-likely Stellar Population Models}
 		\label{subsec:ssp}
 		We have assumed that a given spectrum from our Southern sample can be well approximated by a SSP. We use the method described in Section \ref{subsubsec:StellarPop} to produce maps of the most-likely SSP characteristics: age ($t$), metallicity ($Z/H$) and alpha-element enhancement ($\alpha$/Fe) from the absorption line strength maps. 
 
-		Figs.\,\ref{fig:VIMOS_pop} and \ref{fig:MUSE_pop} show the resolved most-likely stellar populations for our Southern sample. In general they show old, metal rich and alpha enhanced SSPs; qualities which ETGs are well known for. The exceptions are NGC 612 and NGC 1316. Both galaxies are described in more detail in Appendix \ref{cha:Description}, but NGC 1316 shows a very young stellar population (our fit of $t \approx 2$\,Gyr agrees with that of \citealt{Kuntschner2000}, but is conflicting with the older and less metal rich stellar population of \citealt{Koleva2011} who found $t=4.5 \pm 0.3 \,\mathrm{Gyr}$ and $\mathrm{[Fe/H]}=0.12 \pm 0.01 \,\mathrm{dex}$ for an aperture covering the central 0.1 kpc). NGC 3557 is notable for containing a significantly younger ($t\approx 4$\,Gyr) core of about 10\arcsec\ diameter and NGC 3100 has a branch of young stars ($\approx 4$\,Gyr) along the southeast branch of the molecular gas (cyan contours in Fig.\,\ref{fig:VIMOS_pop}).
+		Figs.\,\ref{fig:VIMOS_pop} and \ref{fig:MUSE_pop} show the resolved most-likely stellar populations for our Southern sample. In general they show old, metal rich and alpha enhanced SSPs; qualities which ETGs are well known for. The exceptions are NGC 612 and NGC 1316. Both galaxies are described in more detail in Appendix \ref{cha:Description}, but NGC 1316 shows a very young stellar population (our fit of $t \approx 2$\,Gyr agrees with that of \citealt{Kuntschner2000}, but is conflicting with the older and less metal rich stellar population of \citealt{Koleva2011} who found $t=4.5 \pm 0.3 \,\mathrm{Gyr}$ and $\mathrm{[Fe/H]}=0.12 \pm 0.01 \,\mathrm{dex}$ for an aperture covering the central 0.1 kpc). NGC 3557 is notable for containing a significantly younger ($t\approx 4$\,Gyr) core of about 10\arcsec\ diameter and NGC 3100 has a branch of young stars ($\approx 4$\,Gyr) along the south-east branch of the molecular gas (cyan contours in Fig.\,\ref{fig:VIMOS_pop}).
 
 		\begin{figure}
 			\centering
@@ -522,7 +532,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 		\begin{figure}
 			\centering
 			\includegraphics[width=.7\textwidth]{chapter4/KDC_size_age.png}
-			\caption[KDC dichotomy]{The KDC size\,--\,age relation. KDCs exist in two classes: old and embedded in a slow rotator or small and embedded in a fast rotator. VIMOS observations are in red, MUSE in blue and SAURON from \citet{Kuntschner2010} in black and gray for fast and slow rotators respectively.}
+			\caption[KDC dichotomy]{The KDC size\,--\,age relation. KDCs exist in two classes: old and embedded in a slow rotator or small and embedded in a fast rotator. VIMOS observations are in red, MUSE in blue and SAURON from \citet{Kuntschner2010} in black and grey for fast and slow rotators respectively.}
 			\label{fig:KDC}
 		\end{figure}
 	
@@ -530,7 +540,7 @@ The chapter is structured as follows: firstly we present the kinematic maps for 
 	\label{sec:stellarDiscussion}
 	In this chapter we have shown that in terms of the stellar kinematic properties and stellar populations, our radio-selected Southern sample are no different to ordinary optically-selected ETGs. Our sample shows a mixture of of regularly- and non-regularly-rotating behaviours, with both classes showing evidence of consistency with observations of the intrinsic shapes of ordinary regular and non-regular rotators. At this stage we observe that 2 (with a tentative third) galaxies host large kinematically decoupled cores (KDCs). We also classify our sample galaxies into fast- and slow-rotators and find a consistent fraction ($45\pm13$\%) of slow-rotators to the ordinary ETG samples of the A+M sample, once the difference in the mass distribution between our Southern sample and the A+M sample are taken into account. 
 
-	In terms of stellar populations, we find a remarkably similar gradient to the central Mg\,b verse stellar velocity dispersion relation to that of \citet{Ziegler1997}. Most of the galaxies in our Southern sample show typical ETG behavior: old, metal rich stellar populations, with a few exceptions: NGC 612 and NGC 1316 are both significantly younger than most ETGs and NGC 3557 has a young core. All are described in more detail in Appendix \ref{cha:Description}. We observe that all 3 KDCs contain old stellar populations and are consistent with being merger remnants. 
+	In terms of stellar populations, we find a remarkably similar gradient to the central Mg\,b verse stellar velocity dispersion relation to that of \citet{Ziegler1997}. Most of the galaxies in our Southern sample show typical ETG behaviour: old, metal rich stellar populations, with a few exceptions: NGC 612 and NGC 1316 are both significantly younger than most ETGs and NGC 3557 has a young core. All are described in more detail in Appendix \ref{cha:Description}. We observe that all 3 KDCs contain old stellar populations and are consistent with being merger remnants. 
 
 	All these observations and findings, are consistent with those of typical massive ETGs. This is consistent with the hypothesis that radio-galaxies are ordinary massive ETGs experiencing a normal but short-lived active phase. 
 

@@ -132,6 +132,16 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 
 		The correction spectra found in the process of removing the fringe-like pattern above introduces spatial covariance by effectively applying a spatially smoothing of the data over a scale of 2--3 spaxels. However the effect should not be large, however, so we chose to neglect these correlations and scale the variance spectra by the same factors as the observed spectra. This smoothing is, however, particularly undesirable at the centres of our sample galaxies, where the impact of active galactic nuclei (AGN) should be observed. This should be taken into account later, particularly in Chapter \ref{cha:gas}.
 
+		\begin{figure}
+			\centering
+			\includegraphics[width=.4\textwidth]{chapter2/hst_vimos_ic1459.png}
+			\includegraphics[width=.4\textwidth]{chapter2/hst_vimos_ic4296.png}
+			\includegraphics[width=.4\textwidth]{chapter2/hst_vimos_ngc1399.png}
+			\includegraphics[width=.4\textwidth]{chapter2/hst_vimos_ngc3557.png}
+			\caption[Comparison of VIMOS images to HST]{}
+			\label{fig:HSTvsVIMOS}
+		\end{figure}
+
 
 	\subsection{Other VIMOS Pipelines}
 		\label{subsec:Other}
@@ -175,6 +185,20 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 
 		As for the VIMOS data, the variance spectra are propagated throughout the entire data-reduction pipeline, including our additional pseudo-sky subtraction step, and are squared-rooted at the end, to be used as noise inputs at the analysis stage. 
 
+		\subsubsection{MUSE Data Quality}
+
+			As with the VIMOS data, we here examine the reconstructed images ()
+			\begin{figure}
+				\centering
+				\includegraphics[width=.4\textwidth]{chapter2/hst_muse_ic1459.png}
+				\includegraphics[width=.4\textwidth]{chapter2/hst_muse_ic4296.png}
+				\includegraphics[width=.4\textwidth]{chapter2/hst_muse_ngc1316.png}
+				\includegraphics[width=.4\textwidth]{chapter2/hst_muse_ngc1399.png}
+				\caption[Comparison of MUSE images to HST]{}
+				\label{fig:HSTvsMUSE}
+			\end{figure}
+
+
 \section{Data Analysis}
 	\label{sec:analysis}
 	From this point on, the VIMOS and MUSE datasets are treated almost identically, the only difference (other than the different spectral ranges and resolutions) being that the MUSE datacubes are binned to a higher signal-to-noise ratio (S/N).
@@ -208,13 +232,15 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 		\label{subsec:StellarFit}
 		For our analysis, we make use of the penalized-fitting (\textsc{pPXF}) routine\footnote{\url{http://www-astro.physics.ox.ac.uk/~mxc/software/}} of \citet{Cappellari2004} and \citet{Cappellari2016a}. This routine finds the best-fitting stellar kinematics of each bin by minimizing the reduced chi-square ($\chi^2_\text{red}$) of a model spectrum built from a linear combination of empirical stellar templates, convolved with a Gaussian LOSVD (here parametrised by the mean velocity, $v$, and velocity dispersion, $\sigma$). Gaussian templates are also used to independently fit emission lines from the interstellar medium (ISM), with their own LOSVDs. Throughout our analysis, we fit all emission lines as a single component independently from the stars, and thus they have individual fluxes (except for fixed flux ratios within forbidden line doublets) but the same kinematics. \textsc{pPXF} requires an initial guess for the LOSVD of each component and we use here the redshift of the galaxy and $\sigma = 200\,\mathrm{km\,s^{-1}}$ for both components (stars and gas). Finally, Lagrange polynomials are used to make additive and/or multiplicative corrections to the continuum level of the fit. A potential sky line at 5199\,\AA\ in the Earth's frame of reference is masked in all fits.
 
+		It was noted that for NGC 1316, the NaD absorption feature (which as generally attributed to absorption from the ISM and is thus affected by the kinematics of the ISM) was significantly effecting the quality of the stellar best-fitting spectrum. For this reason, the wavelength range of NGC 1316 spectra was limited to $<5800 \, \AA$ whilst fitting for the stellar spectra only.  
+
 		To improve the speed of our analysis, we first collapse each datacube spatially to produce a global spectrum of the galaxy, by summing across both spatial dimensions at each wavelength. The entire MILES stellar library \citep{Sanchez-Blazquez2006, Falcon-Barroso2011a} is then used to provide templates for the \textsc{pPXF} fit. We mask $600\,\mathrm{km\,s^{-1}}$--wide regions around potential emission lines (see Table \ref{tab:EmissionLine}), and use a fourth order Lagrange polynomial for an additive continuum correction. Here we use the redshift values from Simbad \citep{Wenger2000} as our initial velocity guesses. For our 14 datacubes (10 VIMOS and 4 MUSE datacubes), these fits use an average of 23 templates (with non-zero weights) out of 985. The other templates are discarded for all future analyses of a given datacube. This drastically improves the runtime of \textsc{pPXF} without affecting the quality of the fits.
 
 		Next we implement a routine to find more optimal initial guesses of the mean velocity and velocity dispersion for each galaxy, to be used when fitting in divided bins, by means of iterative fits to the global spectrum. For each galaxy, the initial fit is set up in the same way as in the previous step, but only using the templates with non-zero weights. For each fit, the best-fitting mean velocity and velocity dispersion of the previous fit are used as the initial \textsc{pPXF} guesses, thus iteratively improving the initial guesses with each subsequent fit. The final mean velocity of a given galaxy, is used as its precise spectroscopic redshift and is given in Table \ref{tab:sample}. 
 
 		% After the first three repetitions, the velocity was used to calculate the precise redshift of the galaxy: these are the redshift values quoted in \ref{tab:sample}. After this, small random perturbations to the iterative initial estimates are applied to ensure that the routine converges on a global minimum chi-squared, rather than a local one. 100 repetitions are run, with the mean velocities and velocity dispersions recorded and used as the initial estimates for all subsequent fits in that datacube. 
 
-		Beyond this point, each bin is analysed independently. Each one is processed through \textsc{pPXF} using only the MILES templates with non-zero weights identified above, using the redshift and velocity dispersion estimates from the last step as initial guesses. Again, regions around potential emission lines are masked, and a fourth order polynomial additive continuum correction is used. A Monte--Carlo (MC) estimate of the uncertainties, with 1000 repetitions is used, whereby in each iteration (after the first), random noise is added to the best-fitting model from the first run, distributed with a Gaussian profile of width equal to the noise in the spectrum (as propagated through the data reduction pipeline). The standard deviation of the best-fitting parameters from these 1000 iterations are then adopted as the best-fitting uncertainties.
+		Beyond this point, each bin is analysed independently. Each one is processed through \textsc{pPXF} using only the MILES templates with non-zero weights identified above, using the redshift and velocity dispersion estimates from the last step as initial guesses. Again, regions around potential emission lines are masked, and a fourth order polynomial additive continuum correction is used. The residuals between the best-fitting spectrum and the input spectrum are smoothed in wavelength using a weighted, moving average. This is then summed in quadrature with the noise spectrum (as propagated through the data reduction pipeline) to produce a combined `residual noise' spectrum. A Monte--Carlo (MC) estimate of the uncertainties, with 1000 repetitions is used, whereby in each iteration (after the first), random noise is added to the best-fitting model from the first run, distributed with a Gaussian profile of width equal to the residual noise. The standard deviation of the best-fitting parameters from these 1000 iterations are then adopted as the best-fitting uncertainties.
 
 		% For accurate estimates of the uncertainties on these best-fitting values, a Monte--Carlo, with 1000 repetitions is used. In each iteration (after the first), random noise, distributed with a Gaussian profile and an amplitude comparable to the noise propagated through the data reduction pipeline, is added to the best-fitting spectrum from the first run. The standard distribution of the fitted parameters from each iteration is used as the quoted uncertainty.
 
@@ -229,7 +255,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 		\end{enumerate}
 		All the steps above are repeated with the aforementioned MC method to estimates the uncertainties, and include a tenth order multiplicative Lagrange polynomial to account for poorly modeled continuum emission. The ratio of the amplitudes of the constituent emission lines within a doublet is fixed for some forbidden lines (see Table \ref{tab:EmissionLine}).
 
-		The residuals between the best-fitting spectrum and the input spectrum are smoothed in wavelength using a weighted, moving average. This is then summed in quadrature with the noise spectrum to produce a combined `residual noise' spectrum. For each fitted emission line $i$, the ratio of the amplitude of the fitted line to the median residual noise across the line, $(A/N)_i$, is used to estimate the reliability of the detection threshold. As in \citet{Sarzi2005}, a fit to the [\ion{O}{iii}] doublet only is considered a detection if $(A/N)_{[\text{\ion{O}{iii}}]} \ge 4$. For all other lines except [\ion{N}{i}], a fit to the line is only considered a detection if [\ion{O}{iii}] is detected in the same bin and $(A/N)_i \ge 3$. For a fit to the [\ion{N}{i}] doublet, we require a detection of both [\ion{O}{iii}] and H$\beta$ and $(A/N)_{[\text{\ion{N}{i}}]} \ge 4$. The emission lines considered are listed in Table \ref{tab:EmissionLine}, along with their rest wavelengths and that of any doublet counterparts (for so-called forbidden lines). 
+		For each fitted emission line $i$, the ratio of the amplitude of the fitted line to the median residual noise across the line, $(A/N)_i$, is used to estimate the reliability of the detection threshold. As in \citet{Sarzi2005}, a fit to the [\ion{O}{iii}] doublet only is considered a detection if $(A/N)_{[\text{\ion{O}{iii}}]} \ge 4$. For all other lines except [\ion{N}{i}], a fit to the line is only considered a detection if [\ion{O}{iii}] is detected in the same bin and $(A/N)_i \ge 3$. For a fit to the [\ion{N}{i}] doublet, we require a detection of both [\ion{O}{iii}] and H$\beta$ and $(A/N)_{[\text{\ion{N}{i}}]} \ge 4$. The emission lines considered are listed in Table \ref{tab:EmissionLine}, along with their rest wavelengths and that of any doublet counterparts (for so-called forbidden lines). 
 
 	 	\begin{table}
 	 		\centering
