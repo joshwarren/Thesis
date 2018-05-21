@@ -15,6 +15,7 @@ from scipy.ndimage import zoom
 from plot_velfield_nointerp import correct_header,plot_velfield_nointerp
 from errors2_muse import get_dataCubeDirectory, run_ppxf, set_params
 from plot_results import set_lims
+from tools import bin_ndarray
 
 
 # Copied from ../chapter4/produce_plots2.py
@@ -190,12 +191,6 @@ def test():
 		np.arange(4).repeat(4),a.flatten(),bins=(2,2), statistic=np.nanmean)
 	print a
 
-
-
-
-
-
-
 def ngc1316_NaD_effect():
 	bin = 918
 	D = Data('ngc1316', instrument='muse', opt='kin')
@@ -252,17 +247,6 @@ def ngc1316_NaD_effect():
 	# ax.set_ylim([0.000007, 0.000012])
 	ax.legend()
 
-
-
-
-
-
-
-
-
-
-
-
 def compare_hst2(galaxy, instrument='vimos'):
 	print 'HST comparsion to %s for %s' % (instrument, galaxy)
 	from scipy import ndimage
@@ -282,37 +266,25 @@ def compare_hst2(galaxy, instrument='vimos'):
 	f = fits.open(get_dataCubeDirectory(galaxy).hst)
 	hst = f[1].data
 	hst = hst[::-1, :]
-	# hst = hst[::-1, ::-1]
 	hst_header = f[1].header
 	f.close()
-	if instrument=='vimos':
-		if galaxy == 'ngc3557':
-			hst = ndimage.gaussian_filter(hst, sigma=1)
-		else:
-			hst = ndimage.gaussian_filter(hst, sigma=2)
-	elif instrument=='muse':
-		hst = ndimage.gaussian_filter(hst, sigma=3)
-
+	
 	f = fits.open(get_dataCubeDirectory(galaxy))
 	cube_header = f[ext].header
 	cube_header = correct_header(cube_header)
 	f.close()
 
-	# hst *= 3.396e-18/10**-15 *1729 / 0.159
-
+	hst *= 3.396e-18/10**-15 *1729 / 0.159
 	size = 200
 	s = hst.shape
-	extent = np.array([-size/2.,size/2.])*hst_header['CD1_1']*60*60
-
-	extent = np.array([-size/2.,size/2.])*np.sqrt(hst_header['OCD1_1']**2 + 
-		hst_header['OCD1_2']**2) * 60**2
 
 	D = Data(galaxy, instrument=instrument, opt='kin')
 
 	vmin, vmax = set_lims(D.flux, positive=True)
 	ax = plot_velfield_nointerp(D.x,D.y,D.bin_num,D.xBar,D.yBar, D.flux, cube_header,
 		colorbar=False, cmap='gist_yarg', vmax=vmax, vmin=vmin, ax=ax, 
-		galaxy=galaxy.upper()) #, flux_unbinned=D.unbinned_flux)
+		galaxy=galaxy.upper(), 
+		flux_unbinned=D.unbinned_flux-np.nanmin(D.unbinned_flux))
 
 	RA_cent = (cube_header['NAXIS1'] - D.center[0] - cube_header['CRPIX1'] #+1
 		) * -1 * abs(cube_header['CD1_1']) + cube_header['CRVAL1']
@@ -322,17 +294,32 @@ def compare_hst2(galaxy, instrument='vimos'):
 	xlim = ax.get_xlim()
 	ylim = ax.get_ylim()
 
+	# if instrument == 'vimos':
+	# 	scale = 20
+	# elif instrument == 'muse':
+	# 	scale = 12
+	# hst = zoom(hst, 1./scale, order=0)
+
+	scale = int(abs(cube_header['CD1_1']/hst_header['CD1_1']))
+
+	s = hst.shape
+	hst = bin_ndarray(hst[0:int(s[0]/scale)*scale, 
+		0:int(s[1]/scale)*scale], np.array(hst.shape).astype(int)/scale)
+	s = hst.shape
+	# hst -= np.nanmin(hst)
+
+
 	from find_galaxy import find_galaxy # part of mge package: fits photometry
 	f = find_galaxy(hst, quiet=True, plot=False)
 
 	extent=np.append(
-		(np.array([0, hst_header['NAXIS1']]) - f.ymed) * 
-			hst_header['CD1_1'] + RA_cent, # hst_header['CRVAL1'],
-		(np.array([0, hst_header['NAXIS2']]) - f.xmed) * 
-			hst_header['CD2_2'] + dec_cent) # hst_header['CRVAL2'])
+		(np.array([0, s[0]]) - f.ymed) * 
+			cube_header['CD1_1'] + RA_cent, # hst_header['CRVAL1'],
+		(np.array([0, s[1]]) - f.xmed) * 
+			cube_header['CD2_2'] + dec_cent) # hst_header['CRVAL2'])
 
-	ax.contour(-2.5*np.log10(hst/np.max(hst)), extent=extent, levels=np.arange(20),
-		colors='r')
+	ax.contour(-2.5*np.log10(hst/np.nanmax(hst)), extent=extent, 
+		levels=np.arange(20), colors='r')
 
 	ax.set_xlim(xlim)
 	ax.set_ylim(ylim)

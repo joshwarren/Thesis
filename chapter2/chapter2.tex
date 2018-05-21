@@ -130,17 +130,21 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 			\label{fig:egVel}
 		\end{figure}
 
-		The correction spectra found in the process of removing the fringe-like pattern above introduces spatial covariance by effectively applying a spatially smoothing of the data over a scale of 2--3 spaxels. However the effect should not be large, however, so we chose to neglect these correlations and scale the variance spectra by the same factors as the observed spectra. This smoothing is, however, particularly undesirable at the centres of our sample galaxies, where the impact of active galactic nuclei (AGN) should be observed. This should be taken into account later, particularly in Chapter \ref{cha:gas}.
-
 		\begin{figure}
 			\centering
 			\includegraphics[width=.4\textwidth]{chapter2/hst_vimos_ic1459.png}
 			\includegraphics[width=.4\textwidth]{chapter2/hst_vimos_ic4296.png}
 			\includegraphics[width=.4\textwidth]{chapter2/hst_vimos_ngc1399.png}
 			\includegraphics[width=.4\textwidth]{chapter2/hst_vimos_ngc3557.png}
-			\caption[Comparison of VIMOS images to HST]{}
+			\caption[Comparison of VIMOS images to \textit{HST}]{Comparison of reconstructed VIMOS image to \textit{HST} image. Clockwise from top left: IC 1459, IC 4296, NGC 3557, NGC 1399. Image and black contours show the VIMOS reconstructed image. Red contours show the \textit{HST} image, reduced to the resolution of VIMOS. All contours are spaced at intervals of 1 mag.}
 			\label{fig:HSTvsVIMOS}
 		\end{figure}
+
+		The correction spectra found in the process of removing the fringe-like pattern above introduces spatial covariance by effectively applying a spatially smoothing of the data over a scale of 2--3 spaxels. However the effect should not be large, however, so we chose to neglect these correlations and scale the variance spectra by the same factors as the observed spectra. This smoothing is, however, particularly undesirable at the centres of our sample galaxies, where the impact of active galactic nuclei (AGN) should be observed. This should be taken into account later, particularly in Chapter \ref{cha:gas}.
+
+		Finally, in Fig.\,\ref{HSTvsVIMOS} we compare the reconstructed image to \textit{Hubble Space Telescope (HST)} archival images for the four galaxies for which such data existed (IC 1459, IC4296, NGC 1399 and NGC 3557). The \textit{HST} contours (red) are much smoother than the VIMOS contours (black), dispite the resution of the \text{HST} images being reduced to that of VIMOS. Except for IC 1459 (top left), the VIMOS contours have a characteristic dimond shape due to the poor claibrations between quadrants, which is not seen in the \textit{HST} contours. As stated above, IC 4296 and NGC 1399 are the VIMOS datacubes most effected by the poor quadrant calibrations, while IC 1459 is one of the least effected.
+
+		
 
 
 	\subsection{Other VIMOS Pipelines}
@@ -186,15 +190,15 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 		As for the VIMOS data, the variance spectra are propagated throughout the entire data-reduction pipeline, including our additional pseudo-sky subtraction step, and are squared-rooted at the end, to be used as noise inputs at the analysis stage. 
 
 		\subsubsection{MUSE Data Quality}
+			As with the VIMOS data, we here (Fig.\,\ref{fig:HSTvsMUSE}) examine the reconstructed images (image and black contours), with archival \textit{HST} images (red contours). All galaxies in our sample for which MUSE data was avaible, also had archival \text{HST} images avaible too. It can clearly be seen that the MUSE contours well match the \textit{HST} contours, unlike the for the VIMOS data (see Fig.\,\ref{fig:HSTvsVIMOS}). As such, it can be seen that the MUSE data is of a superior quality to the VIMOS data and as such, where both are avaible, a higher weighting should be given the MUSE data and its derivatives. 
 
-			As with the VIMOS data, we here examine the reconstructed images ()
 			\begin{figure}
 				\centering
 				\includegraphics[width=.4\textwidth]{chapter2/hst_muse_ic1459.png}
 				\includegraphics[width=.4\textwidth]{chapter2/hst_muse_ic4296.png}
 				\includegraphics[width=.4\textwidth]{chapter2/hst_muse_ngc1316.png}
 				\includegraphics[width=.4\textwidth]{chapter2/hst_muse_ngc1399.png}
-				\caption[Comparison of MUSE images to HST]{}
+				\caption[Comparison of MUSE images to HST]{Comparison of reconstructed VIMOS image to \textit{HST} image. Clockwise from top left: IC 1459, IC 4296, NGC 1316, NGC 1399. Image and black contours show the MUSE reconstructed image. Red contours show the \textit{HST} image, reduced to the resolution of VIMOS. All contours are spaced at intervals of 1 mag.}
 				\label{fig:HSTvsMUSE}
 			\end{figure}
 
