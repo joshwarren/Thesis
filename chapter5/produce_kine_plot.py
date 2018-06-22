@@ -3,7 +3,7 @@ cc = checkcomp()
 if 'home' not in cc.device:
 	import matplotlib # 20160202 JP to stop lack-of X-windows error
 	matplotlib.use('Agg') # 20160202 JP to stop lack-of X-windows error
-import cPickle as pickle
+# import cPickle as pickle
 import matplotlib.pyplot as plt 
 import numpy as np 
 from plot_velfield_nointerp import plot_velfield_nointerp
@@ -16,6 +16,7 @@ from Bin import myArray
 # from BPT import lbd, lnd, lsd, add_grids
 from BPT import add_grids, NII_Ha_to_NI_Hb, log_NII_Ha_to_NI_Hb, EqW_Ha_to_EqW_Hb, \
 	log_EqW_Ha_to_EqW_Hb
+from Bin2 import Data
 
 class Ds(object):
 	def __init__(self):
@@ -51,18 +52,11 @@ def plot(galaxies, str_galaxies, file_name, instrument):
 		from plot_results_muse import add_
 		from errors2_muse import get_dataCubeDirectory
 
-
-
 	opt = 'pop'
 	overplot={'CO':'c', 'radio':'g'}
 	Prefig(size=np.array((4, len(galaxies)))*7)
 	fig, axs = plt.subplots(len(galaxies), 4)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter5/%s' % (cc.home_dir, instrument)
-
-	
-
-
-
 
 	for i, galaxy in enumerate(galaxies):
 	# for i in range(3):
@@ -86,10 +80,12 @@ def plot(galaxies, str_galaxies, file_name, instrument):
 		vin_dir += '/%s/%s' % (galaxy, opt) 
 	
 		# D=Ds()
-		pickle_file = '%s/pickled' % (vin_dir)
-		pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
-		D = pickle.load(pickleFile)
-		pickleFile.close()
+		# pickle_file = '%s/pickled' % (vin_dir)
+		# pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
+		# D = pickle.load(pickleFile)
+		# pickleFile.close()
+		D = Data(galaxy, instrument=instrument, opt=opt)
+
 
 
 		f = fits.open(get_dataCubeDirectory(galaxy))
@@ -235,10 +231,11 @@ def ngc3100_NI_Hb():
 		galaxy, opt)
 
 	# D = Ds()
-	pickle_file = '%s/pickled' % (vin_dir)
-	pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
-	D = pickle.load(pickleFile)
-	pickleFile.close()
+	# pickle_file = '%s/pickled' % (vin_dir)
+	# pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
+	# D = pickle.load(pickleFile)
+	# pickleFile.close()
+	D = Data(galaxy, instrument=instrument, opt=opt)
 
 	ax = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, D.yBar, 
 		D.components['[NI]d'].flux/D.components['Hbeta'].flux, header, 
@@ -277,10 +274,11 @@ def ngc1316_inflow():
 		galaxy, opt)
 
 	# D = Ds()
-	pickle_file = '%s/pickled' % (vin_dir)
-	pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
-	D = pickle.load(pickleFile)
-	pickleFile.close()
+	# pickle_file = '%s/pickled' % (vin_dir)
+	# pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
+	# D = pickle.load(pickleFile)
+	# pickleFile.close()
+	D = Data('ngc1316', instrument=instrument, opt=opt)
 
 	vel = D.components['[OIII]5007d'].plot['vel']
 	m = ~np.isnan(vel)
@@ -352,6 +350,7 @@ def ngc1316_inflow():
 def BPT():
 	from errors2_muse import get_dataCubeDirectory
 	opt = 'pop'
+	instrument = 'muse'
 	Prefig(size=np.array((3, 2))*6, transparent=False)
 	fig, ax = plt.subplots(2,3, sharey=True)
 	
@@ -367,10 +366,12 @@ def BPT():
 		center = (x_cent_gals[i_gal], y_cent_gals[i_gal])
 
 		output = '%s/%s/%s' % (analysis_dir, galaxy, opt)
-		pickleFile = open('%s/pickled/dataObj.pkl' % (output))
-		D = pickle.load(pickleFile)
-		pickleFile.close()
+		# pickleFile = open('%s/pickled/dataObj.pkl' % (output))
+		# D = pickle.load(pickleFile)
+		# pickleFile.close()
 		# D=Ds()
+		D = Data(galaxy, instrument=instrument, opt=opt)
+
 
 
 		r = np.sqrt((D.xBar - center[0])**2 + (D.yBar - center[1])**2)
@@ -530,10 +531,12 @@ def SAURON():
 	# D = Ds()
 
 	for i, galaxy in enumerate(galaxies):
-		pickleFile = open('%s/Data/vimos/analysis/%s' % (cc.base_dir, galaxy) 
-			+ '/pop/pickled/dataObj.pkl')
-		D = pickle.load(pickleFile)
-		pickleFile.close()
+		# pickleFile = open('%s/Data/vimos/analysis/%s' % (cc.base_dir, galaxy) 
+		# 	+ '/pop/pickled/dataObj.pkl')
+		# D = pickle.load(pickleFile)
+		# pickleFile.close()
+		D = Data(galaxy, instrument='vimos', opt='pop')
+
 		if all([l in D.e_components for l in ['[NI]d', 'Hbeta', 
 			'[OIII]5007d']]):
 
@@ -611,10 +614,12 @@ def WHbN1():
 
 	for i, galaxy in enumerate(galaxies):
 		print 'WHbN1:', galaxy
-		pickleFile = open('%s/Data/vimos/analysis/%s' % (cc.base_dir, galaxy) 
-			+ '/pop/pickled/dataObj.pkl')
-		D = pickle.load(pickleFile)
-		pickleFile.close()
+		# pickleFile = open('%s/Data/vimos/analysis/%s' % (cc.base_dir, galaxy) 
+		# 	+ '/pop/pickled/dataObj.pkl')
+		# D = pickle.load(pickleFile)
+		# pickleFile.close()
+		D = Data(galaxy, instrument='vimos', opt='pop')
+
 		if all([l in D.e_components for l in ['[NI]d', 'Hbeta']]):
 
 			x = np.log10(D.e_line['[NI]d'].flux/D.e_line['Hbeta'].flux)
@@ -679,10 +684,12 @@ def ic4296_WHaN2():
 	i_gal = np.where(galaxy_gals==galaxy)[0][0]
 	center = (x_cent_gals[i_gal], y_cent_gals[i_gal])
 
-	pickleFile = open('%s/Data/muse/analysis/%s' % (cc.base_dir, galaxy) 
-		+ '/pop/pickled/dataObj.pkl')
-	D = pickle.load(pickleFile)
-	pickleFile.close()
+	# pickleFile = open('%s/Data/muse/analysis/%s' % (cc.base_dir, galaxy) 
+	# 	+ '/pop/pickled/dataObj.pkl')
+	# D = pickle.load(pickleFile)
+	# pickleFile.close()
+	D = Data(galaxy, instrument='muse', opt='pop')
+
 	D.sauron = True
 	if all([l in D.e_components for l in ['[NII]6583d', 'Halpha']]):
 
@@ -754,11 +761,12 @@ def H_profile(instrument='vimos'):
 
 	for i, galaxy in enumerate(galaxies):
 		print 'H profile:', galaxy
-		pickleFile = open('%s/Data/%s/analysis/%s' % (cc.base_dir, 
-			instrument, galaxy) + '/pop/pickled/dataObj.pkl')
-		D = pickle.load(pickleFile)
-		pickleFile.close()
+		# pickleFile = open('%s/Data/%s/analysis/%s' % (cc.base_dir, 
+		# 	instrument, galaxy) + '/pop/pickled/dataObj.pkl')
+		# D = pickle.load(pickleFile)
+		# pickleFile.close()
 		# D = Ds()
+		D = Data(galaxy, instrument=instrument, opt='pop')
 
 		i_gal = np.where(galaxy_gals==galaxy)[0][0]
 		center = (x_cent_gals[i_gal], y_cent_gals[i_gal])
@@ -821,24 +829,24 @@ def H_profile(instrument='vimos'):
 
 
 if __name__=='__main__':
-	if 'home' in cc.device:
+	# if 'home' in cc.device:
 		# H_profile(instrument='vimos')
 
 		# ngc3100_NI_Hb()
 
 		# WHbN1()
 		
-		SAURON()
+		# SAURON()
 
 		# plot(['ic1459', 'ngc0612', 'ngc3100'], 
 		# 	['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
-	elif cc.device == 'uni':
+	# elif cc.device == 'uni':
 		# ic4296_WHaN2()
 
-		# H_profile(instrument='muse')
+	# H_profile(instrument='muse')
 
 		# ngc1316_inflow()
 
-		BPT()
+	# BPT()
 
-		# plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')
+	plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')

@@ -42,17 +42,17 @@ This chapter is structured as follows. Firstly in Section \ref{sec:GasFlux} the 
 		& VIMOS\tnote{a} & MUSE & Decrement & Seyfert \\
 		& ($\log\mathrm{M_\odot}$) & ($\log\mathrm{M_\odot}$) & \\
 		\hline
-		ESO 443-G024 & $5.06 \pm 0.07$ 	& --  		& -- & LINER \\
-		IC 1459 	& $5.21 \pm 0.07$	& $5.50 \pm 0.11$ & $4.53 \pm 0.12$ & LINER-AGN\\
-		IC 1531 	& $5.09 \pm 0.10$	& -- 		& -- & Seyfert 2\\
-		IC 4296		& $5.43 \pm 0.17$	& $< 4.48$ 	& \tnote{b} & LINER-AGN \\
+		ESO 443-G024 & $5.06 \pm 0.08$ 	& --  		& -- & LINER \\
+		IC 1459 	& $5.21 \pm 0.07$	& $5.50 \pm 0.14$ & $4.53 \pm 2.64$ & LINER-AGN\\
+		IC 1531 	& $5.09 \pm 0.11$	& -- 		& -- & Seyfert 2\\
+		IC 4296		& $5.43 \pm 0.18$	& \tnote{b} & LINER-AGN \\
 		NGC 612 	& $6.00 \pm 0.05$ 	& -- 		& -- & LINER-AGN \\
-		NGC 1316 	& -- 				& $ 5.29 \pm 0.01$ & $3.52 \pm 0.11$ & LINER-AGN \\
-		NGC 1399 	& $< 3.86$ 			& $ 4.54 \pm 0.31$ & $< 21.4$\tnote{c} & LINER \\
+		NGC 1316 	& -- 				& \tnote{b} & LINER-AGN \\
+		NGC 1399 	& $< 5.9$\tnote{c}	& $4.54 \pm 0.22$ & $>0.2$\tnote{c} & LINER \\
 		NGC 3100 	& $5.26 \pm 0.06$	& -- 		& -- & LINER-AGN \\
 		NGC 3557 	& $4.61 \pm 0.11$ 	& -- 		& -- & LINER \\
 		NGC 7075 	& $4.68 \pm 0.08$	& -- 		& -- & LINER \\
-		PKS 718-34  & $< 4.32$	 		& -- 		& -- & Passive \\
+		PKS 718-34  & $< 6.4$\tnote{c} & -- & -- & Passive \\
 		\hline
 		\hline
 	\end{tabular}
@@ -61,12 +61,12 @@ This chapter is structured as follows. Firstly in Section \ref{sec:GasFlux} the 
 	\note Col.\,1: Galaxy. Col.\,2: \ion{H}{ii} mass derived from the H$\beta$ line in the VIMOS data, assuming a Balmer decrement of 2.85. Col.\,3: \ion{H}{ii} mass derived from the H$\alpha$ line in the MUSE data. Col.\,4: Balmer decrement measured from the MUSE data. Col.\,5: Main source of ionizing radiation (see Section \ref{sec:Diagnostics} for a description of the different classes). -- means we have no data.
 	\item [a] The VIMOS flux calibration and thus the derived gas masses are only approximate (see Section \ref{subsec:VIMOSreduction} for more detail on the flux calibration).
 	\item [b] Both H$\alpha$ and H$\beta$ are not detected with A/N $>2.5$, so no information can be gained.
-	\item [c] H$\beta$ is not detected with A/N $> 2.5$, so the fit is unreliable (hence an upper limit). 
+	\item [c] H$\beta$ is not detected with A/N $> 2.5$, so the fit is unreliable. Instead the limits for a 2.5 A/N detection are shown.
 	\end{tablenotes}
 \end{threeparttable}
 \end{table}
 
-		As can be seen from Fig.\,\ref{fig:VIMOS_OIII}, both NGC 612 and NGC 3100 have significant off-centre clouds of ionized gas. The latter is spatial coincident with both the radio jet and the gap in the CO ring (this is discussed further in Section \ref{subsec:BPT}), while former seems to no link with either the radio jet (a massive scale jet extending several $\sim 200$\,kpc to the east and west of the galaxy centre) or the CO. 
+		As can be seen from Fig.\,\ref{fig:VIMOS_OIII}, both NGC 612 and NGC 3100 have significant off-centre clouds of ionized gas. The latter is spatial coincident with both the radio jet and the gap in the CO ring (this is discussed further in Section \ref{subsec:BPT}), while former seems to have no link with either the radio jet (a massive scale jet extending $\sim 200$\,kpc to the east and west of the galaxy centre) or the CO. 
 
 		It was considered that a similar analysis to that of Sections \ref{subsubsec:RobustKin} and \ref{subsubsec:RobustAbs} to compare the radial profiles for the [\ion{O}{iii}] and H$\beta$ fluxes might have been some use to test the robustness of the reduction of the VIMOS datacubes, however given that the final VIMOS flux calibration was done using the MUSE datacubes a comparison is somewhat nonsensical. The H$\alpha$ (MUSE) and H$\beta$ (VIMOS) radial profiles are shown later in Figs.\,\ref{fig:Ha_profile_MUSE} and \ref{fig:Hb_profile_VIMOS} and all show a profile which is proportional $r^2$.
 
@@ -99,7 +99,7 @@ This chapter is structured as follows. Firstly in Section \ref{sec:GasFlux} the 
 		\begin{equation}
 			\left(\frac{M_\text{\ion{H}{ii}}}{M_\odot}\right) = 280 \left(\frac{D}{10\, \mathrm{Mpc}}\right)^2 \left(\frac{F(\mathrm{H\alpha})}{10^{-14} \, \mathrm{erg \, s^{-1} \, cm^{-2}}}\right) \left(\frac{10^3 \, \mathrm{cm^{-3}}}{n_\mathrm{e}}\right) \, ,
 		\end{equation}
-		where $M_\text{\ion{H}{ii}}$ is the total mass of \ion{H}{ii} in the galaxy, $D$ is the galaxy distance, and $F(\mathrm{H\alpha})$ is the H$\alpha$ flux measured from the spectrum created by summing spatially all spaxels within an aperture of $\frac{R_\mathrm{e}}{2}$ (chosen to exclude noisy outer regions of the observations, but still include the bulk of the gas in systems with significant spatially-extended gas). This method assumes an electron density $n_\mathrm{e} = 100 \, \mathrm{cm^{-3}}$, a temperature of $10^4$ K and case-B recombination (electrons above 13.6\,eV are not reabsorbed; e.g.\ \citealt[p.\,74]{Osterbrock1974}). Like \citet{Sarzi2005}, we only claim a detection if the amplitude-to-noise ratio (A/N) is $>4$ for [\ion{O}{iii}] and $>2.5$ for H$\beta$ or H$\alpha$. When these conditions are not met, upper limits are calculated using the $1\sigma$ noise level (see Section \ref{subsec:EmissionFit}).
+		where $M_\text{\ion{H}{ii}}$ is the total mass of \ion{H}{ii} in the galaxy, $D$ is the galaxy distance, and $F(\mathrm{H\alpha})$ is the H$\alpha$ flux measured from the spectrum created by summing spatially all spaxels within an aperture of $\frac{R_\mathrm{e}}{2}$ (chosen to exclude noisy outer regions of the observations, but still include the bulk of the gas in systems with significant spatially-extended gas). This method assumes an electron density $n_\mathrm{e} = 100 \, \mathrm{cm^{-3}}$, a temperature of $10^4$ K and case-B recombination (photons above 13.6\,eV are reabsorbed by the gas, photoionizing a nearby neutral Hydrogen atom and thud do not effect the overal ionization state; e.g.\ \citealt[p.\,74]{Osterbrock1974}). For VIMOS data we use the Balmer decrement such that $\amthrm{H}\alpha = 2.86 \mathrm{H}\beta$ (the Balmer decrement is discussed futher in Section \ref{subsec:Ndec}). Like \citet{Sarzi2005}, we only claim a detection if the amplitude-to-noise ratio (A/N) is $>4$ for [\ion{O}{iii}] and $>2.5$ for H$\beta$ or H$\alpha$ lines for VIMOS and MUSE data, respectively. When these conditions are not met, upper limits are calculated using the 2.5 A/N level, assuming the gas has the same velocity dispersion as the stellar component.
 
 		Our calculated gas masses are given Table \ref{tab:gasMass} and are at the upper limit of, and possibly exceed, the typical masses observed in ETGs. Given that our sample contains particularly massive galaxies, high ionized gas masses are not unexpected, however.
 
@@ -131,23 +131,16 @@ This chapter is structured as follows. Firstly in Section \ref{sec:GasFlux} the 
 
 	\paragraph{IC 1459} has ionized gas counter-rotating with respect to the stellar kinematically-decoupled core, and also rotating independently from the rest of the galaxy. \citet{Franx1988} claim that the rotation of the gas is aligned with that of the stars outside of the KDC, however we observe outer stellar kinematics to be non-rotating. As the stellar disc did not survive the merger even that created the KDC, it is unlikely that the gas in IC 1459 progenitor galaxy survived. The lost gas may, however, have been re-accreted. Alternatively, the ISM may have yet another external origin. 
 
-	\paragraph{NGC 612} has well aligned stellar and gaseous kinematics. The misalignment between the position angle of the stellar and gas kinematics (using the method described in Section \ref{subsec:Misalignment}) is just $1\fdg0\pm0\fdg7$, consistent with an internal origin for the gas. This adds to the evidence (see Appendix \ref{cha:Description}) that NGC 612 has not undergone a major merger (major mergers exhaust galaxies of their gas and destroy a stellar disc; see Section \ref{sec:stellarDiscussion}) and suggests that, the fueling and powering of the radio jet must be a purely secular process. 
+	\paragraph{NGC 612} has well aligned stellar and gaseous kinematics. The misalignment between the position angle of the stellar and gas kinematics (using the method described in Section \ref{subsec:Misalignment}) is just $1\fdg0\pm0\fdg7$, consistent with an internal origin for the gas. This adds to the evidence (see Appendix \ref{cha:Description}) that NGC 612 has not undergone a recent major merger (major mergers exhaust galaxies of their gas and destroy a stellar disc; see Section \ref{sec:stellarDiscussion}) and suggests that, the fueling and powering of the radio jet could be a purely secular process. 
 
 
-	\paragraph{NGC 1316} is a complex object. Since there are redshifted emission lines with respect to the rest frame of the galaxy on both sides of the galaxy, the gas is not in a settled disc and that there must be some inflow/outflows. We used a fitting routine based on the method of \citet{Swinbank2012}, \citet{Stott2016} and Tiley et.al.\ (in prep.) to fit an exponential disc (middle panel of Fig.\ \ref{fig:Inflow}) to the ionized gas mean velocity map (left panel), with the residuals shown in the right panel of Fig.\ \ref{fig:Inflow}. This shows a large residual on the southwest side of the galaxy, which we interpret as an inflow towards the nucleus, almost perpendicular to the radio jet. However, there are still significant residuals in other parts of the galaxy, suggesting that the model may not be a good representation of the reality of the galaxy, thus other interpretations are possible, and better quality data (longer exposure times) are required to add certainty to this interpretation. Nevertheless, it is clear that the gas in not in a settled disc. 
-
-	\begin{figure}
-		\centering
-		\includegraphics[width=\textwidth]{chapter5/ngc1316_inflow.png}
-		\caption[Inflows in NGC 1316]{Ionized gas inflows in NGC 1316. Left: [\ion{O}{iii}] mean velocity map. Middle: best-fitting model. Right: Residual map = mean velocity - model. A large region, redshifted with respect to the galaxy, can be seen in the southwest which we interpret as an inflow. contours are as in Fig.\ \ref{fig:VIMOS_OIII}.}
-		\label{fig:Inflow}
-	\end{figure}
+	\paragraph{NGC 1316} is a complex object. Since there are redshifted emission lines with respect to the rest frame of the galaxy on both sides of the galaxy, the gas is not in a settled disc and that there must be some inflow/outflows. From visual inspection of the velocity field for the gas (Fig.\,\ref{fig:MUSE_Gaskine}) it is clear that a simple expontional disc model will not be well fitted to the data. We suggest that that the large velocity peak on the southwest side of the galaxy could be an inflow towards the nucleus, almost perpendicular to the radio jet, however we acknowledge that other interpretations are possible. Better quality data (longer exposure times) and more sofisocated models are required to add certainty to this interpretation. Nevertheless, it is clear that the gas in not in a settled disc. 
 
 
 	\paragraph{NGC 3100} has an interesting ISM morphology. The \ce{^{12}CO(2-1)} contours (shown in cyan in all figures) show a broken ring with the radio jet passing through the gaps in the ring (Ruffa et\,al., in prep.). We observe the ionized gas to be brightest in the gaps of this ring which we interpret as additional excitation of the gas due to shocks from the impact of the jet (discussed in more detail in Section \ref{subsec:BPT}). The simplest comment that we can make of the ionized gas kinematics is that it is completely different than that of the stars. Secondly, that the centre of rotation of the gas appears to be offset from the centre of the galaxy (as defined by the stellar surface brightness) by several arcseconds to the west. 
 
 	\subsection{Kinematic mis-alignments}
-		\citet{Davis2011a} showed that $36\pm5$\% of fast rotators have ionized gas kinematics misaligned with respect to the stellar kinematics, while slow rotators have a flat distribution with respect to their misalignment angles \citep[see fig.\ 4]{Davis2011a}. This indicates that slow rotators are dominated by external sources of gas, while fast rotators can have either internal or external sources. This is consistent with our observations of the Southern Sample: the only slow rotator with detected ionized gas is IC 1459, which has significantly kinematically-misaligned gas; while of the 3 fast rotators, only 1 (NGC 3100) is definitely misaligned, while NGC 612 is consistent with an internal gas origin and NGC 1316 is unclear, although the best-fitting exponential disc model (see Fig.\ \ref{fig:Inflow}) is definitely misaligned to the stellar kinematics.
+		\citet{Davis2011a} showed that $36\pm5$\% of fast rotators have ionized gas kinematics misaligned with respect to the stellar kinematics, while slow rotators have a flat distribution with respect to their misalignment angles \citep[see fig.\ 4]{Davis2011a}. This indicates that slow rotators are dominated by external sources of gas, while fast rotators can have either internal or external sources. This is consistent with our observations of the Southern Sample: the only slow rotator with detected ionized gas is IC 1459, which has significantly kinematically-misaligned gas; while of the 3 fast rotators, only 1 (NGC 3100) is definitely misaligned, while NGC 612 is consistent with an internal gas origin and NGC 1316 is unclear.
 
 \section{Ionization Sources}
 	\label{sec:Diagnostics}

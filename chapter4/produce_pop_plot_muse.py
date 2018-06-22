@@ -3,7 +3,8 @@ cc = checkcomp()
 if 'home' not in cc.device:
 	import matplotlib # 20160202 JP to stop lack-of X-windows error
 	matplotlib.use('Agg') # 20160202 JP to stop lack-of X-windows error
-import cPickle as pickle
+# import cPickle as pickle
+from Bin2 import Data
 import matplotlib.pyplot as plt 
 import numpy as np 
 from plot_velfield_nointerp import plot_velfield_nointerp
@@ -53,10 +54,11 @@ def plot(galaxies, str_galaxies, file_name):
 
 		vin_dir += '/%s/%s' % (galaxy, opt) 
 
-		pickle_file = '%s/pickled' % (vin_dir)
-		pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
-		D = pickle.load(pickleFile)
-		pickleFile.close()
+		# pickle_file = '%s/pickled' % (vin_dir)
+		# pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
+		# D = pickle.load(pickleFile)
+		# pickleFile.close()
+		D = Data(galaxy, instrument='muse', opt='pop')
 
 		vin_dir += '/pop'
 
@@ -64,32 +66,38 @@ def plot(galaxies, str_galaxies, file_name):
 		header = f[1].header
 		f.close()
 
-		
+		if hasattr(D.components['stellar'], 'age'):
+			age = D.components['stellar'].age
+			met = D.components['stellar'].metalicity
+			alp = D.components['stellar'].alpha
+			unc_age = age.uncert
+			unc_met = met.uncert
+			unc_alp = alp.uncert
+		else:
+			age = np.zeros(D.number_of_bins)
+			met = np.zeros(D.number_of_bins)
+			alp = np.zeros(D.number_of_bins)
+			unc_age = np.zeros(D.number_of_bins)
+			unc_met = np.zeros(D.number_of_bins)
+			unc_alp = np.zeros(D.number_of_bins)
 
+			for j in xrange(D.number_of_bins):
+				ag, me, al = np.loadtxt('%s/distribution/%i.dat' % (
+					vin_dir, j), unpack=True)
 
-		age = np.zeros(D.number_of_bins)
-		met = np.zeros(D.number_of_bins)
-		alp = np.zeros(D.number_of_bins)
-		unc_age = np.zeros(D.number_of_bins)
-		unc_met = np.zeros(D.number_of_bins)
-		unc_alp = np.zeros(D.number_of_bins)
+				for plot, unc_plot, pop in zip([age,met,alp],
+					[unc_age,unc_met,unc_alp], [ag,me,al]):
 
-		for j in xrange(D.number_of_bins):
-			ag, me, al = np.loadtxt('%s/distribution/%i.dat' % (
-				vin_dir, j), unpack=True)
+					hist = np.histogram(pop, bins=40)
+					x = (hist[1][0:-1]+hist[1][1:])/2
+					hist = hist[0]
+					plot[j] = x[np.argmax(hist)]
 
-			for plot, unc_plot, pop in zip([age,met,alp],
-				[unc_age,unc_met,unc_alp], [ag,me,al]):
+					unc_plot[j] = np.nanstd(pop)
 
-				hist = np.histogram(pop, bins=40)
-				x = (hist[1][0:-1]+hist[1][1:])/2
-				hist = hist[0]
-				plot[j] = x[np.argmax(hist)]
+					# gt_fwhm = hist >= np.max(hist)/2
+					# unc_plot[j] = np.max(x[gt_fwhm]) - np.min(x[gt_fwhm])
 
-				unc_plot[j] = np.nanstd(pop)
-
-				# gt_fwhm = hist >= np.max(hist)/2
-				# unc_plot[j] = np.max(x[gt_fwhm]) - np.min(x[gt_fwhm])
 
 		# Age
 		axs[2*i,0] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 

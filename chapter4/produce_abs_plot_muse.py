@@ -3,7 +3,8 @@ cc = checkcomp()
 if 'home' not in cc.device:
 	import matplotlib # 20160202 JP to stop lack-of X-windows error
 	matplotlib.use('Agg') # 20160202 JP to stop lack-of X-windows error
-import cPickle as pickle
+# import cPickle as pickle
+from Bin2 import Data
 import matplotlib.pyplot as plt 
 import numpy as np 
 from plot_velfield_nointerp import plot_velfield_nointerp
@@ -68,10 +69,11 @@ def plot(galaxies, str_galaxies, file_name):
 
 		vin_dir += '/%s/%s' % (galaxy, opt) 
 
-		pickle_file = '%s/pickled' % (vin_dir)
-		pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
-		D = pickle.load(pickleFile)
-		pickleFile.close()
+		# pickle_file = '%s/pickled' % (vin_dir)
+		# pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
+		# D = pickle.load(pickleFile)
+		# pickleFile.close()
+		D = Data(galaxy, instrument='muse', opt='pop')
 
 		f = fits.open(get_dataCubeDirectory(galaxy))
 		header = f[1].header
@@ -215,4 +217,4 @@ def plot(galaxies, str_galaxies, file_name):
 if __name__=='__main__':
 	plot(['ic1459', 'ic4296'], ['IC 1459', 'IC 4296'], 'abs1')
 
-	plot(['ngc1316', 'ngc1399'], ['NGC 1316', 'NGC 1399'], 'abs2')
+	# plot(['ngc1316', 'ngc1399'], ['NGC 1316', 'NGC 1399'], 'abs2')

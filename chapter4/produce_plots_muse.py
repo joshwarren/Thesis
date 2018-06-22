@@ -64,7 +64,6 @@ def plot(galaxies, str_galaxies, file_name):
 			usecols=(0,1,2), skiprows=1, unpack=True)
 		vmin, vmax = vmin.astype(float), vmax.astype(float)
 
-
 		vin_dir += '/%s/%s' % (galaxy, opt) 
 
 		# import cPickle as pickle
@@ -74,7 +73,7 @@ def plot(galaxies, str_galaxies, file_name):
 		# pickleFile.close()
 
 		from Bin2 import Data
-		D = Data(galaxy, instrument='muse')
+		D = Data(galaxy, instrument='muse', opt=opt)
 
 		f = fits.open(get_dataCubeDirectory(galaxy))
 		header = f[1].header
@@ -87,6 +86,13 @@ def plot(galaxies, str_galaxies, file_name):
 			"components['stellar'].plot['vel'].uncert",
 			"components['stellar'].plot['sigma'].uncert"
 			]
+
+		if galaxy == 'ngc1316':
+			vmin[attr==plots[3]] = 12
+			vmax[attr==plots[3]] = 28
+
+			vmin[attr==plots[4]] = 12
+			vmax[attr==plots[4]] = 28
 
 		# Flux
 		axs[2*i,0] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
@@ -149,7 +155,6 @@ def plot(galaxies, str_galaxies, file_name):
 			cmap=sauron, flux_unbinned=D.unbinned_flux, 
 			# signal_noise=D.SNRatio, signal_noise_target=SN_target, 
 			ax=axs[2*i+1,2])
-
 
 	for a in axs.flatten():
 		if hasattr(a, 'ax_dis'):

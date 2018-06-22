@@ -1,4 +1,5 @@
-import cPickle as pickle
+# import cPickle as pickle
+from Bin2 import Data
 import matplotlib.pyplot as plt 
 import numpy as np 
 from plot_velfield_nointerp import plot_velfield_nointerp
@@ -69,10 +70,11 @@ def plot(galaxies, str_galaxies):
 
 		vin_dir += '/%s/%s' % (galaxy, opt) 
 
-		pickle_file = '%s/pickled' % (vin_dir)
-		pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
-		D = pickle.load(pickleFile)
-		pickleFile.close()
+		# pickle_file = '%s/pickled' % (vin_dir)
+		# pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
+		# D = pickle.load(pickleFile)
+		# pickleFile.close()
+		D = Data(galaxy, instrument='vimos', opt=opt)
 
 		f = fits.open(get_dataCubeDirectory(galaxy))
 		header = f[0].header
@@ -84,8 +86,13 @@ def plot(galaxies, str_galaxies):
 				# vmin=vmin[attr==plots[0]], vmax=vmax[attr==plots[0]], 
 				cmap=sauron, flux_unbinned=D.unbinned_flux, 
 				signal_noise=D.e_line['[OIII]5007d'].amp_noise, 
-				signal_noise_target=4, galaxy_labelcolor='w',
-				galaxy=str_galaxies[j], ax=axs.flatten()[i])
+				signal_noise_target=4, #galaxy_labelcolor='w',
+				ax=axs.flatten()[i])#, galaxy=str_galaxies[j])
+
+			fig.text(axs.flatten()[i].ax_dis.get_position().x0+0.02, 
+				axs.flatten()[i].ax_dis.get_position().y1-0.02, galaxy.upper(), 
+				va='top', color='w', zorder=15, size='large')
+
 			if overplot:
 				for o, color in overplot.iteritems():
 					scale = 'log' if o == 'radio' else 'lin'

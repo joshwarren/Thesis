@@ -3,7 +3,8 @@ cc = checkcomp()
 if 'home' not in cc.device:
 	import matplotlib # 20160202 JP to stop lack-of X-windows error
 	matplotlib.use('Agg') # 20160202 JP to stop lack-of X-windows error
-import cPickle as pickle
+# import cPickle as pickle
+from Bin2 import Data
 import matplotlib.pyplot as plt 
 import numpy as np 
 from plot_velfield_nointerp import plot_velfield_nointerp
@@ -70,10 +71,11 @@ def plot(galaxies):
 
 		vin_dir += '/%s/%s' % (galaxy, opt) 
 
-		pickle_file = '%s/pickled' % (vin_dir)
-		pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
-		D = pickle.load(pickleFile)
-		pickleFile.close()
+		# pickle_file = '%s/pickled' % (vin_dir)
+		# pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
+		# D = pickle.load(pickleFile)
+		# pickleFile.close()
+		D = Data(galaxy, instrument='muse', opt=opt)
 
 		f = fits.open(get_dataCubeDirectory(galaxy))
 		header = f[1].header
@@ -82,9 +84,14 @@ def plot(galaxies):
 		axs[i] = plot_velfield_nointerp(D.x, D.y, D.bin_num, 
 			D.xBar, D.yBar, D.components['[OIII]5007d'].flux, header,  
 			# vmin=vmin[attr==plots[0]], vmax=vmax[attr==plots[0]], 
-			cmap=sauron, flux_unbinned=D.unbinned_flux, galaxy_labelcolor='w',
+			cmap=sauron, flux_unbinned=D.unbinned_flux, #galaxy_labelcolor='w',
 			signal_noise=D.e_line['[OIII]5007d'].amp_noise, 
-			signal_noise_target=4, galaxy=galaxy, ax=axs[i])
+			signal_noise_target=4, ax=axs[i])#, galaxy=galaxy)
+
+		fig.text(axs[i].ax_dis.get_position().x0+0.02, 
+			axs[i].ax_dis.get_position().y1-0.1, galaxy.upper(), va='top', 
+			color='w', zorder=15, size='medium')
+
 		if overplot:
 			for o, color in overplot.iteritems():
 				scale = 'log' if o == 'radio' else 'lin'
