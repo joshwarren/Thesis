@@ -22,4 +22,4 @@ sed -i -e 's/Physical Review D/\\prd/g' refs.bib
 sed -i -e 's/New Astronomy Reviews/\\nar/g' refs.bib
 sed -i -e 's/Journal of Cosmology and Astroparticle Physics/\\jcap/g' refs.bib
 
-git-latexdiff -b --main thesis.tex --no-view --latexopt interaction=batchmode -o changes.pdf 44c3183 --
+git-latexdiff -b --main ./thesis.tex --no-view --latexopt interaction=batchmode -o changes.pdf 44c3183a0115766126279a6a011dd4c437e8d7ea -- 2>&1 > change.log
