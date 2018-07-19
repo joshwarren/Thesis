@@ -529,12 +529,12 @@ if __name__=='__main__':
 
 		compare()
 		# pass
-		# show_spectra('ic1459', [0,100,192], instrument='vimos', opt='pop')
-		# show_spectra('ic1459', [0,494,2522], instrument='muse', opt='pop')
-		# show_spectra('ic4296', [0,100,630], instrument='vimos', opt='pop')
-		# show_spectra('ic4296', [0,414,279], instrument='muse', opt='pop')
+		show_spectra('ic1459', [0,100,192], instrument='vimos', opt='pop')
+		show_spectra('ic1459', [0,494,2522], instrument='muse', opt='pop')
+		show_spectra('ic4296', [0,100,630], instrument='vimos', opt='pop')
+		show_spectra('ic4296', [0,414,279], instrument='muse', opt='pop')
 
-		# compare_velfield()
+		compare_velfield()
 
 	elif cc.device == 'uni':
 		for galaxy in ['ic1459', 'ic4296', 'ngc1316', 'ngc1399']:
