@@ -358,6 +358,7 @@ This chapter presents our observations of the Southern Sample (as laid out in Se
 			We must also correct for the effect of the different velocity dispersions of the stellar populations, that varyingly spread absorption features such that differing fractions of the absorption are outside of the central bandpasses. To do this, we simply create a best-fitting spectrum (as in the previous step) that is not convolved with the best-fitting LOSVD. Note that for NGC 1316, for indices with a wavelength longer than 5800\,\AA\, we use the extrapolated best-fitting pPXF fit. A given index, $I$, is then measured for both this `unconvolved' spectrum ($I^\text{unc}$) and the convolved best-fitting spectrum ($I^\text{conv}$), and the ratio of these two indices is used as a multiplicative correction factor for the index measured ($I^\text{obs}$), such that the corrected index ($I^\text{corr}$) is given by
 			\begin{equation}
 				I^\text{corr} \equiv \frac{I^\text{unc}}{I^\text{conv}} I^\text{obs} \, .
+				\label{eq:absCorrection}
 			\end{equation}
 			These corrected indices are those reported and discussed in the sections below and in Section \ref{subsec:absorption}.
 

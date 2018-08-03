@@ -17,6 +17,8 @@ from Bin import myArray
 from BPT import add_grids, NII_Ha_to_NI_Hb, log_NII_Ha_to_NI_Hb, EqW_Ha_to_EqW_Hb, \
 	log_EqW_Ha_to_EqW_Hb
 from Bin2 import Data
+from scipy import ndimage # for gaussian blur
+
 
 class Ds(object):
 	def __init__(self):
@@ -734,6 +736,9 @@ def ic4296_WHaN2():
 
 def H_profile(instrument='vimos'):
 	from matplotlib import ticker
+	print '**************Need to correctly set seeing************'
+
+	seeing_sigma = 1#1.2 * 2.5
 
 	if instrument=='vimos':
 		galaxies = np.array(['ic1459', 'ngc0612', 'ngc3100'])
@@ -787,16 +792,20 @@ def H_profile(instrument='vimos'):
 
 		# ax.plot(r[o][1:], Hb[np.argmin(np.abs(r-1))] * r[o][1:]**-2, 'k')
 			lim = ax[i].get_xlim()
-			x = np.arange(0, lim[1], 0.05)
-			ax[i].plot(x, np.nanmedian(r[o][np.isfinite(H[o])])**2
-				* np.nanmedian(H[o][np.isfinite(H[o])])/x**2 / np.nanmax(H),
-				'k', zorder=10, color='r')
+			x = np.arange(-seeing_sigma, lim[1], 0.001)
+			y = np.nanmedian(r[o][np.isfinite(H[o])])**2 \
+				* np.nanmedian(H[o][np.isfinite(H[o])])/x**2 / np.nanmax(H)
+## Inital attempts at convolving to account for seeing - need to check comments again
+			# y = ndimage.gaussian_filter1d(1/x**2, seeing_sigma)
+			# y /= y[np.argmin(np.abs(x - r[np.where(H == np.nanmax(H))[0][0]]))]
+
+			ax[i].plot(x[x>=0], y[x>=0], zorder=10, color='r')
 			# ax[i].plot(x, 1/x**2, 'k', zorder=10, color='r')
 			ax[i].set_xlim(lim)
 
 			ax[i].text(0.93*lim[1], 0.7, str_galaxies[i], ha='right')
 
-			ax[i].set_ylim([-0.02, 1.02])
+			ax[i].set_ylim([-0.02, 1.1])
 
 			ax[i].set_yscale('log')
 			ax[i].tick_params(which='major', direction='in', length=10, 
@@ -843,10 +852,10 @@ if __name__=='__main__':
 	# elif cc.device == 'uni':
 		# ic4296_WHaN2()
 
-	# H_profile(instrument='muse')
+	# H_profile(instrument='vimos')
 
 		# ngc1316_inflow()
 
-	# BPT()
+	BPT()
 
-	plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')
+	# plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')
