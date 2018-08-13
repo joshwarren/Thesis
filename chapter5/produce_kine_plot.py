@@ -18,35 +18,10 @@ from BPT import add_grids, NII_Ha_to_NI_Hb, log_NII_Ha_to_NI_Hb, EqW_Ha_to_EqW_H
 	log_EqW_Ha_to_EqW_Hb
 from Bin2 import Data
 from scipy import ndimage # for gaussian blur
+from matplotlib import ticker
 
 
-class Ds(object):
-	def __init__(self):
-		self.x=np.array([0,0,0,1,1,1,2,2,40])
-		self.y=np.array([0,1,2,0,1,2,0,1,40])
-		self.bin_num = np.array([0,0,1,0,1,1,2,2,3])
-		self.xBar = np.array([0.5,1.5,2,40])
-		self.yBar = np.array([0.5,1.5,1,40])
-		self.SNRatio = np.array([0,1,1,2])
-		self.unbinned_flux = np.zeros((40,40))
-		self.number_of_bins = 4
-		self.components = {'stellar':comp(), '[OIII]5007d':comp(),
-			'[NII]6583d':comp(), '[SII]6716':comp(), '[OI]6300d':comp(), 
-			'Hbeta':comp(), 'Halpha':comp(), '[NI]d':comp()}
-		self.e_line = {k:v for k,v in self.components.iteritems() 
-			if k!='stellar'}
-		self.e_components = self.e_line.keys()
-		self.flux = np.array([0,1,1,2])
-
-class comp(object):
-	def __init__(self):
-		self.plot = {'vel':myArray([-2,1,1,2], [0,1,1,2]), 
-			'sigma': myArray([0,1,1,2],[0,1,1,2])}
-		self.flux = myArray([0,1,1,2], [0,1,1,2])
-		self.equiv_width = myArray([0,1,1,2], [0,1,1,2])
-
-
-def plot(galaxies, str_galaxies, file_name, instrument):
+def plot(galaxies, str_galaxies, file_name, instrument, debug=False):
 	if instrument == 'vimos':
 		from plot_results import add_
 		from errors2 import get_dataCubeDirectory
@@ -61,7 +36,6 @@ def plot(galaxies, str_galaxies, file_name, instrument):
 	out_dir = '%s/Documents/thesis/chapter5/%s' % (cc.home_dir, instrument)
 
 	for i, galaxy in enumerate(galaxies):
-	# for i in range(3):
 		print galaxy
 
 		vin_dir = '%s/Data/%s/analysis' % (cc.base_dir, instrument)
@@ -79,16 +53,11 @@ def plot(galaxies, str_galaxies, file_name, instrument):
 			usecols=(0,1,2), skiprows=1, unpack=True)
 		vmin, vmax = vmin.astype(float), vmax.astype(float)
 
-		vin_dir += '/%s/%s' % (galaxy, opt) 
-	
-		# D=Ds()
-		# pickle_file = '%s/pickled' % (vin_dir)
-		# pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
-		# D = pickle.load(pickleFile)
-		# pickleFile.close()
-		D = Data(galaxy, instrument=instrument, opt=opt)
-
-
+		if debug:
+			from produce_plots import Ds
+			D = Ds()
+		else:
+			D = Data(galaxy, instrument=instrument, opt=opt)
 
 		f = fits.open(get_dataCubeDirectory(galaxy))
 		if instrument == 'vimos':
@@ -205,14 +174,67 @@ def plot(galaxies, str_galaxies, file_name, instrument):
 			rotation='vertical', size='xx-large')
 	
 	# Add colorbar
+	ticks_sym = ticker.MaxNLocator(nbins=4, symmetric=True, 
+		min_n_ticks=6)
+	ticks_pos = ticker.MaxNLocator(nbins=4, min_n_ticks=3)
 	ax_loc = axs[0,3].get_position()
-	cax = fig.add_axes([ax_loc.x1+0.03, ax_loc.y0, 0.02, ax_loc.height])
-	cbar = plt.colorbar(axs[1,1].cs, cax=cax)
-	cbar.ax.set_yticklabels([])
 
-	# plt.show()
-	fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
-		dpi=240)
+	# Left
+	cax = fig.add_axes([ax_loc.x1+0.06, ax_loc.y0, 0.02, ax_loc.height])
+	cbar = plt.colorbar(axs[0,0].cs, cax=cax, ticks=ticks_pos)
+	fig.text(ax_loc.x1+0.02, (ax_loc.y0+ax_loc.y1)/2, 
+		r'Velocity (km s$^{-1}$)', rotation=90, va='center', ha='center')
+
+	# Right
+	fig.text(ax_loc.x1+0.13, (ax_loc.y0+ax_loc.y1)/2, 
+		r'Velocity Dispersion (km s$^{-1}$)', rotation=270, va='center', 
+		ha='center')
+	cax2 = cax.twinx()
+	cax2.set_ylim(axs[0,2].cs.get_clim())
+	cax2.yaxis.set_major_locator(ticks_sym)
+	
+
+	# Colorbar for Uncertainy
+	ax_loc = axs[1,3].get_position()
+	ticks_pos = ticker.MaxNLocator(nbins=4)
+
+	# Left
+	cax = fig.add_axes([ax_loc.x1+0.06, ax_loc.y0, 0.02, ax_loc.height])
+	cbar = plt.colorbar(axs[1,1].cs, cax=cax, ticks=ticks_pos)
+	fig.text(ax_loc.x1+0.02, (ax_loc.y0+ax_loc.y1)/2, 
+		r'Velocity Uncertainy (km s$^{-1}$)', rotation=90, va='center', 
+		ha='center')
+
+	# Right
+	fig.text(ax_loc.x1+0.13, (ax_loc.y0+ax_loc.y1)/2, 
+		r'Velocity Dispersion Uncertainy(km s$^{-1}$)', rotation=270, 
+		va='center', ha='center')
+	cax2 = cax.twinx()
+	cax2.set_ylim(axs[1,3].cs.get_clim())
+	cax2.yaxis.set_major_locator(ticks_pos)
+
+
+	# Add extra colorbar for NGC 3100
+	if 'ngc3100' in galaxies:
+		loc = np.where(np.array(galaxies)=='ngc3100')[0][0]
+		ax_loc = axs[loc, 3].get_position()
+		ticks_sym = ticker.MaxNLocator(nbins=4, min_n_ticks=3)
+
+		cax = fig.add_axes([ax_loc.x1+0.06, ax_loc.y0, 0.02, ax_loc.height])
+		cbar = plt.colorbar(axs[loc,1].cs, cax=cax, ticks=ticks_sym)
+		fig.text(ax_loc.x1+0.13, (ax_loc.y0+ax_loc.y1)/2, 
+			r'Velocity for NGC 3100 (km s$^{-1}$)', rotation=270, 
+			va='center', ha='center')
+
+
+	if debug:
+		fig.savefig('%s/%s.png' % (out_dir, 'test'), bbox_inches='tight',
+			dpi=240)
+	else:
+		fig.savefig('%s/%s.png' % (out_dir, file_name), bbox_inches='tight',
+			dpi=240)
+
+	plt.close('all')
 
 
 def ngc3100_NI_Hb():
@@ -367,7 +389,7 @@ def BPT():
 		i_gal = np.where(galaxy_gals==galaxy)[0][0]
 		center = (x_cent_gals[i_gal], y_cent_gals[i_gal])
 
-		output = '%s/%s/%s' % (analysis_dir, galaxy, opt)
+		output = '%s/%s/%s' % (analysis_dir, galaxy, D.opt)
 		# pickleFile = open('%s/pickled/dataObj.pkl' % (output))
 		# D = pickle.load(pickleFile)
 		# pickleFile.close()
@@ -847,8 +869,8 @@ if __name__=='__main__':
 		
 		# SAURON()
 
-		# plot(['ic1459', 'ngc0612', 'ngc3100'], 
-		# 	['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
+	plot(['ic1459', 'ngc0612', 'ngc3100'], 
+		['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
 	# elif cc.device == 'uni':
 		# ic4296_WHaN2()
 
@@ -856,6 +878,6 @@ if __name__=='__main__':
 
 		# ngc1316_inflow()
 
-	BPT()
+	# BPT()
 
 	# plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')
