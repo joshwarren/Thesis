@@ -13,10 +13,6 @@ from classify import get_R_e
 from prefig import Prefig
 Prefig()
 
-import cPickle as pickle
-
-opt = 'kin'
-
 def label(galaxy):
 	if 'ic' in galaxy:
 		return 'IC ' + galaxy[2:]
@@ -43,6 +39,8 @@ def plot_lambda_R():
 				'ngc3557',
 				'ngc7075',
 				'pks0718-34']:
+		opt = 'kin'
+
 		lam_R_file = '%s/Data/vimos/analysis/%s/%s/lambda_R.txt' % (
 			cc.base_dir, galaxy, opt)
 		r, lam_R = np.loadtxt(lam_R_file, unpack=True)
@@ -57,10 +55,15 @@ def plot_lambda_R():
 			ha='center', va='bottom', size='x-small')
 
 	for galaxy in ['ic1459', 'ic4296', 'ngc1316', 'ngc1399']:
+		opt = 'pop_no_Na' if galaxy == 'ngc1316' else 'kin'
+
 		lam_R_file = '%s/Data/muse/analysis/%s/%s/lambda_R.txt' % (
 			cc.base_dir, galaxy, opt)
 		r, lam_R = np.loadtxt(lam_R_file, unpack=True)
-		r /= get_R_e(galaxy)
+		# print r
+		# print get_R_e(galaxy)
+		# asdas
+		# r /= get_R_e(galaxy)
 
 		if galaxy in FR:
 			ax.plot(r, lam_R, 'b')

@@ -36,6 +36,13 @@ def plot(galaxies, str_galaxies, file_name, instrument, debug=False):
 	out_dir = '%s/Documents/thesis/chapter5/%s' % (cc.home_dir, instrument)
 
 	for i, galaxy in enumerate(galaxies):
+		if debug:
+			from produce_plots import Ds
+			D = Ds()
+		else:
+			D = Data(galaxy, instrument=instrument, opt=opt)
+			opt = D.opt
+
 		print galaxy
 
 		vin_dir = '%s/Data/%s/analysis' % (cc.base_dir, instrument)
@@ -52,12 +59,6 @@ def plot(galaxies, str_galaxies, file_name, instrument, debug=False):
 		attr, vmin, vmax = np.loadtxt('%s/lims.txt' % (vin_dir), dtype=str, 
 			usecols=(0,1,2), skiprows=1, unpack=True)
 		vmin, vmax = vmin.astype(float), vmax.astype(float)
-
-		if debug:
-			from produce_plots import Ds
-			D = Ds()
-		else:
-			D = Data(galaxy, instrument=instrument, opt=opt)
 
 		f = fits.open(get_dataCubeDirectory(galaxy))
 		if instrument == 'vimos':
@@ -251,14 +252,6 @@ def ngc3100_NI_Hb():
 	header = f[0].header
 	f.close()
 
-	vin_dir = '%s/Data/%s/analysis/%s/%s' % (cc.base_dir, instrument, 
-		galaxy, opt)
-
-	# D = Ds()
-	# pickle_file = '%s/pickled' % (vin_dir)
-	# pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
-	# D = pickle.load(pickleFile)
-	# pickleFile.close()
 	D = Data(galaxy, instrument=instrument, opt=opt)
 
 	ax = plot_velfield_nointerp(D.x, D.y, D.bin_num, D.xBar, D.yBar, 
@@ -294,14 +287,6 @@ def ngc1316_inflow():
 	header = f[1].header
 	f.close()
 
-	vin_dir = '%s/Data/%s/analysis/%s/%s' % (cc.base_dir, instrument, 
-		galaxy, opt)
-
-	# D = Ds()
-	# pickle_file = '%s/pickled' % (vin_dir)
-	# pickleFile = open("%s/dataObj.pkl" % (pickle_file), 'rb')
-	# D = pickle.load(pickleFile)
-	# pickleFile.close()
 	D = Data('ngc1316', instrument=instrument, opt=opt)
 
 	vel = D.components['[OIII]5007d'].plot['vel']
@@ -389,14 +374,8 @@ def BPT():
 		i_gal = np.where(galaxy_gals==galaxy)[0][0]
 		center = (x_cent_gals[i_gal], y_cent_gals[i_gal])
 
-		output = '%s/%s/%s' % (analysis_dir, galaxy, D.opt)
-		# pickleFile = open('%s/pickled/dataObj.pkl' % (output))
-		# D = pickle.load(pickleFile)
-		# pickleFile.close()
-		# D=Ds()
 		D = Data(galaxy, instrument=instrument, opt=opt)
-
-
+		opt = D.opt
 
 		r = np.sqrt((D.xBar - center[0])**2 + (D.yBar - center[1])**2)
 		for i, l in enumerate(['[NII]6583d', '[SII]6716', '[OI]6300d']):
@@ -620,13 +599,6 @@ def WHbN1():
 	Prefig()
 	fig, ax = plt.subplots()
 
-	# galaxies = np.array(['eso443-g024', 'ic1459', 'ic1531', 'ic4296', 
-	# 	'ngc0612', 'ngc1399', 'ngc3100', 'ngc3557', 'ngc7075', 
-	# 	'pks0718-34'])
-	# str_galaxies = np.array(['ESO 443-G24', 'IC 1459', 'IC 1531', 'IC 4296', 
-	# 	'NGC 612', 'NGC 1399', 'NGC 3100', 'NGC 3557', 'NGC 7075', 
-	# 	'PKS 718-34'])
-
 	galaxies = np.array(['ic1459', 'ic1531', 'ic4296', 'ngc3100', 'ngc3557', 
 		'ngc7075'])
 	str_galaxies = np.array(['IC 1459', 'IC 1531', 'IC 4296', 'NGC 3100', 
@@ -638,10 +610,6 @@ def WHbN1():
 
 	for i, galaxy in enumerate(galaxies):
 		print 'WHbN1:', galaxy
-		# pickleFile = open('%s/Data/vimos/analysis/%s' % (cc.base_dir, galaxy) 
-		# 	+ '/pop/pickled/dataObj.pkl')
-		# D = pickle.load(pickleFile)
-		# pickleFile.close()
 		D = Data(galaxy, instrument='vimos', opt='pop')
 
 		if all([l in D.e_components for l in ['[NI]d', 'Hbeta']]):
@@ -760,7 +728,6 @@ def H_profile(instrument='vimos'):
 	from matplotlib import ticker
 	print '**************Need to correctly set seeing************'
 
-	seeing_sigma = 1#1.2 * 2.5
 
 	if instrument=='vimos':
 		galaxies = np.array(['ic1459', 'ngc0612', 'ngc3100'])
@@ -776,7 +743,7 @@ def H_profile(instrument='vimos'):
 		res = 0.2 # arcsec/pix
 
 	Prefig(size=np.array((len(galaxies), 1))*7)
-	fig, ax = plt.subplots(1, len(galaxies), sharey=True)#, sharex=True)
+	fig, ax = plt.subplots(1, len(galaxies), sharey=True)
 
 	analysis_dir = "%s/Data/%s/analysis" % (cc.base_dir, instrument)
 	galaxiesFile = "%s/galaxies.txt" % (analysis_dir)
@@ -788,12 +755,31 @@ def H_profile(instrument='vimos'):
 
 	for i, galaxy in enumerate(galaxies):
 		print 'H profile:', galaxy
-		# pickleFile = open('%s/Data/%s/analysis/%s' % (cc.base_dir, 
-		# 	instrument, galaxy) + '/pop/pickled/dataObj.pkl')
-		# D = pickle.load(pickleFile)
-		# pickleFile.close()
-		# D = Ds()
 		D = Data(galaxy, instrument=instrument, opt='pop')
+
+		if galaxy=='ic1459' and instrument=='vimos':
+			seeing_sigma = np.mean([0.82,0.84,1.20,1.26,1.10,1.27]) * 2.5
+			norm_r = 2.5
+			norm_y = 0.04
+		elif galaxy=='ngc0612':
+			seeing_sigma = np.mean([0.72,0.78,1.45,1.46,1.08,1.11]) * 2.5
+			norm_r = 2.5
+			norm_y = 0.2
+		elif galaxy=='ngc3100':
+			seeing_sigma = np.mean([0.76,0.82,0.75,0.82,1.16,1.20]) * 2.5
+			norm_r = 2
+			norm_y = 0.15
+		elif instrument=='muse':
+			from errors2_muse import get_dataCubeDirectory
+			f=fits.open(get_dataCubeDirectory(galaxy))
+			seeing_sigma = np.mean([f[0].header['ESO TEL AMBI FWHM START'],
+				f[0].header['ESO TEL AMBI FWHM START']]) * 2.5
+			if galaxy=='ic1459':
+				norm_r = 5
+				norm_y = 0.005
+			elif galaxy=='ngc1316':
+				norm_r = 5
+				norm_y = 0.015
 
 		i_gal = np.where(galaxy_gals==galaxy)[0][0]
 		center = (x_cent_gals[i_gal], y_cent_gals[i_gal])
@@ -803,26 +789,19 @@ def H_profile(instrument='vimos'):
 
 			H = D.e_line[line].flux
 
-		# myerrorbar(ax, r, Hb, yerr=Hb.uncert,
-		# 	color=np.log10(D.e_line['[OIII]5007d'].flux/1.35\
-		# 	/ D.e_line['Hbeta'].flux).clip(-1,1))
-
 			ax[i].errorbar(r, H/np.nanmax(H), yerr=H.uncert/np.nanmax(H), 
 				fmt='.', color='k')
 
 			o = np.argsort(r)
 
-		# ax.plot(r[o][1:], Hb[np.argmin(np.abs(r-1))] * r[o][1:]**-2, 'k')
 			lim = ax[i].get_xlim()
 			x = np.arange(-seeing_sigma, lim[1], 0.001)
-			y = np.nanmedian(r[o][np.isfinite(H[o])])**2 \
-				* np.nanmedian(H[o][np.isfinite(H[o])])/x**2 / np.nanmax(H)
-## Inital attempts at convolving to account for seeing - need to check comments again
-			# y = ndimage.gaussian_filter1d(1/x**2, seeing_sigma)
-			# y /= y[np.argmin(np.abs(x - r[np.where(H == np.nanmax(H))[0][0]]))]
+
+			y = 1/x**2
+			y = ndimage.gaussian_filter1d(y, seeing_sigma) # convolve with seeing
+			y = norm_y * norm_r**2 * y # normalised by eye
 
 			ax[i].plot(x[x>=0], y[x>=0], zorder=10, color='r')
-			# ax[i].plot(x, 1/x**2, 'k', zorder=10, color='r')
 			ax[i].set_xlim(lim)
 
 			ax[i].text(0.93*lim[1], 0.7, str_galaxies[i], ha='right')
@@ -834,9 +813,6 @@ def H_profile(instrument='vimos'):
 				width=2)
 			ax[i].tick_params(axis='y', which='minor', direction='in', 
 				length=6, width=2)
-			# import matplotlib
-			# ax[i].get_xaxis().set_major_formatter(
-			# 	matplotlib.ticker.ScalarFormatter())
 			for axis in [ax[i].xaxis, ax[i].yaxis]:
 				axis.set_major_formatter(
 					ticker.FuncFormatter(lambda y, _: '{:g}'.format(y)))
@@ -847,14 +823,11 @@ def H_profile(instrument='vimos'):
 		ax[0].set_ylabel(r'H$\,\alpha$ normalised flux')
 	for a in ax:
 		a.set_xlabel('Radius (arcsec)')
-	# for a in ax[1:].flatten():
-	# 	a.set_yticklabels([])
-	# 	a.set_ylabel('')
 
 	fig.subplots_adjust(wspace=0,hspace=0)
 	fig.savefig('%s/Documents/thesis/chapter5/%s/%s_profile.png' % (
 		cc.home_dir, instrument, line), dpi=240)
-	plt.close(fig)
+	plt.close('all')
 	
 
 
@@ -869,14 +842,14 @@ if __name__=='__main__':
 		
 		# SAURON()
 
-	plot(['ic1459', 'ngc0612', 'ngc3100'], 
-		['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
+		# plot(['ic1459', 'ngc0612', 'ngc3100'], 
+		# 	['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
 	# elif cc.device == 'uni':
 		# ic4296_WHaN2()
 
-	# H_profile(instrument='vimos')
+	# H_profile(instrument='muse')
 
-		# ngc1316_inflow()
+	ngc1316_inflow()
 
 	# BPT()
 
