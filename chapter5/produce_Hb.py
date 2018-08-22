@@ -15,7 +15,7 @@ from plot_results import set_lims
 
 def plot(galaxies, str_galaxies):
 	opt = 'pop'
-	overplot={'CO':'c', 'radio':'g'}
+	overplot={'CO':'w', 'radio':'g'}
 	Prefig(size=np.array((4, 3))*10)
 	fig, axs = plt.subplots(3, 4)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter5/vimos' % (cc.home_dir)

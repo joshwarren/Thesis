@@ -30,7 +30,7 @@ def plot(galaxies, str_galaxies, file_name, instrument, debug=False):
 		from errors2_muse import get_dataCubeDirectory
 
 	opt = 'pop'
-	overplot={'CO':'c', 'radio':'g'}
+	overplot={'CO':'w', 'radio':'g'}
 	Prefig(size=np.array((4, len(galaxies)))*7)
 	fig, axs = plt.subplots(len(galaxies), 4)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter5/%s' % (cc.home_dir, instrument)
@@ -260,7 +260,7 @@ def ngc3100_NI_Hb():
 		label=r'$\mathrm{\frac{[NI]\lambda\lambda5197,5200}{H\beta}}$', 
 		label_size=1.4)
 
-	for o, color in {'radio':'g','CO':'c'}.iteritems():
+	for o, color in {'radio':'g','CO':'w'}.iteritems():
 		scale = 'log' if o == 'radio' else 'lin'
 		add_(o, color, ax, galaxy, nolegend=True, scale=scale)
 	ax.ax_dis.tick_params(top=True, bottom=True, left=True, right=True, 
@@ -312,7 +312,7 @@ def ngc1316_inflow():
 		flux_unbinned=D.unbinned_flux, colorbar=False, ax=ax[2])
 
 	for a in ax:
-		for o, color in {'radio':'g','CO':'c'}.iteritems():
+		for o, color in {'radio':'g','CO':'w'}.iteritems():
 			scale = 'log' if o == 'radio' else 'lin'
 			add_(o, color, a, galaxy, nolegend=True, scale=scale)
 		if hasattr(a, 'ax_dis'):
@@ -836,14 +836,14 @@ if __name__=='__main__':
 	# if 'home' in cc.device:
 		# H_profile(instrument='vimos')
 
-		# ngc3100_NI_Hb()
+	ngc3100_NI_Hb()
 
 		# WHbN1()
 		
 		# SAURON()
 
-		# plot(['ic1459', 'ngc0612', 'ngc3100'], 
-		# 	['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
+	plot(['ic1459', 'ngc0612', 'ngc3100'], 
+		['IC 1459', 'NGC 612', 'NGC 3100'], 'kin', 'vimos')
 	# elif cc.device == 'uni':
 		# ic4296_WHaN2()
 
@@ -853,4 +853,4 @@ if __name__=='__main__':
 
 	# BPT()
 
-	# plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')
+	plot(['ic1459', 'ngc1316'], ['IC 1459', 'NGC 1316'], 'kin', 'muse')

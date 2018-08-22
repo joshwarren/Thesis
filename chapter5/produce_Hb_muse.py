@@ -18,7 +18,7 @@ from plot_results import set_lims
 
 def plot(galaxies):
 	opt = 'pop'
-	overplot={'CO':'c', 'radio':'r'}
+	overplot={'CO':'w', 'radio':'r'}
 	Prefig(size=np.array((4, 1))*8)
 	fig, axs = plt.subplots(1, 4)#, sharex=True, sharey=True)
 	out_dir = '%s/Documents/thesis/chapter5/muse' % (cc.home_dir)
@@ -130,4 +130,4 @@ def plot(galaxies):
 
 
 if __name__=='__main__':
-	plot(['ic1459', 'ic4296', 'ngc1316', 'ngc1399', ])
+	plot(['ic1459', 'ic4296', 'ngc1316', 'ngc1399'])
