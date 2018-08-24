@@ -424,29 +424,29 @@ def plot(galaxies, str_galaxies, file_name, instrument='vimos',
 
 
 if __name__=='__main__':
-	plot(['ic1459', 'ic4296'], ['IC 1459', 'IC 4296'], 'abs1',
-		instrument='muse')
+	# plot(['ic1459', 'ic4296'], ['IC 1459', 'IC 4296'], 'abs1',
+	# 	instrument='muse')
 
 	plot(['ngc1316', 'ngc1399'], ['NGC 1316', 'NGC 1399'], 'abs2',
 		instrument='muse')
 
-	plot(['ic1459', 'ic4296'], ['IC 1459', 'IC 4296'], 'abs1b', 
-		instrument='muse2')
+	# plot(['ic1459', 'ic4296'], ['IC 1459', 'IC 4296'], 'abs1b', 
+	# 	instrument='muse2')
 
 	plot(['ngc1316', 'ngc1399'], ['NGC 1316', 'NGC 1399'], 'abs2b', 
 		instrument='muse2')
 
-	plot(['eso443-g024', 'ic1459'], ['ESO 443-G24', 'IC 1459'], 'abs1', 
-		instrument='vimos')
+	# plot(['eso443-g024', 'ic1459'], ['ESO 443-G24', 'IC 1459'], 'abs1', 
+	# 	instrument='vimos')
 
-	plot(['ic1531', 'ic4296'], ['IC 1531', 'IC 4296'], 'abs2', 
-		instrument='vimos')
+	# plot(['ic1531', 'ic4296'], ['IC 1531', 'IC 4296'], 'abs2', 
+	# 	instrument='vimos')
 
-	plot(['ngc0612', 'ngc1399'], ['NGC 612', 'NGC 1399'], 'abs3', 
-		instrument='vimos')
+	# plot(['ngc0612', 'ngc1399'], ['NGC 612', 'NGC 1399'], 'abs3', 
+	# 	instrument='vimos')
 
-	plot(['ngc3100', 'ngc3557'], ['NGC 3100', 'NGC 3557'], 'abs4', 
-		instrument='vimos')
+	# plot(['ngc3100', 'ngc3557'], ['NGC 3100', 'NGC 3557'], 'abs4', 
+	# 	instrument='vimos')
 
-	plot(['ngc7075', 'pks0718-34'], ['NGC7075', 'PKS 0718-34'], 'abs5', 
-		instrument='vimos')
+	# plot(['ngc7075', 'pks0718-34'], ['NGC7075', 'PKS 0718-34'], 'abs5', 
+	# 	instrument='vimos')

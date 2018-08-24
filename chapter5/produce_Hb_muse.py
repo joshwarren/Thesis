@@ -16,7 +16,7 @@ from sauron_colormap import sauron#2 as sauron
 from plot_results import set_lims
 
 
-def plot(galaxies):
+def plot(galaxies, str_galaxies):
 	opt = 'pop'
 	overplot={'CO':'w', 'radio':'r'}
 	Prefig(size=np.array((4, 1))*8)
@@ -89,7 +89,7 @@ def plot(galaxies):
 			signal_noise_target=4, ax=axs[i])#, galaxy=galaxy)
 
 		fig.text(axs[i].ax_dis.get_position().x0+0.02, 
-			axs[i].ax_dis.get_position().y1-0.1, galaxy.upper(), va='top', 
+			axs[i].ax_dis.get_position().y1-0.1, str_galaxies[i], va='top', 
 			color='w', zorder=15, size='medium')
 
 		if overplot:
@@ -130,4 +130,5 @@ def plot(galaxies):
 
 
 if __name__=='__main__':
-	plot(['ic1459', 'ic4296', 'ngc1316', 'ngc1399'])
+	plot(['ic1459', 'ic4296', 'ngc1316', 'ngc1399'],
+		['IC 1459', 'IC 4296', 'NGC 1316', 'NGC 1399'])

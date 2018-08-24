@@ -101,6 +101,7 @@ def plot(galaxies, str_galaxies, file_name, debug=False, instrument='vimos'):
 			from errors2_muse import get_dataCubeDirectory
 			f = fits.open(get_dataCubeDirectory(galaxy))
 			header = f[1].header
+			SN_target = 0
 		f.close()
 
 		plots = [
@@ -304,7 +305,7 @@ def plot(galaxies, str_galaxies, file_name, debug=False, instrument='vimos'):
 
 	# Add extra colorbar for NGC 0612
 	if 'ngc0612' in galaxies:
-		loc = np.where('ngc0612' in galaxies)[0][0]
+		loc = np.where(np.array(galaxies)=='ngc0612')[0][0]*2
 		ax_loc = axs[loc, 2].get_position()
 		ticks_sym = ticker.MaxNLocator(nbins=4, min_n_ticks=3)
 
@@ -325,19 +326,19 @@ def plot(galaxies, str_galaxies, file_name, debug=False, instrument='vimos'):
 
 
 if __name__=='__main__':
-	plot(['ic1459','ic4296','ngc1316'], ['IC 1459', 'IC 4296', 'NGC 1316'],
-		'kin1', instrument='muse')
+	# plot(['ic1459','ic4296','ngc1316'], ['IC 1459', 'IC 4296', 'NGC 1316'],
+	# 	'kin1', instrument='muse')
 
-	plot(['ngc1399'], ['NGC 1399'], 'kin2', instrument='muse')
+	# plot(['ngc1399'], ['NGC 1399'], 'kin2', instrument='muse')
 
-	plot(['eso443-g024', 'ic1459'], ['ESO 443-G24', 'IC 1459'], 'kin1', 
-		instrument='vimos')
+	# plot(['eso443-g024', 'ic1459'], ['ESO 443-G24', 'IC 1459'], 'kin1', 
+	# 	instrument='vimos')
 
-	plot(['ic1531', 'ic4296', 'ngc1399'], ['IC 1531', 'IC 4296', 'NGC 1399'],
-		'kin2', instrument='vimos')
+	# plot(['ic1531', 'ic4296', 'ngc1399'], ['IC 1531', 'IC 4296', 'NGC 1399'],
+	# 	'kin2', instrument='vimos')
 
-	plot(['ngc3100', 'ngc3557', 'ngc7075'], 
-		['NGC 3100', 'NGC 3557', 'NGC 7075'], 'kin3', instrument='vimos')
+	# plot(['ngc3100', 'ngc3557', 'ngc7075'], 
+	# 	['NGC 3100', 'NGC 3557', 'NGC 7075'], 'kin3', instrument='vimos')
 
 	plot(['pks0718-34', 'ngc0612'], ['PKS 718-34', 'NGC 612'], 'kin4', 
 		instrument='vimos')
