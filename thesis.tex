@@ -13,7 +13,6 @@
 	linkcolor=black,
 	urlcolor=black
 }
-
 \usepackage{amsmath} % align enviroment 
 \usepackage{gensymb} % degree symbol in math enviroments
 \usepackage{mhchem} % typeset chemistry symbols
@@ -22,8 +21,9 @@
 \usepackage{multirow} % for multirow command
 \usepackage{url}
 \urlstyle{same}
-
-
+\usepackage{pdflscape}	% Landscape pages
+\usepackage{geometry}  % Altering margins size
+\usepackage{placeins}
 \usepackage{array} % For wrapping text in cell in tables
 % \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % centered wrapped text in tables
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} % For wrapping text in tables, left justified
@@ -46,9 +46,7 @@
 \newcommand\fdg{\hbox{$.\!\!^\circ$}}
 \newcommand\degr{\hbox{$^\circ$}}
 
-
-% \includeonly{}
-
+% \includeonly{introduction/introduction}
 % \includeonly{chapter2/chapter2}
 % \includeonly{chapter4/chapter4}
 % \includeonly{chapter5/chapter5}
@@ -67,6 +65,9 @@
 
 %end the preamble and start the document
 \begin{document}
+\pagenumbering{gobble}
+
+\maketitle                  % create a title page from the preamble info
 
 %this baselineskip gives sufficient line spacing for an examiner to easily
 %markup the thesis with comments
@@ -75,9 +76,6 @@
 %set the number of sectioning levels that get number and appear in the contents
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-
-
-\maketitle                  % create a title page from the preamble info
 
 \begin{romanpages}          % start roman page numbering
 	% \include{acknowledgements/dedication}   % include a dedication.tex file
@@ -88,7 +86,7 @@
 	\tableofcontents            % generate and include a table of contents
 	\listoffigures              % generate and include a list of figures
 \end{romanpages}            % end roman page numbering
-
+\pagenumbering{arabic}
 %now include the files of latex for each of the chapters etc
 \include{introduction/introduction}
 \include{chapter2/chapter2}

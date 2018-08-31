@@ -229,10 +229,13 @@ def plot(galaxies, str_galaxies, file_name, debug=False, instrument='vimos'):
 			if hasattr(a, 'ax_dis'):
 				a.ax_dis.set_position(ax_loc)
 
-
-	fig.text(0.24, 0.9, r'Flux', va='top', ha='center', size='xx-large')
-	fig.text(0.51, 0.9, r'Velocity', va='top', ha='center', size='xx-large')
-	fig.text(0.8, 0.9, r'Velocity Dispersion', va='top', ha='center', 
+	ax_loc = axs[0,0].get_position()
+	fig.text(np.mean([axs[0,0].get_position().x0,axs[0,0].get_position().x1]), 
+		ax_loc.y1+0.04, r'Flux', va='top', ha='center', size='xx-large')
+	fig.text(np.mean([axs[0,1].get_position().x0,axs[0,1].get_position().x1]), 
+		ax_loc.y1+0.04, r'Velocity', va='top', ha='center', size='xx-large')
+	fig.text(np.mean([axs[0,2].get_position().x0,axs[0,2].get_position().x1]), 
+		ax_loc.y1+0.04, r'Velocity Dispersion', va='top', ha='center', 
 		size='xx-large')
 
 	if len(galaxies) == 1:
@@ -326,19 +329,19 @@ def plot(galaxies, str_galaxies, file_name, debug=False, instrument='vimos'):
 
 
 if __name__=='__main__':
-	# plot(['ic1459','ic4296','ngc1316'], ['IC 1459', 'IC 4296', 'NGC 1316'],
-	# 	'kin1', instrument='muse')
+	plot(['ic1459','ic4296','ngc1316'], ['IC 1459', 'IC 4296', 'NGC 1316'],
+		'kin1', instrument='muse')
 
-	# plot(['ngc1399'], ['NGC 1399'], 'kin2', instrument='muse')
+	plot(['ngc1399'], ['NGC 1399'], 'kin2', instrument='muse')
 
-	# plot(['eso443-g024', 'ic1459'], ['ESO 443-G24', 'IC 1459'], 'kin1', 
-	# 	instrument='vimos')
+	plot(['eso443-g024', 'ic1459'], ['ESO 443-G24', 'IC 1459'], 'kin1', 
+		instrument='vimos')
 
-	# plot(['ic1531', 'ic4296', 'ngc1399'], ['IC 1531', 'IC 4296', 'NGC 1399'],
-	# 	'kin2', instrument='vimos')
+	plot(['ic1531', 'ic4296', 'ngc1399'], ['IC 1531', 'IC 4296', 'NGC 1399'],
+		'kin2', instrument='vimos')
 
-	# plot(['ngc3100', 'ngc3557', 'ngc7075'], 
-	# 	['NGC 3100', 'NGC 3557', 'NGC 7075'], 'kin3', instrument='vimos')
+	plot(['ngc3100', 'ngc3557', 'ngc7075'], 
+		['NGC 3100', 'NGC 3557', 'NGC 7075'], 'kin3', instrument='vimos')
 
 	plot(['pks0718-34', 'ngc0612'], ['PKS 718-34', 'NGC 612'], 'kin4', 
 		instrument='vimos')

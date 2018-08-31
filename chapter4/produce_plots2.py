@@ -224,7 +224,7 @@ def single_absorption_plot(instrument='vimos'):
 
 def show_spectra(galaxy, bins, instrument='vimos', opt='kin'):
 	print 'pPXF fit for ' + galaxy + '(' + instrument + ')'
-	Prefig(size=(26,12))
+	Prefig(size=(20,6))
 	if instrument == 'vimos':
 		ext = 0
 		from plot_results import add_
@@ -253,7 +253,6 @@ def show_spectra(galaxy, bins, instrument='vimos', opt='kin'):
 	for i, b in enumerate(bins):
 		a = plt.subplot(len(bins)*100 + 20 + (i+1)*2)
 		a.text(0.03, 0.8, str(i+1), color='k', size=25, transform=a.transAxes)
-		b_obj = D.bin[b]
 		plot_bin(a, D, b)
 		if i != len(bins)-1:
 			a.set_xticklabels([])
@@ -263,7 +262,7 @@ def show_spectra(galaxy, bins, instrument='vimos', opt='kin'):
 		if (i+1) == (len(bins)+1)/2:
 			a.set_ylabel(r"Flux ($10^{-15}\,erg\,s^{-1}\,\AA^{-1}\,cm^{-2}$)",
 				labelpad=15)
-			a.ax2.set_ylabel('Residuals and Emission lines '
+			a.ax2.set_ylabel('Residuals and Emission lines\n'
 				+ r'($10^{-15}\,erg\,s^{-1}\,\AA^{-1}\,cm^{-2}$)',rotation=270,
 				labelpad=60)
 
@@ -527,14 +526,14 @@ if __name__=='__main__':
 		# single_absorption_plot(instrument='vimos')
 
 
-		compare()
+		# compare()
 		# pass
 		show_spectra('ic1459', [0,100,192], instrument='vimos', opt='pop')
 		show_spectra('ic1459', [0,494,2522], instrument='muse', opt='pop')
 		show_spectra('ic4296', [0,100,630], instrument='vimos', opt='pop')
 		show_spectra('ic4296', [0,414,279], instrument='muse', opt='pop')
 
-		compare_velfield()
+		# compare_velfield()
 
 	elif cc.device == 'uni':
 		for galaxy in ['ic1459', 'ic4296', 'ngc1316', 'ngc1399']:

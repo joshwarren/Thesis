@@ -144,10 +144,13 @@ def plot(galaxies, str_galaxies, file_name, instrument='vimos',
 			ax_loc.y0 += 0.01
 			ax_loc.y1 += 0.01
 
-
-	fig.text(0.24, 0.9, r'Age', va='center', ha='center', size='xx-large')
-	fig.text(0.51, 0.9, r'Metalicity', va='center', ha='center', size='xx-large')
-	fig.text(0.8, 0.9, r'Alpha-enhancement', va='center', ha='center', 
+	ax_loc = axs[0,0].get_position()
+	fig.text(np.mean([axs[0,0].get_position().x0,axs[0,0].get_position().x1]), 
+		ax_loc.y1+0.04, r'Age', va='center', ha='center', size='xx-large')
+	fig.text(np.mean([axs[0,1].get_position().x0,axs[0,1].get_position().x1]), 
+		ax_loc.y1+0.04, r'Metalicity', va='center', ha='center', size='xx-large')
+	fig.text(np.mean([axs[0,2].get_position().x0,axs[0,2].get_position().x1]), 
+		ax_loc.y1+0.04, r'Alpha-enhancement', va='center', ha='center', 
 		size='xx-large')
 
 	for i in range(len(str_galaxies)):
@@ -242,19 +245,19 @@ def plot(galaxies, str_galaxies, file_name, instrument='vimos',
 	plt.close('all')
 
 if __name__=='__main__':
-	# plot(['ic1459', 'ic4296', 'ngc1316'], 
-	# 	['IC 1459', 'IC 4296', 'NGC 1316'], 'pop1', instrument='muse')
+	plot(['ic1459', 'ic4296', 'ngc1316'], 
+		['IC 1459', 'IC 4296', 'NGC 1316'], 'pop1', instrument='muse')
 
 	plot(['ngc1399'], ['NGC 1399'], 'pop2', instrument='muse')
 
-	# plot(['eso443-g024', 'ic1459'], 
-	# 	['ESO 443-G24', 'IC 1459'], 'pop1', instrument='vimos')
+	plot(['eso443-g024', 'ic1459'], 
+		['ESO 443-G24', 'IC 1459'], 'pop1', instrument='vimos')
 
-	# plot(['ic1531', 'ic4296', 'ngc0612'], 
-	# 	['IC 1531', 'IC 4296', 'NGC 612'], 'pop2', instrument='vimos')
+	plot(['ic1531', 'ic4296', 'ngc0612'], 
+		['IC 1531', 'IC 4296', 'NGC 612'], 'pop2', instrument='vimos')
 
-	# plot(['ngc1399', 'ngc3100', 'ngc3557'], 
-	# 	['NGC 1399', 'NGC 3100', 'NGC 3557'], 'pop3', instrument='vimos')
+	plot(['ngc1399', 'ngc3100', 'ngc3557'], 
+		['NGC 1399', 'NGC 3100', 'NGC 3557'], 'pop3', instrument='vimos')
 
-	# plot(['ngc7075', 'pks0718-34'], 
-	# 	['NGC 7075', 'PKS 0718-34'], 'pop4', instrument='vimos')
+	plot(['ngc7075', 'pks0718-34'], 
+		['NGC 7075', 'PKS 0718-34'], 'pop4', instrument='vimos')
